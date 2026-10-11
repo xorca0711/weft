@@ -1,0 +1,29 @@
+name: Verify pinned Ravel connection
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-source-identity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - run: python -m weft validate
+      - name: Fetch the explicit public source revision
+        shell: bash
+        run: |
+          revision=$(python -c "import json; print(json.load(open('integration/ravel.lock.json'))['commit'])")
+          git init "$RUNNER_TEMP/ravel"
+          git -C "$RUNNER_TEMP/ravel" remote add origin https://github.com/xorca0711/ravel.git
+          git -C "$RUNNER_TEMP/ravel" fetch --depth=1 --filter=blob:none origin "$revision"
+      - name: Verify hashes and question identities without executing Ravel
+        run: python -m weft verify-ravel --repo "$RUNNER_TEMP/ravel"

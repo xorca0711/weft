@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "first_adapter": "europe_pmc",
+  "priority_journals": [
+    "Cell",
+    "Science",
+    "Nature",
+    "Cell Stem Cell",
+    "Cell Reports",
+    "Nature Immunology",
+    "Nature Cell Biology"
+  ],
+  "priority_scope": "Exact journal titles initially; reconcile ISSNs in M1; do not imply entire publisher families",
+  "search_streams": [
+    "rq_direct",
+    "rq_contrary",
+    "adjacent_context",
+    "private_career"
+  ],
+  "broad_search_required": true,
+  "retraction_and_version_check_required": true,
+  "date_window": "Explicit per run; persist last successful cutoff and overlap delayed indexing",
+  "private_profile": "private/interests.json"
+}

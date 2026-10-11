@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "pilot_id": "P001-choi2020",
+  "status": "planned-not-run",
+  "exposure": "historical-outcomes-known",
+  "doi": "10.1016/j.stem.2020.06.020",
+  "pmid": "32750316",
+  "pmcid": "PMC7487779",
+  "ravel_question_ids": [
+    "A0",
+    "A1"
+  ],
+  "search": {
+    "provider": "Europe PMC",
+    "query": "(AT2 OR \"alveolar type 2\") AND (\"transient progenitors\" OR DATP) AND FIRST_PDATE:[2020-01-01 TO 2020-12-31]",
+    "doi_lookup_is_separate_audit": true
+  },
+  "target": "Figure 1B-D: descriptive state and library-composition recovery",
+  "primary_accessions": [
+    "GSE145031"
+  ],
+  "context_only_accessions": [
+    "GSE144468",
+    "GSE144598"
+  ],
+  "work_type": "exposed-descriptive-reproduction",
+  "population_inference_allowed": false,
+  "historical_scripts_may_run_in_place": false,
+  "expected_gate_hold": "unreplicated-treatment-effect",
+  "scientific_contract": null,
+  "input_hashes_qualified": false,
+  "runtime_lock_qualified": false,
+  "published_result_tolerance_qualified": false
+}

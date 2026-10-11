@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "policy_id": "proposal-v1",
+  "enabled": false,
+  "automations_enabled": false,
+  "scientific_execution_enabled": false,
+  "automatic_merge_enabled": false,
+  "canonical_rq_registration_enabled": false,
+  "limits_status": "proposed-not-activated",
+  "limits": {
+    "records_per_search": 200,
+    "full_reads_per_batch": 5,
+    "active_scientific_jobs": 1,
+    "scientific_wall_hours": 6,
+    "new_download_gib": 20,
+    "model_usd_per_job": 5,
+    "model_usd_per_month": 20
+  },
+  "journal_priority_is_eligibility": false,
+  "gate_decisions": [
+    "pass",
+    "hold",
+    "reject",
+    "error"
+  ],
+  "public_export_allowlist": [
+    "paper_id",
+    "paper_version",
+    "source_locators",
+    "rq_ids",
+    "design",
+    "measured_endpoints",
+    "source_lineages",
+    "artifact_manifest",
+    "interpretation_limits",
+    "candidate_disposition",
+    "review_state"
+  ]
+}

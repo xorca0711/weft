@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "name": "Weft",
+  "slug": "weft",
+  "repository": "https://github.com/xorca0711/weft",
+  "stage": "implementation-plan-and-offline-scaffold",
+  "pilot_id": "P001-choi2020",
+  "ravel_lock": "integration/ravel.lock.json"
+}

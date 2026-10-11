@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "recorded_at": "2026-10-11T14:42:47.676866+09:00",
+  "scope": "software-scaffold-and-read-only-source-identity",
+  "python": "3.12",
+  "unit_tests": {
+    "run": 11,
+    "passed": 11
+  },
+  "project_validation": {
+    "ok": true,
+    "local_links": 20
+  },
+  "ravel": {
+    "commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+    "verified_files": 15,
+    "question_ids": [
+      "A0",
+      "A1"
+    ]
+  },
+  "scientific_pilot_executed": false,
+  "commands": [
+    "python -B -m weft validate",
+    "python -B -m unittest discover -s tests -q",
+    "python -B -m weft verify-ravel --repo <existing-ravel-clone>"
+  ],
+  "notes": [
+    "Initial sandbox test invocation could not use temporary Git fixture directories; the same tests passed outside that restriction. No validator was weakened."
+  ],
+  "validated_file_sha256": {
+    "weft/__init__.py": "56ddb12c20629ad1ab1e06ae5dcec49c17ee72a91e2222fbcad49dc2a38f9531",
+    "weft/__main__.py": "6345ea61dec3588cbb91abd068d1a33622bf6602e3e854592468479a58db712a",
+    "weft/validation.py": "11953f27f10caf1d69701f668be313f69c9ae3ffadb42315b97276dda61909ce",
+    "tests/test_bootstrap.py": "7639f465bccb60b4c3a9d9eec34e8cc8b47917177c53034d74d24250f8fcdcb4",
+    "configs/project.json": "b4791bb2aef769f76d4cb4d2d138d9403deb6d8202ddb183555d0fddaab27555",
+    "configs/policy.json": "708a9923cc4c8e1fd202c402d0f507a69c0d5776c2b2b67e57cfee420a3ea56e",
+    "configs/sources.json": "3362c01da4899589c602e2bf6b7e94ff9d0caa84541b88f6b0774a61d214abdb",
+    "configs/pilot.json": "6a1a554ecc3b128909ba2930767676fae1233f0543297baa3ebfbb7a933d9d9a",
+    "integration/ravel.lock.json": "a9dd242805e1ea3e1131fffd610dd504031e99315ecd7eb625ba97f6af50ea6b"
+  }
+}

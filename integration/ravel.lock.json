@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "repository": "https://github.com/xorca0711/ravel.git",
+  "commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+  "question_ids": [
+    "A0",
+    "A1"
+  ],
+  "purpose": "P001 exposed historical pilot and governance context",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "dee03d2565f983546e564eb73f72154642c3bcda836eb77d072d101e50b04de8"
+    },
+    {
+      "path": "AI_CONTEXT.md",
+      "sha256": "9e0a739be875a4737e74a7f6f70f6ac182fa5eded1ff3755c433cbe71c3be227"
+    },
+    {
+      "path": "docs/RESEARCH_GOVERNANCE.md",
+      "sha256": "1b5b1c04f3d47dadf20a9445c512637dbd1388c30f4afa30e5ae5946488fd7a6"
+    },
+    {
+      "path": "docs/LITERATURE_WORKFLOW.md",
+      "sha256": "5e6cac28210d4b4b3e596173fa0df14e74f5df5bb3afbe2374ab4be674c19361"
+    },
+    {
+      "path": "analysis/research/registry.json",
+      "sha256": "e6cce4e728c8c8710d65fa068fb6ad7c9dbe4788f34eca7c812dade4d1c3188d"
+    },
+    {
+      "path": "analysis/research/contract.schema.json",
+      "sha256": "41ba7e109178088046d190acf1402655392952aeb707c168727f2d9791bd861c"
+    },
+    {
+      "path": "analysis/scripts/research_gate.py",
+      "sha256": "941d8ccf61c0356529bae8b164b754b801032ca4f94a64154e2624786903bf9f"
+    },
+    {
+      "path": "RESEARCH_QUESTIONS.md",
+      "sha256": "4516d85cb7f71229184773e45843fed33b94392db07feac4a0dfaae6a7551bf6"
+    },
+    {
+      "path": "RQ_Specified/A0_conserved_epithelial_transition_program/README.md",
+      "sha256": "0b8b6d568c6bd881f756fc653b059e5cddff00c620925f1c1cb2f775197cada4"
+    },
+    {
+      "path": "RQ_Specified/A1_transitional_epithelial_state_distinction/README.md",
+      "sha256": "97c8847a7eb5da1a3a00761e46b37349bae348b03d577ce0ddfc051a59313377"
+    },
+    {
+      "path": "Research Article/gate1_02_choi_2020/README.md",
+      "sha256": "98f849f864519a8fe115b872a9d35ada825d3062520f5816286e01cf87b84340"
+    },
+    {
+      "path": "Research Article/gate1_02_choi_2020/ANALYSIS_TRIAL_PLAN.md",
+      "sha256": "b0f16f76accf036973afc7ad696a9525c504da045b2af22d6c742aae72512a66"
+    },
+    {
+      "path": "Research Article/gate1_02_choi_2020/trials/d2b_corrected_annotation/d2b_run_record.json",
+      "sha256": "831aca892356d62c8ee1275d6f8036a494004c1abd9044815f0a72aae50f7aff"
+    },
+    {
+      "path": "Research Article/gate1_02_choi_2020/trials/d2b_corrected_annotation/d2b_composition.csv",
+      "sha256": "925e2be199059ac8c1b84468d2aac95ee896257d85ac48ae345d2c469009c5e6"
+    },
+    {
+      "path": "Research Article/gate1_02_choi_2020/trials/d2b_corrected_annotation/d2b_readings.csv",
+      "sha256": "a4d9c98441b6b418469506bc02bcc2fac03dae22ee9e0ef6b2a12a98b6ccea7a"
+    }
+  ]
+}
