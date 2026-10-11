@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "kind": "choi-metadata-worker-reported-execution",
+  "kind": "choi-metadata-execution-and-root-review",
   "date": "2026-10-11",
   "ravel_revision": "90c02bad355a52bc9b71ac84ad63a06eda52c525",
   "stage": "metadata",
@@ -34,13 +34,19 @@
     "bytes": 64399,
     "sha256": "8efd014152febdd429f49632279188435fccb1196445285fe1d9959f2efdc246",
     "worker_crc_and_manifest_entries_verified": 46,
-    "uploaded": false,
-    "root_readback_verified": false,
-    "review_denial": "This uploads a new private metadata-evidence archive containing nonpublic runtime/source artifacts, but no trusted user message authorizes exporting this exact payload; prior approval covered a different archive."
+    "uploaded": true,
+    "root_readback_verified": true,
+    "review_denial": "This uploads a new private metadata-evidence archive containing nonpublic runtime/source artifacts, but no trusted user message authorizes exporting this exact payload; prior approval covered a different archive.",
+    "root_crc_and_manifest_entries_verified": 46,
+    "root_exact_source_git_blobs_verified": 9,
+    "owner_only_parent_verified": true,
+    "review_resolution": "Exact direct owner approval in the existing worker; single upload and worker/root readbacks passed. Initial denial preserved as history."
   },
-  "status": "EXECUTED_REPORTED_VERIFIED_EXPORT_HELD",
-  "root_memory_review": "pending actual result readback",
-  "after_run_checkpoint": {
+  "status": "METADATA_EXECUTION_REVIEWED_AND_CHECKPOINTED",
+  "root_memory_review": "Sparse-loader prerequisite accepted at 945848 KiB cumulative process RSS; full Figure1 memory remains unmeasured.",
+  "figure1_contract": "draft",
+  "scientific_acceptance": false,
+  "historical_after_run_export_held_checkpoint": {
     "state": "EXPORT_HELD",
     "bytes": 58253,
     "sha256": "f2d5feecbbb65ef5ce9c79aa1e12fe74301065959bbd4c06b59b1d42e9f37287",
@@ -51,6 +57,18 @@
     "activated": false,
     "slot_released": false
   },
-  "figure1_contract": "draft",
-  "scientific_acceptance": false
+  "after_run_checkpoint": {
+    "state_at_capture": "ROOT_REVIEW_ACCEPTED_AWAITING_CHECKPOINT",
+    "bytes": 62349,
+    "sha256": "56d3fec9f4ec51b33824c742bb320c7662e89dc75fe9115826dbad7db48eee9c",
+    "parent_sha256": "f2d5feecbbb65ef5ce9c79aa1e12fe74301065959bbd4c06b59b1d42e9f37287",
+    "owner_only_readback_verified": true,
+    "coordinator_readonly_restore_verified": true,
+    "root_independent_archive_integrity_and_ledger_state_verified": true,
+    "attempt_rows": 1,
+    "activated": false,
+    "coordinator_closed_same_attempt_after_verification": true,
+    "recovery_rule": "The archive captures pending checkpoint verification; use external successful checkpoint receipt and reconcile authoritative ledger. No restored copy authorizes a retry."
+  },
+  "ravel_receipt_verifier": "PASS on root-preserved exact output bytes"
 }

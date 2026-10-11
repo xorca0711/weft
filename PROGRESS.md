@@ -1,32 +1,26 @@
 # Current project state
 
-## Current stage — metadata executed; evidence export held
+## Current stage — metadata reviewed; preparing descriptive pilot
 
-The runtime archive upload/readback is verified by worker and root. Ravel PR149
-`90c02bad355a52bc9b71ac84ad63a06eda52c525` binds that exact Git-equipped runtime
-and the frozen metadata-only contract; all four Ravel CI checks passed. Root also
-verified the private before-dispatch checkpoint, packet and exact source bindings.
+The single Choi metadata attempt at Ravel 90c02ba is independently verified.
+After direct owner approval in the existing worker, the exact 64,399-byte evidence
+archive passed worker/root SHA-256, CRC and all 46 member hashes. Nine exported
+source snapshots match exact Git blobs. Ravel preserves the original run files,
+registers the receipt and passes its unchanged verifier. All three libraries pass
+integrity and feature-order checks; sparse loading takes 190.460 seconds with
+945,848 KiB cumulative process peak RSS. This supports the sparse-loader prerequisite,
+not the full Figure1 workload or biological inference.
 
-The single reserved metadata attempt **executed successfully according to the
-completed worker report**: one archive download and all nine selected input hashes
-passed; three libraries passed structure/feature-order checks. Loader time was
-190.460 seconds and cumulative process peak RSS 945,848 KiB. The container exited
-0 with no OOM and all captured processes absent. See the
-[bounded result receipt](records/choi-metadata-20261011.json).
+Mir verified a descendant after-run checkpoint and closed the same attempt without
+rerunning it. Root independently checked its bytes, ancestry, database integrity
+and single-attempt review record. The initial export denial and EXPORT_HELD
+checkpoint remain historical. [Evidence](records/choi-metadata-20261011.json).
 
-The new 64,399-byte private evidence archive remains local: automatic review denied
-its upload because direct approval in the worker covered the earlier runtime
-archive, not this new payload. No retry or alternate transfer was attempted.
-Direct owner approval in the existing worker is the next external action. The
-coordinator recorded EXPORT_HELD and verified the private after-run checkpoint;
-root independently checked its bytes, ancestry and single-attempt held state. No slot release,
-new attempt or stage-complete claim. Root result readback/memory review remains
-pending; Figure1 stays draft and unrun. Resume with exact archive upload/readback,
-root result readback/memory review before the descriptive stage.
-
-A local bounded multipart helper passed eight focused tests for future larger
-artifacts. It does not upload files, change the scientific pipeline or establish
-end-to-end cloud multipart transport. See [manual protocol](docs/MANUAL_PILOT.md).
+Next: qualify the two-part synthetic cloud transfer using Weft 4188424, then freeze
+and checkpoint the separate Ravel Figure1 contract. Its proposed limit is 4 CPUs,
+16 GiB and a one-hour worker watchdog, with unchanged scientific methods. Figure1
+is still draft/unrun; no new RQ, scientific acceptance, merge or unattended run.
+Both Weft CI checks and all four Ravel checks passed at 4188424 / 33375ef.
 
 ## Checkpointed manual pilot preparation — 11 October 2026
 

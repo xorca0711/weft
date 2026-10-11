@@ -2,7 +2,9 @@
 
 Weft is Ravel's public automation companion. Manual Europe PMC discovery, pinned
 RQ context, a paper-to-question review buffer and XML reading packets are implemented.
-Unattended agents, scientific execution and Ravel export are not implemented.
+Unattended scientific dispatch is not implemented. The checkpointed manual route
+has completed one Ravel metadata run with independently verified evidence; the
+separate descriptive Figure1 stage remains pending. PROGRESS owns current status.
 The [synthetic job controls](docs/JOB_CONTROLS.md) include a ledger and built-in
 Docker fixture executor with verified local terminal receipts. One manual dot/cloud dispatch-return check passed; scientific qualification remains open.
 
@@ -19,8 +21,9 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
   independently verified export. See records/cloud-setup-20261011.json. The small
   synthetic Drive route passed [independent cloud restore](records/cloud-drive-restore-20261011.json).
   [Manual dot delegation and SQLite checkpoint restoration](records/manual-coordinator-20261011.json) passed.
-  Large outputs, retention guarantees, per-job ledger integration and numerical
-  execution remain unqualified; per-job synthetic controls are documented separately.
+  The first manual metadata job has verified before/after checkpoints and Ravel
+  receipt readback. Larger multipart transport and the full descriptive workload
+  remain unqualified; retention guarantees are not established.
   No paid API or unattended launcher is configured. Never fabricate human review.
 - No extra local PC is required. Cloud tasks pin the reviewed Weft PR revision
   and Ravel blobs; never assume main has current implementation, or X: paths and
@@ -33,7 +36,8 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
   explicitly in a new adapter, never by rewriting frozen evidence.
 - The [Choi source review](docs/PILOT_CHOI_REVIEW.md) and input inventory are complete
   within their stated coverage. Read the [environment recommendation](docs/EXECUTION_ENVIRONMENT.md)
-  before M3/M4 work. No numerical analysis, new scientific contract or scientific worker is qualified.
+  before M3/M4 work. The frozen metadata contract and exact Git-equipped runtime
+  passed one bounded metadata job; this is not full descriptive-stage qualification.
 - Scientific raw inputs remain in Ravel; audit PDFs/receipts are in ignored
   `runs/pilot-review-20261011-v1` on X:. The public records retain source hashes and
   locators. Weft's Ravel connection remains read-only.

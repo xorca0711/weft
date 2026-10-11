@@ -255,3 +255,12 @@ The after-run EXPORT_HELD ledger checkpoint subsequently passed coordinator
 upload/readback/restore and independent root byte/ancestry/integrity/one-attempt
 state checks. The numerical evidence archive itself remains unexported. No attempt
 was retried, released or promoted to completed. Direct worker approval was requested.
+
+## Metadata evidence review — 11 October 2026
+
+Codex independently retrieved the owner-approved evidence export and checked all
+46 manifest entries, nine exact source blobs and the Ravel receipt. Recorded the
+observed sparse-memory prerequisite and completed descendant checkpoint; no
+scientific method, gate, authority flag or acceptance changed. Earlier rejected
+export and held checkpoint remain visible. Figure1 and multipart transport remain
+separate qualification steps. Private storage/runtime locators stay ignored.
