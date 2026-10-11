@@ -1,81 +1,87 @@
-# Scientific execution environment: P001 recommendation
+# Execution environment: dot and Codex Cloud
 
-**Recommendation, 11 October 2026: use a separate Linux x86-64 worker for numerical
-analysis; retain local Codex on Windows for manual reading and coordination.**
-No worker has been selected, installed, rented or started. The owner's manual
-Codex reading choice does not select a scientific compute host or authorize spend.
+**Selected architecture, 11 October 2026:** a dot coordinates Weft; Codex Cloud is
+the first-choice runtime for repository commands and the Choi pilot. No additional
+physical computer is required. Environment creation and Weft repository availability
+are owner-confirmed; no environment has yet been confirmed published or qualified.
+See the [setup runbook](CLOUD_SETUP.md) and [ordered roadmap](IMPLEMENTATION_PLAN.md).
 
-## Evidence behind the recommendation
+## Why the earlier sizing recommendation changed
 
-The observed desktop is Windows 11 Home on an ARM64 Snapdragon X, with eight
-cores and about 15.6 GiB total memory. WSL was not installed when checked. An
-existing Ravel x64 Python environment runs through emulation, but it is shared
-research infrastructure and will not be changed. The recorded observation during this
-review had only about 2.8 GiB free RAM; available memory is transient, so every
-future launch needs a new check. Exact observations are retained in the
-[review receipt](../records/pilot-review-20261011.json).
+The audited local Windows ARM64 desktop has about 15.6 GiB total RAM and had about
+2.8 GiB free during the source review; WSL was not installed. These historical
+observations remain in the [review receipt](../records/pilot-review-20261011.json).
+Existing local research environments remain untouched.
 
-The [input review](PILOT_CHOI_REVIEW.md) found 46,423,890 stored entries in the
-three selected matrices, each with 737,280 raw barcode columns. All three dense
-float32 matrices alone would use 230.7 GiB. That is an avoidable representation
-cost, not a measured requirement for the intended sparse pipeline. A sparse,
-one-library-at-a-time loader with filtering before concatenation is mandatory.
-Actual peak memory and runtime have not been benchmarked.
+The earlier separate Linux x86-64 / 32-GiB recommendation was conservative sizing,
+not a measured minimum or a hardware purchase requirement. Cloud qualification
+supersedes it. No cloud RAM allocation, CPU architecture, uninterrupted job lifetime
+or storage guarantee has been verified for this account. Do not transfer the
+six-hour GitHub Actions limit to Codex Cloud.
 
-## Options and proposed limits
+Selected Choi triplets total about 155 MiB compressed (archive about 333 MiB).
+Their 46,423,890 stored entries span three matrices with 737,280 raw barcode columns
+each. Dense float32 allocation across them would use about 230.7 GiB; this is an
+avoidable representation cost. Load sparsely, filter one library at a time and
+concatenate only qualified cells. Peak memory/runtime remain unmeasured.
 
-| Route | Recommendation | Proposed qualification bounds |
+## Deployment contract to qualify
+
+| Surface | Intended use | Before declaring it ready |
 |---|---|---|
-| Separate Linux x86-64 workstation/server/VM | Preferred for P001 and the later worker | 4 vCPU, preferably 32 GiB host RAM; one job, 16 GiB process/container memory cap, 6-hour wall limit; CPU only |
-| New Windows x64 environment on X: | Conditional fallback for a trusted, adapted count-matrix pipeline | One job, 2–4 cores, 6 GiB memory cap; require at least 10 GiB host available RAM at launch; sparse-loader benchmark and enforced cancellation first |
-| WSL/VM on this 16 GiB desktop | Defer | Shares the same constrained memory; installation and storage relocation would be a separate decision |
-| Ordinary GitHub CI | Keep for deterministic software tests | No raw scientific dataset job or public-PR access to the personal desktop |
+| Dot cloud computer | Coordination, manual source review, candidate single-writer ledger | Demonstrate dispatch/return, structured-record access, persistence, backup/restore; no assumed SDK |
+| Private Codex Cloud environment `weft-pilot` | Pinned Weft commands and later scientific jobs in fresh workspaces | Verify actual architecture/resources, dependencies, network, cancellation and artifact export in a fresh task |
+| Public GitHub repositories | Weft code/compact receipts; pinned read-only Ravel context initially | Exact revisions/hashes; no bulk Ravel checkout/LFS smudge, private preferences or scientific data push |
+| Qualified artifact destination | Immutable outputs and recoverable state | Location/access/retention receipt and checksum-verified restoration outside originating task; destination pending |
+| Local X: archives | Optional existing source/backup | Cloud work must succeed without X: access or an awake desktop |
 
-These are engineering proposals, not activated or measured resource guarantees.
-The earlier pilot's blanket 16 GiB worker allowance is unsuitable for a host with
-only 15.6 GiB total memory. A 16 GiB cap remains a proposal only for the separate
-32 GiB worker. No GPU is required by the bounded count-matrix design.
+OpenAI documents dot cloud work and delegation into configured Codex Cloud
+environments. Published environments provide fresh task workspaces and saved setup;
+important outputs still need explicit saving. These capabilities do not establish
+Weft's scientific isolation, resource limits or evidence retention.
+[Dot computers](https://learn.chatgpt.com/docs/dots/computers-and-apps),
+[cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environments).
 
-Linux x86-64 reduces architecture friction for the older scientific stack and
-offers a straightforward place to qualify a contained worker. It does **not**
-guarantee that the 2020 software stack can still be reconstructed. Pin and test
-the actual versions; if a modern stack is needed, label that route adapted and
-record the differences. Windows x64 package compatibility under ARM emulation
-must likewise be tested in the new environment rather than assumed from one
-existing installation. See [Scanpy installation guidance](https://scanpy.readthedocs.io/en/stable/installation.html).
+## Dependency stages
 
-## Isolation, data placement and qualification
+1. **M3a setup:** Python 3.12+ and Git. Current validation, discovery and reading
+   code uses the standard library. Record exact versions; no API key or dataset
+   is needed for offline checks.
+2. **M3b / M2 qualification:** add only dependencies required by the implemented
+   job service. Test synthetic jobs, delegation, limits and recovery first.
+3. **M4a science:** select/lock the adapter's actual stack (expected NumPy/SciPy,
+   pandas, AnnData/Scanpy, clustering, Scrublet and plotting dependencies).
+   Import/version/synthetic tests precede data. These are candidates, not an
+   installed lock. The 2020 Scanpy/Louvain/manual exclusions are not equivalent
+   to modern Leiden/MAD processing; retain the adapted label/discrepancy ledger.
 
-Keep Weft orchestration/cache on `X:/GitHub/weft`. Ravel remains the scientific
-owner at `X:/GitHub/ravel`. Reference the existing GSE145031 archive read-only;
-copy to a separate worker only through a checksum-verified transfer. A copied
-file or a second analysis of it is still the same source data.
+No GPU is required by the bounded count-matrix design. Actual package compatibility
+and sparse memory use determine feasibility, not compressed file size.
 
-Use a fresh, versioned environment and output directory. A Python virtual
-environment isolates dependencies, not arbitrary author code or host access
-([Python documentation](https://docs.python.org/3/library/venv.html)). Linux worker
-qualification must demonstrate a nonprivileged process, read-only input mount,
-separate outputs, bounded memory/CPU/time, bounded network access and no publication
-credentials. On Windows, [Job Objects](https://learn.microsoft.com/en-us/windows/win32/procthread/job-objects)
-are a candidate for process-tree limits; no such runner is implemented yet and
-they must not be described as a complete security boundary.
+## Qualification receipt and numerical readiness
 
-Before the first analysis:
+Record environment identity/version, task ID, Weft/Ravel commits, timestamp,
+OS/architecture, Python/Git and eventual dependency lock; observable CPU, memory,
+disk, process/network limits; bounded test scope; measured peak memory/time;
+cancellation result; artifact destination, hashes and restoration. Do not expose
+credentials/environment variables or private account data. Unknown measurements
+remain unknown rather than passing.
 
-1. Select the actual host and any allowed cost. Do not provision an unchosen host.
-2. Implement M3 job identity, exclusive lease, attempt history, cancellation and
-   enforced resource limits. Test failures using synthetic inputs first.
-3. Create the new Ravel contract/adapter under its governance. Pin input hashes,
-   code, dependency lock, seeds, published/adapted methods and new output paths.
-   Resolve allowed annotation comparisons and tolerances with recorded review.
-4. Validate matrix coordinates/values, sample-prefixed barcodes, sparse storage
-   and memory behavior. Benchmark a bounded loader smoke test only after the
-   contract permits it; do not silently run the historical scripts.
-5. Verify sufficient free memory/disk, input hashes, unchanged frozen outputs and
-   process-tree termination. An ordinary environment import is not qualification.
-6. Only then dispatch the bounded descriptive run. Preserve all attempts, staged
-   denominators, resource receipts and discrepancies; no automatic scientific acceptance.
+Before numerical dispatch require:
 
-The Choi review is complete enough to prepare this package. Worker selection,
-runtime qualification, a new scientific contract and comparison criteria remain
-the boundary before any numerical analysis.
+- M3 identity, exclusive lease, attempt history, immutable references and resource
+  enforcement; duplicate-submission and uncertain-termination tests.
+- A new versioned Ravel contract: prior exposure, comparison/unit/endpoint,
+  published/adapted QC, annotation criteria, seeds and new output paths.
+- Explicit public download or authorized copy, checked against inventoried
+  archive/member hashes. A second copy is still the same source data.
+- Coordinate/value validity, sample-prefixed barcodes and a bounded sparse-loader
+  benchmark permitted by the contract. Preserve frozen historical outputs.
+- Verified memory/time bounds and process-tree cancellation, with measured headroom.
+  The former 16-GiB cap is not assumed available in the cloud.
+- Durable output export/restoration; an in-task success with lost artifacts is incomplete.
+
+Prefer Linux x86-64 if available but inspect the actual runtime. If the selected
+cloud cannot satisfy a required control or measured workload, record why and
+request a concrete plan revision. Another cloud worker is a fallback decision;
+no local PC, paid VM, API account or new storage service is implicitly required.

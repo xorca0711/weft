@@ -120,13 +120,14 @@ executable frozen Ravel research contract.
 
 ## Resource proposal and next prospective pilot
 
-Revised proposal after the input/host audit: one accession, one worker, up to
-4 CPU cores, 6 hours per attempt and 20 GiB of new downloads. Prefer a separate
-32 GiB Linux x86-64 host with a 16 GiB worker cap. A local Windows fallback would
-instead require a 6 GiB cap and at least 10 GiB available host memory at launch.
-All limits remain proposed; [qualification](EXECUTION_ENVIRONMENT.md) must measure
-requirements and enforce bounds before analysis.
-Existing Ravel data may be referenced read-only after hashes are verified.
+The selected route is dot coordination with a qualified Codex Cloud worker.
+One accession and one active scientific job remain the scope; up to 4 CPU cores,
+6 hours and 20 GiB of new downloads remain proposed ceilings, not observed cloud
+allocations. The former 32-GiB host / 16-GiB cap recommendation is superseded by
+measurement in the selected cloud. [Qualification](EXECUTION_ENVIRONMENT.md) must
+establish memory/time/process limits and durable output export before analysis.
+Download the reviewed public inputs or transfer an authorized copy and verify
+hashes; no direct access to the owner's X: drive is assumed.
 Do not silently download raw sequencing reads or expand to additional accessions.
 
 After P001, freeze a search window and eligibility criteria before inspecting

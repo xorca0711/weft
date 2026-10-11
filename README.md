@@ -8,6 +8,7 @@
 | Manual literature discovery and RQ review buffer | Descriptive only | [Live validation](records/discovery-validation.json) | Metadata matches and reading priority, not accepted claims |
 | Manual source-bound reading packets | Descriptive only | [Local reader](docs/LOCAL_READER.md) | XML text/captions; semantic and figure review remain separate |
 | Choi figure, supplement and input review | Descriptive only | [Review receipt](records/pilot-review-20261011.json) | Manual review and file integrity; numerical analysis remains held |
+| Dot coordination and Codex Cloud execution | Not established | [Cloud roadmap](docs/IMPLEMENTATION_PLAN.md) | Selected architecture; environment/runtime qualification pending |
 | Autonomous paper-to-question workflow | Not established | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Scientific workers, unattended agents and Ravel export remain planned |
 
 Weft is being built to bring new literature into an existing research programme:
@@ -26,7 +27,9 @@ private configuration, even though this repository is public.
 
 ## Intended workflow
 
-Solid arrows show implemented manual stages. Dotted arrows show the remaining
+The selected deployment uses a dot for coordination and Codex Cloud for execution.
+Environment setup and numerical work remain unqualified. Solid arrows show
+implemented manual stages. Dotted arrows show the remaining
 scientific workflow. An RQ supplies search context; the review buffer keeps proposed
 relationships separate from accepted evidence.
 
@@ -36,9 +39,11 @@ flowchart TD
     Q["Broad, contrary and adjacent queries"] --> D
     D --> B["Review buffer: proposed paper-to-RQ links"]
     B --> T["Reading priority: read next, hold or reject"]
-    T --> P["Local Codex: source-bound reading packet"]
+    T --> P["Source-bound reading packet: manual baseline"]
+    O["Dot coordinator: planned"] -.-> P
     P -.-> V["Review findings, units, limitations and RQ compatibility"]
-    V -.->|eligible data| C["Freeze contract and qualify isolated worker"]
+    V -.->|eligible data| C["Freeze contract and qualify Codex Cloud runtime"]
+    O -.-> C
     V -.->|unknown or unsupported| H["Hold or reject link; retain evidence"]
     C -.-> A["Reproduce a defined result; retain discrepancies"]
     A -.-> E["Bounded extension and interpretation"]
@@ -59,7 +64,8 @@ flowchart TD
 | Connect Weft to Ravel without competing sources of truth | [Integration contract](docs/RAVEL_CONNECTION.md) |
 | Run the first complete paper pilot after implementation | [Choi 2020 pilot](docs/PILOT_CHOI_2020.md) |
 | Inspect completed figures, supplements and dataset qualification | [Choi review](docs/PILOT_CHOI_REVIEW.md) |
-| Choose and qualify a scientific worker | [Execution environment](docs/EXECUTION_ENVIRONMENT.md) |
+| Configure the selected cloud environment and access | [Cloud setup runbook](docs/CLOUD_SETUP.md) |
+| Qualify the scientific runtime | [Execution environment](docs/EXECUTION_ENVIRONMENT.md) |
 | Evaluate missed papers, extraction and analysis fidelity | [Evaluation plan](docs/EVALUATION.md) |
 | Check completed work and remaining dependencies | [Current state](PROGRESS.md) |
 | See authorship, decisions and revisions | [Development record](DEVELOPMENT.md) |
@@ -92,10 +98,11 @@ download datasets, connect an AI account, or write to Ravel.
 
 ## Execution and scientific boundaries
 
-Future routine work can run under a standing scope and resource policy. GitHub
-can coordinate discovery and validation; substantial analyses belong on isolated
-workers with persistent data storage. Dots or another agent backend can invoke
-the same tools. No dependency on a particular chat session is intended.
+The owner selected a dot to coordinate and Codex Cloud to execute versioned code,
+starting with manually dispatched qualification. No additional local PC is required.
+The [roadmap](docs/IMPLEMENTATION_PLAN.md) puts job limits, state recovery and artifact
+export before the numerical pilot. GitHub CI remains for deterministic tests.
+Cloud selection does not establish available RAM, runtime limits or scientific readiness.
 
 The first paper is a deliberately exposed historical benchmark, **Choi et al.,
 Cell Stem Cell (2020)**. Completing it would test workflow fidelity and correct

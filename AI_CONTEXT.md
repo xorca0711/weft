@@ -11,8 +11,14 @@ Unattended agents, scientific execution and Ravel export are not implemented.
   [gates](docs/GATES.md) distinguish runtime checks from future scientific decisions.
 - `integration/ravel.lock.json` pins source identity. Context supports all 32 RQs;
   initial search profiles cover A0/A1 only. No automatic evidence join or canonical ID.
-- The owner selected local Codex with manual reading runs. No paid API or unattended
-  launcher is configured. Never fabricate human review or independent replication.
+- The owner selected dot coordination + Codex Cloud execution after the local
+  manual-reader baseline. Start with [cloud setup](docs/CLOUD_SETUP.md), then M3
+  controls and one manual dot qualification. The owner confirmed environment creation
+  and Weft repository selection are available, not a published/qualified worker.
+  No paid API or unattended launcher is configured. Never fabricate human review.
+- No extra local PC is required. Cloud tasks pin the reviewed Weft PR revision
+  and Ravel blobs; never assume main has current implementation, or X: paths and
+  authoritative SQLite state exist in fresh cloud workspaces.
 - `records/` contains compact public check evidence. Raw responses, full XML,
   derived reading packets and SQLite state stay in ignored `runs/` on X:.
 - Ravel's physical migration completed on 11 October 2026: `X:/GitHub/ravel`
