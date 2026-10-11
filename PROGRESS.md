@@ -1,28 +1,25 @@
 # Current project state
 
-## Current hold — qualified runtime export
+## Current stage — Choi metadata preparation
 
-The corrected Git-equipped numerical image passed synthetic numerical, committed-source,
-Ravel runner and launcher-loss checks. [Receipt](records/numerical-git-runtime-20261011.json)
-records the exact image, package verification and remaining limits. The earlier proxy
-failure was resolved by preserving Docker’s supplied proxy defaults and CA trust.
+The exact runtime export succeeded after direct approval in the executing worker
+chat. Worker and independent root readback verified 156,333 bytes, the expected
+SHA-256, ZIP CRC and all 28 manifest entries. Owner-only sharing and the expected
+folder were verified; no sharing change. Earlier denials remain recorded in the
+[qualification receipt](records/numerical-git-runtime-20261011.json).
 
-The owner directly approved the exact 156,333-byte sanitized archive and private
-Drive destination in the root chat. The single resulting upload attempt was still
-rejected because the cloud worker received that approval as relayed transcript
-text. **No upload or readback occurred.** Pre-upload size, SHA-256, ZIP CRC, all
-28 manifest entries and owner-only destination metadata passed. No retry or alternate
-transfer route is underway; the archive, image and source are preserved.
+Ravel PR149 commit `90c02bad355a52bc9b71ac84ad63a06eda52c525` preserves the exact
+Git-equipped runtime and freezes only the metadata/input-loader contract. The
+unchanged full research gate and source/schema preflight passed. Figure1 remains
+draft. Runtime identity and a bounded 4-CPU/8-GiB offline job are declared in the
+[Ravel execution plan](https://github.com/xorca0711/ravel/blob/90c02bad355a52bc9b71ac84ad63a06eda52c525/Research%20Article/gate1_02_choi_2020/weft_pilot_v1/config/metadata-execution-v1.json).
 
-The remaining action is a direct user message in the existing cloud worker,
-"Verify Weft network access", approving this exact export. Another approval in
-the root chat alone has already proved insufficient. The Choi contracts remain
-draft and no biological inputs or analysis have run.
-
-After approval is accepted by the executing worker: upload once and verify metadata/raw-byte hash; bind the reviewed runtime
-recipe/locks in Ravel PR149; freeze the metadata contract and exact manual job packet;
-verify its before-dispatch checkpoint; then download/check inputs and benchmark sparse
-loading. The descriptive contract remains draft until metadata/resource review passes.
+The sole dot coordinator is preparing one immutable packet and verified private
+before-dispatch checkpoint using the existing authoritative ledger and worker.
+No NCBI download or real-input computation is claimed yet. Next: review the actual
+packet/checkpoint, run exact input/sparse validation, verify outputs and after-run
+checkpoint, then review memory before freezing any descriptive job. No automatic
+scientific API, claim acceptance, RQ promotion, merge or schedule is enabled.
 
 ## Checkpointed manual pilot preparation — 11 October 2026
 

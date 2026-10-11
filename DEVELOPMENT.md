@@ -225,3 +225,13 @@ folder checks passed. Preserve the qualified image/archive; no alternate route o
 retry. The direct worker chat was opened for the owner to submit authorization.
 Scientific dispatch and contract freeze remain held. Documentation/receipt-only
 update; previous runtime/tests remain valid and no analysis was rerun.
+
+## 2026-10-11 — Runtime export verified; metadata preparation resumed
+
+Direct owner approval in the executing worker resolved the upload boundary. One
+upload and worker readback succeeded; root independently verified raw bytes, ZIP
+CRC, 28 member hashes and owner-only metadata. The exact runtime archive is now
+bound in Ravel90c02ba with a frozen metadata-only contract and passing unchanged
+governance checks. Mir remains sole coordinator and is preparing the per-job
+packet/checkpoint. No real-input computation is yet claimed. Earlier denials and
+runtime failures are retained; no validator or access control was weakened.
