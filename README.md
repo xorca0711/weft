@@ -8,7 +8,8 @@
 | Manual literature discovery and RQ review buffer | Descriptive only | [Live validation](records/discovery-validation.json) | Metadata matches and reading priority, not accepted claims |
 | Manual source-bound reading packets | Descriptive only | [Local reader](docs/LOCAL_READER.md) | XML text/captions; semantic and figure review remain separate |
 | Choi figure, supplement and input review | Descriptive only | [Review receipt](records/pilot-review-20261011.json) | Manual review and file integrity; numerical analysis remains held |
-| Dot coordination and Codex Cloud execution | Not established | [Cloud roadmap](docs/IMPLEMENTATION_PLAN.md) | Selected architecture; environment/runtime qualification pending |
+| Pinned Codex Cloud setup | Descriptive only | [Setup receipt](records/cloud-setup-20261011.json) | Private environment published; small export verified; science remains held |
+| Dot coordination and scientific cloud execution | Not established | [Cloud roadmap](docs/IMPLEMENTATION_PLAN.md) | Runtime controls, durable artifacts and delegation remain unqualified |
 | Autonomous paper-to-question workflow | Not established | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Scientific workers, unattended agents and Ravel export remain planned |
 
 Weft is being built to bring new literature into an existing research programme:
@@ -28,7 +29,7 @@ private configuration, even though this repository is public.
 ## Intended workflow
 
 The selected deployment uses a dot for coordination and Codex Cloud for execution.
-Environment setup and numerical work remain unqualified. Solid arrows show
+The initial cloud environment is published; numerical work remains unqualified. Solid arrows show
 implemented manual stages. Dotted arrows show the remaining
 scientific workflow. An RQ supplies search context; the review buffer keeps proposed
 relationships separate from accepted evidence.

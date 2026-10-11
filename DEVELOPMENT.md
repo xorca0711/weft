@@ -80,3 +80,23 @@ successful checks, and continuation toward Choi. Browser account access is pendi
 resolution. Codex implemented a bounded synthetic-only M3 foundation while waiting;
 no execution gate was weakened or scientific authority invented. The new ledger
 records cooperative transitions and cannot establish real process termination.
+
+## Published setup and independent restore — 11 October 2026
+
+Account access was resolved. Codex configured private weft-pilot in the UI using
+the exact authorized d031cef baseline, reviewed 58 cloud tests and 15 pinned Ravel
+blobs, and published after setup and independent synthetic restore checks passed.
+The archive was transferred via rendered base64 after the file-viewer download
+was unconfirmed; its checksums/CRC were verified on a separate Windows host.
+This is narrow setup evidence, not a durable cloud artifact service. Initial
+receipts remain unchanged; the new public record distinguishes those observations
+from outstanding M3/M4 controls. No scientific gate, source contract, Ravel file,
+activation flag or scientific result was changed. No merge is claimed.
+
+Fresh-task qualification independently matched the published configuration version
+suffix and passed Docker memory/PID/network/non-root/read-only/cancellation checks.
+The owner selected private Google Drive. A new owner-only folder and authenticated
+48,400-byte same-task roundtrip passed; a separate cloud restore is being verified.
+Private Drive locators remain ignored. Startup skill discovery and managed-network
+status differ from setup; receipts retain those limitations rather than claiming
+complete M3 readiness. The exact d031cef environment baseline remains unchanged.

@@ -6,9 +6,13 @@ work nor schedules. [Roadmap](IMPLEMENTATION_PLAN.md) owns stages;
 
 ## Access and owner actions
 
-**Confirmed by the owner, 11 October 2026:** Create environment is available and
-`xorca0711/weft` appears in the repository selector. No additional GitHub access
-request or API secret is currently needed. This does not confirm a published environment.
+**Completed, 11 October 2026:** private `weft-pilot` was published through the UI
+at exact PR #1 revision `d031cef02ab4a417760bca46e90a63917d215d31`.
+[Setup receipt](../records/cloud-setup-20261011.json): 58 tests, 15 pinned Ravel
+files and a small synthetic export restored on a separate host. No new API secret
+was needed. The steps below are the reusable runbook, not pending account actions.
+Scientific runtime controls, fresh-task restoration and durable cloud outputs
+remain separate qualification work.
 
 1. In **Settings > Codex Cloud > Environments > Create environment**, prepare a
    private environment named **weft-pilot**, selecting Weft. Ravel remains a public,
@@ -20,8 +24,8 @@ request or API secret is currently needed. This does not confirm a published env
 
 The equivalent entry is **Work in > Cloud > Select environment > Create environment**.
 These steps follow [OpenAI's environment guide](https://learn.chatgpt.com/docs/environments/cloud-environments).
-The current session has no verified cloud-environment inventory/provisioning tool.
-No environment creation, publication or dot assignment has been confirmed here.
+Actual UI publication is confirmed in the receipt. Dot assignment and scientific
+readiness are not implied. Keep setup results separate from later M3/M4 qualification.
 
 ## Exact source selection
 

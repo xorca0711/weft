@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "record_type": "cloud-setup-qualification",
+  "date": "2026-10-11",
+  "environment_name": "weft-pilot",
+  "visibility": "private (Only me), UI verified",
+  "environment_id": "ccarenv_b64_Y2NhcmVudl83ZDU5NjJlOWRiOTQ4MTkxYTUxNTI2YjdjOTI3OWY0Mw",
+  "setup_task_id": "01a12a66-9a90-7303-860e-20fa81953038",
+  "weft_commit": "d031cef02ab4a417760bca46e90a63917d215d31",
+  "ravel_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+  "publication": {
+    "status": "published",
+    "verification": "Actual environment UI displayed Published and Environment has been published",
+    "published_version_id": "e1ba7ae9-e5d4-4ddb-92cb-a6415c57831a~cecfgver_6acb61fdc96481a283a745de16ae40ce",
+    "version_status": "Published version suffix independently matched by fresh task; per-task environment IDs/counters differ"
+  },
+  "setup_checks": {
+    "offline_validation": "pass",
+    "tests_passed": 58,
+    "tests_failed": 0,
+    "tests_skipped": 0,
+    "ravel_pinned_blobs_verified": 15,
+    "clean_refresh_restores_exact_pin": true,
+    "dirty_checkout_preserved": true,
+    "source": "Cloud setup command receipt, independently read through UI"
+  },
+  "runtime_observation": {
+    "os": "Debian 13.6 Linux x86-64",
+    "python": "3.12.14",
+    "git": "2.52.0",
+    "cpu_quota_cores": 4,
+    "memory_limit_bytes": 34359738368,
+    "workspace_free_bytes": 32032403456,
+    "guarantee": false
+  },
+  "network": {
+    "mode": "restricted/enforced",
+    "preset": "package_managers",
+    "public_github_fetch": "pass",
+    "new_credentials_or_domains_added": false
+  },
+  "external_restore": {
+    "timestamp_utc": "2026-10-11T10:15:55.735659+00:00",
+    "transfer": "Rendered cloud-response base64 envelope via browser DOM, decoded on separate Windows host",
+    "restore_host_platform": "Windows",
+    "restore_host_architecture": "ARM64",
+    "archive_sha256": "2c0dde8565e0f9d0bc80f27c374b7fcbaf315a9929371bd146e74b5b90b8fad2",
+    "artifact_sha256": "49838c2eaa8c7bc6ed8032389fa8db14fd080e7485b80311919a4a223a194412",
+    "archive_size_bytes": 1130,
+    "artifact_size_bytes": 201,
+    "verified": true,
+    "archive_crc_verified": true,
+    "archive_code_executed": false,
+    "scope": "One small synthetic export/restore; not durable cloud storage or bulk export qualification"
+  },
+  "scientific_readiness": "hold",
+  "remaining": [
+    "Per-job limits and process-tree cancellation",
+    "Content-verified executor receipts",
+    "Durable PC-independent artifact storage and ledger authority",
+    "Dot dispatch/return qualification",
+    "Scientific contract, dependencies, input coordinates/values and sparse benchmark"
+  ],
+  "activation_flags": {
+    "enabled": false,
+    "automations_enabled": false,
+    "scientific_execution_enabled": false,
+    "automatic_merge_enabled": false,
+    "canonical_rq_registration_enabled": false
+  },
+  "local_evidence": "Ignored runs/cloud-setup-20261011; includes unchanged cloud receipt and independent restore receipt",
+  "interpretation": "Setup success only; no Choi numerical analysis or scientific acceptance",
+  "capability_assessment": {
+    "docker_version": "28.4.0",
+    "memory_swap_pid_support_reported": true,
+    "delegated_writable_job_cgroup": false,
+    "container_enforcement": "Synthetic tests passed in fresh task; see cloud-runtime-20261011.json",
+    "artifact_export": "No callable bulk outbound storage/retention/retrieval capability exposed in setup task",
+    "storage_decision": "Private Google Drive selected; cloud read, private folder and same-task roundtrip passed. Cross-task restore pending."
+  },
+  "fresh_task": {
+    "id": "01a12a7d-52d1-718f-bc27-a848196c3030",
+    "source_checks": "58 tests, validation and all 15 pinned Ravel blobs passed",
+    "startup_skill_visible": false,
+    "network_enforcement_observation": "unknown",
+    "same_configuration_version_suffix": true
+  }
+}

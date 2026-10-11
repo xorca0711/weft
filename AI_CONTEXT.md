@@ -15,8 +15,9 @@ not dispatch cloud jobs or verify process termination.
   initial search profiles cover A0/A1 only. No automatic evidence join or canonical ID.
 - The owner selected dot coordination + Codex Cloud execution after the local
   manual-reader baseline. Start with [cloud setup](docs/CLOUD_SETUP.md), then M3
-  controls and one manual dot qualification. The owner confirmed environment creation
-  and Weft repository selection are available, not a published/qualified worker.
+  controls and one manual dot qualification. Private weft-pilot is published at d031cef with 58 cloud tests and a small
+  independently verified export. See records/cloud-setup-20261011.json. Per-job
+  controls, durable cloud artifacts and numerical execution remain unqualified.
   No paid API or unattended launcher is configured. Never fabricate human review.
 - No extra local PC is required. Cloud tasks pin the reviewed Weft PR revision
   and Ravel blobs; never assume main has current implementation, or X: paths and

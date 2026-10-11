@@ -2,8 +2,11 @@
 
 **Selected architecture, 11 October 2026:** a dot coordinates Weft; Codex Cloud is
 the first-choice runtime for repository commands and the Choi pilot. No additional
-physical computer is required. Environment creation and Weft repository availability
-are owner-confirmed; no environment has yet been confirmed published or qualified.
+physical computer is required. Private `weft-pilot` is published at d031cef;
+[setup checks and one small external restore passed](../records/cloud-setup-20261011.json).
+[Bounded container controls passed](../records/cloud-runtime-20261011.json) in a
+fresh task. Full job integration, durable cloud artifacts and numerical readiness
+remain held.
 See the [setup runbook](CLOUD_SETUP.md) and [ordered roadmap](IMPLEMENTATION_PLAN.md).
 
 ## Why the earlier sizing recommendation changed
@@ -15,9 +18,11 @@ Existing local research environments remain untouched.
 
 The earlier separate Linux x86-64 / 32-GiB recommendation was conservative sizing,
 not a measured minimum or a hardware purchase requirement. Cloud qualification
-supersedes it. No cloud RAM allocation, CPU architecture, uninterrupted job lifetime
-or storage guarantee has been verified for this account. Do not transfer the
-six-hour GitHub Actions limit to Codex Cloud.
+supersedes it. The setup worker was Linux x86-64 with a 4-core CPU quota, a
+32-GiB cgroup memory ceiling and about 29.83 GiB workspace free. These observations
+are not platform guarantees or per-job enforcement. Uninterrupted job lifetime
+and storage retention remain unknown. Do not transfer the six-hour GitHub Actions
+limit to Codex Cloud.
 
 Selected Choi triplets total about 155 MiB compressed (archive about 333 MiB).
 Their 46,423,890 stored entries span three matrices with 737,280 raw barcode columns
@@ -32,7 +37,7 @@ concatenate only qualified cells. Peak memory/runtime remain unmeasured.
 | Dot cloud computer | Coordination, manual source review, candidate single-writer ledger | Demonstrate dispatch/return, structured-record access, persistence, backup/restore; no assumed SDK |
 | Private Codex Cloud environment `weft-pilot` | Pinned Weft commands and later scientific jobs in fresh workspaces | Verify actual architecture/resources, dependencies, network, cancellation and artifact export in a fresh task |
 | Public GitHub repositories | Weft code/compact receipts; pinned read-only Ravel context initially | Exact revisions/hashes; no bulk Ravel checkout/LFS smudge, private preferences or scientific data push |
-| Qualified artifact destination | Immutable outputs and recoverable state | Location/access/retention receipt and checksum-verified restoration outside originating task; destination pending |
+| Private Google Drive folder (owner selected; qualification pending) | Immutable outputs and recoverable state | Verify cloud connector access, private permissions, upload and checksum-verified restore in another task; no desktop dependency |
 | Local X: archives | Optional existing source/backup | Cloud work must succeed without X: access or an awake desktop |
 
 OpenAI documents dot cloud work and delegation into configured Codex Cloud
