@@ -129,3 +129,15 @@ Validation: eight focused local tests passed, including a 16 MiB-plus-seven-byte
 boundary roundtrip, damaged parts, wrong external anchors, unexpected files,
 traversal, changed source and bounds. This is local transport preparation, not
 an end-to-end cloud multipart qualification.
+
+## Qualified pilot transfer size
+
+The first 16 MiB multipart trial failed during large-part readback, despite the
+older independent 16 MiB probe succeeding. A separate 4 MiB+7 trial passed actual
+cloud upload, authenticated download and reconstruction. Use the explicit
+[operational amendment](../records/figure1-artifact-transfer-v2.json) for P001;
+[trial evidence](../records/synthetic-multipart-20261011.json) preserves the failure.
+The helper's generic 16 MiB bound remains unchanged. P001 uses 4 MiB parts and
+at most 256 parts / 1 GiB. Every actual archive still needs its own readback checks.
+The immutable job packet binds this amendment; scientific source, output format,
+methods, container budget and network isolation are unchanged.

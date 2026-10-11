@@ -16,11 +16,16 @@ rerunning it. Root independently checked its bytes, ancestry, database integrity
 and single-attempt review record. The initial export denial and EXPORT_HELD
 checkpoint remain historical. [Evidence](records/choi-metadata-20261011.json).
 
-Next: qualify the two-part synthetic cloud transfer using Weft 4188424, then freeze
-and checkpoint the separate Ravel Figure1 contract. Its proposed limit is 4 CPUs,
-16 GiB and a one-hour worker watchdog, with unchanged scientific methods. Figure1
-is still draft/unrun; no new RQ, scientific acceptance, merge or unattended run.
-Both Weft CI checks and all four Ravel checks passed at 4188424 / 33375ef.
+The 16 MiB part uploaded but its readback failed; the separate 4 MiB+7 synthetic
+trial passed authenticated download and complete reconstruction. Root verified the
+manifest and deterministic anchors. [Trials](records/synthetic-multipart-20261011.json)
+preserve both outcomes. [Operational amendment](records/figure1-artifact-transfer-v2.json)
+uses 4 MiB parts, at most 256 / 1 GiB; frozen scientific files remain unchanged.
+
+Ravel b656d06 freezes Figure1 at 4 CPUs/16 GiB/one hour and passes all four CI jobs.
+Next: bind that source, transfer amendment and new unique Figure1 packet; verify
+before-dispatch checkpoint and host/input controls; obtain root release. Figure1
+has not run. No new RQ, scientific acceptance, merge or unattended execution.
 
 ## Checkpointed manual pilot preparation — 11 October 2026
 
