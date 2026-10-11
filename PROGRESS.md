@@ -51,8 +51,12 @@ self-reported; there is no scientific dispatch or successful-completion API.
    first. Cloud search succeeded, a new owner-only folder was created, and a
    48,400-byte synthetic ZIP was uploaded once and retrieved with matching SHA-256
    and ZIP CRC. [Drive receipt](records/cloud-drive-20261011.json) proves same-task
-   roundtrip; independent fresh-cloud restoration is next. Locators remain in
-   ignored private/cloud-artifacts.json. No new credentials or sharing changes.
+   roundtrip; [independent cloud restore](records/cloud-drive-restore-20261011.json)
+   then passed SHA-256, all 32 CRC/path checks and 12 included source/command hashes.
+   cached_setup.sh was not in the archive and its digest remains unverified.
+   The test used no PC or source-task files; it does not promise retention or claim
+   the desktop was literally powered off. Locators remain in ignored
+   private/cloud-artifacts.json. No new credentials or sharing changes.
 3. Qualify one manual dot handoff, dispatch/return and hold handling after the
    controls exist. Dot selection/delegation and unattended operation remain open.
 4. Prepare a new Ravel contract/adapter, dependency lock and comparison criteria.

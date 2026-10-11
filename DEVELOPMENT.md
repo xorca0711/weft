@@ -100,3 +100,10 @@ The owner selected private Google Drive. A new owner-only folder and authenticat
 Private Drive locators remain ignored. Startup skill discovery and managed-network
 status differ from setup; receipts retain those limitations rather than claiming
 complete M3 readiness. The exact d031cef environment baseline remains unchanged.
+
+Independent cloud-to-Drive-to-fresh-cloud restoration then passed SHA-256, 32
+member CRC/path checks and all 12 included source/command hashes. No PC/source-task
+files or archived code were used. One referenced setup-script digest cannot be
+checked because that file is absent from the ZIP; this limit remains explicit.
+This qualifies the demonstrated synthetic recovery path, not retention guarantees,
+large scientific artifacts or a shared authoritative ledger.

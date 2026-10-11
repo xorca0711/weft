@@ -37,7 +37,7 @@ concatenate only qualified cells. Peak memory/runtime remain unmeasured.
 | Dot cloud computer | Coordination, manual source review, candidate single-writer ledger | Demonstrate dispatch/return, structured-record access, persistence, backup/restore; no assumed SDK |
 | Private Codex Cloud environment `weft-pilot` | Pinned Weft commands and later scientific jobs in fresh workspaces | Verify actual architecture/resources, dependencies, network, cancellation and artifact export in a fresh task |
 | Public GitHub repositories | Weft code/compact receipts; pinned read-only Ravel context initially | Exact revisions/hashes; no bulk Ravel checkout/LFS smudge, private preferences or scientific data push |
-| Private Google Drive folder (owner selected; qualification pending) | Immutable outputs and recoverable state | Verify cloud connector access, private permissions, upload and checksum-verified restore in another task; no desktop dependency |
+| Private Google Drive folder | Qualified synthetic upload/recovery; future immutable outputs and state backups | [Independent restore passed](../records/cloud-drive-restore-20261011.json); large outputs, retention and ledger authority remain separate checks |
 | Local X: archives | Optional existing source/backup | Cloud work must succeed without X: access or an awake desktop |
 
 OpenAI documents dot cloud work and delegation into configured Codex Cloud
