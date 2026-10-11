@@ -1,6 +1,8 @@
 # Figure1 resource revision proposal — 11 October 2026
 
-**Decision pending; not applied.** The current Figure1 job has not started.
+**Owner selected the bounded 8 GiB option.** The current Figure1 job has not started.
+[Applied operational amendment](../records/figure1-resource-amendment-v2.json)
+is binding only through a newly reviewed immutable packet; no frozen v1 file changes.
 [Preparation evidence](../records/choi-figure1-preparation-20261011.json) records
 the stopped source clone and preserved reservation.
 
@@ -21,7 +23,7 @@ output format, network isolation, scientific acceptance or retry policy.
 The sparse-loader measurement supports trying a bounded workload; it does not
 prove the full workload will fit.
 
-After the owner's choice, preserve frozen v1 files and add an explicit immutable
+Following the owner's recorded choice, preserve frozen v1 files and add an explicit immutable
 operational amendment to the new packet. Reconcile the authoritative ledger and
 held reservation before any preparation resumes. No additional numerical attempt
 exists yet; no old metadata analysis is rerun. Actual figure dispatch still needs

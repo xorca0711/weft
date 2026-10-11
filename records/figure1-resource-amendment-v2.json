@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "kind": "manual-figure1-resource-operational-amendment",
+  "version": 2,
+  "date": "2026-10-11",
+  "status": "owner_selected",
+  "owner_decision": "Use an 8-GiB bounded pilot: unchanged methods, stop and preserve outputs on memory/time failure.",
+  "ravel_source_revision": "b656d06cc9f2cfdd61a6dd1f6570ec01331abf91",
+  "ravel_contract_sha256": "ff00512e290c831dc1575715f0efd0a9705e28e87d21aa63b4b123c21a1868cd",
+  "ravel_execution_plan_sha256": "72b536156c9ec2c84efdc73b4c3e9d3a7261e0dc1929196d146f70e437544815",
+  "supersedes_scope": {
+    "container.memory_bytes": 8589934592,
+    "container.memory_swap_bytes": 8589934592,
+    "host_preflight.minimum_available_memory_bytes": 12884901888
+  },
+  "unchanged": "4 CPUs; 256 PIDs; 512 MiB tmpfs; 3600s watchdog+1s kill; network none; nonroot; read-only source/input/Git/rootfs; cap drop ALL; no-new-privileges; fixed scientific contract/code/methods/endpoints/output format.",
+  "resource_basis": "Metadata passed under the same 8 GiB cap with ~924 MiB cumulative process peak. Full Figure1 workload is unmeasured. Cap is reduced while planned host headroom remains 4 GiB. This is a bounded attempt, not a fit/retention guarantee.",
+  "known_capacity_limit": "Current worker reports ~17.59 GiB host total and visible 16 GiB cgroup max; exact ancestor/Docker relation is unknown. File cache is not assumed reclaimable and is not cleared.",
+  "before_dispatch": [
+    "reconcile original ledger and retained unstarted Figure1 reservation against latest held checkpoint",
+    "fresh actual host MemAvailable >=12 GiB and free disk >=10 GiB; no overlapping job",
+    "read cgroup bounds/current and report restricted ancestor visibility; hold if an observed effective limit is below 8 GiB or actual container cap differs",
+    "inspect actual Docker resource/network/identity/mount controls; retain snapshot and applicable capacity caveats",
+    "verify exact clean self-contained source and nine retained inputs; bounded offline preflight",
+    "immutable packet binds original contract, this amendment, artifact-transfer amendment and qualification hashes",
+    "verified new before-dispatch checkpoint descending from latest preparation-held checkpoint; root release still required"
+  ],
+  "artifact_transfer_amendment": "records/figure1-artifact-transfer-v2.json",
+  "artifact_transfer_amendment_sha256": "978be234d6a60096bc70cd8a76634540a008fb99797f5ffc6502b0d066356a88",
+  "recovery_parent_sha256": "591a7df4c68dfae5ac541d4b2912367718b26d08d7a305e67d5b4397f01aa240",
+  "failure": "Preserve any memory/time/method failure, exact outputs/logs and terminal or uncertain state. No automatic retry, parameter rescue, higher memory allowance, gate relaxation, claim promotion or new question.",
+  "scientific_design_changed": false,
+  "scientific_acceptance": false,
+  "automatic_dispatch": false
+}

@@ -31,8 +31,12 @@ and same preparation reservation are preserved. [Evidence](records/choi-figure1-
 
 [Resource revision proposal](docs/FIGURE1_RESOURCE_REVISION.md) recommends a bounded
 8 GiB job with a 12 GiB host floor, unchanged methods and stop-on-failure. The
-alternative is qualifying a larger cloud worker. This choice is pending; no gate
-was lowered and no new runtime, retry or analysis was authorized. The held-state
+alternative is qualifying a larger cloud worker. The owner selected the 8 GiB option; the explicit
+[resource amendment](records/figure1-resource-amendment-v2.json) changes only the
+container budget/host floor while keeping 4 GiB planned headroom and all methods.
+No frozen v1 file is changed. Resume only the same unstarted reservation with
+new actual capacity/source/input/control checks and a verified before-checkpoint;
+root numerical release remains pending. The held-state
 ledger checkpoint is verified by coordinator and root; reservation retained. No new RQ, claim promotion,
 merge or unattended execution.
 
