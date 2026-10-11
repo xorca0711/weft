@@ -1,0 +1,18 @@
+{
+  "scope": "initial-publication-checks",
+  "commit": "022aa6dc22a9438d0edeadf355a018dffd4170df",
+  "checks": [
+    {
+      "name": "Weft checks",
+      "conclusion": "success",
+      "url": "https://github.com/xorca0711/weft/actions/runs/38115731187"
+    },
+    {
+      "name": "Verify pinned Ravel connection",
+      "conclusion": "success",
+      "url": "https://github.com/xorca0711/weft/actions/runs/38115763448"
+    }
+  ],
+  "readme_mermaid_render": "Inspected on public GitHub page; all workflow nodes rendered.",
+  "scientific_pilot_executed": false
+}

@@ -7,11 +7,11 @@
 | Local scaffold and pinned Ravel connection checks | Descriptive only | [Validation record](records/bootstrap-validation.json) | Software checks; no scientific validation |
 | Autonomous paper-to-question workflow | Not established | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Planned; discovery, agent execution and scientific runs are not enabled |
 
-Weft brings new literature into an existing research programme. It finds papers
-against established questions and broader reading interests, explains their
-relevance, qualifies reusable data, and is designed to coordinate bounded
-reproduction and exploratory analysis. Its output is a traceable evidence
-package, including negative results, discrepancies and candidate questions.
+Weft is being built to bring new literature into an existing research programme:
+find papers against established questions and broader reading interests, explain
+their relevance, qualify reusable data, and coordinate bounded reproduction and
+exploratory analysis. The intended output is a traceable evidence package,
+including negative results, discrepancies and candidate questions.
 
 The name comes from the crosswise threads of woven fabric. **Weft** is the
 project name; `weft` is the repository and Python module name. It is not an acronym.

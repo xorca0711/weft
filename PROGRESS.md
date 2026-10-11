@@ -15,7 +15,12 @@ Local validation passed: 11 unit tests, 20 documentation links and all 15 pinned
 Ravel source files. The [record](records/bootstrap-validation.json) contains code/
 configuration hashes and the exact scope. The initial sandbox invocation could
 not use temporary Git fixtures; the unchanged tests passed outside that restriction.
-Public CI and the manual remote-source check are pending initial publication.
+Published at https://github.com/xorca0711/weft, with the physical local checkout
+at `X:\GitHub\weft`. Initial GitHub checks passed, and the independently fetched
+Ravel revision passed all 15 source-identity checks. The [remote validation record](records/remote-validation.json)
+links both completed runs at bootstrap commit `022aa6d`. The README Mermaid
+diagram was inspected in GitHub's rendered view. Later commits receive normal CI;
+the Actions page owns their current status.
 
 Not implemented: live discovery, model calls, durable task scheduler, scientific
 execution adapter, candidate generation and Ravel PR exporter. No biological
