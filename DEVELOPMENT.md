@@ -198,3 +198,19 @@ also passed private readback and read-only restoration, with zero scientific
 attempts. Locators remain ignored. Ravel PR149 records independently reviewed
 draft contracts and a passing full Windows governance check. Git dependency
 qualification remains a real execution hold; no gate was bypassed.
+
+## 2026-10-11 — Qualified Git image, explicit export hold
+
+The initial APT failure came from passing the outer-only proxy hostname into an
+inner container. Preserving Docker client proxy defaults and mounted CA trust fixed
+package acquisition without changing hosts or routing. The worker verified three
+signed Debian indexes, 31 package hashes and 61 wheels, then built offline. The new
+image passed numerical, committed-source, runner and launcher-loss checks; see
+records/numerical-git-runtime-20261011.json. Root has the completed report; independent
+archive readback remains pending.
+
+Automatic approval review rejected the partial-evidence Drive upload because
+relayed authorization was not treated as a trusted human message. Further uploads
+stopped. A sanitized 156,333-byte final qualification package is prepared and root
+requested direct user approval for that exact export to the existing owner-only
+folder. No biological dispatch, frozen contract, gate change or claim promotion.

@@ -1,5 +1,23 @@
 # Current project state
 
+## Current hold — qualified runtime export
+
+The corrected Git-equipped numerical image passed synthetic numerical, committed-source,
+Ravel runner and launcher-loss checks. [Receipt](records/numerical-git-runtime-20261011.json)
+records the exact image, package verification and remaining limits. The earlier proxy
+failure was resolved by preserving Docker’s supplied proxy defaults and CA trust.
+
+A reviewed 156,333-byte sanitized qualification archive is ready but **not uploaded**.
+Automatic approval review rejected the prior export because the worker received Drive
+authorization as relayed transcript text. Root requested direct approval for the exact
+new archive and existing owner-only destination. No upload retry is authorized until
+that answer arrives. No biological inputs or analysis have run.
+
+After approval: upload once and verify metadata/raw-byte hash; bind the reviewed runtime
+recipe/locks in Ravel PR149; freeze the metadata contract and exact manual job packet;
+verify its before-dispatch checkpoint; then download/check inputs and benchmark sparse
+loading. The descriptive contract remains draft until metadata/resource review passes.
+
 ## Checkpointed manual pilot preparation — 11 October 2026
 
 The owner selected **one dot coordinator, Codex Cloud execution, and private Google
@@ -118,6 +136,6 @@ up a fresh manual P001 ledger with zero scientific attempts; read-only restore
 passed without activation. This preparation checkpoint does not authorize a job.
 
 Ravel [PR #149](https://github.com/xorca0711/ravel/pull/149) contains reviewed draft
-contracts/source. Its full unchanged Windows governance gate passes. The first
-image lacks Git, required by the existing runner; an official-package image
-revision is being qualified. No biological inputs or computation have run.
+contracts/source. Its full unchanged Windows governance gate passes. The initial
+image lacked Git; the qualified revision and export hold are recorded above.
+No biological inputs or computation have run.
