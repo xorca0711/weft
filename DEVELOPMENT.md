@@ -189,3 +189,12 @@ context manager committed but did not close the connection. Explicit closing fix
 temporary-file cleanup: 12 targeted tests pass, one symlink-privilege skip. No
 checkpoint, gate or recovery semantics changed. The Ravel draft remains under
 review; runtime checks do not establish scientific results or acceptance.
+
+## 2026-10-11 — Bounded transfer and pilot review handoff
+
+The private 16 MiB payload/archive roundtrip passed with one upload, owner-only
+metadata and SHA/CRC verification. A new manual P001 coordinator ledger checkpoint
+also passed private readback and read-only restoration, with zero scientific
+attempts. Locators remain ignored. Ravel PR149 records independently reviewed
+draft contracts and a passing full Windows governance check. Git dependency
+qualification remains a real execution hold; no gate was bypassed.

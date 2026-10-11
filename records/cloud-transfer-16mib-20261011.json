@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "attempt": "9502866eafaf404290dc8a6e1f9a1c46",
+  "payload_bytes": 16777216,
+  "uploaded_and_returned_archive_bytes": 16777799,
+  "original_and_returned_archive_sha256": "163e368d197ce303c30e1bf26ca4b017b35c38e31978c60a6844ad8c561dbacc",
+  "verified_payload_sha256": "341aacac661ccb210720bedaa9ead5d668fe5ea41a73532fc147c71e34040df1",
+  "upload_calls": 1,
+  "upload_elapsed_ms": 8773,
+  "fetch_elapsed_ms": 2222,
+  "parent_verified": true,
+  "folder_and_file_permissions": "owner-only",
+  "zip": "STORED; exactly two regular members; CRCs, bounds and canonical manifest verified",
+  "artifact_retained": true,
+  "weft_edited": false,
+  "scope": "same-task bounded synthetic Drive roundtrip; not retention or arbitrary-size qualification",
+  "larger_archives": "require complete manifest, ordered bounded pieces, and whole-archive reconstruction verification"
+}

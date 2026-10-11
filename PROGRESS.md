@@ -107,3 +107,17 @@ attempts remain held; all scientific readiness and activation gates remain false
 Windows checkpoint tests also pass (12 run, one symlink-privilege skip). Root
 review corrected a test-only SQLite handle leak using explicit connection closure;
 production checkpoint code was unchanged. Linux CI passed at 07c5756.
+
+### Pilot transport and reviewed Ravel handoff
+
+The [16 MiB synthetic transfer](records/cloud-transfer-16mib-20261011.json) passed
+one upload and authenticated readback, including exact archive/payload hashes,
+ZIP CRCs and owner-only permissions. Larger outputs still require complete,
+checked reconstruction. The single dot coordinator created and privately backed
+up a fresh manual P001 ledger with zero scientific attempts; read-only restore
+passed without activation. This preparation checkpoint does not authorize a job.
+
+Ravel [PR #149](https://github.com/xorca0711/ravel/pull/149) contains reviewed draft
+contracts/source. Its full unchanged Windows governance gate passes. The first
+image lacks Git, required by the existing runner; an official-package image
+revision is being qualified. No biological inputs or computation have run.
