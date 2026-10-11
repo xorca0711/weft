@@ -15,6 +15,7 @@ import uuid
 from .artifacts import encoded, decode, make_bundle, sha, verify_bundle, write_archive
 from .identity import digest
 from .jobs import JobError, verify_files
+from .recovery import SOURCE_FILES, write_capsule, load_capsule
 
 IMAGE = 'python@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1'
 IMAGE_ID = 'sha256:df18428df8a0f9189c84e7424d214b4c50092af1f9dca5842a00c41c39bda316'
@@ -43,7 +44,7 @@ def code_sha256():
     """Bind worker plus all adapter/receipt/ledger implementation bytes."""
     root = Path(__file__).parent
     return digest({name: sha((root / name).read_bytes()) for name in
-                   ('executor.py', 'artifacts.py', 'jobs.py', 'identity.py', 'validation.py')})
+                   SOURCE_FILES})
 
 
 def executor_sha256(mode='success', wall_seconds=10):
@@ -161,6 +162,7 @@ class DockerExecutor:
         state = {'processes': [], 'timed_out': False, 'cancel_requested': False, 'stage': str(stage)}
         self._save_state(ledger, claim, root, state)
         try:
+            write_capsule(ledger, claim, identity, root)
             actual_image = self._docker(['image', 'inspect', IMAGE, '--format', '{{.Id}}']).decode().strip()
             if actual_image != IMAGE_ID:
                 raise JobError('Pinned platform image ID mismatch')
@@ -226,6 +228,7 @@ class DockerExecutor:
         """Reobserve the bound container after expiry/restart. Never trust a report hash."""
         root = Path(run_root).absolute()
         try:
+            load_capsule(root, expected_claim=claim, expected_ledger=ledger.path)
             b = ledger.executor_binding(claim)
             identity = {**b['identity'], 'container_id': b['container_id']}
             if b['terminal_sha256']:

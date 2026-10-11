@@ -118,6 +118,10 @@ class JobLedger:
                 BEGIN SELECT RAISE(ABORT, 'Packets are immutable'); END;
         """)
 
+        columns = {r[1] for r in self.db.execute("PRAGMA table_info(executor_bindings)")}
+        if "capsule_sha256" not in columns:
+            self.db.execute("ALTER TABLE executor_bindings ADD COLUMN capsule_sha256 TEXT")
+
     def __enter__(self):
         return self
 
@@ -323,3 +327,19 @@ class JobLedger:
                             (canonical(state), row["id"]))
             self._event(row["job_id"], "executor-process-observation", {
                 "attempt_id": row["id"], "state_sha256": digest(state)}, at)
+
+
+    def _attach_capsule(self, claim, manifest_sha256):
+        with self._transaction():
+            at = self._now()
+            row = self._attempt(claim)
+            if row["state"] != "running" or row["expires"] <= at:
+                raise JobError("Expired/nonrunning capsule cannot authorize launch")
+            if not re.fullmatch(r"[0-9a-f]{64}", manifest_sha256):
+                raise JobError("Invalid capsule content hash")
+            cur = self.db.execute("UPDATE executor_bindings SET capsule_sha256=? WHERE attempt_id=? AND capsule_sha256 IS NULL",
+                                  (manifest_sha256, row["id"]))
+            if cur.rowcount != 1:
+                raise JobError("Recovery capsule already attached/missing binding")
+            self._event(row["job_id"], "private-recovery-material-persisted", {
+                "attempt_id": row["id"], "content_verified": True}, at)

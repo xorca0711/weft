@@ -117,3 +117,25 @@ its regression test passes. The intermediate task-local ledger/terminal containe
 remain preserved for explicit recovery; the final integration's own containers
 were removed after verified termination. No live process is inferred from a held
 ledger state, and a held ledger slot is not released by manual assertion.
+
+## Private recovery material before launch — 11 October 2026
+
+Corrective work starts from exact `4a2bc7a7db7139f985f4e82e92685dc7404c6f4a`
+on PR #2. New synthetic attempts persist an exclusive owner-only claim/source
+capsule before all Docker calls. A separately restarted process verifies its
+ledger anchor, claim authentication and complete source content before importing
+that self-contained adapter. Missing/tampered capsule material holds the attempt;
+private tokens/material never enter public receipts or ordinary output archives.
+The published d031cef environment is unchanged.
+
+**102 tests passed** and offline validation passed. The
+[public restart integration receipt](records/synthetic-recovery-integration-20261011.json)
+records a controlled launcher exit and independent process reopening the same
+ledger, loading the saved claim/code and verifying terminal Docker/process state,
+cleanup and the local archive. No broad runtime or Drive probes were repeated.
+Prior failure evidence is preserved. The historical intermediate ledger remains
+held because its original token and complete adapter snapshot were not persisted;
+this correction only makes future attempts recoverable. The scientific coordinator
+storage plan remains awaiting the owner's choice, alongside the existing authority,
+Drive job integration and dot dispatch decisions. No science, policy activation,
+Ravel edit, schedule, new credential/service or environment republication occurred.

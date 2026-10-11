@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "scope": "synthetic-only separate-process restart recovery on the same ledger",
+  "development_base": "4a2bc7a7db7139f985f4e82e92685dc7404c6f4a",
+  "utc_start": "2026-10-11T11:03:31.566624+00:00",
+  "utc_end": "2026-10-11T11:03:33.669268+00:00",
+  "code_content_sha256": "bc968934318cbf0adac90bd7cf8c3aab505b0379a4ef1b0acd5d0daf7e45a311",
+  "worker_sha256": "3afe1d8d7ba978250aed7c68547615a27c244d49910881ddccdee36a3038ce14",
+  "image": "python@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1",
+  "wall_seconds": 3,
+  "launcher_exit": 42,
+  "state_before_restart": "running",
+  "restart_exit": 0,
+  "outcome": "local_verified",
+  "loaded_claim_from_private_capsule": true,
+  "saved_source_identity_verified": true,
+  "private_directory_mode": "0700",
+  "private_file_mode": "0600",
+  "token_excluded_from_outputs": true,
+  "terminal_sha256": "a6451e4f5f6abae2408f2cc66201b3d1ac9034a0aa01d2c1e87dcc978342ecb9",
+  "archive_sha256": "adbdb31646c47d209489273ce886bb64c0d657f2e61fb68e9db30b20f7dfa58b",
+  "terminal_observation": {
+    "cancel_requested": false,
+    "exit_code": 0,
+    "oom_killed": false,
+    "pid": 0,
+    "processes_absent": true,
+    "running": false,
+    "status": "exited",
+    "timed_out": false
+  },
+  "cleanup": true,
+  "archive_restore": "PASS",
+  "external_export_verified": false,
+  "historical_unrecoverable_attempt": "remains held; original lease token and full adapter snapshot were not persisted",
+  "tests": {
+    "unit_tests_passed": 102,
+    "cases": "restart loads persisted claim/snapshot; tampered claim/source/manifest; missing/unexpected members; symlinks/permissions; fsync failure before Docker",
+    "test_recovery_source_sha256": "b17ea7c98992c1f80f6b77de39b87f4be4ec993265bbee5921daa6cb6c96d715",
+    "offline_validation": {
+      "ok": true,
+      "local_links": 66,
+      "pinned_files": 15,
+      "scientific_execution_enabled": false
+    }
+  },
+  "runtime_observation": {
+    "configuration_version_suffix": "cecfgver_6acb61fdc96481a283a745de16ae40ce",
+    "network": "enforced",
+    "revision": "11"
+  },
+  "post_cleanup_container_absent": true,
+  "post_cleanup_observed_processes_absent": true
+}

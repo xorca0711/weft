@@ -124,3 +124,21 @@ dispatch remain unimplemented. Actual bounded success/cancellation used the qual
 cached image without repeating the broad capability probes. 94 tests and offline
 validation passed. Public files contain no Drive folder/owner details or raw logs.
 No scientific gate, activation flag, Ravel source or environment configuration changed.
+
+## Prelaunch recovery correction — 11 October 2026
+
+Root review identified that preserving only a lease-token hash and code fingerprint
+could leave an interrupted attempt unrecoverable. The owner authorized a correction
+from exact 4a2bc7a on PR #2. New attempts now save an exclusive, restricted private
+claim/source capsule before Docker operations, authenticate it against the same
+ledger and load the exact saved package after restart. The capsule is ignored and
+excluded from public receipts, ordinary output archives and logs. No original
+missing materials are fabricated. The historical intermediate attempt stays held.
+
+102 tests cover persistence failure before Docker, secret exclusion, restrictive
+permissions, missing/tampered material and separate-process restoration using the
+saved claim/source identity. One bounded actual launcher-interruption/restarted-
+process recovery passed against the already pinned image, including terminal
+process checks, cleanup and archive verification. Scientific coordinator storage
+still awaits owner choice; neither task-local persistence nor this recovery test
+establishes remote authority or dot persistence. Policy flags remain false.

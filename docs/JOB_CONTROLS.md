@@ -119,3 +119,45 @@ unknown termination, expiry/restart, legacy reconciliation rejection, cancellati
 requests, deterministic output/archive replay, bounded restoration and ZIP CRC.
 Bounded actual adapter success and wall cancellation are additionally qualified
 against the cached immutable image; they do not repeat the full runtime probe suite.
+
+## Private prelaunch recovery capsule
+
+Before **any** Docker call, each new executor-bound attempt exclusively writes
+`.weft-recovery/` below its fresh run directory. `weft/recovery.py` persists the
+authenticated claim (including its bearer lease token), exact self-contained adapter
+package and a canonical hash manifest. Capsule directories are POSIX mode 0700;
+files are mode 0600 and owned by the task user. Exclusive no-follow creation,
+file/directory fsync, a last-written completeness manifest and a ledger-held content
+anchor precede launch. Persistence or verification failure produces a hold and
+makes no Docker call. Partial capsules are retained privately, never overwritten.
+
+The source snapshot includes package initialization, executor, recovery loader,
+ledger, artifact verifier, identity and validation dependencies. All are included
+in the bound implementation content hash. A restarted process authenticates the
+saved claim and manifest against the **same** ledger using a read-only lookup,
+checks exact members, ownership/modes, hashes and absence of symlinks/hardlinks,
+then imports only that verified package in a separate module namespace. The saved
+adapter repeats its existing packet/code/container/process checks before recording
+any terminal outcome. Missing/tampered/incomplete material cannot supply recovery.
+
+```bash
+python -B -m weft.recovery /absolute/path/to/the/original/run-directory
+```
+
+The bootstrap uses the standard library and prints only the non-secret terminal
+result or a generic hold. Never print the loaded claim or private manifest; never
+put a token in command arguments, environment variables, public receipts, ordinary
+output archives or logs. `.gitignore` excludes `.weft-recovery/` at every depth.
+The ordinary output ZIP's strict member inventory excludes the capsule. This is
+private **same-filesystem** recovery, not an authorized upload of bearer material,
+a secure remote secret service or a shared coordinator storage design. The owner
+still needs to choose the scientific coordinator storage plan. Copies of SQLite
+files do not establish shared ledger authority.
+
+A controlled host-process interruption followed by a new process loading the
+persisted claim/snapshot passed actual bounded Docker recovery. See the compact
+[restart integration receipt](../records/synthetic-recovery-integration-20261011.json).
+The historical intermediate attempt predates capsule persistence: its token and
+complete original adapter snapshot were not retained. It remains held with that
+explicit reason; the stopped container and source fingerprint cannot fabricate
+those missing recovery materials. No historical ledger is rewritten by this fix.
