@@ -11,15 +11,19 @@
     "Nature Immunology",
     "Nature Cell Biology"
   ],
-  "priority_scope": "Exact journal titles initially; reconcile ISSNs in M1; do not imply entire publisher families",
+  "priority_scope": "Exact title queries plus retained provider ISSNs; publisher-family/ISSN alias expansion is not qualified",
   "search_streams": [
-    "rq_direct",
+    "broad",
     "rq_contrary",
     "adjacent_context",
-    "private_career"
+    "priority_journals"
   ],
   "broad_search_required": true,
   "retraction_and_version_check_required": true,
   "date_window": "Explicit per run; persist last successful cutoff and overlap delayed indexing",
-  "private_profile": "private/interests.json"
+  "private_profile": "private/interests.json",
+  "manual_adapter": "europe_pmc_implemented",
+  "enabled_scope": "Scheduled discovery remains disabled; explicit CLI searches are available",
+  "search_profiles": "configs/search_profiles.json",
+  "private_career_status": "planned; not sent by the current adapter"
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "scope": "Initial manually authored queries for A0/A1 and the historical pilot; all other RQs can be resolved but have no qualified search profile yet",
+  "profiles": {
+    "alveolar-transitions": {
+      "rq_ids": [
+        "A0",
+        "A1"
+      ],
+      "date_field": "FIRST_IDATE",
+      "rationale": "Nominate literature about alveolar epithelial transitions, persistence and regulatory state; retrieval does not establish relevance, support or study independence",
+      "streams": {
+        "broad": "TITLE_ABS:(alveolar OR pneumocyte OR (AT2 AND lung)) AND TITLE_ABS:(transitional OR progenitor OR plasticity OR regeneration)",
+        "rq_contrary": "TITLE_ABS:(alveolar OR pneumocyte OR (AT2 AND lung)) AND TITLE_ABS:(transitional OR regeneration) AND TITLE_ABS:(persistent OR fibrosis OR senescence OR failed OR limitation)",
+        "adjacent_context": "TITLE_ABS:(epithelial OR organoid) AND TITLE_ABS:(repair OR regeneration) AND TITLE_ABS:(chromatin OR epigenetic OR competence)",
+        "priority_journals": "TITLE_ABS:(alveolar OR pneumocyte OR (AT2 AND lung)) AND TITLE_ABS:(transitional OR progenitor OR plasticity OR regeneration) AND (JOURNAL:\"Cell\" OR JOURNAL:\"Science\" OR JOURNAL:\"Nature\" OR JOURNAL:\"Cell Stem Cell\" OR JOURNAL:\"Cell Reports\" OR JOURNAL:\"Nature Immunology\" OR JOURNAL:\"Nature Cell Biology\")"
+      }
+    },
+    "choi-pilot": {
+      "rq_ids": [
+        "A0",
+        "A1"
+      ],
+      "date_field": "FIRST_PDATE",
+      "rationale": "Exposed historical retrieval benchmark, not a measure of prospective recall or independent replication",
+      "streams": {
+        "broad": "(AT2 OR \"alveolar type 2\") AND (\"transient progenitors\" OR DATP)"
+      }
+    }
+  }
+}

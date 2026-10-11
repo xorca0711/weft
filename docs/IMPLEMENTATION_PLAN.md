@@ -33,19 +33,27 @@ implementation option, not a requirement or proof of independent review.
 | Milestone | Tasks and artifacts | Done when | Dependency/status |
 |---|---|---|---|
 | M0: foundation | README diagram, ownership, gate specification, pilot draft, Ravel lock, offline checks | Local checks and public CI pass; limitations are explicit | Implemented scaffold; see PROGRESS |
-| M1: discovery | Europe PMC adapter; journal and broad searches; deduplication; version/retraction links; cursor/watermark persistence | Pagination, retries, delayed indexing and duplicate editions tested; raw response hashes retained; errors never appear as zero hits | Next; no AI required |
-| M2: reading agent | Source extraction, bounded RQ packets, reading/career queues, relevance explanation and abstention | Every recommendation points to inspected evidence; access limits retained; evaluated against independently reviewed records | Requires M1 |
+| M1: discovery | Europe PMC adapter; broad/contrary/journal queries; conservative deduplication; provider version/correction links; receipts and cutoffs | Bounded source retrieval and failure tests pass; complete version families and recall are evaluated separately | Manual baseline implemented; see discovery validation record |
+| M2: reading agent | Source extraction, bounded RQ packets, reading/career queues, relevance explanation and abstention | Every recommendation points to inspected evidence; access limits retained; evaluated against independently reviewed records | Partial: pinned context, manual local Codex packet and locator checks implemented; evaluation outstanding |
 | M3: gate engine | Explicit state transitions; structured decision schema; idempotent jobs; budgets; lock/lease; failure recovery | No transition without required evidence; tampered receipts, missing units, unknown outcomes and duplicate jobs rejected | Requires M1; can develop alongside M2 |
 | M4: scientific worker | Inspect pilot inputs; write a versioned Ravel contract/adapter; freeze environment; run QC and bounded reproduction | Required data joins and hashes verified; old outputs untouched; discrepancy ledger and negative controls preserved | Requires M2/M3 and qualified worker |
 | M5: synthesis and export | Precedent review; candidate/no-candidate report; artifact manifest; safe PR export; CI | One reviewable Ravel package with current base checks, evidence links and explicit acceptance status | Requires M4 |
 | M6: prospective qualification | Freeze discovery/evaluation criteria, then assess newly arriving papers; controlled recurring operation | Reviewed acceptance criteria met across inclusion, extraction, compute and interpretation; measured costs and holds reported | Requires M5; no automatic rollout from M0 |
 
 Each milestone should be one or a small number of scoped PRs, with its tests and
-observed limitations. Implement M1 before an expensive full-agent deployment.
+observed limitations. The M1 smoke test precedes the paper reading stage.
+
+The owner selected local Codex with manual runs for M2. Discovery links enter the
+[decision buffer](DECISION_BUFFER.md); no direct claim join is allowed. The initial
+full-text keyword query overmatched, so recent profiles now use title/abstract
+fields and preserve the earlier receipts. Oversized windows require explicit
+partitioning. Full version reconciliation, correction-feed refresh, source-support
+evaluation and job-resource enforcement remain qualification work, not completed
+features inferred from the smoke test.
 
 ## Proposed software layout
 
-Current files: `weft/` offline CLI; `configs/`; `integration/ravel.lock.json`;
+Current files: `weft/` discovery, context, buffer, manual reading and validation CLI; `configs/`; `integration/ravel.lock.json`;
 `tests/`; `docs/`; small public `records/`.
 
 Future modules: `weft/sources/`, `weft/context/`, `weft/agents/`,

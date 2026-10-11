@@ -54,7 +54,8 @@ def validate_project(root: Path) -> dict:
     required = ["README.md", "AGENTS.md", "AI_CONTEXT.md", "PROGRESS.md",
                 "DEVELOPMENT.md", "docs/IMPLEMENTATION_PLAN.md", "docs/GATES.md",
                 "docs/AGENT_WORKFLOW.md", "docs/RAVEL_CONNECTION.md",
-                "docs/PILOT_CHOI_2020.md", "docs/EVALUATION.md"]
+                "docs/PILOT_CHOI_2020.md", "docs/EVALUATION.md", "docs/DISCOVERY.md",
+                "docs/DECISION_BUFFER.md", "docs/LOCAL_READER.md"]
     for rel in required:
         if not (root / rel).is_file():
             raise ValidationError(f"Missing required file: {rel}")
@@ -71,7 +72,7 @@ def validate_project(root: Path) -> dict:
         if policy.get(flag) is not False:
             raise ValidationError(f"Unimplemented capability cannot be activated: {flag}")
     if sources.get("enabled") is not False:
-        raise ValidationError("Live source adapter is not implemented")
+        raise ValidationError("Scheduled source activation is not implemented; manual discovery uses the explicit discover command")
     if policy.get("journal_priority_is_eligibility") is not False:
         raise ValidationError("Journal priority must not become scientific eligibility")
     if not sources.get("broad_search_required"):
@@ -95,6 +96,13 @@ def validate_project(root: Path) -> dict:
     validate_manifest(lock)
     if set(pilot.get("ravel_question_ids", [])) != set(lock["question_ids"]):
         raise ValidationError("Pilot question IDs differ from the connection lock")
+    profiles = read_json(root / "configs/search_profiles.json")
+    if profiles.get("schema_version") != 1 or not profiles.get("profiles"):
+        raise ValidationError("Missing reviewed search profiles")
+    for profile in profiles["profiles"].values():
+        if (not profile.get("rq_ids") or not profile.get("streams", {}).get("broad")
+                or profile.get("date_field") not in {"FIRST_IDATE", "FIRST_PDATE"}):
+            raise ValidationError("Each profile requires RQ context, a broad stream and an explicit date field")
     checked_links = 0
     for path in [root / n for n in required] + [root / "docs/SOURCES.md"]:
         content = path.read_text(encoding="utf-8")
@@ -108,7 +116,7 @@ def validate_project(root: Path) -> dict:
             checked_links += 1
     if "```mermaid" not in (root / "README.md").read_text(encoding="utf-8"):
         raise ValidationError("README workflow diagram is missing")
-    return {"ok": True, "scope": "offline-scaffold-only", "local_links": checked_links,
+    return {"ok": True, "scope": "offline-configuration-and-documentation", "local_links": checked_links,
             "pinned_files": len(lock["files"]), "scientific_execution_enabled": False}
 
 

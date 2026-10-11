@@ -34,6 +34,15 @@ The pinned Ravel README/plan and corrected D2b record own historical expectation
 Their exact paths and hashes are in the integration lock. The bibliography and
 source record identify the primary paper separately from repository observations.
 
+## Current pilot checkpoint
+
+Discovery replay completed and recovered the known DOI; repeating it preserved
+paper/RQ candidate identities. Open-access XML was retrieved into an ignored local
+reading packet. A [manual, source-bound reading assessment](../records/pilot-reading-20261011.json)
+is retained separately from scientific acceptance. Numerical reproduction remains
+planned: no worker, frozen new contract, input hashes or outcome tolerance has
+been qualified. See [current state](../PROGRESS.md) for the latest checkpoint.
+
 ## Scientific contract draft
 
 | Field | Proposed value |

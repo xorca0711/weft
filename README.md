@@ -5,7 +5,9 @@
 | Capability | Status | Evidence | Boundary |
 |---|---|---|---|
 | Local scaffold and pinned Ravel connection checks | Descriptive only | [Validation record](records/bootstrap-validation.json) | Software checks; no scientific validation |
-| Autonomous paper-to-question workflow | Not established | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Planned; discovery, agent execution and scientific runs are not enabled |
+| Manual literature discovery and RQ review buffer | Implemented; bounded tests | [Live validation](records/discovery-validation.json) | Metadata matches and reading priority, not accepted claims |
+| Manual source-bound reading packets | Implemented in part | [Local reader](docs/LOCAL_READER.md) | XML text/captions; semantic and figure review remain separate |
+| Autonomous paper-to-question workflow | Not established | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Scientific workers, unattended agents and Ravel export remain planned |
 
 Weft is being built to bring new literature into an existing research programme:
 find papers against established questions and broader reading interests, explain
@@ -23,33 +25,33 @@ private configuration, even though this repository is public.
 
 ## Intended workflow
 
-This diagram describes the target system. Only the configuration, documentation
-and read-only Ravel connection verifier are implemented in this initial version.
+Solid arrows show implemented manual stages. Dotted arrows show the remaining
+scientific workflow. An RQ supplies search context; the review buffer keeps proposed
+relationships separate from accepted evidence.
 
 ```mermaid
 flowchart TD
-    R["Pinned Ravel questions and current evidence gaps"] --> D
-    P["Private reading interests and broader discovery"] --> D
-    D["G0–G1: discover, deduplicate and verify sources"] --> S
-    S["G2: assess relevance with source locators"] --> Q["Reading queue and career-interest digest"]
-    S --> E["G3: qualify data, units, methods and resources"]
-    E -->|eligible| C["G4: freeze contract and isolate execution"]
-    E -->|missing evidence| H["Hold with reason and reopening condition"]
-    C --> A["G5: reproduce a defined published result"]
-    A --> F["G6: bounded extensions and robustness assessment"]
-    A --> N["Preserve discrepancies and unsuccessful runs"]
-    F --> I["G7: interpret measured findings and inspect precedents"]
-    I -->|informative gap| K["Article-local candidate question"]
-    I -->|no new question| B["Evidence update or documented closure"]
-    K --> X["G8: prepare Ravel pull request and review"]
-    B --> X
-    X --> R
+    R["Pinned Ravel RQ context"] --> D["Discover metadata and resolve paper identities"]
+    Q["Broad, contrary and adjacent queries"] --> D
+    D --> B["Review buffer: proposed paper-to-RQ links"]
+    B --> T["Reading priority: read next, hold or reject"]
+    T --> P["Local Codex: source-bound reading packet"]
+    P -.-> V["Review findings, units, limitations and RQ compatibility"]
+    V -.->|eligible data| C["Freeze contract and qualify isolated worker"]
+    V -.->|unknown or unsupported| H["Hold or reject link; retain evidence"]
+    C -.-> A["Reproduce a defined result; retain discrepancies"]
+    A -.-> E["Bounded extension and interpretation"]
+    E -.-> N["Article-local question or evidence update"]
+    N -.-> X["Reviewable Ravel PR"]
+    X -.->|authorized integration| R
 ```
 
 ## Read what you need
 
 | If you want to… | Read |
 |---|---|
+| Run bounded searches and inspect receipts | [Discovery guide](docs/DISCOVERY.md) |
+| Understand why a paper is not immediately supporting evidence | [Decision buffer](docs/DECISION_BUFFER.md) |
 | Build the system in concrete stages | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) |
 | Understand agent responsibilities and context | [Agent workflow](docs/AGENT_WORKFLOW.md) |
 | Inspect automated decisions and stopping rules | [Gate specification](docs/GATES.md) |
@@ -62,7 +64,7 @@ flowchart TD
 ## Try it yourself
 
 Python 3.12+ and Git are sufficient. No API key, datasets or scientific packages
-are needed for these checks:
+are needed for validation or manual metadata searches:
 
 ```bash
 git clone https://github.com/xorca0711/weft.git
@@ -77,6 +79,9 @@ contains the revision in [ravel.lock.json](integration/ravel.lock.json):
 ```bash
 python -m weft verify-ravel --repo /path/to/ravel
 ```
+
+Use the [discovery commands](docs/DISCOVERY.md) to search and inspect the buffer,
+then the [manual reader](docs/LOCAL_READER.md) to prepare an eligible paper.
 
 The verifier reads **committed blobs at the pinned revision**, so local edits are
 neither consumed nor overwritten. It does not run historical analysis scripts,

@@ -1,0 +1,749 @@
+{
+  "schema_version": 1,
+  "scope": "bounded live software smoke test, not scientific or retrieval-quality validation",
+  "ravel_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+  "question_catalog": {
+    "questions": 32,
+    "sha256": "d89c72fbff3f0011fbbe9cd8ee68bba47d190dcd5b8d71deda2161fc17a25dd1"
+  },
+  "historical_target_recovered_by_query": "doi:10.1016/j.stem.2020.06.020",
+  "repeat_candidate_ids_unchanged": true,
+  "reading_status": "prepared and manually assessed; numerical pilot held",
+  "runs": [
+    {
+      "receipt": {
+        "schema_version": 1,
+        "run_id": "search-1f624662dac141418d4684dd605549f5",
+        "created_at": "2026-10-11T06:08:10.870354+00:00",
+        "provider": "EuropePMC",
+        "query": "((AT2 OR \"alveolar type 2\") AND (\"transient progenitors\" OR DATP)) AND FIRST_PDATE:[2020-01-01 TO 2020-12-31]",
+        "base_query": "(AT2 OR \"alveolar type 2\") AND (\"transient progenitors\" OR DATP)",
+        "date_field": "FIRST_PDATE",
+        "since": "2020-01-01",
+        "until": "2020-12-31",
+        "context_sha256": "9e1ac50253d939f6098a4e719cf72ee03c4fadd5f11bbbaa03d1f4d9e3214356",
+        "ravel_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+        "previous_watermark": null,
+        "max_records": 40,
+        "page_size": 2,
+        "pages": [
+          {
+            "page": 1,
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%28AT2+OR+%22alveolar+type+2%22%29+AND+%28%22transient+progenitors%22+OR+DATP%29%29+AND+FIRST_PDATE%3A%5B2020-01-01+TO+2020-12-31%5D&format=json&resultType=core&pageSize=2&cursorMark=%2A",
+            "cursor": "*",
+            "next_cursor": "AoIIP9EOtig0MTc1MjM1MQ==",
+            "hit_count": 5,
+            "records": 2,
+            "api_version": "6.9",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": 200
+              }
+            ],
+            "file": "page-0001.json",
+            "sha256": "f5b65ef6c8a6ae8586d3bf195e55eef4dc18a03942d8316ae4440375bc53a007",
+            "bytes": 10927
+          },
+          {
+            "page": 2,
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%28AT2+OR+%22alveolar+type+2%22%29+AND+%28%22transient+progenitors%22+OR+DATP%29%29+AND+FIRST_PDATE%3A%5B2020-01-01+TO+2020-12-31%5D&format=json&resultType=core&pageSize=2&cursorMark=AoIIP9EOtig0MTc1MjM1MQ%3D%3D",
+            "cursor": "AoIIP9EOtig0MTc1MjM1MQ==",
+            "next_cursor": "AoIIPxIU5ig0MjQ5OTcwOQ==",
+            "hit_count": 5,
+            "records": 2,
+            "api_version": "6.9",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": 200
+              }
+            ],
+            "file": "page-0002.json",
+            "sha256": "729b3262e1dc8b5717025b93bd6554b43514654a99a4f09072909b976ccd84be",
+            "bytes": 17722
+          },
+          {
+            "page": 3,
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%28AT2+OR+%22alveolar+type+2%22%29+AND+%28%22transient+progenitors%22+OR+DATP%29%29+AND+FIRST_PDATE%3A%5B2020-01-01+TO+2020-12-31%5D&format=json&resultType=core&pageSize=2&cursorMark=AoIIPxIU5ig0MjQ5OTcwOQ%3D%3D",
+            "cursor": "AoIIPxIU5ig0MjQ5OTcwOQ==",
+            "next_cursor": "AoIIPtV+Jig0MTA1ODg0OA==",
+            "hit_count": 5,
+            "records": 1,
+            "api_version": "6.9",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": 200
+              }
+            ],
+            "file": "page-0003.json",
+            "sha256": "442f80df1de14e1d3e9dc92cd6dba5334a2fb04aa28cbbab165fe0eaa203f8f7",
+            "bytes": 11027
+          }
+        ],
+        "scientific_execution": false,
+        "watermark_advanced": true,
+        "status": "complete",
+        "hit_count": 5,
+        "retrieved_records": 5,
+        "warnings": [],
+        "resolved_work_count": 5,
+        "identity_conflicts": 0,
+        "possible_version_groups": 0,
+        "candidate_ids": [
+          "06ed9e9eca317663c116d0d2985f0250b52a20858647688087c89a170f9a9914",
+          "629bb3758460ee39d6e199651b198944ac6b52763b80edc5089fb7901c4fe79c",
+          "5b1018570302e05ea16f4fecca47e5b67fdb4696447f17c39481d7b597b557f1",
+          "93a2d0fee075bd0e893a9f1d1ab2939c9de92d1174d606a35296f6634b20c0e2",
+          "ffd24fbd64c4f395b6f7d0304e6ab16673231dfbf6b155a91a9783aa81635be0",
+          "c6af4db505c4ae2b6634146f89e801e0c1ae9d468bb6119fcf838c2f12b06b6a",
+          "f81359ef0d5ab84e669285da8bbc93d723c4cf02b638c9aa75577d8273b4452e",
+          "89f957ae679495fd3e6512d737fb2230d81034980c545a9e5a466e7b59c207df",
+          "24f3411d2a3cfd723b5ab7b66d2b43101ff03b1b813005f369358c46f36a21c8",
+          "f95f6d8ee3aa551783f8a5f49fb8e4395c91f7e5a1daa796a8bdeaf9bd9a3367"
+        ],
+        "next_cursor": null,
+        "deduplication_sha256": "7866a5c25dbc42a6e3420e592346ee7b1310a3caa3679e7e068f0935877e3763",
+        "finished_at": "2026-10-11T06:08:14.929867+00:00"
+      },
+      "verification": {
+        "ok": true,
+        "run_id": "search-1f624662dac141418d4684dd605549f5",
+        "status": "complete",
+        "verified_pages": 3,
+        "scientific_validation": false
+      }
+    },
+    {
+      "receipt": {
+        "schema_version": 1,
+        "run_id": "search-569ddabef4c14d4c8dd5036f5d6b5203",
+        "created_at": "2026-10-11T06:08:33.797100+00:00",
+        "provider": "EuropePMC",
+        "query": "((AT2 OR \"alveolar type 2\") AND (\"transient progenitors\" OR DATP)) AND FIRST_PDATE:[2020-01-01 TO 2020-12-31]",
+        "base_query": "(AT2 OR \"alveolar type 2\") AND (\"transient progenitors\" OR DATP)",
+        "date_field": "FIRST_PDATE",
+        "since": "2020-01-01",
+        "until": "2020-12-31",
+        "context_sha256": "9e1ac50253d939f6098a4e719cf72ee03c4fadd5f11bbbaa03d1f4d9e3214356",
+        "ravel_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+        "previous_watermark": "2020-12-31",
+        "max_records": 40,
+        "page_size": 2,
+        "pages": [
+          {
+            "page": 1,
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%28AT2+OR+%22alveolar+type+2%22%29+AND+%28%22transient+progenitors%22+OR+DATP%29%29+AND+FIRST_PDATE%3A%5B2020-01-01+TO+2020-12-31%5D&format=json&resultType=core&pageSize=2&cursorMark=%2A",
+            "cursor": "*",
+            "next_cursor": "AoIIP9EOtig0MTc1MjM1MQ==",
+            "hit_count": 5,
+            "records": 2,
+            "api_version": "6.9",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": 200
+              }
+            ],
+            "file": "page-0001.json",
+            "sha256": "f5b65ef6c8a6ae8586d3bf195e55eef4dc18a03942d8316ae4440375bc53a007",
+            "bytes": 10927
+          },
+          {
+            "page": 2,
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%28AT2+OR+%22alveolar+type+2%22%29+AND+%28%22transient+progenitors%22+OR+DATP%29%29+AND+FIRST_PDATE%3A%5B2020-01-01+TO+2020-12-31%5D&format=json&resultType=core&pageSize=2&cursorMark=AoIIP9EOtig0MTc1MjM1MQ%3D%3D",
+            "cursor": "AoIIP9EOtig0MTc1MjM1MQ==",
+            "next_cursor": "AoIIPxIU5ig0MjQ5OTcwOQ==",
+            "hit_count": 5,
+            "records": 2,
+            "api_version": "6.9",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": 200
+              }
+            ],
+            "file": "page-0002.json",
+            "sha256": "729b3262e1dc8b5717025b93bd6554b43514654a99a4f09072909b976ccd84be",
+            "bytes": 17722
+          },
+          {
+            "page": 3,
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%28AT2+OR+%22alveolar+type+2%22%29+AND+%28%22transient+progenitors%22+OR+DATP%29%29+AND+FIRST_PDATE%3A%5B2020-01-01+TO+2020-12-31%5D&format=json&resultType=core&pageSize=2&cursorMark=AoIIPxIU5ig0MjQ5OTcwOQ%3D%3D",
+            "cursor": "AoIIPxIU5ig0MjQ5OTcwOQ==",
+            "next_cursor": "AoIIPtV+Jig0MTA1ODg0OA==",
+            "hit_count": 5,
+            "records": 1,
+            "api_version": "6.9",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": 200
+              }
+            ],
+            "file": "page-0003.json",
+            "sha256": "442f80df1de14e1d3e9dc92cd6dba5334a2fb04aa28cbbab165fe0eaa203f8f7",
+            "bytes": 11027
+          }
+        ],
+        "scientific_execution": false,
+        "watermark_advanced": false,
+        "status": "complete",
+        "hit_count": 5,
+        "retrieved_records": 5,
+        "warnings": [],
+        "resolved_work_count": 5,
+        "identity_conflicts": 0,
+        "possible_version_groups": 0,
+        "candidate_ids": [
+          "06ed9e9eca317663c116d0d2985f0250b52a20858647688087c89a170f9a9914",
+          "629bb3758460ee39d6e199651b198944ac6b52763b80edc5089fb7901c4fe79c",
+          "5b1018570302e05ea16f4fecca47e5b67fdb4696447f17c39481d7b597b557f1",
+          "93a2d0fee075bd0e893a9f1d1ab2939c9de92d1174d606a35296f6634b20c0e2",
+          "ffd24fbd64c4f395b6f7d0304e6ab16673231dfbf6b155a91a9783aa81635be0",
+          "c6af4db505c4ae2b6634146f89e801e0c1ae9d468bb6119fcf838c2f12b06b6a",
+          "f81359ef0d5ab84e669285da8bbc93d723c4cf02b638c9aa75577d8273b4452e",
+          "89f957ae679495fd3e6512d737fb2230d81034980c545a9e5a466e7b59c207df",
+          "24f3411d2a3cfd723b5ab7b66d2b43101ff03b1b813005f369358c46f36a21c8",
+          "f95f6d8ee3aa551783f8a5f49fb8e4395c91f7e5a1daa796a8bdeaf9bd9a3367"
+        ],
+        "next_cursor": null,
+        "deduplication_sha256": "7866a5c25dbc42a6e3420e592346ee7b1310a3caa3679e7e068f0935877e3763",
+        "finished_at": "2026-10-11T06:08:37.715198+00:00"
+      },
+      "verification": {
+        "ok": true,
+        "run_id": "search-569ddabef4c14d4c8dd5036f5d6b5203",
+        "status": "complete",
+        "verified_pages": 3,
+        "scientific_validation": false
+      }
+    },
+    {
+      "receipt": {
+        "schema_version": 1,
+        "run_id": "search-58917d3b2eed4e6c9afd50d33fa1e782",
+        "created_at": "2026-10-11T06:08:39.500962+00:00",
+        "provider": "EuropePMC",
+        "query": "((alveolar OR AT2 OR pneumocyte) AND (transitional OR progenitor OR plasticity OR regeneration)) AND FIRST_IDATE:[2025-10-11 TO 2026-10-11]",
+        "base_query": "(alveolar OR AT2 OR pneumocyte) AND (transitional OR progenitor OR plasticity OR regeneration)",
+        "date_field": "FIRST_IDATE",
+        "since": "2025-10-11",
+        "until": "2026-10-11",
+        "context_sha256": "9e1ac50253d939f6098a4e719cf72ee03c4fadd5f11bbbaa03d1f4d9e3214356",
+        "ravel_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+        "previous_watermark": null,
+        "max_records": 20,
+        "page_size": 5,
+        "pages": [
+          {
+            "page": 1,
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%28alveolar+OR+AT2+OR+pneumocyte%29+AND+%28transitional+OR+progenitor+OR+plasticity+OR+regeneration%29%29+AND+FIRST_IDATE%3A%5B2025-10-11+TO+2026-10-11%5D&format=json&resultType=core&pageSize=5&cursorMark=%2A",
+            "cursor": "*",
+            "next_cursor": "AoIIQS8wnSg1NTM4MzEyNQ==",
+            "hit_count": 8952,
+            "records": 5,
+            "api_version": "6.9",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": 200
+              }
+            ],
+            "file": "page-0001.json",
+            "sha256": "ca3ae8bf627a3fc186504123c77026498bb84b4131bd85aba392152e3fab58ea",
+            "bytes": 33771
+          },
+          {
+            "page": 2,
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%28alveolar+OR+AT2+OR+pneumocyte%29+AND+%28transitional+OR+progenitor+OR+plasticity+OR+regeneration%29%29+AND+FIRST_IDATE%3A%5B2025-10-11+TO+2026-10-11%5D&format=json&resultType=core&pageSize=5&cursorMark=AoIIQS8wnSg1NTM4MzEyNQ%3D%3D",
+            "cursor": "AoIIQS8wnSg1NTM4MzEyNQ==",
+            "next_cursor": "AoIIQSXBaCg1NjM4MzEzNA==",
+            "hit_count": 8952,
+            "records": 5,
+            "api_version": "6.9",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": 200
+              }
+            ],
+            "file": "page-0002.json",
+            "sha256": "81ee14d1a40f308c85b9bead1b6cec15608f48b9f9317b5981899333d75bc258",
+            "bytes": 39794
+          },
+          {
+            "page": 3,
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%28alveolar+OR+AT2+OR+pneumocyte%29+AND+%28transitional+OR+progenitor+OR+plasticity+OR+regeneration%29%29+AND+FIRST_IDATE%3A%5B2025-10-11+TO+2026-10-11%5D&format=json&resultType=core&pageSize=5&cursorMark=AoIIQSXBaCg1NjM4MzEzNA%3D%3D",
+            "cursor": "AoIIQSXBaCg1NjM4MzEzNA==",
+            "next_cursor": "AoIIQSB40Cg1NjU1MzQzOA==",
+            "hit_count": 8952,
+            "records": 5,
+            "api_version": "6.9",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": 200
+              }
+            ],
+            "file": "page-0003.json",
+            "sha256": "d115efbcf278612446c499ac63501a9f0b8a3a98b1f19fe76949e5c59be777f3",
+            "bytes": 30525
+          },
+          {
+            "page": 4,
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%28alveolar+OR+AT2+OR+pneumocyte%29+AND+%28transitional+OR+progenitor+OR+plasticity+OR+regeneration%29%29+AND+FIRST_IDATE%3A%5B2025-10-11+TO+2026-10-11%5D&format=json&resultType=core&pageSize=5&cursorMark=AoIIQSB40Cg1NjU1MzQzOA%3D%3D",
+            "cursor": "AoIIQSB40Cg1NjU1MzQzOA==",
+            "next_cursor": "AoIIQRw8WCg1NjE0NjIwOQ==",
+            "hit_count": 8952,
+            "records": 5,
+            "api_version": "6.9",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": 200
+              }
+            ],
+            "file": "page-0004.json",
+            "sha256": "74b7a12a2d67c0f1b4a9a8600b665e03f42be555cb1001161e1cdc688afa307f",
+            "bytes": 47775
+          }
+        ],
+        "scientific_execution": false,
+        "watermark_advanced": false,
+        "status": "truncated",
+        "hit_count": 8952,
+        "retrieved_records": 20,
+        "warnings": [],
+        "resolved_work_count": 20,
+        "identity_conflicts": 0,
+        "possible_version_groups": 0,
+        "candidate_ids": [
+          "2ed3c1554b52676593142277e37aab6ee6a0b6783f467abb76ad22fb424299c9",
+          "a1db1e8fb2ec3f447b62fcdbcef12cf941a7e1d3bc0d936ba00d80a2aa977656",
+          "d34e2fce9ac4fa4687968ef7cd4a15979ca0dcfae19b2fe5cbf679a05e9c66e1",
+          "7b99039859819a81122440a95f8e725f3bec69c14631c0c2a18e9d85dfb80d5e",
+          "f56785bee3fdfd0a10b61640c542ed9af5f212f6bf80c3b498c090b496b47771",
+          "37e281f7a9759460df5d23006fcc4704f95e708015c90a7a15cdafec9769f638",
+          "18ddda1bcfadcf6ba6ed0d3a2c6fa8b86882e4f154aa95964c88ab8ed5d4ea67",
+          "0775a0670f43600a2d7ff11626e292e284850c842303090850275e02bb135918",
+          "d1d05db326b17c3292c8b10b10d2d2ba1f48d2089a4e300ba592444c5e69ceb3",
+          "6eb183196aa2190e23180fd3775978b038b1bcfa874e149c41085345a9d30b20",
+          "3b2347cede0689e6822f9d37c8dd95322fcb6549c5af635f0f16805c9b644dec",
+          "5b56f23824281a93bee1cf6140aafe399af231a1ea2f65187288982f29c15b41",
+          "e63977352be0a3bff4d45ea6c00d64be13873c9f19465640b51b0953cf75907b",
+          "1012e4ef78e234de5a56d2a0965e8928944f970671d5a452ee8de1408f34e147",
+          "7e850f6aab4c48d700fcc14c0a2e7d7471698d44d3dcd355348a250470805f58",
+          "7214285ad7fb721c1635bb73731e587ea5f87ff73fbd445eda4888506eaef1e8",
+          "e084029d6fa382a9ddf2e815dc94a529cae5bcdc16a7c6da471fff192f98ae8e",
+          "c086b73da02230cb100aff80ed154ac5ac14ff9e88565189af57d4022e3acee8",
+          "5cadb840ecde83c490379ada2810ff4543a3604f9d126e53b82d35b16130c8d5",
+          "b4b3a5460c83d8b3287e2fbc0ca010c0c4c7a0e0b36fd6821c83afed5abafd59",
+          "74e3b0b82c853d0dba397b2671b4118c2d22cd851b7a3d74a73d228d62311d8f",
+          "91098593519357794a0971dae71132570e87d7420700c752f41d1964c879380a",
+          "ce5987160535b7fbd3268018484651ae02f2d3654b122951f260be960aa808bd",
+          "38dd2ba8a704a1ef1c77bf73b621313678b478d3c11f5aaac26cdaf5931e39d7",
+          "9735b3c48dba159425acb9af549325d23af04709eb1724489ce947298535683a",
+          "0690a36131d125ecd80657f3c416d4eea74241de21c4b86ff150312cfb5d4986",
+          "c0b682cc51071f9c6c8e0f3dca82cf0ca2b5ab889e554dc099332742be26248d",
+          "d46172fc432f876dc14c8e770d50e7bc4cffedd22be04dd84814e9ff6960b06a",
+          "1be02b59b5f88daefe441889c963e8e36b664799bdd1f6160a100361bc72e89f",
+          "2b738e7910dd9de06d7b08da8eb38d2467ae047d3cf65a23c0a880bed88d58a7",
+          "e190d6edd3504bb4161603f59a1b60576aa845ac020524f9df48a0d9ef0b33d9",
+          "1016bf50e9c77f3019ca64fed592b0ce303fb6b24f4bc61b4144add4cbefd8d6",
+          "9b6174997a78fa4d1e02336b359c9c59516131bbb8c7c2d92c85e70b91f2b9b4",
+          "6df860cf26aa3b3fe6e86814fb85ec0590a8506bfbacafc228398d058b5a2a71",
+          "35a9512b806659d8f3cad5a0c109b18bab848f943a8f23090958a7dea75c90ba",
+          "49dfc275ae4e2e8a91e5d3c4fa09efb2a97b4121a72b8e7880a0d71fbadf712c",
+          "ee1f7a1d4a21d53d76f1b0232e57bb8e8037fdc5b86e4e326b089a3a9501ddac",
+          "56530d899f67c1572aa024ed0c6aee7111519473ec6478dd9e780746eefef7dd",
+          "75a4894715cd6d2e3f29d6a605136dd75c1479344edd9a27acfeab7a940e23f5",
+          "1434308f6e91ee4d7197c9807646e79cb08f7511f1f36d6e93324dbe22f6d90d"
+        ],
+        "next_cursor": "AoIIQRw8WCg1NjE0NjIwOQ==",
+        "deduplication_sha256": "139fb70103ecf6aec1fdc69b4b3a3eef1345a99c61769734f136ce5914e047cf",
+        "finished_at": "2026-10-11T06:08:46.036973+00:00"
+      },
+      "verification": {
+        "ok": true,
+        "run_id": "search-58917d3b2eed4e6c9afd50d33fa1e782",
+        "status": "truncated",
+        "verified_pages": 4,
+        "scientific_validation": false
+      }
+    },
+    {
+      "receipt": {
+        "schema_version": 1,
+        "run_id": "search-ecb9305eabc04a039a0353b415a7eb75",
+        "created_at": "2026-10-11T06:09:31.973003+00:00",
+        "provider": "EuropePMC",
+        "query": "(TITLE_ABS:(alveolar OR pneumocyte OR (AT2 AND lung)) AND TITLE_ABS:(transitional OR progenitor OR plasticity OR regeneration)) AND FIRST_IDATE:[2025-10-11 TO 2026-10-11]",
+        "base_query": "TITLE_ABS:(alveolar OR pneumocyte OR (AT2 AND lung)) AND TITLE_ABS:(transitional OR progenitor OR plasticity OR regeneration)",
+        "date_field": "FIRST_IDATE",
+        "since": "2025-10-11",
+        "until": "2026-10-11",
+        "context_sha256": "9e1ac50253d939f6098a4e719cf72ee03c4fadd5f11bbbaa03d1f4d9e3214356",
+        "ravel_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+        "previous_watermark": null,
+        "max_records": 20,
+        "page_size": 5,
+        "pages": [
+          {
+            "page": 1,
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%28alveolar+OR+pneumocyte+OR+%28AT2+AND+lung%29%29+AND+TITLE_ABS%3A%28transitional+OR+progenitor+OR+plasticity+OR+regeneration%29%29+AND+FIRST_IDATE%3A%5B2025-10-11+TO+2026-10-11%5D&format=json&resultType=core&pageSize=5&cursorMark=%2A",
+            "cursor": "*",
+            "next_cursor": "AoIIQSS4wig1NjE0NjIwOQ==",
+            "hit_count": 819,
+            "records": 5,
+            "api_version": "6.9",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": 200
+              }
+            ],
+            "file": "page-0001.json",
+            "sha256": "fa06bb96b3fa46679f7f27b97c1140560bc5cf689dc4edbc4f8e39819955fed6",
+            "bytes": 35324
+          },
+          {
+            "page": 2,
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%28alveolar+OR+pneumocyte+OR+%28AT2+AND+lung%29%29+AND+TITLE_ABS%3A%28transitional+OR+progenitor+OR+plasticity+OR+regeneration%29%29+AND+FIRST_IDATE%3A%5B2025-10-11+TO+2026-10-11%5D&format=json&resultType=core&pageSize=5&cursorMark=AoIIQSS4wig1NjE0NjIwOQ%3D%3D",
+            "cursor": "AoIIQSS4wig1NjE0NjIwOQ==",
+            "next_cursor": "AoIIQRyvyCg1NjM4NDc4OQ==",
+            "hit_count": 819,
+            "records": 5,
+            "api_version": "6.9",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": 200
+              }
+            ],
+            "file": "page-0002.json",
+            "sha256": "3c7a4a4adb2e0b43306d35b29a5a3f682385b1b19212d95cabec091b9921b2c7",
+            "bytes": 27702
+          },
+          {
+            "page": 3,
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%28alveolar+OR+pneumocyte+OR+%28AT2+AND+lung%29%29+AND+TITLE_ABS%3A%28transitional+OR+progenitor+OR+plasticity+OR+regeneration%29%29+AND+FIRST_IDATE%3A%5B2025-10-11+TO+2026-10-11%5D&format=json&resultType=core&pageSize=5&cursorMark=AoIIQRyvyCg1NjM4NDc4OQ%3D%3D",
+            "cursor": "AoIIQRyvyCg1NjM4NDc4OQ==",
+            "next_cursor": "AoIIQRappCg1NjA3Njg1Nw==",
+            "hit_count": 819,
+            "records": 5,
+            "api_version": "6.9",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": 200
+              }
+            ],
+            "file": "page-0003.json",
+            "sha256": "909566a1707af715d391992e746091492fe3a8ae864079ea4eba954782029e47",
+            "bytes": 41567
+          },
+          {
+            "page": 4,
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%28alveolar+OR+pneumocyte+OR+%28AT2+AND+lung%29%29+AND+TITLE_ABS%3A%28transitional+OR+progenitor+OR+plasticity+OR+regeneration%29%29+AND+FIRST_IDATE%3A%5B2025-10-11+TO+2026-10-11%5D&format=json&resultType=core&pageSize=5&cursorMark=AoIIQRappCg1NjA3Njg1Nw%3D%3D",
+            "cursor": "AoIIQRappCg1NjA3Njg1Nw==",
+            "next_cursor": "AoIIQQ0QPyg1NjE1NzU1MQ==",
+            "hit_count": 819,
+            "records": 5,
+            "api_version": "6.9",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": 200
+              }
+            ],
+            "file": "page-0004.json",
+            "sha256": "f538fea2bf00869a0e299ac5664a7acdc78024ccab8a65489c231601b7870227",
+            "bytes": 36362
+          }
+        ],
+        "scientific_execution": false,
+        "watermark_advanced": false,
+        "status": "truncated",
+        "hit_count": 819,
+        "retrieved_records": 20,
+        "warnings": [],
+        "resolved_work_count": 20,
+        "identity_conflicts": 0,
+        "possible_version_groups": 0,
+        "candidate_ids": [
+          "2ed3c1554b52676593142277e37aab6ee6a0b6783f467abb76ad22fb424299c9",
+          "a1db1e8fb2ec3f447b62fcdbcef12cf941a7e1d3bc0d936ba00d80a2aa977656",
+          "d34e2fce9ac4fa4687968ef7cd4a15979ca0dcfae19b2fe5cbf679a05e9c66e1",
+          "7b99039859819a81122440a95f8e725f3bec69c14631c0c2a18e9d85dfb80d5e",
+          "f56785bee3fdfd0a10b61640c542ed9af5f212f6bf80c3b498c090b496b47771",
+          "37e281f7a9759460df5d23006fcc4704f95e708015c90a7a15cdafec9769f638",
+          "7210b191d89facda6caec54ca2ec5b96a6c25ebf227051a500e4f5485fccafa7",
+          "62e031264916a44b776ca4c7c7b4aeaa8802080dd3743807cc0901bbac6b2d81",
+          "650e2a269e4c35a076a6bbdb967400065aa9f256200fc7e8239bf1f84a155207",
+          "a65bca4f127b683291bebcbac770276cb269a6500fdae9a67fb44d9a85ed9023",
+          "2139f82815fd18a5c040b051c1b5cdcbd403ae971984f2f03296df7577a597a0",
+          "8712e2dd0d4bb012705652e8407ec5a7e898bd874b1d28afef02e92840a9a2a2",
+          "1ea21858966b8e948c244244cda4f9fffc9c10e7adb7adbf03cd5e83f48a879a",
+          "90e9f22d37b98e9347dec0a413a3ff3cc97b0da96a0df224829a6f6075d29b8d",
+          "f6ee441d823f8ce39cdcd826324e440db6ea727dc587ec9db5af44f1780e0221",
+          "2f67aa924eab571cba978a7144ec846094f743236a06040c27c832ae13758414",
+          "9df445baa80ff17b746892f50f4a32bc5c9a7d7235a50ec07e9a6cd179ad35c0",
+          "f9104529fe0cb9280744d0455ee7d5ca7d5da361301d0d7091be72436ef1c46c",
+          "3b2347cede0689e6822f9d37c8dd95322fcb6549c5af635f0f16805c9b644dec",
+          "5b56f23824281a93bee1cf6140aafe399af231a1ea2f65187288982f29c15b41",
+          "e084029d6fa382a9ddf2e815dc94a529cae5bcdc16a7c6da471fff192f98ae8e",
+          "c086b73da02230cb100aff80ed154ac5ac14ff9e88565189af57d4022e3acee8",
+          "74e3b0b82c853d0dba397b2671b4118c2d22cd851b7a3d74a73d228d62311d8f",
+          "91098593519357794a0971dae71132570e87d7420700c752f41d1964c879380a",
+          "592c1b6d798c542fbc52c0934093fc580c88f312a3244574782ec43040746fcc",
+          "7e480b159cd7b74a327738d6fa3c6b39fba6960327101b594245294b172af8b8",
+          "ce5987160535b7fbd3268018484651ae02f2d3654b122951f260be960aa808bd",
+          "38dd2ba8a704a1ef1c77bf73b621313678b478d3c11f5aaac26cdaf5931e39d7",
+          "d6fd3ea99cfcf0eefcccfc2776f36f23623b3105f521592c38dea375686e2136",
+          "884dcb9ba52c5b6e16a2599d8f2ee51ca4e4637b2a2566fa3a9a93ae24f6ea7a",
+          "ee1f7a1d4a21d53d76f1b0232e57bb8e8037fdc5b86e4e326b089a3a9501ddac",
+          "56530d899f67c1572aa024ed0c6aee7111519473ec6478dd9e780746eefef7dd",
+          "a1e987fe608d88d20f661328576b525e5b44ade0c405b85710f64e86d8a1f2ec",
+          "939108d8025d86020f483d5c2117d85721c1e05450e9b26ca15d3df3ffa85b39",
+          "1f6e87ca03f1ac9042635beba3ee4c9c63daf53bd35f2607d5b3191fef866d08",
+          "4782ef9ece1cca28886b95b12cfbd936e2ab66f4c58d26beadafd63042fa8b70",
+          "76ca034e811aece32ed34232a5529b5b4d35d4f989cc2b4e1aef215539221d8f",
+          "9026fe183a722d8e5a37b32c62fec8608af51e4ab2e0e4f7d25fcd32c5f64763",
+          "75a4894715cd6d2e3f29d6a605136dd75c1479344edd9a27acfeab7a940e23f5",
+          "1434308f6e91ee4d7197c9807646e79cb08f7511f1f36d6e93324dbe22f6d90d"
+        ],
+        "next_cursor": "AoIIQQ0QPyg1NjE1NzU1MQ==",
+        "deduplication_sha256": "b6f47d25b51e64783e3bd4ae55bd0637df68928062314ccf41c672427d0833b0",
+        "finished_at": "2026-10-11T06:09:38.149096+00:00"
+      },
+      "verification": {
+        "ok": true,
+        "run_id": "search-ecb9305eabc04a039a0353b415a7eb75",
+        "status": "truncated",
+        "verified_pages": 4,
+        "scientific_validation": false
+      }
+    },
+    {
+      "receipt": {
+        "schema_version": 1,
+        "run_id": "search-0d4c6511842f4e44b0d37868883025c9",
+        "created_at": "2026-10-11T06:09:53.305447+00:00",
+        "provider": "EuropePMC",
+        "query": "(TITLE_ABS:(alveolar OR pneumocyte OR (AT2 AND lung)) AND TITLE_ABS:(transitional OR progenitor OR plasticity OR regeneration)) AND FIRST_IDATE:[2026-10-04 TO 2026-10-11]",
+        "base_query": "TITLE_ABS:(alveolar OR pneumocyte OR (AT2 AND lung)) AND TITLE_ABS:(transitional OR progenitor OR plasticity OR regeneration)",
+        "date_field": "FIRST_IDATE",
+        "since": "2026-10-04",
+        "until": "2026-10-11",
+        "context_sha256": "9e1ac50253d939f6098a4e719cf72ee03c4fadd5f11bbbaa03d1f4d9e3214356",
+        "ravel_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+        "previous_watermark": null,
+        "max_records": 200,
+        "page_size": 25,
+        "pages": [
+          {
+            "page": 1,
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%28alveolar+OR+pneumocyte+OR+%28AT2+AND+lung%29%29+AND+TITLE_ABS%3A%28transitional+OR+progenitor+OR+plasticity+OR+regeneration%29%29+AND+FIRST_IDATE%3A%5B2026-10-04+TO+2026-10-11%5D&format=json&resultType=core&pageSize=25&cursorMark=%2A",
+            "cursor": "*",
+            "next_cursor": null,
+            "hit_count": 6,
+            "records": 6,
+            "api_version": "6.9",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": 200
+              }
+            ],
+            "file": "page-0001.json",
+            "sha256": "5655e5faa0f7cf3418b03e57ec5ab1cce5c656157738aacc4909f8289da774f8",
+            "bytes": 41111
+          }
+        ],
+        "scientific_execution": false,
+        "watermark_advanced": true,
+        "status": "complete",
+        "hit_count": 6,
+        "retrieved_records": 6,
+        "warnings": [],
+        "resolved_work_count": 6,
+        "identity_conflicts": 0,
+        "possible_version_groups": 0,
+        "candidate_ids": [
+          "2ed3c1554b52676593142277e37aab6ee6a0b6783f467abb76ad22fb424299c9",
+          "a1db1e8fb2ec3f447b62fcdbcef12cf941a7e1d3bc0d936ba00d80a2aa977656",
+          "b5740f845afc96950fb6998652fd306b7d7c2e9ba64ab0a7f56b7d2cef426fde",
+          "2ac7a987facda95d9f1be98d53cfc19526fb08d709258860bf253b8eb97fcf71",
+          "074d27439869e29c4bc92afb9579ff287bd8e9e6eee3edcc694ac00b1328531d",
+          "17caa46e0c4f29c8dbd9fa804765f4cd8c3a127a08cbe19ddd6eabd5aa017133",
+          "79181e12e9a734d184fc9fd44d90f8e059d6d836acaff4dcacef7bbaba3e3e59",
+          "c67af88dd063e46012d2b96007b25bbad2266a54d580c7a71977a194be222228",
+          "21fe47c7c97f23de93a15f8a59f2232c6c575c564113d1fcddd76de0a6c50de6",
+          "2c1dc4c5edcb36d798a173783ac4e6e0a2e85b935be11daed97bfcdec6da1365",
+          "995868b1cb15c3b10c788c4a2f1ac261dd0497b8ce5d1a89879fcf77b4707826",
+          "ff633d1af761753857b4767812b0e063a3beb8d3c5647457aedccb290296f738"
+        ],
+        "next_cursor": null,
+        "deduplication_sha256": "e36f306f948ca0dc6d6ab5b750a4079590286d892a8ee6cf5c02d2bc692aaded",
+        "finished_at": "2026-10-11T06:09:55.630491+00:00"
+      },
+      "verification": {
+        "ok": true,
+        "run_id": "search-0d4c6511842f4e44b0d37868883025c9",
+        "status": "complete",
+        "verified_pages": 1,
+        "scientific_validation": false
+      }
+    },
+    {
+      "receipt": {
+        "schema_version": 1,
+        "run_id": "search-3d65e5aa08b04bd7b6b3e21bc7df0a8b",
+        "created_at": "2026-10-11T06:10:42.906906+00:00",
+        "provider": "EuropePMC",
+        "query": "(TITLE_ABS:(alveolar OR pneumocyte OR (AT2 AND lung)) AND TITLE_ABS:(transitional OR regeneration) AND TITLE_ABS:(persistent OR fibrosis OR senescence OR failed OR limitation)) AND FIRST_IDATE:[2026-10-04 TO 2026-10-11]",
+        "base_query": "TITLE_ABS:(alveolar OR pneumocyte OR (AT2 AND lung)) AND TITLE_ABS:(transitional OR regeneration) AND TITLE_ABS:(persistent OR fibrosis OR senescence OR failed OR limitation)",
+        "date_field": "FIRST_IDATE",
+        "since": "2026-10-04",
+        "until": "2026-10-11",
+        "context_sha256": "9e1ac50253d939f6098a4e719cf72ee03c4fadd5f11bbbaa03d1f4d9e3214356",
+        "ravel_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+        "previous_watermark": null,
+        "max_records": 200,
+        "page_size": 25,
+        "pages": [
+          {
+            "page": 1,
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%28alveolar+OR+pneumocyte+OR+%28AT2+AND+lung%29%29+AND+TITLE_ABS%3A%28transitional+OR+regeneration%29+AND+TITLE_ABS%3A%28persistent+OR+fibrosis+OR+senescence+OR+failed+OR+limitation%29%29+AND+FIRST_IDATE%3A%5B2026-10-04+TO+2026-10-11%5D&format=json&resultType=core&pageSize=25&cursorMark=%2A",
+            "cursor": "*",
+            "next_cursor": null,
+            "hit_count": 0,
+            "records": 0,
+            "api_version": "6.9",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": 200
+              }
+            ],
+            "file": "page-0001.json",
+            "sha256": "0a84fae68b8d00545eb62e807cbcc39f827ad26d67632a8b4c6e6c53700bc77c",
+            "bytes": 382
+          }
+        ],
+        "scientific_execution": false,
+        "watermark_advanced": true,
+        "status": "complete",
+        "hit_count": 0,
+        "retrieved_records": 0,
+        "warnings": [],
+        "resolved_work_count": 0,
+        "identity_conflicts": 0,
+        "possible_version_groups": 0,
+        "candidate_ids": [],
+        "next_cursor": null,
+        "deduplication_sha256": "c5e65805b2ef12d47cd65e48e89a79602d246f6f022d62e29aa84e1122be9431",
+        "finished_at": "2026-10-11T06:10:45.867297+00:00"
+      },
+      "verification": {
+        "ok": true,
+        "run_id": "search-3d65e5aa08b04bd7b6b3e21bc7df0a8b",
+        "status": "complete",
+        "verified_pages": 1,
+        "scientific_validation": false
+      }
+    },
+    {
+      "receipt": {
+        "schema_version": 1,
+        "run_id": "search-eeaebed348024f55a3db268c1020cec5",
+        "created_at": "2026-10-11T06:10:47.667483+00:00",
+        "provider": "EuropePMC",
+        "query": "(TITLE_ABS:(alveolar OR pneumocyte OR (AT2 AND lung)) AND TITLE_ABS:(transitional OR progenitor OR plasticity OR regeneration) AND (JOURNAL:\"Cell\" OR JOURNAL:\"Science\" OR JOURNAL:\"Nature\" OR JOURNAL:\"Cell Stem Cell\" OR JOURNAL:\"Cell Reports\" OR JOURNAL:\"Nature Immunology\" OR JOURNAL:\"Nature Cell Biology\")) AND FIRST_IDATE:[2026-10-04 TO 2026-10-11]",
+        "base_query": "TITLE_ABS:(alveolar OR pneumocyte OR (AT2 AND lung)) AND TITLE_ABS:(transitional OR progenitor OR plasticity OR regeneration) AND (JOURNAL:\"Cell\" OR JOURNAL:\"Science\" OR JOURNAL:\"Nature\" OR JOURNAL:\"Cell Stem Cell\" OR JOURNAL:\"Cell Reports\" OR JOURNAL:\"Nature Immunology\" OR JOURNAL:\"Nature Cell Biology\")",
+        "date_field": "FIRST_IDATE",
+        "since": "2026-10-04",
+        "until": "2026-10-11",
+        "context_sha256": "9e1ac50253d939f6098a4e719cf72ee03c4fadd5f11bbbaa03d1f4d9e3214356",
+        "ravel_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+        "previous_watermark": null,
+        "max_records": 200,
+        "page_size": 25,
+        "pages": [
+          {
+            "page": 1,
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%28alveolar+OR+pneumocyte+OR+%28AT2+AND+lung%29%29+AND+TITLE_ABS%3A%28transitional+OR+progenitor+OR+plasticity+OR+regeneration%29+AND+%28JOURNAL%3A%22Cell%22+OR+JOURNAL%3A%22Science%22+OR+JOURNAL%3A%22Nature%22+OR+JOURNAL%3A%22Cell+Stem+Cell%22+OR+JOURNAL%3A%22Cell+Reports%22+OR+JOURNAL%3A%22Nature+Immunology%22+OR+JOURNAL%3A%22Nature+Cell+Biology%22%29%29+AND+FIRST_IDATE%3A%5B2026-10-04+TO+2026-10-11%5D&format=json&resultType=core&pageSize=25&cursorMark=%2A",
+            "cursor": "*",
+            "next_cursor": null,
+            "hit_count": 0,
+            "records": 0,
+            "api_version": "6.9",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": 200
+              }
+            ],
+            "file": "page-0001.json",
+            "sha256": "7d37842c64bc8a93c729673c1f91a7cf9295be1367dd75c3b389c0b2639962f1",
+            "bytes": 527
+          }
+        ],
+        "scientific_execution": false,
+        "watermark_advanced": true,
+        "status": "complete",
+        "hit_count": 0,
+        "retrieved_records": 0,
+        "warnings": [],
+        "resolved_work_count": 0,
+        "identity_conflicts": 0,
+        "possible_version_groups": 0,
+        "candidate_ids": [],
+        "next_cursor": null,
+        "deduplication_sha256": "c5e65805b2ef12d47cd65e48e89a79602d246f6f022d62e29aa84e1122be9431",
+        "finished_at": "2026-10-11T06:10:48.811157+00:00"
+      },
+      "verification": {
+        "ok": true,
+        "run_id": "search-eeaebed348024f55a3db268c1020cec5",
+        "status": "complete",
+        "verified_pages": 1,
+        "scientific_validation": false
+      }
+    }
+  ],
+  "snapshot_hashes": {
+    "weft/__init__.py": "56ddb12c20629ad1ab1e06ae5dcec49c17ee72a91e2222fbcad49dc2a38f9531",
+    "weft/__main__.py": "360afb4ca4764ac0ddbfb76a930ec3b71ffdc5c6089593e60ad4eae700efef7f",
+    "weft/context.py": "0b906aa53059cb8fa644112a3f0fcb68b8ce918d04badd65355c724b993b4e41",
+    "weft/discovery.py": "2416291ef16d5cb0eae5fe413137507c6cce3b8c61a08d9c3b6659714841e056",
+    "weft/europe_pmc.py": "b8a044d6ae9069b71431c217ae0b0b7934a0dc2d657a7eaaddad939f621235bc",
+    "weft/identity.py": "98c454b6c88206be744062a6137ab8a4f303313e524fb6cc2e4b6d589e585622",
+    "weft/reading.py": "d218f98d3aec3d7323bf1b0355a5e844776ca35daa2abaa8b09ea71ac1f59d11",
+    "weft/validation.py": "1a46d1182bf1894ce6449ad0005b71701e7cff3f03b108dc085bbe96c4c20e7e",
+    "tests/test_bootstrap.py": "7639f465bccb60b4c3a9d9eec34e8cc8b47917177c53034d74d24250f8fcdcb4",
+    "tests/test_context_cli.py": "4f9067b3de095adae84681add552ce4503e624c4950f6bc40720614f92699172",
+    "tests/test_discovery.py": "c0952356d97cacc20959e8109e2e0a931d7e438b353a3ac5eafe212bea0c1cd5",
+    "tests/test_reading.py": "5f2d48f549f4eaba85baa871190eccd15368acef7b593dc870fcd52ea5a44b7f",
+    "configs/pilot.json": "6a1a554ecc3b128909ba2930767676fae1233f0543297baa3ebfbb7a933d9d9a",
+    "configs/policy.json": "f280fca9060976d46ed99da9779bf714a51966a45881a29223b681f321fe7bdc",
+    "configs/project.json": "b4791bb2aef769f76d4cb4d2d138d9403deb6d8202ddb183555d0fddaab27555",
+    "configs/search_profiles.json": "452b7d4fac7d93466d559d5ed007b768955ace828f088737c23f0a3c315b94a8",
+    "configs/sources.json": "bacba44865061d6a95407e9bef18382029ecd4f028f7ef18e57a7bab51cada34"
+  },
+  "limitations": [
+    "No prospective recall/precision evaluation",
+    "Year-wide searches remained truncated; no claim of full-year coverage",
+    "Provider integrity flags are not an exhaustive correction service",
+    "Study independence not inferred",
+    "No model launcher or scientific execution"
+  ],
+  "snapshot_hash_scope": "UTF-8 file bytes with CRLF normalized to LF, matching Git text normalization; measured at validation time",
+  "offline_checks": {
+    "tests_passed": 58,
+    "local_documentation_links": 35,
+    "pinned_ravel_files": 15
+  }
+}

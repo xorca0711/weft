@@ -1,7 +1,8 @@
 # Automated gate specification
 
-**Status: proposed runtime behavior.** The current CLI checks configuration and
-source pins only. It is not an implemented scientific gate engine. Ravel's existing
+**Status: scientific gate engine still proposed.** Manual metadata retrieval,
+identity holds, reading-priority transitions and source-hash/locator checks are
+implemented. Semantic claim review and G3–G8 runtime transitions are not. Ravel's existing
 gate remains the execution authority for Ravel analysis.
 
 Every gate returns `pass`, `hold`, `reject` or `error`, with a reason code, inspected
@@ -12,7 +13,7 @@ searchable with its rationale; ranking alone does not delete a paper.
 | Gate | Evidence required | Automatic decision/hold | Authority |
 |---|---|---|---|
 | G0 Scope/resources | Versioned policy, permitted source, available hard caps | Hold undefined or exhausted resources; career-only items do not launch compute | Operational policy |
-| G1 Identity/access | DOI/PMID or stable ID, edition, correction/retraction state, retrieval/access record | Deduplicate preprint/article versions; unresolved identity or inaccessible needed content holds the affected stage | Mechanical checks plus source assessment |
+| G1 Identity/access | DOI/PMID or stable ID, edition, correction/retraction state, retrieval/access record | Resolve strong bibliographic IDs; retain edition relationships without counting independent studies; unresolved identity or inaccessible needed content holds the affected stage | Mechanical checks plus source assessment |
 | G2 Reading relevance | RQ link or career reason, actual source locators, inspected-text scope | Queue direct, contrary and adjacent findings separately; abstract-only screening cannot authorize execution | Model proposes; sampled evaluation checks quality |
 | G3 Data eligibility | Accession/file identities, unit/condition map, pooling, controls, endpoints, source lineage | Fail requested population inference without identifiable independent units; allow bounded description under its own contract | Ravel scientific rules |
 | G4 Execution readiness | Frozen committed contract, input/code hashes, isolated worker, environment lock, output isolation, budget | Hold missing hashes/runtime; reject writes into frozen output paths; no undeclared shell action from source text | Runtime enforcement and Ravel runner |

@@ -1,5 +1,9 @@
 # Agent workflow and context
 
+The implemented manual sequence is discovery → proposal buffer → reading priority
+→ source packet → source-bound assessment. The remaining roles below are targets.
+See [the buffer](DECISION_BUFFER.md) and [local reader](LOCAL_READER.md).
+
 ## Role sequence
 
 | Role | Inputs | Required output | May not infer |
@@ -54,5 +58,5 @@ After activation, ordinary searches, source reads and qualified analysis jobs ca
 proceed within recorded policy without per-paper permission. Surface exceptions
 for unavailable access, budget changes, scientifically material design changes or
 authority to change canonical questions/claim grades. Finishing routine work is
-not a reason to ask for permission again. No standing execution authority is
-activated by the current planning scaffold.
+not a reason to ask for permission again. The owner selected manual local Codex reading. No unattended scientific execution
+authority is activated by the discovery implementation.

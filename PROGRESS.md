@@ -1,42 +1,60 @@
 # Current project state
 
-**Update this before stopping work, every session.**
+## Discovery and manual reading checkpoint — 11 October 2026
 
-## Initial public repository — 11 October 2026
+Implemented on `codex/discovery-review-buffer-20261011` against Weft main
+`59aa0f740b8e3d6d856684ef7052f5e7d77b7820`. Ravel main was freshly rechecked at
+`bfe26b876221cf6c6fa6f9b16a90cfb516b5998d`; its files/worktrees were not changed.
+The owner selected **local Codex with manual runs** for the reading stage.
 
-The owner requested a separate implementation-plan repository, a concrete Ravel
-connection, agent workflow, automated gates, a first paper pilot, and a workflow
-diagram in the main README. Public visibility was explicitly selected.
+Completed: bounded Europe PMC adapter; strong-ID deduplication and identity holds;
+raw response/cursor/hash receipts; completed-window cutoffs and overlap; read-only
+context for all 32 registered RQs; initial A0/A1 profiles; persistent proposal buffer
+and reading-priority decisions; open-access XML packets and source-locator checks;
+README workflow and synchronized implementation/gate documentation.
 
-Completed: architecture and staged implementation plan; agent/gate specifications;
-revision-pinned Ravel connection; historical Choi 2020 pilot contract draft;
-offline validator and read-only connection verifier; tests and CI configuration.
-Local validation passed: 11 unit tests, 20 documentation links and all 15 pinned
-Ravel source files. The [record](records/bootstrap-validation.json) contains code/
-configuration hashes and the exact scope. The initial sandbox invocation could
-not use temporary Git fixtures; the unchanged tests passed outside that restriction.
-Published at https://github.com/xorca0711/weft, with the physical local checkout
-at `X:\GitHub\weft`. Initial GitHub checks passed, and the independently fetched
-Ravel revision passed all 15 source-identity checks. The [remote validation record](records/remote-validation.json)
-links both completed runs at bootstrap commit `022aa6d`. The README Mermaid
-diagram was inspected in GitHub's rendered view. Later commits receive normal CI;
-the Actions page owns their current status.
+Validation: **58 tests passed**, 35 documentation links checked, all 15 pinned
+Ravel source blobs verified. Seven live searches produced 17 verified raw pages.
+The Choi historical query recovered five records over three pages, including the
+target DOI; repeating it preserved candidate IDs. The recent title/abstract query
+found six records for 4–11 October. Contrary and priority-journal queries returned
+zero in that window. Wider searches remained explicitly truncated; they did not
+advance cutoffs. See [live receipts](records/discovery-validation.json).
 
-Not implemented: live discovery, model calls, durable task scheduler, scientific
-execution adapter, candidate generation and Ravel PR exporter. No biological
-pilot has run. No API credentials, runner registration or recurring automation
-has been configured. The Ravel directory migration remains deferred.
+The first unrestricted recent query produced 8,952 reported matches and was capped
+at 20. Inspection also found acronym noise in the historical query. A revised
+recent title/abstract profile reduced the reported yearly set to 819; it too was
+capped at 20. These are observed query results, not relevance or recall metrics.
+The original attempts remain retained. Initial profiles do not cover all 32 RQs.
 
-Next work, in order:
-1. Implement M1 source discovery, version reconciliation and query receipts.
-2. Implement M2 bounded context extraction and evidence-backed screening; evaluate
-   missed papers and source support before using rankings to route work.
-3. Implement M3 machine-enforced gates, durable job state and resource accounting.
-4. Qualify M4's isolated worker and new Ravel contract without rerunning historical
-   scripts in their frozen directories. Establish the pilot's input hashes and
-   runtime lock, then execute its bounded descriptive reproduction.
-5. Complete M5 integration as a reviewable evidence PR; qualify M6 on unseen papers.
+The Choi XML packet contains 160 source segments. A manual assessment of selected
+results, caption and methods yielded four source-bound statements, including
+two-mouse pooling. Hash/locator checks passed; semantic scientific acceptance was
+not issued. [Reading assessment](records/pilot-reading-20261011.json) records its
+limited coverage and hold. Figure pixels, separate supplements, fresh GEO input
+mapping and the scientific reproduction remain incomplete. No numerical analysis,
+new RQ, model launcher, API account or scheduled automation was activated.
 
-External decisions: agent-account/backend availability, worker location and budget,
-full-text access, source-data availability and scientific contract acceptance.
-The operational caps in configuration are proposals, not spending authorization.
+## Next steps and decision point
+
+1. Review/merge the discovery implementation, especially buffer and authority
+   boundaries. Local records are not an authenticated approval system.
+2. Complete the pilot's figure/supplement inspection and data/sample inventory;
+   evaluate source-support judgments against an independently reviewed set before
+   claiming M2 screening quality. Full version-family and correction-feed handling
+   also remain unqualified.
+3. Choose the scientific worker before implementing its execution route: a new
+   isolated Windows environment on X: or a separately provisioned Linux worker.
+   Local inspection found the existing Ravel x64 Python environment; WSL reported
+   that it is not installed. Do not install WSL, alter that shared environment or
+   start resource-heavy analyses as an implicit consequence of discovery work.
+4. Implement M3 job leases/resource accounting and freeze a new Ravel contract,
+   input hashes, environment and justified published-result comparison tolerance.
+   Then run the bounded descriptive pilot through Ravel's gate with separate outputs.
+5. Build the reviewed export only after successful qualification. No automatic
+   merge, claim acceptance or canonical registration is implemented.
+
+Raw responses/XML and SQLite state are in ignored `runs/discovery` under the Weft
+checkout on X:. Public records contain queries, hashes, metadata and short original
+assessments only. The Ravel directory migration remains deferred. Initial bootstrap
+records remain historical; current CI and the implementation PR own remote status.
