@@ -2,6 +2,34 @@
 
 **Update this before stopping work, every session.**
 
+## Cloud setup in progress; synthetic job controls — 11 October 2026
+
+The owner authorized UI setup at PR #1 revision
+`d031cef02ab4a417760bca46e90a63917d215d31`, setup checks, publication on success
+and subsequent progress toward Choi. That setup baseline remains unchanged.
+Follow-up implementation is isolated on `codex/cloud-job-controls-20261011`.
+
+Browser sign-in completed, but the visible account reported **Free** and the
+Codex Cloud link redirected to ChatGPT home. This differs from the previously
+confirmed environment-creation access. The owner was asked to switch to the
+account/workspace with cloud access; the answer remains pending. No upgrade,
+account modification, environment, cloud task or numerical analysis was started.
+No private account identifier is included in this public record.
+
+Meanwhile, implemented [synthetic job controls](docs/JOB_CONTROLS.md): stable packet
+identity, input hashes, transactional single-slot claiming, append-only transitions,
+unknown-outcome holds, cancellation requests and bounded retries. Fourteen targeted
+tests passed, including competing database connections and restart after expiry.
+The full suite now passes **72 tests**; offline validation also passes.
+This is a library foundation, not a qualified executor or complete M3 gate engine.
+Terminal reports remain explicitly self-reported; success/analysis dispatch is absent.
+
+Next: complete cloud setup after account access resolves, retaining d031cef for
+initial checks; then qualify actual runtime/artifact capabilities before integrating
+this follow-up code. Add verified executor receipts, artifact export/restore and
+hard runtime controls before any scientific contract can be dispatched. Existing
+policy flags, Ravel pin and historical evidence remain unchanged.
+
 ## Dot + Codex Cloud roadmap — 11 October 2026
 
 Work remains on `codex/discovery-review-buffer-20261011` in

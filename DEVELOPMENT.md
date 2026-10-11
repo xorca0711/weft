@@ -72,3 +72,11 @@ The change supersedes unmeasured hardware sizing without altering gate semantics
 No environment, dot task, scientific run or schedule was launched. All existing
 source receipts remain immutable. Runtime qualification, product-usage budgeting
 and durable ledger/artifact handling remain implementation work.
+
+## Cloud setup and synthetic ledger — 11 October 2026
+
+The owner explicitly requested UI environment setup at d031cef, publication after
+successful checks, and continuation toward Choi. Browser account access is pending
+resolution. Codex implemented a bounded synthetic-only M3 foundation while waiting;
+no execution gate was weakened or scientific authority invented. The new ledger
+records cooperative transitions and cannot establish real process termination.

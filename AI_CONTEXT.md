@@ -3,6 +3,8 @@
 Weft is Ravel's public automation companion. Manual Europe PMC discovery, pinned
 RQ context, a paper-to-question review buffer and XML reading packets are implemented.
 Unattended agents, scientific execution and Ravel export are not implemented.
+A [synthetic-only job ledger](docs/JOB_CONTROLS.md) is the first M3 slice; it does
+not dispatch cloud jobs or verify process termination.
 
 - [Current state](PROGRESS.md) owns completed work and exact next steps.
 - [Discovery](docs/DISCOVERY.md), [decision buffer](docs/DECISION_BUFFER.md) and
