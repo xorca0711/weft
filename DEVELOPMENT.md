@@ -142,3 +142,21 @@ process recovery passed against the already pinned image, including terminal
 process checks, cleanup and archive verification. Scientific coordinator storage
 still awaits owner choice; neither task-local persistence nor this recovery test
 establishes remote authority or dot persistence. Policy flags remain false.
+
+## 11 October 2026 — checkpointed manual deployment choice
+
+The owner selected one coordinator with private Drive backups before/after each
+job and explicit recovery after interruption, instead of a new persistent service.
+A dot delegated one read-only cloud check and retrieved its expected scientific
+hold; the same dot verified local SQLite execution and an authenticated private
+checkpoint/restore. records/manual-coordinator-20261011.json preserves coverage.
+No retention, distributed lock, scientific authority or unattended activation is
+inferred. The numerical stack is being qualified with synthetic data only. A new
+clean Ravel worktree on X: was prepared at bfe26b8; no Ravel source/data was edited.
+
+Root review found POSIX-only recovery fixtures were not platform-scoped. Windows
+now skips those cases explicitly; portable artifact tests remain active. A Windows
+symlink-fixture privilege failure is skipped only for WinError 1314. The affected
+22-test module passes (14 platform/privilege skips); Linux CI retains full coverage.
+The numerical synthetic stack passed, with the complete export/watchdog and Ravel
+source preparation still active.

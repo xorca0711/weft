@@ -91,3 +91,12 @@ Prefer Linux x86-64 if available but inspect the actual runtime. If the selected
 cloud cannot satisfy a required control or measured workload, record why and
 request a concrete plan revision. Another cloud worker is a fallback decision;
 no local PC, paid VM, API account or new storage service is implicitly required.
+
+## Manual deployment update
+
+The owner selected [checkpointed manual execution](MANUAL_PILOT.md). [Dot handoff
+and SQLite checkpoint restoration](../records/manual-coordinator-20261011.json)
+passed. The [numerical API fixture](../records/numerical-stack-summary-20261011.json)
+also passed; real-data memory, a surviving watchdog, contracts and per-job
+checkpoint integration still precede science. No workspace-retention guarantee is
+assumed. PROGRESS.md owns the current checkpoint.

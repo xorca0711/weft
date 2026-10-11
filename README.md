@@ -9,7 +9,9 @@
 | Manual source-bound reading packets | Descriptive only | [Local reader](docs/LOCAL_READER.md) | XML text/captions; semantic and figure review remain separate |
 | Choi figure, supplement and input review | Descriptive only | [Review receipt](records/pilot-review-20261011.json) | Manual review and file integrity; numerical analysis remains held |
 | Pinned Codex Cloud setup | Descriptive only | [Setup receipt](records/cloud-setup-20261011.json) | Private environment published; small export verified; science remains held |
-| Dot coordination and scientific cloud execution | Not established | [Cloud roadmap](docs/IMPLEMENTATION_PLAN.md) | Runtime controls, durable artifacts and delegation remain unqualified |
+| Synthetic executor and restart recovery | Descriptive only | [Recovery receipt](records/synthetic-recovery-integration-20261011.json) | 102 tests and bounded Docker restart; no scientific dispatch |
+| Manual dot handoff and private checkpoints | Descriptive only | [Coordinator receipt](records/manual-coordinator-20261011.json) | Small synthetic recovery; no retention or distributed-lock guarantee |
+| Scientific cloud execution | Not established | [Manual pilot](docs/MANUAL_PILOT.md) | Contract, numerical stack and per-job integration remain unqualified |
 | Autonomous paper-to-question workflow | Not established | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Scientific workers, unattended agents and Ravel export remain planned |
 
 Weft is being built to bring new literature into an existing research programme:
@@ -41,7 +43,7 @@ flowchart TD
     D --> B["Review buffer: proposed paper-to-RQ links"]
     B --> T["Reading priority: read next, hold or reject"]
     T --> P["Source-bound reading packet: manual baseline"]
-    O["Dot coordinator: planned"] -.-> P
+    O["Dot coordinator: manual handoff qualified"] -.-> P
     P -.-> V["Review findings, units, limitations and RQ compatibility"]
     V -.->|eligible data| C["Freeze contract and qualify Codex Cloud runtime"]
     O -.-> C

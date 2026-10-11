@@ -1,0 +1,53 @@
+# Checkpointed manual pilot
+
+Owner-selected deployment revision, 11 October 2026. One dot coordinates manually
+dispatched Codex Cloud jobs. Private Google Drive stores verified checkpoints
+before and after each job. An interruption requires explicit recovery; it never
+authorizes a second dispatch. This route needs no extra local PC or new service.
+
+[Qualification evidence](../records/manual-coordinator-20261011.json) records an
+actual dot/cloud round trip and a consistent SQLite backup, upload, download and
+read-only restore. These are bounded synthetic checks. They do not establish
+workspace restart retention, Drive immutability, a distributed lock or automatic
+scientific execution. The Ravel research runner remains the scientific authority.
+
+## Manual dispatch protocol to implement and qualify
+
+1. Select one coordinator and one authoritative ledger identity. Record the exact
+   reviewed Weft/Ravel revisions, source context, contract, input/code/environment
+   hashes, allowed stage, budget and unique attempt. No other coordinator dispatches.
+2. Before dispatch, make a consistent SQLite backup and preserve the exact source,
+   private recovery material and immutable packet. Hash the checkpoint; upload to
+   the owner-only folder with a unique name; verify metadata and downloaded bytes.
+   Keep the hash anchor and locator in the operator handoff outside the archive.
+   Failure or uncertain upload holds dispatch; reconcile before retrying.
+3. Dispatch only the declared stage. Bind the actual cloud task and container to
+   that attempt. Ravel preflight, a committed frozen contract and input/code hashes
+   precede any biological computation. Use read-only source/input mounts, isolated
+   output, enforced resources and a container-side watchdog that survives a lost
+   host launcher. No historical analysis path may be overwritten.
+4. Collect and verify Ravel receipts, terminal state, process disappearance and
+   output hashes. Export outputs and a new consistent ledger checkpoint; retrieve
+   and verify both before calling the manual stage complete. Runtime completion is
+   separate from scientific interpretation and acceptance.
+5. If interrupted, hold the attempt and its slot. An operator must select the last
+   verified checkpoint and reconcile the original task/container before resuming.
+   Never restore an older snapshot and interpret an absent row as permission to
+   rerun. A lost container or missing authenticated recovery material stays held.
+
+Only the synthetic APIs currently implement job execution and recovery. This
+protocol is not yet a scientific dispatch API, and current policy flags remain
+false. Private capsules contain bearer lease material: keep them out of ordinary
+artifacts, public Git, logs and receipts. Drive access must remain owner-only.
+
+## P001 boundary
+
+Start with input/sparse-loader qualification under a new Ravel metadata contract,
+then a separately frozen descriptive Fig. 1B-D contract. One pooled library per
+condition supports library descriptions, not animal-level treatment inference.
+Known D1/D2/D2b outcomes remain exposed. Preserve failed runs, absent states and
+all method differences; no automatic claim promotion, new RQ, merge or schedule.
+
+Before the first real dispatch, qualify the numerical lock, persistent watchdog,
+manual per-job checkpoint/receipt integration and current Ravel contract. The
+[roadmap](IMPLEMENTATION_PLAN.md) and [current state](../PROGRESS.md) own progress.

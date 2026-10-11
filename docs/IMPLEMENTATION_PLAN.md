@@ -21,7 +21,7 @@ candidate/no-candidate disposition. A positive phenotype or new RQ is not requir
 | Component | Assigned responsibility | Evidence / implementation boundary |
 |---|---|---|
 | Dot | Coordinate bounded tasks, source reading, holds and reports through supported product delegation | Structured dispatch/return records; no assumed dot SDK or unattended integration |
-| Weft | Discovery, pinned RQ context, proposal buffer, gates, job ledger and export preparation | Discovery/buffer/manual reader and synthetic ledger implemented; real executor and durable export incomplete |
+| Weft | Discovery, pinned RQ context, proposal buffer, gates, job ledger and export preparation | Discovery/buffer/manual reader and synthetic executor/recovery implemented; scientific orchestration incomplete |
 | Codex Cloud | Execute tested repository commands in a qualified published environment | Exact source/dependency versions, input/output manifests, QC and resource receipts |
 | Ravel | Canonical RQs, contracts, analysis code, results and acceptance history | Read-only pinned context initially; later scoped, reviewed PR |
 | GitHub CI | Deterministic software/document checks | CI status; no scientific compute or desktop runner |
@@ -40,8 +40,8 @@ into implementation slices below; these are not new scientific gates.
 |---|---|---|---|
 | 0 / M0-M2 baseline | Foundation, bounded discovery/dedup, pinned RQs, manual reader, Choi source review | Reuse recorded tests/audit and preserve unresolved limits | Implemented baseline; M1 version-family/recall evaluation and M2 independent screening evaluation remain open |
 | 1 / M3a cloud setup | Private `weft-pilot`; exact Weft PR revision; read-only Ravel pin; Python/Git/network preflight | Fresh cloud task passes offline checks and pin verification; capability/access receipt recorded | Published at d031cef: 58 tests, 15 Ravel files and small external restore and fresh-task source checks passed; startup/network caveats recorded |
-| 2 / M3b job and artifact control | Single authoritative ledger, job keys, leases, append-only attempts, checkpoint/export, cancellation and enforced limits | Synthetic duplicate, expired lease, changed hash, stale context, disconnect, cancellation and restore tests pass | Synthetic ledger (72 tests) and bounded Docker controls pass; Drive cross-task recovery passed; verified executor/ledger integration incomplete |
-| 3 / M2 cloud coordinator qualification | One manual dot delegation, source-bound reading, structured return and hold handling | Dot uses the selected environment/revision and verifies receipts without bypassing holds; independent screening evaluation remains separate | Planned; no schedule or assumed API integration |
+| 2 / M3b job and artifact control | Single authoritative ledger, job keys, leases, append-only attempts, checkpoint/export, cancellation and enforced limits | Synthetic duplicate, expired lease, changed hash, stale context, disconnect, cancellation and restore tests pass | 102 tests, bounded executor/restart and Drive cross-task recovery passed; manual per-job science integration incomplete |
+| 3 / M2 cloud coordinator qualification | One manual dot delegation, source-bound reading, structured return and hold handling | Dot uses the selected environment/revision and verifies receipts without bypassing holds; independent screening evaluation remains separate | Manual dispatch/return and SQLite checkpoint passed; no schedule or automatic scientific dispatch |
 | 4 / M4a scientific readiness | New Ravel contract/adapter, dependency lock, comparison criteria, verified transfer and sparse-loader benchmark | Coordinates/values and joins pass; measured memory fits enforced limits; artifact export/restore passes | Structural input audit complete; contract/runtime unqualified |
 | 5 / M4b Choi pilot | Figure 1B-D descriptive adapted reanalysis, exposure record and discrepancy ledger | Complete QC/denominators, all attempts and limitations; no population inference from one pooled library per condition | Not run |
 | 6 / M5 reviewed integration | Precedent review, candidate/no-candidate disposition, manifest, scoped Ravel PR and CI | Current Ravel base checked; evidence traceable; acceptance/merge recorded separately | Planned |
@@ -74,12 +74,14 @@ resource requirements. Setup can pass while scientific execution remains held.
 
 ## State and artifacts to implement in M3
 
-Use one coordinator-owned ledger, initially SQLite with serialized writes and
-append-only events/attempts. The dot cloud computer is a candidate host, subject
-to proving executable access, persistence and recovery. Dot memory and independent
-SQLite copies in every task are not the ledger. If that host fails qualification,
-report the specific gap before selecting another cloud service. No always-on
-local machine is part of this design.
+The owner selected the [checkpointed manual route](MANUAL_PILOT.md): one dot-owned
+SQLite ledger, private Drive checkpoints before/after each job, and explicit
+operator recovery after interruption. Actual dot execution, cloud dispatch/return
+and synthetic SQLite backup/restore passed. Dot scratch storage has no verified
+restart-retention guarantee, and Drive is not a distributed lock or write-once
+store. Per-job integration remains to implement; independent task-local SQLite
+copies never become separate dispatch authorities. No always-on local PC or new
+service is selected.
 
 Workers receive immutable packets: paper/version, RQ-context/policy hashes,
 contract/code/input identifiers, attempt/lease IDs, output destination and limits.

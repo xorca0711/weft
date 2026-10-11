@@ -16,6 +16,7 @@ from weft.jobs import JobError, JobLedger
 from weft.recovery import load_capsule, SOURCE_FILES
 
 
+@unittest.skipUnless(os.name == "posix", "Executor recovery requires POSIX ownership and permission controls")
 class RecoveryTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)

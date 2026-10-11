@@ -4,8 +4,7 @@ Weft is Ravel's public automation companion. Manual Europe PMC discovery, pinned
 RQ context, a paper-to-question review buffer and XML reading packets are implemented.
 Unattended agents, scientific execution and Ravel export are not implemented.
 The [synthetic job controls](docs/JOB_CONTROLS.md) include a ledger and built-in
-Docker fixture executor with verified local terminal receipts. Product cloud task
-dispatch and scientific qualification remain open.
+Docker fixture executor with verified local terminal receipts. One manual dot/cloud dispatch-return check passed; scientific qualification remains open.
 
 - [Current state](PROGRESS.md) owns completed work and exact next steps.
 - [Discovery](docs/DISCOVERY.md), [decision buffer](docs/DECISION_BUFFER.md) and
@@ -16,10 +15,11 @@ dispatch and scientific qualification remain open.
   initial search profiles cover A0/A1 only. No automatic evidence join or canonical ID.
 - The owner selected dot coordination + Codex Cloud execution after the local
   manual-reader baseline. Start with [cloud setup](docs/CLOUD_SETUP.md), then M3
-  controls and one manual dot qualification. Private weft-pilot is published at d031cef with 58 cloud tests and a small
+  controls and the [checkpointed manual route](docs/MANUAL_PILOT.md). Private weft-pilot is published at d031cef with 58 cloud tests and a small
   independently verified export. See records/cloud-setup-20261011.json. The small
   synthetic Drive route passed [independent cloud restore](records/cloud-drive-restore-20261011.json).
-  Large outputs, retention guarantees, shared ledger authority and numerical
+  [Manual dot delegation and SQLite checkpoint restoration](records/manual-coordinator-20261011.json) passed.
+  Large outputs, retention guarantees, per-job ledger integration and numerical
   execution remain unqualified; per-job synthetic controls are documented separately.
   No paid API or unattended launcher is configured. Never fabricate human review.
 - No extra local PC is required. Cloud tasks pin the reviewed Weft PR revision

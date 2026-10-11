@@ -1,4 +1,5 @@
 import copy
+import os
 import io
 import json
 from pathlib import Path
@@ -61,6 +62,7 @@ class FakeDocker(DockerExecutor):
         return self.absent and bool(processes)
 
 
+@unittest.skipUnless(os.name == "posix", "Executor recovery requires POSIX ownership and permission controls")
 class ExecutorTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
@@ -285,7 +287,13 @@ class ArtifactTests(unittest.TestCase):
             verify_bundle(files,identity=self.identity,terminal_sha256=sha(files['terminal.json']))
 
     def test_destination_symlink_rejected(self):
-        a=self.root/'a.zip';write_archive(a,self.files);(self.root/'link').symlink_to(self.root,target_is_directory=True)
+        a=self.root/'a.zip';write_archive(a,self.files)
+        try:
+            (self.root/'link').symlink_to(self.root,target_is_directory=True)
+        except OSError as exc:
+            if getattr(exc, 'winerror', None) == 1314:
+                self.skipTest('Windows test fixture needs symlink creation privilege')
+            raise
         with self.assertRaises(JobError):restore_archive(a,self.root/'link/new',identity=self.identity,terminal_sha256=self.anchor,archive_sha256=sha(a.read_bytes()))
 
 
