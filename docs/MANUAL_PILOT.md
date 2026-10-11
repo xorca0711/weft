@@ -102,3 +102,30 @@ retention. Operators must verify the selected checkpoint's reference, ancestry,
 revision and original runtime state before reconciliation. Existing Drive product
 tools provide transport; this helper makes no upload/retention claim. End-to-end
 per-job coordinator integration and separate capsule transport remain required.
+
+## Local splitting for larger output archives
+
+`weft.transfer_parts.split_file` and `reassemble` provide deterministic local
+packing into ordered parts of at most 16 MiB (maximum 256 parts / 4 GiB). They
+require an external full-file SHA-256; reassembly also requires the independently
+recorded canonical-manifest hash. Fixed part names, exact file sets/order/sizes,
+per-part hashes and the reconstructed whole-file hash are checked. No input is
+extracted or executed. Destinations must be fresh; failures retain incomplete
+files without a successful verification record. A returned local verification
+never activates a job or asserts transport, retention or scientific acceptance.
+
+The 16 MiB Drive probe establishes only the previously measured transport size.
+Actual multipart cloud upload/download and reconstruction must still be qualified
+on the declared job artifacts. Upload each part and manifest once, record exact
+private locators and anchors, and verify every downloaded byte plus reconstructed
+archive before normal ZIP/manifest validation. Unknown uploads hold the job;
+never retry blindly. No Drive SDK, automatic uploader or approval bypass is added.
+These helpers assume an operator-controlled filesystem; they do not defend against
+hostile concurrent filesystem changes. POSIX staging is private (0700); Windows
+operators must supply equivalent private ACLs. No compression or analysis method
+is changed; split the completed archive as bytes.
+
+Validation: eight focused local tests passed, including a 16 MiB-plus-seven-byte
+boundary roundtrip, damaged parts, wrong external anchors, unexpected files,
+traversal, changed source and bounds. This is local transport preparation, not
+an end-to-end cloud multipart qualification.

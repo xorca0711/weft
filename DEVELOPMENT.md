@@ -235,3 +235,23 @@ bound in Ravel90c02ba with a frozen metadata-only contract and passing unchanged
 governance checks. Mir remains sole coordinator and is preparing the per-job
 packet/checkpoint. No real-input computation is yet claimed. Earlier denials and
 runtime failures are retained; no validator or access control was weakened.
+
+## 2026-10-11 — First metadata attempt and bounded artifact splitting
+
+Root independently verified the before-dispatch checkpoint and released one
+metadata attempt under Ravel90c02ba. The completed worker report records successful
+archive/member hashes, three-library sparse integrity, 190.460 seconds and cumulative
+945,848 KiB peak RSS. Result bytes remain unreviewed by root: automatic review blocked
+the new exact evidence export; the earlier direct approval covered a different file.
+No retry or scientific promotion. Preserve EXPORT_HELD and the after-run checkpoint.
+
+Added a separate local multipart helper with external whole-file/manifest anchors,
+fixed bounded parts and verified reconstruction. Eight focused tests passed,
+including the actual 16 MiB boundary. No Drive upload implementation, numerical
+pipeline, activation policy or scientific gate changed. Cloud multipart qualification
+and the descriptive pilot remain open.
+
+The after-run EXPORT_HELD ledger checkpoint subsequently passed coordinator
+upload/readback/restore and independent root byte/ancestry/integrity/one-attempt
+state checks. The numerical evidence archive itself remains unexported. No attempt
+was retried, released or promoted to completed. Direct worker approval was requested.

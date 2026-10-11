@@ -1,25 +1,32 @@
 # Current project state
 
-## Current stage — Choi metadata preparation
+## Current stage — metadata executed; evidence export held
 
-The exact runtime export succeeded after direct approval in the executing worker
-chat. Worker and independent root readback verified 156,333 bytes, the expected
-SHA-256, ZIP CRC and all 28 manifest entries. Owner-only sharing and the expected
-folder were verified; no sharing change. Earlier denials remain recorded in the
-[qualification receipt](records/numerical-git-runtime-20261011.json).
+The runtime archive upload/readback is verified by worker and root. Ravel PR149
+`90c02bad355a52bc9b71ac84ad63a06eda52c525` binds that exact Git-equipped runtime
+and the frozen metadata-only contract; all four Ravel CI checks passed. Root also
+verified the private before-dispatch checkpoint, packet and exact source bindings.
 
-Ravel PR149 commit `90c02bad355a52bc9b71ac84ad63a06eda52c525` preserves the exact
-Git-equipped runtime and freezes only the metadata/input-loader contract. The
-unchanged full research gate and source/schema preflight passed. Figure1 remains
-draft. Runtime identity and a bounded 4-CPU/8-GiB offline job are declared in the
-[Ravel execution plan](https://github.com/xorca0711/ravel/blob/90c02bad355a52bc9b71ac84ad63a06eda52c525/Research%20Article/gate1_02_choi_2020/weft_pilot_v1/config/metadata-execution-v1.json).
+The single reserved metadata attempt **executed successfully according to the
+completed worker report**: one archive download and all nine selected input hashes
+passed; three libraries passed structure/feature-order checks. Loader time was
+190.460 seconds and cumulative process peak RSS 945,848 KiB. The container exited
+0 with no OOM and all captured processes absent. See the
+[bounded result receipt](records/choi-metadata-20261011.json).
 
-The sole dot coordinator is preparing one immutable packet and verified private
-before-dispatch checkpoint using the existing authoritative ledger and worker.
-No NCBI download or real-input computation is claimed yet. Next: review the actual
-packet/checkpoint, run exact input/sparse validation, verify outputs and after-run
-checkpoint, then review memory before freezing any descriptive job. No automatic
-scientific API, claim acceptance, RQ promotion, merge or schedule is enabled.
+The new 64,399-byte private evidence archive remains local: automatic review denied
+its upload because direct approval in the worker covered the earlier runtime
+archive, not this new payload. No retry or alternate transfer was attempted.
+Direct owner approval in the existing worker is the next external action. The
+coordinator recorded EXPORT_HELD and verified the private after-run checkpoint;
+root independently checked its bytes, ancestry and single-attempt held state. No slot release,
+new attempt or stage-complete claim. Root result readback/memory review remains
+pending; Figure1 stays draft and unrun. Resume with exact archive upload/readback,
+root result readback/memory review before the descriptive stage.
+
+A local bounded multipart helper passed eight focused tests for future larger
+artifacts. It does not upload files, change the scientific pipeline or establish
+end-to-end cloud multipart transport. See [manual protocol](docs/MANUAL_PILOT.md).
 
 ## Checkpointed manual pilot preparation — 11 October 2026
 
