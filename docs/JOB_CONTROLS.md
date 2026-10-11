@@ -161,3 +161,15 @@ The historical intermediate attempt predates capsule persistence: its token and
 complete original adapter snapshot were not retained. It remains held with that
 explicit reason; the stopped container and source fingerprint cannot fabricate
 those missing recovery materials. No historical ledger is rewritten by this fix.
+
+## Manual ledger checkpoints
+
+`weft/checkpoints.py` adds consistent backup-API snapshots and bounded, externally
+anchored read-only restoration. It does not use JobLedger during restoration or
+alter any executor/slot reconciliation rule. Only the declared SQLite database
+and canonical manifest are archived; private recovery material is separate.
+See [manual protocol](MANUAL_PILOT.md) for handoff anchors, operator reconciliation,
+cooperative timeout/platform limits and missing coordinator/transport integration.
+The [actual snapshot receipt](../records/manual-checkpoint-integration-20261011.json)
+records committed WAL inclusion, unchanged source bytes and no restored attempts.
+An older snapshot or correct hash never permits redispatch of an uncertain job.

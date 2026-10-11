@@ -160,3 +160,19 @@ symlink-fixture privilege failure is skipped only for WinError 1314. The affecte
 22-test module passes (14 platform/privilege skips); Linux CI retains full coverage.
 The numerical synthetic stack passed, with the complete export/watchdog and Ravel
 source preparation still active.
+
+## 11 October 2026 — reusable manual SQLite checkpoints
+
+Implemented stdlib backup/restore on reviewed base
+`c8ab57024b355314a3a84c8400093a173aa9f3f1`. Twelve focused portable tests cover WAL
+consistency/source preservation, trusted identity/hash/schema anchors, strict
+archive members/CRC/corruption/expansion, destination reuse, bounds and no active
+ledger construction. POSIX permission/symlink assertions are explicitly scoped.
+Full suite: 114 tests passed; validator passed. A small actual JobLedger snapshot
+restored one synthetic queued job and zero attempts read-only, with source main/WAL
+bytes unchanged and `REQUIRES_OPERATOR_RECONCILIATION`. No Docker/Drive probes,
+scientific dispatch, tokens or policy changes. Receipt is in
+`records/manual-checkpoint-integration-20261011.json`. Product-tool transport,
+operator reconciliation/freshness, separately protected capsules and per-job
+coordinator integration remain external; backups/hashes are not shared locks or
+authentication. Deadline checks are cooperative, not an OS-stall watchdog.

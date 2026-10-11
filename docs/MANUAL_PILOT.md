@@ -51,3 +51,54 @@ all method differences; no automatic claim promotion, new RQ, merge or schedule.
 Before the first real dispatch, qualify the numerical lock, persistent watchdog,
 manual per-job checkpoint/receipt integration and current Ravel contract. The
 [roadmap](IMPLEMENTATION_PLAN.md) and [current state](../PROGRESS.md) own progress.
+
+## Implemented ledger-only checkpoint helper
+
+`weft.checkpoints.create_checkpoint` uses SQLite's backup API, including committed
+WAL state, into a fresh private staging directory. It closes and integrity-checks
+that standalone database against an operator-selected exact schema hash. The
+canonical manifest binds a unique checkpoint ID, ledger identity, exact job/attempt
+or stage reference, before-dispatch/after-run phase, optional parent archive hash,
+40-character source revision, UTC timestamp and database bytes/hash. The ZIP has
+exactly `ledger.sqlite` and `checkpoint-manifest.json`; recovery capsules and
+bearer tokens are excluded and require separate protected transport.
+
+`restore_checkpoint` requires the archive SHA-256, ledger identity and schema hash
+from the trusted handoff outside the archive. It bounds archive/member expansion,
+checks canonical metadata, CRC, database hash, integrity and schema before creating
+the requested fresh directory. Duplicate/unexpected names (including traversal),
+symlinks, special/encrypted members and reused destinations are rejected. It opens
+the verified SQLite file read-only and returns
+`REQUIRES_OPERATOR_RECONCILIATION`: it never constructs an active JobLedger,
+releases a slot, launches a job or authorizes redispatch. Preserve incomplete
+staging/restoration failures for inspection; do not promote them into checkpoints.
+
+Example operator-side Python calls (transport is separate):
+
+```python
+from weft.checkpoints import create_checkpoint, restore_checkpoint
+saved = create_checkpoint(
+    source, fresh_staging, ledger_identity=trusted_ledger_id,
+    reference={"job_id": exact_job_sha256, "attempt_id": exact_attempt},
+    phase="before-dispatch", source_revision=reviewed_revision,
+    expected_schema_sha256=trusted_schema_sha256,
+    parent_checkpoint_sha256=previous_verified_archive_sha256)
+restored = restore_checkpoint(
+    downloaded_archive, fresh_restore,
+    expected_archive_sha256=handoff_archive_sha256,
+    ledger_identity=trusted_ledger_id,
+    expected_schema_sha256=trusted_schema_sha256)
+```
+
+Default database bound is 8 MiB (maximum 32 MiB), manifest 16 KiB and elapsed
+budget 5 seconds (maximum 10). Backup callbacks and SQLite progress handlers enforce
+cooperative deadlines; synchronous filesystem/OS stalls are not a hard process
+watchdog. POSIX directories/files use 0700/0600; on other platforms operators must
+provide equivalent private ACLs. This is a cooperating-operator protocol, not
+protection against hostile concurrent filesystem modification. A schema anchor
+verifies structure, not scientific row semantics. Hashes and consistent backups
+provide neither distributed locking nor operator authentication, freshness or
+retention. Operators must verify the selected checkpoint's reference, ancestry,
+revision and original runtime state before reconciliation. Existing Drive product
+tools provide transport; this helper makes no upload/retention claim. End-to-end
+per-job coordinator integration and separate capsule transport remain required.

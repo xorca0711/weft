@@ -80,3 +80,15 @@ handoff test does not complete those milestones. Choi is a known-outcome benchma
 The [roadmap](docs/IMPLEMENTATION_PLAN.md) owns milestone exits; historical decisions
 and failures remain in [DEVELOPMENT.md](DEVELOPMENT.md). Automatic scientific gate
 semantics, protected policy and claim grades were not changed to make a run pass.
+
+### Manual checkpoint implementation slice — 11 October 2026
+
+The reusable ledger-only helper now performs consistent SQLite backup and strict
+content/schema-verified read-only restoration with external handoff anchors.
+**114 tests and validator passed**. A small actual synthetic ledger/WAL snapshot
+restored without activation; [receipt](records/manual-checkpoint-integration-20261011.json)
+records exact implementation/database/archive hashes and unchanged source bytes.
+Restore always requires operator reconciliation. Drive transport, handoff freshness,
+protected capsule transport and per-job coordinator integration remain separate;
+no distributed locking/authentication or retention is inferred. Historical unknown
+attempts remain held; all scientific readiness and activation gates remain false.
