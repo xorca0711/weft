@@ -25,7 +25,9 @@ uses 4 MiB parts, at most 256 / 1 GiB; frozen scientific files remain unchanged.
 Ravel b656d06 freezes Figure1 at 4 CPUs/16 GiB/one hour; all four checks pass.
 Preparation stopped before analysis: available memory 16.56 GiB is below the
 20 GiB floor. Read-only diagnosis reports 17.59 GiB host total and a visible
-16 GiB cgroup ceiling, so earlier nominal capacity does not qualify this worker.
+16 GiB cgroup ceiling, so earlier nominal capacity does not qualify this worker. Official Pro defaults are
+4 vCPUs/16 GiB/32 GiB disk: the failed 20 GiB requirement was an oversized root
+planning assumption, not a missing subscription allocation.
 No numerical container, output or preflight was created; the incomplete source
 and same preparation reservation are preserved. [Evidence](records/choi-figure1-preparation-20261011.json).
 
