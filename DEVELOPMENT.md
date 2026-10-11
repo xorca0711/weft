@@ -264,3 +264,21 @@ observed sparse-memory prerequisite and completed descendant checkpoint; no
 scientific method, gate, authority flag or acceptance changed. Earlier rejected
 export and held checkpoint remain visible. Figure1 and multipart transport remain
 separate qualification steps. Private storage/runtime locators stay ignored.
+
+## 2026-10-11 — Capacity correction and preserved Figure1 preparation holds
+
+Codex corrected the oversized 20 GiB host assumption against official Pro specs
+(16 GiB VM), recorded the owner-selected 8 GiB operational amendment and verified
+its passing memory check. Original frozen scientific files remain unchanged.
+The bounded mount-placeholder repair succeeded; disk capacity then held both
+preflight containers before start. Read-only accounting identifies VFS copying
+as a likely cause and insufficient build cache. No cleanup or analysis occurred.
+Current records distinguish the proposed container retirement from approval and
+retain original source/input checks, failure receipts and checkpoint ancestry.
+
+The owner subsequently approved scoped retirement. Both no-unique-data audits
+and checkpoint ancestry were reviewed; both exact containers were retired and
+the second passed offline preflight once. Recorded cgroup-v2 false/null field
+normalization and missed short-run PID polling explicitly. Recovered about 4.2 GiB
+without changing resource limits or scientific files. Numerical release still
+awaits final packet, container controls and verified before-checkpoint.

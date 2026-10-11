@@ -23,8 +23,9 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
   [Manual dot delegation and SQLite checkpoint restoration](records/manual-coordinator-20261011.json) passed.
   The first manual metadata job has verified before/after checkpoints and Ravel
   receipt readback. A bounded 4 MiB multipart roundtrip passed; each actual archive still needs
-  readback. Figure1 preparation is held for insufficient actual host memory; read
-  the current resource revision proposal before resuming. Retention is not guaranteed.
+  readback. The owner-selected 8 GiB amendment passes the memory gate. Owner-approved scoped container retirement recovered disk, and offline preflight
+  passed once. Figure1 awaits final packet/container checks and a verified
+  before-checkpoint; read PROGRESS before dispatch. Retention is not guaranteed.
   No paid API or unattended launcher is configured. Never fabricate human review.
 - No extra local PC is required. Cloud tasks pin the reviewed Weft PR revision
   and Ravel blobs; never assume main has current implementation, or X: paths and

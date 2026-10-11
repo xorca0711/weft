@@ -1,46 +1,35 @@
 # Current project state
 
-## Current stage — metadata reviewed; preparing descriptive pilot
+## Current stage — metadata verified; Figure1 preflight passed
 
-The single Choi metadata attempt at Ravel 90c02ba is independently verified.
-After direct owner approval in the existing worker, the exact 64,399-byte evidence
-archive passed worker/root SHA-256, CRC and all 46 member hashes. Nine exported
-source snapshots match exact Git blobs. Ravel preserves the original run files,
-registers the receipt and passes its unchanged verifier. All three libraries pass
-integrity and feature-order checks; sparse loading takes 190.460 seconds with
-945,848 KiB cumulative process peak RSS. This supports the sparse-loader prerequisite,
-not the full Figure1 workload or biological inference.
+The single Choi metadata attempt is independently verified: original receipt,
+46 exported member hashes, nine source Git blobs, sparse integrity and a reviewed
+after-run checkpoint. The loader took 190.460 seconds with 945,848 KiB cumulative
+peak RSS. This qualifies the loader prerequisite, not the full Figure1 workload.
+[Metadata evidence](records/choi-metadata-20261011.json). Multipart recovery passed
+a separate 4 MiB+7 trial after a preserved 16 MiB readback failure; the explicit
+[transfer amendment](records/figure1-artifact-transfer-v2.json) governs real outputs.
 
-Mir verified a descendant after-run checkpoint and closed the same attempt without
-rerunning it. Root independently checked its bytes, ancestry, database integrity
-and single-attempt review record. The initial export denial and EXPORT_HELD
-checkpoint remain historical. [Evidence](records/choi-metadata-20261011.json).
+Pro's documented VM is 4 vCPUs / 16 GiB / 32 GiB disk. Root's earlier 20 GiB host
+floor was a planning error. The owner-selected [8 GiB amendment](records/figure1-resource-amendment-v2.json)
+applies to the container, with a 12 GiB host floor and unchanged methods. Memory,
+exact source b656d06, 56 code bindings, three frozen hashes and nine inputs passed.
+The missing mount placeholder was repaired without changing tracked source.
 
-The 16 MiB part uploaded but its readback failed; the separate 4 MiB+7 synthetic
-trial passed authenticated download and complete reconstruction. Root verified the
-manifest and deterministic anchors. [Trials](records/synthetic-multipart-20261011.json)
-preserve both outcomes. [Operational amendment](records/figure1-artifact-transfer-v2.json)
-uses 4 MiB parts, at most 256 / 1 GiB; frozen scientific files remain unchanged.
+Two VFS preflight-container allocations then caused a disk hold. After explicit
+owner approval and no-unique-data audits, both scoped containers were retired,
+recovering about 4.2 GiB while preserving image, source, inputs and all evidence.
+The existing second container ran the offline preflight once before retirement:
+ok=true, exit 0, no OOM, 0.616 seconds. Process polling missed that short run;
+no exact disappearance proof is claimed. Docker's false/null OOM field was reviewed
+against cgroup v2; effective resource/security controls were unchanged.
 
-Ravel b656d06 freezes Figure1 at 4 CPUs/16 GiB/one hour; all four checks pass.
-Preparation stopped before analysis: available memory 16.56 GiB is below the
-20 GiB floor. Read-only diagnosis reports 17.59 GiB host total and a visible
-16 GiB cgroup ceiling, so earlier nominal capacity does not qualify this worker. Official Pro defaults are
-4 vCPUs/16 GiB/32 GiB disk: the failed 20 GiB requirement was an oversized root
-planning assumption, not a missing subscription allocation.
-No numerical container, output or preflight was created; the incomplete source
-and same preparation reservation are preserved. [Evidence](records/choi-figure1-preparation-20261011.json).
-
-[Resource revision proposal](docs/FIGURE1_RESOURCE_REVISION.md) recommends a bounded
-8 GiB job with a 12 GiB host floor, unchanged methods and stop-on-failure. The
-alternative is qualifying a larger cloud worker. The owner selected the 8 GiB option; the explicit
-[resource amendment](records/figure1-resource-amendment-v2.json) changes only the
-container budget/host floor while keeping 4 GiB planned headroom and all methods.
-No frozen v1 file is changed. Resume only the same unstarted reservation with
-new actual capacity/source/input/control checks and a verified before-checkpoint;
-root numerical release remains pending. The held-state
-ledger checkpoint is verified by coordinator and root; reservation retained. No new RQ, claim promotion,
-merge or unattended execution.
+[Preparation evidence](records/choi-figure1-resumed-preparation-20261011.json) preserves
+all failures, audit limits, approved cleanup and root-verified held-checkpoint ancestry.
+Available disk after recovery was 13,922,025,472 bytes. Next: finalize the immutable
+packet, inspect the actual numerical container, recheck capacity after its creation,
+and verify a descendant before-checkpoint before root release. The same Figure1
+reservation is unstarted. No new RQ, claim promotion, merge or unattended execution.
 
 ## Checkpointed manual pilot preparation — 11 October 2026
 
