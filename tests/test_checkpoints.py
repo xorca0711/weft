@@ -1,4 +1,5 @@
 import copy
+from contextlib import closing
 import json
 import os
 from pathlib import Path
@@ -44,7 +45,7 @@ class CheckpointTests(unittest.TestCase):
         self.assertEqual((self.source.read_bytes(),wal.read_bytes()),before)
         self.assertEqual(self.db.execute('SELECT count(*) FROM state').fetchone()[0],2)
         restored=self.restore(r)
-        with sqlite3.connect(Path(restored['directory']).joinpath('ledger.sqlite').as_uri()+'?mode=ro',uri=True) as d:
+        with closing(sqlite3.connect(Path(restored['directory']).joinpath('ledger.sqlite').as_uri()+'?mode=ro',uri=True)) as d:
             self.assertEqual(d.execute('SELECT * FROM state').fetchall(),[(1,'held_unknown')])
             with self.assertRaises(sqlite3.OperationalError):d.execute("DELETE FROM state")
         self.assertEqual(restored['status'],RECONCILIATION)

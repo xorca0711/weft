@@ -176,3 +176,16 @@ scientific dispatch, tokens or policy changes. Receipt is in
 operator reconciliation/freshness, separately protected capsules and per-job
 coordinator integration remain external; backups/hashes are not shared locks or
 authentication. Deadline checks are cooperative, not an OS-stall watchdog.
+
+## 2026-10-11 — Root review and approved NCBI publication
+
+Published the owner-approved single NCBI host without changing the d031cef baseline,
+privacy, secrets or analysis-container isolation. Fresh cloud HEAD passed at the
+new catalog version; effective host enforcement was not independently exposed.
+The earlier proxy 403 remains recorded. See records/cloud-ncbi-20261011.json.
+
+Reviewed 07c5756 checkpoint code and CI. Windows found a test fixture whose SQLite
+context manager committed but did not close the connection. Explicit closing fixed
+temporary-file cleanup: 12 targeted tests pass, one symlink-privilege skip. No
+checkpoint, gate or recovery semantics changed. The Ravel draft remains under
+review; runtime checks do not establish scientific results or acceptance.

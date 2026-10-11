@@ -18,7 +18,7 @@ configured. [Manual protocol](docs/MANUAL_PILOT.md) records the deployment revis
   [synthetic job controls](docs/JOB_CONTROLS.md): single-ledger claims, immutable
   identities, reserved unknown outcomes, bounded Docker execution, content-verified
   receipts and archives. Commit `8e61cdf038257970fde503c975434eafde069ef9` passed
-  **102 Linux tests and both CI checks**. Ordinary artifacts exclude bearer leases.
+  **102 Linux tests and both CI checks** (superseded by the 114-test checkpoint slice below). Ordinary artifacts exclude bearer leases.
 - [Actual restart recovery](records/synthetic-recovery-integration-20261011.json)
   passed after the launcher exited. New attempts save authenticated claims and
   exact source snapshots privately before Docker access. The historical test that
@@ -41,6 +41,17 @@ configured. [Manual protocol](docs/MANUAL_PILOT.md) records the deployment revis
   and UMAP APIs under 4 GiB/4 CPUs/180 seconds/network none. The unused standalone
   Scrublet/annoy package was excluded after inspecting the official Scanpy path.
   Two fixture failures/repairs are retained. This is not a full-data memory test.
+
+- The approved network-only update is published: package-manager preset plus only
+  `ftp.ncbi.nlm.nih.gov`, private visibility and d031cef source pin preserved. A
+  fresh dot-delegated cloud task made one proxied HEAD: HTTP 200, 349,204,480 bytes,
+  no redirects or payload. [Receipt](records/cloud-ncbi-20261011.json) separates
+  root UI evidence from runtime enforcement, which the child could not verify.
+- The Ravel draft adapter and two contracts are on
+  `codex/weft-choi-pilot-20261011` at d779520. Worker-side GNU timeout survived a
+  killed launcher; all captured processes disappeared after 7.10 seconds. Root
+  review requested a summary-variable fix, adapted UMAP panels and explicit
+  cross-library feature-order checks before freezing. No biological run occurred.
 
 ### Active work and exact next steps
 
@@ -92,3 +103,7 @@ Restore always requires operator reconciliation. Drive transport, handoff freshn
 protected capsule transport and per-job coordinator integration remain separate;
 no distributed locking/authentication or retention is inferred. Historical unknown
 attempts remain held; all scientific readiness and activation gates remain false.
+
+Windows checkpoint tests also pass (12 run, one symlink-privilege skip). Root
+review corrected a test-only SQLite handle leak using explicit connection closure;
+production checkpoint code was unchanged. Linux CI passed at 07c5756.
