@@ -107,3 +107,20 @@ files or archived code were used. One referenced setup-script digest cannot be
 checked because that file is absent from the ZIP; this limit remains explicit.
 This qualifies the demonstrated synthetic recovery path, not retention guarantees,
 large scientific artifacts or a shared authoritative ledger.
+
+
+## Trusted synthetic executor — 11 October 2026
+
+The owner authorized code/tests/docs on PR #2 from exact 1866f96, superseding the
+qualification task's read-only source restriction. Codex implemented a fixed-fixture
+Docker adapter and strict content-addressed receipts/restoration. Published d031cef
+setup and frozen qualification artifacts remain unchanged. Hashes establish content
+integrity under a trusted adapter/coordinator; they do not establish actor authority
+or scientific success. Executor-bound attempts cannot use legacy self-report release.
+
+The local success/failure/cancellation/unknown distinction is implemented and tested;
+whole-job completion, coordinator authority, Drive transport integration and product
+dispatch remain unimplemented. Actual bounded success/cancellation used the qualified
+cached image without repeating the broad capability probes. 94 tests and offline
+validation passed. Public files contain no Drive folder/owner details or raw logs.
+No scientific gate, activation flag, Ravel source or environment configuration changed.

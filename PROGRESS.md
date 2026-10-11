@@ -28,8 +28,8 @@ PR #1 remains unchanged. Follow-up work is isolated in
 [synthetic job ledger](docs/JOB_CONTROLS.md) implements stable identity, verified
 input hashes, transactional single-slot claims, append-only events, unknown-outcome
 holds, cancellation requests and bounded retries. All **72 tests passed**, with
-both CI checks passing for the implementation commit. Terminal reports remain
-self-reported; there is no scientific dispatch or successful-completion API.
+both CI checks passing for the implementation commit. Legacy fixture reports remain self-reported; the next slice below adds a trusted
+synthetic executor. There is no scientific dispatch or whole-job completion API.
 
 ## Exact next steps and open dependencies
 
@@ -78,3 +78,42 @@ No Choi analysis, Ravel write, claim acceptance, paid fallback, schedule or merg
 was activated. Policy flags and scientific validators remain unchanged. The
 [roadmap](docs/IMPLEMENTATION_PLAN.md) owns milestone exits; prior decisions remain
 in [DEVELOPMENT.md](DEVELOPMENT.md). Local Ravel worktrees/data are preserved.
+
+
+## Synthetic executor implementation — 11 October 2026
+
+Authorized development started from exact
+`1866f96e9fd70ca9abb1b5e6a6d5992df56c80a7` on PR #2. The published d031cef
+configuration remains unchanged; the scoped local coding branch tracks the existing
+PR #2 branch. Prior qualification archives/logs and private Drive locators are
+preserved outside tracked source.
+
+Implemented the built-in synthetic Docker adapter, immutable attempt/container
+bindings, ledger-bound process observations and content-addressed terminal/output
+manifests. Executor-bound attempts reject legacy self-reported reconciliation.
+Verified local success is `local_verified`; no external-export or whole-job-complete
+claim exists. Unknown daemon/process/content outcomes retain the slot. Bounded
+archive restoration verifies expected identities/hashes, CRC, exact members and
+expansion before writing fresh files. See [job controls](docs/JOB_CONTROLS.md).
+
+Validation: **94 unit tests passed**, offline validator passed (65 links, 15 pins,
+scientific execution false), and diff whitespace checks passed. Actual adapter
+success and a three-second external wall cancellation of a child/grandchild tree
+passed using the existing cached immutable image. Docker terminal state, observed
+host-process disappearance, local archive verification/restore and owned-container
+cleanup passed. Raw observations remain task-local, not public receipts. The
+current runtime readback reports enforced network policy; prior unknown observations
+remain historical evidence, not rewritten assertions.
+
+Still open: one authoritative coordinator ledger and recovery, authenticated actor
+interfaces, Drive export/restore integration with coordinator-held hash anchors,
+retention/size limits, dot dispatch/return and unknown-outcome operator procedure.
+No Drive SDK, shared-ledger claim, scientific execution, schedule, Ravel change,
+merge or environment republication was introduced.
+
+An intermediate integration hit the inspect/process-sampling exit race and safely
+held its attempt. The final adapter reobserves terminal state for that race and
+its regression test passes. The intermediate task-local ledger/terminal container
+remain preserved for explicit recovery; the final integration's own containers
+were removed after verified termination. No live process is inferred from a held
+ledger state, and a held ledger slot is not released by manual assertion.

@@ -5,8 +5,9 @@ the first-choice runtime for repository commands and the Choi pilot. No addition
 physical computer is required. Private `weft-pilot` is published at d031cef;
 [setup checks and one small external restore passed](../records/cloud-setup-20261011.json).
 [Bounded container controls passed](../records/cloud-runtime-20261011.json) in a
-fresh task. Full job integration, durable cloud artifacts and numerical readiness
-remain held.
+fresh task. The private Drive route passed [independent synthetic cloud restore](../records/cloud-drive-restore-20261011.json).
+Full coordinator/Drive job integration, large outputs, retention guarantees, ledger
+authority and numerical readiness remain held.
 See the [setup runbook](CLOUD_SETUP.md) and [ordered roadmap](IMPLEMENTATION_PLAN.md).
 
 ## Why the earlier sizing recommendation changed

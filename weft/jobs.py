@@ -99,6 +99,14 @@ class JobLedger:
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 job_id TEXT NOT NULL REFERENCES jobs(id), token_hash TEXT NOT NULL,
                 started REAL NOT NULL, expires REAL NOT NULL, state TEXT NOT NULL);
+            CREATE TABLE IF NOT EXISTS executor_bindings (
+                attempt_id INTEGER PRIMARY KEY REFERENCES attempts(id),
+                identity TEXT NOT NULL, container_id TEXT, run_state TEXT,
+                terminal_sha256 TEXT);
+            CREATE TRIGGER IF NOT EXISTS executor_identity_no_update BEFORE UPDATE OF identity ON executor_bindings
+                BEGIN SELECT RAISE(ABORT, 'Executor identities are immutable'); END;
+            CREATE TRIGGER IF NOT EXISTS executor_binding_no_delete BEFORE DELETE ON executor_bindings
+                BEGIN SELECT RAISE(ABORT, 'Executor bindings are immutable'); END;
             CREATE TABLE IF NOT EXISTS events (
                 id INTEGER PRIMARY KEY AUTOINCREMENT, job_id TEXT NOT NULL,
                 at REAL NOT NULL, action TEXT NOT NULL, evidence TEXT NOT NULL);
@@ -216,6 +224,8 @@ class JobLedger:
             row = self.db.execute("SELECT * FROM attempts WHERE id=?", (attempt_id,)).fetchone()
             if row is None or not secrets.compare_digest(row["token_hash"], digest(token)):
                 raise JobError("Attempt identity/lease mismatch")
+            if self.db.execute("SELECT 1 FROM executor_bindings WHERE attempt_id=?", (attempt_id,)).fetchone():
+                raise JobError("Executor-bound attempts reject legacy self-reported reconciliation")
             if row["state"] not in {"running", "unknown", "cancel_requested"}:
                 raise JobError("Terminal attempt cannot be rewritten")
             self.db.execute("UPDATE attempts SET state=? WHERE id=?", (outcome, attempt_id))
@@ -225,3 +235,91 @@ class JobLedger:
                 "process_termination_independently_verified": False}, at)
         # Cooperative synthetic API only: receipt reference is not authentication
         # or proof of actual termination. Never use this API to dispatch science.
+
+
+    def _attempt(self, claim):
+        row = self.db.execute("SELECT * FROM attempts WHERE id=?", (claim["attempt_id"],)).fetchone()
+        if (row is None or row["job_id"] != claim["job_id"]
+                or not secrets.compare_digest(row["token_hash"], digest(claim["lease_token"]))):
+            raise JobError("Attempt identity/lease mismatch")
+        return row
+
+    def bind_executor(self, claim, identity):
+        """Reserve immutable executor identity BEFORE any Docker create/start call."""
+        with self._transaction():
+            at = self._now()
+            row = self._attempt(claim)
+            if row["state"] != "running" or row["expires"] <= at:
+                raise JobError("Expired/nonrunning attempt cannot bind executor")
+            if identity["job_id"] != row["job_id"] or identity["attempt_id"] != row["id"]:
+                raise JobError("Binding identity drift")
+            self.db.execute("INSERT INTO executor_bindings(attempt_id,identity) VALUES(?,?)",
+                            (row["id"], canonical(identity)))
+            self._event(row["job_id"], "executor-bound", identity, at)
+
+    def executor_binding(self, claim):
+        self._attempt(claim)
+        row = self.db.execute("SELECT * FROM executor_bindings WHERE attempt_id=?", (claim["attempt_id"],)).fetchone()
+        if row is None:
+            raise JobError("No executor binding")
+        return {"identity": json.loads(row["identity"]), "container_id": row["container_id"],
+                "terminal_sha256": row["terminal_sha256"],
+                "run_state": json.loads(row["run_state"]) if row["run_state"] else None}
+
+    def _attach_container(self, claim, container_id):
+        with self._transaction():
+            at = self._now()
+            row = self._attempt(claim)
+            if not re.fullmatch(r"[0-9a-f]{64}", container_id):
+                raise JobError("Invalid Docker container ID")
+            cur = self.db.execute("UPDATE executor_bindings SET container_id=? WHERE attempt_id=? AND container_id IS NULL",
+                                  (container_id, row["id"]))
+            if cur.rowcount != 1:
+                raise JobError("Container binding already attached/missing")
+            self._event(row["job_id"], "container-attached", {"container_id": container_id}, at)
+
+    def _executor_unknown(self, claim, reason):
+        with self._transaction():
+            at = self._now()
+            row = self._attempt(claim)
+            if row["state"] not in {"running", "cancel_requested", "unknown"}:
+                raise JobError("Terminal attempt cannot become unknown")
+            self.db.execute("UPDATE attempts SET state='unknown' WHERE id=?", (row["id"],))
+            self.db.execute("UPDATE jobs SET state='held_unknown' WHERE id=?", (row["job_id"],))
+            self._event(row["job_id"], "executor-outcome-unknown", {"attempt_id": row["id"], "reason": reason}, at)
+
+    def _record_executor(self, claim, files, terminal_sha256):
+        """Internal trusted-adapter transition AFTER fresh Docker/process observation.
+
+        Not a public receipt-report endpoint. Content hashes alone cannot establish
+        termination; callers must use DockerExecutor.recover, which reobserves it.
+        """
+        from .artifacts import verify_bundle
+        with self._transaction():
+            at = self._now()
+            row = self._attempt(claim)
+            binding = self.executor_binding(claim)
+            identity = {**binding["identity"], "container_id": binding["container_id"]}
+            receipt = verify_bundle(files, identity=identity, terminal_sha256=terminal_sha256)
+            if row["state"] not in {"running", "cancel_requested", "unknown"} or binding["terminal_sha256"]:
+                raise JobError("Terminal attempt cannot be rewritten")
+            outcome = receipt["outcome"]
+            self.db.execute("UPDATE executor_bindings SET terminal_sha256=? WHERE attempt_id=?",
+                            (terminal_sha256, row["id"]))
+            self.db.execute("UPDATE attempts SET state=? WHERE id=?", (outcome, row["id"]))
+            self.db.execute("UPDATE jobs SET state=? WHERE id=?", (outcome, row["job_id"]))
+            self._event(row["job_id"], "executor-terminal-verified", {
+                "attempt_id": row["id"], "outcome": outcome, "terminal_sha256": terminal_sha256,
+                "external_export_verified": False}, at)
+
+
+    def _save_executor_state(self, claim, state):
+        with self._transaction():
+            at = self._now()
+            row = self._attempt(claim)
+            if row["state"] not in {"running", "cancel_requested", "unknown"}:
+                raise JobError("Terminal executor evidence is immutable")
+            self.db.execute("UPDATE executor_bindings SET run_state=? WHERE attempt_id=?",
+                            (canonical(state), row["id"]))
+            self._event(row["job_id"], "executor-process-observation", {
+                "attempt_id": row["id"], "state_sha256": digest(state)}, at)

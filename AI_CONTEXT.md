@@ -3,8 +3,9 @@
 Weft is Ravel's public automation companion. Manual Europe PMC discovery, pinned
 RQ context, a paper-to-question review buffer and XML reading packets are implemented.
 Unattended agents, scientific execution and Ravel export are not implemented.
-A [synthetic-only job ledger](docs/JOB_CONTROLS.md) is the first M3 slice; it does
-not dispatch cloud jobs or verify process termination.
+The [synthetic job controls](docs/JOB_CONTROLS.md) include a ledger and built-in
+Docker fixture executor with verified local terminal receipts. Product cloud task
+dispatch and scientific qualification remain open.
 
 - [Current state](PROGRESS.md) owns completed work and exact next steps.
 - [Discovery](docs/DISCOVERY.md), [decision buffer](docs/DECISION_BUFFER.md) and
@@ -16,8 +17,10 @@ not dispatch cloud jobs or verify process termination.
 - The owner selected dot coordination + Codex Cloud execution after the local
   manual-reader baseline. Start with [cloud setup](docs/CLOUD_SETUP.md), then M3
   controls and one manual dot qualification. Private weft-pilot is published at d031cef with 58 cloud tests and a small
-  independently verified export. See records/cloud-setup-20261011.json. Per-job
-  controls, durable cloud artifacts and numerical execution remain unqualified.
+  independently verified export. See records/cloud-setup-20261011.json. The small
+  synthetic Drive route passed [independent cloud restore](records/cloud-drive-restore-20261011.json).
+  Large outputs, retention guarantees, shared ledger authority and numerical
+  execution remain unqualified; per-job synthetic controls are documented separately.
   No paid API or unattended launcher is configured. Never fabricate human review.
 - No extra local PC is required. Cloud tasks pin the reviewed Weft PR revision
   and Ravel blobs; never assume main has current implementation, or X: paths and
@@ -30,7 +33,7 @@ not dispatch cloud jobs or verify process termination.
   explicitly in a new adapter, never by rewriting frozen evidence.
 - The [Choi source review](docs/PILOT_CHOI_REVIEW.md) and input inventory are complete
   within their stated coverage. Read the [environment recommendation](docs/EXECUTION_ENVIRONMENT.md)
-  before M3/M4 work. No numerical analysis, new contract or worker is qualified.
+  before M3/M4 work. No numerical analysis, new scientific contract or scientific worker is qualified.
 - Scientific raw inputs remain in Ravel; audit PDFs/receipts are in ignored
   `runs/pilot-review-20261011-v1` on X:. The public records retain source hashes and
   locators. Weft's Ravel connection remains read-only.
