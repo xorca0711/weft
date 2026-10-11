@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-11",
+  "kind": "figure1-preparation-hold",
+  "stage": "figure1",
+  "status": "PREPARATION_HELD",
+  "numerical_attempts_started": 0,
+  "requested_ravel_revision": "b656d06cc9f2cfdd61a6dd1f6570ec01331abf91",
+  "requested_weft_revision": "a8da990cca57bdcc19435ff57f0f018a51f5f1a5",
+  "failed_condition": {
+    "observed_available_memory_bytes": 17777704960,
+    "required_available_memory_bytes": 21474836480,
+    "metric": "/proc/meminfo MemAvailable kB times 1024",
+    "free_disk_gib_reported": 14.2,
+    "required_free_disk_gib": 10,
+    "running_containers": 0
+  },
+  "read_only_diagnosis": {
+    "observed_at_utc": "2026-10-11T14:12:24Z",
+    "mem_total_bytes": 18882699264,
+    "mem_available_bytes": 17948815360,
+    "swap_total_bytes": 0,
+    "visible_cgroup_memory_max_bytes": 17179869184,
+    "visible_cgroup_memory_current_bytes": 16815136768,
+    "cgroup_scope": "Restricted read-only cgroup v2 subtree; ancestor limits and precise Docker-workload relationship not established. No independent capacity guarantee exposed.",
+    "accounting_summary": "Worker reports approximately 15.48 GB file cache, 1.26 GB kernel memory and 70.83 MB anonymous memory. Cache was not cleared; reclaimability is not assumed.",
+    "visible_process_count": 27,
+    "summed_visible_rss_bytes": 169689088,
+    "limitation": "RSS may double-count shared pages; visible processes only. No private process command lines published."
+  },
+  "preservation": {
+    "source_clone_exit_code": 143,
+    "incomplete_source_preserved": true,
+    "clone_pid_absent": true,
+    "clone_exact_original_starttime_proof_available": false,
+    "worker_input_and_image_reverification": false,
+    "worker_source_and_amendment_reverification": false,
+    "real_input_preflight": false,
+    "output_parent_created": false,
+    "numerical_container_created": false,
+    "automatic_retry": false,
+    "resource_gate_lowered": false
+  },
+  "coordinator_review": "Exact requested public source/plan/amendment hashes independently checked; worker preparation remains incomplete.",
+  "next": "Preserve same preparation reservation and held-state checkpoint. Select and explicitly review resource-plan revision before resuming preparation; no numerical dispatch.",
+  "held_state_checkpoint": {
+    "bytes": 66417,
+    "sha256": "591a7df4c68dfae5ac541d4b2912367718b26d08d7a305e67d5b4397f01aa240",
+    "parent_sha256": "56d3fec9f4ec51b33824c742bb320c7662e89dc75fe9115826dbad7db48eee9c",
+    "coordinator_owner_only_readback_readonly_restore": "passed",
+    "root_archive_db_hash_crc_integrity_ancestry_held_state": "passed",
+    "scientific_attempt_rows": 1,
+    "figure_preparation_reservations": 1,
+    "reservation_released": false,
+    "restored_copy_activated": false
+  }
+}

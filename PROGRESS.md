@@ -22,10 +22,19 @@ manifest and deterministic anchors. [Trials](records/synthetic-multipart-2026101
 preserve both outcomes. [Operational amendment](records/figure1-artifact-transfer-v2.json)
 uses 4 MiB parts, at most 256 / 1 GiB; frozen scientific files remain unchanged.
 
-Ravel b656d06 freezes Figure1 at 4 CPUs/16 GiB/one hour and passes all four CI jobs.
-Next: bind that source, transfer amendment and new unique Figure1 packet; verify
-before-dispatch checkpoint and host/input controls; obtain root release. Figure1
-has not run. No new RQ, scientific acceptance, merge or unattended execution.
+Ravel b656d06 freezes Figure1 at 4 CPUs/16 GiB/one hour; all four checks pass.
+Preparation stopped before analysis: available memory 16.56 GiB is below the
+20 GiB floor. Read-only diagnosis reports 17.59 GiB host total and a visible
+16 GiB cgroup ceiling, so earlier nominal capacity does not qualify this worker.
+No numerical container, output or preflight was created; the incomplete source
+and same preparation reservation are preserved. [Evidence](records/choi-figure1-preparation-20261011.json).
+
+[Resource revision proposal](docs/FIGURE1_RESOURCE_REVISION.md) recommends a bounded
+8 GiB job with a 12 GiB host floor, unchanged methods and stop-on-failure. The
+alternative is qualifying a larger cloud worker. This choice is pending; no gate
+was lowered and no new runtime, retry or analysis was authorized. The held-state
+ledger checkpoint is verified by coordinator and root; reservation retained. No new RQ, claim promotion,
+merge or unattended execution.
 
 ## Checkpointed manual pilot preparation — 11 October 2026
 
