@@ -5,8 +5,9 @@
 | Capability | Status | Evidence | Boundary |
 |---|---|---|---|
 | Local scaffold and pinned Ravel connection checks | Descriptive only | [Validation record](records/bootstrap-validation.json) | Software checks; no scientific validation |
-| Manual literature discovery and RQ review buffer | Implemented; bounded tests | [Live validation](records/discovery-validation.json) | Metadata matches and reading priority, not accepted claims |
-| Manual source-bound reading packets | Implemented in part | [Local reader](docs/LOCAL_READER.md) | XML text/captions; semantic and figure review remain separate |
+| Manual literature discovery and RQ review buffer | Descriptive only | [Live validation](records/discovery-validation.json) | Metadata matches and reading priority, not accepted claims |
+| Manual source-bound reading packets | Descriptive only | [Local reader](docs/LOCAL_READER.md) | XML text/captions; semantic and figure review remain separate |
+| Choi figure, supplement and input review | Descriptive only | [Review receipt](records/pilot-review-20261011.json) | Manual review and file integrity; numerical analysis remains held |
 | Autonomous paper-to-question workflow | Not established | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Scientific workers, unattended agents and Ravel export remain planned |
 
 Weft is being built to bring new literature into an existing research programme:
@@ -52,11 +53,13 @@ flowchart TD
 |---|---|
 | Run bounded searches and inspect receipts | [Discovery guide](docs/DISCOVERY.md) |
 | Understand why a paper is not immediately supporting evidence | [Decision buffer](docs/DECISION_BUFFER.md) |
-| Build the system in concrete stages | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) |
+| See the full development roadmap and current stage | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) |
 | Understand agent responsibilities and context | [Agent workflow](docs/AGENT_WORKFLOW.md) |
 | Inspect automated decisions and stopping rules | [Gate specification](docs/GATES.md) |
 | Connect Weft to Ravel without competing sources of truth | [Integration contract](docs/RAVEL_CONNECTION.md) |
 | Run the first complete paper pilot after implementation | [Choi 2020 pilot](docs/PILOT_CHOI_2020.md) |
+| Inspect completed figures, supplements and dataset qualification | [Choi review](docs/PILOT_CHOI_REVIEW.md) |
+| Choose and qualify a scientific worker | [Execution environment](docs/EXECUTION_ENVIRONMENT.md) |
 | Evaluate missed papers, extraction and analysis fidelity | [Evaluation plan](docs/EVALUATION.md) |
 | Check completed work and remaining dependencies | [Current state](PROGRESS.md) |
 | See authorship, decisions and revisions | [Development record](DEVELOPMENT.md) |

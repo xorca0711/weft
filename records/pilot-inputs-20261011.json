@@ -1,0 +1,572 @@
+{
+  "schema_version": 1,
+  "pilot": "P001-choi2020",
+  "created_at": "2026-10-11T08:25:05.714869+00:00",
+  "scope": "Read-only archive/member integrity, matrix dimensions and metadata joins; no cell QC, clustering or biological analysis",
+  "archive": {
+    "relative_ravel_path": "raw_data/GSE145031/GSE145031_RAW.tar",
+    "bytes": 349204480,
+    "sha256": "c1476faed13366ad22d481dac52feb17e3c696a80ab2bfe359a4377afb12cf57"
+  },
+  "geo_descriptor_matches_local": true,
+  "remote_member_names_and_sizes_match": true,
+  "remote_content_digests_available": false,
+  "samples": [
+    {
+      "gsm": "GSM4304609",
+      "title": "PBS_AT2_Tomato",
+      "pilot_include": true,
+      "rows": 27998,
+      "columns": 737280,
+      "stored_entries": 16264525
+    },
+    {
+      "gsm": "GSM4304610",
+      "title": "PBS_AT2_nonTomato",
+      "pilot_include": false,
+      "rows": 27998,
+      "columns": 737280,
+      "stored_entries": 20200282
+    },
+    {
+      "gsm": "GSM4304611",
+      "title": "Day14_AT2_Tomato",
+      "pilot_include": true,
+      "rows": 27998,
+      "columns": 737280,
+      "stored_entries": 14798870
+    },
+    {
+      "gsm": "GSM4304612",
+      "title": "Day14_AT2_nonTomato",
+      "pilot_include": false,
+      "rows": 27998,
+      "columns": 737280,
+      "stored_entries": 15476778
+    },
+    {
+      "gsm": "GSM4304613",
+      "title": "Day28_AT2_Tomato",
+      "pilot_include": true,
+      "rows": 27998,
+      "columns": 737280,
+      "stored_entries": 15360495
+    },
+    {
+      "gsm": "GSM4304614",
+      "title": "Day28_AT2_nonTomato",
+      "pilot_include": false,
+      "rows": 27998,
+      "columns": 737280,
+      "stored_entries": 18955138
+    }
+  ],
+  "files": [
+    {
+      "filename": "GSM4304609_PBS_AT2_Tomato.mtx.gz",
+      "bytes": 54411056,
+      "sha256": "a5be8f5140f266d9fae46b24e0d9a4080b4a0cc8936c788c8f4017aaac179e83",
+      "gsm": "GSM4304609",
+      "title": "PBS_AT2_Tomato",
+      "pilot_include": true,
+      "matrix_market": "%%MatrixMarket matrix coordinate integer general",
+      "rows": 27998,
+      "columns": 737280,
+      "stored_entries": 16264525,
+      "gzip_crc_verified": true,
+      "entry_line_count": 16264525
+    },
+    {
+      "filename": "GSM4304609_PBS_AT2_Tomato_barcodes.tsv.gz",
+      "bytes": 2280358,
+      "sha256": "64962a074f58f25f40174708ed8667f19b09ecee4f71d1ec560a5383f3b12a4f",
+      "gsm": "GSM4304609",
+      "title": "PBS_AT2_Tomato",
+      "pilot_include": true,
+      "lines": 737280,
+      "uncompressed_sha256": "e28353c088bf3b4d660220377a5f5fcc64839fb9e307cea47afe4e23fce2edc2",
+      "gzip_crc_verified": true
+    },
+    {
+      "filename": "GSM4304609_PBS_AT2_Tomato_gene.tsv.gz",
+      "bytes": 217851,
+      "sha256": "33fc0e6ab2bb2bf434979ab0c5bb06f3284af33dcef51c4f8a9ef7e40bb356da",
+      "gsm": "GSM4304609",
+      "title": "PBS_AT2_Tomato",
+      "pilot_include": true,
+      "lines": 27998,
+      "uncompressed_sha256": "403776a42aec61b6c9524010877f0ac66ff94d3d127c1f15b991e8ea57e5fe99",
+      "gzip_crc_verified": true
+    },
+    {
+      "filename": "GSM4304610_PBS_AT2_nonTomato.mtx.gz",
+      "bytes": 65887029,
+      "sha256": "85a798cf53c47c0a8d4464426cde361f02bbb0a268e7a33f8b348e5281b18f78",
+      "gsm": "GSM4304610",
+      "title": "PBS_AT2_nonTomato",
+      "pilot_include": false,
+      "matrix_market": "%%MatrixMarket matrix coordinate integer general",
+      "rows": 27998,
+      "columns": 737280,
+      "stored_entries": 20200282
+    },
+    {
+      "filename": "GSM4304610_PBS_AT2_nonTomato_barcodes.tsv.gz",
+      "bytes": 2280361,
+      "sha256": "8d9ceaf2d3852d64ab20af070d590ba93de85b46bbbb4635807d677b7d364b1d",
+      "gsm": "GSM4304610",
+      "title": "PBS_AT2_nonTomato",
+      "pilot_include": false,
+      "lines": 737280,
+      "uncompressed_sha256": "e28353c088bf3b4d660220377a5f5fcc64839fb9e307cea47afe4e23fce2edc2",
+      "gzip_crc_verified": true
+    },
+    {
+      "filename": "GSM4304610_PBS_AT2_nonTomato_gene.tsv.gz",
+      "bytes": 217854,
+      "sha256": "28955abd7f526faf59de9fcb65411b0e0133afe18b58f2c6347a2e373af137fa",
+      "gsm": "GSM4304610",
+      "title": "PBS_AT2_nonTomato",
+      "pilot_include": false,
+      "lines": 27998,
+      "uncompressed_sha256": "403776a42aec61b6c9524010877f0ac66ff94d3d127c1f15b991e8ea57e5fe99",
+      "gzip_crc_verified": true
+    },
+    {
+      "filename": "GSM4304611_Day14_AT2_Tomato.mtx.gz",
+      "bytes": 49308225,
+      "sha256": "557897d017666670409f2c597677fdac919b59e32936c5fa4d781d28826a5886",
+      "gsm": "GSM4304611",
+      "title": "Day14_AT2_Tomato",
+      "pilot_include": true,
+      "matrix_market": "%%MatrixMarket matrix coordinate integer general",
+      "rows": 27998,
+      "columns": 737280,
+      "stored_entries": 14798870,
+      "gzip_crc_verified": true,
+      "entry_line_count": 14798870
+    },
+    {
+      "filename": "GSM4304611_Day14_AT2_Tomato_barcodes.tsv.gz",
+      "bytes": 2280360,
+      "sha256": "ecfe174a445b81c44e7c1d22173df453abbacc5bc087a643521ff196d7d016a8",
+      "gsm": "GSM4304611",
+      "title": "Day14_AT2_Tomato",
+      "pilot_include": true,
+      "lines": 737280,
+      "uncompressed_sha256": "e28353c088bf3b4d660220377a5f5fcc64839fb9e307cea47afe4e23fce2edc2",
+      "gzip_crc_verified": true
+    },
+    {
+      "filename": "GSM4304611_Day14_AT2_Tomato_gene.tsv.gz",
+      "bytes": 217853,
+      "sha256": "9ad3244c380b46b082e1647cad76c110f8d22fb3216f0443efa25ee1189b7d19",
+      "gsm": "GSM4304611",
+      "title": "Day14_AT2_Tomato",
+      "pilot_include": true,
+      "lines": 27998,
+      "uncompressed_sha256": "403776a42aec61b6c9524010877f0ac66ff94d3d127c1f15b991e8ea57e5fe99",
+      "gzip_crc_verified": true
+    },
+    {
+      "filename": "GSM4304612_Day14_AT2_nonTomato.mtx.gz",
+      "bytes": 51013566,
+      "sha256": "c611cbfcc588a06f64780da1c6baecb738c532f377dfad2c234d7a114f138978",
+      "gsm": "GSM4304612",
+      "title": "Day14_AT2_nonTomato",
+      "pilot_include": false,
+      "matrix_market": "%%MatrixMarket matrix coordinate integer general",
+      "rows": 27998,
+      "columns": 737280,
+      "stored_entries": 15476778
+    },
+    {
+      "filename": "GSM4304612_Day14_AT2_nonTomato_barcodes.tsv.gz",
+      "bytes": 2280363,
+      "sha256": "c3c7b27b9867220a6ec4f00a6e34c7ee0961d344f3e5c63c0b16a062dbca9039",
+      "gsm": "GSM4304612",
+      "title": "Day14_AT2_nonTomato",
+      "pilot_include": false,
+      "lines": 737280,
+      "uncompressed_sha256": "e28353c088bf3b4d660220377a5f5fcc64839fb9e307cea47afe4e23fce2edc2",
+      "gzip_crc_verified": true
+    },
+    {
+      "filename": "GSM4304612_Day14_AT2_nonTomato_gene.tsv.gz",
+      "bytes": 217856,
+      "sha256": "b4d00c5d1bd33fd4c82badc3c9a9af40af9146f0c21b980c3068101a0f68a8a6",
+      "gsm": "GSM4304612",
+      "title": "Day14_AT2_nonTomato",
+      "pilot_include": false,
+      "lines": 27998,
+      "uncompressed_sha256": "403776a42aec61b6c9524010877f0ac66ff94d3d127c1f15b991e8ea57e5fe99",
+      "gzip_crc_verified": true
+    },
+    {
+      "filename": "GSM4304613_Day28_AT2_Tomato.mtx.gz",
+      "bytes": 51261187,
+      "sha256": "809952999675d7036c4c2c39e3c4eab1a1c7c07a80b583f726484c2c335797da",
+      "gsm": "GSM4304613",
+      "title": "Day28_AT2_Tomato",
+      "pilot_include": true,
+      "matrix_market": "%%MatrixMarket matrix coordinate integer general",
+      "rows": 27998,
+      "columns": 737280,
+      "stored_entries": 15360495,
+      "gzip_crc_verified": true,
+      "entry_line_count": 15360495
+    },
+    {
+      "filename": "GSM4304613_Day28_AT2_Tomato_barcodes.tsv.gz",
+      "bytes": 2280360,
+      "sha256": "7d7aa42f8f0d80f66ffb985038b89aaaf594c2fb07f4d76e7a30945264e83845",
+      "gsm": "GSM4304613",
+      "title": "Day28_AT2_Tomato",
+      "pilot_include": true,
+      "lines": 737280,
+      "uncompressed_sha256": "e28353c088bf3b4d660220377a5f5fcc64839fb9e307cea47afe4e23fce2edc2",
+      "gzip_crc_verified": true
+    },
+    {
+      "filename": "GSM4304613_Day28_AT2_Tomato_gene.tsv.gz",
+      "bytes": 217853,
+      "sha256": "54cd77dac4862132c4ebe8ae823cf7114b7f5f281dd68ed5c48d1da8256b1221",
+      "gsm": "GSM4304613",
+      "title": "Day28_AT2_Tomato",
+      "pilot_include": true,
+      "lines": 27998,
+      "uncompressed_sha256": "403776a42aec61b6c9524010877f0ac66ff94d3d127c1f15b991e8ea57e5fe99",
+      "gzip_crc_verified": true
+    },
+    {
+      "filename": "GSM4304614_Day28_AT2_nonTomato.mtx.gz",
+      "bytes": 62314764,
+      "sha256": "65fb2088e586b2e2ebdd42575dd8a2b61d31f786c19c42a28efff0209d9404d1",
+      "gsm": "GSM4304614",
+      "title": "Day28_AT2_nonTomato",
+      "pilot_include": false,
+      "matrix_market": "%%MatrixMarket matrix coordinate integer general",
+      "rows": 27998,
+      "columns": 737280,
+      "stored_entries": 18955138
+    },
+    {
+      "filename": "GSM4304614_Day28_AT2_nonTomato_barcodes.tsv.gz",
+      "bytes": 2280363,
+      "sha256": "6b1fd7aab99fa171adec8e6869e5867bb3af2ee0ac79f49d7ccec44c02ebd8c9",
+      "gsm": "GSM4304614",
+      "title": "Day28_AT2_nonTomato",
+      "pilot_include": false,
+      "lines": 737280,
+      "uncompressed_sha256": "e28353c088bf3b4d660220377a5f5fcc64839fb9e307cea47afe4e23fce2edc2",
+      "gzip_crc_verified": true
+    },
+    {
+      "filename": "GSM4304614_Day28_AT2_nonTomato_gene.tsv.gz",
+      "bytes": 217856,
+      "sha256": "bf191f63b4cf899090672f8c6591262a7368cfc7aee45295cabf477f421ddb6b",
+      "gsm": "GSM4304614",
+      "title": "Day28_AT2_nonTomato",
+      "pilot_include": false,
+      "lines": 27998,
+      "uncompressed_sha256": "403776a42aec61b6c9524010877f0ac66ff94d3d127c1f15b991e8ea57e5fe99",
+      "gzip_crc_verified": true
+    }
+  ],
+  "scientific_analysis_run": false,
+  "source_inventory_sha256": "32f92247f043df3519e2d6b4ac64eb036f5fab51b86333c6c28a9238fa8749d1",
+  "identifier_checks": [
+    {
+      "kind": "barcode",
+      "member": "GSM4304609_PBS_AT2_Tomato_barcodes.tsv.gz",
+      "rows": 737280,
+      "unique_first_column": 737280,
+      "field_counts": [
+        1
+      ],
+      "scope": "Other five libraries have identical ordered uncompressed member hashes in input-inventory.json."
+    },
+    {
+      "kind": "gene",
+      "member": "GSM4304609_PBS_AT2_Tomato_gene.tsv.gz",
+      "rows": 27998,
+      "unique_first_column": 27998,
+      "field_counts": [
+        2
+      ],
+      "scope": "Other five libraries have identical ordered uncompressed member hashes in input-inventory.json."
+    }
+  ],
+  "limits": [
+    "Selected matrix entry counts and gzip CRC checked; numeric coordinate/value validity and duplicate coordinates are not yet qualified.",
+    "Provider manifest supplies member names and sizes, not independent content checksums.",
+    "All samples share the same ordered barcode universe; use GSM plus barcode as the cell key.",
+    "File integrity and sample mapping do not authorize execution or establish biological QC."
+  ],
+  "selected_compressed_bytes": 162475103,
+  "selected_stored_entries": 46423890,
+  "dense_all_selected_float32_gib": 230.6964111328125,
+  "study_lineage": {
+    "superseries": "GSE144553",
+    "subseries": [
+      "GSE145031",
+      "GSE144468",
+      "GSE144598"
+    ],
+    "independent_replication_claimed": false
+  },
+  "dataset_context": {
+    "GSE145031": {
+      "scope": "selected inputs structurally inspected",
+      "geo_page": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE145031",
+      "samples": [
+        {
+          "gsm": "GSM4304609",
+          "title": "PBS_AT2_Tomato"
+        },
+        {
+          "gsm": "GSM4304610",
+          "title": "PBS_AT2_nonTomato"
+        },
+        {
+          "gsm": "GSM4304611",
+          "title": "Day14_AT2_Tomato"
+        },
+        {
+          "gsm": "GSM4304612",
+          "title": "Day14_AT2_nonTomato"
+        },
+        {
+          "gsm": "GSM4304613",
+          "title": "Day28_AT2_Tomato"
+        },
+        {
+          "gsm": "GSM4304614",
+          "title": "Day28_AT2_nonTomato"
+        }
+      ],
+      "provider_files": [
+        {
+          "kind": "Archive",
+          "name": "GSE145031_RAW.tar",
+          "provider_timestamp": "08/04/2020 19:41:52",
+          "bytes": 349204480
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304609_PBS_AT2_Tomato.mtx.gz",
+          "provider_timestamp": "02/10/2020 10:11:25",
+          "bytes": 54411056
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304609_PBS_AT2_Tomato_barcodes.tsv.gz",
+          "provider_timestamp": "02/10/2020 10:11:26",
+          "bytes": 2280358
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304609_PBS_AT2_Tomato_gene.tsv.gz",
+          "provider_timestamp": "02/10/2020 10:11:26",
+          "bytes": 217851
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304610_PBS_AT2_nonTomato.mtx.gz",
+          "provider_timestamp": "02/10/2020 10:11:43",
+          "bytes": 65887029
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304610_PBS_AT2_nonTomato_barcodes.tsv.gz",
+          "provider_timestamp": "02/10/2020 10:11:44",
+          "bytes": 2280361
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304610_PBS_AT2_nonTomato_gene.tsv.gz",
+          "provider_timestamp": "02/10/2020 10:11:45",
+          "bytes": 217854
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304611_Day14_AT2_Tomato.mtx.gz",
+          "provider_timestamp": "02/10/2020 10:11:57",
+          "bytes": 49308225
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304611_Day14_AT2_Tomato_barcodes.tsv.gz",
+          "provider_timestamp": "02/10/2020 10:11:59",
+          "bytes": 2280360
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304611_Day14_AT2_Tomato_gene.tsv.gz",
+          "provider_timestamp": "02/10/2020 10:11:59",
+          "bytes": 217853
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304612_Day14_AT2_nonTomato.mtx.gz",
+          "provider_timestamp": "02/10/2020 10:12:11",
+          "bytes": 51013566
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304612_Day14_AT2_nonTomato_barcodes.tsv.gz",
+          "provider_timestamp": "02/10/2020 10:12:13",
+          "bytes": 2280363
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304612_Day14_AT2_nonTomato_gene.tsv.gz",
+          "provider_timestamp": "02/10/2020 10:12:13",
+          "bytes": 217856
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304613_Day28_AT2_Tomato.mtx.gz",
+          "provider_timestamp": "02/10/2020 10:12:27",
+          "bytes": 51261187
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304613_Day28_AT2_Tomato_barcodes.tsv.gz",
+          "provider_timestamp": "02/10/2020 10:12:28",
+          "bytes": 2280360
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304613_Day28_AT2_Tomato_gene.tsv.gz",
+          "provider_timestamp": "02/10/2020 10:12:28",
+          "bytes": 217853
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304614_Day28_AT2_nonTomato.mtx.gz",
+          "provider_timestamp": "02/10/2020 10:12:44",
+          "bytes": 62314764
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304614_Day28_AT2_nonTomato_barcodes.tsv.gz",
+          "provider_timestamp": "02/10/2020 10:12:45",
+          "bytes": 2280363
+        },
+        {
+          "kind": "File",
+          "name": "GSM4304614_Day28_AT2_nonTomato_gene.tsv.gz",
+          "provider_timestamp": "02/10/2020 10:12:45",
+          "bytes": 217856
+        }
+      ],
+      "series_metadata_sha256": "0f8f3b1d98318e8ff4681005a5c37b641c202bc55e013190de08ff12a71b356f",
+      "file_list_sha256": "d8086354afdfd93f2e4f91797ddb0309c6157d01751f7e08a19d3c5ebaf797de"
+    },
+    "GSE144468": {
+      "scope": "metadata and provider file list only; content not qualified",
+      "geo_page": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE144468",
+      "samples": [
+        {
+          "gsm": "GSM4288824",
+          "title": "Control_Organoids"
+        },
+        {
+          "gsm": "GSM4288825",
+          "title": "Il1b_Organoids"
+        }
+      ],
+      "provider_files": [
+        {
+          "kind": "Archive",
+          "name": "GSE144468_RAW.tar",
+          "provider_timestamp": "08/04/2020 19:40:54",
+          "bytes": 54302720
+        },
+        {
+          "kind": "File",
+          "name": "GSM4288824_Control_Organoids.mtx.gz",
+          "provider_timestamp": "01/29/2020 11:05:07",
+          "bytes": 23390561
+        },
+        {
+          "kind": "File",
+          "name": "GSM4288824_Control_Organoids_barcodes.tsv.gz",
+          "provider_timestamp": "01/29/2020 11:05:07",
+          "bytes": 9536
+        },
+        {
+          "kind": "File",
+          "name": "GSM4288824_Control_Organoids_gene.tsv.gz",
+          "provider_timestamp": "01/29/2020 11:05:07",
+          "bytes": 217854
+        },
+        {
+          "kind": "File",
+          "name": "GSM4288825_Il1b_Organoids.mtx.gz",
+          "provider_timestamp": "01/29/2020 11:05:15",
+          "bytes": 30446545
+        },
+        {
+          "kind": "File",
+          "name": "GSM4288825_Il1b_Organoids_barcodes.tsv.gz",
+          "provider_timestamp": "01/29/2020 11:05:15",
+          "bytes": 13381
+        },
+        {
+          "kind": "File",
+          "name": "GSM4288825_Il1b_Organoids_gene.tsv.gz",
+          "provider_timestamp": "01/29/2020 11:05:15",
+          "bytes": 217851
+        }
+      ],
+      "series_metadata_sha256": "de7fdca5fa788583f17aa1598c3d319981761f39d804bc89569a3763f7331777",
+      "file_list_sha256": "a17c8fbc212d4fafb63bf5625446f5f9100e78a8f128c26f64771ea1dd4c5dac"
+    },
+    "GSE144598": {
+      "scope": "metadata and provider file list only; content not qualified",
+      "geo_page": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE144598",
+      "samples": [
+        {
+          "gsm": "GSM4291723",
+          "title": "Control AT2_1"
+        },
+        {
+          "gsm": "GSM4291724",
+          "title": "Control AT2_2"
+        },
+        {
+          "gsm": "GSM4291725",
+          "title": "Il1r1+AT2_1"
+        },
+        {
+          "gsm": "GSM4291726",
+          "title": "IL1r1+AT2_2"
+        }
+      ],
+      "provider_files": [
+        {
+          "kind": "Archive",
+          "name": "GSE144598_RAW.tar",
+          "provider_timestamp": "08/04/2020 19:41:09",
+          "bytes": 243118080
+        },
+        {
+          "kind": "File",
+          "name": "GSM4291723_Control_AT2.bw",
+          "provider_timestamp": "12/07/2019 17:00:15",
+          "bytes": 97084671
+        },
+        {
+          "kind": "File",
+          "name": "GSM4291725_Il1r1_AT2.bw",
+          "provider_timestamp": "12/07/2019 17:01:17",
+          "bytes": 146027087
+        }
+      ],
+      "series_metadata_sha256": "7f44108c09f90ec0fe2c38156b76771f2bb429df7890f2c49204c6aea5f48f19",
+      "file_list_sha256": "a3afabbbd7ad9e2eddddda80308cf7327acdb9267e6a44304859c1d95c541ce9"
+    }
+  }
+}

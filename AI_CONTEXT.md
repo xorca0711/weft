@@ -15,5 +15,13 @@ Unattended agents, scientific execution and Ravel export are not implemented.
   launcher is configured. Never fabricate human review or independent replication.
 - `records/` contains compact public check evidence. Raw responses, full XML,
   derived reading packets and SQLite state stay in ignored `runs/` on X:.
-- The physical Ravel migration remains deferred. Do not move any worktree or run
-  old analysis scripts in place. Weft's source connection is read-only.
+- Ravel's physical migration completed on 11 October 2026: `X:/GitHub/ravel`
+  is the real folder and the compatibility junction is gone. Existing worktrees
+  remain preserved; some historical records still contain old paths. Resolve those
+  explicitly in a new adapter, never by rewriting frozen evidence.
+- The [Choi source review](docs/PILOT_CHOI_REVIEW.md) and input inventory are complete
+  within their stated coverage. Read the [environment recommendation](docs/EXECUTION_ENVIRONMENT.md)
+  before M3/M4 work. No numerical analysis, new contract or worker is qualified.
+- Scientific raw inputs remain in Ravel; audit PDFs/receipts are in ignored
+  `runs/pilot-review-20261011-v1` on X:. The public records retain source hashes and
+  locators. Weft's Ravel connection remains read-only.

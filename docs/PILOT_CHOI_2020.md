@@ -39,9 +39,13 @@ source record identify the primary paper separately from repository observations
 Discovery replay completed and recovered the known DOI; repeating it preserved
 paper/RQ candidate identities. Open-access XML was retrieved into an ignored local
 reading packet. A [manual, source-bound reading assessment](../records/pilot-reading-20261011.json)
-is retained separately from scientific acceptance. Numerical reproduction remains
-planned: no worker, frozen new contract, input hashes or outcome tolerance has
-been qualified. See [current state](../PROGRESS.md) for the latest checkpoint.
+is retained separately from scientific acceptance. The subsequent
+[figure, supplement and dataset review](PILOT_CHOI_REVIEW.md) is complete:
+all main figures/S1-S7 were inspected, GEO samples mapped and local input integrity
+recorded. This does not qualify scientific execution. No worker, frozen new
+contract or outcome tolerance has been qualified. Input hashes exist in a review
+manifest but are not yet bound to an executable contract. See
+[environment recommendation](EXECUTION_ENVIRONMENT.md) and [current state](../PROGRESS.md).
 
 ## Scientific contract draft
 
@@ -50,7 +54,7 @@ been qualified. See [current state](../PROGRESS.md) for the latest checkpoint.
 | Work type | Exposed descriptive reproduction and bounded annotation sensitivity |
 | Question | Which epithelial RNA-state calls and library composition patterns can be recovered under explicitly recorded QC and annotation rules? |
 | Comparison | PBS, day 14 and day 28 AT2-lineage samples; descriptive library summaries |
-| Biological/design unit | Each in vivo library pools two mice; one library per condition, as recorded by Ravel; source mapping must be reverified before execution |
+| Biological/design unit | Two mice per pooled library in source methods; one Tomato-positive GEO library per condition; source mapping reviewed on 11 October 2026 |
 | Measured endpoints | QC retention, assigned/unassigned state counts, fractions with explicit denominators, marker support and annotation sensitivity |
 | Published target | Figure 1B–D state/composition description; published figure directions are distinct from exact Ravel table regression |
 | Principal validity threats | Pooling and no within-condition replication, cell-calling differences, annotation rules, depth and denominator changes |
@@ -78,6 +82,9 @@ executable frozen Ravel research contract.
 4. **Freeze:** commit the new Ravel contract, adapter, dependency lock, hashes,
    primary annotation rules and output paths. Record exposure and predeclared
    resolution sensitivity (0.3, 0.5, 1.0), without searching for a preferred result.
+   Those are Ravel's Leiden settings, not a transcription of the paper's Louvain
+   defaults. Preserve prior outcome exposure and freeze the published/adapted
+   comparison explicitly; exact author-cell-set recovery is not yet qualified.
 5. **Reproduction:** run QC and the bounded state/composition analysis in a new
    output directory. Produce QC/denominator tables, annotation evidence, composition,
    figures, software/resource receipt and a published-versus-adapted discrepancy table.
@@ -113,9 +120,12 @@ executable frozen Ravel research contract.
 
 ## Resource proposal and next prospective pilot
 
-Initial caps: one accession, one scientific worker, 4 CPU cores, 16 GiB memory,
-6 hours per scientific attempt and 20 GiB of new downloads. These are proposed
-engineering bounds; preflight must measure requirements and hold if insufficient.
+Revised proposal after the input/host audit: one accession, one worker, up to
+4 CPU cores, 6 hours per attempt and 20 GiB of new downloads. Prefer a separate
+32 GiB Linux x86-64 host with a 16 GiB worker cap. A local Windows fallback would
+instead require a 6 GiB cap and at least 10 GiB available host memory at launch.
+All limits remain proposed; [qualification](EXECUTION_ENVIRONMENT.md) must measure
+requirements and enforce bounds before analysis.
 Existing Ravel data may be referenced read-only after hashes are verified.
 Do not silently download raw sequencing reads or expand to additional accessions.
 

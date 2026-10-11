@@ -21,7 +21,7 @@ A scientifically positive result or a new canonical RQ is not required.
 | Context builder | Read pinned Ravel registry, current result/amendment, guide and contract | Small source-addressed RQ context packet |
 | Agent adapter | Backend-neutral tool calls; initial Codex CLI/SDK or supported dot integration | Structured assessments, model/tool versions and evidence locators |
 | Gate/state service | Typed decisions, explicit transition graph, SQLite initially | Append-only events, artifacts, holds, attempts and resource ledger |
-| Scientific worker | Dedicated Linux environment with read-only inputs and separate outputs | Frozen contract, environment lock, QC, measured results and receipt |
+| Scientific worker | Recommended separate Linux x86-64 worker; conditional Windows fallback needs qualification | Frozen contract, environment lock, QC, measured results and receipt |
 | Ravel exporter | Validate base revision and produce a scoped branch/PR | Evidence package, current-summary edits and integration report |
 | Private preferences | Local ignored file or separately permissioned store | Career reading profile; never exported to public artifacts |
 
@@ -34,9 +34,9 @@ implementation option, not a requirement or proof of independent review.
 |---|---|---|---|
 | M0: foundation | README diagram, ownership, gate specification, pilot draft, Ravel lock, offline checks | Local checks and public CI pass; limitations are explicit | Implemented scaffold; see PROGRESS |
 | M1: discovery | Europe PMC adapter; broad/contrary/journal queries; conservative deduplication; provider version/correction links; receipts and cutoffs | Bounded source retrieval and failure tests pass; complete version families and recall are evaluated separately | Manual baseline implemented; see discovery validation record |
-| M2: reading agent | Source extraction, bounded RQ packets, reading/career queues, relevance explanation and abstention | Every recommendation points to inspected evidence; access limits retained; evaluated against independently reviewed records | Partial: pinned context, manual local Codex packet and locator checks implemented; evaluation outstanding |
+| M2: reading agent | Source extraction, bounded RQ packets, reading/career queues, relevance explanation and abstention | Every recommendation points to inspected evidence; access limits retained; evaluated against independently reviewed records | Choi manual source review complete; independent screening evaluation and unattended backend outstanding |
 | M3: gate engine | Explicit state transitions; structured decision schema; idempotent jobs; budgets; lock/lease; failure recovery | No transition without required evidence; tampered receipts, missing units, unknown outcomes and duplicate jobs rejected | Requires M1; can develop alongside M2 |
-| M4: scientific worker | Inspect pilot inputs; write a versioned Ravel contract/adapter; freeze environment; run QC and bounded reproduction | Required data joins and hashes verified; old outputs untouched; discrepancy ledger and negative controls preserved | Requires M2/M3 and qualified worker |
+| M4: scientific worker | Inspect pilot inputs; write a versioned Ravel contract/adapter; freeze environment; run QC and bounded reproduction | Required data joins and hashes verified; old outputs untouched; discrepancy ledger and negative controls preserved | Structural input audit complete; contract, M3 controls and qualified worker still required; analysis not run |
 | M5: synthesis and export | Precedent review; candidate/no-candidate report; artifact manifest; safe PR export; CI | One reviewable Ravel package with current base checks, evidence links and explicit acceptance status | Requires M4 |
 | M6: prospective qualification | Freeze discovery/evaluation criteria, then assess newly arriving papers; controlled recurring operation | Reviewed acceptance criteria met across inclusion, extraction, compute and interpretation; measured costs and holds reported | Requires M5; no automatic rollout from M0 |
 
@@ -50,6 +50,43 @@ fields and preserve the earlier receipts. Oversized windows require explicit
 partitioning. Full version reconciliation, correction-feed refresh, source-support
 evaluation and job-resource enforcement remain qualification work, not completed
 features inferred from the smoke test.
+
+## Current route through the milestones
+
+```mermaid
+flowchart TD
+    M0["M0 Foundation: implemented"] --> M1["M1 Discovery and dedup: manual baseline"]
+    M1 --> B["Review buffer: proposed paper / RQ links"]
+    B --> M2["M2 Manual Choi source review: complete"]
+    M2 --> Q["M4 Input inventory: complete within recorded limits"]
+    Q --> D{"Select analysis host"}
+    D --> W["Recommended: separate Linux x86-64 worker"]
+    D --> F["Conditional fallback: qualified Windows x64 environment"]
+    W --> M3["M3 Job identity, lease, budgets and cancellation"]
+    F --> M3
+    M3 --> C["Freeze and review Ravel contract, adapter and environment"]
+    C --> R["M4 Descriptive run and discrepancy assessment"]
+    R --> M5["M5 Candidate / no-candidate disposition and Ravel PR"]
+    M5 --> M6["M6 Unseen-paper evaluation; then recurring automation"]
+    M2 --> E["Independent screening evaluation continues before M2 qualification"]
+```
+
+This diagram is a development roadmap, not an assertion that future transitions
+are enforced. M3 implementation can start while host selection is pending; real
+scientific execution cannot. The [Choi review](PILOT_CHOI_REVIEW.md) and
+[worker recommendation](EXECUTION_ENVIRONMENT.md) resolve the current input stage.
+
+The next implementation slice should add an append-only job/attempt record,
+deterministic job key, exclusive lease, immutable receipt references, cancellation
+and resource accounting. Negative tests must cover duplicate dispatch, stale
+context, changed input hash, exhausted budget, expired lease and unknown process
+outcome. Exercise these with synthetic fixtures before a biological job.
+The worker-specific limits need a real host qualification, not just a schema pass.
+
+P001 now has a published/adapted discrepancy ledger. The proposed execution scope
+is a descriptive adapted reanalysis; exact author-pipeline replication remains
+unqualified. Complete the exposed benchmark before freezing an unseen-paper pilot.
+No automatic acceptance, new RQ, Ravel write or schedule follows from source review.
 
 ## Proposed software layout
 
