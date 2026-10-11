@@ -7,13 +7,19 @@ Ravel runner and launcher-loss checks. [Receipt](records/numerical-git-runtime-2
 records the exact image, package verification and remaining limits. The earlier proxy
 failure was resolved by preserving Docker’s supplied proxy defaults and CA trust.
 
-A reviewed 156,333-byte sanitized qualification archive is ready but **not uploaded**.
-Automatic approval review rejected the prior export because the worker received Drive
-authorization as relayed transcript text. Root requested direct approval for the exact
-new archive and existing owner-only destination. No upload retry is authorized until
-that answer arrives. No biological inputs or analysis have run.
+The owner directly approved the exact 156,333-byte sanitized archive and private
+Drive destination in the root chat. The single resulting upload attempt was still
+rejected because the cloud worker received that approval as relayed transcript
+text. **No upload or readback occurred.** Pre-upload size, SHA-256, ZIP CRC, all
+28 manifest entries and owner-only destination metadata passed. No retry or alternate
+transfer route is underway; the archive, image and source are preserved.
 
-After approval: upload once and verify metadata/raw-byte hash; bind the reviewed runtime
+The remaining action is a direct user message in the existing cloud worker,
+"Verify Weft network access", approving this exact export. Another approval in
+the root chat alone has already proved insufficient. The Choi contracts remain
+draft and no biological inputs or analysis have run.
+
+After approval is accepted by the executing worker: upload once and verify metadata/raw-byte hash; bind the reviewed runtime
 recipe/locks in Ravel PR149; freeze the metadata contract and exact manual job packet;
 verify its before-dispatch checkpoint; then download/check inputs and benchmark sparse
 loading. The descriptive contract remains draft until metadata/resource review passes.

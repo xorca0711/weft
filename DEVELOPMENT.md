@@ -214,3 +214,14 @@ relayed authorization was not treated as a trusted human message. Further upload
 stopped. A sanitized 156,333-byte final qualification package is prepared and root
 requested direct user approval for that exact export to the existing owner-only
 folder. No biological dispatch, frozen contract, gate change or claim promotion.
+
+## 2026-10-11 — Exact export approval did not cross the worker boundary
+
+The owner approved the final 156,333-byte archive and existing private destination
+in the root chat. The single child upload attempt was denied: automatic review
+classified the forwarded approval as untrusted transcript evidence. No upload,
+remote locator or readback exists. Pre-upload identity, ZIP/manifest and owner-only
+folder checks passed. Preserve the qualified image/archive; no alternate route or
+retry. The direct worker chat was opened for the owner to submit authorization.
+Scientific dispatch and contract freeze remain held. Documentation/receipt-only
+update; previous runtime/tests remain valid and no analysis was rerun.

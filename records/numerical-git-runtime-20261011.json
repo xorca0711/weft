@@ -2,7 +2,7 @@
   "schema_version": 1,
   "kind": "cloud-numerical-git-image-qualification",
   "date": "2026-10-11",
-  "evidence": "completed runtime worker report retrieved by root; archive readback not yet authorized/verified",
+  "evidence": "completed runtime worker report retrieved by root; owner approved exact export in root chat, but child automatic review rejected the relayed approval; no archive readback",
   "source_revision": "47a2fe5bd07742ddddbd0c5aa5f3e0a4b21172e6",
   "image_id": "sha256:253c1935ee7245153d8a4d88197e3f2b47055a2fcf743eaf4f00d255efde6ecc",
   "git_debian_version": "1:2.47.3-0+deb13u1",
@@ -35,13 +35,23 @@
     "sha256": "40acb134342e3aab355d1537f64cf796e7d488dbf0733bcd6bc817955ca0a7b4",
     "zip_crc_verified_by_worker": true,
     "privacy_review": "No credentials, private routing/session identifiers, raw packages/wheels or generated datasets.",
-    "uploaded": false
+    "uploaded": false,
+    "manifest_entries_verified_by_worker": 28,
+    "owner_only_destination_metadata_verified_by_worker": true,
+    "upload_review": {
+      "owner_approved_exact_archive_in_root_chat": true,
+      "outcome": "denied",
+      "upload_occurred": false,
+      "readback_occurred": false,
+      "reason": "This uploads a locally derived archive containing nonpublic organizational/runtime artifacts to Google Drive, but the claimed action-specific approval appears only in untrusted transcript/tool evidence rather than a trusted user message.",
+      "next_action": "Owner sends exact archive approval directly in the existing executing cloud worker chat. No retries or alternate transfer route before recognized authorization."
+    }
   },
   "limits": [
     "synthetic qualification only",
     "no biological inputs or analysis",
     "no contract freeze",
     "no scientific acceptance",
-    "private archive export awaits direct user approval after automatic review rejected relayed authorization"
+    "private archive export blocked by child automatic review despite direct approval in root chat; no remote locator or readback"
   ]
 }
