@@ -98,8 +98,34 @@
     "host_amendment": {
       "host": "europepmc.org",
       "owner_approved": true,
-      "published": false,
-      "blocker": "Browser API reports a saved block despite UI and saved origin configuration both allowing chatgpt.com. Cause unconfirmed; desktop-app restart and access recheck pending. No configuration workaround attempted."
+      "published": null,
+      "blocker": "Existing worker retains its old enforced policy without europepmc.org; no supported in-place adoption control. Stopped before creating a new worker.",
+      "owner_reported_published": true,
+      "independently_verified_publication": false
+    },
+    "policy_adoption_check": {
+      "date": "2026-10-12",
+      "evidence_basis": "Fresh managed status obtained by the existing screening worker; root reviewed its report and receipt hash",
+      "same_worker": true,
+      "state": "running/connected",
+      "observations_current": true,
+      "network_access": "restricted",
+      "policy_enforced": true,
+      "desired_revision": 24,
+      "observed_revision": 24,
+      "configuration_version_unchanged": true,
+      "europepmc_org_allowed": false,
+      "explicit_allowed_hosts": [
+        "ftp.ncbi.nlm.nih.gov",
+        "www.ebi.ac.uk"
+      ],
+      "existing_preset_retained": true,
+      "supported_in_place_adoption_exposed": false,
+      "receipt_sha256": "cb35697a67aa8c229725685270246203af7d0aaa9b68a689d77ca980321d1e0f",
+      "new_requests": 0,
+      "new_worker_created": false,
+      "stores_quiesced": true,
+      "outcome": "STOP_NEW_WORKER_DECISION_REQUIRED"
     }
   },
   "preservation": {

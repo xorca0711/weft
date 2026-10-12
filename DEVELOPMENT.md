@@ -557,3 +557,19 @@ Ravel blobs and Git whitespace checks. Main b59ed911 and the PR #7 integration
 base d95d558 were refetched and unchanged. Runtime code is unchanged, so the
 existing full-suite CI and new 55-test cloud evidence remain applicable. GitHub
 identity was verified as xorca0711; author/committer is Xorca.
+
+## 2026-10-12 — Existing-worker policy adoption check
+
+The owner reported publishing the approved single-host amendment and requested
+verification, explicitly requiring a stop if a new worker is needed. The same
+screening worker obtained fresh managed status: current running/connected state,
+restricted/enforced policy, desired/observed revision 24 and unchanged configuration
+version. europepmc.org remains excluded. No supported in-place adoption control
+is exposed. This establishes the old worker's effective policy; it does not
+independently verify the reusable environment's newly published configuration.
+
+B4 stopped at that deployment decision. No new request, worker, material, proposal,
+upload, scientific run or Choi action occurred. The existing stores and original
+two-request usage are preserved. PR #8 records the receipt hash and the exact
+conditional checkpoint-restoration path; no new deployment is authorized by this
+documentation. Root reviewed the existing worker's report and saved receipt hash.

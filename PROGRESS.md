@@ -16,26 +16,28 @@ idempotently at another path with zero HTTP calls. Both qualification proposals
 remain held; all eight XML resources are uninspected. The separate B4 review
 store is unchanged, with no proposal issued. All copies are quiesced.
 
-Two allowed EBI documentation requests returned 404 (248 response bytes total).
-No figure, supplement or dataset was acquired. The owner approved adding only
-`europepmc.org` to the existing environment, but **publication has not occurred**:
-browser control of `chatgpt.com` was denied, including after the owner's renewed
-request, with the tool reporting a saved site-permission block.
-Follow-up: the owner's screenshot shows Always allow, and a read-only check of
-saved configuration confirms `access: allow` for chatgpt.com. The same browser API
-still rejects access. This is an observed permission-state mismatch; a stale
-runtime is only a possible cause. No permission file was changed or alternate
-control route attempted. Desktop-app restart is the next troubleshooting step;
-it does not authorize restarting the cloud worker.
-The existing worker exposes no supported in-place policy-refresh control.
+The owner now reports publishing the approved `europepmc.org` amendment. A fresh
+managed-status check of the **same worker** shows running/connected state, current
+observations and an enforced restricted policy at desired/observed revision 24.
+Its configuration version is unchanged, and `europepmc.org` is still absent;
+explicit hosts remain `ftp.ncbi.nlm.nih.gov` and `www.ebi.ac.uk` alongside the
+existing preset. No supported in-place policy-adoption control is exposed.
+The reusable publication was owner-reported; its contents were not independently
+read back, and it has **not** changed this worker's effective policy.
 
-Next: after desktop restart and successful browser access, verify the intended environment,
-publish only the approved host amendment, and read back the same worker's
-effective policy. If it cannot adopt the change, stop for a separate deployment
-decision. Then verify official acquisition documentation and resume the same
-bounded B4 review with the remaining request budget. Retain original WEBP/DOCX
+**Stopped under the owner's explicit new-worker boundary.** No replacement or
+restart was attempted. No new network requests, materials or proposals were
+created. The prior two EBI documentation 404 responses (248 bytes total) remain
+the complete B4 request usage. No figures, supplements or datasets were acquired.
+The policy-check receipt hash is in the public record; private locators are retained.
+
+Next requires an owner decision to use a new screening-only worker with the
+updated existing environment. If authorized, preserve this worker, verify the new
+worker's effective policy and exact source pins, and restore the verified
+checkpoint before resuming B4. Carry forward the request budget and actual
+exposure; do not redo discovery, screening or biology. Retain original WEBP/DOCX
 bytes, prove any viewing conversion, and mark partial supplement review honestly.
-No install, unsupported renderer or new host is authorized implicitly.
+No install, unsupported renderer or further host is authorized implicitly.
 
 Root reviewed A0's pinned current result, dossier and framing: its failed frozen
 intestinal transfer and stop remain in force. This candidate can only be assessed

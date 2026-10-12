@@ -22,9 +22,10 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
   both proposals with six figure/two supplement entries uninspected. PR #7 at
   d95d558 subsequently passed 55 targeted tests and held-proposal recovery in the
   existing cloud worker. [B4 review](docs/B3_CLOUD_B4_REVIEW.md) is paused before
-  acquisition: the owner approved europepmc.org, but a saved browser permission
-  blocks the environment edit. Verify publication and the same worker's effective
-  policy before resuming; a replacement worker needs a separate deployment decision.
+  acquisition: after owner-reported publication of europepmc.org, a fresh managed
+  check still finds the same worker's old enforced policy and no supported in-place
+  adoption control. Stop at the owner's new-worker boundary. A replacement requires
+  a separate deployment decision, verified policy and checkpoint restoration.
   Then complete bounded source review and freeze independent screening evaluation.
   New batch reading paths are portable; older
   stores use explicit

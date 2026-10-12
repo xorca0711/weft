@@ -150,9 +150,10 @@ coverage still needs actual material inspection through the implemented B3
 records. B3's local cached-source test inventories six figure/two supplement entries
 and retains separate data/RQ holds without retrieval. The same interface passed
 55 targeted cloud tests and idempotent held-proposal recovery at PR #7 d95d558.
-[B4 source review](B3_CLOUD_B4_REVIEW.md) is paused before acquisition: the approved
-documentation-host amendment is unpublished because a saved browser permission
-blocks the edit. Same-worker policy adoption still needs verification.
+[B4 source review](B3_CLOUD_B4_REVIEW.md) is paused before acquisition: the owner
+reports publishing the host amendment, but a fresh managed check still finds the
+existing worker's unchanged enforced policy. No supported in-place adoption
+control is exposed; the owner explicitly required stopping if a new worker is needed.
 The profile/window was exposed; this is not independent semantic evaluation. B5
 quality evaluation and a supported unattended launcher remain future work.
 Before recurrence, obtain cadence, notification and usage-scope decisions.

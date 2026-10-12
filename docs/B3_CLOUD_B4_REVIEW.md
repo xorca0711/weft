@@ -92,10 +92,27 @@ No permission configuration was edited, and no alternate browser route was used.
 Verify browser access after restart before attempting the approved amendment;
 the cloud worker must remain preserved.
 
-1. Verify the approved single-host amendment has been published with all other
-   settings and source pins unchanged.
-2. Recheck the **same worker's effective policy**. If it cannot adopt the update,
-   obtain a separate deployment decision before replacing or restarting it.
+### Published-amendment follow-up
+
+The owner subsequently reported publication and explicitly requested a same-worker
+check, with a stop if a new worker is needed. Fresh managed observations show the
+existing worker running/connected with an enforced restricted policy, desired and
+observed revision 24, and its original configuration version. The effective policy
+still excludes `europepmc.org`; explicit hosts remain `ftp.ncbi.nlm.nih.gov` and
+`www.ebi.ac.uk` alongside the existing preset. Only read-only environment status
+is exposed, with no supported in-place adoption mechanism. Publication is
+owner-reported, not independent readback of the reusable environment settings.
+
+The worker stopped without making a network request or changing materials or
+proposals. All stores remain quiesced. Receipt SHA-256:
+`cb35697a67aa8c229725685270246203af7d0aaa9b68a689d77ca980321d1e0f`.
+No replacement worker, restart or Choi action occurred.
+
+1. Obtain the separate decision to use a new screening-only worker. Preserve
+   this worker and its receipts; do not create a replacement implicitly.
+2. If authorized, verify the updated environment's policy and pinned sources in
+   that worker, then restore the exact verified checkpoint and retained handoff.
+   Reuse valid qualification evidence; carry forward exposure and request usage.
 3. Verify official acquisition documentation, then retrieve only the bounded
    source materials through permitted routes. Two requests have already been
    used; do not silently reset the budget or follow an unapproved redirect.
