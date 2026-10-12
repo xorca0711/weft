@@ -106,7 +106,14 @@
       "tests": 22,
       "passed": true
     },
-    "linux_ci": "pending on implementation PR"
+    "linux_ci": {
+      "status": "passed",
+      "tests": 144,
+      "skipped": 0,
+      "code_revision": "5915ba7a672dd60607555ba020f4febde22b82b7",
+      "run": "https://github.com/xorca0711/weft/actions/runs/38215111605",
+      "pull_request": "https://github.com/xorca0711/weft/pull/5"
+    }
   },
   "live_test_module_hashes": {
     "weft/batches.py": "b34ec72d41c548bb6c300f1f24ea2be6dd99154f7286050892feb8679cf03982",

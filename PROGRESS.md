@@ -18,8 +18,10 @@ test using the current agent, not cloud deployment qualification. Tests found an
 fixed malformed-observation handling and excessive CLI output. Final review added
 an overlapping-batch guard preserving existing decisions; focused tests pass.
 The prior full Windows run passed 140 tests with 23 platform-specific skips;
-four additional focused tests subsequently passed (22 new tests total). CI is
-the required Linux execution check for the final revision.
+four additional focused tests subsequently passed (22 new tests total). Both Linux CI runs passed on code revision `5915ba7`: **144 tests, no skips**,
+plus documentation validation (105 links / 15 pins).
+[PR #5](https://github.com/xorca0711/weft/pull/5) is stacked on PR #4; merge #4
+first, then retarget #5 to main and refresh checks. Neither PR was merged here.
 
 Next: review/merge this software change through its PR; qualify cloud handoff and
 restoration, including cached XML path reconciliation; implement B3 coverage and

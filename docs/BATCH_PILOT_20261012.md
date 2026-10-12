@@ -49,7 +49,8 @@ dates. Search coverage is limited to the frozen queries, index and date window.
   path portability, resume from another host or durable cloud storage.
 - Focused failure tests cover interrupted searches/reads, incomplete coverage,
   caps, replay, current-state changes, source tampering, locks and response schema
-  restrictions. Test evidence is recorded in the implementation PR/CI.
+  restrictions. [PR #5](https://github.com/xorca0711/weft/pull/5) Linux CI passed
+  all 144 tests without skips on code revision `5915ba7`.
 
 ## Issues surfaced and next work
 

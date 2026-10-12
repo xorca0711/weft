@@ -403,3 +403,7 @@ ranking evaluation. XML was inspected only within the recorded text scope. Cache
 absolute reading paths restrict cross-host restoration; qualify an explicit
 adapter and the selected cloud handoff before deployment. No paid API, credential,
 schedule, cloud dispatch, Ravel evidence promotion or biological analysis occurred.
+
+Linux CI verified code revision `5915ba7`: all 144 tests passed without skips,
+with 105 documentation links and 15 unchanged source pins. PR #5 remains open
+and stacked on PR #4; no human acceptance or merge is inferred from CI.
