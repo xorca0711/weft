@@ -526,3 +526,135 @@ Linux closeout: all 170 tests passed with no skips on 11affb4; both PR and
 push CI succeeded. Documentation validation passed 119 local links and 15
 unchanged Ravel pins. PR #7 is open and ready for explicit code review, stacked
 on #6. GitHub author is xorca0711; Git author/committer is Xorca. No merge.
+
+## 2026-10-12 — B3 cloud qualification and bounded B4 access hold
+
+| Date | Item | Proposed by | Decided by | Decision | Reason |
+|---|---|---|---|---|---|
+| 2026-10-12 | Qualify PR #7 in the existing worker, then bounded B4 source review | Owner requested scope; Codex coordinated | Owner authorized execution; scientific acceptance and merge remain unissued | B3 qualified; B4 stopped before material acquisition | Preserve Choi and stop at new access/deployment decisions |
+| 2026-10-12 | Add only europepmc.org to the existing environment | Codex requested the specific documentation host | Owner explicitly approved | Approved but not published | Saved browser-control permission blocks chatgpt.com, including after renewed authorization |
+
+The existing worker verified source d95d558, 55 targeted tests, 119 links,
+15 Ravel blobs and all 42 members of the preserved after-screening checkpoint.
+Disposable B3 proposal and fresh-path recovery checks retained source bytes,
+screening decisions and the original 20-event prefix. Both data-use/RQ proposals
+are held; no source material was newly inspected. The designated B4 store remains
+unchanged, and all stores are quiesced. Root reviewed these receipts and the pinned
+A0 result/dossier; no independent second cloud test or scientific acceptance is
+claimed. The public check record excludes private worker paths and identifiers.
+
+The B4 API-documentation probe used two allowed EBI requests (both HTTP 404,
+248 bytes total), establishing an unresolved documentation dependency rather
+than a failed material download. Original WEBP figures and DOCX supplement are
+not directly supported by B3 intake. Proposed viewing conversions need explicit
+provenance and verification; extraction alone would remain partial DOCX review.
+No format validator was weakened or renderer installed. Browser permission
+enablement and then effective-policy verification are the exact next dependencies.
+No alternate control route, new worker, analysis, private export, schedule or merge.
+
+Local closeout validation passed 124 documentation links, all 15 unchanged pinned
+Ravel blobs and Git whitespace checks. Main b59ed911 and the PR #7 integration
+base d95d558 were refetched and unchanged. Runtime code is unchanged, so the
+existing full-suite CI and new 55-test cloud evidence remain applicable. GitHub
+identity was verified as xorca0711; author/committer is Xorca.
+
+## 2026-10-12 — Existing-worker policy adoption check
+
+The owner reported publishing the approved single-host amendment and requested
+verification, explicitly requiring a stop if a new worker is needed. The same
+screening worker obtained fresh managed status: current running/connected state,
+restricted/enforced policy, desired/observed revision 24 and unchanged configuration
+version. europepmc.org remains excluded. No supported in-place adoption control
+is exposed. This establishes the old worker's effective policy; it does not
+independently verify the reusable environment's newly published configuration.
+
+B4 stopped at that deployment decision. No new request, worker, material, proposal,
+upload, scientific run or Choi action occurred. The existing stores and original
+two-request usage are preserved. PR #8 records the receipt hash and the exact
+conditional checkpoint-restoration path; no new deployment is authorized by this
+documentation. Root reviewed the existing worker's report and saved receipt hash.
+
+## 2026-10-12 — Authorized new-worker creation handoff
+
+The owner authorized one screening-only worker in the updated weft-pilot
+environment, verified restore and bounded B4 continuation. Browser creation is
+still blocked by the saved-site-permission rejection. The available task tool
+cannot select a named cloud environment, so no default-environment substitute
+was created. Root prepared a private copyable launch prompt with exact source
+and archive identities, restoration checks, inherited acquisition budget,
+interpretation limits and stop conditions, and requested the created task link.
+This is a handoff for an already authorized action, not a new access decision.
+Old screening/Choi workers, datasets and stores are unchanged. No cloud worker,
+material acquisition, analysis or new export occurred in this preparation.
+
+## 2026-10-12 — New screening task environment gate
+
+The owner created the one authorized screening-only task and supplied its link.
+The new task's first two managed-status checks show the required three hosts,
+Package managers preset, current running observations and matching revision 2,
+but network enforcement is `unknown`. The display name is not returned by the
+status API, so selected weft-pilot identity is owner-attested. Neither a startup
+snapshot nor successful connectivity would substitute for enforced readiness.
+
+The worker stopped before source acquisition, restore, tests or material review.
+Root requested one bounded read-only post-startup check in the same task; no
+follow-up result has been reported at this checkpoint. The initial receipt is
+hashed and private locators are retained. Prior B3 checks still describe the old
+worker, not qualification of the new one. Old screening and Choi remain unchanged;
+B4 usage remains two requests / 248 bytes. No additional worker or policy change.
+
+Current summaries and PR #8 now distinguish creation from runtime readiness.
+Offline documentation validation passed 125 links / 15 pin declarations and Git
+whitespace checks passed. Refetched main b59ed911 and integration base d95d558 are
+unchanged; prior HEAD 01708fa passed both CI checks. Runtime source is unchanged.
+GitHub write identity is xorca0711; no private task/configuration IDs are added
+to this public update. No scientific acceptance, analysis, export or merge.
+
+## 2026-10-12 — Readiness resolved; restored worker safety interruption
+
+The requested post-startup check confirmed current restricted/enforced policy at
+revision 4 without a configuration edit or restart. The initial unknown state
+is preserved; its cause was not reported. Owner selection and historical setup
+provenance corroborate weft-pilot identity, with no independent current API label.
+The new worker verified its separate d95d558 source, the exact 42-member archive,
+SQLite integrity and counts, 55 targeted tests, 119 links and 15 Ravel pins.
+
+A source-bound packet was issued without network use. B4 acquisition began after
+official API documentation review, then the platform rejected the turn citing
+potential dual-use biology. It also rejected an administrative preservation-only
+follow-up before tools ran. Root did not retry or route around the restriction.
+The specific triggering content is unknown. Final transfer/store state remains
+unverified; the last ledger observation is six requests and 1,004,901 bytes.
+No scientific result, acceptance, completed source coverage or export is claimed.
+
+Current summaries, roadmap and public receipt now distinguish successful recovery
+from interrupted review. The exact errors and private locators remain ignored.
+The old worker, Choi and Ravel are unchanged. Offline validation passed 125 links
+and 15 pin declarations; whitespace checks passed. Refetched main b59ed911 and
+stacked integration base d95d558 are unchanged. Prior HEAD 8a882e1 passed both CI
+checks. Runtime code and source pins are unchanged, so no biological or duplicate
+full-suite run was performed. GitHub identity is xorca0711; no merge was made.
+
+## 2026-10-12 — Marked roadmap and PR stack audit
+
+The owner requested the overall established roadmap state and a conflict check
+for Weft PRs #4-#8. Codex marked M0-M6 and B1-B5 status, replaced the obsolete
+future-only diagram, and separated manual qualification, scientific acceptance
+and unmerged implementation. B3's outdated cloud-qualification summary is
+corrected; B4 remains blocked, Choi M4b complete for its adapted attempt, M5 open
+and B5/M6 planned. No gate or scientific claim status was promoted.
+
+| Date | Item | Proposed by | Decided by | Decision | Reason |
+|---|---|---|---|---|---|
+| 2026-10-12 | Mark roadmap status and inspect PR #4-#8 integration | Owner requested scope; Codex prepared updates and audit | Owner authorized documentation/audit; merge and scientific acceptance remain unissued | Update existing documentation and PR #8; no merge/retarget | Distinguish tested manual capabilities from incomplete evaluation and deployment |
+
+Fetched main b59ed911 and all five PR heads form a linear ancestor chain.
+Cumulative merge-tree simulation exited zero at every step and matched each
+incoming tree. GitHub reported all five non-draft, MERGEABLE/CLEAN with passing
+push/PR checks at the recorded snapshot. This is textual integration and CI
+evidence, not an independent semantic review. Recommended integration order is
+#4 -> #5 -> #6 -> #7 -> #8, verifying/retargeting each successor to main and
+refreshing checks after its predecessor merges. Ravel #149 was read-only and
+confirmed open/draft. No branch/ref, cloud task, analysis or data state was changed
+by the audit. Offline documentation validation passed 141 links and 15 source-pin
+declarations; Git whitespace checks passed. Runtime code is unchanged.

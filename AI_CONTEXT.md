@@ -14,21 +14,35 @@ The [synthetic job controls](docs/JOB_CONTROLS.md) include a ledger and built-in
 Docker fixture executor with verified local terminal receipts. One manual dot/cloud dispatch-return check passed; scientific qualification remains open.
 
 - [Current state](PROGRESS.md) owns completed work and exact next steps.
+  The [marked roadmap](docs/IMPLEMENTATION_PLAN.md#established-state) separates
+  operational qualification, remaining scientific evaluation and open PR integration.
+  [PRs #4-#8](docs/PR_STACK_INTEGRATION.md) form a clean linear stack; they are not merged.
 - Next implementation priority is the [discovery/screening backend](docs/DISCOVERY_SCREENING_BACKEND.md):
   B1 and B2 mechanics passed fixtures, a local batch and a bounded manual cloud
   handoff/restore. B3 now implements source coverage, bounded local attachments
   and separate versioned data-use/RQ proposals; see
   [the B3 interface](docs/EVIDENCE_QUALIFICATION.md). Its cached-source test held
-  both proposals with six figure/two supplement entries uninspected. Qualify this
-  new interface in the existing cloud route, then complete bounded B4 source
-  review and freeze independent screening evaluation. New batch reading paths are portable; older
+  both proposals with six figure/two supplement entries uninspected. PR #7 at
+  d95d558 subsequently passed 55 targeted tests and held-proposal recovery in the
+  existing cloud worker. The new screening worker then confirmed current enforced
+  restricted policy at revision 4, restored all 42 checkpoint members and passed
+  the same 55 targeted tests, 119 links and 15 Ravel pins. [B4 review](docs/B3_CLOUD_B4_REVIEW.md)
+  began source acquisition but its turn failed with a platform biology-safety
+  rejection. A preservation-only follow-up was also rejected before tool use.
+  Do not retry/rephrase or reroute the blocked review. No final download state or
+  post-interruption quiescence is established; private locators and receipts are
+  under `runs/b3-cloud-b4-review-20261012`. Resolve through platform review before
+  any permitted continuation, then reconcile process/file/budget/store state.
+  Independent screening evaluation and scientific acceptance remain open.
+  New batch reading paths are portable; older
   stores use explicit
   `batch-relocate-reading --source-root` after verified restore. See
   [cloud qualification](docs/SCREENING_CLOUD_QUALIFICATION.md): the approved host
   amendment and separate screening-only task are live.
   Cloud source/discovery, five screening responses, both owner-approved Drive
-  checkpoints and independent Linux-to-Windows cached recovery passed. All stores
-  are quiesced; private locators/receipts are in ignored
+  checkpoints and independent Linux-to-Windows cached recovery passed. Those earlier
+  screening stores were quiesced; the new B4 interruption has an unverified final
+  state. Earlier private locators/receipts are in ignored
   `runs/screening-cloud-qualification-20261012`. No schedule is configured. Preserve
   the original Choi worker. Choi M5 publication is a separate open track, not a coding
   prerequisite. Do not enable schedules, release the held reservation or dispatch
@@ -70,6 +84,10 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
 - B3 development copies are under ignored `runs/evidence-qualification-20261012-v1`.
   They are inactive software-test stores, not active cloud coordinators. They
   preserve the earlier cloud checkpoint and make no new source/analysis claim.
+- B3 cloud receipt and exact B4 resume locators are under ignored
+  `runs/b3-cloud-b4-review-20261012`. Old qualification copies remain inactive.
+  The new review store issued a packet before interruption; its final state and
+  acquisition completion are unverified. No new private export was produced.
 - `records/` contains compact public check evidence. Raw responses, full XML,
   derived reading packets and SQLite state stay in ignored `runs/` on X:.
 - Ravel's physical migration completed on 11 October 2026: `X:/GitHub/ravel`

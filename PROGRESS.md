@@ -1,8 +1,62 @@
 # Current project state
 
-## Current B3 backend slice — 12 October 2026
+## B3 recovery passed / B4 platform hold — 12 October 2026
 
 Update this before stopping work, every session.
+
+Roadmap marking is current: [M0-M6 status and diagram](docs/IMPLEMENTATION_PLAN.md#established-state)
+and [B1-B5 status](docs/DISCOVERY_SCREENING_BACKEND.md#current-b1-b5-status).
+Manual capabilities are qualified within scope; M1/M2/M3b and B3 remain partial,
+B4 is blocked, Choi M4b is complete for the recorded attempt, M5 is open and
+B5/M6 are planned. PRs #1-#3 are merged; #4-#8 remain open. The
+[stack audit](docs/PR_STACK_INTEGRATION.md) found no textual conflicts in cumulative
+#4 -> #5 -> #6 -> #7 -> #8 integration against main b59ed911. All audited heads
+had passing CI. Retarget/recheck each successor after its predecessor merges;
+no merge or retarget was performed. Ravel #149 remains open/draft.
+
+**Network enforcement and checkpoint restoration passed in the new worker.
+B4 remains incomplete after a platform safety rejection.**
+[Evidence and interruption record](docs/B3_CLOUD_B4_REVIEW.md) ·
+[Check record](records/b3-cloud-b4-boundary-20261012.json).
+
+The new worker's post-startup check reported current running/connected state,
+restricted/enforced policy and matching desired/observed revision 4. Required
+hosts and the Package managers preset are intact. The first two `unknown`
+observations are retained as history. The environment name is owner-attested
+and corroborated by its historical setup receipt, not a current API display name.
+No configuration edit or restart was needed for the successful recheck.
+
+Setup remains d031cef. A separate clean PR #7 checkout at d95d558 restored the
+exact 522,632-byte archive: SHA-256, CRC, safe paths, all 42 manifest members,
+catalog hash, SQLite integrity, foreign keys and expected counts passed.
+All 55 targeted tests, 119 documentation links and 15 Ravel source pins passed.
+The review store issued the same B3 packet without network access; no new data-use
+or RQ assessment was submitted in the observed execution.
+
+Official acquisition documentation was retrieved. A source-archive request then
+started, with HTTP 200 and at least 65,536 bytes retained at the last ledger read.
+The turn failed with a platform safety error citing potential dual-use biology.
+The error does not identify the triggering content or establish that the paper
+itself is unsuitable. An administrative preservation-only follow-up was also
+rejected before any tools ran. No alternative route or retry was attempted.
+
+Last observed B4 usage: **6 of 12 distinct requests**, one attempt each, and
+**1,004,901 counted bytes**, including historical requests. These are an
+in-progress snapshot, not final reconciled totals. Source-download completion,
+final file hashes, database counts and post-interruption process/store quiescence
+remain unverified. No figure/supplement pixel review, complete coverage record,
+new checkpoint export or scientific acceptance is established.
+
+Next: platform review of the rejected task is required before any permitted
+continuation. Do not bypass filtering by another worker, tool, context or renamed
+request. First reconcile process state, partial/complete bytes, request budget
+and the review store without overwriting original receipts; then determine which
+work can proceed. The old worker and Choi remain preserved; Ravel is unchanged.
+No new access, deployment, analysis, schedule, export or merge is authorized by
+this status update. Private locators and the exact error are retained under
+`runs/b3-cloud-b4-review-20261012`.
+
+## Historical B3 implementation checkpoint — 12 October 2026
 
 [PR #7](https://github.com/xorca0711/weft/pull/7) implements this slice. B3 now
 issues a source-bound evidence packet, inventories cached JATS figures and

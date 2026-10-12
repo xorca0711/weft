@@ -8,14 +8,14 @@
 | Manual literature discovery and RQ review buffer | Descriptive only | [Live validation](records/discovery-validation.json) | Metadata matches and reading priority, not accepted claims |
 | Bounded discovery batches and screening-agent interface | Descriptive only | [Fresh-candidate test](docs/BATCH_PILOT_20261012.md) | 74 candidates; five local link proposals; independent semantic quality evaluation remains open |
 | Portable screening paths and manual cloud recovery | Descriptive only | [Qualification record](records/screening-portability-20261012.json) | Five cloud link proposals; both Drive checkpoints verified; Linux-to-Windows cached recovery passed; no unattended launcher |
-| B3 coverage, data-use and RQ proposals | Descriptive only | [Cached-source test](records/evidence-qualification-20261012.json) | Six figure/two supplement entries inventoried; no new materials inspected; independent proposals remain held |
+| B3 coverage, data-use and RQ proposals | Descriptive only | [Cloud qualification](records/b3-cloud-b4-boundary-20261012.json) | 55 targeted tests and checkpoint recovery passed; B4 source review interrupted by platform safety filtering |
 | Manual source-bound reading packets | Descriptive only | [Local reader](docs/LOCAL_READER.md) | XML text/captions; semantic and figure review remain separate |
 | Choi figure, supplement and input review | Descriptive only | [Review receipt](records/pilot-review-20261011.json) | Source review and file integrity; current execution status is in PROGRESS |
 | Pinned Codex Cloud setup | Descriptive only | [Setup receipt](records/cloud-setup-20261011.json) | Private environment published; small export verified; no retention guarantee |
 | Synthetic executor and restart recovery | Descriptive only | [Recovery receipt](records/synthetic-recovery-integration-20261011.json) | Bounded Docker restart; synthetic recovery does not prove arbitrary job recovery |
 | Manual dot handoff and private checkpoints | Descriptive only | [Coordinator receipt](records/manual-coordinator-20261011.json) | Small synthetic recovery; no retention or distributed-lock guarantee |
 | Manual scientific cloud execution | Descriptive only | [Metadata](records/choi-metadata-20261011.json) and [Figure1 execution](records/choi-figure1-execution-20261012.json) | Metadata and Figure1 archive verified; [scientific review](docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md) complete with limits; publication pending |
-| Autonomous paper-to-question workflow | Not established | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Autonomous screening/orchestration and complete Ravel artifact publication remain unqualified |
+| Autonomous paper-to-question workflow | Not established | [Marked implementation plan](docs/IMPLEMENTATION_PLAN.md#established-state) | Autonomous screening/orchestration and complete Ravel artifact publication remain unqualified |
 
 Weft is being built to bring new literature into an existing research programme:
 find papers against established questions and broader reading interests, explain
@@ -36,8 +36,15 @@ and jobs to that research. Personal career interests remain in an untracked
 private configuration, even though this repository is public.
 
 The next development priority is the [discovery and screening backend](docs/DISCOVERY_SCREENING_BACKEND.md):
-qualify the [B3 coverage and data/RQ proposal interface](docs/EVIDENCE_QUALIFICATION.md)
-in the existing cloud route, then run a bounded review with actual source coverage.
+B3's [coverage and data/RQ proposal interface](docs/EVIDENCE_QUALIFICATION.md)
+passed qualification in the existing cloud worker. The [bounded B4 review](docs/B3_CLOUD_B4_REVIEW.md)
+is incomplete. The new screening worker confirmed enforced policy, restored the
+verified checkpoint and passed 55 targeted tests. Its source-review turn then
+failed with a platform safety rejection; final download state is unverified.
+[Current state](PROGRESS.md) owns the resume point.
+The [marked roadmap and diagram](docs/IMPLEMENTATION_PLAN.md#established-state)
+show completed, qualified, partial, blocked and planned stages;
+[PR integration status](docs/PR_STACK_INTEGRATION.md) separates tested work from main.
 The earlier [manual cloud handoff and recovery](docs/SCREENING_CLOUD_QUALIFICATION.md)
 is qualified; independent screening evaluation remains open.
 An unattended launcher and recurrence remain future work. Choi publication remains

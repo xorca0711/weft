@@ -1,14 +1,31 @@
 # Discovery and screening backend: next implementation sequence
 
-**12 October 2026: B1/B2 manual cloud recovery is qualified. B3 evidence/proposal
-records are implemented and tested locally; its cloud/source-review qualification
-is next. Unattended operation and independent evaluation remain open.**
+**12 October 2026: B1/B2 mechanics and manual cloud recovery are qualified.
+B3 software controls passed cloud qualification; actual material/semantic review
+remains partial. B4 is blocked by platform safety filtering. B5 independent
+evaluation and unattended operation are planned.**
 See the [command guide](BATCH_SCREENING.md) and [fresh-candidate development test](BATCH_PILOT_20261012.md).
 Prioritize discovery-to-screening orchestration before the remaining Choi
 publication closeout. The existing Choi attempt is a completed, exposed test of
 manual compute, recovery and interpretation. Its merge is not a prerequisite for
 building or evaluating candidate screening. Preserve its publication hold,
 reservation and original evidence; do not rerun it.
+
+## Current B1-B5 status
+
+| Slice | Status | Verified progress | Remaining / blocker |
+|---|---|---|---|
+| B1 batch coordinator | **Qualified — bounded mechanics** | Three cloud searches: 82 observations, 74 papers, 148 proposed RQ links; replay/limits/recovery passed | Broader retrieval-quality evaluation belongs to B5; no autonomous trigger |
+| B2 screening interface | **Qualified — manual handoff** | Five source-bound link proposals, one held XML assessment, before/after Drive verification and cross-host recovery | 143 links deferred; no independent decision-accuracy claim or unattended launcher |
+| B3 evidence and dataset qualification | **Partial — software qualified** | Source coverage/attachments, separate versioned data-use and RQ proposals; 55 targeted cloud tests and new-worker checkpoint restore passed | Actual figure/supplement coverage and proposed-use dataset/design review incomplete; holds remain |
+| B4 bounded screening batch | **Blocked — incomplete** | Manual search-to-screening path and checkpoint recovery demonstrated; source acquisition began | Platform safety rejection; preservation-only follow-up also rejected. Final transfer/store state unverified; no completed source-review digest or new after-review recovery |
+| B5 evaluation and recurrence | **Planned** | Evaluation requirements specified | Freeze independent unseen/contrary/low-ranked paper set; measure errors and missed papers; qualify launcher/recovery/usage controls before any cadence decision |
+
+Evidence: [manual cloud qualification](SCREENING_CLOUD_QUALIFICATION.md),
+[B3/B4 receipts and interruption](B3_CLOUD_B4_REVIEW.md). These are operational
+statuses, not scientific acceptance. [Overall roadmap](IMPLEMENTATION_PLAN.md#established-state)
+separates this priority track from Choi M5 publication. Features on open PRs
+#4-#8 are not yet merged into main; see [integration status](PR_STACK_INTEGRATION.md).
 
 ## What exists and what does not
 
@@ -148,8 +165,15 @@ legacy-address amendments preserve the original evidence. See
 The B4 operational handoff/recovery component has been demonstrated, but full B4
 coverage still needs actual material inspection through the implemented B3
 records. B3's local cached-source test inventories six figure/two supplement entries
-and retains separate data/RQ holds without retrieval. Cloud qualification of this
-new interface remains next. The profile/window was exposed; this is not independent semantic evaluation. B5
+and retains separate data/RQ holds without retrieval. The same interface passed
+55 targeted cloud tests and idempotent held-proposal recovery at PR #7 d95d558.
+[B4 source review](B3_CLOUD_B4_REVIEW.md) is incomplete. The new authorized
+screening worker confirmed enforced updated policy, restored the exact checkpoint
+and passed 55 targeted tests. Acquisition began, then platform safety filtering
+rejected the review turn and a preservation-only follow-up. Final acquisition and
+post-interruption store state remain unverified. See PROGRESS for the platform
+hold; do not bypass it with another task or alternate route.
+The profile/window was exposed; this is not independent semantic evaluation. B5
 quality evaluation and a supported unattended launcher remain future work.
 Before recurrence, obtain cadence, notification and usage-scope decisions.
 
