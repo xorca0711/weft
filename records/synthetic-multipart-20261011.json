@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-11",
+  "kind": "synthetic-multipart-qualification",
+  "helper_revision": "4188424425ab37fb2e57c741b4839affbbd23b7f",
+  "content": "byte at offset i equals i modulo 256",
+  "trials": [
+    {
+      "part_bytes": 16777216,
+      "artifact_bytes": 16777223,
+      "artifact_sha256": "c494296461bac6d1b3918c8cc9c22bb08a5ee7d96a6d56da0b4df50e87f4abd7",
+      "manifest_bytes": 392,
+      "manifest_sha256": "47e73840e572cd04dbcf6496087ccd82040d43c0e86c89c3f6d7286a9de830a5",
+      "uploads": 3,
+      "result": "INCOMPLETE",
+      "failure": "16 MiB authenticated readback: Transport closed; streamed materialization: URLError. Underlying cause undetermined. Neither was an approval rejection. Seven-byte part and manifest verified; no reassembly.",
+      "preserved": true
+    },
+    {
+      "part_bytes": 4194304,
+      "artifact_bytes": 4194311,
+      "artifact_sha256": "8137fd2fa7425b6073f70180ef3ffe46da8704c35fcc0d3c08909fe8e3e1461e",
+      "manifest_bytes": 389,
+      "manifest_sha256": "5ce39a3f31c21c11a260315e4d3ed2593f8422a08e929546f23e4349ae6ff0f0",
+      "part_sha256": [
+        "2b07811057df887086f06a67edc6ebf911de8b6741156e7a2eb1416a4b8b1b2e",
+        "57355ac3303c148f11aef7cb179456b9232cde33a818dfda2c2fcb9325749a6b"
+      ],
+      "uploads": 3,
+      "result": "PASS",
+      "worker_verification": "Each file uploaded once, owner-only/expected parent metadata, authenticated raw download, per-part hash, canonical manifest, fresh reassembly and full artifact SHA verified. No user-PC materialization.",
+      "root_verification": "Downloaded manifest SHA/size and independently recomputed deterministic artifact/part hashes match. Cloud materialization/reassembly is worker-verified, not live-inspected by root."
+    }
+  ],
+  "limit": "One bounded synthetic roundtrip; no retention or arbitrary-size transport guarantee. Actual scientific archive must independently pass every transfer/hash/CRC/manifest check."
+}

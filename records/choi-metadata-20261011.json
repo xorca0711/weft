@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "kind": "choi-metadata-execution-and-root-review",
+  "date": "2026-10-11",
+  "ravel_revision": "90c02bad355a52bc9b71ac84ad63a06eda52c525",
+  "stage": "metadata",
+  "attempts_executed": 1,
+  "root_before_checkpoint_review": "passed authenticated bytes/ancestry/schema/readonly restore, canonical packet and exact source Git blobs",
+  "download": {
+    "count": 1,
+    "archive_bytes": 349204480,
+    "archive_sha256": "c1476faed13366ad22d481dac52feb17e3c696a80ab2bfe359a4377afb12cf57",
+    "selected_files_verified": 9
+  },
+  "worker_report": {
+    "receipt_verification": "PASS",
+    "libraries_passed": 3,
+    "feature_order_equal": true,
+    "loader_seconds": 190.46,
+    "cumulative_peak_rss_kib": 945848,
+    "container_seconds": 192.417,
+    "exit_code": 0,
+    "oom_killed": false,
+    "container_pid_zero": true,
+    "captured_process_identities_absent": true,
+    "maximum_observed_cgroup_peak_bytes": 948580352,
+    "cgroup_peak_limit": "sampled; not guaranteed final peak"
+  },
+  "output_sha256": {
+    "receipt.json": "8b5764789d125d8e785563206e56a33e39240ab84631b8f42936766762b25a0e",
+    "input-readiness.json": "e80f61bf465925cadbb043284d34c26cf1f44714903f0d9ee215d739a7e3b86f"
+  },
+  "evidence_export": {
+    "bytes": 64399,
+    "sha256": "8efd014152febdd429f49632279188435fccb1196445285fe1d9959f2efdc246",
+    "worker_crc_and_manifest_entries_verified": 46,
+    "uploaded": true,
+    "root_readback_verified": true,
+    "review_denial": "This uploads a new private metadata-evidence archive containing nonpublic runtime/source artifacts, but no trusted user message authorizes exporting this exact payload; prior approval covered a different archive.",
+    "root_crc_and_manifest_entries_verified": 46,
+    "root_exact_source_git_blobs_verified": 9,
+    "owner_only_parent_verified": true,
+    "review_resolution": "Exact direct owner approval in the existing worker; single upload and worker/root readbacks passed. Initial denial preserved as history."
+  },
+  "status": "METADATA_EXECUTION_REVIEWED_AND_CHECKPOINTED",
+  "root_memory_review": "Sparse-loader prerequisite accepted at 945848 KiB cumulative process RSS; full Figure1 memory remains unmeasured.",
+  "figure1_contract": "draft",
+  "scientific_acceptance": false,
+  "historical_after_run_export_held_checkpoint": {
+    "state": "EXPORT_HELD",
+    "bytes": 58253,
+    "sha256": "f2d5feecbbb65ef5ce9c79aa1e12fe74301065959bbd4c06b59b1d42e9f37287",
+    "owner_only_readback_verified": true,
+    "coordinator_readonly_restore_verified": true,
+    "root_independent_archive_integrity_and_ledger_state_verified": true,
+    "attempt_rows": 1,
+    "activated": false,
+    "slot_released": false
+  },
+  "after_run_checkpoint": {
+    "state_at_capture": "ROOT_REVIEW_ACCEPTED_AWAITING_CHECKPOINT",
+    "bytes": 62349,
+    "sha256": "56d3fec9f4ec51b33824c742bb320c7662e89dc75fe9115826dbad7db48eee9c",
+    "parent_sha256": "f2d5feecbbb65ef5ce9c79aa1e12fe74301065959bbd4c06b59b1d42e9f37287",
+    "owner_only_readback_verified": true,
+    "coordinator_readonly_restore_verified": true,
+    "root_independent_archive_integrity_and_ledger_state_verified": true,
+    "attempt_rows": 1,
+    "activated": false,
+    "coordinator_closed_same_attempt_after_verification": true,
+    "recovery_rule": "The archive captures pending checkpoint verification; use external successful checkpoint receipt and reconcile authoritative ledger. No restored copy authorizes a retry."
+  },
+  "ravel_receipt_verifier": "PASS on root-preserved exact output bytes"
+}

@@ -1,0 +1,32 @@
+{
+  "status": "PASS_SYNTHETIC_DEPENDENCIES_ONLY",
+  "platform": "linux/amd64",
+  "python": "3.12.15",
+  "image": "sha256:c9c7fb60b86d4608c2420d662d386bab33dde70b3b4fa9cd01e7ca8bdc9e6902",
+  "pypi_hash_verified_wheels": 61,
+  "wheel_bytes": 213004848,
+  "preparation_seconds": 584.31,
+  "synthetic_wall_seconds": 43.11,
+  "process_peak_rss_kib": 645256,
+  "cgroup_peak_bytes": 484433920,
+  "limits": {
+    "cpus": 4,
+    "memory_bytes": 4294967296,
+    "additional_swap": 0,
+    "pids": 128,
+    "wall_seconds": 180,
+    "network": "none"
+  },
+  "fixture": [
+    240,
+    2400
+  ],
+  "specified_D1_D2_APIs": "passed",
+  "standalone_scrublet_annoy": "excluded; official Scanpy implementation supplies the pinned D1 API",
+  "repaired_failures": 2,
+  "Weft_Ravel_gates_unchanged": true,
+  "previous_Drive_evidence_preserved": true,
+  "schema_version": 1,
+  "source": "Rendered completed cloud task receipt, 11 October 2026; full recipe/provenance export pending",
+  "biological_data_analyzed": false
+}

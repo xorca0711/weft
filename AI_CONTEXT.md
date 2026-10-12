@@ -2,7 +2,12 @@
 
 Weft is Ravel's public automation companion. Manual Europe PMC discovery, pinned
 RQ context, a paper-to-question review buffer and XML reading packets are implemented.
-Unattended agents, scientific execution and Ravel export are not implemented.
+Unattended scientific dispatch is not implemented. The checkpointed manual route
+has completed one Ravel metadata run with independently verified evidence; the
+separate Figure1 run has executed, but its evidence export and independent review
+remain held. PROGRESS owns current status; never rerun the completed attempt.
+The [synthetic job controls](docs/JOB_CONTROLS.md) include a ledger and built-in
+Docker fixture executor with verified local terminal receipts. One manual dot/cloud dispatch-return check passed; scientific qualification remains open.
 
 - [Current state](PROGRESS.md) owns completed work and exact next steps.
 - [Discovery](docs/DISCOVERY.md), [decision buffer](docs/DECISION_BUFFER.md) and
@@ -13,8 +18,23 @@ Unattended agents, scientific execution and Ravel export are not implemented.
   initial search profiles cover A0/A1 only. No automatic evidence join or canonical ID.
 - The owner selected dot coordination + Codex Cloud execution after the local
   manual-reader baseline. Start with [cloud setup](docs/CLOUD_SETUP.md), then M3
-  controls and one manual dot qualification. The owner confirmed environment creation
-  and Weft repository selection are available, not a published/qualified worker.
+  controls and the [checkpointed manual route](docs/MANUAL_PILOT.md). Private weft-pilot is published at d031cef with 58 cloud tests and a small
+  independently verified export. See records/cloud-setup-20261011.json. The small
+  synthetic Drive route passed [independent cloud restore](records/cloud-drive-restore-20261011.json).
+  [Manual dot delegation and SQLite checkpoint restoration](records/manual-coordinator-20261011.json) passed.
+  The first manual metadata job has verified before/after checkpoints and Ravel
+  receipt readback. A bounded 4 MiB multipart roundtrip passed; each actual archive still needs
+  readback. The owner-selected 8 GiB amendment passes the memory gate. Owner-approved scoped container retirement recovered disk, and offline preflight
+  passed once. Figure1 subsequently executed once; its new evidence export requires
+  owner approval, now recorded directly in the worker. The export turn then
+  failed at the cloud usage limit. A later owner-requested continuation executed:
+  two parts reached Drive before another runtime disconnect; one worker readback
+  passed, the second is incomplete. Reconcile the existing receipt, remote IDs and
+  partial download before continuing the same export. See PROGRESS.
+  The after-run held checkpoint is independently verified. An explicit continuity
+  recovery established a new active coordinator database; use the ignored private
+  locator, not the preserved stale database. Read PROGRESS before any action.
+  Retention is not guaranteed.
   No paid API or unattended launcher is configured. Never fabricate human review.
 - No extra local PC is required. Cloud tasks pin the reviewed Weft PR revision
   and Ravel blobs; never assume main has current implementation, or X: paths and
@@ -27,7 +47,8 @@ Unattended agents, scientific execution and Ravel export are not implemented.
   explicitly in a new adapter, never by rewriting frozen evidence.
 - The [Choi source review](docs/PILOT_CHOI_REVIEW.md) and input inventory are complete
   within their stated coverage. Read the [environment recommendation](docs/EXECUTION_ENVIRONMENT.md)
-  before M3/M4 work. No numerical analysis, new contract or worker is qualified.
+  before M3/M4 work. The frozen metadata contract and exact Git-equipped runtime
+  passed one bounded metadata job; this is not full descriptive-stage qualification.
 - Scientific raw inputs remain in Ravel; audit PDFs/receipts are in ignored
   `runs/pilot-review-20261011-v1` on X:. The public records retain source hashes and
   locators. Weft's Ravel connection remains read-only.

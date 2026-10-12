@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-11T11:09:49.406341+00:00",
+  "scope": "One manual dot delegation/return and synthetic SQLite checkpoint; not scientific execution",
+  "owner_selected_route": "checkpointed manual pilot; single coordinator; private Drive before/after each job; explicit recovery after interruption",
+  "delegation": {
+    "task_id": "01a12a97-4633-7170-8735-8dee36b840eb",
+    "environment": "weft-pilot",
+    "weft_commit": "d031cef02ab4a417760bca46e90a63917d215d31",
+    "ravel_pin": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+    "pilot_id": "P001-choi2020",
+    "completed_receipt_retrieved": true,
+    "disposition": "HOLD",
+    "holds": [
+      "scientific_contract=null",
+      "input_hashes_qualified=false",
+      "runtime_lock_qualified=false",
+      "published_result_tolerance_qualified=false",
+      "population inference unsupported"
+    ],
+    "configuration_version_suffix": "cecfgver_6acb61fdc96481a283a745de16ae40ce",
+    "configuration_source": "parent catalog/create call; not independently exposed in child runtime",
+    "source_checks": "Exact Weft HEAD and two JSON fields; Ravel blobs and tests not rechecked"
+  },
+  "dot_executor": {
+    "python": "3.12.14",
+    "sqlite": "3.53.1",
+    "os": "Linux",
+    "architecture": "x86_64",
+    "same_host_two_command_calls": true,
+    "sqlite_bytes": 8192,
+    "read_only_integrity_check": "ok",
+    "expected_rows": 1,
+    "retention_after_restart": "unqualified"
+  },
+  "checkpoint": {
+    "method": "SQLite backup API; close; hash-sealed ZIP; one authenticated Drive upload; raw-byte retrieval; fresh read-only restore",
+    "private_permissions_verified": true,
+    "sharing_changed": false,
+    "uploads": 1,
+    "archive_bytes": 956,
+    "archive_sha256": "b3c1e39c6e1aa11cd28874d9be20f8a90cb62b344d4d9bfb71b8453686be0009",
+    "archive_crc32": "9efc9a74",
+    "sqlite_sha256": "6b6aca52652766883ad19a989e734da5576d8ec240a6d34c4b6175a6fe08e581",
+    "zip_crcs_verified": true,
+    "restored_integrity_check": "ok",
+    "restored_row_check": "one matching synthetic row",
+    "live_ledger_unchanged": true,
+    "archive_code_executed": false
+  },
+  "limits": [
+    "Not an authoritative production job ledger",
+    "No distributed locking or Drive write-once guarantee",
+    "No restart-retention guarantee",
+    "Large outputs and per-job backup integration not qualified",
+    "No automatic scientific dispatch or acceptance"
+  ]
+}

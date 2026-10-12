@@ -1,0 +1,46 @@
+{
+  "check": "read_only_connectivity",
+  "child_task_id": "01a12ac1-6a3f-721b-ade7-b624d460f0f4",
+  "child_turn_id": "01a12ac1-7470-7580-b698-311aa89c1710",
+  "child_status": "completed",
+  "environment": "weft-pilot",
+  "configuration_id": "d608948d-63ff-49e8-9e27-151fa2938f6d~asenvcfg_6631729fbed48191899b4e7c17a29331",
+  "catalog_version": "e1ba7ae9-e5d4-4ddb-92cb-a6415c57831a~cecfgver_6acb7468b61881a2a9c43a14fe06a85c",
+  "version_evidence": "parent catalog before creation; not independently exposed in child",
+  "runtime_environment_id": "ccarenv_b64_Y2NhcmVudl85MTIyNGUwNzIxN2M4MTkxYTk3YTgyYTAxYzk2MjhlYw",
+  "source_head": "d031cef02ab4a417760bca46e90a63917d215d31",
+  "baseline_matches": true,
+  "network": {
+    "runtime_documented_status": "enabled",
+    "normal_proxy": "inherited, unchanged",
+    "effective_allowlist_enforcement": "not independently exposed or verified",
+    "preset_custom_host_and_privacy": "owner-reported UI settings"
+  },
+  "request": {
+    "utc": "2026-10-11T11:39:04.029599Z",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE145nnn/GSE145031/suppl/GSE145031_RAW.tar",
+    "method": "HEAD",
+    "count": 1,
+    "redirects_followed": false,
+    "retries": 0,
+    "proxy_connect_status": 200,
+    "http_status": 200,
+    "content_length": 349204480,
+    "expected_length_matches": true,
+    "location": null,
+    "curl_exit_code": 0,
+    "payload_downloaded": false
+  },
+  "settings_or_ledger_changed": false,
+  "scientific_dispatch": "HOLD; not authorized",
+  "ui_verified_by_root": {
+    "published": true,
+    "additional_allowed_domains": [
+      "ftp.ncbi.nlm.nih.gov"
+    ],
+    "preset": "package_managers",
+    "visibility": "Only me",
+    "source_pin_unchanged": true
+  },
+  "prior_config_head_check": "Proxy CONNECT 403 in the earlier worker; no routing bypass."
+}

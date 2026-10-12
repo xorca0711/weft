@@ -13,3 +13,6 @@ runs/
 dist/
 build/
 *.egg-info/
+
+# Private authenticated recovery claims and source capsules; never publish.
+.weft-recovery/

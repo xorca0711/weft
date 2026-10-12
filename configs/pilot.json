@@ -35,6 +35,6 @@
   "input_inventory_record": "records/pilot-inputs-20261011.json",
   "manual_source_review_status": "complete-for-bounded-pilot",
   "structural_input_audit_status": "passed-with-declared-coverage",
-  "execution_environment_recommendation": "owner-selected dot coordination + Codex Cloud execution; provisioning and runtime qualification pending",
+  "execution_environment_recommendation": "owner-selected dot coordination + Codex Cloud execution; private weft-pilot published at d031cef, bounded synthetic runtime and independent private Drive restore qualified; scientific worker/contract, large outputs and ledger authority remain unqualified",
   "input_hashes_qualification_note": "Hashes inventoried; not yet bound to an executable frozen scientific contract."
 }
