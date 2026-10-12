@@ -3,6 +3,11 @@
 Status: **read-only CLI probe passed; Weft cloud dispatch is not qualified**.
 No task, schedule, network change or API spending was created by this probe.
 
+**13 October update:** the owner authorized one synthetic-only task after access
+verification. Its [frozen scope and submission procedure](SYNTHETIC_LAUNCH_QUALIFICATION.md)
+are prepared. The browser still rejects `chatgpt.com` under a saved user permission;
+no task has been submitted. The earlier task-approval requirement is satisfied.
+
 ## Observed evidence
 
 The official [Codex CLI reference](https://learn.chatgpt.com/docs/developer-commands?surface=cli)
@@ -28,8 +33,8 @@ subscription or a fallback permission.
 1. Verify the intended AI-host account/workspace and `weft-pilot` environment
    through the documented CLI/product interface. Do not inspect/copy tokens or
    assume an AI-host login establishes GitHub/Drive identity.
-2. Obtain owner approval for **one synthetic-only cloud task** once its exact
-   environment and committed code are reviewable. Set one attempt. Use an
+2. Use the **one synthetic-only cloud task** authorized on 13 October once its exact
+   environment is verified, at the pinned committed code. Set one attempt. Use an
    isolated fixture catalog, with no B4 source, Choi ledger, external dataset,
    Drive upload, production queue or scientific execution.
 3. Record submission identity, status, bounded completion and recovery of its

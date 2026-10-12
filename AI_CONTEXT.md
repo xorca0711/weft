@@ -1,5 +1,10 @@
 # Agent entry point
 
+- Current launcher task: [13 October frozen synthetic scope](docs/SYNTHETIC_LAUNCH_QUALIFICATION.md).
+  One task is owner-authorized but unsubmitted. Browser access to `chatgpt.com`
+  is still blocked by a saved permission; do not circumvent it or ask again for
+  the settled task authorization. Verify access before submission, preserve one
+  submission intent and hold on unknown acknowledgement. Choi and B4 stay separate.
 - Latest backend addition: [single-catalog handoff and private intake staging](docs/BACKEND_HANDOFF.md).
   Synthetic tests pass; there is no cloud launcher deployment or distributed fencing.
   Expired/uncertain claims never reassign. Recovery ingests saved bytes only.

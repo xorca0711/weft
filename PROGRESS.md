@@ -2,6 +2,30 @@
 
 Update this before stopping work, every session.
 
+## Synthetic launcher qualification — 13 October 2026
+
+The owner authorized verifying the intended cloud route and one synthetic-only
+task in existing `weft-pilot`. The [frozen qualification scope](docs/SYNTHETIC_LAUNCH_QUALIFICATION.md)
+pins PR #10 revision `2c12090444e52108254f1c57831ecf80f239770f` and its 18 existing
+handoff/intake fixtures, with one submission/attempt, a 180-second test-process
+deadline and exact result readback. This is not approval to adopt the controls
+on live screening catalogs, merge the PR or enable recurrence.
+
+**Blocked before submission:** the browser again rejected the existing ChatGPT
+tab because a saved user permission blocks `https://chatgpt.com`. No workaround,
+private endpoint, new worker or cloud submission was attempted. Environment/account
+access is still unverified. The permission-setting question is pending; the task
+authorization itself is settled. Prepared prompt and submission state are private
+under `runs/launcher-qualification-20261013`.
+
+Next: once access is enabled, verify environment/account/policy, persist the exact
+submission intent, submit once, then retrieve and verify the terminal result without
+rerunning. Hold on an ambiguous acknowledgement. Choi administrative closeout remains
+complete; B4 stays held and M6 disabled. Zero tasks have been created for this
+qualification; this does not establish quiescence of the previously interrupted B4 worker.
+Offline documentation/configuration validation passed: 164 links and 15 source pins;
+Git whitespace checks passed. No runtime code changed or scientific tests reran.
+
 ## Backend continuation — 12 October 2026
 
 Implemented the [cooperative screening handoff and private intake staging](docs/BACKEND_HANDOFF.md)
@@ -43,8 +67,9 @@ historical; separate verification receipts establish current remote preservation
 without another ledger mutation. Private evidence is under
 `runs/backend-handoff-20261012`.
 
-Exact next steps: review PR #10's control change, then verify the intended CLI
-environment before requesting one synthetic-only launch. No new job follows release.
+At this checkpoint, next steps were control review and environment verification
+before requesting one synthetic-only launch. The owner subsequently authorized
+that task on 13 October; see the current section above. No new job followed release.
 Then qualify
 PC-off operation and prepare [independent B5 evaluation](docs/B5_EVALUATION_PREPARATION.md).
 B4 stays held, Choi never reruns, no further private export is authorized by this

@@ -753,3 +753,14 @@ No verification copy was activated. [Current evidence](records/backend-handoff-2
 Current summaries and the roadmap now distinguish this completed administrative
 work from the unqualified unattended launcher, held B4 review and disabled M6.
 No runtime code, scientific output or gate semantics changed in this update.
+
+## 2026-10-13 — Authorized synthetic launcher task; access hold
+
+| Date | Item | Proposed by | Decided by | Decision | Reason |
+|---|---|---|---|---|---|
+| 2026-10-13 | Verify intended cloud access and qualify one synthetic-only task | Codex launcher plan | Owner explicitly requested execution through completion | Prepare pinned 18-fixture task and one-submission recovery procedure; hold before dispatch while browser access is denied | Verify the actual environment without duplicate submission, new privileges or touching Choi/B4 |
+
+The browser tool again reported a saved permission blocking `chatgpt.com` and
+explicitly prohibited alternate-route workarounds. No cloud task was created and
+no fixture was rerun locally. [Prepared scope](docs/SYNTHETIC_LAUNCH_QUALIFICATION.md)
+separates manual submission discipline from an implemented idempotent launcher.
