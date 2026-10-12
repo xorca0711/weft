@@ -85,6 +85,13 @@ If it still denies access, preserve the mismatch for product troubleshooting.
 Do not repeatedly ask for the already-enabled setting or bypass the enforcement.
 No alternate private endpoint or credential route was tried; no task was submitted.
 
+The later owner-requested restart/retry still produced the same denial with a fresh
+browser inventory. This diagnostic did not resolve access. Further agent-driven
+browser attempts are held pending product troubleshooting. The owner can manually
+start the already-authorized task through Work in > Cloud > weft-pilot using the
+prepared prompt, then supply its link for supported task-status/result inspection.
+Do not submit a duplicate: the recorded agent submission count remains zero.
+
 Official references checked on 13 October:
 [CLI cloud commands](https://learn.chatgpt.com/docs/cli/reference) and
 [published cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environments).

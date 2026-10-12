@@ -3,8 +3,9 @@
 - Current launcher task: [13 October frozen synthetic scope](docs/SYNTHETIC_LAUNCH_QUALIFICATION.md).
   One task is owner-authorized but unsubmitted. The browser denies `chatgpt.com`
   even though the inspected saved config explicitly allows it. Permission and task
-  approval are settled; a full app restart/recheck is the next diagnostic, not a
-  guaranteed fix. Do not circumvent the denial. Verify access before submission, preserve one
+  approval are settled; the owner-requested restart/retry still failed. Product
+  troubleshooting or a user-operated launch with the prepared prompt is needed.
+  Do not circumvent the denial or submit a duplicate. Verify access before submission, preserve one
   submission intent and hold on unknown acknowledgement. Choi and B4 stay separate.
 - Latest backend addition: [single-catalog handoff and private intake staging](docs/BACKEND_HANDOFF.md).
   Synthetic tests pass; there is no cloud launcher deployment or distributed fencing.

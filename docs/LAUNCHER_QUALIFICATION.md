@@ -8,7 +8,10 @@ verification. Its [frozen scope and submission procedure](SYNTHETIC_LAUNCH_QUALI
 are prepared. The browser still rejects `chatgpt.com`, but read-only inspection
 confirmed the saved origin config explicitly allows access. The owner also confirmed
 the setting. A full app restart/recheck is the next diagnostic; active-thread policy
-is not inspected by `codex doctor`. No task has been submitted. Task approval is satisfied.
+is not inspected by `codex doctor`. The subsequent owner-requested restart/retry
+also returned the denial; do not repeat it without a relevant change. No task has
+been submitted. Task approval is satisfied; the prepared prompt supports a manual
+owner launch followed by task-link verification through permitted task tools.
 
 ## Observed evidence
 

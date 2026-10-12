@@ -23,11 +23,17 @@ the already-enabled setting again. No workaround, new worker or submission was
 attempted. Prepared prompt, submission state and redacted diagnostics are private
 under `runs/launcher-qualification-20261013`.
 
-Next: ask the owner to fully quit/reopen the desktop app, then retry the same allowed
-browser tool once. This is a configuration-reload diagnostic, not a confirmed fix.
-If denial persists, report the config/runtime discrepancy for product troubleshooting;
-do not switch routes to evade it. Once access works, verify environment/account/policy,
-persist the exact submission intent, submit once, then verify the terminal result without
+The owner's subsequent restart/retry request produced a fresh browser inventory,
+but the same in-app browser access check still returned the saved-preference denial.
+Restart/retry did not resolve access. Do not ask for the same setting change again
+or use another browser, private endpoint or automated route around this denial.
+
+Next: product troubleshooting is needed for agent browser access. The prepared prompt
+is available for the owner to manually create the already-authorized single task via
+Work in > Cloud > weft-pilot and return its task link. This is a user-operated handoff,
+not a second submission route for the agent. No agent submission has been attempted.
+After a task link is supplied, inspect its identity/policy and terminal result through
+supported task tools; stop if those tools also deny access. Verify the result without
 rerunning. Hold on an ambiguous acknowledgement. Choi administrative closeout remains
 complete; B4 stays held and M6 disabled. Zero tasks have been created for this
 qualification; this does not establish quiescence of the previously interrupted B4 worker.
