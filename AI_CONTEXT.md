@@ -12,6 +12,11 @@ The [synthetic job controls](docs/JOB_CONTROLS.md) include a ledger and built-in
 Docker fixture executor with verified local terminal receipts. One manual dot/cloud dispatch-return check passed; scientific qualification remains open.
 
 - [Current state](PROGRESS.md) owns completed work and exact next steps.
+- Next implementation priority is the [discovery/screening backend](docs/DISCOVERY_SCREENING_BACKEND.md):
+  B1-B3 coordinator, agent handoff and separate decision records, then a fresh
+  candidate batch. Choi M5 publication is a separate open track, not a coding
+  prerequisite. Do not enable schedules, release the held reservation or dispatch
+  another live job as a side effect of this plan.
 - [Discovery](docs/DISCOVERY.md), [decision buffer](docs/DECISION_BUFFER.md) and
   [manual reader](docs/LOCAL_READER.md) explain implemented operations and limits.
 - [Implementation plan](docs/IMPLEMENTATION_PLAN.md) owns milestones;

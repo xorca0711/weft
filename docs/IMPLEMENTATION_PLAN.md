@@ -31,6 +31,18 @@ One coordinator is sufficient. Separate roles do not require separate agents and
 are not independent biological replication. A source match enters the
 [decision buffer](DECISION_BUFFER.md); it never directly becomes a supporting claim.
 
+## Next priority: automate discovery and screening
+
+The [backend implementation sequence](DISCOVERY_SCREENING_BACKEND.md) now takes
+priority: B1 batch coordination -> B2 source-grounded agent screening -> B3 data
+and RQ compatibility -> B4 a bounded fresh-candidate batch -> B5 evaluation and
+separately authorized recurrence. These refine M1/M2/M3. Current Choi execution
+was manually coordinated; the autonomous screening chain is not implemented.
+Choi M5 publication remains open on a separate track and is not a prerequisite
+for developing or evaluating the discovery/screening backend. Preserve its held
+reservation; reconcile before new live dispatch. No gate or schedule is enabled
+by this planning change.
+
 ## Development stages and exit criteria
 
 Keep M0-M6 identifiers so existing receipts retain their meaning. M3/M4 are split
@@ -62,10 +74,11 @@ flowchart TD
     H --> K
     G -->|Yes| P["M4b: bounded Choi descriptive run"]
     P --> R["M5: reviewed evidence package and Ravel PR"]
-    R --> U["M6: unseen-paper qualification"]
-    U --> A["Separately activate bounded recurring operation"]
-    B --> E["M1 / M2: correction, coverage and independent screening evaluation"]
-    E --> U
+    B --> E["Next: M1/M2/M3 discovery and screening backend"]
+    E --> U["Fresh-candidate batch and independent screening evaluation"]
+    U --> A["M6: separately qualify and activate recurrence"]
+    U -.-> N["Later: new paper's analysis-readiness review"]
+    R --> Z["Choi closeout; separate from frontend implementation"]
 ```
 
 Future arrows are not implemented enforcement. The [cloud runbook](CLOUD_SETUP.md)
@@ -115,12 +128,10 @@ exhaustion retain resumable holds/attempts; do not retry blindly.
 
 ## Next code slice
 
-Implemented: `weft/` discovery/context/buffer/reading/validation; `configs/`;
-`integration/ravel.lock.json`; `tests/`; compact `records/`.
-Add job ledger, executor, coordinator handoff and exporter modules when functional.
-Implemented first M3 slice: [synthetic ledger](JOB_CONTROLS.md), immutable packets,
-exclusive claims and duplicate/unknown-outcome tests. Next: content-verified worker
-receipts, synthetic executor, hard limits and durable cloud ledger/artifact recovery.
-Numeric dependencies and Ravel analysis code belong to M4a after scope review.
-No automatic acceptance, merge, RQ registration, paid fallback or schedule follows
-from environment setup.
+Implement B1's bounded discovery batch coordinator over existing context,
+discovery, identity, queue and job-control primitives. Follow with B2's screening
+packet/result interface, B3's distinct eligibility/compatibility records and a
+fresh-candidate digest. See [deliverables and acceptance tests](DISCOVERY_SCREENING_BACKEND.md#concrete-implementation-order).
+The synthetic executor, checkpoint and transfer modules already exist; do not
+reimplement them or claim that their existence supplies semantic screening.
+No automatic acceptance, merge, RQ registration, paid fallback or schedule follows.

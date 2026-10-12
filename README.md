@@ -12,13 +12,15 @@
 | Synthetic executor and restart recovery | Descriptive only | [Recovery receipt](records/synthetic-recovery-integration-20261011.json) | Bounded Docker restart; synthetic recovery does not prove arbitrary job recovery |
 | Manual dot handoff and private checkpoints | Descriptive only | [Coordinator receipt](records/manual-coordinator-20261011.json) | Small synthetic recovery; no retention or distributed-lock guarantee |
 | Manual scientific cloud execution | Descriptive only | [Metadata](records/choi-metadata-20261011.json) and [Figure1 execution](records/choi-figure1-execution-20261012.json) | Metadata and Figure1 archive verified; [scientific review](docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md) complete with limits; publication pending |
-| Autonomous paper-to-question workflow | Not established | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Scientific workers, unattended agents and Ravel export remain planned |
+| Autonomous paper-to-question workflow | Not established | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Autonomous screening/orchestration and complete Ravel artifact publication remain unqualified |
 
 Weft is being built to bring new literature into an existing research programme:
 find papers against established questions and broader reading interests, explain
 their relevance, qualify reusable data, and coordinate bounded reproduction and
 exploratory analysis. The intended output is a traceable evidence package,
-including negative results, discrepancies and candidate questions.
+including negative results, discrepancies and candidate questions. The current
+search and reading commands require explicit invocation; there is no automatic
+search-to-screening agent loop yet.
 
 The name comes from the crosswise threads of woven fabric. **Weft** is the
 project name; `weft` is the repository and Python module name. It is not an acronym.
@@ -27,6 +29,10 @@ project name; `weft` is the repository and Python module name. It is not an acro
 scientific methods and evidence. Weft owns the automation that connects papers
 and jobs to that research. Personal career interests remain in an untracked
 private configuration, even though this repository is public.
+
+The next development priority is the [discovery and screening backend](docs/DISCOVERY_SCREENING_BACKEND.md):
+automate a bounded candidate batch, keeping reading value, data eligibility and
+RQ compatibility separate. Choi publication remains a parallel closeout task.
 
 ## Intended workflow
 

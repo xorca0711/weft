@@ -1,5 +1,22 @@
 # Current project state
 
+## Next development priority — discovery and screening backend — 12 October 2026
+
+At the owner's request to prioritize backend automation, the roadmap now separates
+Choi's pending publication from [discovery/screening implementation](docs/DISCOVERY_SCREENING_BACKEND.md).
+Current code provides manual Europe PMC search/dedup, pinned RQ context, the
+candidate buffer, XML reading packets and mechanical provenance checks. It does
+not run an autonomous semantic screening/gating loop. All 32 RQ identities can be
+loaded, but initial search profiles cover A0/A1 only.
+
+Next: implement and fixture-test B1 batch coordination, B2 structured cloud-agent
+handoff and B3 separate reading/data/RQ decisions; then run a bounded fresh-paper
+screening batch. Qualification and recurrence follow after review. No new Choi
+analysis, scientific acceptance, schedule, credential or backend deployment was
+performed in this planning update. Choi M5 remains open and its held reservation
+must be reconciled before new live dispatch. Documentation validation passed: 93 local links, 15 unchanged Ravel pins and
+scientific execution disabled. Diff-whitespace checks passed.
+
 ## Current stage — Choi scientific review complete; publication pending — 12 October 2026
 
 [Scientific review](docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md) and its
