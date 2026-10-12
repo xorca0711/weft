@@ -23,22 +23,24 @@ backup logically identical despite different SQLite byte hashes. A fresh
 read-only check in the original worker at **23:01:33 KST on 12 October** verified
 matching runtime identity, the original container exited with code 0/no OOM,
 PID 0 and captured process identities absent in the visible namespace.
-The owner has now relayed Mir's local checkpoint result: exactly one
-`administrative_closeout_reviewed` event appended, 31 total events, original
-30-event prefix and both scientific rows preserved. The 148,366-byte archive has
-exactly two members (manifest and ledger); local CRC/hash/read-only restoration
-reportedly passed. Root has not fetched its bytes. No restored ledger was
-activated, upload performed or reservation released. Exact private anchors and
-the prepared export-approval text are under `runs/backend-handoff-20261012`.
+The owner approved the exact administrative checkpoint export, and Mir reported
+one upload. Root independently verified the expected Drive identity, owner-only
+file/parent, downloaded all 148,366 bytes and checked the archive/member hashes,
+ZIP CRC, source/schema/parent anchors and a fresh inactive read-only restore.
+Exactly one `administrative_closeout_reviewed` event is present: 31 total events,
+the exact original 30-event prefix and both scientific rows preserved. The event
+explicitly retains HELD/no release and no scientific acceptance. No restored
+ledger was activated. Private receipts and the release-approval text are under
+`runs/backend-handoff-20261012`.
 
-Exact next steps: review this control change; obtain exact-payload approval for
-the new administrative checkpoint, then verify its owner-only Drive upload and
-download independently. Root rechecked the expected Drive identity and owner-only
-folder; export approval remains pending. Keep the reservation held until verified
-backup and explicit release authorization. Verify the
+Exact next steps: review this control change; obtain explicit authority for Mir
+to release only the completed Figure1 reservation and prepare a local final
+checkpoint. Release approval is pending; a final checkpoint would require its own
+exact-payload export and independent verification. No new job follows release.
+Verify the
 intended CLI environment before requesting one synthetic-only launch. Then qualify
 PC-off operation and prepare [independent B5 evaluation](docs/B5_EVALUATION_PREPARATION.md).
-B4 stays held, Choi never reruns, no new private export is authorized by this
+B4 stays held, Choi never reruns, no further private export is authorized by this
 change, and M6 recurrence remains disabled. [Evidence](records/backend-handoff-20261012.json).
 
 [PR #10](https://github.com/xorca0711/weft/pull/10) is open for explicit control
