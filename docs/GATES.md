@@ -5,6 +5,11 @@ identity holds, reading-priority transitions and source-hash/locator checks are
 implemented. Semantic claim review and G3–G8 runtime transitions are not. Ravel's existing
 gate remains the execution authority for Ravel analysis.
 
+The [batch interface](BATCH_SCREENING.md) enforces bounded discovery, current-source
+response ingestion and attempted XML-read limits. It does not implement the full
+gate engine below. Agent reasons and actor identities are not semantically or
+cryptographically certified; reading priority is never scientific eligibility.
+
 Every gate returns `pass`, `hold`, `reject` or `error`, with a reason code, inspected
 evidence references, policy/version, actor, timestamp and next action. Unknown is
 never silently treated as true. A hold has a reopening condition. A reject remains

@@ -1,6 +1,36 @@
 # Current project state
 
-## Next development priority — discovery and screening backend — 12 October 2026
+## Current backend implementation — 12 October 2026
+
+B1 bounded coordination and B2 screening packet/response mechanics are implemented
+on a scoped branch. [Guide](docs/BATCH_SCREENING.md) and
+[live development record](docs/BATCH_PILOT_20261012.md) own commands and limitations.
+Three Europe PMC streams returned 82 occurrences / 74 papers / 148 A0/A1 links.
+Five links across three papers were screened: one read next, two holds, two link
+rejections; 143 links remain deferred. One XML packet and four selected-text
+statements were checked; the assessment stays held for further source review.
+No figure/supplement/data eligibility, RQ support or human acceptance is claimed.
+
+The completed searches replayed without network calls; all five response replays
+were idempotent. A private 34-file checkpoint passed every hash and fresh read-only
+SQLite integrity/count checks. It was not activated. This is a local development
+test using the current agent, not cloud deployment qualification. Tests found and
+fixed malformed-observation handling and excessive CLI output. Final review added
+an overlapping-batch guard preserving existing decisions; focused tests pass.
+The prior full Windows run passed 140 tests with 23 platform-specific skips;
+four additional focused tests subsequently passed (22 new tests total). Both Linux CI runs passed on code revision `5915ba7`: **144 tests, no skips**,
+plus documentation validation (105 links / 15 pins).
+[PR #5](https://github.com/xorca0711/weft/pull/5) is stacked on PR #4; merge #4
+first, then retarget #5 to main and refresh checks. Neither PR was merged here.
+
+Next: review/merge this software change through its PR; qualify cloud handoff and
+restoration, including cached XML path reconciliation; implement B3 coverage and
+dataset records; review query disambiguation and paper-level ordering; then freeze
+an independent screening evaluation. No new credentials, schedule, paid model API,
+environment update or cloud launch occurred. The existing Choi ledger, reservation,
+Ravel PR #149 and publication hold remain unchanged. Choi M5 stays separate.
+
+## Historical planning checkpoint — discovery and screening backend — 12 October 2026
 
 At the owner's request to prioritize backend automation, the roadmap now separates
 Choi's pending publication from [discovery/screening implementation](docs/DISCOVERY_SCREENING_BACKEND.md).

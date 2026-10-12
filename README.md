@@ -6,6 +6,7 @@
 |---|---|---|---|
 | Local scaffold and pinned Ravel connection checks | Descriptive only | [Validation record](records/bootstrap-validation.json) | Software checks; no scientific validation |
 | Manual literature discovery and RQ review buffer | Descriptive only | [Live validation](records/discovery-validation.json) | Metadata matches and reading priority, not accepted claims |
+| Bounded discovery batches and screening-agent interface | Descriptive only | [Fresh-candidate test](docs/BATCH_PILOT_20261012.md) | 74 candidates; five link proposals; cloud deployment and semantic quality unqualified |
 | Manual source-bound reading packets | Descriptive only | [Local reader](docs/LOCAL_READER.md) | XML text/captions; semantic and figure review remain separate |
 | Choi figure, supplement and input review | Descriptive only | [Review receipt](records/pilot-review-20261011.json) | Source review and file integrity; current execution status is in PROGRESS |
 | Pinned Codex Cloud setup | Descriptive only | [Setup receipt](records/cloud-setup-20261011.json) | Private environment published; small export verified; no retention guarantee |
@@ -19,8 +20,10 @@ find papers against established questions and broader reading interests, explain
 their relevance, qualify reusable data, and coordinate bounded reproduction and
 exploratory analysis. The intended output is a traceable evidence package,
 including negative results, discrepancies and candidate questions. The current
-search and reading commands require explicit invocation; there is no automatic
-search-to-screening agent loop yet.
+batch coordinator executes bounded searches and supplies immutable screening
+packets to the calling agent. Structured responses retain reasons and holds.
+The [pull interface](docs/BATCH_SCREENING.md) has passed a fresh-candidate
+development test; it does not launch models or provide unattended cloud operation.
 
 The name comes from the crosswise threads of woven fabric. **Weft** is the
 project name; `weft` is the repository and Python module name. It is not an acronym.
@@ -31,8 +34,8 @@ and jobs to that research. Personal career interests remain in an untracked
 private configuration, even though this repository is public.
 
 The next development priority is the [discovery and screening backend](docs/DISCOVERY_SCREENING_BACKEND.md):
-automate a bounded candidate batch, keeping reading value, data eligibility and
-RQ compatibility separate. Choi publication remains a parallel closeout task.
+qualify the implemented batch/agent interface in the selected cloud route, then
+add figure/supplement/data review and independent screening evaluation. Choi publication remains a parallel closeout task.
 
 ## Intended workflow
 
@@ -49,7 +52,7 @@ flowchart TD
     Q["Broad, contrary and adjacent queries"] --> D
     D --> B["Review buffer: proposed paper-to-RQ links"]
     B --> T["Reading priority: read next, hold or reject"]
-    T --> P["Source-bound reading packet: manual baseline"]
+    T --> P["Bounded agent packet and structured response"]
     O["Dot coordinator: manual handoff qualified"] -.-> P
     P -.-> V["Review findings, units, limitations and RQ compatibility"]
     V -.->|eligible data| C["Freeze contract and qualify Codex Cloud runtime"]
@@ -111,6 +114,7 @@ implemented safeguards from remaining qualification work.
 
 | If you want to… | Read |
 |---|---|
+| Operate the batch/agent interface and inspect fresh candidates | [Batch guide](docs/BATCH_SCREENING.md) and [candidate digest](docs/BATCH_PILOT_20261012.md) |
 | Run bounded searches and inspect receipts | [Discovery guide](docs/DISCOVERY.md) |
 | Understand why a paper is not immediately supporting evidence | [Decision buffer](docs/DECISION_BUFFER.md) |
 | See the full development roadmap and current stage | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) |
@@ -144,8 +148,9 @@ contains the revision in [ravel.lock.json](integration/ravel.lock.json):
 python -m weft verify-ravel --repo /path/to/ravel
 ```
 
-Use the [discovery commands](docs/DISCOVERY.md) to search and inspect the buffer,
-then the [manual reader](docs/LOCAL_READER.md) to prepare an eligible paper.
+Use the [batch commands](docs/BATCH_SCREENING.md) for coordinated searches and
+structured screening, or the lower-level [discovery commands](docs/DISCOVERY.md)
+and [manual reader](docs/LOCAL_READER.md) for individual operations.
 
 The verifier reads **committed blobs at the pinned revision**, so local edits are
 neither consumed nor overwritten. It does not run historical analysis scripts,
