@@ -1,0 +1,12 @@
+{
+  "created_at": "2026-10-11T08:49:24.761745+00:00",
+  "scope": "Mechanical source hash, audit-record consistency, authority flags and local links; not independent semantic or biological validation",
+  "ok": true,
+  "verified_cached_source_files": 19,
+  "all_root_and_docs_local_links": 58,
+  "prior_reading_record_byte_preserved": true,
+  "ravel_source_blobs_verified_by_weft_cli": 15,
+  "offline_regression_tests_passed": 58,
+  "integration_base": "59aa0f740b8e3d6d856684ef7052f5e7d77b7820",
+  "scientific_execution_enabled": false
+}

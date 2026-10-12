@@ -30,5 +30,11 @@
   "scientific_contract": null,
   "input_hashes_qualified": false,
   "runtime_lock_qualified": false,
-  "published_result_tolerance_qualified": false
+  "published_result_tolerance_qualified": false,
+  "source_review_record": "records/pilot-review-20261011.json",
+  "input_inventory_record": "records/pilot-inputs-20261011.json",
+  "manual_source_review_status": "complete-for-bounded-pilot",
+  "structural_input_audit_status": "passed-with-declared-coverage",
+  "execution_environment_recommendation": "owner-selected dot coordination + Codex Cloud execution; provisioning and runtime qualification pending",
+  "input_hashes_qualification_note": "Hashes inventoried; not yet bound to an executable frozen scientific contract."
 }

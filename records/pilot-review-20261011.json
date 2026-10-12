@@ -1,0 +1,526 @@
+{
+  "schema_version": 1,
+  "review_id": "P001-source-review-20261011-v2",
+  "pilot": "P001-choi2020",
+  "created_at": "2026-10-11T08:46:18.909111+00:00",
+  "actor": "Codex task agent",
+  "actor_kind": "agent",
+  "extends": "records/pilot-reading-20261011.json",
+  "previous_record_preserved": true,
+  "status": "manual-source-review-complete; scientific-execution-held",
+  "exposure": "historical-outcomes-known",
+  "ravel_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+  "scope": "Figure 1 B-D target, all main figure/caption and S1-S7 context review; fresh GEO metadata and local GSE145031 structural integrity. No biological analysis or independent semantic evaluation.",
+  "sources": [
+    {
+      "file": "source.xml",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7487779/fullTextXML",
+      "sha256": "bd84f05276c124ddd7fdab3e29407bc26c84f35fd04a2a1fde66030cc4cb9736",
+      "edition": "Published article XML; reused from earlier reading packet",
+      "status": "previously-retrieved-and-inspected"
+    },
+    {
+      "file": "cambridge-accepted-manuscript.pdf",
+      "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/cff8fe07-88da-4e51-838e-dc0fd5e05979/content",
+      "retrieved_at": "2026-10-11T08:25:45.807565+00:00",
+      "status": "retrieved",
+      "bytes": 534477,
+      "sha256": "a96f49634164673b6009607b75eac137e25e8f5e1697698686e51ec59b6c3d5b"
+    },
+    {
+      "file": "cambridge-bitstream.json",
+      "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/cff8fe07-88da-4e51-838e-dc0fd5e05979",
+      "retrieved_at": "2026-10-11T08:25:45.809880+00:00",
+      "status": "retrieved",
+      "bytes": 1439,
+      "sha256": "6cbc8078fc303220a64e80f0632cb79f81fc3198cfd0c4108baed72c7a29d04f"
+    },
+    {
+      "file": "cambridge-bundle-bitstreams.json",
+      "url": "https://api.repository.cam.ac.uk/server/api/core/bundles/861d3afe-cbac-4daf-9a04-28a3364f602e/bitstreams",
+      "retrieval_started_at": "2026-10-11T08:30:56.099346+00:00",
+      "finished_at": "2026-10-11T08:30:57.279020+00:00",
+      "status": "retrieved",
+      "bytes": 16667,
+      "sha256": "710064910cd67bc2eef1cffce957750257243fefb235bbe486361e153087710d"
+    },
+    {
+      "file": "cambridge-figure-1.tif",
+      "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/de626e76-8afc-44d6-aa55-4e928bda7392/content",
+      "retrieval_started_at": "2026-10-11T08:30:57.383405+00:00",
+      "finished_at": "2026-10-11T08:31:00.935874+00:00",
+      "status": "retrieved",
+      "bytes": 4378692,
+      "sha256": "e0ccc9ddb7dc8e21aa958abde603ba8eff0f7da5db4c5c4a14c2f815d456af34"
+    },
+    {
+      "file": "cambridge-figure-2.tif",
+      "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/9260c4a6-b9a4-4a85-9df5-c2449a9bc87b/content",
+      "retrieval_started_at": "2026-10-11T08:30:57.385868+00:00",
+      "finished_at": "2026-10-11T08:31:08.310384+00:00",
+      "status": "retrieved",
+      "bytes": 7786692,
+      "sha256": "05e5f3249ec9d6f800b16270f020526d1782f4c11519f75cfbbbb10a2b375633"
+    },
+    {
+      "file": "cambridge-figure-3.tif",
+      "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/9065c30e-aaf7-4fc3-82f6-2c1a9dc37ac6/content",
+      "retrieval_started_at": "2026-10-11T08:31:01.006392+00:00",
+      "finished_at": "2026-10-11T08:31:06.289780+00:00",
+      "status": "retrieved",
+      "bytes": 17126756,
+      "sha256": "ce6c2946bde05a0d8edcf39073dbfcb0c8706ab43484b553b8e8539c807f1021"
+    },
+    {
+      "file": "cambridge-figure-4.tif",
+      "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/e010399f-7b37-4ec9-a895-149845315319/content",
+      "retrieval_started_at": "2026-10-11T08:31:04.477882+00:00",
+      "finished_at": "2026-10-11T08:31:08.493316+00:00",
+      "status": "retrieved",
+      "bytes": 13406160,
+      "sha256": "8f5568eafda8a0555113a368509d116b5e16bca1f67185c019b32219666b7918"
+    },
+    {
+      "file": "cambridge-figure-5.tif",
+      "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/be3ba3dc-dc39-4e52-826b-5ce12d8be8e2/content",
+      "retrieval_started_at": "2026-10-11T08:31:06.501339+00:00",
+      "finished_at": "2026-10-11T08:31:10.940662+00:00",
+      "status": "retrieved",
+      "bytes": 13882760,
+      "sha256": "0e4d794bdd1934eff3340a3a5b7b95115a12529dff5a9b28cdd028a77ef9445d"
+    },
+    {
+      "file": "cambridge-figure-6.tif",
+      "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/eae7651f-0b59-4339-973a-ac16bd0ee2da/content",
+      "retrieval_started_at": "2026-10-11T08:31:08.375783+00:00",
+      "finished_at": "2026-10-11T08:31:13.259620+00:00",
+      "status": "retrieved",
+      "bytes": 3549380,
+      "sha256": "50a25b15ffaf08bb859c00482e8d82eb8b3e2f32822c755a561350c658f80c99"
+    },
+    {
+      "file": "cambridge-figure-7.tif",
+      "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/526e3c41-8b0f-4690-976e-e5d706e22922/content",
+      "retrieval_started_at": "2026-10-11T08:31:08.589204+00:00",
+      "finished_at": "2026-10-11T08:31:25.542174+00:00",
+      "status": "retrieved",
+      "bytes": 13187020,
+      "sha256": "e1a6a4419a1fc6f27d91d11de99eb3a49c3da5049cd7b5d91b4c482b5d281ef0"
+    },
+    {
+      "file": "cambridge-supplement.pdf",
+      "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/22fd2c5e-5522-4023-a5c0-4a7eda7c05d2/content",
+      "retrieval_started_at": "2026-10-11T08:30:57.380687+00:00",
+      "finished_at": "2026-10-11T08:31:04.138219+00:00",
+      "status": "retrieved",
+      "bytes": 23446227,
+      "sha256": "d304e01ad5a55e55c0c0ccfc8acdbbad8e5053db1fb70793a9d4ea442a6855eb"
+    },
+    {
+      "file": "verified-GSE144468-filelist.txt",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE144nnn/GSE144468/suppl/filelist.txt",
+      "retrieval_started_at": "2026-10-11T08:37:27.617570+00:00",
+      "finished_at": "2026-10-11T08:37:28.301352+00:00",
+      "status": "retrieved",
+      "bytes": 545,
+      "sha256": "a17c8fbc212d4fafb63bf5625446f5f9100e78a8f128c26f64771ea1dd4c5dac"
+    },
+    {
+      "file": "verified-GSE144468_family.soft.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE144nnn/GSE144468/soft/GSE144468_family.soft.gz",
+      "retrieval_started_at": "2026-10-11T08:37:25.708555+00:00",
+      "finished_at": "2026-10-11T08:37:27.615250+00:00",
+      "status": "retrieved",
+      "bytes": 3244,
+      "sha256": "de7fdca5fa788583f17aa1598c3d319981761f39d804bc89569a3763f7331777"
+    },
+    {
+      "file": "verified-GSE144598-filelist.txt",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE144nnn/GSE144598/suppl/filelist.txt",
+      "retrieval_started_at": "2026-10-11T08:37:27.628000+00:00",
+      "finished_at": "2026-10-11T08:37:28.322342+00:00",
+      "status": "retrieved",
+      "bytes": 219,
+      "sha256": "a3afabbbd7ad9e2eddddda80308cf7327acdb9267e6a44304859c1d95c541ce9"
+    },
+    {
+      "file": "verified-GSE144598_family.soft.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE144nnn/GSE144598/soft/GSE144598_family.soft.gz",
+      "retrieval_started_at": "2026-10-11T08:37:27.627325+00:00",
+      "finished_at": "2026-10-11T08:37:28.325355+00:00",
+      "status": "retrieved",
+      "bytes": 3040,
+      "sha256": "7f44108c09f90ec0fe2c38156b76771f2bb429df7890f2c49204c6aea5f48f19"
+    },
+    {
+      "file": "verified-GSE145031-filelist.txt",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE145nnn/GSE145031/suppl/filelist.txt",
+      "retrieval_started_at": "2026-10-11T08:37:25.704055+00:00",
+      "finished_at": "2026-10-11T08:37:27.609227+00:00",
+      "status": "retrieved",
+      "bytes": 1489,
+      "sha256": "d8086354afdfd93f2e4f91797ddb0309c6157d01751f7e08a19d3c5ebaf797de"
+    },
+    {
+      "file": "verified-GSE145031_family.soft.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE145nnn/GSE145031/soft/GSE145031_family.soft.gz",
+      "retrieval_started_at": "2026-10-11T08:37:25.702899+00:00",
+      "finished_at": "2026-10-11T08:37:27.617570+00:00",
+      "status": "retrieved",
+      "bytes": 3672,
+      "sha256": "0f8f3b1d98318e8ff4681005a5c37b641c202bc55e013190de08ff12a71b356f"
+    },
+    {
+      "file": "epmc-recovered-mmc1.pdf",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7487779/supplementaryFiles",
+      "member": "mmc1.pdf",
+      "status": "complete-member-crc-verified",
+      "bytes": 23443359,
+      "sha256": "d437008cc0f804cf1c4962e0070cf901d48c3a7e7657d62b796d58ab0b0c251e",
+      "edition": "Publisher supplementary Document S1; 17 PDF pages including cover",
+      "transport_complete": false,
+      "archive_central_directory_verified": false,
+      "transport_bytes": 24453420,
+      "transport_sha256": "73212c0dbcd753d201c2c8d0b0628cc599b22c14862508ef477f5daaf02af4c3",
+      "method": "Read sequential local ZIP members; require deflate end marker, descriptor size and CRC32 agreement; ignore incomplete member. No path-based extraction."
+    }
+  ],
+  "coverage": [
+    {
+      "main_figure": "1",
+      "topic": "State map and library composition",
+      "main_pixels": "institutional author-deposited TIFF inspected",
+      "published_caption_locator": "XML fig[@id=\"fig1\"]",
+      "supplement": "S1",
+      "cambridge_pdf_pages": [
+        2,
+        3
+      ],
+      "official_pdf_pages": [
+        3,
+        4
+      ],
+      "supplement_review": "All S1-S7 figure pages visually inspected; all legends read; official pages verified identical after cover alignment.",
+      "boundary": "P001 target B-D; S1A sorting and S1B-C marker support; E-F trajectory and S1D enrichment are context only."
+    },
+    {
+      "main_figure": "2",
+      "topic": "Macrophage co-culture and IL-1beta organoids",
+      "main_pixels": "institutional author-deposited TIFF inspected",
+      "published_caption_locator": "XML fig[@id=\"fig2\"]",
+      "supplement": "S2/S3",
+      "cambridge_pdf_pages": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "official_pdf_pages": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "supplement_review": "All S1-S7 figure pages visually inspected; all legends read; official pages verified identical after cover alignment.",
+      "boundary": "Tomato-negative profiles and organoids are separate input populations; not appended to the Figure 1 denominator."
+    },
+    {
+      "main_figure": "3",
+      "topic": "SPC, Ndrg1 and Krt8 lineage experiments",
+      "main_pixels": "institutional author-deposited TIFF inspected",
+      "published_caption_locator": "XML fig[@id=\"fig3\"]",
+      "supplement": "S4",
+      "cambridge_pdf_pages": [
+        8,
+        9,
+        10
+      ],
+      "official_pdf_pages": [
+        9,
+        10,
+        11
+      ],
+      "supplement_review": "All S1-S7 figure pages visually inspected; all legends read; official pages verified identical after cover alignment.",
+      "boundary": "Fate evidence comes from tracing experiments; RNA clusters do not reproduce those experiments."
+    },
+    {
+      "main_figure": "4",
+      "topic": "Il1r1/Hif1a perturbation and metabolic assays",
+      "main_pixels": "institutional author-deposited TIFF inspected",
+      "published_caption_locator": "XML fig[@id=\"fig4\"]",
+      "supplement": "S5/S6",
+      "cambridge_pdf_pages": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "official_pdf_pages": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "supplement_review": "All S1-S7 figure pages visually inspected; all legends read; official pages verified identical after cover alignment.",
+      "boundary": "Genotype contrasts, organoid perturbations and ECAR are distinct endpoints; preserve section/experiment nesting."
+    },
+    {
+      "main_figure": "5",
+      "topic": "Il1r1-labelled AT2 response",
+      "main_pixels": "institutional author-deposited TIFF inspected",
+      "published_caption_locator": "XML fig[@id=\"fig5\"]",
+      "supplement": "S7A-B",
+      "cambridge_pdf_pages": [
+        15,
+        16
+      ],
+      "official_pdf_pages": [
+        16,
+        17
+      ],
+      "supplement_review": "All S1-S7 figure pages visually inspected; all legends read; official pages verified identical after cover alignment.",
+      "boundary": "Labelled-subset evidence does not make the sequenced Figure 1 libraries independent animals."
+    },
+    {
+      "main_figure": "6",
+      "topic": "ATAC accessibility in Il1r1-positive versus bulk AT2",
+      "main_pixels": "institutional author-deposited TIFF inspected",
+      "published_caption_locator": "XML fig[@id=\"fig6\"]",
+      "supplement": "S7A-G",
+      "cambridge_pdf_pages": [
+        15,
+        16
+      ],
+      "official_pdf_pages": [
+        16,
+        17
+      ],
+      "supplement_review": "All S1-S7 figure pages visually inspected; all legends read; official pages verified identical after cover alignment.",
+      "boundary": "Subset versus bulk, not positive versus negative; four GSM entries but only two processed tracks; outside P001."
+    },
+    {
+      "main_figure": "7",
+      "topic": "Maturation, IL-1beta withdrawal, glycolysis inhibition and human tissue",
+      "main_pixels": "institutional author-deposited TIFF inspected",
+      "published_caption_locator": "XML fig[@id=\"fig7\"]",
+      "supplement": "S7H-I",
+      "cambridge_pdf_pages": [
+        15,
+        16
+      ],
+      "official_pdf_pages": [
+        16,
+        17
+      ],
+      "supplement_review": "All S1-S7 figure pages visually inspected; all legends read; official pages verified identical after cover alignment.",
+      "boundary": "Organoid perturbations and human images supply different evidence; no functional or human inference from P001."
+    }
+  ],
+  "supplement_edition_comparison": {
+    "supersedes_comparison": "supplement-edition-comparison.json",
+    "correction": "Official PDF has one additional publisher cover; compare institutional page N against official N+1. Original unaligned comparison retained.",
+    "method": "Poppler 110 dpi exact RGB pixels; pypdf whitespace-normalized text",
+    "pages": [
+      {
+        "cambridge_pdf_page": 1,
+        "epmc_pdf_page": 2,
+        "raster_identical_at_110dpi": true,
+        "normalized_text_identical": true
+      },
+      {
+        "cambridge_pdf_page": 2,
+        "epmc_pdf_page": 3,
+        "raster_identical_at_110dpi": true,
+        "normalized_text_identical": true
+      },
+      {
+        "cambridge_pdf_page": 3,
+        "epmc_pdf_page": 4,
+        "raster_identical_at_110dpi": true,
+        "normalized_text_identical": true
+      },
+      {
+        "cambridge_pdf_page": 4,
+        "epmc_pdf_page": 5,
+        "raster_identical_at_110dpi": true,
+        "normalized_text_identical": true
+      },
+      {
+        "cambridge_pdf_page": 5,
+        "epmc_pdf_page": 6,
+        "raster_identical_at_110dpi": true,
+        "normalized_text_identical": true
+      },
+      {
+        "cambridge_pdf_page": 6,
+        "epmc_pdf_page": 7,
+        "raster_identical_at_110dpi": true,
+        "normalized_text_identical": true
+      },
+      {
+        "cambridge_pdf_page": 7,
+        "epmc_pdf_page": 8,
+        "raster_identical_at_110dpi": true,
+        "normalized_text_identical": true
+      },
+      {
+        "cambridge_pdf_page": 8,
+        "epmc_pdf_page": 9,
+        "raster_identical_at_110dpi": true,
+        "normalized_text_identical": true
+      },
+      {
+        "cambridge_pdf_page": 9,
+        "epmc_pdf_page": 10,
+        "raster_identical_at_110dpi": true,
+        "normalized_text_identical": true
+      },
+      {
+        "cambridge_pdf_page": 10,
+        "epmc_pdf_page": 11,
+        "raster_identical_at_110dpi": true,
+        "normalized_text_identical": true
+      },
+      {
+        "cambridge_pdf_page": 11,
+        "epmc_pdf_page": 12,
+        "raster_identical_at_110dpi": true,
+        "normalized_text_identical": true
+      },
+      {
+        "cambridge_pdf_page": 12,
+        "epmc_pdf_page": 13,
+        "raster_identical_at_110dpi": true,
+        "normalized_text_identical": true
+      },
+      {
+        "cambridge_pdf_page": 13,
+        "epmc_pdf_page": 14,
+        "raster_identical_at_110dpi": true,
+        "normalized_text_identical": true
+      },
+      {
+        "cambridge_pdf_page": 14,
+        "epmc_pdf_page": 15,
+        "raster_identical_at_110dpi": true,
+        "normalized_text_identical": true
+      },
+      {
+        "cambridge_pdf_page": 15,
+        "epmc_pdf_page": 16,
+        "raster_identical_at_110dpi": true,
+        "normalized_text_identical": true
+      },
+      {
+        "cambridge_pdf_page": 16,
+        "epmc_pdf_page": 17,
+        "raster_identical_at_110dpi": true,
+        "normalized_text_identical": true
+      }
+    ]
+  },
+  "published_figure1": {
+    "locator": "Institutional Figure 1B TIFF, cross-checked against published XML fig1 caption",
+    "total": 12086,
+    "state_counts": {
+      "AT2": 8524,
+      "Primed AT2": 2197,
+      "Cycling AT2": 268,
+      "DATPs": 836,
+      "AT1": 261
+    },
+    "displayed_percentages": {
+      "PBS_AT2": 97.69,
+      "D14_AT2": 37.39,
+      "D14_pAT2": 38.13,
+      "D14_cAT2": 6.19,
+      "D14_DATP": 16.83,
+      "D28_AT2": 72.43,
+      "D28_pAT2": 18.13,
+      "D28_AT1": 4.04
+    },
+    "percentages_are_plot_labels_not_recomputed_counts": true
+  },
+  "input_record": "records/pilot-inputs-20261011.json",
+  "input_record_sha256": "ba22b5e9ab3df1a30a18b35f97ed8e94d226a7782f4700a0c365e6f68f244c9e",
+  "source_method_locators": {
+    "pooling_and_sorting": "XML sec4.4.10",
+    "scRNA_processing_and_doublets": "XML sec4.4.11",
+    "contaminants": "XML sec4.4.12",
+    "ATAC_preparation_and_pooling": "XML sec4.4.9"
+  },
+  "denominator_hold": {
+    "captured_reported": 12514,
+    "contaminants_reported": 255,
+    "figure1_total": 12086,
+    "arithmetic_remainder": 173,
+    "interpretation": "The subtraction leaves 173; its exact filtering attribution and per-cell identity are not supplied in the inspected sources. Do not label these 173 as confirmed doublets."
+  },
+  "qualification": {
+    "source_access_for_bounded_review": "complete",
+    "input_structural_audit": "passed within declared coverage",
+    "scientific_contract": "not frozen",
+    "runtime": "not provisioned or qualified",
+    "published_cell_set": "not reconstructed",
+    "comparison_tolerance": "not qualified",
+    "independent_screening_evaluation": "not performed",
+    "decision_buffer": "held; no acceptance transition"
+  },
+  "host_observation": {
+    "observed_at_utc": "2026-10-11T08:40:43.1105018Z",
+    "os": "Microsoft Windows 11 Home",
+    "os_architecture": "ARM 64비트 프로세서",
+    "cpu": "Snapdragon(R) X - X126100 - Qualcomm(R) Oryon(TM) CPU",
+    "cores": 8,
+    "threads": 8,
+    "total_visible_memory_kib": 16365764,
+    "free_memory_kib": 2976564,
+    "x_free_bytes": 142928998400,
+    "wsl": "status command reported not installed earlier in this audit",
+    "scientific_analysis_run": false
+  },
+  "environment_recommendation": {
+    "preferred": "separate Linux x86-64 worker",
+    "proposed_host_cores": 4,
+    "preferred_host_memory_gib": 32,
+    "proposed_worker_memory_cap_gib": 16,
+    "fallback": "new X-drive Windows x64 environment, trusted adapted count workflow only; qualification required",
+    "fallback_proposed_worker_memory_cap_gib": 6,
+    "fallback_minimum_available_host_memory_gib": 10,
+    "status": "recommendation; no environment selected, provisioned or paid"
+  },
+  "access_failures_retained": [
+    "PMC/GEO browser CAPTCHA",
+    "Europe PMC binary links returned HTTP 403",
+    "Supplement archive transfer timed out at 45 seconds (4,984,040 bytes) and 240 seconds (24,453,420 bytes); complete mmc1.pdf independently validated within the latter partial archive",
+    "Article-plus-supplement mmc2.pdf not retrieved; treated as alternate packaging, not another experiment"
+  ],
+  "local_audit_cache": "runs/pilot-review-20261011-v1",
+  "audit_tools": [
+    {
+      "file": "audit_tools/inspect_choi_inputs.py",
+      "sha256": "78c93bf040bd76ddbafa63f7b1fa3d0d0949936ad033bfe9d7736d0545cb70f0",
+      "public_source_included": false
+    },
+    {
+      "file": "audit_tools/finish_choi_metadata.py",
+      "sha256": "ad88a8ade0d2ba7d678d78ca35ada49ca850afc955e5268cf4ef145dc20bfc4a",
+      "public_source_included": false
+    },
+    {
+      "file": "audit_tools/fetch_cambridge_review.py",
+      "sha256": "3a2414bc50ee7eae4ae1b1f9c2709d427abdabd304eba74397ec217f6e36709a",
+      "public_source_included": false
+    },
+    {
+      "file": "audit_tools/inspect_partial_supplement.py",
+      "sha256": "8f76b464e418cb07971ed1c294a19feb72dfbbc682d24aad7d7af3ae28adb4cb",
+      "public_source_included": false
+    }
+  ],
+  "claim_validated": false,
+  "human_scientific_acceptance": false,
+  "scientific_execution_allowed": false,
+  "scientific_analysis_run": false,
+  "rq_accepted_or_created": false
+}

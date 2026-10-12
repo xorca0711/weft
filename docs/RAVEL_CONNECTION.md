@@ -13,6 +13,15 @@ the main revision inspected during preparation. Selected Git blobs have SHA-256
 hashes; the verifier also checks that referenced RQ IDs exist in that registry.
 No local absolute path, private note or credential is stored in the manifest.
 
+## Discovery connection and review buffer
+
+The context builder resolves every registered question at the lock commit. Initial
+search profiles cover A0/A1; other questions require explicit query development.
+Packets retain canonical sections, hashes and dossier/result locators. The buffer
+stores proposed associations and never writes evidence into Ravel. Reading and
+claim compatibility review are separate stages; see [decision buffer](DECISION_BUFFER.md).
+This is more appropriate than making retrieval scores an RQ evidence authority.
+
 ## Read, run and return
 
 1. Resolve an explicit Ravel commit and verify manifest hashes. Build bounded
@@ -58,7 +67,9 @@ those stages are activated. A worker does not need repository administration or
 merge rights. Public CI must not execute untrusted fork code on the local machine.
 Private career notes are never bundled into Ravel context or public exports.
 
-Use `WEFT_DATA_ROOT` for downloaded data and `WEFT_RUN_ROOT` for operational runs.
+The implemented discovery/reading store uses `--store` (default `runs/discovery`
+relative to the invocation directory). Future scientific storage may use
+`WEFT_DATA_ROOT`/`WEFT_RUN_ROOT`; those environment variables are not consumed yet.
 Ravel source files and data remain where they are until an explicit migration.
 Avoid copying existing large datasets: use a verified read-only input reference
 when the worker can access them; record real file identities and checksums.

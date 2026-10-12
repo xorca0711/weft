@@ -2,41 +2,67 @@
 
 **Update this before stopping work, every session.**
 
-## Initial public repository — 11 October 2026
+## Dot + Codex Cloud roadmap — 11 October 2026
 
-The owner requested a separate implementation-plan repository, a concrete Ravel
-connection, agent workflow, automated gates, a first paper pilot, and a workflow
-diagram in the main README. Public visibility was explicitly selected.
+Work remains on `codex/discovery-review-buffer-20261011` in
+[PR #1](https://github.com/xorca0711/weft/pull/1). The refreshed main base is
+`59aa0f740b8e3d6d856684ef7052f5e7d77b7820`; the read-only Ravel pin remains
+`bfe26b876221cf6c6fa6f9b16a90cfb516b5998d`. Ravel files/evidence are unchanged.
+The PR contains discovery/reader and source-audit work; cloud setup must select its
+reviewed full revision instead of assuming main already contains it.
 
-Completed: architecture and staged implementation plan; agent/gate specifications;
-revision-pinned Ravel connection; historical Choi 2020 pilot contract draft;
-offline validator and read-only connection verifier; tests and CI configuration.
-Local validation passed: 11 unit tests, 20 documentation links and all 15 pinned
-Ravel source files. The [record](records/bootstrap-validation.json) contains code/
-configuration hashes and the exact scope. The initial sandbox invocation could
-not use temporary Git fixtures; the unchanged tests passed outside that restriction.
-Published at https://github.com/xorca0711/weft, with the physical local checkout
-at `X:\GitHub\weft`. Initial GitHub checks passed, and the independently fetched
-Ravel revision passed all 15 source-identity checks. The [remote validation record](records/remote-validation.json)
-links both completed runs at bootstrap commit `022aa6d`. The README Mermaid
-diagram was inspected in GitHub's rendered view. Later commits receive normal CI;
-the Actions page owns their current status.
+The owner selected **dot coordination and Codex Cloud execution**, with no extra
+local PC, and confirmed Create environment plus Weft repository availability.
+No published/qualified environment or dot assignment is confirmed. The
+[roadmap](docs/IMPLEMENTATION_PLAN.md), README diagram,
+[environment specification](docs/EXECUTION_ENVIRONMENT.md), pilot metadata and
+agent handoff reflect this choice. The [cloud runbook](docs/CLOUD_SETUP.md) provides
+owner access actions, the setup brief and required qualification receipts.
+The former 32-GiB separate-host proposal is superseded; actual cloud resources
+and scientific peak memory/runtime remain unknown.
 
-Not implemented: live discovery, model calls, durable task scheduler, scientific
-execution adapter, candidate generation and Ravel PR exporter. No biological
-pilot has run. No API credentials, runner registration or recurring automation
-has been configured. The Ravel directory migration remains deferred.
+Completed baseline: bounded Europe PMC discovery/dedup, pinned RQ context,
+proposal buffer, manual XML reader and Choi main-figure/S1-S7/input audit.
+See [source review](docs/PILOT_CHOI_REVIEW.md),
+[review receipt](records/pilot-review-20261011.json),
+[input inventory](records/pilot-inputs-20261011.json) and
+[prior validation](records/pilot-review-validation-20261011.json).
+These frozen records and the original reading assessment remain preserved.
+Initial profiles cover A0/A1; context supports all 32 RQs. M1 correction/version/
+recall and M2 independent screening evaluation remain unfinished.
 
-Next work, in order:
-1. Implement M1 source discovery, version reconciliation and query receipts.
-2. Implement M2 bounded context extraction and evidence-backed screening; evaluate
-   missed papers and source support before using rankings to route work.
-3. Implement M3 machine-enforced gates, durable job state and resource accounting.
-4. Qualify M4's isolated worker and new Ravel contract without rerunning historical
-   scripts in their frozen directories. Establish the pilot's input hashes and
-   runtime lock, then execute its bounded descriptive reproduction.
-5. Complete M5 integration as a reviewable evidence PR; qualify M6 on unseen papers.
+No cloud task, numerical run, Ravel contract, scientific acceptance, paid fallback
+or schedule was activated. Validators and scientific gate semantics are unchanged;
+all policy activation flags remain false. First-stage setup needs Python/Git,
+not scientific packages, new API secrets or access to the local research drive.
 
-External decisions: agent-account/backend availability, worker location and budget,
-full-text access, source-data availability and scientific contract acceptance.
-The operational caps in configuration are proposals, not spending authorization.
+## Exact next steps and external dependencies
+
+1. Owner prepares private `weft-pilot` from the reviewed PR revision using the
+   runbook. Review setup checks, publish and return the environment name/ID and
+   report/task link. Account/repository visibility is already confirmed; do not
+   request it again. Environment publication and qualification remain pending.
+2. Implement M3 job/attempt/lease, immutable references, cancellation, hard limits,
+   unknown-outcome reconciliation and artifact export/restore. Start with synthetic
+   tests; development can continue alongside cloud setup. Per-task SQLite copies
+   are not shared authoritative state.
+3. Qualify one manual delegation through the selected existing dot after M3 controls
+   exist. Verify cloud dispatch/return, ledger recovery and artifact retention without
+   an awake desktop. Select another service only for a demonstrated capability gap.
+4. Prepare/review the Ravel contract and dependency lock. Qualify public input
+   transfer, coordinates/values, sparse memory, enforced limits and comparison
+   criteria. Preserve known outcome exposure and published/adapted differences.
+5. Run P001 only when readiness passes, then propose reviewed Ravel integration.
+   No pAT2 call or no new RQ is legitimate. Qualify unseen papers and complete
+   screening/correction evaluation before recurring activation.
+
+This session has no verified cloud-environment inventory/provisioning tool; local
+project enumeration cannot establish cloud access. Owner confirmation establishes
+UI availability only. Additional artifact storage/access is a conditional future
+request, not a service already selected or a blocker to initial setup.
+
+Validation for this slice: **58 unit tests passed**, offline validation passed,
+all **66 root/docs local links** resolved and `git diff --check` passed. The source
+records, Ravel pin, scientific policy and validator/code files are unchanged.
+No biological rerun is needed. Prior audit files remain ignored in
+`runs/pilot-review-20261011-v1` on X:; cloud tasks retrieve inputs explicitly.

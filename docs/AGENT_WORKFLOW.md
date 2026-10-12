@@ -1,5 +1,22 @@
 # Agent workflow and context
 
+The implemented manual sequence is discovery → proposal buffer → reading priority
+→ source packet → source-bound assessment. The remaining roles below are targets.
+See [the buffer](DECISION_BUFFER.md) and [local reader](LOCAL_READER.md).
+
+## Selected execution surfaces
+
+The owner selected dot coordination and Codex Cloud execution on 11 October 2026.
+The local reader remains the implemented manual baseline. The first dot integration
+will be one explicit product task handoff qualified against structured receipts;
+no SDK or autonomous launcher is assumed. Codex Cloud runs pinned commands and
+returns artifacts; a Weft coordinator ledger records transitions; Ravel receives
+reviewed proposals. See the [cloud runbook](CLOUD_SETUP.md).
+
+A published environment is not a shared database. Fresh task workspaces must not
+create competing authoritative SQLite copies. Durable state recovery, resource
+limits and artifact export need qualification before numerical work.
+
 ## Role sequence
 
 | Role | Inputs | Required output | May not infer |
@@ -54,5 +71,6 @@ After activation, ordinary searches, source reads and qualified analysis jobs ca
 proceed within recorded policy without per-paper permission. Surface exceptions
 for unavailable access, budget changes, scientifically material design changes or
 authority to change canonical questions/claim grades. Finishing routine work is
-not a reason to ask for permission again. No standing execution authority is
-activated by the current planning scaffold.
+not a reason to ask for permission again. The earlier local Codex choice established the manual reader baseline. The selected
+cloud architecture retains manual dispatch first; neither that selection nor the
+discovery implementation activates unattended scientific execution.
