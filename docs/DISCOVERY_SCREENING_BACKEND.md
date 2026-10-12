@@ -29,7 +29,7 @@ separates this priority track from Choi M5 publication. PRs #4-#8 are merged int
 main with passing post-merge CI at every step; see [integration status](PR_STACK_INTEGRATION.md).
 The separate [M5 output package](M5_PUBLICATION_PLAN.md) is now publicly
 published with owner approval, independently recovered and qualified in clean CI.
-Human scientific disposition and Ravel integration remain open.
+The owner retained the descriptive benchmark; Ravel #149 is merged with passing main CI.
 
 ## What exists and what does not
 
@@ -150,8 +150,8 @@ usage is not a known dollar budget. Missing usage measurements stay unknown.
 
 Use one authoritative coordinator and verified private Drive checkpoints. Do not
 activate a restored task-local ledger as a competing writer. The Choi reservation
-is still held: reconcile its known outcome and preserve the pending publication
-dependency before any new scientific dispatch using that ledger. The approved
+is still held: reconcile its known outcome, published evidence and owner
+retention before any new scientific dispatch using that ledger. The approved
 screening-only store is separate. Implementing and fixture-testing B1-B3
 does not depend on changing that reservation or merging Ravel PR #149.
 
@@ -181,7 +181,7 @@ The profile/window was exposed; this is not independent semantic evaluation. B5
 quality evaluation and a supported unattended launcher remain future work.
 Before recurrence, obtain cadence, notification and usage-scope decisions.
 
-Choi M5 remains a separate track: publication and clean-checkout receipt
-restoration are qualified, while human disposition and Ravel integration remain
-open. It must not be marked complete. The next useful demonstration is discovery -> screening -> a reasoned
+Choi M5 is complete on its separate bounded track: publication/recovery,
+explicit owner descriptive retention and Ravel integration passed. This does not
+complete the fresh-paper backend or authorize general scientific dispatch. The next useful demonstration is discovery -> screening -> a reasoned
 candidate digest, not another manual reproduction of an already reviewed paper.

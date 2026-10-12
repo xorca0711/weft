@@ -2,36 +2,49 @@
 
 Update this before stopping work, every session.
 
-## Stack merged; M5 publication and clean-checkout recovery qualified — 12 October 2026
+## Backend stack integrated; bounded Choi M5 complete — 12 October 2026
 
-Weft PRs **#4 -> #5 -> #6 -> #7 -> #8** are merged, successors retargeted to main,
-with passing main CI before each next merge. Integrated main is `719666e`;
-[exact merge/CI record](records/pr-stack-merged-20261012.json).
+Weft PRs **#4 -> #5 -> #6 -> #7 -> #8** merged in order, successors retargeted
+to main, with main CI verified before each next merge. [Exact record](records/pr-stack-merged-20261012.json).
+The owner approved the separate Choi output release, retained its bounded
+descriptive discrepancy result and authorized Ravel #149 / Weft #9 integration.
 
-The owner approved the exact Choi package and public Ravel prerelease route.
-The [public release](https://github.com/xorca0711/ravel/releases/tag/choi-p001-figure1-v1)
-contains all 15 unchanged outputs, original receipt and manifest. Draft readback,
-unauthenticated recovery and all four clean-checkout CI checks pass at Ravel
-`4e44db497c72f64056688b78d828a47695384db4`. PR #149 is **ready for review**.
-[Publication record](records/choi-publication-20261012.json) ·
-[M5 plan and remaining steps](docs/M5_PUBLICATION_PLAN.md).
+Ravel #149 is merged at `34675134a5581989d028102a93ae51eebc84a501`; both main CI
+workflows passed. All 15 outputs and original receipt are publicly recoverable,
+hash-locked and restored in clean-checkout CI. No analysis reran, canonical RQ
+was created, causal claim accepted or claim grade promoted. **M5 is complete for
+this adapted, exposed descriptive benchmark.** [Closeout](docs/M5_PUBLICATION_PLAN.md)
+and [authority/publication/merge record](records/choi-publication-20261012.json).
 
-The first CI failure correctly caught a frozen `.gitignore` comment change;
-original bytes were restored without changing the validator or contract.
-Local qualification passed 158 tests (two skips) and 11,161 repository checks.
-No biological analysis reran, claim grade changed or private recovery record was
-published. The private coordinator and held reservation remain unchanged.
+The initial frozen-ignore-file CI failure and exact-byte correction remain in
+history. Local tests passed 158 cases (two skips); repository checks reached
+11,169 after the human disposition document. The private Choi coordinator and
+held reservation remain unchanged: reconcile them before any future job.
 
-**M5 remains open:** review the bounded descriptive/no-new-RQ disposition and
-Ravel PR #149, then record scientific authority and engineering integration
-separately. Reconcile the existing private coordinator before another job.
-B4 stays on hold; no worker, network policy or schedule changed. M1/M2/M3b and
-B3 remain partial. B5/M6 require independent evaluation and a supported launcher
-before any cadence/scope/usage decision. Choi is not an unseen evaluation case.
+B4 stays held. Fresh-paper progress is 74 unique papers, 148 proposed RQ links,
+five cloud link decisions, one held selected-text assessment, no completed fresh
+candidate eligibility review or scientific dispatch. [Frontend/backend and storage map](docs/WORKFLOW_AND_STORAGE.md).
 
-Private preparation evidence remains under
-`runs/m5-publication-preparation-20261012`; the earlier candidate inventory is
-historical. Current status is in [the marked roadmap](docs/IMPLEMENTATION_PLAN.md#established-state).
+Next is B5 independent evaluation preparation and supported launcher/recovery
+qualification. Freeze independent sampling, labels and criteria before a live
+evaluation; already-exposed Choi/development papers do not qualify as unseen.
+No new worker, scientific dispatch, policy update or recurring schedule is
+authorized by this closeout. M6 remains disabled. Resolve B4 through the platform
+before any permitted continuation. See [the marked roadmap](docs/IMPLEMENTATION_PLAN.md#established-state).
+
+The owner also requested Choi's scientific trial dossier move to Ravel's
+`weft_intake/choi-2020-p001/v1/`, with a root README trial note. The three
+scientific documents are replaced here by navigation stubs; five public receipt
+snapshots are copied unchanged for intake provenance. Runtime records and original
+receipt ancestry stay in Weft. The transfer manifest records hashes; no source
+data, private checkpoints or frozen outputs move. This documentation migration
+is separate from fresh-paper eligibility and does not change Ravel's mission. Ravel
+[#150](https://github.com/xorca0711/ravel/pull/150) merged the intake at
+`7840089dc78a42c25679e2083541c5df1507cfc6`, after all four CI checks passed.
+
+This Weft #9 update records the owner-authorized closeout and is to merge after
+its current CI passes. Private preparation remains under
+`runs/m5-publication-preparation-20261012`.
 
 ## Preserved B3 recovery / B4 platform hold — 12 October 2026
 

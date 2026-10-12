@@ -10,18 +10,20 @@ separate Figure1 run has executed and its complete evidence archive passed indep
 byte verification. [Scientific QC and paper comparison](docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md)
 are complete, with annotation/denominator limits and no new RQ proposed.
 Complete-output public release and clean-checkout restoration are qualified;
-human disposition and Ravel integration remain open. PROGRESS owns current status; never rerun the completed attempt.
+owner retention of the descriptive benchmark and Ravel #149 integration are complete. PROGRESS owns current status; never rerun the completed attempt.
 The [synthetic job controls](docs/JOB_CONTROLS.md) include a ledger and built-in
 Docker fixture executor with verified local terminal receipts. One manual dot/cloud dispatch-return check passed; scientific qualification remains open.
 
+- Choi scientific trial documents relocate to Ravel `weft_intake/choi-2020-p001/v1/`; local document stubs link the reviewed migration. Weft retains operational records and historical receipt ancestry. [Storage map](docs/WORKFLOW_AND_STORAGE.md).
 - [Current state](PROGRESS.md) owns completed work and exact next steps.
   The [marked roadmap](docs/IMPLEMENTATION_PLAN.md#established-state) separates
   operational qualification, remaining scientific evaluation and integration.
   [PRs #4-#8](docs/PR_STACK_INTEGRATION.md) are merged in order, with CI passing
   on every resulting main commit. [M5 publication](docs/M5_PUBLICATION_PLAN.md)
   is owner-approved, public, independently recovered and qualified by four
-  clean-checkout Ravel CI runs. PR #149 is ready for review; human scientific
-  disposition/integration remain open. Do not replace the published asset,
+  clean-checkout Ravel CI runs. The owner retained the bounded descriptive result;
+  PR #149 is merged and main CI passes. M5 is complete for this benchmark.
+  Do not replace the published asset,
   rerun analysis or release the coordinator reservation as an implied next step.
 - Next implementation priority is the [discovery/screening backend](docs/DISCOVERY_SCREENING_BACKEND.md):
   B1 and B2 mechanics passed fixtures, a local batch and a bounded manual cloud
@@ -50,7 +52,7 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
   screening stores were quiesced; the new B4 interruption has an unverified final
   state. Earlier private locators/receipts are in ignored
   `runs/screening-cloud-qualification-20261012`. No schedule is configured. Preserve
-  the original Choi worker. Choi M5 human review/integration is a separate open track, not a coding
+  the original Choi worker. Choi M5 is complete within its descriptive scope, not a coding
   prerequisite. Do not enable schedules, release the held reservation or dispatch
   another live job as a side effect of this plan.
 - [Discovery](docs/DISCOVERY.md), [decision buffer](docs/DECISION_BUFFER.md) and

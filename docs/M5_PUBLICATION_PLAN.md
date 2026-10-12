@@ -1,22 +1,23 @@
 # M5: complete Choi output publication
 
-**12 October 2026: owner-approved publication, independent public recovery and
-clean-checkout CI qualification passed.** [Ravel PR #149](https://github.com/xorca0711/ravel/pull/149)
-is ready for review at `4e44db497c72f64056688b78d828a47695384db4`; all four push/PR
-checks passed. Human scientific disposition and integration remain open. Choi is
-separate from B4 and the numerical analysis was not rerun.
+**12 October 2026: M5 complete for the bounded Choi descriptive benchmark.**
+The owner approved publication, retained the descriptive discrepancy result and
+authorized integration. [Ravel PR #149](https://github.com/xorca0711/ravel/pull/149)
+merged at `34675134a5581989d028102a93ae51eebc84a501`; both main CI workflows
+passed. No new RQ, causal claim or claim-grade promotion was approved. Choi
+remains separate from held B4; no numerical analysis reran.
 
 [Publication and CI record](../records/choi-publication-20261012.json) ·
 [Public evidence release](https://github.com/xorca0711/ravel/releases/tag/choi-p001-figure1-v1).
 The local-candidate record below preserves the earlier preparation checkpoint.
 
-## Prepared candidate
+## Published package
 
 | Item | Verified value |
 |---|---|
-| Proposed destination | Public release asset in `xorca0711/ravel` |
-| Proposed tag | `choi-p001-figure1-v1`, pinned to reviewed Ravel source `714945697b007f4a0046834b34251392c1cfbe5a` |
-| Proposed release title | Choi P001: descriptive Figure 1 evidence, v1 |
+| Destination | Public release asset in `xorca0711/ravel` |
+| Tag | `choi-p001-figure1-v1`, pinned to reviewed Ravel source `714945697b007f4a0046834b34251392c1cfbe5a` |
+| Release title | Choi P001: descriptive Figure 1 evidence, v1 |
 | Release classification | Prerelease evidence package; not a validated biological reproduction |
 | Asset | `choi-p001-figure1-v1-complete-outputs.zip` |
 | Compressed bytes | 105,582,086 |
@@ -46,12 +47,12 @@ the five exact values. Original files were not edited. Prior visual review of al
 five figures is reused. Pattern/metadata inspection is not an exhaustive privacy
 proof and did not use image OCR.
 
-## Recommended route and decision
+## Qualified route and owner decision
 
 Use a versioned **GitHub Release asset**, then restore it into its original paths
 before the unchanged Ravel receipt validator runs. GitHub documents a limit of
 less than 2 GiB per release asset and no aggregate release-size or bandwidth cap;
-the proposed ZIP fits. See [GitHub release storage documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases#storage-and-bandwidth-quotas).
+the published ZIP fits. See [GitHub release storage documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases#storage-and-bandwidth-quotas).
 The route uses the existing repository/account rather than a new paid storage
 service. It does not add the H5AD to ordinary Git history or enable Git LFS.
 
@@ -65,41 +66,31 @@ before the unchanged validators; its clean-checkout CI passed.
 The first CI run correctly rejected a comment-only `.gitignore` change because
 the file is frozen source provenance. Exact original bytes were restored, with
 no validator or contract change. The corrected head passed all checks.
-**Remaining human decision:** retain the bounded descriptive discrepancy record
-and review/integrate Ravel #149. Neither publication nor CI records scientific
-acceptance. The private coordinator reservation remains held.
+The owner subsequently retained the bounded descriptive discrepancy benchmark
+and approved Ravel #149 / Weft #9 integration. Ravel #149 merged and its two main
+checks passed. The [human disposition](https://github.com/xorca0711/ravel/blob/main/Research%20Article/gate1_02_choi_2020/weft_pilot_v1/REVIEW_DISPOSITION.md)
+is separate from successful publication or CI. The private coordinator reservation
+remains held; this closeout did not mutate the ledger.
 
-## Integration sequence — publication/restoration complete; review remains
+## Completed integration and remaining operational boundary
 
-Steps 1–4 below were implemented and qualified in Ravel #149, with the unchanged
-receipt validator and four passing clean-checkout CI runs. Steps 5–6 remain the
-review/coordination boundary; no new scientific job is authorized.
+1. Verified the external-service identity, pinned source, original receipt and
+   exact approved archive; uploaded to a draft release and verified readback.
+2. Published the prerelease and independently recovered its public bytes.
+3. Added the bounded, hash-locked restorer and rejection/preservation tests.
+4. Registered the unchanged receipt with all 15 outputs recoverable; qualified
+   both clean-checkout CI workflows without changing validator semantics.
+5. Recorded the owner's bounded retention, merged Ravel #149 and verified main CI.
 
-1. Recheck GitHub identity `xorca0711`, target repository, tag absence, original
-   receipt/source hashes and the selected package hash. Create a draft release
-   with the pinned tag and explicit descriptive-only limitations; upload only
-   this reviewed ZIP. Verify GitHub's downloaded bytes before publishing it.
-2. Publish the prerelease and independently download it without relying on the
-   local archive. Record release/asset IDs, resolved source revision, size and
-   SHA-256. Fail on a mismatch; never silently replace a published version.
-3. In a separate Ravel PR #149 change, add a narrow restoration step and checked-in
-   asset lock. Bound download size, pin SHA-256, reject unsafe/duplicate ZIP paths,
-   require the exact member inventory and preserve existing files on disagreement.
-   Extract only original declared output paths. Do not use this as an arbitrary
-   archive downloader or execute archive contents.
-4. Register the **unchanged** receipt only with all 15 outputs present. Update the
-   Ravel infrastructure inventory for the restoration mechanism and obtain
-   explicit review of that CI addition; do not change validator semantics.
-   Validate a clean clone against current Ravel main, including mismatch, missing
-   member and path traversal rejection tests. Keep source/contract/output bytes
-   and original unfavorable findings unchanged.
-5. Present the complete Ravel change for human review. Record the human scientific
-   disposition separately from engineering integration or merge. Preserve the
-   current no-new-RQ recommendation and all annotation/denominator limitations.
-6. Reconcile the same private Choi coordinator against the review/publication
-   evidence before any new job or reservation transition. Preserve checkpoint
-   ancestry and produce a verified backup through the existing approved route;
-   obtain exact-payload export authority where needed.
+Before any future job or reservation transition, reconcile the same private Choi
+coordinator with this publication and human disposition, preserve checkpoint
+ancestry and verify any authorized backup. This is an operational prerequisite
+for a later job, not permission to rerun the completed benchmark.
+
+The owner requested migration of the scientific trial dossier into Ravel's
+`weft_intake/choi-2020-p001/v1/`. Weft retains automation/deployment records and
+historical receipts; the intake collects source review, input inventories and
+scientific interpretation without moving existing frozen Ravel outputs.
 
 ## After M5
 

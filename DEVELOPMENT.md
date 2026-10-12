@@ -707,3 +707,28 @@ release, B4 continuation or schedule was inferred from that approval. B5/M6 rema
 planned. The [publication record](records/choi-publication-20261012.json) and
 [current plan](docs/M5_PUBLICATION_PLAN.md) separate accomplished engineering from
 the remaining scientific/integration authority.
+
+
+## 2026-10-12 — Human descriptive retention and M5 integration
+
+The owner explicitly selected “Retain the bounded result and merge both PRs.”
+Ravel's REVIEW_DISPOSITION.md records the limited descriptive discrepancy scope:
+no new RQ, causal claim or claim-grade promotion. After fresh CI passed, Ravel
+#149 merged at 34675134a5581989d028102a93ae51eebc84a501; both resulting main checks
+passed. Weft #9 records this completed bounded M5 and the interface/storage map.
+This is distinct from generic scientific acceptance or an unseen-paper evaluation.
+
+| Date | Item | Proposed by | Decided by | Decision | Reason |
+|---|---|---|---|---|---|
+| 2026-10-12 | Descriptive Choi retention and Ravel #149 / Weft #9 integration | Codex presented evidence, limitations and passing checks | Owner explicitly selected bounded retention and both merges | Complete M5 for this benchmark; preserve no-new-RQ/no-causal-claim limits | Recoverable unfavorable evidence is a valid completed pilot outcome |
+
+B4 stays held. The private coordinator reservation/checkpoint remain preserved;
+reconciliation is required before another job. The next backend work is B5
+independent evaluation preparation and supported launcher qualification, with M6
+disabled. No schedule, new cloud worker, biological rerun or bypass was initiated.
+
+## 2026-10-12 — Trial dossier ownership
+
+| Date | Item | Proposed by | Decided by | Decision | Reason |
+|---|---|---|---|---|---|
+| 2026-10-12 | Migrate Choi scientific dossier to Ravel weft_intake | Owner | Owner explicitly requested migration and trial framing | Retain Weft operational records and redirect scientific documents to versioned Ravel intake | Preserve Ravel's research identity and make the trial handoff discoverable |

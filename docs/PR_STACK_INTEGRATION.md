@@ -16,9 +16,10 @@ merge. No admin bypass, squash, branch deletion or scientific acceptance was use
 The [machine-readable integration record](../records/pr-stack-merged-20261012.json)
 contains exact heads, merge commits and check URLs. Retargeted comparisons were
 conflict-free; the final integration tree equals the reviewed PR #8 tree.
-Choi's Ravel #149 is now separately ready for review after its owner-approved
-publication and clean-checkout restoration qualification. B4 remains on hold.
-See [M5 publication preparation](M5_PUBLICATION_PLAN.md) for the next dependency.
+Choi's Ravel #149 was subsequently merged separately, after owner-approved
+descriptive retention, public recovery and clean-checkout checks. Its main CI
+passed at `34675134a5581989d028102a93ae51eebc84a501`. B4 remains on hold.
+See [M5 closeout](M5_PUBLICATION_PLAN.md) for the completed bounded integration and remaining operational boundary.
 
 ## Historical pre-merge audit
 
