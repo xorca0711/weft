@@ -344,3 +344,21 @@ artifact integrity from pending QC/figure interpretation and scientific acceptan
 No frozen contract, runner, validator, analysis output or canonical claim changed.
 Documentation validator and diff-whitespace checks passed; no numerical tests or
 scientific runs were repeated for this status-only change.
+
+## 2026-10-12 — Choi scientific review without a numerical rerun
+
+At the owner's request, Codex reconciled the recovered original outputs with the
+saved H5AD, visually inspected all five figures and compared with the audited
+paper Fig. 1/S1 and methods. The 1,497 read-only assertions passed. Ravel owns the
+full assessment; Weft records review provenance, absence of a new RQ proposal
+and remaining publication/integration conditions. pAT2 absence, exclusion and
+resolution sensitivity, DATP subcluster retention and figure-presentation limits
+are retained. The local audit reader required nullable-string decoding before
+it completed; no source output changed.
+
+Current handoff, README, pilot/environment and roadmap status now distinguish
+completed review from human acceptance and complete-output publication. Historical
+source/transfer records remain dated. No frozen pins, ledger, reservation, analysis,
+canonical questions, gates or acceptance policy changed. Offline validation passed (89 local links, 15 unchanged pins, scientific execution
+disabled), as did diff-whitespace checks. The large-H5AD publication route remains
+unqualified.

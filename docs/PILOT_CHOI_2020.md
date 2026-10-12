@@ -1,6 +1,8 @@
 # Pilot P001: Choi 2020, descriptive state recovery
 
-**Status: planned historical end-to-end pilot; not executed by Weft.**
+**Status: executed once; artifact QC and scientific review complete; publication/integration pending.**
+See the [current scientific review](PILOT_CHOI_SCIENTIFIC_REVIEW.md). The prospective
+design sections below preserve the original plan; the executed contract is in Ravel.
 The implementation team has read Ravel's previous outcomes. This is an exposed
 regression benchmark, not an unseen discovery test or independent replication.
 The software connection check is not completion of this paper pilot.
@@ -43,10 +45,11 @@ is retained separately from scientific acceptance. The subsequent
 [figure, supplement and dataset review](PILOT_CHOI_REVIEW.md) is complete:
 all main figures/S1-S7 were inspected, GEO samples mapped and local input integrity
 recorded. [Synthetic executor controls](JOB_CONTROLS.md) and the small private
-Drive recovery route now have bounded qualification evidence. This does not qualify
-scientific execution. No scientific worker, frozen new contract or outcome tolerance
-has been qualified. Input hashes exist in a review
-manifest but are not yet bound to an executable contract. See
+Drive recovery route have bounded qualification evidence. Subsequently, the frozen
+Ravel contract/runtime passed metadata and one Figure1 run. Complete artifact
+recovery and [scientific review](PILOT_CHOI_SCIENTIFIC_REVIEW.md) are verified; no
+biological success tolerance or acceptance is inferred. Complete-output publication
+and human review remain open. See
 [environment recommendation](EXECUTION_ENVIRONMENT.md) and [current state](../PROGRESS.md).
 
 ## Scientific contract draft

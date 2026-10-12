@@ -5,7 +5,9 @@ RQ context, a paper-to-question review buffer and XML reading packets are implem
 Unattended scientific dispatch is not implemented. The checkpointed manual route
 has completed one Ravel metadata run with independently verified evidence; the
 separate Figure1 run has executed and its complete evidence archive passed independent
-byte verification. Scientific/QC interpretation review remains pending. PROGRESS owns current status; never rerun the completed attempt.
+byte verification. [Scientific QC and paper comparison](docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md)
+are complete, with annotation/denominator limits and no new RQ proposed. Complete-output
+publication and human review remain open. PROGRESS owns current status; never rerun the completed attempt.
 The [synthetic job controls](docs/JOB_CONTROLS.md) include a ledger and built-in
 Docker fixture executor with verified local terminal receipts. One manual dot/cloud dispatch-return check passed; scientific qualification remains open.
 

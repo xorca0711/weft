@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "recorded_date": "2026-10-12",
-  "state": "EXPORT_VERIFIED_SCIENTIFIC_REVIEW_PENDING",
+  "state": "SCIENTIFIC_REVIEW_COMPLETE_PUBLICATION_PENDING",
   "attempt_identity": "f001_d56ee41e13cd4327",
   "run_id": "p001_figure1_v1_f001_d56ee41e13cd4327",
   "job_id": "ff0cf9dc5b9414ae8c33a67947fd8f9207ff64d384069a3de87752dee21c636c",
@@ -123,10 +123,9 @@
   "scientific_acceptance": false,
   "stage_complete": false,
   "next_steps": [
-    "Review original Ravel receipt, QC/denominator/marker tables and figure files without rerunning analysis",
-    "Resolve publication of every declared output, including the 385675968-byte H5AD, under unchanged Ravel governance",
-    "Write bounded discrepancy and candidate/no-candidate review; scientific acceptance and integration remain separate decisions",
-    "Keep the same reservation and original evidence; do not launch another numerical attempt merely because export passed"
+    "Review the documented scientific limitations and qualify complete-output publication under the unchanged Ravel receipt validator.",
+    "Keep the numerical receipt unregistered and Ravel PR #149 draft until publication and review are resolved.",
+    "Before another job, reconcile this local review in the existing coordinator and checkpoint it; no automatic reservation release or dispatch."
   ],
   "privacy_review": {
     "scope": "Worker read-only text/inventory review; not independent root archive review",
@@ -294,5 +293,12 @@
     ],
     "scientific_acceptance": false,
     "new_analysis_dispatch": false
+  },
+  "scientific_review": {
+    "record": "records/choi-scientific-review-20261012.json",
+    "interpretation_review_complete": true,
+    "scientific_acceptance": false,
+    "coordinator_ledger_modified": false,
+    "publication_complete": false
   }
 }

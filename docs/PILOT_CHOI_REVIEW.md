@@ -1,6 +1,9 @@
 # Choi pilot: source and dataset review
 
-**Reviewed 11 October 2026. Manual review complete for P001; numerical execution remains held.**
+**Historical pre-execution source review, 11 October 2026.** At that checkpoint,
+manual review was complete and numerical execution remained held. Subsequent
+execution, recovery and [scientific interpretation](PILOT_CHOI_SCIENTIFIC_REVIEW.md)
+are complete; the original review below is retained as its dated evidence.
 This extends the [initial XML reading](../records/pilot-reading-20261011.json), which
 is preserved unchanged. [Review receipts](../records/pilot-review-20261011.json)
 and the [input inventory](../records/pilot-inputs-20261011.json) record coverage,

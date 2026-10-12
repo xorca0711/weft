@@ -1,6 +1,26 @@
 # Current project state
 
-## Current stage — Figure1 export verified; scientific review pending — 12 October 2026
+## Current stage — Choi scientific review complete; publication pending — 12 October 2026
+
+[Scientific review](docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md) and its
+[record](records/choi-scientific-review-20261012.json) hand off findings to Ravel.
+All 15 outputs reconcile with the saved H5AD across 1,497 assertions; all five
+figures were inspected and compared with the audited paper. No analysis reran.
+The four-state adaptation lacks pAT2; day-28 exclusions (28.06%) and 520/917 DATP
+cells retained despite hAT2 subcluster labels constrain interpretation. Coarse
+patterns agree, but exact five-state and mechanistic reproduction are unsupported.
+No new RQ, claim promotion or human acceptance is recorded.
+
+M4b review is complete for this attempt; M5 publication/integration remains open.
+Next: choose and qualify durable availability of all outputs, including the
+385,675,968-byte H5AD, under Ravel's unchanged validator. PR #149 stays draft; no
+partial receipt is registered. The coordinator remains at its last verified
+30-event checkpoint and held reservation; this local review did not mutate the
+ledger. Reconcile and checkpoint before any later job. No new dispatch, schedule,
+paid service or data export. Offline validation passed: 89 local links, 15 unchanged Ravel pins and scientific
+execution disabled. Diff-whitespace checks passed.
+
+## Historical checkpoint — Figure1 export verified; scientific review pending — 12 October 2026
 
 The same cloud worker recovered and completed the original approved export without
 rerunning analysis. All **26 parts plus the transfer manifest** are in the original
