@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "date": "2026-10-12",
-  "scope": "B3 operational qualification in existing screening worker; bounded B4 stopped before material acquisition",
-  "evidence_basis": "Existing worker receipts and tool outputs reviewed by root; this receipt is not an independent second cloud test.",
+  "scope": "B3 operational qualification and new-worker recovery; bounded B4 interrupted by platform safety filtering",
+  "evidence_basis": "Old and new worker receipts/tool outputs reviewed by root; not an independent root execution. Final interrupted state unverified.",
   "pins": {
     "setup": "d031cef02ab4a417760bca46e90a63917d215d31",
     "previous_source": "19455150d8b5158ece1c7f29bf3d16887996630f",
@@ -75,16 +75,49 @@
         "status": 404,
         "bytes": 132,
         "attempts": 1
+      },
+      {
+        "url": "https://europepmc.org/RestfulWebService",
+        "status": 200,
+        "bytes": 63748,
+        "attempts": 1,
+        "state": "complete",
+        "sha256": "aa44212395b97d7c8fb62e581cfd88448ac2f2d463e5dbd1f97947b296e661cc"
+      },
+      {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/api/swagger.json",
+        "status": 404,
+        "bytes": 431,
+        "attempts": 1,
+        "state": "complete",
+        "sha256": "270d2fb55aa801662897590a27ec1c152407fa36be1d6678c27fd8c1859239e4"
+      },
+      {
+        "source": "Official Europe PMC reference PDF linked by the REST page",
+        "status": 200,
+        "bytes": 874938,
+        "attempts": 1,
+        "state": "complete",
+        "sha256": "b2585dae9ecd9426b41e16770884bd7592e9fcbbd541eb482f919d0224dbac76",
+        "url": "https://europepmc.org/docs/EBI_Europe_PMC_Web_Service_Reference.pdf"
+      },
+      {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13634473/supplementaryFiles",
+        "status": 200,
+        "bytes": 65536,
+        "attempts": 1,
+        "state": "started at last observation; final state unverified",
+        "bytes_final": false
       }
     ],
-    "total_bytes": 248,
+    "total_bytes": 1004901,
     "redirects_followed": 0,
-    "official_route_documentation_verified": false,
+    "official_route_documentation_verified": true,
     "receipt_sha256": "91234a41003bcec4e55e75576e609d118ca33434cbe4e55d81233051ba193f59",
     "figure_entries": 6,
     "supplement_entries": 2,
     "retrievable_supplement_hrefs": 1,
-    "materials_acquired": 0,
+    "materials_acquired": null,
     "figures_inspected": 0,
     "supplements_inspected": 0,
     "datasets_qualified": 0,
@@ -94,7 +127,7 @@
       "distinct_requests": 12,
       "attempts_per_request": 2
     },
-    "decision": "hold; official acquisition-route documentation unverified",
+    "decision": "hold: platform safety rejection; scientific coverage incomplete",
     "host_amendment": {
       "host": "europepmc.org",
       "owner_approved": true,
@@ -131,10 +164,10 @@
       "owner_authorized": true,
       "environment": "weft-pilot",
       "created": true,
-      "verified_policy": false,
-      "checkpoint_restored": false,
+      "verified_policy": true,
+      "checkpoint_restored": true,
       "private_launch_prompt_prepared": true,
-      "blocker": "Required hosts and preset are present, but current network_policy.state is unknown. Stopped before source/checkpoint acquisition.",
+      "blocker": "Platform safety rejection during source review; preservation-only follow-up also rejected before tool use.",
       "old_worker_preserved": true,
       "Choi_preserved": true,
       "created_by": "owner",
@@ -153,15 +186,76 @@
         "inventory_sha256": "c05eb62eb0f8d5daa472bbe85d0f875882196551e9efbdf36ae7378508ddf4c7",
         "new_source_requests": 0
       },
-      "readiness_followup": "requested; result pending"
+      "readiness_followup": "completed: enforced at revision 4; source and checkpoint checks passed before later safety interruption",
+      "readiness_result": {
+        "observations_current": true,
+        "state": "running/connected",
+        "network_mode": "restricted",
+        "network_enforcement": "enforced",
+        "desired_revision": 4,
+        "observed_revision": 4,
+        "required_hosts_present": true,
+        "existing_preset_retained": true,
+        "runtime_failure": null,
+        "configuration_changed_during_recheck": false,
+        "restart_performed": false,
+        "receipt_sha256": "77bc6492455c97fdb4f1d991853786ae6b4fb532b0c48dae72f43e43144a4df5",
+        "identity_basis": "Owner-selected environment plus historical setup provenance; no current API display label"
+      },
+      "restore_result": {
+        "archive_bytes": 522632,
+        "archive_sha256": "7edfa55a6349b2bd2ace5db26a24ab0fec9a0609e6345b6119be5c6e5476fb8f",
+        "manifest_members": 42,
+        "checks": "archive SHA256, CRC, safe paths, all member hashes, catalog hash, SQLite integrity, foreign keys and expected initial counts passed",
+        "initial_counts": {
+          "batch_events": 20,
+          "batch_items": 148,
+          "batch_windows": 3,
+          "batches": 1,
+          "candidate_runs": 164,
+          "candidates": 148,
+          "events": 5,
+          "observations": 82,
+          "runs": 3,
+          "watermarks": 3
+        },
+        "receipt_sha256": "0fe771919d693be9b187b7a0ea77882ba0e005910b800aff0e63bf18d78a645e",
+        "targeted_tests": 55,
+        "targeted_failures": 0,
+        "targeted_errors": 0,
+        "targeted_skips": 0,
+        "test_log_sha256": "6154e9cf1274b7566ddc81a5325a688f4b4e12a9d7a65acd05b97172bcfec4ec",
+        "documentation_links": 119,
+        "ravel_pins_verified": 15,
+        "packet_sha256": "8beca88486991616afb992b80071d540dc9fb23741a8284e45c7fca824810a5e",
+        "packet_issued_without_network": true,
+        "reading_relocation_required": false,
+        "new_assessment_submitted_in_observed_execution": false
+      }
+    },
+    "total_bytes_status": "last observed counted bytes, not final reconciled totals",
+    "material_acquisition_status": "source archive started; completion unverified",
+    "receipt_scope": "receipt_sha256 above refers to the original two-request documentation hold",
+    "interruption": {
+      "kind": "platform_safety_rejection",
+      "reason_reported": "Potential dual-use biology; exact triggering content/operation unspecified",
+      "review_turn": "failed",
+      "administrative_preservation_turn": "failed before tool use",
+      "new_private_export": false,
+      "final_download_state_verified": false,
+      "final_database_counts_verified": false,
+      "final_process_store_quiescence_verified": false,
+      "alternate_route_or_worker_attempted": false,
+      "next_action": "Platform review; do not bypass the restriction. Reconcile retained state before any later permitted continuation."
     }
   },
   "preservation": {
-    "all_stores_quiesced": true,
-    "B4_store_unchanged": true,
+    "all_stores_quiesced": null,
+    "B4_store_unchanged": "Original worker store preserved; new review store issued packet, final state unverified",
     "qualification_copies_inactive": true,
     "originals_and_prior_restores_preserved": true,
-    "Choi_unchanged": true
+    "Choi_unchanged": true,
+    "new_worker_quiescence": "unverified after interruption"
   },
   "authority": {
     "scientific_execution_allowed": false,
@@ -177,10 +271,11 @@
     "policy_changed": false
   },
   "flags": {
-    "no_new_B4_material": true,
+    "no_new_B4_material": false,
     "no_biological_analysis": true,
     "no_Choi_change": true,
     "no_new_upload_or_export": true,
-    "receipts_preserved": true
+    "receipts_preserved": true,
+    "new_B4_material_status": "partial source download observed; final status unknown"
   }
 }

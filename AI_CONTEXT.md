@@ -21,16 +21,16 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
   [the B3 interface](docs/EVIDENCE_QUALIFICATION.md). Its cached-source test held
   both proposals with six figure/two supplement entries uninspected. PR #7 at
   d95d558 subsequently passed 55 targeted tests and held-proposal recovery in the
-  existing cloud worker. [B4 review](docs/B3_CLOUD_B4_REVIEW.md) is paused before
-  acquisition: after owner-reported publication of europepmc.org, a fresh managed
-  check still finds the same worker's old enforced policy and no supported in-place
-  adoption control. The owner created the authorized new screening-only worker
-  and supplied its task link. Its required hosts and existing preset are present,
-  but two current status checks report network enforcement as `unknown`.
-  Restoration and review have not started. Private worker/receipt locators are
-  under `runs/b3-cloud-b4-review-20261012`. Verify current enforced policy and
-  intended environment identity before restore; do not create another worker.
-  Then complete bounded source review and freeze independent screening evaluation.
+  existing cloud worker. The new screening worker then confirmed current enforced
+  restricted policy at revision 4, restored all 42 checkpoint members and passed
+  the same 55 targeted tests, 119 links and 15 Ravel pins. [B4 review](docs/B3_CLOUD_B4_REVIEW.md)
+  began source acquisition but its turn failed with a platform biology-safety
+  rejection. A preservation-only follow-up was also rejected before tool use.
+  Do not retry/rephrase or reroute the blocked review. No final download state or
+  post-interruption quiescence is established; private locators and receipts are
+  under `runs/b3-cloud-b4-review-20261012`. Resolve through platform review before
+  any permitted continuation, then reconcile process/file/budget/store state.
+  Independent screening evaluation and scientific acceptance remain open.
   New batch reading paths are portable; older
   stores use explicit
   `batch-relocate-reading --source-root` after verified restore. See
@@ -81,8 +81,9 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
   They are inactive software-test stores, not active cloud coordinators. They
   preserve the earlier cloud checkpoint and make no new source/analysis claim.
 - B3 cloud receipt and exact B4 resume locators are under ignored
-  `runs/b3-cloud-b4-review-20261012`. Qualification copies and the unchanged B4
-  review store are quiesced. No new materials or private export were produced.
+  `runs/b3-cloud-b4-review-20261012`. Old qualification copies remain inactive.
+  The new review store issued a packet before interruption; its final state and
+  acquisition completion are unverified. No new private export was produced.
 - `records/` contains compact public check evidence. Raw responses, full XML,
   derived reading packets and SQLite state stay in ignored `runs/` on X:.
 - Ravel's physical migration completed on 11 October 2026: `X:/GitHub/ravel`

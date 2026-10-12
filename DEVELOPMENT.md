@@ -609,3 +609,28 @@ whitespace checks passed. Refetched main b59ed911 and integration base d95d558 a
 unchanged; prior HEAD 01708fa passed both CI checks. Runtime source is unchanged.
 GitHub write identity is xorca0711; no private task/configuration IDs are added
 to this public update. No scientific acceptance, analysis, export or merge.
+
+## 2026-10-12 — Readiness resolved; restored worker safety interruption
+
+The requested post-startup check confirmed current restricted/enforced policy at
+revision 4 without a configuration edit or restart. The initial unknown state
+is preserved; its cause was not reported. Owner selection and historical setup
+provenance corroborate weft-pilot identity, with no independent current API label.
+The new worker verified its separate d95d558 source, the exact 42-member archive,
+SQLite integrity and counts, 55 targeted tests, 119 links and 15 Ravel pins.
+
+A source-bound packet was issued without network use. B4 acquisition began after
+official API documentation review, then the platform rejected the turn citing
+potential dual-use biology. It also rejected an administrative preservation-only
+follow-up before tools ran. Root did not retry or route around the restriction.
+The specific triggering content is unknown. Final transfer/store state remains
+unverified; the last ledger observation is six requests and 1,004,901 bytes.
+No scientific result, acceptance, completed source coverage or export is claimed.
+
+Current summaries, roadmap and public receipt now distinguish successful recovery
+from interrupted review. The exact errors and private locators remain ignored.
+The old worker, Choi and Ravel are unchanged. Offline validation passed 125 links
+and 15 pin declarations; whitespace checks passed. Refetched main b59ed911 and
+stacked integration base d95d558 are unchanged. Prior HEAD 8a882e1 passed both CI
+checks. Runtime code and source pins are unchanged, so no biological or duplicate
+full-suite run was performed. GitHub identity is xorca0711; no merge was made.

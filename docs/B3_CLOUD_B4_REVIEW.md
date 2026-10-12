@@ -1,14 +1,14 @@
 # B3 cloud qualification and bounded B4 review
 
-**12 October 2026: B3 operational qualification passed; B4 remains held before
-material acquisition.** This is an exposed development check of the existing
+**12 October 2026: B3 and new-worker checkpoint recovery passed; B4 source
+acquisition was interrupted by platform safety filtering. Final state is unverified.** This is an exposed development check of the existing
 candidate, not an independent assessment of screening accuracy.
 
 [Check record](../records/b3-cloud-b4-boundary-20261012.json) ·
 [B3 interface](EVIDENCE_QUALIFICATION.md) ·
 [Current state](../PROGRESS.md) · [Backend roadmap](DISCOVERY_SCREENING_BACKEND.md)
 
-## Qualified software and recovery
+## Original worker qualification and recovery
 
 The existing screening worker checked PR #7 at
 `d95d55868ea42561d89112ef5dc7bf060fba46ca` in a separate clean source checkout.
@@ -26,9 +26,10 @@ roles. No environment publication or Choi action occurred during qualification.
 - Another-path recovery returned the identical packet and `already_recorded`,
   with zero HTTP calls, unchanged database rows and no duplicate events.
 
-The designated B4 review store is a separate, unchanged restore; no B4 proposal
-has been issued there. All stores are quiesced, and qualification copies remain
-inactive. Root reviewed worker tool outputs and receipts; this is not a second
+At that original-worker checkpoint, the designated B4 review store was a separate,
+unchanged restore; no B4 proposal was issued there. Those stores were quiesced,
+and qualification copies remain inactive. The new worker has a different review
+store; its later interrupted state is described below. Root reviewed worker tool outputs and receipts; this is not a second
 independent cloud execution. Receipt hashes are in the public record; private
 paths and worker identifiers remain under ignored `runs/b3-cloud-b4-review-20261012`.
 
@@ -44,17 +45,19 @@ matrices/FASTQ, run author code or perform numerical analysis.
 
 | XML inventory | Actual retained-material coverage | Limit |
 |---|---|---|
-| Six main figures, referenced as WEBP | No new images downloaded or viewed | Captions do not establish pixel inspection |
+| Six main figures, referenced as WEBP | Source-archive acquisition started; completion unverified; no pixel inspection established | Captions and partial bytes do not establish figure coverage |
 | One supplementary wrapper without a file href | No independent file identified | Two XML supplement entries do not imply two retrievable files |
-| One referenced DOCX supplement | Not downloaded or inspected | Direct DOCX intake is unsupported; faithful page rendering is unavailable in the worker |
+| One referenced DOCX supplement | Archive completion and member availability unverified; no content review established | Direct DOCX intake is unsupported; available renderer has not been qualified by rendering |
 | Data-availability statement | Previously cached XML only | No accession or external dataset URL identified in that cached statement; this is not proof that no dataset exists |
 
 Existing Pillow/ImageMagick can potentially decode WEBP into PNG. A derived
 viewing artifact would need retained originals, hashes, dimensions and decoded
 pixel-equivalence verification before B3 attachment. **No conversion was run.**
 Existing DOCX text/table/image extraction could support a partial review, but
-would not certify layout, pagination or complete supplement inspection. No new
-renderer was installed, and B3 format checks were not changed.
+would not certify layout, pagination or complete supplement inspection. The old
+worker had no verified renderer. The new worker found an existing LibreOffice
+executable and obtained its version; no document was rendered or inspected.
+No renderer was installed, and B3 format checks were not changed.
 
 The proposed caps remain 32 MiB/item, 128 MiB total including expanded and derived
 files, at most 12 distinct source requests and at most two attempts per request.
@@ -116,7 +119,7 @@ the exact archive identity, hashes, source pins, coverage limits and stop rules.
 The owner was asked to start that task and return its link. No task was created
 in an unspecified environment; no new worker has been launched by root.
 
-### New worker created; enforcement unverified
+### Initial new-worker gate — resolved by the later check
 
 The owner created the authorized screening-only task and supplied its link.
 Its first two managed-status checks report running state, current observations,
@@ -131,25 +134,61 @@ material inspection. Its initial receipt hash is
 `4f7fd71a07e9575b15be6c1eb05697196a7e30919ead258c92b99586cf86275f`;
 the private inventory hash is
 `c05eb62eb0f8d5daa472bbe85d0f875882196551e9efbdf36ae7378508ddf4c7`.
-A bounded read-only post-startup readiness follow-up has been requested. This
-is not approval to relax the enforcement gate, restart or create another task.
-No new B4 acquisition requests were made; the old worker and Choi are unchanged.
+A bounded read-only post-startup follow-up was requested. At this initial stop,
+no new acquisition requests had been made. The later result is recorded below;
+the initial receipt remains unchanged.
 
-1. Resolve the current enforcement observation in this same new task through
-   supported readiness diagnostics. Require current `enforced` restricted policy
-   and establish intended configuration identity before acquisition. Stop for
-   environment troubleshooting if the observation remains unknown.
-2. Verify the pinned sources in that worker,
-   then restore the exact verified checkpoint and retained handoff.
-   Reuse valid qualification evidence; carry forward exposure and request usage.
-3. Verify official acquisition documentation, then retrieve only the bounded
-   source materials through permitted routes. Two requests have already been
-   used; do not silently reset the budget or follow an unapproved redirect.
-4. Record actual figures/panels and supplement coverage, dataset mapping and
-   separate data-use/RQ proposals. Missing source evidence retains a hold.
-5. Quiesce the store, prepare a manifest and qualify recovery. A new private
-   export requires its own inventoried payload and applicable owner approval;
-   the old archive approval does not cover new materials.
+### Follow-up passed; review interrupted
+
+The same new worker subsequently reported current observations, running/connected
+state, restricted policy **enforced**, matching desired/observed revision 4 and
+no runtime failure. Required hosts and the existing preset are intact. No policy
+change or restart was performed during the check. The reason for the initial
+unknown observation is not reported; it resolved on the later status read.
+The user's environment selection and historical setup provenance corroborate
+identity; independent current display-name verification remains unavailable.
+Readiness receipt SHA-256:
+`77bc6492455c97fdb4f1d991853786ae6b4fb532b0c48dae72f43e43144a4df5`.
+
+The setup checkout remained at d031cef. A separate clean checkout at PR #7
+d95d558 restored the exact 522,632-byte after-screening archive. The archive
+hash, CRC, safe paths, 42 manifest members, catalog hash, SQLite integrity,
+foreign keys and expected initial counts passed. Restore receipt SHA-256:
+`0fe771919d693be9b187b7a0ea77882ba0e005910b800aff0e63bf18d78a645e`.
+All 55 targeted tests, 119 documentation links and 15 pinned Ravel files passed.
+The same B3 packet was issued without network access or reading relocation;
+no new data-use/RQ assessment was submitted in the observed execution.
+These are new-worker results reviewed through its tool outputs, not a second
+independent root execution. Prior full-suite CI was reused.
+
+Three additional documentation requests returned the official REST page (200),
+its linked Swagger route (404, retained) and a reference PDF (200). The worker
+recorded the acquisition method as documented. A sixth request began retrieving
+the source archive; the last observed ledger reported HTTP 200 and 65,536 bytes,
+with state `started`. Last observed counted usage is **1,004,901 bytes / six
+distinct requests**, one attempt each, including the original two requests.
+These are an in-progress snapshot; they are not final transfer totals or proof
+of a complete, safe or inspected archive.
+
+The review turn then failed with an explicit platform safety error citing
+potential dual-use biology. No triggering passage or exact rejected operation
+was identified. A subsequent administrative preservation-only request was also
+rejected before any tool ran. No bypass, alternate task or repeated source
+request was attempted. This outcome does not establish that the paper itself is
+unsuitable or identify a network, credential or resource failure.
+
+Final acquisition status, archive hash, database event counts and process/store
+quiescence are **unverified**. No complete figure/supplement inspection, scientific
+assessment, new private export or recovery checkpoint is established. The old
+worker and Choi remain unchanged. Private task identifiers, original error and
+receipt paths stay in the ignored handoff directory.
+
+Next steps are conditional on resolution through the platform's normal review
+route. Do not rephrase or move the blocked task to evade the restriction. Before
+any permitted continuation, reconcile existing processes, partial/complete bytes,
+request accounting and store state without overwriting receipts. Preserve the
+original scope and bounds; a new private export still requires its own known
+payload approval. No additional host grant is indicated by the reported error.
 
 ## Ravel interpretation boundary
 

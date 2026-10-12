@@ -1,56 +1,50 @@
 # Current project state
 
-## Current B3 cloud qualification / B4 hold — 12 October 2026
+## B3 recovery passed / B4 platform hold — 12 October 2026
 
 Update this before stopping work, every session.
 
-**B3 passed in the existing screening worker; B4 is incomplete and paused before
-material acquisition.** [Review and resume plan](docs/B3_CLOUD_B4_REVIEW.md) ·
+**Network enforcement and checkpoint restoration passed in the new worker.
+B4 remains incomplete after a platform safety rejection.**
+[Evidence and interruption record](docs/B3_CLOUD_B4_REVIEW.md) ·
 [Check record](records/b3-cloud-b4-boundary-20261012.json).
 
-PR #7 source `d95d558` passed 55 targeted tests, 119 links and 15 pinned Ravel
-blobs. The exact previously verified 42-member after-screening archive was
-restored into separate stores. A disposable B3 test preserved the 20-event
-prefix, source bytes and screening decisions, appended two events and recovered
-idempotently at another path with zero HTTP calls. Both qualification proposals
-remain held; all eight XML resources are uninspected. The separate B4 review
-store is unchanged, with no proposal issued. All copies are quiesced.
+The new worker's post-startup check reported current running/connected state,
+restricted/enforced policy and matching desired/observed revision 4. Required
+hosts and the Package managers preset are intact. The first two `unknown`
+observations are retained as history. The environment name is owner-attested
+and corroborated by its historical setup receipt, not a current API display name.
+No configuration edit or restart was needed for the successful recheck.
 
-The old worker retains its prior enforced policy without `europepmc.org` and has
-no supported in-place adoption control. The owner then created the authorized
-new screening-only task in selected **weft-pilot** and supplied its link.
-The old worker and Choi remain preserved.
+Setup remains d031cef. A separate clean PR #7 checkout at d95d558 restored the
+exact 522,632-byte archive: SHA-256, CRC, safe paths, all 42 manifest members,
+catalog hash, SQLite integrity, foreign keys and expected counts passed.
+All 55 targeted tests, 119 documentation links and 15 Ravel source pins passed.
+The review store issued the same B3 packet without network access; no new data-use
+or RQ assessment was submitted in the observed execution.
 
-The new task reports a changed configuration version, current running
-observations and matching desired/observed revision 2. The three explicit hosts
-(`europepmc.org`, `www.ebi.ac.uk`, `ftp.ncbi.nlm.nih.gov`) and Package managers
-preset are present. However, **two status checks report network enforcement as
-`unknown`**, so the environment gate has not passed. The selected environment
-name is owner-attested; the status response does not return its display name.
-A later read-only readiness follow-up has been requested; no result is claimed.
+Official acquisition documentation was retrieved. A source-archive request then
+started, with HTTP 200 and at least 65,536 bytes retained at the last ledger read.
+The turn failed with a platform safety error citing potential dual-use biology.
+The error does not identify the triggering content or establish that the paper
+itself is unsuitable. An administrative preservation-only follow-up was also
+rejected before any tools ran. No alternative route or retry was attempted.
 
-No new source checkout, checkpoint restore, tests, materials, proposals or
-exports were started in the new task. Prior B3 qualification remains valid for
-its original worker; it is not new-worker qualification. B4 usage is unchanged:
-two documentation requests, one attempt each, 248 response bytes. Private task
-and receipt locators are retained under `runs/b3-cloud-b4-review-20261012`;
-public receipt hashes are in the check record.
+Last observed B4 usage: **6 of 12 distinct requests**, one attempt each, and
+**1,004,901 counted bytes**, including historical requests. These are an
+in-progress snapshot, not final reconciled totals. Source-download completion,
+final file hashes, database counts and post-interruption process/store quiescence
+remain unverified. No figure/supplement pixel review, complete coverage record,
+new checkpoint export or scientific acceptance is established.
 
-Next: require fresh current `enforced` restricted policy and establish intended
-configuration identity in this same new task before verifying source pins and
-restoring the exact checkpoint. If supported readiness diagnostics cannot resolve
-the unknown state, stop for environment troubleshooting; do not bypass the gate,
-create another worker or substitute connectivity tests for enforcement evidence.
-Then continue the original bounded B4 scope, carrying request usage and exposure.
-No discovery, screening or biological rerun, installation, further host grant or
-new private export is implicitly authorized.
-
-Root reviewed A0's pinned current result, dossier and framing: its failed frozen
-intestinal transfer and stop remain in force. This candidate can only be assessed
-for a stated data use and an explicitly justified RQ relationship. Choi, Ravel
-working files, scientific acceptance and all analysis outputs are unchanged.
-No biological rerun, new checkpoint export, schedule or merge occurred. Private
-worker receipts/locators are in ignored `runs/b3-cloud-b4-review-20261012`.
+Next: platform review of the rejected task is required before any permitted
+continuation. Do not bypass filtering by another worker, tool, context or renamed
+request. First reconcile process state, partial/complete bytes, request budget
+and the review store without overwriting original receipts; then determine which
+work can proceed. The old worker and Choi remain preserved; Ravel is unchanged.
+No new access, deployment, analysis, schedule, export or merge is authorized by
+this status update. Private locators and the exact error are retained under
+`runs/b3-cloud-b4-review-20261012`.
 
 ## Historical B3 implementation checkpoint — 12 October 2026
 

@@ -144,11 +144,13 @@ now support inspected-scope coverage, bounded local artifacts, data-use suitabil
 and RQ compatibility as separate versioned proposals. Its cached-source test held
 both proposals and preserved prior evidence. PR #7 d95d558 then passed 55 targeted
 cloud tests and another-path held-proposal recovery in the existing worker.
-[Bounded B4 source review](B3_CLOUD_B4_REVIEW.md) is paused before acquisition;
-the owner reports publishing the documentation-host grant, but the same worker
-still enforces the old policy. No supported in-place adoption control is exposed.
-The owner authorized one new screening worker; launch, policy verification and
-checkpoint restoration must pass before resuming. See PROGRESS for the handoff. Freeze
+[Bounded B4 source review](B3_CLOUD_B4_REVIEW.md) remains incomplete. The new
+screening worker confirmed enforced policy, restored the verified checkpoint and
+passed 55 targeted tests, then its source-review turn was rejected by platform
+safety filtering. Administrative closeout was also rejected. Final download/store
+state needs reconciliation after the platform hold is resolved; see PROGRESS.
+Preserve the old worker and Choi, and do not use another route to bypass the hold.
+Freeze
 independent screening evaluation before using quality metrics or enabling recurrence. See [deliverables and acceptance tests](DISCOVERY_SCREENING_BACKEND.md#concrete-implementation-order).
 The synthetic executor, checkpoint and transfer modules already exist; do not
 reimplement them or claim that their existence supplies semantic screening.

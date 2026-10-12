@@ -8,7 +8,7 @@
 | Manual literature discovery and RQ review buffer | Descriptive only | [Live validation](records/discovery-validation.json) | Metadata matches and reading priority, not accepted claims |
 | Bounded discovery batches and screening-agent interface | Descriptive only | [Fresh-candidate test](docs/BATCH_PILOT_20261012.md) | 74 candidates; five local link proposals; independent semantic quality evaluation remains open |
 | Portable screening paths and manual cloud recovery | Descriptive only | [Qualification record](records/screening-portability-20261012.json) | Five cloud link proposals; both Drive checkpoints verified; Linux-to-Windows cached recovery passed; no unattended launcher |
-| B3 coverage, data-use and RQ proposals | Descriptive only | [Cloud qualification](records/b3-cloud-b4-boundary-20261012.json) | 55 targeted tests and held-proposal recovery passed; B4 material review paused at an access boundary |
+| B3 coverage, data-use and RQ proposals | Descriptive only | [Cloud qualification](records/b3-cloud-b4-boundary-20261012.json) | 55 targeted tests and checkpoint recovery passed; B4 source review interrupted by platform safety filtering |
 | Manual source-bound reading packets | Descriptive only | [Local reader](docs/LOCAL_READER.md) | XML text/captions; semantic and figure review remain separate |
 | Choi figure, supplement and input review | Descriptive only | [Review receipt](records/pilot-review-20261011.json) | Source review and file integrity; current execution status is in PROGRESS |
 | Pinned Codex Cloud setup | Descriptive only | [Setup receipt](records/cloud-setup-20261011.json) | Private environment published; small export verified; no retention guarantee |
@@ -38,9 +38,9 @@ private configuration, even though this repository is public.
 The next development priority is the [discovery and screening backend](docs/DISCOVERY_SCREENING_BACKEND.md):
 B3's [coverage and data/RQ proposal interface](docs/EVIDENCE_QUALIFICATION.md)
 passed qualification in the existing cloud worker. The [bounded B4 review](docs/B3_CLOUD_B4_REVIEW.md)
-is paused before material acquisition. The owner created the authorized new
-screening worker with the added host, but its runtime reports network enforcement
-as `unknown`. Policy qualification and checkpoint restoration remain pending.
+is incomplete. The new screening worker confirmed enforced policy, restored the
+verified checkpoint and passed 55 targeted tests. Its source-review turn then
+failed with a platform safety rejection; final download state is unverified.
 [Current state](PROGRESS.md) owns the resume point.
 The earlier [manual cloud handoff and recovery](docs/SCREENING_CLOUD_QUALIFICATION.md)
 is qualified; independent screening evaluation remains open.

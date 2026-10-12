@@ -150,13 +150,12 @@ coverage still needs actual material inspection through the implemented B3
 records. B3's local cached-source test inventories six figure/two supplement entries
 and retains separate data/RQ holds without retrieval. The same interface passed
 55 targeted cloud tests and idempotent held-proposal recovery at PR #7 d95d558.
-[B4 source review](B3_CLOUD_B4_REVIEW.md) is paused before acquisition: the owner
-reports publishing the host amendment, but a fresh managed check still finds the
-existing worker's unchanged enforced policy. No supported in-place adoption
-control is exposed. The owner subsequently created the authorized new screening
-worker. Its required hosts and preset are present, but current enforcement is
-reported as `unknown`; policy qualification and checkpoint restoration remain
-pending. See PROGRESS for the current blocker and preserved resume point.
+[B4 source review](B3_CLOUD_B4_REVIEW.md) is incomplete. The new authorized
+screening worker confirmed enforced updated policy, restored the exact checkpoint
+and passed 55 targeted tests. Acquisition began, then platform safety filtering
+rejected the review turn and a preservation-only follow-up. Final acquisition and
+post-interruption store state remain unverified. See PROGRESS for the platform
+hold; do not bypass it with another task or alternate route.
 The profile/window was exposed; this is not independent semantic evaluation. B5
 quality evaluation and a supported unattended launcher remain future work.
 Before recurrence, obtain cadence, notification and usage-scope decisions.
