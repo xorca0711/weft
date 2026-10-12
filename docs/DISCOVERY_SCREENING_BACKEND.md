@@ -1,6 +1,6 @@
 # Discovery and screening backend: next implementation sequence
 
-**12 October 2026: B1 and the B2 interface implemented; cloud deployment remains unqualified.**
+**12 October 2026: B1/B2 implemented; bounded manual cloud handoff and recovery qualified. Unattended operation and independent screening evaluation remain open.**
 See the [command guide](BATCH_SCREENING.md) and [fresh-candidate development test](BATCH_PILOT_20261012.md).
 Prioritize discovery-to-screening orchestration before the remaining Choi
 publication closeout. The existing Choi attempt is a completed, exposed test of
@@ -16,7 +16,7 @@ reservation and original evidence; do not rerun it.
 | Discovery | `weft/europe_pmc.py`, `weft/discovery.py`; explicit bounded searches, cursors, overlap windows and receipts | Batch coordination and bounded date splitting now implemented; broader recall evaluation and recurrence remain open |
 | Identity and deduplication | `weft/identity.py`; strong IDs, conflicts, changed-snapshot invalidation | Complete edition/correction-family reconciliation; dataset lineage is a separate relation |
 | Candidate buffer | Persistent proposed links; `pending_review -> read_next / held / rejected` | Pull-based structured agent proposals now implemented; independent decision-quality evaluation remains open |
-| Reading | `weft/reading.py`; open-access XML packets and assessment hash/locator checks | Semantic screening worker, figure/supplement retrieval and inspection coverage; independent screening evaluation |
+| Reading | `weft/reading.py`; open-access XML packets and assessment hash/locator checks | Manual cloud screening handoff qualified; figure/supplement coverage and independent screening evaluation remain open |
 | Scientific eligibility | G3-G8 specification and Ravel's existing runner/governance | Weft does not implement the semantic scientific gate engine or its full transitions |
 | Job controls | `jobs.py`, `executor.py`, `checkpoints.py`, `recovery.py`, `transfer_parts.py`; tested synthetic execution and manual cloud recovery | Connect discovery/reading jobs to one authoritative durable queue and supported agent handoff |
 | Live operation | Manually launched agent/cloud tasks | No unattended launcher, paid model API or recurring schedule configured |
@@ -108,10 +108,11 @@ paper read or routine state transition. A deterministic backend supplies the nex
 eligible packet and validates the returned record; the agent performs the reading.
 This is the first automation target. A recurring trigger is a separate later layer.
 
-Retain the selected dot/Codex Cloud route. We have demonstrated manual handoff,
-not a supported unattended dispatch API or a persistence guarantee. Qualify the
-actual supported handoff, queue restoration and model-output capture before live
-automation. A missing API must result in a documented deployment decision, not
+Retain the selected dot/Codex Cloud route. Manual handoff, saved model responses
+and checkpoint restoration have passed the bounded qualification. A supported
+unattended dispatch API and persistence guarantee remain unestablished. Qualify
+the launcher and its failure/recovery controls before unattended operation.
+A missing API must result in a documented deployment decision, not
 browser automation masquerading as a durable backend or an invented dot SDK.
 
 Bind each run to the Ravel revision, source snapshots, query/policy versions,
@@ -124,18 +125,25 @@ usage is not a known dollar budget. Missing usage measurements stay unknown.
 Use one authoritative coordinator and verified private Drive checkpoints. Do not
 activate a restored task-local ledger as a competing writer. The Choi reservation
 is still held: reconcile its known outcome and preserve the pending publication
-dependency before any new live dispatch. Implementing and fixture-testing B1-B3
+dependency before any new scientific dispatch using that ledger. The approved
+screening-only store is separate. Implementing and fixture-testing B1-B3
 does not depend on changing that reservation or merging Ravel PR #149.
 
 ## Remaining decisions and work boundary
 
-B1 and B2 mechanics and one local development batch are complete without new
-credentials, paid services, scheduling or scientific execution. B2 cloud handoff
-and B4 remote restoration are still open; the local checkpoint check establishes
-byte/SQLite integrity only, with absolute XML-path reconciliation still required. Before a live
-batch, qualify the selected agent handoff and recovery using existing access.
-If that route cannot enforce persistence, output capture or limits, present the
-specific technical evidence and alternative deployment choice to the owner.
+B1/B2 mechanics, one local development batch and a bounded manual cloud
+handoff/recovery are complete. The approved separate screening task passed source
+and network checks, three searches, five structured link proposals and one held
+selected-text assessment. Both exact owner-approved Drive checkpoints passed
+independent readback. Linux-to-Windows cached search/response/XML replay made zero
+network calls and changed no database rows. Store-relative paths and explicit
+legacy-address amendments preserve the original evidence. See
+[cloud qualification](SCREENING_CLOUD_QUALIFICATION.md).
+
+The B4 operational handoff/recovery component has been demonstrated, but full B4
+coverage still needs B3 figure/supplement/data and compatibility records. The
+profile/window was exposed; this is not independent semantic evaluation. B5
+quality evaluation and a supported unattended launcher remain future work.
 Before recurrence, obtain cadence, notification and usage-scope decisions.
 
 Choi M5 remains a separate track: complete-output publication, unchanged receipt

@@ -21,6 +21,8 @@ autonomous workflow completion and scientific acceptance are not claimed.
 
 | 2026-10-12 | Implement batch coordinator, screening interface and fresh-candidate test | Owner requested scope; Codex implemented | Owner authorized work; code/scientific acceptance pending review | Scoped software change and local development test; no deployment | Exercise search-to-screening independently of Choi publication |
 
+| 2026-10-12 | Portable reading references and existing-cloud screening qualification | Owner requested scope; Codex implemented path fix | Owner authorized work; new network grant pending | Local recovery passed; cloud work stopped at missing host permission | Preserve evidence and Choi while requiring explicit access decisions |
+
 ## Rejected or substantially revised AI proposals
 
 | Date | Proposal | Why changed | Changed/rejected by |
@@ -407,3 +409,85 @@ schedule, cloud dispatch, Ravel evidence promotion or biological analysis occurr
 Linux CI verified code revision `5915ba7`: all 144 tests passed without skips,
 with 105 documentation links and 15 unchanged source pins. PR #5 remains open
 and stacked on PR #4; no human acceptance or merge is inferred from CI.
+
+## 2026-10-12 — Portable reading paths; cloud qualification held
+
+Codex replaced host-specific batch reading addresses with store-relative references
+and added a verified, atomic legacy-address amendment. Private events retain the
+previous result; source XML, receipts, packet hashes and scientific decisions are
+preserved. Consumers now use a presentation-only resolved_directory. Tests cover
+both path syntaxes, source binding, stale/foreign locations and restore reuse.
+The actual 34-file development checkpoint recovered under two local roots with
+one addressing event and no network retrieval, reread or numerical rerun.
+
+The existing worker performed read-only readiness checks. GitHub and the owner-only
+Drive connection remain available, but Europe PMC's host is not allowed and the
+managed-runtime readiness tool was unavailable. No alternative backend, proxy,
+new credential, policy edit or Choi-state mutation was attempted. The exact
+single-host proposal and remaining qualification sequence are reviewable in
+docs/SCREENING_CLOUD_QUALIFICATION.md; the owner's access decision remains pending.
+
+Linux CI passed all 154 tests without skips on portability revision `1945515`;
+PR #6 remains open and stacked on #5. Documentation validation passed 111 links
+and 15 unchanged pins. The owner approved adding only www.ebi.ac.uk;
+publication and actual worker-policy verification are recorded separately.
+
+Owner-approved single-host amendment published through the verified existing
+private weft-pilot UI; only www.ebi.ac.uk was added. Setup/startup d031cef,
+package-manager preset and ftp.ncbi.nlm.nih.gov were preserved. Same-worker
+effective policy remained old at 18:08:51 KST, so no network request or screening
+dispatch was attempted. Proposed a separate screening-only task on the updated
+existing environment and requested the owner's deployment decision. Choi and
+all existing artifacts remain untouched. No new task or runtime reset.
+
+The owner subsequently approved one screening-only task on the updated existing
+environment. It was created and reported current enforced host policy, a clean
+d031cef baseline and the verified private Drive destination. Initial normal-proxy
+GET failed; sandbox-versus-platform diagnostics are in progress. Existing Choi
+worker and artifacts were preserved; no live batch or upload has started.
+
+Readiness correction: earlier proxy/socket failures came from the default
+restricted command sandbox. A reviewed request through inherited proxy/TLS
+succeeded; no platform outage established. The isolated 1945515 source passed
+73 cloud tests/111links/15Ravel blobs. The cloud batch returned 82 observations,
+74 papers/148 links and one pending packet, with no assessment or XML read.
+An unknown-payload preparation/upload handoff was rejected by automatic approval
+review. A safer local-only preparation passed a 20-member inactive restore;
+exact 389137-byte archive b4dff329... now awaits direct owner export approval.
+No rejected export was retried or bypassed. Screening and remote recovery remain
+unqualified; Choi is untouched.
+
+The owner directly approved the before archive; worker readback and independent
+root Drive/CRC/20-member/SQLite/pending-packet verification passed. Root released
+the frozen five-link pass: one read next, one hold, three link rejections, 143
+deferred; one XML/four statements held for further source review. Worker-local
+recovery made zero retrievals and no duplicate events. All stores quiesced.
+Exact after archive is 522632 bytes/SHA7edfa55a.../42manifest members; direct owner
+export approval requested because the before approval does not cover it. This
+is operational evidence, not semantic accuracy or scientific acceptance.
+
+## 2026-10-12 — Manual cloud screening recovery qualified
+
+The owner directly approved the exact after archive. Worker upload/readback and
+independent root download verified 522632 bytes, SHA7edfa55a..., all 42 members,
+SQLite integrity/counts, original eight-event prefix and 17 unchanged source files.
+A fresh Windows verification copy replayed completed searches, five saved
+responses and one cached XML assessment without HTTP, duplicate events or changed
+rows. All portable paths resolved within the restored store. An initial sandbox
+path-access denial was preserved and resolved by normal execution permission on
+a fresh copy; no source/evidence modification or alternative egress was used.
+
+This closes the manual B2 handoff and B4 recovery component, not semantic quality,
+full B4 source coverage or unattended deployment. Private locators/receipts stay
+under ignored runs; current public status now records the observed qualification.
+Choi, Ravel acceptance, source pins and scientific outputs are unchanged. No
+biological rerun, new host/service, schedule or merge. B3 coverage/data/RQ records
+and independent screening evaluation remain next. Existing 154-test Linux code
+validation remains applicable: this closeout changes documentation/evidence only.
+
+Closeout validation passed: 112 local links, 15 unchanged pinned Ravel files and
+Git whitespace checks. Refetched main b59ed911 and integration base #5 at 827ad51b
+remain unchanged. GitHub identity verified as xorca0711 and Git author as Xorca.
+A final preservation-only worker message was blocked because tool approval was
+unavailable; the completed transfer already reported all stores inactive, and
+the block did not invalidate verification or authorize new work.
