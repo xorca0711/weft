@@ -491,3 +491,38 @@ remain unchanged. GitHub identity verified as xorca0711 and Git author as Xorca.
 A final preservation-only worker message was blocked because tool approval was
 unavailable; the completed transfer already reported all stores inactive, and
 the block did not invalidate verification or authorize new work.
+
+## 2026-10-12 — B3 coverage and separate data/RQ proposal records
+
+| Date | Item | Proposed by | Decided by | Decision | Reason |
+|---|---|---|---|---|---|
+| 2026-10-12 | Next backend stage: B3 evidence qualification interface | Owner requested roadmap progression; Codex designed and implemented | Owner authorized implementation; detailed validator semantics and merge await PR review | Implement additive proposal records and test preserved cached evidence | Separate what was inspected, suitability for a stated use and RQ fit without granting scientific authority |
+
+Codex added `weft/qualification.py`, four batch CLI commands, status/digest
+integration and 16 focused tests. The existing catalog receives additive packet,
+artifact and immutable review tables; no old source, reading decision, gate or
+scientific ledger is rewritten. Local artifact bounds are operational intake
+limits. Actor identity, actual viewing and semantic support remain uncertified.
+
+Tests cover captions versus pixels, missing material, unknown/pooled units,
+absent perturbation controls, endpoint mismatch, duplicate accessions, stale
+metadata, source/artifact tampering, linked files, authority escalation, amendments
+and recovery. The first targeted run found two test-fixture aliasing failures:
+editing a response also edited the expected returned template. Deep-copying the
+fixture fixed the test; production checks were not weakened. Full Windows run:
+168 tests passed with 24 platform skips; the expanded focused run passed 16 tests
+with one symlink skip. Linux CI verifies the final 170-test suite.
+
+The cached after-screening archive produced six figure/two supplement entries and
+two held proposals in an inactive development copy. No materials were newly
+inspected, and no network or analysis ran. The original source/checkpoint and
+screening history stayed intact. Record replay and another-root recovery passed.
+Public records contain compact hashes/counts only; full text, review packets,
+private locators and copies remain under ignored runs. B3 cloud qualification,
+actual B4 material review and B5 independent evaluation remain open. Choi is
+untouched; no new access, deployment, schedule or merge was performed.
+
+Linux closeout: all 170 tests passed with no skips on 11affb4; both PR and
+push CI succeeded. Documentation validation passed 119 local links and 15
+unchanged Ravel pins. PR #7 is open and ready for explicit code review, stacked
+on #6. GitHub author is xorca0711; Git author/committer is Xorca. No merge.

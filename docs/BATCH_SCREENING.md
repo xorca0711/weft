@@ -121,3 +121,13 @@ computed for the current host. Legacy absolute addresses require the verified
 and scientific decisions are not rewritten.
 Cloud handoff, authoritative checkpoint placement and recovery must be qualified
 before deployment. Do not copy the Choi ledger into this development store.
+
+## B3 evidence and use-specific proposals
+
+After a saved XML assessment, `batch-evidence` issues a cached-source resource
+inventory and response template. `batch-attach-evidence` retains explicitly
+supplied local files; `batch-submit-evidence` records separate data-use and RQ
+proposals with versioned amendments. `batch-evidence-status` and the batch digest
+show the latest proposal, rechecking its current source/artifacts. See
+[the B3 record contract and commands](EVIDENCE_QUALIFICATION.md). This adds no
+retrieval, model launcher, scientific authorization or mutation of the Choi ledger.

@@ -1,6 +1,41 @@
 # Current project state
 
-## Current screening qualification — 12 October 2026
+## Current B3 backend slice — 12 October 2026
+
+Update this before stopping work, every session.
+
+[PR #7](https://github.com/xorca0711/weft/pull/7) implements this slice. B3 now
+issues a source-bound evidence packet, inventories cached JATS figures and
+supplements, copies bounded explicitly supplied local artifacts, and records
+separate data-use and RQ-compatibility proposals. Commands, record semantics and
+the backend diagram are in [the B3 guide](docs/EVIDENCE_QUALIFICATION.md).
+New consistency checks are proposed for explicit PR review; G3–G8 authority,
+policy activation and Ravel scientific admission are unchanged.
+
+The [cached-source development test](records/evidence-qualification-20261012.json)
+found six figure entries and two supplement entries in the existing reviewed
+candidate's XML. No new pixels, supplements or dataset files were inspected.
+Both proposals remain held. An inactive copy preserved the original checkpoint,
+source bytes, five screening decisions and 20-event prefix; two B3 events were
+added only to that development copy. Fresh-path recovery was idempotent, with
+zero network calls or duplicate events. This exposed test does not qualify B3
+cloud deployment or scientific screening accuracy.
+
+The full Windows suite passed 168 tests with 24 platform skips; the expanded B3
+suite then passed 16 tests with one host symlink skip. Linux CI passed all 170
+tests without skips on code revision `11affb4`; both push and PR checks passed. No biological analysis or discovery reran. Choi and the active scientific
+ledger remain separate and unchanged. Local private copies are under ignored
+`runs/evidence-qualification-20261012-v1`, closed and inactive.
+
+Next: review this new software slice stacked on #6 (preceded by #4 and #5), and
+qualify its pinned revision in the existing screening cloud route. Then perform
+a bounded B4 review with actual figure/supplement coverage, data lineage and
+RQ-fit proposals. A new source host, credential, unsupported artifact adapter or
+deployment choice must be resolved before that dependent action. Existing access
+has not been expanded. B5 independent unseen-paper evaluation precedes any
+recurrence proposal. Choi publication is still an open parallel track.
+
+## Prior completed screening qualification — 12 October 2026
 
 [PR #6](https://github.com/xorca0711/weft/pull/6) implements portable reading paths
 and verified Windows/POSIX legacy-address reconciliation. Linux CI passed all

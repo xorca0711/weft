@@ -8,7 +8,7 @@ from .context import build_context
 from .discovery import Store, discover, stream_key, verify_run, write_json
 from .validation import ValidationError, read_json, validate_project, verify_ravel
 from .reading import prepare_reading, validate_reading
-from . import batches, screening
+from . import batches, screening, qualification
 from .identity import digest
 from .reading_locations import relocate_readings
 
@@ -59,18 +59,22 @@ def main(argv=None):
     batch.add_argument("--max-screenings", type=int, default=5)
     batch.add_argument("--max-full-reads", type=int, default=3)
     batch.add_argument("--store", type=Path, default=Path("runs/discovery"))
-    for name in ["batch-resume", "batch-relocate-reading", "batch-reconcile", "batch-next", "batch-submit", "batch-read", "batch-submit-reading", "batch-status", "batch-digest"]:
+    for name in ["batch-resume", "batch-relocate-reading", "batch-reconcile", "batch-next", "batch-submit", "batch-read", "batch-submit-reading", "batch-status", "batch-digest", "batch-evidence", "batch-attach-evidence", "batch-submit-evidence", "batch-evidence-status"]:
         command = sub.add_parser(name, help="Discovery batch: " + name.removeprefix("batch-"))
         command.add_argument("--store", type=Path, default=Path("runs/discovery"))
         command.add_argument("--batch", required=True)
-        if name in {"batch-submit", "batch-submit-reading"}:
+        if name in {"batch-submit", "batch-submit-reading", "batch-submit-evidence"}:
             command.add_argument("--assessment", required=True, type=Path)
         if name == "batch-relocate-reading":
             command.add_argument("--source-root", required=True, help="Exact original store root for verified legacy path reconciliation")
         if name == "batch-status":
             command.add_argument("--include-items", action="store_true", help="Include the full candidate link list")
-        if name == "batch-read":
+        if name in {"batch-read", "batch-evidence", "batch-attach-evidence", "batch-evidence-status"}:
             command.add_argument("--candidate", required=True)
+        if name == "batch-attach-evidence":
+            command.add_argument("--resource", required=True)
+            command.add_argument("--file", required=True, type=Path)
+            command.add_argument("--origin", required=True, help="Source URL/locator, recorded without fetching")
         if name == "batch-reconcile":
             command.add_argument("--window", required=True, type=int)
             command.add_argument("--reason", required=True)
@@ -117,6 +121,14 @@ def main(argv=None):
                     result = screening.read_packet(store, args.batch, args.candidate)
                 elif args.command == "batch-submit-reading":
                     result = screening.submit_reading(store, args.batch, read_json(args.assessment))
+                elif args.command == "batch-evidence":
+                    result = qualification.issue(store, args.batch, args.candidate)
+                elif args.command == "batch-attach-evidence":
+                    result = qualification.attach(store, args.batch, args.candidate, args.resource, args.file, args.origin)
+                elif args.command == "batch-submit-evidence":
+                    result = qualification.submit(store, args.batch, read_json(args.assessment))
+                elif args.command == "batch-evidence-status":
+                    result = qualification.summary(store, args.batch, args.candidate) or {"status":"not_prepared", "scientific_execution_allowed":False}
                 elif args.command == "batch-digest":
                     result = batches.export_digest(store, args.batch)
                 else:

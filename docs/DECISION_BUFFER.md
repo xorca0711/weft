@@ -12,7 +12,8 @@ papers to remain visible without rewriting the question register.
 | Candidate buffer | This paper appeared in that query | Persistent unvalidated proposal; `supports_rq` is unknown |
 | Reading priority | Read next, hold or reject for a recorded reason | Agent/human self-attribution, matching metadata and context hashes; no authenticated scientific authority |
 | Reading assessment | A proposed statement cites an inspected source segment | Hash/locator checking only; semantic support still needs review |
-| Claim compatibility | Finding and RQ match in population, comparison, endpoint, unit, timing and lineage | Planned scientific review; not implemented by a keyword score |
+| Data-use proposal | The stated use records units, pooling, controls, access and dataset/cohort lineage | B3 structural/citation checks; no scientific execution grant |
+| Claim compatibility | Finding and RQ match in population, comparison, endpoint, unit, timing and lineage | B3 versioned proposal against pinned discovery context; semantic review and current Ravel evidence still required |
 | Ravel integration | A reviewed evidence package is proposed against the current base | Future scoped PR; no automatic merge, accepted claim or A-ID |
 
 ## Implemented transitions
