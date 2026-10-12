@@ -56,11 +56,18 @@ of launcher availability.
 The coordinator is **Mir**, as named in Weft's root backend map. Its durable
 record has no separate chat title. `Verify Weft network access` is the cloud
 worker, not the coordinator. The original coordinator's metadata was readable, but the supported messaging
-call returned `thread not found`. A read-only continuity query was therefore
-not delivered. Do not activate a downloaded SQLite copy or declare its held
-reservation released. The private continuity prompt under
-`runs/backend-handoff-20261012/CHOI_COORDINATOR_CONTINUITY.txt` is prepared for the
-original coordinator. It asks for current ledger identity/ancestry and a proposed
-administrative closeout only. A new private checkpoint must have its actual
+call returned `thread not found`. The owner relayed the continuity request to Mir
+and returned its successful read-only report: 30 events, two scientific attempts
+and the held reservation. The live database and backup match logically; their
+different SQLite byte hashes are explicitly preserved. Root then retrieved a
+fresh original-worker check at 23:01:33 KST on 12 October: matching runtime,
+original container exited with code 0/no OOM/PID 0, and captured processes absent
+within the observed namespace. These are point-in-time observations, not release authority.
+
+Do not activate a downloaded SQLite copy or declare its reservation released.
+The private `runs/backend-handoff-20261012/MIR_PREPARE_ADMIN_CHECKPOINT.txt`
+instructs the original coordinator to recheck state, append one administrative
+event and prepare a local ledger-only descendant checkpoint. Direct Mir delivery
+still needs the owner relay. A new private checkpoint must have its actual
 contents, hash and export authorization established before upload. Scientific
 retention and publication are already complete; no analysis rerun is needed.

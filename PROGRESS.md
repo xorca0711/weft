@@ -16,12 +16,20 @@ distributed queue, authenticated worker or unattended deployment.
 The [supported-launcher probe](docs/LAUNCHER_QUALIFICATION.md) found the documented
 experimental cloud CLI. Its authenticated listing returned no tasks; the intended
 environment/account route remains unverified. No cloud task was launched.
-The original Choi coordinator's metadata is readable, but its continuity message
-failed with `thread not found`. No ledger was activated or reservation released.
-The private continuity prompt is prepared under `runs/backend-handoff-20261012`.
+Direct messaging to the original Choi coordinator failed with `thread not found`.
+The owner subsequently relayed Mir's successful continuity report: 30 events,
+two scientific attempts and the held reservation, with the live database and
+backup logically identical despite different SQLite byte hashes. A fresh
+read-only check in the original worker at **23:01:33 KST on 12 October** verified
+matching runtime identity, the original container exited with code 0/no OOM,
+PID 0 and captured process identities absent in the visible namespace.
+No ledger was activated or reservation released. Private reports and the next
+Mir checkpoint-preparation prompt are under `runs/backend-handoff-20261012`.
 
-Exact next steps: review this control change; reconnect the original coordinator
-for read-only continuity and a concrete administrative closeout; verify the
+Exact next steps: review this control change; relay the prepared instructions to
+Mir for one administrative event and a local ledger-only checkpoint. Review its
+exact inventory/hash before requesting new export authorization; keep the
+reservation held until verified backup and explicit release authorization. Verify the
 intended CLI environment before requesting one synthetic-only launch. Then qualify
 PC-off operation and prepare [independent B5 evaluation](docs/B5_EVALUATION_PREPARATION.md).
 B4 stays held, Choi never reruns, no new private export is authorized by this
@@ -31,8 +39,8 @@ change, and M6 recurrence remains disabled. [Evidence](records/backend-handoff-2
 review, not a draft. Both implementation CI runs passed at `2fc69a8`.
 The browser's saved `chatgpt.com` permission blocked the read-only environment
 check; no workaround was attempted. The coordinator is **Mir** (its durable
-record has no separate chat title). The owner has been directed to its private
-continuity prompt; the cloud worker `Verify Weft network access` is separate.
+record has no separate chat title). The cloud worker `Verify Weft network access`
+is separate; it performed the fresh process check without touching Choi/B4 state.
 
 ## Backend stack integrated; bounded Choi M5 complete — 12 October 2026
 
