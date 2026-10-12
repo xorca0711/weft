@@ -165,6 +165,7 @@ def reconcile(store,batch_id,window_id,reason):
 
 
 def status_report(store,batch_id):
+    from .qualification import summary as evidence_summary
     spec=specification(store,batch_id)
     windows=[dict(r) for r in store.db.execute('SELECT * FROM batch_windows WHERE batch_id=? ORDER BY id',(batch_id,))]
     complete=all(w['status'] in {'complete','split'} for w in windows)
@@ -185,7 +186,8 @@ def status_report(store,batch_id):
                       'disposition_current':disposition_current,'candidate_status':row['candidate_status'],
                       'decision':result['decision'] if result else None,'reason':row['reason'],
                       'reading_status':json.loads(row['reading_json'])['status'] if row['reading_json'] else None,
-                      'reading_reviewed':bool(row['reading_result_json'])})
+                      'reading_reviewed':bool(row['reading_result_json']),
+                      'evidence_qualification':evidence_summary(store,batch_id,row['candidate_id'])})
     return {'batch_id':batch_id,'discovery_complete':complete,'status':'screening' if complete else 'hold',
             'windows':windows,'candidate_links':len(items),'papers':len({i['paper_key'] for i in items}),
             'limits':{k:v for k,v in spec.items() if k.startswith('max_')},'items':items,
@@ -205,6 +207,10 @@ def export_digest(store,batch_id):
         for item in result['items']:
             lines += [f"- {item['title']} ({item['paper_key']}; {item['rq_id']}): {item['stage']}",
                       f"  Decision: {item['decision'] or 'not assessed'}. {item['reason'] or ''}"]
+            qualification=item['evidence_qualification']
+            if qualification:
+                lines.append(f"  Evidence review: {qualification['status']}; current={qualification['current']}; "
+                             f"data={qualification.get('data_proposal','unassessed')}; RQ={qualification.get('rq_proposal','unassessed')}.")
         (folder/'digest.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
         return {'directory':str(folder),'digest_sha256':digest(result),'candidate_links':len(result['items']),
                 'scientific_execution_allowed':False}

@@ -2,7 +2,9 @@
 
 **Status: scientific gate engine still proposed.** Manual metadata retrieval,
 identity holds, reading-priority transitions and source-hash/locator checks are
-implemented. Semantic claim review and G3–G8 runtime transitions are not. Ravel's existing
+implemented. [B3 evidence records](EVIDENCE_QUALIFICATION.md) add coverage and
+use-specific proposal consistency checks. Semantic claim review and G3–G8
+runtime transitions are not. Ravel's existing
 gate remains the execution authority for Ravel analysis.
 
 The [batch interface](BATCH_SCREENING.md) enforces bounded discovery, current-source

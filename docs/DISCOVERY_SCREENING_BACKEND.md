@@ -1,6 +1,8 @@
 # Discovery and screening backend: next implementation sequence
 
-**12 October 2026: B1/B2 implemented; bounded manual cloud handoff and recovery qualified. Unattended operation and independent screening evaluation remain open.**
+**12 October 2026: B1/B2 manual cloud recovery is qualified. B3 evidence/proposal
+records are implemented and tested locally; its cloud/source-review qualification
+is next. Unattended operation and independent evaluation remain open.**
 See the [command guide](BATCH_SCREENING.md) and [fresh-candidate development test](BATCH_PILOT_20261012.md).
 Prioritize discovery-to-screening orchestration before the remaining Choi
 publication closeout. The existing Choi attempt is a completed, exposed test of
@@ -68,7 +70,10 @@ flowchart TD
 
 Arrows describe the target design, not completed qualification. Batch commands
 now compose discovery, packet/response ingestion and bounded XML reading. Figure,
-supplement, data and semantic compatibility decisions remain unimplemented. A model proposes reasons and cited findings. Deterministic controls
+supplement coverage, data-use and RQ-compatibility records now have a
+[B3 interface](EVIDENCE_QUALIFICATION.md). Automated acquisition, actual material
+inspection and semantic scientific admission remain separate. A model proposes
+reasons and cited findings. Deterministic controls
 reject missing, changed, stale or unauthorized records. Scientific support requires
 evaluation beyond valid JSON or a confidence score.
 
@@ -141,8 +146,10 @@ legacy-address amendments preserve the original evidence. See
 [cloud qualification](SCREENING_CLOUD_QUALIFICATION.md).
 
 The B4 operational handoff/recovery component has been demonstrated, but full B4
-coverage still needs B3 figure/supplement/data and compatibility records. The
-profile/window was exposed; this is not independent semantic evaluation. B5
+coverage still needs actual material inspection through the implemented B3
+records. B3's local cached-source test inventories six figure/two supplement entries
+and retains separate data/RQ holds without retrieval. Cloud qualification of this
+new interface remains next. The profile/window was exposed; this is not independent semantic evaluation. B5
 quality evaluation and a supported unattended launcher remain future work.
 Before recurrence, obtain cadence, notification and usage-scope decisions.
 

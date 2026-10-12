@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-12",
+  "scope": "B3 backend cached-source development test; no fresh paper review or cloud deployment",
+  "input_checkpoint_sha256": "7edfa55a6349b2bd2ace5db26a24ab0fec9a0609e6345b6119be5c6e5476fb8f",
+  "paper": "doi:10.1002/advs.77773",
+  "pmcid": "PMC13634473",
+  "ravel_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+  "packet_sha256": "8beca88486991616afb992b80071d540dc9fb23741a8284e45c7fca824810a5e",
+  "record_sha256": "ec94a0b912201933e00900097d42b7592f4f67e6bcd56cadcd0272fbc1daf5e2",
+  "source_sha256": "7aefa2c5ead4854d12c61bdb94f893ae6eb92bacf2fac25a18d8f6dd725a7d9e",
+  "inventory": {
+    "figures": 6,
+    "supplements": 2,
+    "coverage": "JATS resources only",
+    "inspected_artifacts": 0
+  },
+  "data_proposal": "hold",
+  "rq_proposal": "hold",
+  "network_calls": 0,
+  "duplicate_events": 0,
+  "new_events": 2,
+  "previous_20_event_prefix_preserved": true,
+  "original_checkpoint_and_source_files_unchanged": true,
+  "source_and_recovery_copies_inactive": true,
+  "reading_priority_events_unchanged": true,
+  "idempotent_record_and_recovery": true,
+  "scientific_execution_allowed": false,
+  "claim_validated": false,
+  "independent_evaluation": false,
+  "cloud_b3_qualified": false,
+  "software_validation": {
+    "windows_tests": 168,
+    "windows_skipped": 24,
+    "passed": true,
+    "focused_b3_tests": 16,
+    "focused_b3_skipped": 1
+  },
+  "module_sha256": {
+    "weft/qualification.py": "ea13bddb04416aeeb6b827c1093db7259155ca97faadb1fd16264a702d5e0eaa",
+    "weft/__main__.py": "76e225ab1033d9c030639f058ef900090d9ec92b84da81559267b9cbd6ee2de9",
+    "weft/batches.py": "d595e45007d3be597d26cdc730e829654094c022a1a00bd99c05061438eb1b26"
+  }
+}

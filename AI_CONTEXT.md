@@ -16,8 +16,12 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
 - [Current state](PROGRESS.md) owns completed work and exact next steps.
 - Next implementation priority is the [discovery/screening backend](docs/DISCOVERY_SCREENING_BACKEND.md):
   B1 and B2 mechanics passed fixtures, a local batch and a bounded manual cloud
-  handoff/restore. Next implement B3 figure/supplement/data decisions and freeze
-  independent screening evaluation. New batch reading paths are portable; older
+  handoff/restore. B3 now implements source coverage, bounded local attachments
+  and separate versioned data-use/RQ proposals; see
+  [the B3 interface](docs/EVIDENCE_QUALIFICATION.md). Its cached-source test held
+  both proposals with six figure/two supplement entries uninspected. Qualify this
+  new interface in the existing cloud route, then complete bounded B4 source
+  review and freeze independent screening evaluation. New batch reading paths are portable; older
   stores use explicit
   `batch-relocate-reading --source-root` after verified restore. See
   [cloud qualification](docs/SCREENING_CLOUD_QUALIFICATION.md): the approved host
@@ -63,6 +67,9 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
   private checkpoint and inactive read-only restore are adjacent ignored paths.
   It is not the Choi scientific ledger or a cloud coordinator. The public
   `records/backend-candidates-20261012.csv` lists all 74 candidates.
+- B3 development copies are under ignored `runs/evidence-qualification-20261012-v1`.
+  They are inactive software-test stores, not active cloud coordinators. They
+  preserve the earlier cloud checkpoint and make no new source/analysis claim.
 - `records/` contains compact public check evidence. Raw responses, full XML,
   derived reading packets and SQLite state stay in ignored `runs/` on X:.
 - Ravel's physical migration completed on 11 October 2026: `X:/GitHub/ravel`
