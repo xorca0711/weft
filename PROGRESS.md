@@ -1,18 +1,52 @@
 # Current project state
 
-## B3 recovery passed / B4 platform hold — 12 October 2026
-
 Update this before stopping work, every session.
 
-Roadmap marking is current: [M0-M6 status and diagram](docs/IMPLEMENTATION_PLAN.md#established-state)
-and [B1-B5 status](docs/DISCOVERY_SCREENING_BACKEND.md#current-b1-b5-status).
-Manual capabilities are qualified within scope; M1/M2/M3b and B3 remain partial,
-B4 is blocked, Choi M4b is complete for the recorded attempt, M5 is open and
-B5/M6 are planned. PRs #1-#3 are merged; #4-#8 remain open. The
-[stack audit](docs/PR_STACK_INTEGRATION.md) found no textual conflicts in cumulative
-#4 -> #5 -> #6 -> #7 -> #8 integration against main b59ed911. All audited heads
-had passing CI. Retarget/recheck each successor after its predecessor merges;
-no merge or retarget was performed. Ravel #149 remains open/draft.
+## Backend stack integrated; bounded Choi M5 complete — 12 October 2026
+
+Weft PRs **#4 -> #5 -> #6 -> #7 -> #8** merged in order, successors retargeted
+to main, with main CI verified before each next merge. [Exact record](records/pr-stack-merged-20261012.json).
+The owner approved the separate Choi output release, retained its bounded
+descriptive discrepancy result and authorized Ravel #149 / Weft #9 integration.
+
+Ravel #149 is merged at `34675134a5581989d028102a93ae51eebc84a501`; both main CI
+workflows passed. All 15 outputs and original receipt are publicly recoverable,
+hash-locked and restored in clean-checkout CI. No analysis reran, canonical RQ
+was created, causal claim accepted or claim grade promoted. **M5 is complete for
+this adapted, exposed descriptive benchmark.** [Closeout](docs/M5_PUBLICATION_PLAN.md)
+and [authority/publication/merge record](records/choi-publication-20261012.json).
+
+The initial frozen-ignore-file CI failure and exact-byte correction remain in
+history. Local tests passed 158 cases (two skips); repository checks reached
+11,169 after the human disposition document. The private Choi coordinator and
+held reservation remain unchanged: reconcile them before any future job.
+
+B4 stays held. Fresh-paper progress is 74 unique papers, 148 proposed RQ links,
+five cloud link decisions, one held selected-text assessment, no completed fresh
+candidate eligibility review or scientific dispatch. [Frontend/backend and storage map](docs/WORKFLOW_AND_STORAGE.md).
+
+Next is B5 independent evaluation preparation and supported launcher/recovery
+qualification. Freeze independent sampling, labels and criteria before a live
+evaluation; already-exposed Choi/development papers do not qualify as unseen.
+No new worker, scientific dispatch, policy update or recurring schedule is
+authorized by this closeout. M6 remains disabled. Resolve B4 through the platform
+before any permitted continuation. See [the marked roadmap](docs/IMPLEMENTATION_PLAN.md#established-state).
+
+The owner also requested Choi's scientific trial dossier move to Ravel's
+`weft_intake/choi-2020-p001/v1/`, with a root README trial note. The three
+scientific documents are replaced here by navigation stubs; five public receipt
+snapshots are copied unchanged for intake provenance. Runtime records and original
+receipt ancestry stay in Weft. The transfer manifest records hashes; no source
+data, private checkpoints or frozen outputs move. This documentation migration
+is separate from fresh-paper eligibility and does not change Ravel's mission. Ravel
+[#150](https://github.com/xorca0711/ravel/pull/150) merged the intake at
+`7840089dc78a42c25679e2083541c5df1507cfc6`, after all four CI checks passed.
+
+This Weft #9 update records the owner-authorized closeout and is to merge after
+its current CI passes. Private preparation remains under
+`runs/m5-publication-preparation-20261012`.
+
+## Preserved B3 recovery / B4 platform hold — 12 October 2026
 
 **Network enforcement and checkpoint restoration passed in the new worker.
 B4 remains incomplete after a platform safety rejection.**
@@ -193,7 +227,7 @@ performed in this planning update. Choi M5 remains open and its held reservation
 must be reconciled before new live dispatch. Documentation validation passed: 93 local links, 15 unchanged Ravel pins and
 scientific execution disabled. Diff-whitespace checks passed.
 
-## Current stage — Choi scientific review complete; publication pending — 12 October 2026
+## Historical checkpoint — Choi scientific review complete; publication pending — 12 October 2026
 
 [Scientific review](docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md) and its
 [record](records/choi-scientific-review-20261012.json) hand off findings to Ravel.

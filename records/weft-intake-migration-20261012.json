@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-12",
+  "authority": "Owner requested Choi scientific dossier migration and ongoing trial framing; Ravel research identity preserved.",
+  "ravel_pr": "https://github.com/xorca0711/ravel/pull/150",
+  "ravel_merge_commit": "7840089dc78a42c25679e2083541c5df1507cfc6",
+  "ravel_head_checked": "353d3e3c34c23c598f917e620e58dc9a798360fa",
+  "intake_path": "weft_intake/choi-2020-p001/v1/",
+  "transferred_materials": [
+    {
+      "weft_source": "records/pilot-reading-20261011.json",
+      "destination": "weft_intake/choi-2020-p001/v1/records/pilot-reading-20261011.json",
+      "source_sha256": "9d82068e71965157982993f9ec638fee58a5d4f9345a1661863d7fabed8be7ba",
+      "destination_sha256": "9d82068e71965157982993f9ec638fee58a5d4f9345a1661863d7fabed8be7ba",
+      "mode": "byte-identical historical receipt; original retained for Weft audit ancestry"
+    },
+    {
+      "weft_source": "records/pilot-inputs-20261011.json",
+      "destination": "weft_intake/choi-2020-p001/v1/records/pilot-inputs-20261011.json",
+      "source_sha256": "ba22b5e9ab3df1a30a18b35f97ed8e94d226a7782f4700a0c365e6f68f244c9e",
+      "destination_sha256": "ba22b5e9ab3df1a30a18b35f97ed8e94d226a7782f4700a0c365e6f68f244c9e",
+      "mode": "byte-identical historical receipt; original retained for Weft audit ancestry"
+    },
+    {
+      "weft_source": "records/pilot-review-20261011.json",
+      "destination": "weft_intake/choi-2020-p001/v1/records/pilot-review-20261011.json",
+      "source_sha256": "6b0d1bfecc894205ff4830e2dc76bde770fc6f147ebd0ed162bbf8765b444f72",
+      "destination_sha256": "6b0d1bfecc894205ff4830e2dc76bde770fc6f147ebd0ed162bbf8765b444f72",
+      "mode": "byte-identical historical receipt; original retained for Weft audit ancestry"
+    },
+    {
+      "weft_source": "records/pilot-review-validation-20261011.json",
+      "destination": "weft_intake/choi-2020-p001/v1/records/pilot-review-validation-20261011.json",
+      "source_sha256": "6f6a898a06335520ebaf7723f52ca06d3c7c2fa757c8c530b20a27affb0992f0",
+      "destination_sha256": "6f6a898a06335520ebaf7723f52ca06d3c7c2fa757c8c530b20a27affb0992f0",
+      "mode": "byte-identical historical receipt; original retained for Weft audit ancestry"
+    },
+    {
+      "weft_source": "records/choi-scientific-review-20261012.json",
+      "destination": "weft_intake/choi-2020-p001/v1/records/choi-scientific-review-20261012.json",
+      "source_sha256": "2f74714b4b335b23c12afcf5e5b7ead3a97849667f2782012d091e8d0306166d",
+      "destination_sha256": "2f74714b4b335b23c12afcf5e5b7ead3a97849667f2782012d091e8d0306166d",
+      "mode": "byte-identical historical receipt; original retained for Weft audit ancestry"
+    },
+    {
+      "weft_source": "docs/PILOT_CHOI_2020.md",
+      "destination": "weft_intake/choi-2020-p001/v1/PILOT_CHOI_2020.md",
+      "source_sha256": "4d22757580654e0b6f7ed03e47fdbf8eb0df3e74ea1811026668b426509f17ea",
+      "destination_sha256": "6f708e2800e5015c5efd489e52522ec06f6154629a51de0017b89c194a6be298",
+      "mode": "scientific dossier relocated; portable links and current-status preface updated; source becomes navigation stub"
+    },
+    {
+      "weft_source": "docs/PILOT_CHOI_REVIEW.md",
+      "destination": "weft_intake/choi-2020-p001/v1/PILOT_CHOI_REVIEW.md",
+      "source_sha256": "27f7f6f30b923b17fc906a125dd8068dd6753d01c45a0db5c0949f11e787f180",
+      "destination_sha256": "c42e02785c6693bb12c05ae8950bd6fdb7072d5d6ab971d25741c3e499f1c54b",
+      "mode": "scientific dossier relocated; portable links and current-status preface updated; source becomes navigation stub"
+    },
+    {
+      "weft_source": "docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md",
+      "destination": "weft_intake/choi-2020-p001/v1/PILOT_CHOI_SCIENTIFIC_REVIEW.md",
+      "source_sha256": "bc9eaa52c6036e5e2be2d234bf0a019565009a90da1c07c370821385b1974f2c",
+      "destination_sha256": "24014816f906dcd798a80a7e038afc028fcb8a87ecbc8e80617f99c7fb4bbcac",
+      "mode": "scientific dossier relocated; portable links and current-status preface updated; source becomes navigation stub"
+    }
+  ],
+  "frozen_evidence_changed": false,
+  "analysis_rerun": false,
+  "private_materials_transferred": false,
+  "operational_history_preserved": true,
+  "weft_documents": "navigation stubs; scientific dossier authority relocated",
+  "receipt_copies": "exact historical snapshots; originals retained for audit ancestry",
+  "ravel_pr_checks": "all four passed"
+}

@@ -60,6 +60,18 @@ Before execution some fields are absent by stage; the state machine must forbid
 using a proposal as a completed receipt. Do not fill required evidence with
 invented values. Candidate IDs belong to the paper/job namespace until registered.
 
+## Trial intake destination
+
+Reviewed scientific handoffs are collected in Ravel's
+`weft_intake/<paper-id>/<handoff-version>/`. The initial Choi package migrates
+the pilot plan, figure/supplement/dataset review and scientific summary, with
+five exact public review/input receipt snapshots. Weft retains operational
+records, immutable audit ancestry and navigation stubs. The package records
+specific gates and permitted use; it never treats reading priority as scientific
+acceptance. Existing article, contract and output paths are preserved.
+See [the storage map](WORKFLOW_AND_STORAGE.md). This is the owner-requested trial
+organization; an automated exporter/admission mechanism remains unimplemented.
+
 ## Permissions and storage
 
 Use separate credentials for read/search, compute and PR preparation, only when

@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-12",
+  "state": "M5_COMPLETE_BOUNDED_DESCRIPTIVE_BENCHMARK",
+  "authority": "Owner approved this exact named archive, size and SHA-256 for public Ravel prerelease publication and restoration qualification.",
+  "github_identity": "xorca0711",
+  "release_url": "https://github.com/xorca0711/ravel/releases/tag/choi-p001-figure1-v1",
+  "release_id": 410591160,
+  "tag": "choi-p001-figure1-v1",
+  "tag_revision": "714945697b007f4a0046834b34251392c1cfbe5a",
+  "asset_id": 633765798,
+  "asset_url": "https://github.com/xorca0711/ravel/releases/download/choi-p001-figure1-v1/choi-p001-figure1-v1-complete-outputs.zip",
+  "asset_bytes": 105582086,
+  "asset_sha256": "6e10afc432fdffb32ece7a3692c8dbb302c74604e9e67e27793c8d1856de21e2",
+  "draft_download_hash_verified": true,
+  "unauthenticated_public_restore_verified": true,
+  "archive_members": 17,
+  "restored_file_count": 16,
+  "unchanged_output_count": 15,
+  "original_receipt_sha256": "24aaaaef907519391ba3c8650f96795ebe2dff4a27cd4ad9e9977852cdc5974b",
+  "unchanged_research_gate_against_main": "passed at bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+  "local_tests": {
+    "run": 158,
+    "skipped": 2,
+    "passed": 156
+  },
+  "local_repository_checks": 11161,
+  "ravel_pr": 149,
+  "ravel_revision": "445e249c813b22f851545f7123d1e548c0394884",
+  "initial_ci_failure": "Frozen .gitignore comment change rejected; exact original bytes restored; validator and contracts unchanged.",
+  "analysis_rerun": false,
+  "human_scientific_acceptance": false,
+  "coordinator_ledger_changed": false,
+  "b4_status": "on_hold_unchanged",
+  "clean_checkout_ci": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-12T12:55:35Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/xorca0711/ravel/actions/runs/38252075213/job/114820666079",
+      "name": "validate",
+      "startedAt": "2026-10-12T12:55:01Z",
+      "status": "COMPLETED",
+      "workflowName": "Repository checks"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-12T12:55:34Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/xorca0711/ravel/actions/runs/38252067203/job/114820638634",
+      "name": "validate",
+      "startedAt": "2026-10-12T12:54:57Z",
+      "status": "COMPLETED",
+      "workflowName": "Repository checks"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-12T12:55:32Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/xorca0711/ravel/actions/runs/38252074823/job/114820664941",
+      "name": "research-governance",
+      "startedAt": "2026-10-12T12:55:01Z",
+      "status": "COMPLETED",
+      "workflowName": "Research governance"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-12T12:55:24Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/xorca0711/ravel/actions/runs/38252067173/job/114820638616",
+      "name": "research-governance",
+      "startedAt": "2026-10-12T12:54:57Z",
+      "status": "COMPLETED",
+      "workflowName": "Research governance"
+    }
+  ],
+  "ravel_pr_state": "MERGED",
+  "m5_complete": true,
+  "human_disposition": {
+    "date": "2026-10-12",
+    "authority": "repository owner",
+    "decision": "retain_as_descriptive_discrepancy_benchmark",
+    "instruction": "Retain the bounded result and merge both PRs",
+    "limits": [
+      "No new RQ",
+      "No causal claim",
+      "No claim-grade promotion",
+      "No exact five-state reproduction"
+    ],
+    "ravel_record": "https://github.com/xorca0711/ravel/blob/445e249c813b22f851545f7123d1e548c0394884/Research%20Article/gate1_02_choi_2020/weft_pilot_v1/REVIEW_DISPOSITION.md"
+  },
+  "ravel_integration": {
+    "headRefOid": "445e249c813b22f851545f7123d1e548c0394884",
+    "mergeCommit": {
+      "oid": "34675134a5581989d028102a93ae51eebc84a501"
+    },
+    "mergedAt": "2026-10-12T13:04:09Z",
+    "state": "MERGED"
+  },
+  "ravel_main_ci": [
+    {
+      "conclusion": "success",
+      "databaseId": 38253124043,
+      "name": "Repository checks",
+      "status": "completed",
+      "url": "https://github.com/xorca0711/ravel/actions/runs/38253124043"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38253124067,
+      "name": "Research governance",
+      "status": "completed",
+      "url": "https://github.com/xorca0711/ravel/actions/runs/38253124067"
+    }
+  ],
+  "completion_scope": "Single exposed, adapted descriptive Choi benchmark; human retention and Ravel integration. No unattended operation or new canonical claim.",
+  "coordinator_next_action": "Reconcile existing held reservation and checkpoint before any future scientific dispatch; no competing writer or new job.",
+  "human_descriptive_retention": true,
+  "scientific_acceptance_scope": "No new scientific claim accepted; owner retention of the bounded descriptive benchmark is recorded separately."
+}

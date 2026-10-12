@@ -14,8 +14,8 @@
 | Pinned Codex Cloud setup | Descriptive only | [Setup receipt](records/cloud-setup-20261011.json) | Private environment published; small export verified; no retention guarantee |
 | Synthetic executor and restart recovery | Descriptive only | [Recovery receipt](records/synthetic-recovery-integration-20261011.json) | Bounded Docker restart; synthetic recovery does not prove arbitrary job recovery |
 | Manual dot handoff and private checkpoints | Descriptive only | [Coordinator receipt](records/manual-coordinator-20261011.json) | Small synthetic recovery; no retention or distributed-lock guarantee |
-| Manual scientific cloud execution | Descriptive only | [Metadata](records/choi-metadata-20261011.json) and [Figure1 execution](records/choi-figure1-execution-20261012.json) | Metadata and Figure1 archive verified; [scientific review](docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md) complete with limits; publication pending |
-| Autonomous paper-to-question workflow | Not established | [Marked implementation plan](docs/IMPLEMENTATION_PLAN.md#established-state) | Autonomous screening/orchestration and complete Ravel artifact publication remain unqualified |
+| Manual scientific cloud execution | Descriptive only | [Metadata](records/choi-metadata-20261011.json) and [Figure1 execution](records/choi-figure1-execution-20261012.json) | Metadata and Figure1 archive verified; [scientific review](docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md) complete with limits; [public outputs and recovery qualified](docs/M5_PUBLICATION_PLAN.md), bounded owner retention and Ravel integration complete |
+| Autonomous paper-to-question workflow | Not established | [Marked implementation plan](docs/IMPLEMENTATION_PLAN.md#established-state) | Unattended orchestration and general fresh-paper scientific qualification remain open; bounded Choi publication is complete |
 
 Weft is being built to bring new literature into an existing research programme:
 find papers against established questions and broader reading interests, explain
@@ -47,14 +47,14 @@ show completed, qualified, partial, blocked and planned stages;
 [PR integration status](docs/PR_STACK_INTEGRATION.md) separates tested work from main.
 The earlier [manual cloud handoff and recovery](docs/SCREENING_CLOUD_QUALIFICATION.md)
 is qualified; independent screening evaluation remains open.
-An unattended launcher and recurrence remain future work. Choi publication remains
-a parallel closeout task.
+An unattended launcher and recurrence remain future work. Choi's bounded
+descriptive pilot is complete; it does not qualify the fresh-paper pipeline.
 
 ## Intended workflow
 
 The selected deployment uses a dot for coordination and Codex Cloud for execution.
 The cloud environment is published. Metadata is verified; the first descriptive
-Figure1 archive and scientific review are complete with documented limits; publication remains open. Solid arrows show
+Figure1 archive, scientific review and public recovery are complete with documented limits; bounded owner retention and Ravel integration are complete. Solid arrows show
 implemented discovery/reading stages; dotted arrows show scientific links still
 being qualified end to end. An RQ supplies search context; the review buffer keeps proposed
 relationships separate from accepted evidence.
@@ -88,23 +88,35 @@ archives. There is no separate Google Cloud Platform project, VM or storage buck
 
 ```mermaid
 flowchart TD
-    W["Weft · GitHub<br/>Workflow controls"] --> M["Mir · dot<br/>Coordinator and job ledger"]
-    R["Ravel · GitHub<br/>RQs, contracts and analysis"] -->|pinned context| M
-    M -->|manual dispatch| C["Codex Cloud<br/>weft-pilot worker"]
-    R -->|pinned code| C
-    P["Public papers and datasets"] -->|reviewed download| C
-    M <-->|checkpoints and explicit restore| G["Private Google Drive<br/>Backups and result archives"]
-    C -->|receipts and artifacts| G
-    G --> V["Independent verification<br/>QC and scientific review"]
-    V --> E["Reviewable Ravel evidence PR"]
-    E -.-> H["Owner decision<br/>Integrate, amend, hold or reject"]
+    subgraph FRONT["Interfaces used by the owner"]
+        CHAT["Codex / dot chat: request, review and authorize"]
+        REPORT["Candidate lists, source packets and Markdown reports"]
+        PR["GitHub PRs: scientific disposition and integration"]
+    end
+    subgraph BACK["Weft backend: commands and state"]
+        SEARCH["Europe PMC adapter: bounded search and deduplication"]
+        BUFFER["SQLite decision buffer: proposed paper-to-RQ links"]
+        SCREEN["Agent screening: read next / hold / reject link"]
+        REVIEW["Figures, supplements and dataset-use review: partial; B4 held"]
+        RUN["Separately authorized Ravel contract and cloud execution"]
+        QC["Output hashes, QC, paper comparison and limitations"]
+    end
+    CHAT --> SEARCH --> BUFFER --> SCREEN --> REPORT
+    SCREEN --> REVIEW
+    REVIEW -. "Reviewed handoff" .-> INTAKE["Ravel / weft_intake: trial intake"]
+    INTAKE -. "Eligibility, readiness and authorization required" .-> RUN --> QC --> PR
+    RQ["Ravel RQs: pinned read-only context"] --> BUFFER
+    RUN --> DRIVE["Private Drive: verified recovery checkpoints"]
+    PR --> RAVEL["Ravel / weft_intake: reviewed trial dossier and evidence locators"]
+    QC --> RELEASE["Reviewed public outputs: GitHub Release"]
+    RELEASE --> RAVEL
 ```
 
 The arrows describe the selected route, including steps that remain under
 qualification; they do not represent an unattended pipeline. Metadata recovery
 has passed independent readback. The first Figure1 analysis has executed once;
 its archive and [scientific review](docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md) are complete
-with documented limits; complete-output publication and human review remain open. See
+with documented limits; [public outputs and recovery are qualified](docs/M5_PUBLICATION_PLAN.md), with bounded owner retention and Ravel integration complete. See
 [current state](PROGRESS.md) for the latest hold and its evidence.
 
 | Component | Responsibility | What it does not provide |
@@ -131,12 +143,14 @@ implemented safeguards from remaining qualification work.
 | Operate the batch/agent interface and inspect fresh candidates | [Batch guide](docs/BATCH_SCREENING.md) and [candidate digest](docs/BATCH_PILOT_20261012.md) |
 | Run bounded searches and inspect receipts | [Discovery guide](docs/DISCOVERY.md) |
 | Understand why a paper is not immediately supporting evidence | [Decision buffer](docs/DECISION_BUFFER.md) |
+| See frontend/backend responsibilities and evidence destinations | [Workflow and storage map](docs/WORKFLOW_AND_STORAGE.md) |
 | See the full development roadmap and current stage | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) |
 | Understand agent responsibilities and context | [Agent workflow](docs/AGENT_WORKFLOW.md) |
 | Inspect automated decisions and stopping rules | [Gate specification](docs/GATES.md) |
 | Connect Weft to Ravel without competing sources of truth | [Integration contract](docs/RAVEL_CONNECTION.md) |
 | Run the first complete paper pilot after implementation | [Choi 2020 pilot](docs/PILOT_CHOI_2020.md) |
 | Inspect completed figures, supplements and dataset qualification | [Choi review](docs/PILOT_CHOI_REVIEW.md) |
+| Review the completed bounded Choi publication and its limits | [M5 publication plan](docs/M5_PUBLICATION_PLAN.md) |
 | Configure the selected cloud environment and access | [Cloud setup runbook](docs/CLOUD_SETUP.md) |
 | Qualify the scientific runtime | [Execution environment](docs/EXECUTION_ENVIRONMENT.md) |
 | Evaluate missed papers, extraction and analysis fidelity | [Evaluation plan](docs/EVALUATION.md) |

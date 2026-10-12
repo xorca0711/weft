@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-12",
+  "state": "LOCAL_QUALIFIED_PUBLIC_DESTINATION_DECISION_PENDING",
+  "proposed_repository": "xorca0711/ravel",
+  "proposed_tag": "choi-p001-figure1-v1",
+  "proposed_tag_revision": "714945697b007f4a0046834b34251392c1cfbe5a",
+  "qualification": {
+    "archive": "choi-p001-figure1-v1-complete-outputs.zip",
+    "bytes": 105582086,
+    "sha256": "6e10afc432fdffb32ece7a3692c8dbb302c74604e9e67e27793c8d1856de21e2",
+    "archive_members": 17,
+    "output_count": 15,
+    "receipt_sha256": "24aaaaef907519391ba3c8650f96795ebe2dff4a27cd4ad9e9977852cdc5974b",
+    "unchanged_receipt_validator": {
+      "ok": true,
+      "errors": []
+    },
+    "privacy_findings": 0,
+    "uploaded": false,
+    "registered": false,
+    "analysis_rerun": false
+  },
+  "manifest": {
+    "schema_version": 1,
+    "kind": "unpublished-complete-output-candidate",
+    "analysis_source": "b656d06cc9f2cfdd61a6dd1f6570ec01331abf91",
+    "receipt_sha256": "24aaaaef907519391ba3c8650f96795ebe2dff4a27cd4ad9e9977852cdc5974b",
+    "output_count": 15,
+    "members": [
+      {
+        "path": "analysis/research/runs/p001_figure1_v1_f001_d56ee41e13cd4327/descriptive-summary.json",
+        "bytes": 18493,
+        "sha256": "e37c79d695111755fa456829fb7fe2caa51b4bdf37e47cd18fd321c1e85f17a3"
+      },
+      {
+        "path": "analysis/research/runs/p001_figure1_v1_f001_d56ee41e13cd4327/qc_denominators.csv",
+        "bytes": 922,
+        "sha256": "61e33dbaf2d3b10d28cce9851216cfe2a692d969ad699234e8bcd80f9d5432ad"
+      },
+      {
+        "path": "analysis/research/runs/p001_figure1_v1_f001_d56ee41e13cd4327/composition.csv",
+        "bytes": 1996,
+        "sha256": "f821a94e83d8516c27fb6c67d3b13d6d8ec574f9e23a8a16bd463192f3b00da3"
+      },
+      {
+        "path": "analysis/research/runs/p001_figure1_v1_f001_d56ee41e13cd4327/marker_evidence.csv",
+        "bytes": 29361,
+        "sha256": "1e8929841d28b57a15e727c48a37ef412d33f8e18d42b32410b2bba97e60b2d4"
+      },
+      {
+        "path": "analysis/research/runs/p001_figure1_v1_f001_d56ee41e13cd4327/cell_states.csv",
+        "bytes": 944589,
+        "sha256": "642e97141d8e7baef60600cc2cdb94e8cfb52c0343483cfeb111533a0d3bf7ff"
+      },
+      {
+        "path": "analysis/research/runs/p001_figure1_v1_f001_d56ee41e13cd4327/clusters_0.3.csv",
+        "bytes": 4078,
+        "sha256": "d58020d75d002cde26ee8209a51cd505b26975e0d5df98bf77044f9b8d114bde"
+      },
+      {
+        "path": "analysis/research/runs/p001_figure1_v1_f001_d56ee41e13cd4327/clusters_0.5.csv",
+        "bytes": 5064,
+        "sha256": "ef5303f39b48371297fe72cc148faa18ba62ed25b1d9e0d87f5ee57cf464cf70"
+      },
+      {
+        "path": "analysis/research/runs/p001_figure1_v1_f001_d56ee41e13cd4327/clusters_1.0.csv",
+        "bytes": 7161,
+        "sha256": "3cee779d7a0028d6617b39e34109ab08129187926108d316d35438f377431ea9"
+      },
+      {
+        "path": "analysis/research/runs/p001_figure1_v1_f001_d56ee41e13cd4327/figure1_descriptive.h5ad",
+        "bytes": 385675968,
+        "sha256": "6d2ab27a98543d3f03c941907729af69ca9ce22295e51cff67e329ce8c1644ca"
+      },
+      {
+        "path": "analysis/research/runs/p001_figure1_v1_f001_d56ee41e13cd4327/qc_cell_counts.png",
+        "bytes": 31636,
+        "sha256": "54d2667c4ba9b8c0d37a6d23768c35024c2099e08925bd0f012bb3d2d47986ee"
+      },
+      {
+        "path": "analysis/research/runs/p001_figure1_v1_f001_d56ee41e13cd4327/figure1C_composition.png",
+        "bytes": 40703,
+        "sha256": "a41a93f0c0f78b6eccbe0d211d6f2735731ee5deead381449baa15aa6f88be4f"
+      },
+      {
+        "path": "analysis/research/runs/p001_figure1_v1_f001_d56ee41e13cd4327/figure1D_marker_detection.png",
+        "bytes": 95219,
+        "sha256": "8661e42cf2048260530946773d2c04c1801ddeeb64bb6666588a5d8bc30bc1b0"
+      },
+      {
+        "path": "analysis/research/runs/p001_figure1_v1_f001_d56ee41e13cd4327/datp_subclusters.csv",
+        "bytes": 2036,
+        "sha256": "c58e7d4040d06d80fc5f3d319d273a72630bfc5e036de60405b643192f75291c"
+      },
+      {
+        "path": "analysis/research/runs/p001_figure1_v1_f001_d56ee41e13cd4327/figure1B_state_umap.png",
+        "bytes": 115449,
+        "sha256": "44c44ba1f82cc40038622ef1e25bc4deddb3a828d5365fcbb30faebb381d04a8"
+      },
+      {
+        "path": "analysis/research/runs/p001_figure1_v1_f001_d56ee41e13cd4327/qc_library_timepoint_umap.png",
+        "bytes": 222800,
+        "sha256": "84ea7f2982aaee3c71bcd93af61f0c9c3a9ee8c0e92dfa5b38dfcc2cc53f634d"
+      },
+      {
+        "path": "analysis/research/runs/p001_figure1_v1_f001_d56ee41e13cd4327/receipt.json",
+        "bytes": 18419,
+        "sha256": "24aaaaef907519391ba3c8650f96795ebe2dff4a27cd4ad9e9977852cdc5974b"
+      }
+    ]
+  },
+  "privacy_review": {
+    "scope": "All JSON/CSV text, PNG metadata and HDF5 string datasets/attributes; prior five-figure visual review reused.",
+    "limits": "Pattern and metadata inspection is not a universal privacy guarantee; no image OCR or opaque-byte proof.",
+    "counts": {
+      "string_values": 40426,
+      "hdf5_datasets": 82,
+      "hdf5_attributes": 246,
+      "pngs": 5
+    },
+    "findings": []
+  },
+  "b4": "on_hold_unchanged",
+  "human_scientific_acceptance": false
+}

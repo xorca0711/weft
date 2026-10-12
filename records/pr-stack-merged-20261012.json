@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-12",
+  "repository": "xorca0711/weft",
+  "authority": "Owner explicitly requested sequential merges of PRs 4–8, retargeting successors and checking CI after each merge.",
+  "merge_method": "merge_commit",
+  "steps": [
+    {
+      "baseRefName": "main",
+      "headRefOid": "b3a2ce17508402f18008d3ef7e3503fbe2f45f29",
+      "mergeCommit": {
+        "oid": "4a7c6f4d5a612a6656c90f9dce937233079c158b"
+      },
+      "mergedAt": "2026-10-12T12:32:57Z",
+      "number": 4,
+      "state": "MERGED",
+      "url": "https://github.com/xorca0711/weft/pull/4",
+      "main_ci": {
+        "conclusion": "success",
+        "databaseId": 38249721059,
+        "event": "push",
+        "headSha": "4a7c6f4d5a612a6656c90f9dce937233079c158b",
+        "name": "Weft checks",
+        "status": "completed",
+        "url": "https://github.com/xorca0711/weft/actions/runs/38249721059"
+      }
+    },
+    {
+      "baseRefName": "main",
+      "headRefOid": "827ad51bf9d0110e3311940d4d3576abaf06b5c1",
+      "mergeCommit": {
+        "oid": "7442f4c7453557f8d740bfd2d08e0604e855eb52"
+      },
+      "mergedAt": "2026-10-12T12:34:01Z",
+      "number": 5,
+      "state": "MERGED",
+      "url": "https://github.com/xorca0711/weft/pull/5",
+      "main_ci": {
+        "conclusion": "success",
+        "databaseId": 38249828097,
+        "event": "push",
+        "headSha": "7442f4c7453557f8d740bfd2d08e0604e855eb52",
+        "name": "Weft checks",
+        "status": "completed",
+        "url": "https://github.com/xorca0711/weft/actions/runs/38249828097"
+      }
+    },
+    {
+      "baseRefName": "main",
+      "headRefOid": "89b833ee41edb9debad5d3335a8a1c238fcefb08",
+      "mergeCommit": {
+        "oid": "3d13a9bd9b5ee3cdf53819de97177619dd0203ca"
+      },
+      "mergedAt": "2026-10-12T12:35:03Z",
+      "number": 6,
+      "state": "MERGED",
+      "url": "https://github.com/xorca0711/weft/pull/6",
+      "main_ci": {
+        "conclusion": "success",
+        "databaseId": 38249933938,
+        "event": "push",
+        "headSha": "3d13a9bd9b5ee3cdf53819de97177619dd0203ca",
+        "name": "Weft checks",
+        "status": "completed",
+        "url": "https://github.com/xorca0711/weft/actions/runs/38249933938"
+      }
+    },
+    {
+      "baseRefName": "main",
+      "headRefOid": "d95d55868ea42561d89112ef5dc7bf060fba46ca",
+      "mergeCommit": {
+        "oid": "a05496a33d04d76dbccfc7cdc5b165acdf6cafb6"
+      },
+      "mergedAt": "2026-10-12T12:36:02Z",
+      "number": 7,
+      "state": "MERGED",
+      "url": "https://github.com/xorca0711/weft/pull/7",
+      "main_ci": {
+        "conclusion": "success",
+        "databaseId": 38250043578,
+        "event": "push",
+        "headSha": "a05496a33d04d76dbccfc7cdc5b165acdf6cafb6",
+        "name": "Weft checks",
+        "status": "completed",
+        "url": "https://github.com/xorca0711/weft/actions/runs/38250043578"
+      }
+    },
+    {
+      "baseRefName": "main",
+      "headRefOid": "5453ca2742b1e229b0c40b1713f22df2d980e39f",
+      "mergeCommit": {
+        "oid": "719666e231852bc304f6fd6abd9b2dd71b9145e4"
+      },
+      "mergedAt": "2026-10-12T12:37:57Z",
+      "number": 8,
+      "state": "MERGED",
+      "url": "https://github.com/xorca0711/weft/pull/8",
+      "main_ci": {
+        "conclusion": "success",
+        "databaseId": 38250240790,
+        "event": "push",
+        "headSha": "719666e231852bc304f6fd6abd9b2dd71b9145e4",
+        "name": "Weft checks",
+        "status": "completed",
+        "url": "https://github.com/xorca0711/weft/actions/runs/38250240790"
+      }
+    }
+  ],
+  "b4_status": "on_hold_unchanged",
+  "choi_ravel_pr_149": "separate_open_draft",
+  "scientific_acceptance": false
+}
