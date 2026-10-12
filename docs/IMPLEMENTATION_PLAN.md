@@ -31,6 +31,18 @@ One coordinator is sufficient. Separate roles do not require separate agents and
 are not independent biological replication. A source match enters the
 [decision buffer](DECISION_BUFFER.md); it never directly becomes a supporting claim.
 
+## Next priority: automate discovery and screening
+
+The [backend implementation sequence](DISCOVERY_SCREENING_BACKEND.md) now takes
+priority: B1 batch coordination -> B2 source-grounded agent screening -> B3 data
+and RQ compatibility -> B4 a bounded fresh-candidate batch -> B5 evaluation and
+separately authorized recurrence. These refine M1/M2/M3. Current Choi execution
+was manually coordinated; the autonomous screening chain is not implemented.
+Choi M5 publication remains open on a separate track and is not a prerequisite
+for developing or evaluating the discovery/screening backend. Preserve its held
+reservation; reconcile before new live dispatch. No gate or schedule is enabled
+by this planning change.
+
 ## Development stages and exit criteria
 
 Keep M0-M6 identifiers so existing receipts retain their meaning. M3/M4 are split
@@ -40,11 +52,11 @@ into implementation slices below; these are not new scientific gates.
 |---|---|---|---|
 | 0 / M0-M2 baseline | Foundation, bounded discovery/dedup, pinned RQs, manual reader, Choi source review | Reuse recorded tests/audit and preserve unresolved limits | Implemented baseline; M1 version-family/recall evaluation and M2 independent screening evaluation remain open |
 | 1 / M3a cloud setup | Private `weft-pilot`; exact Weft PR revision; read-only Ravel pin; Python/Git/network preflight | Fresh cloud task passes offline checks and pin verification; capability/access receipt recorded | Published at d031cef: 58 tests, 15 Ravel files and small external restore and fresh-task source checks passed; startup/network caveats recorded |
-| 2 / M3b job and artifact control | Single authoritative ledger, job keys, leases, append-only attempts, checkpoint/export, cancellation and enforced limits | Synthetic duplicate, expired lease, changed hash, stale context, disconnect, cancellation and restore tests pass | 122 Linux tests, bounded executor/restart and Drive cross-task recovery passed; manual metadata completed and Figure1 export held; unattended integration incomplete |
+| 2 / M3b job and artifact control | Single authoritative ledger, job keys, leases, append-only attempts, checkpoint/export, cancellation and enforced limits | Synthetic duplicate, expired lease, changed hash, stale context, disconnect, cancellation and restore tests pass | 122 Linux tests, bounded executor/restart and Drive cross-task recovery passed; manual metadata completed and Figure1 archive independently verified; unattended integration incomplete |
 | 3 / M2 cloud coordinator qualification | One manual dot delegation, source-bound reading, structured return and hold handling | Dot uses the selected environment/revision and verifies receipts without bypassing holds; independent screening evaluation remains separate | Manual dispatch/return and SQLite checkpoint passed; no schedule or automatic scientific dispatch |
-| 4 / M4a scientific readiness | New Ravel contract/adapter, dependency lock, comparison criteria, verified transfer and sparse-loader benchmark | Coordinates/values and joins pass; measured memory fits enforced limits; artifact export/restore passes | Frozen contract/runtime and metadata verified; 4 MiB synthetic recovery passed; real Figure1 archive still needs readback |
-| 5 / M4b Choi pilot | Figure 1B-D descriptive adapted reanalysis, exposure record and discrepancy ledger | Complete QC/denominators, all attempts and limitations; no population inference from one pooled library per condition | Executed once; worker reports successful QC/verifier, but evidence export and independent result review are held |
-| 6 / M5 reviewed integration | Precedent review, candidate/no-candidate disposition, manifest, scoped Ravel PR and CI | Current Ravel base checked; evidence traceable; acceptance/merge recorded separately | Planned |
+| 4 / M4a scientific readiness | New Ravel contract/adapter, dependency lock, comparison criteria, verified transfer and sparse-loader benchmark | Coordinates/values and joins pass; measured memory fits enforced limits; artifact export/restore passes | Frozen contract/runtime and metadata verified; 4 MiB synthetic recovery passed; real Figure1 archive passed independent reconstruction and all member checks |
+| 5 / M4b Choi pilot | Figure 1B-D descriptive adapted reanalysis, exposure record and discrepancy ledger | Complete QC/denominators, all attempts and limitations; no population inference from one pooled library per condition | Executed once; archive verified; [QC, figures and paper comparison reviewed](PILOT_CHOI_SCIENTIFIC_REVIEW.md); no new RQ proposed, annotation limits retained |
+| 6 / M5 reviewed integration | Precedent review, candidate/no-candidate disposition, manifest, scoped Ravel PR and CI | Current Ravel base checked; evidence traceable; acceptance/merge recorded separately | Scientific review in draft Ravel PR #149; complete-output publication and human review remain open |
 | 7 / M6 prospective operation | Freeze unseen-paper evaluation; assess recall, source support, recovery and usage; then propose recurrence | Reviewed criteria met and cadence/scope/usage authority recorded | Planned; automation disabled |
 
 Each slice needs scoped changes, tests and observed limitations. Resolve correction/
@@ -62,10 +74,11 @@ flowchart TD
     H --> K
     G -->|Yes| P["M4b: bounded Choi descriptive run"]
     P --> R["M5: reviewed evidence package and Ravel PR"]
-    R --> U["M6: unseen-paper qualification"]
-    U --> A["Separately activate bounded recurring operation"]
-    B --> E["M1 / M2: correction, coverage and independent screening evaluation"]
-    E --> U
+    B --> E["Next: M1/M2/M3 discovery and screening backend"]
+    E --> U["Fresh-candidate batch and independent screening evaluation"]
+    U --> A["M6: separately qualify and activate recurrence"]
+    U -.-> N["Later: new paper's analysis-readiness review"]
+    R --> Z["Choi closeout; separate from frontend implementation"]
 ```
 
 Future arrows are not implemented enforcement. The [cloud runbook](CLOUD_SETUP.md)
@@ -115,12 +128,10 @@ exhaustion retain resumable holds/attempts; do not retry blindly.
 
 ## Next code slice
 
-Implemented: `weft/` discovery/context/buffer/reading/validation; `configs/`;
-`integration/ravel.lock.json`; `tests/`; compact `records/`.
-Add job ledger, executor, coordinator handoff and exporter modules when functional.
-Implemented first M3 slice: [synthetic ledger](JOB_CONTROLS.md), immutable packets,
-exclusive claims and duplicate/unknown-outcome tests. Next: content-verified worker
-receipts, synthetic executor, hard limits and durable cloud ledger/artifact recovery.
-Numeric dependencies and Ravel analysis code belong to M4a after scope review.
-No automatic acceptance, merge, RQ registration, paid fallback or schedule follows
-from environment setup.
+Implement B1's bounded discovery batch coordinator over existing context,
+discovery, identity, queue and job-control primitives. Follow with B2's screening
+packet/result interface, B3's distinct eligibility/compatibility records and a
+fresh-candidate digest. See [deliverables and acceptance tests](DISCOVERY_SCREENING_BACKEND.md#concrete-implementation-order).
+The synthetic executor, checkpoint and transfer modules already exist; do not
+reimplement them or claim that their existence supplies semantic screening.
+No automatic acceptance, merge, RQ registration, paid fallback or schedule follows.

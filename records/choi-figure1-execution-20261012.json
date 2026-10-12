@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "recorded_date": "2026-10-12",
-  "state": "EXPORT_HELD_CLOUD_USAGE_LIMIT",
+  "state": "SCIENTIFIC_REVIEW_COMPLETE_PUBLICATION_PENDING",
   "attempt_identity": "f001_d56ee41e13cd4327",
   "run_id": "p001_figure1_v1_f001_d56ee41e13cd4327",
   "job_id": "ff0cf9dc5b9414ae8c33a67947fd8f9207ff64d384069a3de87752dee21c636c",
@@ -93,14 +93,16 @@
     "sha256": "e1f8ee36d87111dc9ef7defbcddaf04f9633851c63a57ce25f03474881ae69c7",
     "parts": 26,
     "transfer_manifest_sha256": "f73b416c381adde7022f233e62495123936d99c66b5b93da56a1ffce56a02a29",
-    "independent_readback_verified": false,
+    "independent_readback_verified": true,
     "manifest_entries": 99,
     "zip_members_including_manifest": 100,
-    "transfer_status": "Owner-requested continuation admitted after ledger reconciliation; two parts uploaded before runtime disconnect. Worker readback verified part 0000; part 0001 materialization/hash verification incomplete. No reconstruction yet.",
-    "successful_uploads_confirmed_in_root_review": 2,
-    "remote_reconciliation_required_before_resume": true,
+    "transfer_status": "All 26 parts and transfer manifest uploaded; worker and independent root reconstruction, ZIP CRC and all 99 manifest-entry checks passed.",
+    "successful_uploads_confirmed_in_root_review": 27,
+    "remote_reconciliation_required_before_resume": false,
     "successful_uploads_at_initial_rejection": 0,
-    "current_remote_outcome": "Root metadata confirms parts 0000 and 0001, each 4194304 bytes in the original owner-only folder. Root has not independently hashed either part."
+    "current_remote_outcome": "Complete; exact sizes, original destination and owner-only permissions independently verified for all 27 files.",
+    "parts_uploaded": 26,
+    "transfer_manifest_uploaded": true
   },
   "after_run_checkpoint": {
     "ok": true,
@@ -121,11 +123,9 @@
   "scientific_acceptance": false,
   "stage_complete": false,
   "next_steps": [
-    "Reconcile original worker, existing two remote parts, receipt and partial download after runtime disconnect; continue only missing authorized transfer/readback without duplicate upload or analysis rerun.",
-    "Upload and independently reconstruct/hash all parts and verify ZIP member hashes",
-    "Review original Ravel receipt, QC/denominators and figure files without rerunning analysis",
-    "Resolve publication of exact outputs under existing governance; then write bounded discrepancy and candidate/no-candidate review",
-    "Append verified descendant checkpoint; release held slot only through the existing protocol"
+    "Review the documented scientific limitations and qualify complete-output publication under the unchanged Ravel receipt validator.",
+    "Keep the numerical receipt unregistered and Ravel PR #149 draft until publication and review are resolved.",
+    "Before another job, reconcile this local review in the existing coordinator and checkpoint it; no automatic reservation release or dispatch."
   ],
   "privacy_review": {
     "scope": "Worker read-only text/inventory review; not independent root archive review",
@@ -219,5 +219,86 @@
       "figure1_partial_export_disconnected"
     ],
     "scientific_archive_independent_readback": false
+  },
+  "final_export_verification": {
+    "scope": "independent root byte-integrity verification; not scientific acceptance",
+    "ok": true,
+    "archive_bytes": 105848914,
+    "archive_sha256": "e1f8ee36d87111dc9ef7defbcddaf04f9633851c63a57ce25f03474881ae69c7",
+    "transfer_manifest_sha256": "f73b416c381adde7022f233e62495123936d99c66b5b93da56a1ffce56a02a29",
+    "parts_verified": 26,
+    "zip_members": 100,
+    "manifest_entries_verified": 99,
+    "all_entries_regular_and_safe": true,
+    "zip_crc_passed": true,
+    "entry_bytes_total": 387943152,
+    "original_run_receipt_sha256": "24aaaaef907519391ba3c8650f96795ebe2dff4a27cd4ad9e9977852cdc5974b",
+    "original_receipt_preserved": true,
+    "analysis_rerun": false,
+    "scientific_acceptance": false,
+    "worker_full_reconstruction_verified": true,
+    "worker_transfer_receipt_sha256": "9e302a72fcb07655c3ccf8ffbcf4d5aac7ce3c216cd82ab6ee7d58e3bcec5106",
+    "worker_receipt_hash_scope": "Worker report recorded in the independently restored ledger; receipt file itself not separately downloaded by root",
+    "remote_files_metadata_verified": 27,
+    "sharing_unchanged": true,
+    "source_changed": false,
+    "duplicate_uploads": false,
+    "transport": "Previously qualified bounded Drive connector route; worker standard-input materialization; independent root authenticated file-reference downloads",
+    "preserved_route_failure": "Optional worker direct streaming received proxy HTTP 403; no host expansion or bypass",
+    "reservation_released": false,
+    "interpretation_review_complete": false
+  },
+  "final_checkpoint_chain": {
+    "ok": true,
+    "chain": [
+      {
+        "bytes": 140174,
+        "sha256": "cda7cb2e7220a7f2bc77ccb4626ab52a76be19f5cc3b3ef972d2beba8ff8646b",
+        "parent_sha256": "6d8ec83996c86c3afb9eb0bbafc7b2b7d7ae8a9a2fff56c775bc5982709c37c2",
+        "database_sha256": "0d03f7df301c9fa13c3388c01b57be2f606b78cc2b4d699109c9f79b151a75d9",
+        "events": 28,
+        "unchanged_parent_prefix": 27,
+        "event_type": "figure1_export_streaming_proxy_hold",
+        "scientific_rows": 2,
+        "scientific_rows_unchanged": true,
+        "read_only_restore": true,
+        "activated": false
+      },
+      {
+        "bytes": 144270,
+        "sha256": "3e342bade3674fd2782c548551da105ef329a1a00293b1f72dc39362ddda8b69",
+        "parent_sha256": "cda7cb2e7220a7f2bc77ccb4626ab52a76be19f5cc3b3ef972d2beba8ff8646b",
+        "database_sha256": "940a2af0107383a2bda23b9670806c6b82cbfc1a686edfd141621f4ea1b06d6a",
+        "events": 29,
+        "unchanged_parent_prefix": 28,
+        "event_type": "figure1_export_worker_verified",
+        "scientific_rows": 2,
+        "scientific_rows_unchanged": true,
+        "read_only_restore": true,
+        "activated": false
+      },
+      {
+        "bytes": 144270,
+        "sha256": "c8ac521d56b683517d6a5db84e4fcc3b74bf3cd8d2b28ee76cd34e5ca91cdc27",
+        "parent_sha256": "3e342bade3674fd2782c548551da105ef329a1a00293b1f72dc39362ddda8b69",
+        "database_sha256": "2f9ba485ede474045769ea6f7f5de1c82ff3a5a50fe8c7738e9040c4450dbafa",
+        "events": 30,
+        "unchanged_parent_prefix": 29,
+        "event_type": "figure1_root_transfer_verified",
+        "scientific_rows": 2,
+        "scientific_rows_unchanged": true,
+        "read_only_restore": true,
+        "activated": false
+      }
+    ],
+    "scientific_acceptance": false,
+    "new_analysis_dispatch": false
+  },
+  "scientific_review": {
+    "record": "records/choi-scientific-review-20261012.json",
+    "interpretation_review_complete": true,
+    "scientific_acceptance": false,
+    "coordinator_ledger_modified": false,
+    "publication_complete": false
   }
 }

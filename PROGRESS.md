@@ -1,6 +1,75 @@
 # Current project state
 
-## Documentation and integration update — 12 October 2026
+## Next development priority — discovery and screening backend — 12 October 2026
+
+At the owner's request to prioritize backend automation, the roadmap now separates
+Choi's pending publication from [discovery/screening implementation](docs/DISCOVERY_SCREENING_BACKEND.md).
+Current code provides manual Europe PMC search/dedup, pinned RQ context, the
+candidate buffer, XML reading packets and mechanical provenance checks. It does
+not run an autonomous semantic screening/gating loop. All 32 RQ identities can be
+loaded, but initial search profiles cover A0/A1 only.
+
+Next: implement and fixture-test B1 batch coordination, B2 structured cloud-agent
+handoff and B3 separate reading/data/RQ decisions; then run a bounded fresh-paper
+screening batch. Qualification and recurrence follow after review. No new Choi
+analysis, scientific acceptance, schedule, credential or backend deployment was
+performed in this planning update. Choi M5 remains open and its held reservation
+must be reconciled before new live dispatch. Documentation validation passed: 93 local links, 15 unchanged Ravel pins and
+scientific execution disabled. Diff-whitespace checks passed.
+
+## Current stage — Choi scientific review complete; publication pending — 12 October 2026
+
+[Scientific review](docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md) and its
+[record](records/choi-scientific-review-20261012.json) hand off findings to Ravel.
+All 15 outputs reconcile with the saved H5AD across 1,497 assertions; all five
+figures were inspected and compared with the audited paper. No analysis reran.
+The four-state adaptation lacks pAT2; day-28 exclusions (28.06%) and 520/917 DATP
+cells retained despite hAT2 subcluster labels constrain interpretation. Coarse
+patterns agree, but exact five-state and mechanistic reproduction are unsupported.
+No new RQ, claim promotion or human acceptance is recorded.
+
+M4b review is complete for this attempt; M5 publication/integration remains open.
+Next: choose and qualify durable availability of all outputs, including the
+385,675,968-byte H5AD, under Ravel's unchanged validator. PR #149 stays draft; no
+partial receipt is registered. The coordinator remains at its last verified
+30-event checkpoint and held reservation; this local review did not mutate the
+ledger. Reconcile and checkpoint before any later job. No new dispatch, schedule,
+paid service or data export. Offline validation passed: 89 local links, 15 unchanged Ravel pins and scientific
+execution disabled. Diff-whitespace checks passed.
+
+## Historical checkpoint — Figure1 export verified; scientific review pending — 12 October 2026
+
+The same cloud worker recovered and completed the original approved export without
+rerunning analysis. All **26 parts plus the transfer manifest** are in the original
+owner-only Drive folder. Worker and independent root downloads/reconstruction
+matched **105,848,914 bytes**, archive SHA-256 `e1f8ee36…`, transfer-manifest SHA-256
+`f73b416c…`, ZIP CRC and **all 99 manifest entries** (100 ZIP members including the
+manifest). The original run-receipt hash is unchanged. Root separately verified
+all 27 remote file sizes, parent and owner-only permissions.
+
+The final checkpoint also passed independent byte/schema/integrity and fresh
+read-only restore checks: **30 events**, the same two scientific rows, and exact
+27→28→29→30 event prefixes. Its SHA-256 is `c8ac521d…`; the intermediate streaming
+proxy failure and worker-verification checkpoints are preserved. No copy was
+activated by root. [Exact execution and verification record](records/choi-figure1-execution-20261012.json).
+
+The optional direct-streaming probe received HTTP 403 from the worker proxy. The
+existing approved Drive connector route completed with standard-input byte
+materialization. No network allowlist expansion, account switch, duplicate upload,
+source modification or scientific rerun occurred. Private locators stay ignored.
+
+**Remaining work:** review the original receipt and QC/denominator/marker tables,
+inspect figures, write the bounded discrepancy and candidate/no-candidate report,
+and resolve publication of every declared output under Ravel's unchanged validator.
+The 385,675,968-byte H5AD still needs a reviewed durable publication route. Archive
+integrity does not establish scientific validity. No acceptance, new RQ, numerical
+dispatch or reservation release follows from this transfer verification.
+
+PR #3 was merged by the owner into main, bringing the README backend diagram and
+previously merged PR #2 controls into the integration base. This continuation is
+documentation/evidence bookkeeping on a scoped branch; frozen job pins remain.
+
+## Historical partial-export checkpoint — 12 October 2026
 
 The root README now maps Weft, Ravel, the dot coordinator, Codex Cloud, private
 Google Drive, independent review and owner decisions. It separates code hosting,
@@ -24,7 +93,7 @@ preserves that merged history and integrates main without conflicts. A new PR
 must bring these existing changes and the README diagram to main; no automatic
 merge or scientific acceptance is authorized. Frozen job revisions remain pinned.
 
-## Current stage — Figure1 executed; evidence export held — 12 October 2026
+## Historical execution and initial export hold — 12 October 2026
 
 The single Choi Figure1 attempt ran under the owner-selected 8 GiB cap with
 unchanged frozen methods. The worker reports exit 0, no OOM, 196.03 seconds,

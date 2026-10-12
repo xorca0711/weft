@@ -2,7 +2,8 @@
 
 **Owner selected the bounded 8 GiB option.** Figure1 subsequently executed once
 on 12 October; the worker reports no OOM and approximately 2.33 GiB peak process
-RSS. Evidence export and independent result review remain held. See the
+RSS. Evidence export and independent byte verification passed; scientific review
+remains pending. See the
 [current execution record](../records/choi-figure1-execution-20261012.json).
 The proposal below preserves the choices and unknowns at decision time.
 [Selected operational amendment](../records/figure1-resource-amendment-v2.json)

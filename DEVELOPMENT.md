@@ -4,8 +4,9 @@
 
 OpenAI Codex prepared the initial documentation, configuration, source-pin
 manifest, offline validation code and tests. The owner requested the project
-and public creation. No biological analysis was executed by Weft. Completion
-of implementation or scientific acceptance has not been claimed.
+and public creation. The initial scaffold executed no biological analysis. Later
+manual cloud execution and review are recorded in the dated entries and PROGRESS;
+autonomous workflow completion and scientific acceptance are not claimed.
 
 ## Responsibility record
 
@@ -16,6 +17,7 @@ of implementation or scientific acceptance has not been claimed.
 | 2026-10-11 | Weft name, architecture and Choi benchmark | Codex | Pending owner review of details | Implemented as initial proposal | Natural relationship to Ravel; known successes and limitations make an auditable pilot |
 | 2026-10-11 | Complete Choi figure/supplement/data review and recommend a worker before analysis | Owner | Owner requested scope; scientific acceptance remains unissued | Review implemented on existing PR; worker recommendation awaits selection | Preserve the reading/execution boundary and qualify actual input shape |
 | 2026-10-11 | Dot coordination and Codex Cloud execution; cloud-first roadmap | Owner selected architecture after Codex proposal | Owner for architecture; scientific acceptance pending | Update plan and request access/dependencies; no extra local PC | Cloud execution addresses hardware constraints; no paid fallback or schedule authorized |
+| 2026-10-12 | Prioritize discovery/screening backend before Choi publication closeout | Owner raised priority; Codex structured slices | Owner requested reconsideration; detailed implementation remains reviewable | Document next backend slices; no runtime activation | Already-read Choi is useful for recovery/regression, not sufficient to evaluate candidate selection |
 
 ## Rejected or substantially revised AI proposals
 
@@ -25,6 +27,7 @@ of implementation or scientific acceptance has not been claimed.
 | 2026-10-11 | Blanket 16 GiB local worker allowance | Audited Windows host has about 15.6 GiB total memory; recommend separate 32 GiB Linux host or a qualified 6 GiB Windows fallback | Codex revision; host selection pending owner decision |
 | 2026-10-11 | Treat the Choi pilot as exact reproduction before qualifying methods | Published Louvain/manual exclusions and Ravel Leiden/MAD/annotation rules differ; exact author-cell set is unresolved | Codex revised proposal to explicitly adapted descriptive reanalysis |
 | 2026-10-11 | Separate Linux worker as the default next decision, preferably 32 GiB RAM | Owner cannot add a PC and selected dot/Codex Cloud; 32 GiB was unmeasured conservative sizing. Qualify cloud first | Owner selected direction; Codex revised deployment stages |
+| 2026-10-12 | Serial roadmap implying Choi integration must precede fresh-candidate screening qualification | Candidate screening can be implemented and evaluated independently; preserve Choi publication as an open parallel track | Owner feedback; Codex revised plan |
 
 Future reviews append decisions and rejections rather than overwriting them.
 Repository creation does not mean every scientific or operational proposal has
@@ -326,3 +329,55 @@ readback for part 0000 and incomplete materialization for part 0001. Root indepe
 verified both remote sizes, parent and owner-only permissions, not the bytes. No
 renewed quota refusal was observed. The same attempt remains held with 24 parts and
 the transfer manifest still unuploaded. No repeated retry or biological rerun occurred.
+
+## 2026-10-12 — Same-worker export recovery and independent verification
+
+At the owner's request, Codex and the existing coordinator reconciled the held
+attempt and six uploaded parts, preserved the optional streaming proxy-403 probe,
+and completed only missing transfers through the qualified Drive connector route.
+Standard-input materialization avoided oversized shell commands. No analysis or
+source was rerun/changed, no account or network policy changed, and sharing stayed
+owner-only. Independent root downloads verified every part, full reconstruction,
+ZIP CRC, all 99 member hashes and the unchanged original numerical run receipt.
+Three descendant checkpoints preserved exact event prefixes and the same two
+scientific rows; the final 30-event checkpoint passed fresh read-only restoration.
+
+Current README, handoff, roadmap and environment summaries now distinguish verified
+artifact integrity from pending QC/figure interpretation and scientific acceptance.
+No frozen contract, runner, validator, analysis output or canonical claim changed.
+Documentation validator and diff-whitespace checks passed; no numerical tests or
+scientific runs were repeated for this status-only change.
+
+## 2026-10-12 — Choi scientific review without a numerical rerun
+
+At the owner's request, Codex reconciled the recovered original outputs with the
+saved H5AD, visually inspected all five figures and compared with the audited
+paper Fig. 1/S1 and methods. The 1,497 read-only assertions passed. Ravel owns the
+full assessment; Weft records review provenance, absence of a new RQ proposal
+and remaining publication/integration conditions. pAT2 absence, exclusion and
+resolution sensitivity, DATP subcluster retention and figure-presentation limits
+are retained. The local audit reader required nullable-string decoding before
+it completed; no source output changed.
+
+Current handoff, README, pilot/environment and roadmap status now distinguish
+completed review from human acceptance and complete-output publication. Historical
+source/transfer records remain dated. No frozen pins, ledger, reservation, analysis,
+canonical questions, gates or acceptance policy changed. Offline validation passed (89 local links, 15 unchanged pins, scientific execution
+disabled), as did diff-whitespace checks. The large-H5AD publication route remains
+unqualified.
+
+## 2026-10-12 — Backend-first roadmap refinement
+
+The owner questioned prioritizing integration of the already-reviewed Choi paper
+over automated discovery/screening. Codex inspected the actual CLI/modules and
+gate specification and documented the implemented/manual boundary. The roadmap
+now prioritizes a bounded discovery-to-candidate-digest backend, with separate
+reading, dataset-eligibility and RQ-compatibility records. Choi publication remains
+an open parallel track. The earlier serial implication that Choi must merge before
+frontend qualification is superseded; its evidence and historical plan remain.
+
+This is a development plan and source audit, not implementation of an autonomous
+gate engine, activation of recurrence or a human scientific decision. No policy,
+source pins, runtime gates, ledger/reservation or scientific outputs changed.
+Documentation validation passed: 93 local links, 15 unchanged Ravel pins and
+scientific execution disabled. Diff-whitespace checks passed.

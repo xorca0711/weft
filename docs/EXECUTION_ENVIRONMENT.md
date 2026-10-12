@@ -7,8 +7,10 @@ physical computer is required. Private `weft-pilot` is published at d031cef;
 [Bounded container controls passed](../records/cloud-runtime-20261011.json) in a
 fresh task. The private Drive route passed [independent synthetic cloud restore](../records/cloud-drive-restore-20261011.json).
 The first manual metadata job and private checkpoints are verified. Figure1
-executed once under the selected 8 GiB amendment; its results remain pending
-independent artifact readback because the new evidence export is held.
+executed once under the selected 8 GiB amendment. Its complete archive passed
+worker and independent root reconstruction, CRC and all 99 member-hash checks;
+[scientific/QC interpretation review](PILOT_CHOI_SCIENTIFIC_REVIEW.md) is complete
+with limitations. Complete-output publication and human review remain open.
 [Current execution record](../records/choi-figure1-execution-20261012.json).
 Retention and arbitrary-size transfer guarantees are not established.
 See the [setup runbook](CLOUD_SETUP.md) and [ordered roadmap](IMPLEMENTATION_PLAN.md).
@@ -56,8 +58,9 @@ Selected Choi triplets total about 155 MiB compressed (archive about 333 MiB).
 Their 46,423,890 stored entries span three matrices with 737,280 raw barcode columns
 each. Dense float32 allocation across them would use about 230.7 GiB; this is an
 avoidable representation cost. Load sparsely, filter one library at a time and
-concatenate only qualified cells. Metadata loader memory/time are measured; full
-QC/embedding memory/runtime remain unmeasured.
+concatenate only qualified cells. Metadata loader memory/time are measured. The completed Figure1 run reports
+196.03 seconds and 2,448,296 KiB peak process RSS (about 2.33 GiB) under the 8 GiB
+container cap; these observations do not guarantee capacity for another dataset.
 
 ## Deployment contract to qualify
 

@@ -11,14 +11,16 @@
 | Pinned Codex Cloud setup | Descriptive only | [Setup receipt](records/cloud-setup-20261011.json) | Private environment published; small export verified; no retention guarantee |
 | Synthetic executor and restart recovery | Descriptive only | [Recovery receipt](records/synthetic-recovery-integration-20261011.json) | Bounded Docker restart; synthetic recovery does not prove arbitrary job recovery |
 | Manual dot handoff and private checkpoints | Descriptive only | [Coordinator receipt](records/manual-coordinator-20261011.json) | Small synthetic recovery; no retention or distributed-lock guarantee |
-| Manual scientific cloud execution | Descriptive only | [Metadata](records/choi-metadata-20261011.json) and [Figure1 execution](records/choi-figure1-execution-20261012.json) | Metadata verified; Figure1 executed, evidence export and independent review held |
-| Autonomous paper-to-question workflow | Not established | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Scientific workers, unattended agents and Ravel export remain planned |
+| Manual scientific cloud execution | Descriptive only | [Metadata](records/choi-metadata-20261011.json) and [Figure1 execution](records/choi-figure1-execution-20261012.json) | Metadata and Figure1 archive verified; [scientific review](docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md) complete with limits; publication pending |
+| Autonomous paper-to-question workflow | Not established | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Autonomous screening/orchestration and complete Ravel artifact publication remain unqualified |
 
 Weft is being built to bring new literature into an existing research programme:
 find papers against established questions and broader reading interests, explain
 their relevance, qualify reusable data, and coordinate bounded reproduction and
 exploratory analysis. The intended output is a traceable evidence package,
-including negative results, discrepancies and candidate questions.
+including negative results, discrepancies and candidate questions. The current
+search and reading commands require explicit invocation; there is no automatic
+search-to-screening agent loop yet.
 
 The name comes from the crosswise threads of woven fabric. **Weft** is the
 project name; `weft` is the repository and Python module name. It is not an acronym.
@@ -28,11 +30,15 @@ scientific methods and evidence. Weft owns the automation that connects papers
 and jobs to that research. Personal career interests remain in an untracked
 private configuration, even though this repository is public.
 
+The next development priority is the [discovery and screening backend](docs/DISCOVERY_SCREENING_BACKEND.md):
+automate a bounded candidate batch, keeping reading value, data eligibility and
+RQ compatibility separate. Choi publication remains a parallel closeout task.
+
 ## Intended workflow
 
 The selected deployment uses a dot for coordination and Codex Cloud for execution.
 The cloud environment is published. Metadata is verified; the first descriptive
-Figure1 run awaits evidence export and independent review. Solid arrows show
+Figure1 archive and scientific review are complete with documented limits; publication remains open. Solid arrows show
 implemented discovery/reading stages; dotted arrows show scientific links still
 being qualified end to end. An RQ supplies search context; the review buffer keeps proposed
 relationships separate from accepted evidence.
@@ -79,8 +85,9 @@ flowchart TD
 
 The arrows describe the selected route, including steps that remain under
 qualification; they do not represent an unattended pipeline. Metadata recovery
-has passed independent readback. The first Figure1 analysis has executed once,
-but complete artifact export and independent review remain unverified. See
+has passed independent readback. The first Figure1 analysis has executed once;
+its archive and [scientific review](docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md) are complete
+with documented limits; complete-output publication and human review remain open. See
 [current state](PROGRESS.md) for the latest hold and its evidence.
 
 | Component | Responsibility | What it does not provide |
