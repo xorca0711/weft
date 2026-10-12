@@ -27,6 +27,13 @@ PC-off operation and prepare [independent B5 evaluation](docs/B5_EVALUATION_PREP
 B4 stays held, Choi never reruns, no new private export is authorized by this
 change, and M6 recurrence remains disabled. [Evidence](records/backend-handoff-20261012.json).
 
+[PR #10](https://github.com/xorca0711/weft/pull/10) is open for explicit control
+review, not a draft. Both implementation CI runs passed at `2fc69a8`.
+The browser's saved `chatgpt.com` permission blocked the read-only environment
+check; no workaround was attempted. The coordinator is **Mir** (its durable
+record has no separate chat title). The owner has been directed to its private
+continuity prompt; the cloud worker `Verify Weft network access` is separate.
+
 ## Backend stack integrated; bounded Choi M5 complete — 12 October 2026
 
 Weft PRs **#4 -> #5 -> #6 -> #7 -> #8** merged in order, successors retargeted

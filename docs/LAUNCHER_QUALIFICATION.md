@@ -43,13 +43,19 @@ subscription or a fallback permission.
    its own concrete deployment decision.
 
 **Current stop:** the CLI listing establishes no route to the intended environment.
+A read-only check through the existing ChatGPT browser tab was then rejected by
+the browser's saved user permission for `chatgpt.com`. No alternate browser,
+endpoint or indirect route was attempted. That permission must be resolved
+before this browser can verify the environment.
 Do not submit a task to a guessed environment or activate another worker as a
 side effect. Continue code/fixture work locally. B4 remains held independently
 of launcher availability.
 
 ## Choi coordinator is a separate authority
 
-The original coordinator's metadata was readable, but the supported messaging
+The coordinator is **Mir**, as named in Weft's root backend map. Its durable
+record has no separate chat title. `Verify Weft network access` is the cloud
+worker, not the coordinator. The original coordinator's metadata was readable, but the supported messaging
 call returned `thread not found`. A read-only continuity query was therefore
 not delivered. Do not activate a downloaded SQLite copy or declare its held
 reservation released. The private continuity prompt under
