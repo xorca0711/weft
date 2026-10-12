@@ -734,3 +734,22 @@ disabled. No schedule, new cloud worker, biological rerun or bypass was initiate
 | Date | Item | Proposed by | Decided by | Decision | Reason |
 |---|---|---|---|---|---|
 | 2026-10-12 | Migrate Choi scientific dossier to Ravel weft_intake | Owner | Owner explicitly requested migration and trial framing | Retain Weft operational records and redirect scientific documents to versioned Ravel intake | Preserve Ravel's research identity and make the trial handoff discoverable |
+
+## 2026-10-12 — Choi administrative closeout and final recovery
+
+| Date | Item | Proposed by | Decided by | Decision | Reason |
+|---|---|---|---|---|---|
+| 2026-10-12 | Close only the completed Choi Figure1 reservation | Mir proposed the bounded sequence; Codex verified continuity, worker quiescence and backups | Owner separately approved administrative export, reservation release and exact final export | Mir appended one review and one release event; root independently recovered both private checkpoints | Preserve all scientific history and verify remote preservation without rerunning analysis or granting new-job authority |
+
+The final 32-event checkpoint preserves the exact 31-event parent prefix and both
+scientific attempts. Archive/member hashes, CRC, source/schema/parent anchors and
+fresh inactive read-only restoration passed after independent Drive download.
+Only the completed Figure1 reservation is released. Scientific acceptance,
+automatic dispatch and new-job authorization remain false. The release event's
+pre-upload preservation status remains historical; separate verification receipts
+record completed preservation, avoiding an unnecessary ledger/checkpoint cycle.
+No verification copy was activated. [Current evidence](records/backend-handoff-20261012.json).
+
+Current summaries and the roadmap now distinguish this completed administrative
+work from the unqualified unattended launcher, held B4 review and disabled M6.
+No runtime code, scientific output or gate semantics changed in this update.

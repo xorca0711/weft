@@ -64,15 +64,26 @@ fresh original-worker check at 23:01:33 KST on 12 October: matching runtime,
 original container exited with code 0/no OOM/PID 0, and captured processes absent
 within the observed namespace. These are point-in-time observations, not release authority.
 
-Do not activate a downloaded SQLite copy or declare its reservation released.
+Do not activate a downloaded SQLite copy or infer new-job authority from closeout.
 The owner subsequently approved the exact 148,366-byte administrative checkpoint
 export and returned Mir's one-upload receipt. Root independently verified Drive
 identity/owner-only metadata, downloaded the stored bytes, checked archive and
 member hashes/CRC, then restored read-only and compared the verified parent:
 31 events, exact 30-event prefix, unchanged two attempts, same identity/source/schema,
 and the administrative event explicitly retaining HELD/no scientific acceptance.
-No restored ledger was activated. Explicit reservation-release approval is now
-pending; its final checkpoint would need separate exact-payload export verification.
-The evidence and prepared approval text are private under
-`runs/backend-handoff-20261012`; direct Mir delivery still needs the owner relay. Scientific
-retention and publication are already complete; no analysis rerun is needed.
+No restored ledger was activated. The owner separately approved release and the
+exact final export. Root independently downloaded the 156,558-byte final archive
+from the verified owner-only Drive folder and passed archive/member hashes, CRC,
+source/schema/parent checks and a fresh inactive read-only restore. Its 32 events
+preserve the exact 31-event prefix and both scientific rows. The single release
+event covers only the completed Figure1 reservation; scientific acceptance,
+new-job authorization and automatic dispatch remain false.
+
+**Administrative closeout is complete and remotely preserved.** The release
+event's pre-upload preservation status is historical. Separate final download
+and restore receipts establish current preservation without rewriting the event
+or appending another checkpoint cycle. Root verified downloaded checkpoints,
+not a new inspection of the remote live database. Private receipts are under
+`runs/backend-handoff-20261012`. Direct Mir messaging remains unavailable, but no
+further message, ledger change or export is required for this closeout. Scientific
+retention and publication are complete within their bounded descriptive scope.

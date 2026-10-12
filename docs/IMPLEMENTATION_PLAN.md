@@ -28,8 +28,8 @@ authorization are not established.
 | Track | Established | Remaining |
 |---|---|---|
 | Discovery and screening | Bounded Europe PMC discovery, deduplication, pinned RQ context, decision buffer, manual agent handoff and recovery | B3 material/semantic qualification, blocked B4 review, B5 independent evaluation and unattended launcher |
-| Cloud controls | Published environment, scoped job controls, manual coordinator and verified private Drive recovery; local single-catalog handoff/recovery fixtures pass | Original coordinator continuity blocked; intended CLI environment unverified; general unattended dispatch, retention/ownership guarantees and usage controls |
-| Choi pilot | M4/M5 complete for the bounded benchmark: public outputs, verified recovery, owner descriptive retention and Ravel #149 merged | Reconcile the held coordinator before any future job; no general scientific eligibility inferred |
+| Cloud controls | Published environment, scoped job controls, manual coordinator and verified private Drive recovery; local single-catalog handoff/recovery fixtures pass; Choi coordinator continuity/closeout verified through owner relay | Intended CLI environment unverified; direct Mir messaging unavailable; general unattended dispatch, retention/ownership guarantees and usage controls |
+| Choi pilot | M4/M5 complete for the bounded benchmark: public outputs, verified recovery, owner descriptive retention and Ravel #149 merged; final 32-event administrative release independently recovered | Preserve bounded interpretation and checkpoint ancestry; no new-job authority or general scientific eligibility inferred |
 | Integration into main | Weft PRs #1-#9 and Ravel #149/#150 merged with passing CI | New handoff/intake control change needs its scoped review; no fresh-paper scientific acceptance |
 
 The [backend handoff note](BACKEND_HANDOFF.md) describes the tested controls;
@@ -67,10 +67,10 @@ implemented and [tested on fresh candidates](BATCH_PILOT_20261012.md). The
 [manual cloud handoff and checkpoint recovery](SCREENING_CLOUD_QUALIFICATION.md)
 also passed. Independent screening quality and unattended operation remain open.
 Choi M5 is complete for its bounded descriptive benchmark and is not a prerequisite
-for developing or evaluating the discovery/screening backend. Preserve its held
-reservation; reconcile before new scientific dispatch through that ledger. No
-gate or schedule is enabled
-by these development changes.
+for developing or evaluating the discovery/screening backend. Its owner-authorized
+administrative release is now independently verified in the final private checkpoint.
+Preserve original evidence and checkpoint ancestry; keep verification copies inactive.
+No new scientific job, gate or schedule is enabled by these development changes.
 
 ## Development stages and exit criteria
 
@@ -92,7 +92,7 @@ These labels do not promote any scientific claim or record human acceptance.
 | M3b job and artifact controls | **Partial — manual route qualified** | Ledger/leases, bounded executor, synthetic cancellation/recovery, manual coordinator and verified Drive checkpoints; [job controls](JOB_CONTROLS.md) | Supported unattended launcher, durable queue ownership, usage controls and failure qualification for that route |
 | M4a scientific readiness | **Qualified — frozen Choi attempt only** | Contract/runtime, metadata, bounded preflight and artifact recovery verified; [pilot records](MANUAL_PILOT.md) | Each new paper/use requires its own contract, inputs, resource checks and authorization |
 | M4b Choi pilot | **Complete — adapted descriptive attempt and QC** | Executed once; archive hashes and [scientific comparison](PILOT_CHOI_SCIENTIFIC_REVIEW.md) reviewed | Retain annotation/denominator limits; no exact reproduction, new RQ or human acceptance implied |
-| M5 reviewed integration | **Complete — bounded Choi benchmark** | [Closeout record](M5_PUBLICATION_PLAN.md): all 15 outputs, original receipt, public recovery, owner descriptive retention, Ravel #149 merged and main CI passed | Retain all limits; reconcile the held private coordinator before any future scientific job |
+| M5 reviewed integration | **Complete — bounded Choi benchmark and administrative closeout** | [Closeout record](M5_PUBLICATION_PLAN.md): all 15 outputs, original receipt, public recovery, owner descriptive retention, Ravel #149 merged and main CI passed; final private release checkpoint independently restored | Retain all limits and ancestry; any future scientific job needs its own contract and authority |
 | M6 prospective operation | **Planned — disabled** | Evaluation/recurrence requirements specified | B5 unseen-paper evaluation, supported unattended operation and explicit cadence/scope/usage decisions |
 
 <details>
@@ -129,7 +129,7 @@ flowchart TD
     end
     subgraph PILOT["Separate track: Choi closeout"]
         R["M4a QUALIFIED: frozen attempt readiness"] --> C["M4b COMPLETE: run, recovery and scientific review"]
-        C --> I["M5 COMPLETE: public evidence, bounded owner retention and Ravel integration"]
+        C --> I["M5 COMPLETE: public evidence, bounded retention, Ravel integration and administrative closeout"]
     end
     J --> Q
     J --> R

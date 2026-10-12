@@ -69,8 +69,10 @@ no validator or contract change. The corrected head passed all checks.
 The owner subsequently retained the bounded descriptive discrepancy benchmark
 and approved Ravel #149 / Weft #9 integration. Ravel #149 merged and its two main
 checks passed. The [human disposition](https://github.com/xorca0711/ravel/blob/main/Research%20Article/gate1_02_choi_2020/weft_pilot_v1/REVIEW_DISPOSITION.md)
-is separate from successful publication or CI. The private coordinator reservation
-remains held; this closeout did not mutate the ledger.
+is separate from successful publication or CI. Publication itself left the private
+reservation held. A subsequent owner-authorized administrative review and release
+completed coordinator closeout; its final private checkpoint was independently
+downloaded and restored. This does not expand the scientific disposition.
 
 ## Completed integration and remaining operational boundary
 
@@ -82,10 +84,14 @@ remains held; this closeout did not mutate the ledger.
    both clean-checkout CI workflows without changing validator semantics.
 5. Recorded the owner's bounded retention, merged Ravel #149 and verified main CI.
 
-Before any future job or reservation transition, reconcile the same private Choi
-coordinator with this publication and human disposition, preserve checkpoint
-ancestry and verify any authorized backup. This is an operational prerequisite
-for a later job, not permission to rerun the completed benchmark.
+The subsequent administrative closeout reconciled the same private coordinator
+with publication and the owner's disposition. Root verified both authorized
+private backups: 31 events after administrative review, then 32 after release of
+only the completed Figure1 reservation, with both scientific attempts unchanged.
+The final checkpoint passed independent hashes/CRC, ancestry/schema checks and
+inactive read-only restoration. [Closeout evidence](../records/backend-handoff-20261012.json)
+records that administrative completion; private locators and detailed receipts
+remain outside version control. No new job or rerun is authorized by release.
 
 The owner requested migration of the scientific trial dossier into Ravel's
 `weft_intake/choi-2020-p001/v1/`. Weft retains automation/deployment records and

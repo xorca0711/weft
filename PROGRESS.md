@@ -7,7 +7,7 @@ Update this before stopping work, every session.
 Implemented the [cooperative screening handoff and private intake staging](docs/BACKEND_HANDOFF.md)
 on a scoped branch from main `5ca2a58857b22968571c4389651862e17ee8dc35`.
 Eighteen new synthetic tests pass; the full suite passes 188 tests (25 skips on
-Windows ARM64), offline validation checks 160 links and all 15 pinned Ravel blobs
+Windows ARM64), offline validation checks 161 links and all 15 pinned Ravel blobs
 verify. Tests include interrupted-return recovery, no duplicate
 claim, expiry holds, restored-copy refusal, current-source checks and intake
 tampering/supersession. This is one-catalog software qualification, not a durable
@@ -28,17 +28,24 @@ one upload. Root independently verified the expected Drive identity, owner-only
 file/parent, downloaded all 148,366 bytes and checked the archive/member hashes,
 ZIP CRC, source/schema/parent anchors and a fresh inactive read-only restore.
 Exactly one `administrative_closeout_reviewed` event is present: 31 total events,
-the exact original 30-event prefix and both scientific rows preserved. The event
-explicitly retains HELD/no release and no scientific acceptance. No restored
-ledger was activated. Private receipts and the release-approval text are under
+the exact original 30-event prefix and both scientific rows preserved. That
+checkpoint retains the historical HELD state. The owner then separately approved
+release and the exact final-checkpoint export. Root independently downloaded the
+156,558-byte final archive from the verified owner-only Drive destination and
+passed hashes/CRC, identity/source/schema/parent and fresh read-only restoration.
+All 32 events preserve the exact 31-event parent prefix and both scientific rows.
+Exactly one `figure1_completed_reservation_released` event releases only the
+completed Figure1 attempt. **Choi administrative closeout is complete, with its
+final release remotely preserved and independently verified.** Scientific acceptance,
+new-job authorization and automatic dispatch remain false; no restored copy was
+activated. The frozen release event's pre-upload preservation status remains
+historical; separate verification receipts establish current remote preservation
+without another ledger mutation. Private evidence is under
 `runs/backend-handoff-20261012`.
 
-Exact next steps: review this control change; obtain explicit authority for Mir
-to release only the completed Figure1 reservation and prepare a local final
-checkpoint. Release approval is pending; a final checkpoint would require its own
-exact-payload export and independent verification. No new job follows release.
-Verify the
-intended CLI environment before requesting one synthetic-only launch. Then qualify
+Exact next steps: review PR #10's control change, then verify the intended CLI
+environment before requesting one synthetic-only launch. No new job follows release.
+Then qualify
 PC-off operation and prepare [independent B5 evaluation](docs/B5_EVALUATION_PREPARATION.md).
 B4 stays held, Choi never reruns, no further private export is authorized by this
 change, and M6 recurrence remains disabled. [Evidence](records/backend-handoff-20261012.json).
@@ -66,8 +73,9 @@ and [authority/publication/merge record](records/choi-publication-20261012.json)
 
 The initial frozen-ignore-file CI failure and exact-byte correction remain in
 history. Local tests passed 158 cases (two skips); repository checks reached
-11,169 after the human disposition document. The private Choi coordinator and
-held reservation remain unchanged: reconcile them before any future job.
+11,169 after the human disposition document. That publication step left the
+private reservation held. The subsequent owner-authorized administrative release
+and independently verified final checkpoint are recorded above.
 
 B4 stays held. Fresh-paper progress is 74 unique papers, 148 proposed RQ links,
 five cloud link decisions, one held selected-text assessment, no completed fresh

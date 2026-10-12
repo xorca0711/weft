@@ -5,12 +5,12 @@ B3 software controls passed cloud qualification; actual material/semantic review
 remains partial. B4 is blocked by platform safety filtering. B5 independent
 evaluation and unattended operation are planned.**
 See the [command guide](BATCH_SCREENING.md) and [fresh-candidate development test](BATCH_PILOT_20261012.md).
-Prioritize discovery-to-screening orchestration before the remaining Choi
-publication closeout. The existing Choi attempt is a completed, exposed test of
-manual compute, recovery and interpretation. Its merge is not a prerequisite for
-building or evaluating candidate screening. Publication/recovery is now qualified;
-preserve its held reservation and original evidence until review/coordination is
-reconciled. Do not rerun it.
+Prioritize discovery-to-screening orchestration. The existing Choi attempt is a
+completed, exposed test of manual compute, recovery and interpretation. Its public
+integration and owner-authorized administrative closeout are complete; the final
+32-event private checkpoint passed independent download and restoration. Preserve
+its original evidence and checkpoint ancestry. Do not rerun it or treat this
+benchmark as unseen screening evaluation.
 
 ## Current B1-B5 status
 
@@ -120,7 +120,7 @@ change scientific authority. New gate semantics require explicit code review.
 
 Suggested implementation locations are new `weft/batches.py` and
 `weft/screening.py`, with focused tests and versioned schemas/configuration.
-Both files now extend the existing discovery catalog, independently of the held
+Both files now extend the existing discovery catalog, independently of the
 scientific job ledger. Reuse existing scientific controls at the future dispatch
 boundary; do not create a competing scientific authority. Reading/data fields must retain
 unknowns, actor attribution, inspected scope and exact source/context hashes.
@@ -156,11 +156,12 @@ enforced, along with per-batch search and screening-link caps. Subscription
 usage is not a known dollar budget. Missing usage measurements stay unknown.
 
 Use one authoritative coordinator and verified private Drive checkpoints. Do not
-activate a restored task-local ledger as a competing writer. The Choi reservation
-is still held: reconcile its known outcome, published evidence and owner
-retention before any new scientific dispatch using that ledger. The approved
-screening-only store is separate. Implementing and fixture-testing B1-B3
-does not depend on changing that reservation or merging Ravel PR #149.
+activate a restored task-local ledger as a competing writer. Choi's completed
+Figure1 reservation is now released with owner authority; the final checkpoint
+is independently verified and all verification copies remain inactive. That
+administrative release authorizes no new job. The approved screening-only store
+is separate; implementing and fixture-testing its controls does not mutate the
+Choi ledger or confer scientific dispatch authority.
 
 ## Remaining decisions and work boundary
 
