@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "synthetic-manual-checkpoint-integration",
+  "utc": "2026-10-11T11:30:20.034118+00:00",
+  "reviewed_base_revision": "c8ab57024b355314a3a84c8400093a173aa9f3f1",
+  "implementation_sha256": "1eba71b3e3e110f43305ae8bf37632a1fec106c74d033b45cb5978deca9dbcbf",
+  "archive_sha256": "6692f755ffd33dc9e2c86bb723faecdb90a07400f3c70b7f6390f83149dbb6ad",
+  "sqlite_sha256": "7931fea881a6a16a8e5e5c425d600c6f007d25f5eb520eceaa92edd3ae8d2429",
+  "sqlite_bytes": 28672,
+  "schema_sha256": "f6a1bff0b9d2ff428536abd175666bac323bfd01bbbdd5f77b277988d2fd363e",
+  "source_main_and_wal_unchanged": true,
+  "restored_jobs": 1,
+  "restored_attempts": 0,
+  "restore_status": "REQUIRES_OPERATOR_RECONCILIATION",
+  "activation_permitted": false,
+  "transport_tested": false,
+  "capsules_or_tokens_exported": false
+}

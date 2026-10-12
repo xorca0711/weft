@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "manual-artifact-transfer-operational-amendment",
+  "version": 2,
+  "date": "2026-10-11",
+  "ravel_source_revision": "b656d06cc9f2cfdd61a6dd1f6570ec01331abf91",
+  "ravel_contract_sha256": "ff00512e290c831dc1575715f0efd0a9705e28e87d21aa63b4b123c21a1868cd",
+  "ravel_execution_plan_sha256": "72b536156c9ec2c84efdc73b4c3e9d3a7261e0dc1929196d146f70e437544815",
+  "supersedes_scope": "Only artifacts.part_bytes and effective maximum archive bytes in Ravel figure1-execution-v1.json. Frozen v1 files and all numerical/resource/network/method choices remain unchanged.",
+  "reason": "16 MiB part readback failed; a separate 4 MiB+7 synthetic roundtrip passed. No approval was bypassed.",
+  "part_bytes": 4194304,
+  "maximum_parts": 256,
+  "maximum_archive_bytes": 1073741824,
+  "helper_revision": "4188424425ab37fb2e57c741b4839affbbd23b7f",
+  "qualification_record": "records/synthetic-multipart-20261011.json",
+  "qualification_record_sha256": "35c8933a48cc05a795eb3267f1e040ddb3da0a091ccaab2f81cde1577c35ff36",
+  "protocol": "Compress exact completed outputs outside the scientific container, preserve full archive locally, record full archive and canonical manifest anchors in authoritative ledger/handoff. Upload each part and manifest once to existing owner-only Drive folder. Download each exact file and verify metadata, sizes, individual hashes, full reassembled SHA, ZIP CRC and every member hash before stage completion. No scientific output serialization changes.",
+  "failure": "Oversize archive, uncertain upload, denied export or failed readback holds attempt; preserve originals and completed uploads. No blind retry, changed destination, further size change or permission bypass.",
+  "approval": "Root reviewed bounded operational transfer change under the owner-authorized checkpointed manual pilot. New immutable job packet must bind this exact amendment and qualification hashes before root dispatch release.",
+  "scientific_design_changed": false,
+  "scientific_acceptance": false,
+  "automatic_dispatch": false
+}

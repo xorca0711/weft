@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "scope": "same-task Drive roundtrip",
+  "permissions": {
+    "folder": "owner user only; shared=false",
+    "file": "owner user only; shared=false",
+    "sharing_changes": 0
+  },
+  "bytes": 48400,
+  "original_sha256": "a95de0b0a6f01e2de8f37da0a7ca3ccccf025b0f7518f69c6ce060b2ded73e58",
+  "returned_sha256": "a95de0b0a6f01e2de8f37da0a7ca3ccccf025b0f7518f69c6ce060b2ded73e58",
+  "operations": {
+    "create_folder": "PASS",
+    "privacy_readbacks": "PASS",
+    "upload": "PASS; one upload",
+    "parent_and_size_verification": "PASS",
+    "authenticated_raw_fetch": "PASS",
+    "cloud_file_materialization": "PASS",
+    "sha256_comparison": "PASS",
+    "zip_crc": "PASS",
+    "restore": "PASS; 32 entries"
+  },
+  "archive_modified": false,
+  "archive_files_executed": 0,
+  "cross_task_restoration": "HOLD; separate fresh-task test pending",
+  "schema_version": 1,
+  "record_type": "cloud-drive-qualification",
+  "date": "2026-10-11",
+  "uploading_cloud_task": "01a12a7d-52d1-718f-bc27-a848196c3030",
+  "private_locator_record": "Ignored private/cloud-artifacts.json; no credentials",
+  "public_locator_ids_omitted": true
+}

@@ -42,8 +42,10 @@ reading packet. A [manual, source-bound reading assessment](../records/pilot-rea
 is retained separately from scientific acceptance. The subsequent
 [figure, supplement and dataset review](PILOT_CHOI_REVIEW.md) is complete:
 all main figures/S1-S7 were inspected, GEO samples mapped and local input integrity
-recorded. This does not qualify scientific execution. No worker, frozen new
-contract or outcome tolerance has been qualified. Input hashes exist in a review
+recorded. [Synthetic executor controls](JOB_CONTROLS.md) and the small private
+Drive recovery route now have bounded qualification evidence. This does not qualify
+scientific execution. No scientific worker, frozen new contract or outcome tolerance
+has been qualified. Input hashes exist in a review
 manifest but are not yet bound to an executable contract. See
 [environment recommendation](EXECUTION_ENVIRONMENT.md) and [current state](../PROGRESS.md).
 

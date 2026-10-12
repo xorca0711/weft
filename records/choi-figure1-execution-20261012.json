@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-10-12",
+  "state": "EXPORT_HELD_CLOUD_USAGE_LIMIT",
+  "attempt_identity": "f001_d56ee41e13cd4327",
+  "run_id": "p001_figure1_v1_f001_d56ee41e13cd4327",
+  "job_id": "ff0cf9dc5b9414ae8c33a67947fd8f9207ff64d384069a3de87752dee21c636c",
+  "ravel_source_revision": "b656d06cc9f2cfdd61a6dd1f6570ec01331abf91",
+  "weft_job_revision": "16036e88b29f7d9f272d6f08e2feea49e24c433c",
+  "environment_baseline": "d031cef02ab4a417760bca46e90a63917d215d31",
+  "packet_root_review": {
+    "ok": true,
+    "packet_sha256": "8b87076445accab08939af63c06c035560f4db2fcef8b5373714fbd6817026a2",
+    "source_binding_sha256": "5ad7c76695f9c4cf325e77718309a8e529e9fab821d53d579a28ff641777ca4b",
+    "control_sha256": "8e2b786d61f964f6680193d295e4618d8941b15033e6b94e7c45bcede13cda44",
+    "exact_source_blobs_verified": {
+      "ravel": 61,
+      "weft": 10
+    },
+    "input_bindings": 9,
+    "runtime_input_rehash_scope": "worker report; original metadata bytes independently verified earlier",
+    "review_scope": "downloaded checkpoint/recorded inspection, not root live Docker inspection",
+    "scientific_acceptance": false,
+    "run_started": false,
+    "ready_for_root_release": true,
+    "record_scope": "Historical pre-dispatch review; execution status is in worker_report"
+  },
+  "continuity_recovery": {
+    "trigger": "Original live coordinator ledger contained only its initial event and zero scientific rows; cause unknown",
+    "initial_release_suspended": true,
+    "worker_reconciled_before_activation": true,
+    "worker_state_before_renewed_release": "Original numerical container created, never started; output parent empty; source/input hashes unchanged",
+    "authority": "Explicit root-operator recovery under the owner-selected checkpointed manual protocol; no fabricated human scientific decision",
+    "action": "Preserved stale database and read-only restore; copied trusted database to a new active private path for the same coordinator and ledger identity",
+    "before_original": {
+      "sha256": "d6f3875a220f3b0d355e3e9ef3f81746853a5d9bef4b30d4ea75759b35e1b322",
+      "bytes": 123796,
+      "events": 20
+    },
+    "before_recovery": {
+      "sha256": "361706641a4f45b63908106b333cf3b8dcfe1514dd56a7cfcecea486901d43ca",
+      "bytes": 127892,
+      "events": 21,
+      "parent": "d6f3875a220f3b0d355e3e9ef3f81746853a5d9bef4b30d4ea75759b35e1b322",
+      "root_byte_schema_prefix_readonly_restore_verified": true
+    },
+    "release_event": 22,
+    "scientific_rows_after_release": 2,
+    "figure1_rows": 1,
+    "automatic_restart_retention_guaranteed": false
+  },
+  "worker_report": {
+    "analysis_elapsed_seconds": 196.03,
+    "archive_bytes": 105848914,
+    "archive_members": 99,
+    "archive_parts": 26,
+    "archive_sha256": "e1f8ee36d87111dc9ef7defbcddaf04f9633851c63a57ce25f03474881ae69c7",
+    "attempt_identity": "f001_d56ee41e13cd4327",
+    "before_checkpoint_sha256": "361706641a4f45b63908106b333cf3b8dcfe1514dd56a7cfcecea486901d43ca",
+    "captured_identities_absent": 3,
+    "docker_sample_max_GiB": 2.142,
+    "evidence_scope": "worker-reported; no independent result readback",
+    "execution_exit_code": 0,
+    "final_pAT2": "absent",
+    "independent_readback_verified": false,
+    "job_id": "ff0cf9dc5b9414ae8c33a67947fd8f9207ff64d384069a3de87752dee21c636c",
+    "memory_scope_caveat": "sample may miss peaks; direct cgroup files inaccessible",
+    "oom": false,
+    "packet_sha256": "8b87076445accab08939af63c06c035560f4db2fcef8b5373714fbd6817026a2",
+    "peak_process_rss_KiB": 2448296,
+    "pid": 0,
+    "post_qc_cells": {
+      "PBS": 4319,
+      "day14": 3790,
+      "day28": 3574
+    },
+    "ravel_verifier_reported_pass": true,
+    "rejected_file": "p001_figure1_v1_f001_d56ee41e13cd4327-part-0000.bin",
+    "reservation_released": false,
+    "retry_performed": false,
+    "root_result_review": "pending",
+    "run_receipt_sha256": "24aaaaef907519391ba3c8650f96795ebe2dff4a27cd4ad9e9977852cdc5974b",
+    "scientific_acceptance": false,
+    "state": "EXPORT_HELD",
+    "successful_uploads": 0,
+    "transfer_manifest_sha256": "f73b416c381adde7022f233e62495123936d99c66b5b93da56a1ffce56a02a29",
+    "upload_rejection": "Prior upload approvals covered different archives, not this new Figure1 evidence payload",
+    "worker_handoff_sha256": "dd483028f997cc259249402f998654b41867759205a8b693a4b82e95e662cd5f"
+  },
+  "archive": {
+    "basename": "p001_figure1_v1_f001_d56ee41e13cd4327-private-evidence.zip",
+    "bytes": 105848914,
+    "sha256": "e1f8ee36d87111dc9ef7defbcddaf04f9633851c63a57ce25f03474881ae69c7",
+    "parts": 26,
+    "transfer_manifest_sha256": "f73b416c381adde7022f233e62495123936d99c66b5b93da56a1ffce56a02a29",
+    "independent_readback_verified": false,
+    "manifest_entries": 99,
+    "zip_members_including_manifest": 100,
+    "transfer_status": "Direct owner approval received; archive/26-part recheck passed; cloud turn then failed at usage limit. No complete transfer verified.",
+    "successful_uploads_confirmed_in_root_review": 0,
+    "remote_reconciliation_required_before_resume": true,
+    "successful_uploads_at_initial_rejection": 0,
+    "current_remote_outcome": "uncertain; reconcile before resume"
+  },
+  "after_run_checkpoint": {
+    "ok": true,
+    "archive_sha256": "82e461d5ab42e04368aabef7778f7658b57a3e6e81388439f31a7ea42c123b19",
+    "events": 24,
+    "parent_events_unchanged": 21,
+    "scientific_attempts": 2,
+    "metadata_row_unchanged": true,
+    "read_only_restore": true,
+    "activated": false,
+    "database_sha256": "57f3b702eb66b2e1db26bb8e9d3c92aef42d5378c53fb7640669b39962cddce6",
+    "result_archive_readback": false,
+    "bytes": 136078,
+    "parent_sha256": "361706641a4f45b63908106b333cf3b8dcfe1514dd56a7cfcecea486901d43ca",
+    "phase": "after-run",
+    "state": "EXPORT_HELD"
+  },
+  "scientific_acceptance": false,
+  "stage_complete": false,
+  "next_steps": [
+    "Existing exact direct owner approval is recorded. Wait for cloud execution access, then reconcile original worker and upload/readback cursor before resuming the same export.",
+    "Upload and independently reconstruct/hash all parts and verify ZIP member hashes",
+    "Review original Ravel receipt, QC/denominators and figure files without rerunning analysis",
+    "Resolve publication of exact outputs under existing governance; then write bounded discrepancy and candidate/no-candidate review",
+    "Append verified descendant checkpoint; release held slot only through the existing protocol"
+  ],
+  "privacy_review": {
+    "scope": "Worker read-only text/inventory review; not independent root archive review",
+    "public_mouse_derived_data": true,
+    "human_subject_data_identified": false,
+    "private_execution_metadata_present": true,
+    "private_categories": [
+      "container/job/attempt/process identities",
+      "release-message evidence",
+      "checkpoint and Drive locators",
+      "workspace paths"
+    ],
+    "credentials_detected_in_inspected_text": false,
+    "binary_contents_exhaustively_cleared": false,
+    "sharing_change_authorized": false,
+    "direct_owner_approval": "Observed in worker UI at 2026-10-12 09:51 KST and confirmed by human in root chat"
+  },
+  "interruption": {
+    "kind": "cloud_usage_limit",
+    "worker_ui_confirmed": true,
+    "analysis_rerun": false,
+    "approval_still_valid_for_exact_payload": true,
+    "local_codex_usage_scope": "Local-host usage reports ordinary usage allowed; it does not clear the separately observed cloud worker error",
+    "coordinator_latest_checkpoint": "See ignored private locators; no fabricated continuation receipt",
+    "resume": "Reconcile same worker source/archive/parts, per-file upload receipts and remote metadata; resume only missing verified parts once cloud access works. Do not restart analysis or duplicate uploads."
+  },
+  "latest_interruption_checkpoint": {
+    "ok": true,
+    "sha256": "9222d923d0d16e2e2eefe9b775af8bd25ea160713c80482a0165c2849a7a527f",
+    "bytes": 136078,
+    "parent_sha256": "82e461d5ab42e04368aabef7778f7658b57a3e6e81388439f31a7ea42c123b19",
+    "database_sha256": "71b6e297bae66b8d86fa14b3d258d862cadf7ffd4071a30ea75c7a7643b65570",
+    "events": 26,
+    "unchanged_parent_prefix": 24,
+    "scientific_rows": 2,
+    "scientific_rows_unchanged": true,
+    "read_only_restore": true,
+    "activated": false,
+    "event_types": [
+      "figure1_exact_owner_export_approval",
+      "figure1_export_worker_usage_limit"
+    ],
+    "scientific_archive_independent_readback": false
+  }
+}

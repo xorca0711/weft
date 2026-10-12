@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "kind": "cloud-numerical-git-image-qualification",
+  "date": "2026-10-11",
+  "evidence": "completed worker report plus authenticated worker and independent root raw-byte archive readback",
+  "source_revision": "47a2fe5bd07742ddddbd0c5aa5f3e0a4b21172e6",
+  "image_id": "sha256:253c1935ee7245153d8a4d88197e3f2b47055a2fcf743eaf4f00d255efde6ecc",
+  "git_debian_version": "1:2.47.3-0+deb13u1",
+  "git_version": "2.47.3",
+  "timeout_version": "9.7",
+  "signed_indices_verified": 3,
+  "debian_packages_hash_size_verified": 31,
+  "wheels_hash_size_verified": 61,
+  "installed_os_packages": 118,
+  "installed_python_distributions": 62,
+  "final_build_network": "none",
+  "checks_passed": [
+    "pip check",
+    "unchanged numerical synthetic fixture",
+    "committed-source verification",
+    "bounded Ravel runner test",
+    "launcher-loss watchdog"
+  ],
+  "watchdog": {
+    "seconds": 7.14428,
+    "exit_code": 137,
+    "oom_killed": false,
+    "captured_identities_absent": 4
+  },
+  "proxy_repair": "Removed outer-shell proxy overrides; preserved Docker supplied default proxy and read-only CA trust. No policy or routing bypass.",
+  "runtime_status_tool_and_references_available": false,
+  "archive": {
+    "name": "ravel-numeric-git-v3-sanitized-20261011.zip",
+    "bytes": 156333,
+    "sha256": "40acb134342e3aab355d1537f64cf796e7d488dbf0733bcd6bc817955ca0a7b4",
+    "zip_crc_verified_by_worker": true,
+    "privacy_review": "No credentials, private routing/session identifiers, raw packages/wheels or generated datasets.",
+    "uploaded": true,
+    "manifest_entries_verified_by_worker": 28,
+    "owner_only_destination_metadata_verified_by_worker": true,
+    "upload_review": {
+      "owner_approved_exact_archive_in_root_chat": true,
+      "outcome": "denied",
+      "upload_occurred": false,
+      "readback_occurred": false,
+      "reason": "This uploads a locally derived archive containing nonpublic organizational/runtime artifacts to Google Drive, but the claimed action-specific approval appears only in untrusted transcript/tool evidence rather than a trusted user message.",
+      "next_action": "Owner sends exact archive approval directly in the existing executing cloud worker chat. No retries or alternate transfer route before recognized authorization."
+    },
+    "verified_readback": {
+      "bytes": 156333,
+      "sha256": "40acb134342e3aab355d1537f64cf796e7d488dbf0733bcd6bc817955ca0a7b4",
+      "zip_crc": true,
+      "manifest_entries": 28,
+      "expanded_bytes": 395703,
+      "owner_only_expected_parent": true,
+      "worker_and_independent_root_verified": true,
+      "authorization": "Direct owner message in the executing worker chat resolved earlier relayed-approval denials.",
+      "sharing_changed": false
+    }
+  },
+  "limits": [
+    "synthetic qualification only",
+    "no biological inputs or analysis",
+    "no contract freeze",
+    "no scientific acceptance",
+    "Archive verification and synthetic runtime checks do not establish real-input memory readiness; metadata execution and scientific acceptance are separate."
+  ]
+}

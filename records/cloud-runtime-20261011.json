@@ -1,0 +1,73 @@
+{
+  "status": "HOLD",
+  "environment_id": "ccarenv_b64_Y2NhcmVudl9kOGYxZjRkZTkyZTg4MTkxYmJiNjA4YmYxZTZhOTBkYQ",
+  "configuration_version_id": "e1ba7ae9-e5d4-4ddb-92cb-a6415c57831a~cecfgver_6acb61fdc96481a283a745de16ae40ce",
+  "runtime_revision": "2",
+  "observed_revision": "2",
+  "task_thread_id": "01a12a7d-52d1-718f-bc27-a848196c3030",
+  "setup_comparison": {
+    "environment_ids_match": false,
+    "supplied_version_suffix_matches": true,
+    "full_setup_version_id_available": false,
+    "setup_revision": 3,
+    "counter_difference_proves_different_version": false
+  },
+  "weft_commit": "d031cef02ab4a417760bca46e90a63917d215d31",
+  "tests_passed": 58,
+  "offline_validation": "PASS",
+  "ravel_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+  "ravel_pinned_blobs_verified": 15,
+  "tracked_files_unchanged": true,
+  "activation_flags": "all false",
+  "docker_version": "28.4.0",
+  "initial_containers": 0,
+  "initial_images": 0,
+  "image": "python@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1",
+  "enforced_controls": {
+    "memory_bytes": 268435456,
+    "swap_bytes": 0,
+    "pids": 32,
+    "cpu_max": "100000 100000",
+    "uid": 65534,
+    "capabilities_effective": 0,
+    "no_new_privileges": true,
+    "root_readonly": true,
+    "tmpfs_mib": 16,
+    "network": "none; loopback only; external connection errno 101"
+  },
+  "results": {
+    "deterministic_json_repeated": true,
+    "result_sha256": "08e9487758a37e2013bccee9de0eb00534160b5233b667a434ee1f0df66031e3",
+    "memory_failure": "OOMKilled=true; exit=137",
+    "pid_exhaustion": "31 children; EAGAIN=11; exit=0",
+    "normal_process_tree": "exit=0",
+    "cancel_process_tree": "external timeout; exit=137; OOMKilled=false",
+    "captured_parent_child_grandchild_pids": [
+      2098,
+      2143,
+      2160
+    ],
+    "all_captured_pids_absent_after_cancel": true,
+    "terminal_container_pid": 0,
+    "all_tests_under_20_seconds": true,
+    "remaining_disposable_containers": 0
+  },
+  "storage": {
+    "same_task_persistence": "observed",
+    "qualified_external_storage": false,
+    "offline_pc_cross_task_restore": "not demonstrated",
+    "uploads_performed": false
+  },
+  "sha256": {
+    "qualify.py": "bcf5386b9019bf67728a275418bdbbcfb831a1ac41a1bfc211aded31729b1c45",
+    "tree_check.py": "bd4bb2901ba4d42f1f740c4f782bd2da1fedbdd690420ad36080294abd0a9602",
+    "commands.json": "38c35657d2e916a4d05d11cce524a680d77a91eafb5980d5f7b09daf3b15af62",
+    "tree-commands.json": "7478f6bb020aa07868720c84d5a3ed15c23f6f02ea1f7a026b522667d4d9a96e",
+    "qualification-evidence.zip": "a95de0b0a6f01e2de8f37da0a7ca3ccccf025b0f7518f69c6ce060b2ded73e58"
+  },
+  "record_type": "cloud-synthetic-runtime-qualification",
+  "date": "2026-10-11",
+  "evidence_origin": "Rendered response from fresh cloud task; command/source/output digests retained",
+  "scope": "Synthetic containers only; not Choi execution or a complete M3 job service",
+  "storage_selection": "Private Google Drive selected; subsequent same-task roundtrip passed (cloud-drive-20261011.json); original runtime receipt retained"
+}
