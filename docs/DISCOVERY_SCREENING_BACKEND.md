@@ -8,8 +8,9 @@ See the [command guide](BATCH_SCREENING.md) and [fresh-candidate development tes
 Prioritize discovery-to-screening orchestration before the remaining Choi
 publication closeout. The existing Choi attempt is a completed, exposed test of
 manual compute, recovery and interpretation. Its merge is not a prerequisite for
-building or evaluating candidate screening. Preserve its publication hold,
-reservation and original evidence; do not rerun it.
+building or evaluating candidate screening. Publication/recovery is now qualified;
+preserve its held reservation and original evidence until review/coordination is
+reconciled. Do not rerun it.
 
 ## Current B1-B5 status
 
@@ -26,8 +27,9 @@ Evidence: [manual cloud qualification](SCREENING_CLOUD_QUALIFICATION.md),
 statuses, not scientific acceptance. [Overall roadmap](IMPLEMENTATION_PLAN.md#established-state)
 separates this priority track from Choi M5 publication. PRs #4-#8 are merged into
 main with passing post-merge CI at every step; see [integration status](PR_STACK_INTEGRATION.md).
-The separate [M5 output package](M5_PUBLICATION_PLAN.md) is locally qualified;
-public publication and clean-clone restoration are not yet approved/qualified.
+The separate [M5 output package](M5_PUBLICATION_PLAN.md) is now publicly
+published with owner approval, independently recovered and qualified in clean CI.
+Human scientific disposition and Ravel integration remain open.
 
 ## What exists and what does not
 
@@ -179,7 +181,7 @@ The profile/window was exposed; this is not independent semantic evaluation. B5
 quality evaluation and a supported unattended launcher remain future work.
 Before recurrence, obtain cadence, notification and usage-scope decisions.
 
-Choi M5 remains a separate track: complete-output publication, unchanged receipt
-registration, human review and merge. It is not cancelled and must not be marked
-complete. The next useful demonstration is discovery -> screening -> a reasoned
+Choi M5 remains a separate track: publication and clean-checkout receipt
+restoration are qualified, while human disposition and Ravel integration remain
+open. It must not be marked complete. The next useful demonstration is discovery -> screening -> a reasoned
 candidate digest, not another manual reproduction of an already reviewed paper.

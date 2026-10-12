@@ -1,9 +1,14 @@
 # M5: complete Choi output publication
 
-**12 October 2026: local package qualification passed; public upload is not
-authorized yet.** Choi remains separate from B4. The numerical analysis ran once;
-this preparation copies and verifies existing bytes only. Ravel PR #149 remains
-draft, with no registered numerical receipt or human scientific acceptance.
+**12 October 2026: owner-approved publication, independent public recovery and
+clean-checkout CI qualification passed.** [Ravel PR #149](https://github.com/xorca0711/ravel/pull/149)
+is ready for review at `4e44db497c72f64056688b78d828a47695384db4`; all four push/PR
+checks passed. Human scientific disposition and integration remain open. Choi is
+separate from B4 and the numerical analysis was not rerun.
+
+[Publication and CI record](../records/choi-publication-20261012.json) ·
+[Public evidence release](https://github.com/xorca0711/ravel/releases/tag/choi-p001-figure1-v1).
+The local-candidate record below preserves the earlier preparation checkpoint.
 
 ## Prepared candidate
 
@@ -50,14 +55,25 @@ the proposed ZIP fits. See [GitHub release storage documentation](https://docs.g
 The route uses the existing repository/account rather than a new paid storage
 service. It does not add the H5AD to ordinary Git history or enable Git LFS.
 
-**Owner decision required:** publish this exact package publicly in Ravel and
-qualify its download/CI restoration. Earlier Drive approvals covered private
-archives; they do not select this public publication destination. No upload,
-tag, release, billing change, CI modification or receipt registration has occurred.
-The alternative is to keep the candidate private and M5 open while selecting
-another complete-output route.
+**Owner decision recorded:** publish this exact package publicly in Ravel and
+qualify its download/CI restoration. The named package, byte size and SHA-256
+were explicitly approved. Release `410591160`, asset `633765798`, draft readback
+and unauthenticated public recovery are verified. The tag resolves to the reviewed
+source above. PR #149 registers the original receipt and restores all outputs
+before the unchanged validators; its clean-checkout CI passed.
 
-## Execution after that decision
+The first CI run correctly rejected a comment-only `.gitignore` change because
+the file is frozen source provenance. Exact original bytes were restored, with
+no validator or contract change. The corrected head passed all checks.
+**Remaining human decision:** retain the bounded descriptive discrepancy record
+and review/integrate Ravel #149. Neither publication nor CI records scientific
+acceptance. The private coordinator reservation remains held.
+
+## Integration sequence — publication/restoration complete; review remains
+
+Steps 1–4 below were implemented and qualified in Ravel #149, with the unchanged
+receipt validator and four passing clean-checkout CI runs. Steps 5–6 remain the
+review/coordination boundary; no new scientific job is authorized.
 
 1. Recheck GitHub identity `xorca0711`, target repository, tag absence, original
    receipt/source hashes and the selected package hash. Create a draft release

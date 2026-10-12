@@ -1,7 +1,7 @@
 # Choi P001: scientific review and integration disposition
 
-**12 October 2026: review complete; complete-output publication and human review
-remain open.** Ravel owns the [full scientific assessment](https://github.com/xorca0711/ravel/blob/714945697b007f4a0046834b34251392c1cfbe5a/Research%20Article/gate1_02_choi_2020/weft_pilot_v1/SCIENTIFIC_REVIEW.md). Weft records
+**12 October 2026: review, complete-output publication and clean-checkout
+recovery complete; human disposition and Ravel integration remain open.** Ravel owns the [full scientific assessment](https://github.com/xorca0711/ravel/blob/714945697b007f4a0046834b34251392c1cfbe5a/Research%20Article/gate1_02_choi_2020/weft_pilot_v1/SCIENTIFIC_REVIEW.md). Weft records
 the review handoff, automation limits and remaining integration conditions. The
 original analysis executed once and was not rerun for this review.
 
@@ -53,17 +53,15 @@ decision buffer; it does not directly become support for a canonical claim.
 This is not a human retain/reject decision or an evaluation of unseen-paper screening.
 
 M4b execution, artifact recovery and scientific review are complete for the
-single attempt. **M5 integration remains open:** Ravel PR #149 stays draft and
-the original numerical receipt remains unregistered until every declared output
-has a reviewed, durable publication route. The 385,675,968-byte H5AD is included
-in private verified recovery but has no qualified clean-clone CI publication route.
-Do not omit it, edit the receipt, weaken the validator or activate paid storage.
-The subsequent [M5 publication candidate](M5_PUBLICATION_PLAN.md) now packages
-all 15 unchanged outputs and the original receipt, passes ZIP/hash checks and
-the original validator in a fresh local staging root. The recommended public
-GitHub Release route still requires an owner destination decision, independent
-remote recovery and clean-clone CI qualification; private recovery alone is not
-publication.
+single attempt. M5's [complete-output publication and recovery](M5_PUBLICATION_PLAN.md)
+are also now qualified: the owner-approved public package preserves every output,
+including the 385,675,968-byte H5AD, and the original receipt. Independent public
+recovery passed. Ravel #149 proposes the receipt registration and hash-locked
+restoration before the unchanged validators; all four clean-checkout CI checks
+pass and it is ready for review. **M5 remains open for human scientific
+disposition and Ravel integration.** No partial receipt, new analysis or validator
+relaxation occurred. The original review record remains its historical snapshot;
+the [publication record](../records/choi-publication-20261012.json) owns this update.
 
 The coordinator's last independently verified backup remains the 30-event
 `c8ac521d…` checkpoint. This local review did not change its ledger or release

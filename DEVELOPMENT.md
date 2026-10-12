@@ -684,3 +684,26 @@ acceptance, coordinator transition, new worker or schedule was performed.
 | Date | Proposed output | Why rejected or changed | Rejected/changed by |
 |---|---|---|---|
 | 2026-10-12 | Interpret five PNG Software metadata matches as private drive paths | Exact values were public Matplotlib HTTPS URLs; the scanner matched an interior `s:/` | Codex corrected the Windows-drive boundary; original files and first scan evidence preserved |
+
+
+## 2026-10-12 — Owner-approved M5 publication and clean-checkout qualification
+
+The owner subsequently approved the exact 105,582,086-byte package, its SHA-256,
+public Ravel prerelease destination and download/CI qualification. This supersedes
+the earlier pending destination decision, not the historical candidate inventory.
+Release 410591160 / asset 633765798 preserve all 15 outputs and original receipt;
+draft readback and independent unauthenticated recovery matched every hash.
+Ravel PR #149 at 4e44db4 adds bounded hash-locked restoration before unchanged
+validators and registers the original receipt. All four clean-checkout CI checks
+pass and the PR is ready for review. Its initial frozen-ignore-file failure and
+exact-byte correction are retained in the record; no scientific gate was weakened.
+
+| Date | Item | Proposed by | Decided by | Decision | Reason |
+|---|---|---|---|---|---|
+| 2026-10-12 | Public Choi release and restoration qualification | Codex prepared exact package and plan | Owner explicitly approved the named ZIP, size, SHA-256 and public route | Published, independently recovered and CI-qualified; human disposition/integration still open | Resolve the complete-output dependency without rerunning analysis or exposing the private recovery bundle |
+
+No human retain/reject decision, Ravel merge, coordinator transition, reservation
+release, B4 continuation or schedule was inferred from that approval. B5/M6 remain
+planned. The [publication record](records/choi-publication-20261012.json) and
+[current plan](docs/M5_PUBLICATION_PLAN.md) separate accomplished engineering from
+the remaining scientific/integration authority.

@@ -14,7 +14,7 @@
 | Pinned Codex Cloud setup | Descriptive only | [Setup receipt](records/cloud-setup-20261011.json) | Private environment published; small export verified; no retention guarantee |
 | Synthetic executor and restart recovery | Descriptive only | [Recovery receipt](records/synthetic-recovery-integration-20261011.json) | Bounded Docker restart; synthetic recovery does not prove arbitrary job recovery |
 | Manual dot handoff and private checkpoints | Descriptive only | [Coordinator receipt](records/manual-coordinator-20261011.json) | Small synthetic recovery; no retention or distributed-lock guarantee |
-| Manual scientific cloud execution | Descriptive only | [Metadata](records/choi-metadata-20261011.json) and [Figure1 execution](records/choi-figure1-execution-20261012.json) | Metadata and Figure1 archive verified; [scientific review](docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md) complete with limits; publication pending |
+| Manual scientific cloud execution | Descriptive only | [Metadata](records/choi-metadata-20261011.json) and [Figure1 execution](records/choi-figure1-execution-20261012.json) | Metadata and Figure1 archive verified; [scientific review](docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md) complete with limits; [public outputs and recovery qualified](docs/M5_PUBLICATION_PLAN.md), human integration pending |
 | Autonomous paper-to-question workflow | Not established | [Marked implementation plan](docs/IMPLEMENTATION_PLAN.md#established-state) | Autonomous screening/orchestration and complete Ravel artifact publication remain unqualified |
 
 Weft is being built to bring new literature into an existing research programme:
@@ -47,14 +47,14 @@ show completed, qualified, partial, blocked and planned stages;
 [PR integration status](docs/PR_STACK_INTEGRATION.md) separates tested work from main.
 The earlier [manual cloud handoff and recovery](docs/SCREENING_CLOUD_QUALIFICATION.md)
 is qualified; independent screening evaluation remains open.
-An unattended launcher and recurrence remain future work. Choi publication remains
+An unattended launcher and recurrence remain future work. Choi human integration remains
 a parallel closeout task.
 
 ## Intended workflow
 
 The selected deployment uses a dot for coordination and Codex Cloud for execution.
 The cloud environment is published. Metadata is verified; the first descriptive
-Figure1 archive and scientific review are complete with documented limits; publication remains open. Solid arrows show
+Figure1 archive, scientific review and public recovery are complete with documented limits; human integration remains open. Solid arrows show
 implemented discovery/reading stages; dotted arrows show scientific links still
 being qualified end to end. An RQ supplies search context; the review buffer keeps proposed
 relationships separate from accepted evidence.
@@ -104,7 +104,7 @@ The arrows describe the selected route, including steps that remain under
 qualification; they do not represent an unattended pipeline. Metadata recovery
 has passed independent readback. The first Figure1 analysis has executed once;
 its archive and [scientific review](docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md) are complete
-with documented limits; complete-output publication and human review remain open. See
+with documented limits; [public outputs and recovery are qualified](docs/M5_PUBLICATION_PLAN.md), with human disposition/integration open. See
 [current state](PROGRESS.md) for the latest hold and its evidence.
 
 | Component | Responsibility | What it does not provide |
