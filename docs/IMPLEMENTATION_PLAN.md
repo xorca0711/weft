@@ -38,11 +38,13 @@ priority: B1 batch coordination -> B2 source-grounded agent screening -> B3 data
 and RQ compatibility -> B4 a bounded fresh-candidate batch -> B5 evaluation and
 separately authorized recurrence. These refine M1/M2/M3. Current Choi execution
 was manually coordinated. B1 coordination and the B2 pull interface are now
-implemented and [tested on fresh candidates](BATCH_PILOT_20261012.md); cloud
-handoff and autonomous screening quality remain unqualified.
+implemented and [tested on fresh candidates](BATCH_PILOT_20261012.md). The
+[manual cloud handoff and checkpoint recovery](SCREENING_CLOUD_QUALIFICATION.md)
+also passed. Independent screening quality and unattended operation remain open.
 Choi M5 publication remains open on a separate track and is not a prerequisite
 for developing or evaluating the discovery/screening backend. Preserve its held
-reservation; reconcile before new live dispatch. No gate or schedule is enabled
+reservation; reconcile before new scientific dispatch through that ledger. No
+gate or schedule is enabled
 by these development changes.
 
 ## Development stages and exit criteria
@@ -133,10 +135,12 @@ exhaustion retain resumable holds/attempts; do not retry blindly.
 B1 and B2 packet/result mechanics are implemented; the fresh-candidate development
 digest records 74 papers, five screened links and a held selected-text assessment.
 Path reconciliation and local cross-root recovery are implemented and tested.
-[Cloud qualification](SCREENING_CLOUD_QUALIFICATION.md) is held: the current worker
-excludes `www.ebi.ac.uk`, and its managed-environment readiness tool is unavailable.
-Resolve the explicit access/readiness boundary before handoff and remote restore,
-then B3 figure/supplement/data and compatibility records. Freeze
+[Cloud qualification](SCREENING_CLOUD_QUALIFICATION.md) has verified the approved
+host amendment, separate screening-only task, source checks and bounded discovery.
+Five cloud screening responses, both exact owner-approved Drive checkpoints and
+independent Linux-to-Windows cached recovery passed. Manual handoff/recovery is
+qualified; no unattended launcher is configured. Next implement B3
+figure/supplement/data and compatibility records. Freeze
 independent screening evaluation before using quality metrics or enabling recurrence. See [deliverables and acceptance tests](DISCOVERY_SCREENING_BACKEND.md#concrete-implementation-order).
 The synthetic executor, checkpoint and transfer modules already exist; do not
 reimplement them or claim that their existence supplies semantic screening.

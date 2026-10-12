@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-10-12",
-  "scope": "local cross-root recovery of the preserved real candidate checkpoint; cloud qualification held",
+  "scope": "local legacy-path recovery and bounded manual cloud screening handoff, exact Drive checkpoints and independent Linux-to-Windows cached recovery passed",
   "source_checkpoint_sha256": "f03b6f614db27edb6acc061abeb61a686bd31ce81174637edda21717e349811e",
   "verified_manifest_entries": 34,
   "changed_readings": 1,
@@ -30,7 +30,7 @@
     "batch_events": 21
   },
   "independent_validation": false,
-  "cloud_qualified": false,
+  "cloud_qualified": true,
   "cloud_readiness": {
     "existing_worker_responsive": true,
     "python": "3.12.14",
@@ -40,25 +40,240 @@
     "existing_drive_owner_verified": true,
     "new_workspace_available": true,
     "managed_environment_status_tool_available": false,
-    "managed_environment_identity_independently_confirmed": false
+    "managed_environment_identity_independently_confirmed": false,
+    "post_publication_check": {
+      "checked_at": "2026-10-12T18:08:51+09:00",
+      "europe_pmc_host_allowed": false,
+      "policy_sha256": "b75dded3b3d36d5ee89bcd2aa8cc1a9c494369d28e1a79f43ea0c9c2493b3436",
+      "bibliographic_probe_attempted": false,
+      "managed_environment_status_tool_available": false
+    }
   },
-  "hold": "Existing worker policy excludes www.ebi.ac.uk; owner access decision and current managed-environment readiness verification required before cloud qualification.",
+  "hold": "No remaining access/export hold for completed qualification. B3 source coverage/data compatibility, independent screening evaluation and unattended deployment remain future work.",
   "choi_state_modified": false,
   "scientific_execution_allowed": false,
   "boundaries": [
     "No distributed writer fencing is claimed; an operator must quiesce the source before activating a restored store.",
-    "Local path simulation and readback do not qualify the cloud handoff, Drive roundtrip or resumed cloud writer.",
+    "Local path tests alone do not qualify cloud recovery; a separate bounded cloud run, exact before/after Drive readback and independent Windows restore are now recorded below.",
     "Only reading addressing changed; existing source evidence, assessments and reading decisions remain unchanged."
   ],
   "validation": {
     "windows_tests": 154,
     "windows_skipped": 24,
     "passed": true,
-    "linux_ci": "pending"
+    "linux_ci": {
+      "passed": true,
+      "tests": 154,
+      "skipped": 0,
+      "revision": "19455150d8b5158ece1c7f29bf3d16887996630f",
+      "run": "https://github.com/xorca0711/weft/actions/runs/38226756160",
+      "pull_request": "https://github.com/xorca0711/weft/pull/6"
+    }
   },
   "module_hashes": {
     "weft/reading_locations.py": "25b98284609ebcc93a700729b6133daf7ac06d5abcd607f28c23236990406850",
     "weft/screening.py": "6724439d5b5cac38d70eedb1fd09af65f62b593f07c59776dcb8f2a75ff90c41",
     "weft/__main__.py": "13ff9602927a7c08afede4d0a379ef9d71f49676bb8c38745d29dff3db1eec40"
-  }
+  },
+  "network_amendment": {
+    "owner_approved": true,
+    "published_ui_verified": true,
+    "environment_name": "weft-pilot",
+    "repository": "xorca0711/weft",
+    "visibility": "Only me",
+    "preset": "package_managers",
+    "added_hosts": [
+      "www.ebi.ac.uk"
+    ],
+    "existing_additional_hosts_preserved": [
+      "ftp.ncbi.nlm.nih.gov"
+    ],
+    "setup_source_pin_unchanged": "d031cef02ab4a417760bca46e90a63917d215d31",
+    "network_only_diff_ui_verified": true,
+    "credentials_or_environment_variables_changed": false,
+    "published_version_id": "not exposed in inspected UI",
+    "existing_worker_received_update": false
+  },
+  "screening_worker": {
+    "owner_approved": true,
+    "created": true,
+    "same_published_environment": true,
+    "original_worker_preserved": true,
+    "managed_status": "running/connected",
+    "observations_current": true,
+    "network_policy_state": "enforced",
+    "europe_pmc_host_allowed": true,
+    "baseline_clean_at": "d031cef02ab4a417760bca46e90a63917d215d31",
+    "drive_identity_and_owner_only_folder_verified": true,
+    "first_probe": {
+      "curl_exit": 7,
+      "http_status": "000",
+      "result": "proxy connection failed"
+    },
+    "diagnostic": {
+      "proxy_settings_match_policy": true,
+      "proxy_dns_resolves": true,
+      "connection_error": "PermissionError errno 1",
+      "sandbox_vs_platform_cause": "earlier commands used restricted default sandbox; reviewed execution permissions succeeded through the unchanged inherited proxy/TLS"
+    },
+    "live_batch_started": true,
+    "handoff_and_recovery_qualified": true,
+    "successful_probe": {
+      "checked_at": "2026-10-12T18:18:28+09:00",
+      "http_status": 200,
+      "bytes": 1117,
+      "json_records": 1
+    },
+    "source_readiness": {
+      "weft_commit": "19455150d8b5158ece1c7f29bf3d16887996630f",
+      "clean": true,
+      "targeted_tests_passed": 73,
+      "doc_links": 111,
+      "ravel_files_verified": 15,
+      "ravel_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "dependency_installations": 0
+    },
+    "screening_submissions": 5,
+    "xml_reads": 1,
+    "discovery": {
+      "searches": 3,
+      "observations": 82,
+      "papers": 74,
+      "rq_links": 148,
+      "profile": "alveolar-transitions",
+      "date_field": "FIRST_IDATE",
+      "since": "2026-09-12",
+      "until": "2026-10-12",
+      "max_searches": 12,
+      "max_records": 100,
+      "max_screenings": 5,
+      "max_full_reads": 1,
+      "retrieved_from": "2026-10-12T18:23:32.838708+09:00",
+      "retrieved_through": "2026-10-12T18:23:37.865775+09:00",
+      "exposure": "Window/profile previously observed in local development; operational qualification, not blinded semantic evaluation",
+      "batch_id": "batch-8d498d5d75da37a8607e64c8a5846cdc8f1baabd6fc0165215980960dabbc883",
+      "candidate_id": "0fac74e6a8119c66386fd3fe36746ee2806356b96bb9d7a14a59d7a658b282df",
+      "paper_key": "doi:10.1002/adhm.71751",
+      "packet_sha256": "4f247c3db031049066c37d5ef9f284be026da5f4b69d07f454bd641f79312bdf",
+      "packet_file_sha256": "0df2352ec58f30575ec6ba5a8f6aa0273c59b6b8561f8bc5ecd2ee0af618d69c",
+      "pending_packets_at_before_checkpoint": 1
+    },
+    "before_checkpoint": {
+      "name": "cloud-batch-20261012-v1-before-screening.zip",
+      "bytes": 389137,
+      "sha256": "b4dff3298207cfb800d19d74a9f03dc79f3b86ecba853d9e9f9ac27706814b32",
+      "manifest_members": 20,
+      "zip_members": 21,
+      "worker_local_inactive_restore_passed": true,
+      "original_store_hashes_preserved": true,
+      "privacy_categories": [
+        "Public bibliographic metadata and 81 abstract occurrences",
+        "Queries and pinned RQ context",
+        "Private execution paths, workflow identifiers and timestamps"
+      ],
+      "secret_pattern_scan": "No matches in bounded JSON scan; not an exhaustive guarantee",
+      "full_text_xml_or_choi_state_included": false,
+      "uploaded": true,
+      "independent_cloud_readback_verified": true,
+      "export_approval": "Direct owner approval in screening worker; exact archive upload/readback and independent root restore passed",
+      "root_database_sha256": "f514866e1c6361ce322bf9d22e1a26aadb3104cb60f2ee1c6f50d88a4f57c59b"
+    },
+    "screening_result": {
+      "read_next": 1,
+      "hold": 1,
+      "reject_link": 3,
+      "deferred_links": 143,
+      "decisions": [
+        {
+          "paper": "doi:10.1002/adhm.71751",
+          "rq": "A0",
+          "decision": "hold",
+          "reason": "Repair context; conserved transition-programme comparison unclear"
+        },
+        {
+          "paper": "doi:10.1002/adhm.71751",
+          "rq": "A1",
+          "decision": "reject",
+          "reason": "No transitional-state regulatory discriminator or linked maturation endpoint described"
+        },
+        {
+          "paper": "doi:10.1002/adma.75042",
+          "rq": "A0",
+          "decision": "reject",
+          "reason": "Periodontal alveolar bone query mismatch"
+        },
+        {
+          "paper": "doi:10.1002/adma.75042",
+          "rq": "A1",
+          "decision": "reject",
+          "reason": "Periodontal alveolar bone query mismatch"
+        },
+        {
+          "paper": "doi:10.1002/advs.77773",
+          "rq": "A0",
+          "decision": "read_next",
+          "reason": "Adult AT2/progenitor/differentiated comparisons warrant source review"
+        }
+      ],
+      "pmcid": "PMC13634473",
+      "selected_text_statements": 4,
+      "reading_next_action": "hold",
+      "figures_supplements_datasets_eligibility_acceptance": "not_assessed",
+      "worker_recovery": {
+        "passed": true,
+        "network_calls": 0,
+        "idempotent_submissions": true,
+        "duplicate_events": 0,
+        "original_eight_event_prefix_preserved": true,
+        "batch_events": 20,
+        "review_events": 5,
+        "all_stores_quiesced": true
+      },
+      "semantic_comparison": "Local development had two holds and two rejections; cloud has one hold and three rejections. Different runs/agent context, not a controlled accuracy evaluation."
+    },
+    "after_checkpoint": {
+      "name": "cloud-batch-20261012-v1-after-screening.zip",
+      "bytes": 522632,
+      "sha256": "7edfa55a6349b2bd2ace5db26a24ab0fec9a0609e6345b6119be5c6e5476fb8f",
+      "manifest_members": 42,
+      "zip_members": 43,
+      "report_sha256": "a3deec510b787f1fca458962a1b378b59d8079ee886ad2ca9955308e06a42056",
+      "uploaded": true,
+      "independent_cloud_readback_verified": true,
+      "privacy_categories": [
+        "Public abstracts, queries and RQ context",
+        "One OA CC-BY XML and derived text",
+        "Private execution paths, workflow identifiers/timestamps and screening responses"
+      ],
+      "export_approval": "Direct owner approval for this exact archive in screening worker; worker readback and independent root restore passed",
+      "worker_transfer_receipt_sha256": "6f2e75779587085bcbe182c36fc2a1a5a47204b1cd3c310ccc392571d31d5b21",
+      "root_archive_verification_sha256": "e8314a55ddb0320c51953ee28deb2561e05713ac2a617c3f7fa2e955a39baa1b",
+      "root_replay_verification_sha256": "ebac8336b9aa8b9ea0848bd6f0a9ce24cb5a5be9b89a868ad329dca4a86d1c42",
+      "root_database_sha256": "b1f70bf9ed91c51d164a8dbf10cde912a87966caaed1810c5ab042fdbd75bc41",
+      "sharing_unchanged_owner_only": true
+    },
+    "pending_packets_at_closeout": 0,
+    "independent_recovery": {
+      "source": "Linux cloud checkpoint",
+      "destination": "Windows inactive verification copy",
+      "manifest_members": 42,
+      "sqlite_integrity_and_foreign_keys": "passed",
+      "original_event_prefix": 8,
+      "unchanged_source_files": 17,
+      "completed_search_replay": "passed",
+      "network_calls": 0,
+      "screening_responses_already_recorded": 5,
+      "cached_xml_assessment": "already_recorded",
+      "paths_resolve_inside_restored_store": true,
+      "database_rows_unchanged": true,
+      "duplicate_events": 0,
+      "batch_events": 20,
+      "review_events": 5,
+      "source_and_restores_inactive": true,
+      "first_attempt": "Windows sandbox denied strict path resolution; retained failed copy; normal permission retry passed on fresh copy"
+    }
+  },
+  "qualification_scope": "manual screening pull interface and checkpoint recovery only; not unattended deployment, semantic accuracy or scientific eligibility",
+  "independent_operational_recovery_verified": true,
+  "independent_validation_scope": "independent semantic/biological validation remains false; independent byte/state/replay verification passed"
 }

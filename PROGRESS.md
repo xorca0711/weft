@@ -1,31 +1,61 @@
 # Current project state
 
-## Current portability fix and cloud access hold — 12 October 2026
+## Current screening qualification — 12 October 2026
 
-Store-relative reading references and explicit, verified Windows/POSIX legacy
-path reconciliation are implemented on a scoped branch. The preserved real
-74-paper checkpoint passed migration and reuse across two fresh local roots:
-34 manifest entries verified, all 33 non-database files unchanged, existing
-decisions/caps retained, one path-history event added, and no retrieval/analysis
-rerun. The original checkpoint remained unchanged. Windows validation passed
-154 tests with 24 platform-specific skips; Linux CI will verify the final code.
+[PR #6](https://github.com/xorca0711/weft/pull/6) implements portable reading paths
+and verified Windows/POSIX legacy-address reconciliation. Linux CI passed all
+**154 tests without skips** at code pin `1945515`. The original local checkpoint
+passed two-root recovery with unchanged evidence and decisions. The PR is stacked
+on #5; refresh/retarget after predecessor merges. Nothing was merged here.
 
-The existing cloud worker is responsive and verified its current Drive identity
-and owner-only folder. Its network snapshot excludes `www.ebi.ac.uk`; the current
-managed-environment status tool/skill was unavailable, so environment identity
-and readiness are not independently confirmed. Cloud retrieval, handoff and
-recovery were stopped before that access boundary. No environment settings,
-uploads, deployment, Choi ledger/reservation, source artifacts or publication
-state changed. [Evidence](records/screening-portability-20261012.json) and
-[exact qualification plan/access proposal](docs/SCREENING_CLOUD_QUALIFICATION.md).
+The approved Europe PMC host amendment and separate screening-only `weft-pilot`
+task are live. Setup/startup `d031cef`, existing hosts and the original Choi worker
+were preserved. Actual proxy/TLS connectivity, clean isolated `1945515` source,
+73 targeted cloud tests, 111 links and 15 pinned Ravel blobs passed. Initial
+network failures were command-sandbox denials, resolved through normal reviewed
+permissions; no proxy bypass or platform outage was established.
 
-Next decision: approve adding only `www.ebi.ac.uk` to existing `weft-pilot` allowed
-hosts and publishing that network change, after verifying the intended current
-environment. Keep setup source pin d031cef and other settings. Then qualify the
-actual cloud packet handoff, private before/after checkpoint and fresh-directory
-recovery through existing tools. If environment identity/runtime tooling or any
-further access is unavailable, stop for that separate decision. Choi stays held
-on its original publication track; no numerical rerun or new RQ is authorized.
+Three cloud searches returned **82 observations / 74 papers / 148 RQ links**.
+The five-link screening pass proposed **one read next, one hold and three link
+rejections**; 143 links remain deferred. One OA XML yielded four selected-text
+statements and a held next action. Figures, supplements, datasets, eligibility
+and scientific acceptance remain unassessed. The window/profile was already
+observed locally; this is operational qualification, not independent accuracy
+evaluation. [Evidence](records/screening-portability-20261012.json) and
+[qualification guide](docs/SCREENING_CLOUD_QUALIFICATION.md).
+
+The **before** checkpoint passed owner-approved Drive export and independent root
+download, CRC, all 20 members, read-only SQLite and pending-packet verification. After
+screening, worker-local fresh-path recovery passed cached search/XML replay with
+zero network calls, idempotent responses, unchanged caps/evidence and the original
+eight-event prefix. Final counts are 20 batch events and five review events.
+All cloud stores are quiesced with no active writer.
+
+The **after** checkpoint also passed exact owner-approved upload and worker
+readback: 522,632 bytes, SHA-256
+`7edfa55a6349b2bd2ace5db26a24ab0fec9a0609e6345b6119be5c6e5476fb8f`.
+Root independently downloaded and verified all 42 manifest members, SQLite
+integrity/foreign keys/counts, the original eight-event prefix, 17 unchanged
+source files and all packet/response/XML bindings. A separate Windows restore
+replayed completed searches, five responses and the saved XML assessment with
+zero network calls, unchanged database rows and no duplicate events. All cached
+paths resolved inside the restored store. Both restores remain inactive.
+
+Manual cloud handoff and checkpoint recovery are qualified within these bounds.
+Private Drive IDs, worker paths and receipts stay in ignored
+`runs/screening-cloud-qualification-20261012`. The first Windows replay was stopped
+by sandbox path-access denial; the normal permission retry passed on a fresh copy.
+No checkpoint or evidence was repaired to make the check pass.
+
+Next: review the stacked #4 -> #5 -> #6 software PRs and refresh each integration
+base before merging; implement B3 figure/supplement coverage, dataset lineage and
+RQ-compatibility records; then freeze an unseen-paper evaluation. A future
+unattended launcher or recurrence needs its own supported deployment and scope
+decision. No additional access decision remains for this completed qualification.
+
+This remains a manually launched cloud-agent interface, without an unattended
+model service or schedule. Choi's ledger/reservation, analysis and publication
+track are unchanged. No Ravel acceptance, canonical RQ, scientific rerun or merge.
 
 ## Historical backend implementation checkpoint — 12 October 2026
 

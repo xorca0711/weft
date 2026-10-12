@@ -15,13 +15,18 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
 
 - [Current state](PROGRESS.md) owns completed work and exact next steps.
 - Next implementation priority is the [discovery/screening backend](docs/DISCOVERY_SCREENING_BACKEND.md):
-  B1 and B2 mechanics passed fixtures and a fresh local batch. Next qualify cloud
-  handoff/restore and B3 figure/supplement/data decisions; independent evaluation
-  remains open. New batch reading paths are portable; older stores use explicit
+  B1 and B2 mechanics passed fixtures, a local batch and a bounded manual cloud
+  handoff/restore. Next implement B3 figure/supplement/data decisions and freeze
+  independent screening evaluation. New batch reading paths are portable; older
+  stores use explicit
   `batch-relocate-reading --source-root` after verified restore. See
-  [cloud qualification](docs/SCREENING_CLOUD_QUALIFICATION.md): worker access to
-  `www.ebi.ac.uk` needs an owner decision, and current managed runtime readiness
-  must be confirmed before cloud execution. Choi M5 publication is a separate open track, not a coding
+  [cloud qualification](docs/SCREENING_CLOUD_QUALIFICATION.md): the approved host
+  amendment and separate screening-only task are live.
+  Cloud source/discovery, five screening responses, both owner-approved Drive
+  checkpoints and independent Linux-to-Windows cached recovery passed. All stores
+  are quiesced; private locators/receipts are in ignored
+  `runs/screening-cloud-qualification-20261012`. No schedule is configured. Preserve
+  the original Choi worker. Choi M5 publication is a separate open track, not a coding
   prerequisite. Do not enable schedules, release the held reservation or dispatch
   another live job as a side effect of this plan.
 - [Discovery](docs/DISCOVERY.md), [decision buffer](docs/DECISION_BUFFER.md) and
