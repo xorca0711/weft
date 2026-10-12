@@ -326,3 +326,21 @@ readback for part 0000 and incomplete materialization for part 0001. Root indepe
 verified both remote sizes, parent and owner-only permissions, not the bytes. No
 renewed quota refusal was observed. The same attempt remains held with 24 parts and
 the transfer manifest still unuploaded. No repeated retry or biological rerun occurred.
+
+## 2026-10-12 — Same-worker export recovery and independent verification
+
+At the owner's request, Codex and the existing coordinator reconciled the held
+attempt and six uploaded parts, preserved the optional streaming proxy-403 probe,
+and completed only missing transfers through the qualified Drive connector route.
+Standard-input materialization avoided oversized shell commands. No analysis or
+source was rerun/changed, no account or network policy changed, and sharing stayed
+owner-only. Independent root downloads verified every part, full reconstruction,
+ZIP CRC, all 99 member hashes and the unchanged original numerical run receipt.
+Three descendant checkpoints preserved exact event prefixes and the same two
+scientific rows; the final 30-event checkpoint passed fresh read-only restoration.
+
+Current README, handoff, roadmap and environment summaries now distinguish verified
+artifact integrity from pending QC/figure interpretation and scientific acceptance.
+No frozen contract, runner, validator, analysis output or canonical claim changed.
+Documentation validator and diff-whitespace checks passed; no numerical tests or
+scientific runs were repeated for this status-only change.

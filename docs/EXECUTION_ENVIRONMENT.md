@@ -7,8 +7,9 @@ physical computer is required. Private `weft-pilot` is published at d031cef;
 [Bounded container controls passed](../records/cloud-runtime-20261011.json) in a
 fresh task. The private Drive route passed [independent synthetic cloud restore](../records/cloud-drive-restore-20261011.json).
 The first manual metadata job and private checkpoints are verified. Figure1
-executed once under the selected 8 GiB amendment; its results remain pending
-independent artifact readback because the new evidence export is held.
+executed once under the selected 8 GiB amendment. Its complete archive passed
+worker and independent root reconstruction, CRC and all 99 member-hash checks;
+scientific/QC interpretation review remains pending.
 [Current execution record](../records/choi-figure1-execution-20261012.json).
 Retention and arbitrary-size transfer guarantees are not established.
 See the [setup runbook](CLOUD_SETUP.md) and [ordered roadmap](IMPLEMENTATION_PLAN.md).

@@ -11,7 +11,7 @@
 | Pinned Codex Cloud setup | Descriptive only | [Setup receipt](records/cloud-setup-20261011.json) | Private environment published; small export verified; no retention guarantee |
 | Synthetic executor and restart recovery | Descriptive only | [Recovery receipt](records/synthetic-recovery-integration-20261011.json) | Bounded Docker restart; synthetic recovery does not prove arbitrary job recovery |
 | Manual dot handoff and private checkpoints | Descriptive only | [Coordinator receipt](records/manual-coordinator-20261011.json) | Small synthetic recovery; no retention or distributed-lock guarantee |
-| Manual scientific cloud execution | Descriptive only | [Metadata](records/choi-metadata-20261011.json) and [Figure1 execution](records/choi-figure1-execution-20261012.json) | Metadata verified; Figure1 executed, evidence export and independent review held |
+| Manual scientific cloud execution | Descriptive only | [Metadata](records/choi-metadata-20261011.json) and [Figure1 execution](records/choi-figure1-execution-20261012.json) | Metadata verified; Figure1 archive independently verified; scientific review pending |
 | Autonomous paper-to-question workflow | Not established | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Scientific workers, unattended agents and Ravel export remain planned |
 
 Weft is being built to bring new literature into an existing research programme:
@@ -32,7 +32,7 @@ private configuration, even though this repository is public.
 
 The selected deployment uses a dot for coordination and Codex Cloud for execution.
 The cloud environment is published. Metadata is verified; the first descriptive
-Figure1 run awaits evidence export and independent review. Solid arrows show
+Figure1 archive is independently byte-verified; scientific review remains pending. Solid arrows show
 implemented discovery/reading stages; dotted arrows show scientific links still
 being qualified end to end. An RQ supplies search context; the review buffer keeps proposed
 relationships separate from accepted evidence.
@@ -79,8 +79,8 @@ flowchart TD
 
 The arrows describe the selected route, including steps that remain under
 qualification; they do not represent an unattended pipeline. Metadata recovery
-has passed independent readback. The first Figure1 analysis has executed once,
-but complete artifact export and independent review remain unverified. See
+has passed independent readback. The first Figure1 analysis has executed once;
+its complete archive is independently byte-verified. Scientific review remains pending. See
 [current state](PROGRESS.md) for the latest hold and its evidence.
 
 | Component | Responsibility | What it does not provide |
