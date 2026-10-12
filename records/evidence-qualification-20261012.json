@@ -34,7 +34,17 @@
     "windows_skipped": 24,
     "passed": true,
     "focused_b3_tests": 16,
-    "focused_b3_skipped": 1
+    "focused_b3_skipped": 1,
+    "linux_ci": {
+      "tests": 170,
+      "skipped": 0,
+      "passed": true,
+      "code_revision": "11affb4866e123e24bf153b2ce6735ff28bb8280",
+      "run": "https://github.com/xorca0711/weft/actions/runs/38236418474",
+      "pull_request": "https://github.com/xorca0711/weft/pull/7"
+    },
+    "local_links": 119,
+    "pinned_files": 15
   },
   "module_sha256": {
     "weft/qualification.py": "ea13bddb04416aeeb6b827c1093db7259155ca97faadb1fd16264a702d5e0eaa",

@@ -4,7 +4,8 @@
 
 Update this before stopping work, every session.
 
-B3 now issues a source-bound evidence packet, inventories cached JATS figures and
+[PR #7](https://github.com/xorca0711/weft/pull/7) implements this slice. B3 now
+issues a source-bound evidence packet, inventories cached JATS figures and
 supplements, copies bounded explicitly supplied local artifacts, and records
 separate data-use and RQ-compatibility proposals. Commands, record semantics and
 the backend diagram are in [the B3 guide](docs/EVIDENCE_QUALIFICATION.md).
@@ -21,8 +22,8 @@ zero network calls or duplicate events. This exposed test does not qualify B3
 cloud deployment or scientific screening accuracy.
 
 The full Windows suite passed 168 tests with 24 platform skips; the expanded B3
-suite then passed 16 tests with one host symlink skip. Linux CI checks all 170
-tests. No biological analysis or discovery reran. Choi and the active scientific
+suite then passed 16 tests with one host symlink skip. Linux CI passed all 170
+tests without skips on code revision `11affb4`; both push and PR checks passed. No biological analysis or discovery reran. Choi and the active scientific
 ledger remain separate and unchanged. Local private copies are under ignored
 `runs/evidence-qualification-20261012-v1`, closed and inactive.
 

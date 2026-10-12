@@ -521,3 +521,8 @@ Public records contain compact hashes/counts only; full text, review packets,
 private locators and copies remain under ignored runs. B3 cloud qualification,
 actual B4 material review and B5 independent evaluation remain open. Choi is
 untouched; no new access, deployment, schedule or merge was performed.
+
+Linux closeout: all 170 tests passed with no skips on 11affb4; both PR and
+push CI succeeded. Documentation validation passed 119 local links and 15
+unchanged Ravel pins. PR #7 is open and ready for explicit code review, stacked
+on #6. GitHub author is xorca0711; Git author/committer is Xorca. No merge.
