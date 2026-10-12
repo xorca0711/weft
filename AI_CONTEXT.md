@@ -24,8 +24,11 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
   existing cloud worker. [B4 review](docs/B3_CLOUD_B4_REVIEW.md) is paused before
   acquisition: after owner-reported publication of europepmc.org, a fresh managed
   check still finds the same worker's old enforced policy and no supported in-place
-  adoption control. Stop at the owner's new-worker boundary. A replacement requires
-  a separate deployment decision, verified policy and checkpoint restoration.
+  adoption control. The owner now authorizes one new screening-only worker in the
+  updated weft-pilot environment. Its creation is blocked by browser access; the
+  private launch prompt is prepared under `runs/b3-cloud-b4-review-20261012` and
+  the owner was asked for the resulting task link. Verify policy and checkpoint
+  restoration before review; do not substitute a default cloud environment.
   Then complete bounded source review and freeze independent screening evaluation.
   New batch reading paths are portable; older
   stores use explicit

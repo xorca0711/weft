@@ -25,19 +25,27 @@ existing preset. No supported in-place policy-adoption control is exposed.
 The reusable publication was owner-reported; its contents were not independently
 read back, and it has **not** changed this worker's effective policy.
 
-**Stopped under the owner's explicit new-worker boundary.** No replacement or
+**The same-worker check stopped under the owner's explicit boundary.** No replacement or
 restart was attempted. No new network requests, materials or proposals were
 created. The prior two EBI documentation 404 responses (248 bytes total) remain
 the complete B4 request usage. No figures, supplements or datasets were acquired.
 The policy-check receipt hash is in the public record; private locators are retained.
 
-Next requires an owner decision to use a new screening-only worker with the
-updated existing environment. If authorized, preserve this worker, verify the new
-worker's effective policy and exact source pins, and restore the verified
-checkpoint before resuming B4. Carry forward the request budget and actual
+The owner subsequently authorized **one new screening-only worker in the updated
+weft-pilot environment**. Creation is pending: the browser API still denies
+chatgpt.com, and the available task-creation tool cannot select that named cloud
+environment. No default-environment substitute or alternate browser route was used.
+The exact private launch prompt is prepared in
+`runs/b3-cloud-b4-review-20261012/NEW_WORKER_PROMPT.txt`; the owner was asked to
+create the task in weft-pilot and return its link. This is a creation handoff,
+not another authorization request. No new worker exists yet.
+
+Next: read the returned task, verify its fresh effective policy and exact source
+pins, restore the verified checkpoint and continue the authorized B4 scope.
+Preserve this old worker and Choi. Carry forward the request budget and actual
 exposure; do not redo discovery, screening or biology. Retain original WEBP/DOCX
 bytes, prove any viewing conversion, and mark partial supplement review honestly.
-No install, unsupported renderer or further host is authorized implicitly.
+No install, unsupported renderer, further host or extra worker is authorized implicitly.
 
 Root reviewed A0's pinned current result, dossier and framing: its failed frozen
 intestinal transfer and stop remain in force. This candidate can only be assessed

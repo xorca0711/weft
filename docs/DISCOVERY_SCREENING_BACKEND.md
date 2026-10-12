@@ -153,7 +153,9 @@ and retains separate data/RQ holds without retrieval. The same interface passed
 [B4 source review](B3_CLOUD_B4_REVIEW.md) is paused before acquisition: the owner
 reports publishing the host amendment, but a fresh managed check still finds the
 existing worker's unchanged enforced policy. No supported in-place adoption
-control is exposed; the owner explicitly required stopping if a new worker is needed.
+control is exposed. The owner subsequently authorized one new screening worker;
+launch, effective-policy verification and checkpoint restoration remain pending.
+See PROGRESS for the creation handoff and current blocker.
 The profile/window was exposed; this is not independent semantic evaluation. B5
 quality evaluation and a supported unattended launcher remain future work.
 Before recurrence, obtain cadence, notification and usage-scope decisions.

@@ -108,10 +108,18 @@ proposals. All stores remain quiesced. Receipt SHA-256:
 `cb35697a67aa8c229725685270246203af7d0aaa9b68a689d77ca980321d1e0f`.
 No replacement worker, restart or Choi action occurred.
 
-1. Obtain the separate decision to use a new screening-only worker. Preserve
-   this worker and its receipts; do not create a replacement implicitly.
-2. If authorized, verify the updated environment's policy and pinned sources in
-   that worker, then restore the exact verified checkpoint and retained handoff.
+The owner then explicitly authorized one new screening-only worker in updated
+weft-pilot. Browser control of chatgpt.com still rejects access; the available
+task-creation tool cannot choose this named environment. A private, copyable launch
+prompt is prepared under ignored `runs/b3-cloud-b4-review-20261012`, including
+the exact archive identity, hashes, source pins, coverage limits and stop rules.
+The owner was asked to start that task and return its link. No task was created
+in an unspecified environment; no new worker has been launched by root.
+
+1. Obtain the created task link from the creation handoff. Preserve the old
+   worker and its receipts; the one-new-worker authorization is already settled.
+2. Verify the updated environment's policy and pinned sources in that worker,
+   then restore the exact verified checkpoint and retained handoff.
    Reuse valid qualification evidence; carry forward exposure and request usage.
 3. Verify official acquisition documentation, then retrieve only the bounded
    source materials through permitted routes. Two requests have already been

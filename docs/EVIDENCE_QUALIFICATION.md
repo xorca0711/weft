@@ -153,7 +153,8 @@ duplicate events. This exposed software test is not an independent paper review.
 PR #7 subsequently passed B3 operational qualification in the existing screening
 cloud worker. The [bounded B4 review](B3_CLOUD_B4_REVIEW.md) remains paused before
 material acquisition: the owner-reported host publication has not reached the
-existing worker's effective policy, and a new-worker decision is required.
+existing worker's effective policy. One new worker is authorized; launch, policy
+verification and verified checkpoint restoration remain pending.
 Its actual figure/supplement coverage and data/compatibility records are still due.
 If required material needs a new host, credentials, unsupported renderer or a
 different deployment, retain the hold and request that specific decision. B5

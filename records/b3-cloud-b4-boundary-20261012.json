@@ -126,6 +126,17 @@
       "new_worker_created": false,
       "stores_quiesced": true,
       "outcome": "STOP_NEW_WORKER_DECISION_REQUIRED"
+    },
+    "new_worker_dispatch": {
+      "owner_authorized": true,
+      "environment": "weft-pilot",
+      "created": false,
+      "verified_policy": false,
+      "checkpoint_restored": false,
+      "private_launch_prompt_prepared": true,
+      "blocker": "Browser control of chatgpt.com remains denied; available task-creation tool cannot select the named cloud environment. Owner creation handoff pending.",
+      "old_worker_preserved": true,
+      "Choi_preserved": true
     }
   },
   "preservation": {

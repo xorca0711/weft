@@ -39,8 +39,9 @@ The next development priority is the [discovery and screening backend](docs/DISC
 B3's [coverage and data/RQ proposal interface](docs/EVIDENCE_QUALIFICATION.md)
 passed qualification in the existing cloud worker. The [bounded B4 review](docs/B3_CLOUD_B4_REVIEW.md)
 is paused before material acquisition: after owner-reported publication of the
-host amendment, the existing worker still enforces its old policy. A new-worker
-decision is required; no replacement has been launched.
+host amendment, the existing worker still enforces its old policy. One new
+screening worker is authorized; launch, policy verification and checkpoint
+restoration remain pending. [Current state](PROGRESS.md) owns the resume point.
 The earlier [manual cloud handoff and recovery](docs/SCREENING_CLOUD_QUALIFICATION.md)
 is qualified; independent screening evaluation remains open.
 An unattended launcher and recurrence remain future work. Choi publication remains

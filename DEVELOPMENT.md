@@ -573,3 +573,16 @@ upload, scientific run or Choi action occurred. The existing stores and original
 two-request usage are preserved. PR #8 records the receipt hash and the exact
 conditional checkpoint-restoration path; no new deployment is authorized by this
 documentation. Root reviewed the existing worker's report and saved receipt hash.
+
+## 2026-10-12 — Authorized new-worker creation handoff
+
+The owner authorized one screening-only worker in the updated weft-pilot
+environment, verified restore and bounded B4 continuation. Browser creation is
+still blocked by the saved-site-permission rejection. The available task tool
+cannot select a named cloud environment, so no default-environment substitute
+was created. Root prepared a private copyable launch prompt with exact source
+and archive identities, restoration checks, inherited acquisition budget,
+interpretation limits and stop conditions, and requested the created task link.
+This is a handoff for an already authorized action, not a new access decision.
+Old screening/Choi workers, datasets and stores are unchanged. No cloud worker,
+material acquisition, analysis or new export occurred in this preparation.

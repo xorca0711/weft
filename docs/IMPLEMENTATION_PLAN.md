@@ -147,7 +147,8 @@ cloud tests and another-path held-proposal recovery in the existing worker.
 [Bounded B4 source review](B3_CLOUD_B4_REVIEW.md) is paused before acquisition;
 the owner reports publishing the documentation-host grant, but the same worker
 still enforces the old policy. No supported in-place adoption control is exposed.
-A replacement worker requires a separate deployment decision before resuming. Freeze
+The owner authorized one new screening worker; launch, policy verification and
+checkpoint restoration must pass before resuming. See PROGRESS for the handoff. Freeze
 independent screening evaluation before using quality metrics or enabling recurrence. See [deliverables and acceptance tests](DISCOVERY_SCREENING_BACKEND.md#concrete-implementation-order).
 The synthetic executor, checkpoint and transfer modules already exist; do not
 reimplement them or claim that their existence supplies semantic screening.
