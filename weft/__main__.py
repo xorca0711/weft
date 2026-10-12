@@ -8,6 +8,8 @@ from .context import build_context
 from .discovery import Store, discover, stream_key, verify_run, write_json
 from .validation import ValidationError, read_json, validate_project, verify_ravel
 from .reading import prepare_reading, validate_reading
+from . import batches, screening
+from .identity import digest
 
 
 def main(argv=None):
@@ -45,6 +47,30 @@ def main(argv=None):
     assessed = sub.add_parser("validate-reading", help="Check source hashes and locators, not semantic support")
     assessed.add_argument("--directory", required=True, type=Path)
     assessed.add_argument("--assessment", required=True, type=Path)
+    batch = sub.add_parser("batch-discover", help="Freeze and run a bounded discovery batch; no model launch")
+    batch.add_argument("--repo", required=True, type=Path)
+    batch.add_argument("--profile", required=True)
+    batch.add_argument("--streams", nargs="+", default=["broad", "rq_contrary", "adjacent_context"])
+    batch.add_argument("--since", required=True)
+    batch.add_argument("--until", required=True)
+    batch.add_argument("--max-searches", type=int, default=12)
+    batch.add_argument("--max-records", type=int, default=100)
+    batch.add_argument("--max-screenings", type=int, default=5)
+    batch.add_argument("--max-full-reads", type=int, default=3)
+    batch.add_argument("--store", type=Path, default=Path("runs/discovery"))
+    for name in ["batch-resume", "batch-reconcile", "batch-next", "batch-submit", "batch-read", "batch-submit-reading", "batch-status", "batch-digest"]:
+        command = sub.add_parser(name, help="Discovery batch: " + name.removeprefix("batch-"))
+        command.add_argument("--store", type=Path, default=Path("runs/discovery"))
+        command.add_argument("--batch", required=True)
+        if name in {"batch-submit", "batch-submit-reading"}:
+            command.add_argument("--assessment", required=True, type=Path)
+        if name == "batch-status":
+            command.add_argument("--include-items", action="store_true", help="Include the full candidate link list")
+        if name == "batch-read":
+            command.add_argument("--candidate", required=True)
+        if name == "batch-reconcile":
+            command.add_argument("--window", required=True, type=int)
+            command.add_argument("--reason", required=True)
     args = parser.parse_args(argv)
     root = Path(__file__).resolve().parents[1]
     try:
@@ -58,6 +84,38 @@ def main(argv=None):
             write_json(args.output, packet)
             result = {"ok": True, "questions": len(packet["questions"]),
                       "catalog_sha256": packet["catalog_sha256"], "output": str(args.output)}
+        elif args.command == "batch-discover":
+            validate_project(root)
+            policy = read_json(root / "configs/policy.json")
+            if not 1 <= args.max_records <= policy["limits"]["records_per_search"] or not 1 <= args.max_full_reads <= policy["limits"]["full_reads_per_batch"]:
+                raise ValidationError("Batch retrieval/read bound exceeds policy")
+            profile = read_json(root / "configs/search_profiles.json")["profiles"][args.profile]
+            packet = build_context(args.repo, read_json(root / "integration/ravel.lock.json"), profile["rq_ids"])
+            with Store(args.store) as store:
+                bid = batches.create(store, packet, args.profile, profile, args.streams, args.since, args.until,
+                                     max_searches=args.max_searches, max_records=args.max_records,
+                                     max_screenings=args.max_screenings, max_full_reads=args.max_full_reads,
+                                     policy_sha=digest(policy))
+                result = batches.run(store, bid)
+        elif args.command.startswith("batch-"):
+            with Store(args.store) as store:
+                batches.schema(store)
+                if args.command == "batch-resume":
+                    result = batches.run(store, args.batch)
+                elif args.command == "batch-reconcile":
+                    result = batches.reconcile(store, args.batch, args.window, args.reason)
+                elif args.command == "batch-next":
+                    result = screening.next_packet(store, args.batch)
+                elif args.command == "batch-submit":
+                    result = screening.submit(store, args.batch, read_json(args.assessment))
+                elif args.command == "batch-read":
+                    result = screening.read_packet(store, args.batch, args.candidate)
+                elif args.command == "batch-submit-reading":
+                    result = screening.submit_reading(store, args.batch, read_json(args.assessment))
+                elif args.command == "batch-digest":
+                    result = batches.export_digest(store, args.batch)
+                else:
+                    result = batches.status_report(store, args.batch)
         elif args.command == "discover":
             validate_project(root)
             policy = read_json(root / "configs/policy.json")
@@ -98,6 +156,17 @@ def main(argv=None):
     except (ValidationError, OSError, ValueError, KeyError, TypeError, sqlite3.Error) as exc:
         print(json.dumps({"ok": False, "error": str(exc)}), file=sys.stderr)
         return 1
+    if args.command.startswith("batch-") and not getattr(args, "include_items", False):
+        def concise(report):
+            if "items" not in report:
+                return report
+            from collections import Counter
+            return {**{k:v for k,v in report.items() if k != "items"},
+                    "item_stages":dict(Counter(i["stage"] for i in report["items"])),
+                    "details":"batch-status --include-items or batch-digest"}
+        result = concise(result)
+        if "batch" in result:
+            result["batch"] = concise(result["batch"])
     print(json.dumps(result, indent=2))
     return 2 if result.get("status") in {"error", "truncated", "unstable", "hold"} else 0
 

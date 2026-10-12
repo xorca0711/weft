@@ -65,3 +65,7 @@ and conflicting identities, stale links, hash tampering and reading boundaries.
 [Live validation](../records/discovery-validation.json) records actual queries,
 counts and hashes. It is an engineering smoke test, not a recall/precision study.
 An exposed historical hit and zero contrary hits do not qualify autonomous screening.
+
+For coordinated multi-stream searches and structured agent responses, use the
+[batch interface](BATCH_SCREENING.md). Lower-level commands remain available; do
+not run competing coordinators against a shared store.

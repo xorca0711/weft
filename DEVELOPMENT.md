@@ -19,6 +19,8 @@ autonomous workflow completion and scientific acceptance are not claimed.
 | 2026-10-11 | Dot coordination and Codex Cloud execution; cloud-first roadmap | Owner selected architecture after Codex proposal | Owner for architecture; scientific acceptance pending | Update plan and request access/dependencies; no extra local PC | Cloud execution addresses hardware constraints; no paid fallback or schedule authorized |
 | 2026-10-12 | Prioritize discovery/screening backend before Choi publication closeout | Owner raised priority; Codex structured slices | Owner requested reconsideration; detailed implementation remains reviewable | Document next backend slices; no runtime activation | Already-read Choi is useful for recovery/regression, not sufficient to evaluate candidate selection |
 
+| 2026-10-12 | Implement batch coordinator, screening interface and fresh-candidate test | Owner requested scope; Codex implemented | Owner authorized work; code/scientific acceptance pending review | Scoped software change and local development test; no deployment | Exercise search-to-screening independently of Choi publication |
+
 ## Rejected or substantially revised AI proposals
 
 | Date | Proposal | Why changed | Changed/rejected by |
@@ -28,6 +30,8 @@ autonomous workflow completion and scientific acceptance are not claimed.
 | 2026-10-11 | Treat the Choi pilot as exact reproduction before qualifying methods | Published Louvain/manual exclusions and Ravel Leiden/MAD/annotation rules differ; exact author-cell set is unresolved | Codex revised proposal to explicitly adapted descriptive reanalysis |
 | 2026-10-11 | Separate Linux worker as the default next decision, preferably 32 GiB RAM | Owner cannot add a PC and selected dot/Codex Cloud; 32 GiB was unmeasured conservative sizing. Qualify cloud first | Owner selected direction; Codex revised deployment stages |
 | 2026-10-12 | Serial roadmap implying Choi integration must precede fresh-candidate screening qualification | Candidate screening can be implemented and evaluated independently; preserve Choi publication as an open parallel track | Owner feedback; Codex revised plan |
+
+| 2026-10-12 | Treat the first lexical candidates as a priority shortlist or completed scientific screening | Dental alveolar matches, duplicate per-RQ review cost and incomplete source coverage require separate evaluation; retain frozen results | Codex implementation review; proposed query/ranking revisions remain unadopted |
 
 Future reviews append decisions and rejections rather than overwriting them.
 Repository creation does not mean every scientific or operational proposal has
@@ -381,3 +385,21 @@ gate engine, activation of recurrence or a human scientific decision. No policy,
 source pins, runtime gates, ledger/reservation or scientific outputs changed.
 Documentation validation passed: 93 local links, 15 unchanged Ravel pins and
 scientific execution disabled. Diff-whitespace checks passed.
+
+## 2026-10-12 — Batch coordination and screening interface
+
+Codex implemented the existing-adapter batch coordinator and pull-based agent
+interface, with immutable specs, bounded date partitioning, explicit reconciliation,
+OS locks, current-state/hash checks, strict proposals, XML attempt limits and a
+retained digest. New tables extend the discovery catalog; no Choi scientific state
+was mutated. The live development batch and private local byte/SQLite restore
+check are recorded in docs/BATCH_PILOT_20261012.md. Tests exposed a malformed raw-
+observation exception and excessive output; both were corrected without changing
+scientific authority. B1/B2 mechanics are reviewable, not human-accepted gate policy.
+
+The unchanged source query surfaced dental alveolar matches; no retrospective
+query edit hid them. Five lexical paper/RQ links are a software exercise, not a
+ranking evaluation. XML was inspected only within the recorded text scope. Cached
+absolute reading paths restrict cross-host restoration; qualify an explicit
+adapter and the selected cloud handoff before deployment. No paid API, credential,
+schedule, cloud dispatch, Ravel evidence promotion or biological analysis occurred.

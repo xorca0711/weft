@@ -2,6 +2,8 @@
 
 Weft is Ravel's public automation companion. Manual Europe PMC discovery, pinned
 RQ context, a paper-to-question review buffer and XML reading packets are implemented.
+The bounded batch coordinator and source-bound screening pull interface are also
+implemented; see [commands](docs/BATCH_SCREENING.md) and the [development test](docs/BATCH_PILOT_20261012.md).
 Unattended scientific dispatch is not implemented. The checkpointed manual route
 has completed one Ravel metadata run with independently verified evidence; the
 separate Figure1 run has executed and its complete evidence archive passed independent
@@ -13,8 +15,9 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
 
 - [Current state](PROGRESS.md) owns completed work and exact next steps.
 - Next implementation priority is the [discovery/screening backend](docs/DISCOVERY_SCREENING_BACKEND.md):
-  B1-B3 coordinator, agent handoff and separate decision records, then a fresh
-  candidate batch. Choi M5 publication is a separate open track, not a coding
+  B1 and B2 mechanics passed fixtures and a fresh local batch. Next qualify cloud
+  handoff/restore and B3 figure/supplement/data decisions; independent evaluation
+  remains open. Cached XML paths require reconciliation when moving hosts. Choi M5 publication is a separate open track, not a coding
   prerequisite. Do not enable schedules, release the held reservation or dispatch
   another live job as a side effect of this plan.
 - [Discovery](docs/DISCOVERY.md), [decision buffer](docs/DECISION_BUFFER.md) and
@@ -47,6 +50,10 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
 - No extra local PC is required. Cloud tasks pin the reviewed Weft PR revision
   and Ravel blobs; never assume main has current implementation, or X: paths and
   authoritative SQLite state exist in fresh cloud workspaces.
+- The 12 October development store is `runs/backend-pilot-20261012-v1`; its
+  private checkpoint and inactive read-only restore are adjacent ignored paths.
+  It is not the Choi scientific ledger or a cloud coordinator. The public
+  `records/backend-candidates-20261012.csv` lists all 74 candidates.
 - `records/` contains compact public check evidence. Raw responses, full XML,
   derived reading packets and SQLite state stay in ignored `runs/` on X:.
 - Ravel's physical migration completed on 11 October 2026: `X:/GitHub/ravel`

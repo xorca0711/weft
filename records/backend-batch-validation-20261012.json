@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-12",
+  "scope": "Manual development integration test; no cloud deployment or scientific analysis",
+  "batch_id": "batch-75879108d33fae7d6aaec2f87916882db34641009353b64141f66279e39aa595",
+  "ravel_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+  "context_sha256": "9e1ac50253d939f6098a4e719cf72ee03c4fadd5f11bbbaa03d1f4d9e3214356",
+  "policy_sha256": "7613e3226cfc80d26b280746e3d909bcd47771341cb276a75475650cd7be082b",
+  "profile": "alveolar-transitions",
+  "date_field": "FIRST_IDATE",
+  "since": "2026-09-12",
+  "until": "2026-10-12",
+  "query_streams": {
+    "adjacent_context": "TITLE_ABS:(epithelial OR organoid) AND TITLE_ABS:(repair OR regeneration) AND TITLE_ABS:(chromatin OR epigenetic OR competence)",
+    "broad": "TITLE_ABS:(alveolar OR pneumocyte OR (AT2 AND lung)) AND TITLE_ABS:(transitional OR progenitor OR plasticity OR regeneration)",
+    "rq_contrary": "TITLE_ABS:(alveolar OR pneumocyte OR (AT2 AND lung)) AND TITLE_ABS:(transitional OR regeneration) AND TITLE_ABS:(persistent OR fibrosis OR senescence OR failed OR limitation)"
+  },
+  "limits": {
+    "max_searches": 12,
+    "max_records": 100,
+    "max_screenings": 5,
+    "max_full_reads": 2
+  },
+  "windows": [
+    {
+      "stream": "broad",
+      "status": "complete",
+      "records": 54,
+      "pages": 1,
+      "receipt_sha256": "faf19d3946a35353715f6bf0f7f5b24a16bc368b824d29d874e5e378eb6e7368",
+      "deduplication_sha256": "fc8eb4b22ed43fe20dd1fe99aba74bcc9b799ab4bdbf41e93af72430a6db51ac"
+    },
+    {
+      "stream": "rq_contrary",
+      "status": "complete",
+      "records": 8,
+      "pages": 1,
+      "receipt_sha256": "d4d52226489033ce5953e266dfa96a6029e4c10c450842b8ce8abc17250dcd30",
+      "deduplication_sha256": "21f148a67955abbe8c3f3ee4def5b5f8f9f91f74c602ff98921729826a9c8fad"
+    },
+    {
+      "stream": "adjacent_context",
+      "status": "complete",
+      "records": 20,
+      "pages": 1,
+      "receipt_sha256": "38ad94c4b42cc4c12f05e43a781737cba1d44025b9600120714cca99cdab286e",
+      "deduplication_sha256": "af539f60f9a0511861f916d4cf7557469eb3a4b8a32155b82905d14e640d363a"
+    }
+  ],
+  "record_occurrences": 82,
+  "distinct_papers": 74,
+  "candidate_links": 148,
+  "screened_links": 5,
+  "screened_papers": 3,
+  "decisions": {
+    "hold": 2,
+    "reject": 2,
+    "read_next": 1
+  },
+  "deferred_links": 143,
+  "candidate_list_sha256": "cbf3a823b119daffabe2311f2b98dcd71af5e089150f3f87fa4d2e594645f74a",
+  "xml_source_sha256": "7aefa2c5ead4854d12c61bdb94f893ae6eb92bacf2fac25a18d8f6dd725a7d9e",
+  "selected_text_assessment_sha256": "b74311f0877751e54efd7fd5ab44a726cda95d5892e5764027071d3728763362",
+  "selected_text_next_action": "hold",
+  "discovery_replay_no_network": true,
+  "screening_resubmissions_idempotent": true,
+  "reading_resubmission_idempotent": true,
+  "digest_sha256": "2e37d2bc7e4cf5855ba94882ebc87e9a7bc73becf232caab342562564b218bdf",
+  "actor": "Codex current task; current agent manually operates the pull interface",
+  "model_identity": "not independently measured",
+  "prior_exposure": "Newly retrieved candidates; abstracts inspected in this task; existing RQ context exposed; user reading history unknown",
+  "cloud_deployment_qualified": false,
+  "scientific_execution_allowed": false,
+  "claim_validated": false,
+  "limitations": [
+    "Five paper/RQ links selected in lexical paper-key order, not a relevance ranking or independent screening evaluation.",
+    "First index date is retrieval freshness, not necessarily first publication date.",
+    "Initial queries cover A0/A1; dental alveolar hits and preprints are retained with source metadata.",
+    "Figure pixels, separate supplements, data files, study lineage and semantic correctness remain unqualified.",
+    "Choi scientific ledger, reservation and publication are untouched."
+  ],
+  "private_checkpoint": {
+    "sha256": "f03b6f614db27edb6acc061abeb61a686bd31ce81174637edda21717e349811e",
+    "bytes": 525528,
+    "manifest_entries": 34,
+    "all_file_hashes_verified": true,
+    "fresh_readonly_sqlite_integrity_and_counts_verified": true,
+    "table_counts": {
+      "runs": 3,
+      "candidates": 148,
+      "events": 5,
+      "batches": 1,
+      "batch_windows": 3,
+      "batch_items": 148,
+      "batch_events": 20
+    },
+    "scope": "Local byte/SQLite restore only; cached full-text paths require remapping when moving hosts. No cloud handoff or resumed writer qualification."
+  },
+  "validation": {
+    "windows_full_suite_before_final_cli_tests": {
+      "tests": 140,
+      "skipped": 23,
+      "passed": true
+    },
+    "new_focused_suite": {
+      "tests": 22,
+      "passed": true
+    },
+    "linux_ci": "pending on implementation PR"
+  },
+  "live_test_module_hashes": {
+    "weft/batches.py": "b34ec72d41c548bb6c300f1f24ea2be6dd99154f7286050892feb8679cf03982",
+    "weft/screening.py": "22ea26e7a7b613c7c09046e2d0fe40019b2ff347343386b48e627dce7c343d74",
+    "weft/discovery.py": "2416291ef16d5cb0eae5fe413137507c6cce3b8c61a08d9c3b6659714841e056",
+    "weft/europe_pmc.py": "b8a044d6ae9069b71431c217ae0b0b7934a0dc2d657a7eaaddad939f621235bc",
+    "weft/identity.py": "98c454b6c88206be744062a6137ab8a4f303313e524fb6cc2e4b6d589e585622",
+    "weft/reading.py": "d218f98d3aec3d7323bf1b0355a5e844776ca35daa2abaa8b09ea71ac1f59d11",
+    "weft/context.py": "0b906aa53059cb8fa644112a3f0fcb68b8ce918d04badd65355c724b993b4e41"
+  },
+  "final_review_module_hashes": {
+    "weft/batches.py": "b34ec72d41c548bb6c300f1f24ea2be6dd99154f7286050892feb8679cf03982",
+    "weft/screening.py": "419679f325e8854c961f70b5a512137e7e7d8ea536caec83f1f366306a2e8cd6",
+    "weft/discovery.py": "2416291ef16d5cb0eae5fe413137507c6cce3b8c61a08d9c3b6659714841e056",
+    "weft/europe_pmc.py": "b8a044d6ae9069b71431c217ae0b0b7934a0dc2d657a7eaaddad939f621235bc",
+    "weft/identity.py": "98c454b6c88206be744062a6137ab8a4f303313e524fb6cc2e4b6d589e585622",
+    "weft/reading.py": "d218f98d3aec3d7323bf1b0355a5e844776ca35daa2abaa8b09ea71ac1f59d11",
+    "weft/context.py": "0b906aa53059cb8fa644112a3f0fcb68b8ce918d04badd65355c724b993b4e41"
+  },
+  "implementation_note": "Final review added the tested overlapping-batch review-preservation guard after the live batch; the frozen live run and source receipts were not rewritten or replayed."
+}

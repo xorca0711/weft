@@ -1,6 +1,7 @@
 # Discovery and screening backend: next implementation sequence
 
-**12 October 2026: implementation design, not a deployed autonomous service.**
+**12 October 2026: B1 and the B2 interface implemented; cloud deployment remains unqualified.**
+See the [command guide](BATCH_SCREENING.md) and [fresh-candidate development test](BATCH_PILOT_20261012.md).
 Prioritize discovery-to-screening orchestration before the remaining Choi
 publication closeout. The existing Choi attempt is a completed, exposed test of
 manual compute, recovery and interpretation. Its merge is not a prerequisite for
@@ -12,9 +13,9 @@ reservation and original evidence; do not rerun it.
 | Component | Current implementation | Missing qualification or implementation |
 |---|---|---|
 | Ravel context | `weft/context.py`; all 32 pinned question identities | Query profiles initially cover A0/A1, not every RQ; dossier contents need source-specific reading |
-| Discovery | `weft/europe_pmc.py`, `weft/discovery.py`; explicit bounded searches, cursors, overlap windows and receipts | Batch orchestration, automatic window partitioning, broader recall evaluation and recurring trigger |
+| Discovery | `weft/europe_pmc.py`, `weft/discovery.py`; explicit bounded searches, cursors, overlap windows and receipts | Batch coordination and bounded date splitting now implemented; broader recall evaluation and recurrence remain open |
 | Identity and deduplication | `weft/identity.py`; strong IDs, conflicts, changed-snapshot invalidation | Complete edition/correction-family reconciliation; dataset lineage is a separate relation |
-| Candidate buffer | Persistent proposed links; `pending_review -> read_next / held / rejected` | Automatic source-grounded priority proposals and stage orchestration |
+| Candidate buffer | Persistent proposed links; `pending_review -> read_next / held / rejected` | Pull-based structured agent proposals now implemented; independent decision-quality evaluation remains open |
 | Reading | `weft/reading.py`; open-access XML packets and assessment hash/locator checks | Semantic screening worker, figure/supplement retrieval and inspection coverage; independent screening evaluation |
 | Scientific eligibility | G3-G8 specification and Ravel's existing runner/governance | Weft does not implement the semantic scientific gate engine or its full transitions |
 | Job controls | `jobs.py`, `executor.py`, `checkpoints.py`, `recovery.py`, `transfer_parts.py`; tested synthetic execution and manual cloud recovery | Connect discovery/reading jobs to one authoritative durable queue and supported agent handoff |
@@ -65,9 +66,9 @@ flowchart TD
     H -.->|new evidence; new versioned decision| B
 ```
 
-All arrows above describe the target design. Existing commands implement some
-individual steps; the end-to-end coordinator and semantic decisions are not yet
-implemented. A model proposes reasons and cited findings. Deterministic controls
+Arrows describe the target design, not completed qualification. Batch commands
+now compose discovery, packet/response ingestion and bounded XML reading. Figure,
+supplement, data and semantic compatibility decisions remain unimplemented. A model proposes reasons and cited findings. Deterministic controls
 reject missing, changed, stale or unauthorized records. Scientific support requires
 evaluation beyond valid JSON or a confidence score.
 
@@ -86,8 +87,9 @@ change scientific authority. New gate semantics require explicit code review.
 
 Suggested implementation locations are new `weft/batches.py` and
 `weft/screening.py`, with focused tests and versioned schemas/configuration.
-These files do not exist yet. Reuse existing adapters and job controls rather
-than create another competing SQLite authority. Reading/data fields must retain
+Both files now extend the existing discovery catalog, independently of the held
+scientific job ledger. Reuse existing scientific controls at the future dispatch
+boundary; do not create a competing scientific authority. Reading/data fields must retain
 unknowns, actor attribution, inspected scope and exact source/context hashes.
 
 The first B4 batch should use freshly discovered candidates whose answers are
@@ -115,8 +117,8 @@ browser automation masquerading as a durable backend or an invented dot SDK.
 Bind each run to the Ravel revision, source snapshots, query/policy versions,
 agent/model identity where observable, limits and attempt key. Recheck live queue
 state and metadata freshness at transitions, not just packet preparation. The
-existing maximum 200 records per manual search is enforced; the proposed five
-full reads per batch still needs enforcement by the new coordinator. Subscription
+maximum 200 records per search and five attempted XML reads per batch are now
+enforced, along with per-batch search and screening-link caps. Subscription
 usage is not a known dollar budget. Missing usage measurements stay unknown.
 
 Use one authoritative coordinator and verified private Drive checkpoints. Do not
@@ -127,8 +129,10 @@ does not depend on changing that reservation or merging Ravel PR #149.
 
 ## Remaining decisions and work boundary
 
-No new credentials, paid service, schedule or scientific execution is needed to
-implement the first backend slices and run deterministic tests. Before a live
+B1 and B2 mechanics and one local development batch are complete without new
+credentials, paid services, scheduling or scientific execution. B2 cloud handoff
+and B4 remote restoration are still open; the local checkpoint check establishes
+byte/SQLite integrity only, with absolute XML-path reconciliation still required. Before a live
 batch, qualify the selected agent handoff and recovery using existing access.
 If that route cannot enforce persistence, output capture or limits, present the
 specific technical evidence and alternative deployment choice to the owner.
