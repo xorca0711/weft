@@ -116,9 +116,30 @@ the exact archive identity, hashes, source pins, coverage limits and stop rules.
 The owner was asked to start that task and return its link. No task was created
 in an unspecified environment; no new worker has been launched by root.
 
-1. Obtain the created task link from the creation handoff. Preserve the old
-   worker and its receipts; the one-new-worker authorization is already settled.
-2. Verify the updated environment's policy and pinned sources in that worker,
+### New worker created; enforcement unverified
+
+The owner created the authorized screening-only task and supplied its link.
+Its first two managed-status checks report running state, current observations,
+matching desired/observed revision 2 and a changed configuration version. The
+three explicit hosts and Package managers preset are present. However,
+`network_policy.state` is `unknown`, so the runtime has not established policy
+enforcement. The requested environment name is owner-attested; the status
+response does not expose a display name for independent confirmation.
+
+The worker stopped before source acquisition, checkpoint restoration, tests or
+material inspection. Its initial receipt hash is
+`4f7fd71a07e9575b15be6c1eb05697196a7e30919ead258c92b99586cf86275f`;
+the private inventory hash is
+`c05eb62eb0f8d5daa472bbe85d0f875882196551e9efbdf36ae7378508ddf4c7`.
+A bounded read-only post-startup readiness follow-up has been requested. This
+is not approval to relax the enforcement gate, restart or create another task.
+No new B4 acquisition requests were made; the old worker and Choi are unchanged.
+
+1. Resolve the current enforcement observation in this same new task through
+   supported readiness diagnostics. Require current `enforced` restricted policy
+   and establish intended configuration identity before acquisition. Stop for
+   environment troubleshooting if the observation remains unknown.
+2. Verify the pinned sources in that worker,
    then restore the exact verified checkpoint and retained handoff.
    Reuse valid qualification evidence; carry forward exposure and request usage.
 3. Verify official acquisition documentation, then retrieve only the bounded

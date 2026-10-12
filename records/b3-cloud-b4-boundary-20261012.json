@@ -130,13 +130,30 @@
     "new_worker_dispatch": {
       "owner_authorized": true,
       "environment": "weft-pilot",
-      "created": false,
+      "created": true,
       "verified_policy": false,
       "checkpoint_restored": false,
       "private_launch_prompt_prepared": true,
-      "blocker": "Browser control of chatgpt.com remains denied; available task-creation tool cannot select the named cloud environment. Owner creation handoff pending.",
+      "blocker": "Required hosts and preset are present, but current network_policy.state is unknown. Stopped before source/checkpoint acquisition.",
       "old_worker_preserved": true,
-      "Choi_preserved": true
+      "Choi_preserved": true,
+      "created_by": "owner",
+      "environment_identity": "Owner-selected weft-pilot; display name not returned by runtime status",
+      "initial_gate": {
+        "status_reads": 2,
+        "observations_current": true,
+        "desired_revision": 2,
+        "observed_revision": 2,
+        "network_mode": "restricted",
+        "network_enforcement": "unknown",
+        "required_hosts_present": true,
+        "existing_preset_retained": true,
+        "configuration_version_differs_from_old_worker": true,
+        "receipt_sha256": "4f7fd71a07e9575b15be6c1eb05697196a7e30919ead258c92b99586cf86275f",
+        "inventory_sha256": "c05eb62eb0f8d5daa472bbe85d0f875882196551e9efbdf36ae7378508ddf4c7",
+        "new_source_requests": 0
+      },
+      "readiness_followup": "requested; result pending"
     }
   },
   "preservation": {

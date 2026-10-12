@@ -586,3 +586,26 @@ interpretation limits and stop conditions, and requested the created task link.
 This is a handoff for an already authorized action, not a new access decision.
 Old screening/Choi workers, datasets and stores are unchanged. No cloud worker,
 material acquisition, analysis or new export occurred in this preparation.
+
+## 2026-10-12 — New screening task environment gate
+
+The owner created the one authorized screening-only task and supplied its link.
+The new task's first two managed-status checks show the required three hosts,
+Package managers preset, current running observations and matching revision 2,
+but network enforcement is `unknown`. The display name is not returned by the
+status API, so selected weft-pilot identity is owner-attested. Neither a startup
+snapshot nor successful connectivity would substitute for enforced readiness.
+
+The worker stopped before source acquisition, restore, tests or material review.
+Root requested one bounded read-only post-startup check in the same task; no
+follow-up result has been reported at this checkpoint. The initial receipt is
+hashed and private locators are retained. Prior B3 checks still describe the old
+worker, not qualification of the new one. Old screening and Choi remain unchanged;
+B4 usage remains two requests / 248 bytes. No additional worker or policy change.
+
+Current summaries and PR #8 now distinguish creation from runtime readiness.
+Offline documentation validation passed 125 links / 15 pin declarations and Git
+whitespace checks passed. Refetched main b59ed911 and integration base d95d558 are
+unchanged; prior HEAD 01708fa passed both CI checks. Runtime source is unchanged.
+GitHub write identity is xorca0711; no private task/configuration IDs are added
+to this public update. No scientific acceptance, analysis, export or merge.

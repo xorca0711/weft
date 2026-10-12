@@ -24,11 +24,12 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
   existing cloud worker. [B4 review](docs/B3_CLOUD_B4_REVIEW.md) is paused before
   acquisition: after owner-reported publication of europepmc.org, a fresh managed
   check still finds the same worker's old enforced policy and no supported in-place
-  adoption control. The owner now authorizes one new screening-only worker in the
-  updated weft-pilot environment. Its creation is blocked by browser access; the
-  private launch prompt is prepared under `runs/b3-cloud-b4-review-20261012` and
-  the owner was asked for the resulting task link. Verify policy and checkpoint
-  restoration before review; do not substitute a default cloud environment.
+  adoption control. The owner created the authorized new screening-only worker
+  and supplied its task link. Its required hosts and existing preset are present,
+  but two current status checks report network enforcement as `unknown`.
+  Restoration and review have not started. Private worker/receipt locators are
+  under `runs/b3-cloud-b4-review-20261012`. Verify current enforced policy and
+  intended environment identity before restore; do not create another worker.
   Then complete bounded source review and freeze independent screening evaluation.
   New batch reading paths are portable; older
   stores use explicit
