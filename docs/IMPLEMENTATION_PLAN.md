@@ -132,8 +132,11 @@ exhaustion retain resumable holds/attempts; do not retry blindly.
 
 B1 and B2 packet/result mechanics are implemented; the fresh-candidate development
 digest records 74 papers, five screened links and a held selected-text assessment.
-Next qualify the selected cloud handoff and restoration (including XML path
-reconciliation), then B3 figure/supplement/data and compatibility records. Freeze
+Path reconciliation and local cross-root recovery are implemented and tested.
+[Cloud qualification](SCREENING_CLOUD_QUALIFICATION.md) is held: the current worker
+excludes `www.ebi.ac.uk`, and its managed-environment readiness tool is unavailable.
+Resolve the explicit access/readiness boundary before handoff and remote restore,
+then B3 figure/supplement/data and compatibility records. Freeze
 independent screening evaluation before using quality metrics or enabling recurrence. See [deliverables and acceptance tests](DISCOVERY_SCREENING_BACKEND.md#concrete-implementation-order).
 The synthetic executor, checkpoint and transfer modules already exist; do not
 reimplement them or claim that their existence supplies semantic screening.

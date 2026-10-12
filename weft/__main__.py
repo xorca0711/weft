@@ -10,6 +10,7 @@ from .validation import ValidationError, read_json, validate_project, verify_rav
 from .reading import prepare_reading, validate_reading
 from . import batches, screening
 from .identity import digest
+from .reading_locations import relocate_readings
 
 
 def main(argv=None):
@@ -58,12 +59,14 @@ def main(argv=None):
     batch.add_argument("--max-screenings", type=int, default=5)
     batch.add_argument("--max-full-reads", type=int, default=3)
     batch.add_argument("--store", type=Path, default=Path("runs/discovery"))
-    for name in ["batch-resume", "batch-reconcile", "batch-next", "batch-submit", "batch-read", "batch-submit-reading", "batch-status", "batch-digest"]:
+    for name in ["batch-resume", "batch-relocate-reading", "batch-reconcile", "batch-next", "batch-submit", "batch-read", "batch-submit-reading", "batch-status", "batch-digest"]:
         command = sub.add_parser(name, help="Discovery batch: " + name.removeprefix("batch-"))
         command.add_argument("--store", type=Path, default=Path("runs/discovery"))
         command.add_argument("--batch", required=True)
         if name in {"batch-submit", "batch-submit-reading"}:
             command.add_argument("--assessment", required=True, type=Path)
+        if name == "batch-relocate-reading":
+            command.add_argument("--source-root", required=True, help="Exact original store root for verified legacy path reconciliation")
         if name == "batch-status":
             command.add_argument("--include-items", action="store_true", help="Include the full candidate link list")
         if name == "batch-read":
@@ -104,6 +107,8 @@ def main(argv=None):
                     result = batches.run(store, args.batch)
                 elif args.command == "batch-reconcile":
                     result = batches.reconcile(store, args.batch, args.window, args.reason)
+                elif args.command == "batch-relocate-reading":
+                    result = relocate_readings(store, args.batch, args.source_root)
                 elif args.command == "batch-next":
                     result = screening.next_packet(store, args.batch)
                 elif args.command == "batch-submit":

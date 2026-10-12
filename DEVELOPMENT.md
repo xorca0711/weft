@@ -21,6 +21,8 @@ autonomous workflow completion and scientific acceptance are not claimed.
 
 | 2026-10-12 | Implement batch coordinator, screening interface and fresh-candidate test | Owner requested scope; Codex implemented | Owner authorized work; code/scientific acceptance pending review | Scoped software change and local development test; no deployment | Exercise search-to-screening independently of Choi publication |
 
+| 2026-10-12 | Portable reading references and existing-cloud screening qualification | Owner requested scope; Codex implemented path fix | Owner authorized work; new network grant pending | Local recovery passed; cloud work stopped at missing host permission | Preserve evidence and Choi while requiring explicit access decisions |
+
 ## Rejected or substantially revised AI proposals
 
 | Date | Proposal | Why changed | Changed/rejected by |
@@ -407,3 +409,20 @@ schedule, cloud dispatch, Ravel evidence promotion or biological analysis occurr
 Linux CI verified code revision `5915ba7`: all 144 tests passed without skips,
 with 105 documentation links and 15 unchanged source pins. PR #5 remains open
 and stacked on PR #4; no human acceptance or merge is inferred from CI.
+
+## 2026-10-12 — Portable reading paths; cloud qualification held
+
+Codex replaced host-specific batch reading addresses with store-relative references
+and added a verified, atomic legacy-address amendment. Private events retain the
+previous result; source XML, receipts, packet hashes and scientific decisions are
+preserved. Consumers now use a presentation-only resolved_directory. Tests cover
+both path syntaxes, source binding, stale/foreign locations and restore reuse.
+The actual 34-file development checkpoint recovered under two local roots with
+one addressing event and no network retrieval, reread or numerical rerun.
+
+The existing worker performed read-only readiness checks. GitHub and the owner-only
+Drive connection remain available, but Europe PMC's host is not allowed and the
+managed-runtime readiness tool was unavailable. No alternative backend, proxy,
+new credential, policy edit or Choi-state mutation was attempted. The exact
+single-host proposal and remaining qualification sequence are reviewable in
+docs/SCREENING_CLOUD_QUALIFICATION.md; the owner's access decision remains pending.

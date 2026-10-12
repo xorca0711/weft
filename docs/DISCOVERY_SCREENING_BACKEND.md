@@ -131,8 +131,10 @@ does not depend on changing that reservation or merging Ravel PR #149.
 
 B1 and B2 mechanics and one local development batch are complete without new
 credentials, paid services, scheduling or scientific execution. B2 cloud handoff
-and B4 remote restoration are still open; the local checkpoint check establishes
-byte/SQLite integrity only, with absolute XML-path reconciliation still required. Before a live
+and B4 remote restoration are still open. Store-relative reading paths and an
+explicit verified legacy-address amendment now pass local recovery tests.
+[Cloud qualification](SCREENING_CLOUD_QUALIFICATION.md) is held for the missing
+Europe PMC host grant and current managed-environment readiness verification. Before a live
 batch, qualify the selected agent handoff and recovery using existing access.
 If that route cannot enforce persistence, output capture or limits, present the
 specific technical evidence and alternative deployment choice to the owner.

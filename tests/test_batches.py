@@ -174,10 +174,10 @@ class BatchTests(unittest.TestCase):
         self.assertEqual(receipt['status'],'prepared')
         cached=screening.read_packet(self.store,bid,cid,fetch=lambda _:self.fail('no duplicate fetch'))
         self.assertEqual(cached,receipt)
-        assessment=test_reading.ReadingTests.assessment(self,receipt)
+        assessment=test_reading.ReadingTests.assessment(self,{**receipt,"directory":receipt["resolved_directory"]})
         self.assertEqual(screening.submit_reading(self.store,bid,assessment)['status'],'review_required')
         self.assertEqual(screening.submit_reading(self.store,bid,assessment)['status'],'already_recorded')
-        (Path(receipt['directory'])/'source.xml').write_bytes(b'changed')
+        (Path(receipt['resolved_directory'])/'source.xml').write_bytes(b'changed')
         with self.assertRaises(ValueError):screening.read_packet(self.store,bid,cid)
         with self.assertRaises(ValueError):screening.submit_reading(self.store,bid,assessment)
 

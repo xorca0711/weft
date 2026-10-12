@@ -1,6 +1,33 @@
 # Current project state
 
-## Current backend implementation — 12 October 2026
+## Current portability fix and cloud access hold — 12 October 2026
+
+Store-relative reading references and explicit, verified Windows/POSIX legacy
+path reconciliation are implemented on a scoped branch. The preserved real
+74-paper checkpoint passed migration and reuse across two fresh local roots:
+34 manifest entries verified, all 33 non-database files unchanged, existing
+decisions/caps retained, one path-history event added, and no retrieval/analysis
+rerun. The original checkpoint remained unchanged. Windows validation passed
+154 tests with 24 platform-specific skips; Linux CI will verify the final code.
+
+The existing cloud worker is responsive and verified its current Drive identity
+and owner-only folder. Its network snapshot excludes `www.ebi.ac.uk`; the current
+managed-environment status tool/skill was unavailable, so environment identity
+and readiness are not independently confirmed. Cloud retrieval, handoff and
+recovery were stopped before that access boundary. No environment settings,
+uploads, deployment, Choi ledger/reservation, source artifacts or publication
+state changed. [Evidence](records/screening-portability-20261012.json) and
+[exact qualification plan/access proposal](docs/SCREENING_CLOUD_QUALIFICATION.md).
+
+Next decision: approve adding only `www.ebi.ac.uk` to existing `weft-pilot` allowed
+hosts and publishing that network change, after verifying the intended current
+environment. Keep setup source pin d031cef and other settings. Then qualify the
+actual cloud packet handoff, private before/after checkpoint and fresh-directory
+recovery through existing tools. If environment identity/runtime tooling or any
+further access is unavailable, stop for that separate decision. Choi stays held
+on its original publication track; no numerical rerun or new RQ is authorized.
+
+## Historical backend implementation checkpoint — 12 October 2026
 
 B1 bounded coordination and B2 screening packet/response mechanics are implemented
 on a scoped branch. [Guide](docs/BATCH_SCREENING.md) and

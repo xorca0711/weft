@@ -17,7 +17,11 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
 - Next implementation priority is the [discovery/screening backend](docs/DISCOVERY_SCREENING_BACKEND.md):
   B1 and B2 mechanics passed fixtures and a fresh local batch. Next qualify cloud
   handoff/restore and B3 figure/supplement/data decisions; independent evaluation
-  remains open. Cached XML paths require reconciliation when moving hosts. Choi M5 publication is a separate open track, not a coding
+  remains open. New batch reading paths are portable; older stores use explicit
+  `batch-relocate-reading --source-root` after verified restore. See
+  [cloud qualification](docs/SCREENING_CLOUD_QUALIFICATION.md): worker access to
+  `www.ebi.ac.uk` needs an owner decision, and current managed runtime readiness
+  must be confirmed before cloud execution. Choi M5 publication is a separate open track, not a coding
   prerequisite. Do not enable schedules, release the held reservation or dispatch
   another live job as a side effect of this plan.
 - [Discovery](docs/DISCOVERY.md), [decision buffer](docs/DECISION_BUFFER.md) and

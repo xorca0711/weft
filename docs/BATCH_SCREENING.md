@@ -114,7 +114,10 @@ uses lexical paper ID then RQ ID, deliberately not a claimed relevance ranking.
 
 The [live development record](BATCH_PILOT_20261012.md) verifies local byte and
 read-only SQLite restoration. It does **not** qualify a resumed cloud writer.
-Existing XML receipts cache absolute local directories; moving a store between
-hosts requires an explicit path-reconciliation adapter before continued reading.
+New batch XML results use store-relative directories; `resolved_directory` is
+computed for the current host. Legacy absolute addresses require the verified
+`batch-relocate-reading` amendment described in the
+[cloud qualification guide](SCREENING_CLOUD_QUALIFICATION.md). Source artifacts
+and scientific decisions are not rewritten.
 Cloud handoff, authoritative checkpoint placement and recovery must be qualified
 before deployment. Do not copy the Choi ledger into this development store.

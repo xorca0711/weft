@@ -7,6 +7,7 @@
 | Local scaffold and pinned Ravel connection checks | Descriptive only | [Validation record](records/bootstrap-validation.json) | Software checks; no scientific validation |
 | Manual literature discovery and RQ review buffer | Descriptive only | [Live validation](records/discovery-validation.json) | Metadata matches and reading priority, not accepted claims |
 | Bounded discovery batches and screening-agent interface | Descriptive only | [Fresh-candidate test](docs/BATCH_PILOT_20261012.md) | 74 candidates; five link proposals; cloud deployment and semantic quality unqualified |
+| Portable screening paths and local recovery | Descriptive only | [Qualification record](records/screening-portability-20261012.json) | Actual checkpoint recovered across local roots; cloud handoff held for access/readiness |
 | Manual source-bound reading packets | Descriptive only | [Local reader](docs/LOCAL_READER.md) | XML text/captions; semantic and figure review remain separate |
 | Choi figure, supplement and input review | Descriptive only | [Review receipt](records/pilot-review-20261011.json) | Source review and file integrity; current execution status is in PROGRESS |
 | Pinned Codex Cloud setup | Descriptive only | [Setup receipt](records/cloud-setup-20261011.json) | Private environment published; small export verified; no retention guarantee |
@@ -34,7 +35,8 @@ and jobs to that research. Personal career interests remain in an untracked
 private configuration, even though this repository is public.
 
 The next development priority is the [discovery and screening backend](docs/DISCOVERY_SCREENING_BACKEND.md):
-qualify the implemented batch/agent interface in the selected cloud route, then
+qualify the implemented batch/agent interface in the selected cloud route
+([current access hold](docs/SCREENING_CLOUD_QUALIFICATION.md)), then
 add figure/supplement/data review and independent screening evaluation. Choi publication remains a parallel closeout task.
 
 ## Intended workflow

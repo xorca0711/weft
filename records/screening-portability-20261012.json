@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-12",
+  "scope": "local cross-root recovery of the preserved real candidate checkpoint; cloud qualification held",
+  "source_checkpoint_sha256": "f03b6f614db27edb6acc061abeb61a686bd31ce81174637edda21717e349811e",
+  "verified_manifest_entries": 34,
+  "changed_readings": 1,
+  "retained_source_file_hashes": 33,
+  "second_root_cache_reuse": true,
+  "source_archive_unchanged": true,
+  "source_packet_sha256": "e1fb079a06325a29c5348346fb6427c2dbc23a4fbac3a8aaa03ab0cc5d740a11",
+  "assessment_replay": "already_recorded",
+  "retrievals_or_analyses_rerun": 0,
+  "before_counts": {
+    "runs": 3,
+    "candidates": 148,
+    "events": 5,
+    "batches": 1,
+    "batch_windows": 3,
+    "batch_items": 148,
+    "batch_events": 20
+  },
+  "after_counts": {
+    "runs": 3,
+    "candidates": 148,
+    "events": 5,
+    "batches": 1,
+    "batch_windows": 3,
+    "batch_items": 148,
+    "batch_events": 21
+  },
+  "independent_validation": false,
+  "cloud_qualified": false,
+  "cloud_readiness": {
+    "existing_worker_responsive": true,
+    "python": "3.12.14",
+    "git": "2.52.0",
+    "github_allowed": true,
+    "europe_pmc_host_allowed": false,
+    "existing_drive_owner_verified": true,
+    "new_workspace_available": true,
+    "managed_environment_status_tool_available": false,
+    "managed_environment_identity_independently_confirmed": false
+  },
+  "hold": "Existing worker policy excludes www.ebi.ac.uk; owner access decision and current managed-environment readiness verification required before cloud qualification.",
+  "choi_state_modified": false,
+  "scientific_execution_allowed": false,
+  "boundaries": [
+    "No distributed writer fencing is claimed; an operator must quiesce the source before activating a restored store.",
+    "Local path simulation and readback do not qualify the cloud handoff, Drive roundtrip or resumed cloud writer.",
+    "Only reading addressing changed; existing source evidence, assessments and reading decisions remain unchanged."
+  ],
+  "validation": {
+    "windows_tests": 154,
+    "windows_skipped": 24,
+    "passed": true,
+    "linux_ci": "pending"
+  },
+  "module_hashes": {
+    "weft/reading_locations.py": "25b98284609ebcc93a700729b6133daf7ac06d5abcd607f28c23236990406850",
+    "weft/screening.py": "6724439d5b5cac38d70eedb1fd09af65f62b593f07c59776dcb8f2a75ff90c41",
+    "weft/__main__.py": "13ff9602927a7c08afede4d0a379ef9d71f49676bb8c38745d29dff3db1eec40"
+  }
+}
