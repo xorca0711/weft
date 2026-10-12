@@ -17,7 +17,6 @@ autonomous workflow completion and scientific acceptance are not claimed.
 | 2026-10-11 | Weft name, architecture and Choi benchmark | Codex | Pending owner review of details | Implemented as initial proposal | Natural relationship to Ravel; known successes and limitations make an auditable pilot |
 | 2026-10-11 | Complete Choi figure/supplement/data review and recommend a worker before analysis | Owner | Owner requested scope; scientific acceptance remains unissued | Review implemented on existing PR; worker recommendation awaits selection | Preserve the reading/execution boundary and qualify actual input shape |
 | 2026-10-11 | Dot coordination and Codex Cloud execution; cloud-first roadmap | Owner selected architecture after Codex proposal | Owner for architecture; scientific acceptance pending | Update plan and request access/dependencies; no extra local PC | Cloud execution addresses hardware constraints; no paid fallback or schedule authorized |
-
 | 2026-10-12 | Prioritize discovery/screening backend before Choi publication closeout | Owner raised priority; Codex structured slices | Owner requested reconsideration; detailed implementation remains reviewable | Document next backend slices; no runtime activation | Already-read Choi is useful for recovery/regression, not sufficient to evaluate candidate selection |
 
 ## Rejected or substantially revised AI proposals
@@ -28,7 +27,6 @@ autonomous workflow completion and scientific acceptance are not claimed.
 | 2026-10-11 | Blanket 16 GiB local worker allowance | Audited Windows host has about 15.6 GiB total memory; recommend separate 32 GiB Linux host or a qualified 6 GiB Windows fallback | Codex revision; host selection pending owner decision |
 | 2026-10-11 | Treat the Choi pilot as exact reproduction before qualifying methods | Published Louvain/manual exclusions and Ravel Leiden/MAD/annotation rules differ; exact author-cell set is unresolved | Codex revised proposal to explicitly adapted descriptive reanalysis |
 | 2026-10-11 | Separate Linux worker as the default next decision, preferably 32 GiB RAM | Owner cannot add a PC and selected dot/Codex Cloud; 32 GiB was unmeasured conservative sizing. Qualify cloud first | Owner selected direction; Codex revised deployment stages |
-
 | 2026-10-12 | Serial roadmap implying Choi integration must precede fresh-candidate screening qualification | Candidate screening can be implemented and evaluated independently; preserve Choi publication as an open parallel track | Owner feedback; Codex revised plan |
 
 Future reviews append decisions and rejections rather than overwriting them.
