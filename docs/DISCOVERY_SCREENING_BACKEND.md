@@ -148,8 +148,12 @@ legacy-address amendments preserve the original evidence. See
 The B4 operational handoff/recovery component has been demonstrated, but full B4
 coverage still needs actual material inspection through the implemented B3
 records. B3's local cached-source test inventories six figure/two supplement entries
-and retains separate data/RQ holds without retrieval. Cloud qualification of this
-new interface remains next. The profile/window was exposed; this is not independent semantic evaluation. B5
+and retains separate data/RQ holds without retrieval. The same interface passed
+55 targeted cloud tests and idempotent held-proposal recovery at PR #7 d95d558.
+[B4 source review](B3_CLOUD_B4_REVIEW.md) is paused before acquisition: the approved
+documentation-host amendment is unpublished because a saved browser permission
+blocks the edit. Same-worker policy adoption still needs verification.
+The profile/window was exposed; this is not independent semantic evaluation. B5
 quality evaluation and a supported unattended launcher remain future work.
 Before recurrence, obtain cadence, notification and usage-scope decisions.
 

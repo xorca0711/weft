@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-12",
+  "scope": "B3 operational qualification in existing screening worker; bounded B4 stopped before material acquisition",
+  "evidence_basis": "Existing worker receipts and tool outputs reviewed by root; this receipt is not an independent second cloud test.",
+  "pins": {
+    "setup": "d031cef02ab4a417760bca46e90a63917d215d31",
+    "previous_source": "19455150d8b5158ece1c7f29bf3d16887996630f",
+    "B3_source": "d95d55868ea42561d89112ef5dc7bf060fba46ca",
+    "Ravel": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d"
+  },
+  "checks": {
+    "targeted_tests": 55,
+    "modules": {
+      "tests/test_qualification.py": 16,
+      "tests/test_batches.py": 22,
+      "tests/test_reading.py": 7,
+      "tests/test_reading_locations.py": 10
+    },
+    "all_passed": true,
+    "offline_links": 119,
+    "Ravel_blobs_verified": 15
+  },
+  "imported_checkpoint": {
+    "sha256": "7edfa55a6349b2bd2ace5db26a24ab0fec9a0609e6345b6119be5c6e5476fb8f",
+    "bytes": 522632,
+    "manifest_members": 42,
+    "CRC_safe_paths_member_hashes_SQLite_integrity_counts": "passed",
+    "counts": {
+      "batch_events": 20,
+      "batch_items": 148,
+      "batch_windows": 3,
+      "batches": 1,
+      "candidate_runs": 164,
+      "candidates": 148,
+      "events": 5,
+      "observations": 82,
+      "runs": 3,
+      "watermarks": 3
+    }
+  },
+  "B3": {
+    "packet_sha256": "8beca88486991616afb992b80071d540dc9fb23741a8284e45c7fca824810a5e",
+    "held_record_sha256": "071d5658c5f7b0cdf8d7febfe47bdac9197ed45639ae62ec0c554e9ce598b77b",
+    "receipt_sha256": "29ae808750e004ea33a87ff62133943cebef4afc12eb7f9fd850491199cd0d2c",
+    "qualification_proposals": {
+      "data": "hold",
+      "RQ": "hold",
+      "resources_inspected": 0
+    },
+    "B4_review_store_proposal": "none issued",
+    "original_20_event_prefix_retained": true,
+    "screening_decisions_and_source_bytes_retained": true,
+    "qualification_copy_events": 22,
+    "B3_events_added": 2,
+    "fresh_path_recovery": {
+      "packet_identical": true,
+      "submission": "already_recorded",
+      "current": true,
+      "HTTP_calls": 0,
+      "duplicate_events": 0,
+      "database_rows_unchanged_on_replay": true
+    }
+  },
+  "B4": {
+    "requests": [
+      {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/",
+        "status": 404,
+        "bytes": 116,
+        "attempts": 1
+      },
+      {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/application.wadl",
+        "status": 404,
+        "bytes": 132,
+        "attempts": 1
+      }
+    ],
+    "total_bytes": 248,
+    "redirects_followed": 0,
+    "official_route_documentation_verified": false,
+    "receipt_sha256": "91234a41003bcec4e55e75576e609d118ca33434cbe4e55d81233051ba193f59",
+    "figure_entries": 6,
+    "supplement_entries": 2,
+    "retrievable_supplement_hrefs": 1,
+    "materials_acquired": 0,
+    "figures_inspected": 0,
+    "supplements_inspected": 0,
+    "datasets_qualified": 0,
+    "limits": {
+      "item_bytes": 33554432,
+      "total_bytes_including_expansion_and_derivatives": 134217728,
+      "distinct_requests": 12,
+      "attempts_per_request": 2
+    },
+    "decision": "hold; official acquisition-route documentation unverified",
+    "host_amendment": {
+      "host": "europepmc.org",
+      "owner_approved": true,
+      "published": false,
+      "blocker": "Browser permission layer denied chatgpt.com access; retry after renewed owner authorization confirmed a saved site-permission block. Permission enablement requested."
+    }
+  },
+  "preservation": {
+    "all_stores_quiesced": true,
+    "B4_store_unchanged": true,
+    "qualification_copies_inactive": true,
+    "originals_and_prior_restores_preserved": true,
+    "Choi_unchanged": true
+  },
+  "authority": {
+    "scientific_execution_allowed": false,
+    "claim_validated": false,
+    "Ravel_written": false,
+    "independent_screening_evaluation": false
+  },
+  "in_place_policy_refresh": {
+    "supported_refresh_tool_exposed": false,
+    "exposed_cloud_tool": "environment_status (read-only)",
+    "runtime_skill": "policy changes require supported configuration workflow and user review",
+    "existing_worker_refresh_after_publication": "not established; must recheck enforcement, not assume propagation",
+    "policy_changed": false
+  },
+  "flags": {
+    "no_new_B4_material": true,
+    "no_biological_analysis": true,
+    "no_Choi_change": true,
+    "no_new_upload_or_export": true,
+    "receipts_preserved": true
+  }
+}

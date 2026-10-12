@@ -176,8 +176,9 @@ discovery, source-bound response capture, before/after Drive readback and fresh
 cross-host recovery are complete. No additional access decision remains for this
 qualification. All Choi state and the setup/startup source pin were preserved.
 
-Next implement B3 figure/supplement inspection coverage, dataset lineage and
-RQ-compatibility records. Freeze a separate unseen-paper evaluation before
+The subsequent [B3 cloud qualification](B3_CLOUD_B4_REVIEW.md) passed at PR #7
+d95d558; its B4 figure/supplement review is paused at the documented access
+boundary. This page retains the earlier B1/B2 checkpoint evidence. Freeze a separate unseen-paper evaluation before
 reporting screening accuracy. Unattended agent launch, recurrence, usage limits
 and recovery authority remain deployment decisions for a later slice. Private
 Drive backups provide verified recovery points, not a distributed writer lock

@@ -19,9 +19,14 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
   handoff/restore. B3 now implements source coverage, bounded local attachments
   and separate versioned data-use/RQ proposals; see
   [the B3 interface](docs/EVIDENCE_QUALIFICATION.md). Its cached-source test held
-  both proposals with six figure/two supplement entries uninspected. Qualify this
-  new interface in the existing cloud route, then complete bounded B4 source
-  review and freeze independent screening evaluation. New batch reading paths are portable; older
+  both proposals with six figure/two supplement entries uninspected. PR #7 at
+  d95d558 subsequently passed 55 targeted tests and held-proposal recovery in the
+  existing cloud worker. [B4 review](docs/B3_CLOUD_B4_REVIEW.md) is paused before
+  acquisition: the owner approved europepmc.org, but a saved browser permission
+  blocks the environment edit. Verify publication and the same worker's effective
+  policy before resuming; a replacement worker needs a separate deployment decision.
+  Then complete bounded source review and freeze independent screening evaluation.
+  New batch reading paths are portable; older
   stores use explicit
   `batch-relocate-reading --source-root` after verified restore. See
   [cloud qualification](docs/SCREENING_CLOUD_QUALIFICATION.md): the approved host
@@ -70,6 +75,9 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
 - B3 development copies are under ignored `runs/evidence-qualification-20261012-v1`.
   They are inactive software-test stores, not active cloud coordinators. They
   preserve the earlier cloud checkpoint and make no new source/analysis claim.
+- B3 cloud receipt and exact B4 resume locators are under ignored
+  `runs/b3-cloud-b4-review-20261012`. Qualification copies and the unchanged B4
+  review store are quiesced. No new materials or private export were produced.
 - `records/` contains compact public check evidence. Raw responses, full XML,
   derived reading packets and SQLite state stay in ignored `runs/` on X:.
 - Ravel's physical migration completed on 11 October 2026: `X:/GitHub/ravel`

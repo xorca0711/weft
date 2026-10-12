@@ -7,6 +7,7 @@ use and compatibility with a pinned RQ. It never grants scientific execution,
 accepts a claim, counts independent studies or writes to Ravel.
 
 [Development evidence](../records/evidence-qualification-20261012.json) ·
+[Cloud qualification and B4 hold](B3_CLOUD_B4_REVIEW.md) ·
 [Batch interface](BATCH_SCREENING.md) · [Roadmap](DISCOVERY_SCREENING_BACKEND.md)
 
 ## Connection to the existing backend
@@ -149,8 +150,10 @@ and original 20-event prefix; only two B3 events were appended to the copy.
 Fresh-path recovery returned the same packet and idempotent review without
 duplicate events. This exposed software test is not an independent paper review.
 
-Next qualify B3 in the existing screening cloud route, then perform a bounded
-B4 review with actual figure/supplement coverage and data/compatibility records.
+PR #7 subsequently passed B3 operational qualification in the existing screening
+cloud worker. The [bounded B4 review](B3_CLOUD_B4_REVIEW.md) remains paused before
+material acquisition at the recorded documentation-host/browser permission boundary.
+Its actual figure/supplement coverage and data/compatibility records are still due.
 If required material needs a new host, credentials, unsupported renderer or a
 different deployment, retain the hold and request that specific decision. B5
 must evaluate unseen papers, contrary/low-ranked findings and errors before

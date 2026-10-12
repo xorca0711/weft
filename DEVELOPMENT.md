@@ -526,3 +526,34 @@ Linux closeout: all 170 tests passed with no skips on 11affb4; both PR and
 push CI succeeded. Documentation validation passed 119 local links and 15
 unchanged Ravel pins. PR #7 is open and ready for explicit code review, stacked
 on #6. GitHub author is xorca0711; Git author/committer is Xorca. No merge.
+
+## 2026-10-12 — B3 cloud qualification and bounded B4 access hold
+
+| Date | Item | Proposed by | Decided by | Decision | Reason |
+|---|---|---|---|---|---|
+| 2026-10-12 | Qualify PR #7 in the existing worker, then bounded B4 source review | Owner requested scope; Codex coordinated | Owner authorized execution; scientific acceptance and merge remain unissued | B3 qualified; B4 stopped before material acquisition | Preserve Choi and stop at new access/deployment decisions |
+| 2026-10-12 | Add only europepmc.org to the existing environment | Codex requested the specific documentation host | Owner explicitly approved | Approved but not published | Saved browser-control permission blocks chatgpt.com, including after renewed authorization |
+
+The existing worker verified source d95d558, 55 targeted tests, 119 links,
+15 Ravel blobs and all 42 members of the preserved after-screening checkpoint.
+Disposable B3 proposal and fresh-path recovery checks retained source bytes,
+screening decisions and the original 20-event prefix. Both data-use/RQ proposals
+are held; no source material was newly inspected. The designated B4 store remains
+unchanged, and all stores are quiesced. Root reviewed these receipts and the pinned
+A0 result/dossier; no independent second cloud test or scientific acceptance is
+claimed. The public check record excludes private worker paths and identifiers.
+
+The B4 API-documentation probe used two allowed EBI requests (both HTTP 404,
+248 bytes total), establishing an unresolved documentation dependency rather
+than a failed material download. Original WEBP figures and DOCX supplement are
+not directly supported by B3 intake. Proposed viewing conversions need explicit
+provenance and verification; extraction alone would remain partial DOCX review.
+No format validator was weakened or renderer installed. Browser permission
+enablement and then effective-policy verification are the exact next dependencies.
+No alternate control route, new worker, analysis, private export, schedule or merge.
+
+Local closeout validation passed 124 documentation links, all 15 unchanged pinned
+Ravel blobs and Git whitespace checks. Main b59ed911 and the PR #7 integration
+base d95d558 were refetched and unchanged. Runtime code is unchanged, so the
+existing full-suite CI and new 55-test cloud evidence remain applicable. GitHub
+identity was verified as xorca0711; author/committer is Xorca.

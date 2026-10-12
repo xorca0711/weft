@@ -142,8 +142,12 @@ independent Linux-to-Windows cached recovery passed. Manual handoff/recovery is
 qualified; no unattended launcher is configured. [B3 records](EVIDENCE_QUALIFICATION.md)
 now support inspected-scope coverage, bounded local artifacts, data-use suitability
 and RQ compatibility as separate versioned proposals. Its cached-source test held
-both proposals and preserved prior evidence. Next qualify that revision in the
-existing cloud route and conduct bounded B4 source review. Freeze
+both proposals and preserved prior evidence. PR #7 d95d558 then passed 55 targeted
+cloud tests and another-path held-proposal recovery in the existing worker.
+[Bounded B4 source review](B3_CLOUD_B4_REVIEW.md) is paused before acquisition;
+the owner-approved documentation-host grant is not yet published because of a
+saved browser permission. Verify publication and effective same-worker policy
+before resuming; a replacement worker requires a separate deployment decision. Freeze
 independent screening evaluation before using quality metrics or enabling recurrence. See [deliverables and acceptance tests](DISCOVERY_SCREENING_BACKEND.md#concrete-implementation-order).
 The synthetic executor, checkpoint and transfer modules already exist; do not
 reimplement them or claim that their existence supplies semantic screening.

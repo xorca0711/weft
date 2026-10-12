@@ -1,8 +1,44 @@
 # Current project state
 
-## Current B3 backend slice — 12 October 2026
+## Current B3 cloud qualification / B4 hold — 12 October 2026
 
 Update this before stopping work, every session.
+
+**B3 passed in the existing screening worker; B4 is incomplete and paused before
+material acquisition.** [Review and resume plan](docs/B3_CLOUD_B4_REVIEW.md) ·
+[Check record](records/b3-cloud-b4-boundary-20261012.json).
+
+PR #7 source `d95d558` passed 55 targeted tests, 119 links and 15 pinned Ravel
+blobs. The exact previously verified 42-member after-screening archive was
+restored into separate stores. A disposable B3 test preserved the 20-event
+prefix, source bytes and screening decisions, appended two events and recovered
+idempotently at another path with zero HTTP calls. Both qualification proposals
+remain held; all eight XML resources are uninspected. The separate B4 review
+store is unchanged, with no proposal issued. All copies are quiesced.
+
+Two allowed EBI documentation requests returned 404 (248 response bytes total).
+No figure, supplement or dataset was acquired. The owner approved adding only
+`europepmc.org` to the existing environment, but **publication has not occurred**:
+browser control of `chatgpt.com` was denied, including after the owner's renewed
+request, because of a saved site permission. Permission enablement is pending.
+The existing worker exposes no supported in-place policy-refresh control.
+
+Next: after browser permission is enabled, verify the intended environment,
+publish only the approved host amendment, and read back the same worker's
+effective policy. If it cannot adopt the change, stop for a separate deployment
+decision. Then verify official acquisition documentation and resume the same
+bounded B4 review with the remaining request budget. Retain original WEBP/DOCX
+bytes, prove any viewing conversion, and mark partial supplement review honestly.
+No install, unsupported renderer or new host is authorized implicitly.
+
+Root reviewed A0's pinned current result, dossier and framing: its failed frozen
+intestinal transfer and stop remain in force. This candidate can only be assessed
+for a stated data use and an explicitly justified RQ relationship. Choi, Ravel
+working files, scientific acceptance and all analysis outputs are unchanged.
+No biological rerun, new checkpoint export, schedule or merge occurred. Private
+worker receipts/locators are in ignored `runs/b3-cloud-b4-review-20261012`.
+
+## Historical B3 implementation checkpoint — 12 October 2026
 
 [PR #7](https://github.com/xorca0711/weft/pull/7) implements this slice. B3 now
 issues a source-bound evidence packet, inventories cached JATS figures and

@@ -8,7 +8,7 @@
 | Manual literature discovery and RQ review buffer | Descriptive only | [Live validation](records/discovery-validation.json) | Metadata matches and reading priority, not accepted claims |
 | Bounded discovery batches and screening-agent interface | Descriptive only | [Fresh-candidate test](docs/BATCH_PILOT_20261012.md) | 74 candidates; five local link proposals; independent semantic quality evaluation remains open |
 | Portable screening paths and manual cloud recovery | Descriptive only | [Qualification record](records/screening-portability-20261012.json) | Five cloud link proposals; both Drive checkpoints verified; Linux-to-Windows cached recovery passed; no unattended launcher |
-| B3 coverage, data-use and RQ proposals | Descriptive only | [Cached-source test](records/evidence-qualification-20261012.json) | Six figure/two supplement entries inventoried; no new materials inspected; independent proposals remain held |
+| B3 coverage, data-use and RQ proposals | Descriptive only | [Cloud qualification](records/b3-cloud-b4-boundary-20261012.json) | 55 targeted tests and held-proposal recovery passed; B4 material review paused at an access boundary |
 | Manual source-bound reading packets | Descriptive only | [Local reader](docs/LOCAL_READER.md) | XML text/captions; semantic and figure review remain separate |
 | Choi figure, supplement and input review | Descriptive only | [Review receipt](records/pilot-review-20261011.json) | Source review and file integrity; current execution status is in PROGRESS |
 | Pinned Codex Cloud setup | Descriptive only | [Setup receipt](records/cloud-setup-20261011.json) | Private environment published; small export verified; no retention guarantee |
@@ -36,8 +36,10 @@ and jobs to that research. Personal career interests remain in an untracked
 private configuration, even though this repository is public.
 
 The next development priority is the [discovery and screening backend](docs/DISCOVERY_SCREENING_BACKEND.md):
-qualify the [B3 coverage and data/RQ proposal interface](docs/EVIDENCE_QUALIFICATION.md)
-in the existing cloud route, then run a bounded review with actual source coverage.
+B3's [coverage and data/RQ proposal interface](docs/EVIDENCE_QUALIFICATION.md)
+passed qualification in the existing cloud worker. The [bounded B4 review](docs/B3_CLOUD_B4_REVIEW.md)
+is paused before material acquisition: the approved documentation-host amendment
+has not been published because a saved browser-control permission blocks the edit.
 The earlier [manual cloud handoff and recovery](docs/SCREENING_CLOUD_QUALIFICATION.md)
 is qualified; independent screening evaluation remains open.
 An unattended launcher and recurrence remain future work. Choi publication remains
