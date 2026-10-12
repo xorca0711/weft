@@ -5,8 +5,10 @@ No task, schedule, network change or API spending was created by this probe.
 
 **13 October update:** the owner authorized one synthetic-only task after access
 verification. Its [frozen scope and submission procedure](SYNTHETIC_LAUNCH_QUALIFICATION.md)
-are prepared. The browser still rejects `chatgpt.com` under a saved user permission;
-no task has been submitted. The earlier task-approval requirement is satisfied.
+are prepared. The browser still rejects `chatgpt.com`, but read-only inspection
+confirmed the saved origin config explicitly allows access. The owner also confirmed
+the setting. A full app restart/recheck is the next diagnostic; active-thread policy
+is not inspected by `codex doctor`. No task has been submitted. Task approval is satisfied.
 
 ## Observed evidence
 
@@ -51,7 +53,9 @@ subscription or a fallback permission.
 A read-only check through the existing ChatGPT browser tab was then rejected by
 the browser's saved user permission for `chatgpt.com`. No alternate browser,
 endpoint or indirect route was attempted. That permission must be resolved
-before this browser can verify the environment.
+before this browser can verify the environment. The later read-only config check
+found `access = "allow"`, so the unresolved issue is the saved-config/effective-policy
+discrepancy, not a missing owner approval or a demonstrated saved deny.
 Do not submit a task to a guessed environment or activate another worker as a
 side effect. Continue code/fixture work locally. B4 remains held independently
 of launcher availability.

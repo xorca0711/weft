@@ -11,15 +11,23 @@ handoff/intake fixtures, with one submission/attempt, a 180-second test-process
 deadline and exact result readback. This is not approval to adopt the controls
 on live screening catalogs, merge the PR or enable recurrence.
 
-**Blocked before submission:** the browser again rejected the existing ChatGPT
-tab because a saved user permission blocks `https://chatgpt.com`. No workaround,
-private endpoint, new worker or cloud submission was attempted. Environment/account
-access is still unverified. The permission-setting question is pending; the task
-authorization itself is settled. Prepared prompt and submission state are private
+**Blocked before submission:** after the owner confirmed access was enabled and
+showed all permission columns, the browser still rejected `https://chatgpt.com` as
+blocked by a saved preference. Read-only inspection confirmed the user config
+explicitly contains `browser_use.origins."https://chatgpt.com".access = "allow"`.
+`codex doctor` loaded that config and initialized the desktop app-server successfully,
+but does not inspect active-thread overrides. The app processes predate the latest
+config change. Stale session policy is plausible, not established; another effective
+policy or an application defect remains possible. Do not ask the owner to enable
+the already-enabled setting again. No workaround, new worker or submission was
+attempted. Prepared prompt, submission state and redacted diagnostics are private
 under `runs/launcher-qualification-20261013`.
 
-Next: once access is enabled, verify environment/account/policy, persist the exact
-submission intent, submit once, then retrieve and verify the terminal result without
+Next: ask the owner to fully quit/reopen the desktop app, then retry the same allowed
+browser tool once. This is a configuration-reload diagnostic, not a confirmed fix.
+If denial persists, report the config/runtime discrepancy for product troubleshooting;
+do not switch routes to evade it. Once access works, verify environment/account/policy,
+persist the exact submission intent, submit once, then verify the terminal result without
 rerunning. Hold on an ambiguous acknowledgement. Choi administrative closeout remains
 complete; B4 stays held and M6 disabled. Zero tasks have been created for this
 qualification; this does not establish quiescence of the previously interrupted B4 worker.

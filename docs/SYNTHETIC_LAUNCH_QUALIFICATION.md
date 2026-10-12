@@ -75,8 +75,15 @@ qualification work. A completed synthetic task cannot unblock B4's platform hold
 On 13 October, the permitted browser tool rejected selection of the existing
 ChatGPT tab: a saved user preference blocks `https://chatgpt.com`. It explicitly
 forbids indirect or alternate-browser workarounds. No task submission was attempted.
-The owner was asked to enable browser-control access; the task itself is already
-authorized. No alternate private endpoint or credential route was tried.
+The owner then confirmed access was enabled and supplied both UI column views.
+Read-only inspection found the saved origin config explicitly allows access, and
+`codex doctor` successfully loaded that config and initialized the desktop app-server.
+The diagnostic explicitly does not inspect active-thread overrides. The app
+processes predate the latest config change: stale session state is plausible but
+unproven. A full app restart followed by one same-tool retry is the next diagnostic.
+If it still denies access, preserve the mismatch for product troubleshooting.
+Do not repeatedly ask for the already-enabled setting or bypass the enforcement.
+No alternate private endpoint or credential route was tried; no task was submitted.
 
 Official references checked on 13 October:
 [CLI cloud commands](https://learn.chatgpt.com/docs/cli/reference) and

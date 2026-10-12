@@ -764,3 +764,13 @@ The browser tool again reported a saved permission blocking `chatgpt.com` and
 explicitly prohibited alternate-route workarounds. No cloud task was created and
 no fixture was rerun locally. [Prepared scope](docs/SYNTHETIC_LAUNCH_QUALIFICATION.md)
 separates manual submission discipline from an implemented idempotent launcher.
+
+Later screenshots and read-only config inspection confirmed saved origin access
+is already allowed. The same browser tool still denies it; active-thread overrides
+remain uninspected. Config load and desktop handshake pass. A full app restart and
+one same-tool retry is a proposed diagnostic, not a confirmed fix. No settings were
+changed, enforcement bypassed or task submitted.
+
+| Date | Proposed output | Why rejected or changed | Rejected/changed by |
+|---|---|---|---|
+| 2026-10-13 | Look for an additional browser-control permission column and enable access again | The remaining columns were Upload and Site tools; saved origin access already equals allow | Owner screenshots and Codex read-only inspection corrected the diagnosis to a saved/effective-policy mismatch |
