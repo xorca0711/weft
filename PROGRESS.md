@@ -1,35 +1,45 @@
 # Current project state
 
-## Current stage — metadata verified; Figure1 preflight passed
+## Current stage — Figure1 executed; evidence export held — 12 October 2026
 
-The single Choi metadata attempt is independently verified: original receipt,
-46 exported member hashes, nine source Git blobs, sparse integrity and a reviewed
-after-run checkpoint. The loader took 190.460 seconds with 945,848 KiB cumulative
-peak RSS. This qualifies the loader prerequisite, not the full Figure1 workload.
-[Metadata evidence](records/choi-metadata-20261011.json). Multipart recovery passed
-a separate 4 MiB+7 trial after a preserved 16 MiB readback failure; the explicit
-[transfer amendment](records/figure1-artifact-transfer-v2.json) governs real outputs.
+The single Choi Figure1 attempt ran under the owner-selected 8 GiB cap with
+unchanged frozen methods. The worker reports exit 0, no OOM, 196.03 seconds,
+2,448,296 KiB peak process RSS, terminal PID 0 and all three captured process
+identities absent. The original Ravel verifier passed in the worker. Reported
+post-QC cells total 11,683 (PBS 4,319; day 14 3,790; day 28 3,574); final pAT2
+was absent. These results are **worker-reported, pending independent artifact
+readback and scientific review**. One pooled library per condition precludes
+animal-level inference. [Execution record](records/choi-figure1-execution-20261012.json).
 
-Pro's documented VM is 4 vCPUs / 16 GiB / 32 GiB disk. Root's earlier 20 GiB host
-floor was a planning error. The owner-selected [8 GiB amendment](records/figure1-resource-amendment-v2.json)
-applies to the container, with a 12 GiB host floor and unchanged methods. Memory,
-exact source b656d06, 56 code bindings, three frozen hashes and nine inputs passed.
-The missing mount placeholder was repaired without changing tracked source.
+The 105,848,914-byte evidence archive is preserved in 26 bounded parts. Automatic
+approval review rejected its first upload because earlier approvals covered
+different archives. There were no successful uploads or retries. The same attempt
+and slot remain EXPORT_HELD; the analysis must not be rerun. The owner subsequently approved this exact payload directly in the worker.
+It rechecked the archive and 26 parts, then the cloud turn failed at its usage
+limit. Complete transfer/readback remains unverified. Resume only after cloud
+access returns and the same worker's per-file receipts and remote metadata are
+reconciled; do not duplicate uploads. Then review receipt, QC, denominators and
+figures. Scientific acceptance remains open.
 
-Two VFS preflight-container allocations then caused a disk hold. After explicit
-owner approval and no-unique-data audits, both scoped containers were retired,
-recovering about 4.2 GiB while preserving image, source, inputs and all evidence.
-The existing second container ran the offline preflight once before retirement:
-ok=true, exit 0, no OOM, 0.616 seconds. Process polling missed that short run;
-no exact disappearance proof is claimed. Docker's false/null OOM field was reviewed
-against cgroup v2; effective resource/security controls were unchanged.
+Root independently verified the after-run ledger checkpoint: 136,078 bytes,
+24 events, two scientific rows including the earlier metadata run, the unchanged
+21-event parent prefix, SQLite schema/integrity and a fresh read-only restore.
+This verifies the recorded hold and recovery history, not the unexported results.
+The subsequent approval/usage-interruption checkpoint also passed independent
+root byte, schema, unchanged-prefix and read-only restore checks: 26 events,
+the same two scientific rows, SHA-256 9222d923… . Exact anchors are in the
+execution record; approval remains valid for the same payload.
+A stale coordinator database had required explicit operator recovery before
+dispatch: old and restored copies were preserved, the exact worker/container
+was reconciled, and a new active copy and verified before-checkpoint preceded
+the single start. Its cause is unknown; restart retention is not guaranteed.
 
-[Preparation evidence](records/choi-figure1-resumed-preparation-20261011.json) preserves
-all failures, audit limits, approved cleanup and root-verified held-checkpoint ancestry.
-Available disk after recovery was 13,922,025,472 bytes. Next: finalize the immutable
-packet, inspect the actual numerical container, recheck capacity after its creation,
-and verify a descendant before-checkpoint before root release. The same Figure1
-reservation is unstarted. No new RQ, claim promotion, merge or unattended execution.
+The owner-approved retirement of two audited preflight containers recovered about
+4.2 GiB; source, inputs, image and evidence were preserved. Pro provides a documented
+16 GiB VM. Root's previous 20 GiB host floor was a planning error; 8 GiB is the
+analysis container cap. [Preparation history](records/choi-figure1-resumed-preparation-20261011.json).
+Metadata remains independently verified ([record](records/choi-metadata-20261011.json)).
+No new RQ, claim promotion, merge or unattended execution is authorized here.
 
 ## Checkpointed manual pilot preparation — 11 October 2026
 

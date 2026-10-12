@@ -282,3 +282,26 @@ the second passed offline preflight once. Recorded cgroup-v2 false/null field
 normalization and missed short-run PID polling explicitly. Recovered about 4.2 GiB
 without changing resource limits or scientific files. Numerical release still
 awaits final packet, container controls and verified before-checkpoint.
+
+## 2026-10-12 — Single Figure1 run and retained export hold
+
+Codex reviewed the immutable packet and recorded container inspection, including
+71 exact source blobs. A stale live coordinator database caused release suspension;
+after read-only checkpoint recovery and worker reconciliation, explicit operator
+recovery established a new active copy for the same coordinator. Root verified
+the recovery checkpoint and preserved its exact prior event prefix.
+
+The worker then executed the original Figure1 container once under unchanged
+methods and the approved 8 GiB cap. It reports exit 0/no OOM, 196.03 seconds and
+2,448,296 KiB peak process RSS. A new evidence export was rejected by automatic
+review because prior approvals covered different archives. No successful upload,
+retry, rerun or scientific acceptance occurred. Root independently verified the
+descendant EXPORT_HELD checkpoint, not yet the scientific result archive. Current
+docs and roadmap now distinguish reported execution from verified results.
+
+The owner then approved the exact Figure1 payload directly in the existing worker.
+Its local archive/part recheck passed, but the cloud turn stopped at a usage limit
+before a complete verified transfer. Approval is retained; resumption requires
+original-worker and per-file/remote-outcome reconciliation, not an analysis rerun.
+The local Codex usage endpoint reporting availability does not clear the observed
+cloud-specific failure. No account switch, purchase or quota workaround was made.

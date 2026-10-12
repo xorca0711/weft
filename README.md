@@ -7,11 +7,11 @@
 | Local scaffold and pinned Ravel connection checks | Descriptive only | [Validation record](records/bootstrap-validation.json) | Software checks; no scientific validation |
 | Manual literature discovery and RQ review buffer | Descriptive only | [Live validation](records/discovery-validation.json) | Metadata matches and reading priority, not accepted claims |
 | Manual source-bound reading packets | Descriptive only | [Local reader](docs/LOCAL_READER.md) | XML text/captions; semantic and figure review remain separate |
-| Choi figure, supplement and input review | Descriptive only | [Review receipt](records/pilot-review-20261011.json) | Manual review and file integrity; numerical analysis remains held |
-| Pinned Codex Cloud setup | Descriptive only | [Setup receipt](records/cloud-setup-20261011.json) | Private environment published; small export verified; science remains held |
-| Synthetic executor and restart recovery | Descriptive only | [Recovery receipt](records/synthetic-recovery-integration-20261011.json) | 102 tests and bounded Docker restart; no scientific dispatch |
+| Choi figure, supplement and input review | Descriptive only | [Review receipt](records/pilot-review-20261011.json) | Source review and file integrity; current execution status is in PROGRESS |
+| Pinned Codex Cloud setup | Descriptive only | [Setup receipt](records/cloud-setup-20261011.json) | Private environment published; small export verified; no retention guarantee |
+| Synthetic executor and restart recovery | Descriptive only | [Recovery receipt](records/synthetic-recovery-integration-20261011.json) | Bounded Docker restart; synthetic recovery does not prove arbitrary job recovery |
 | Manual dot handoff and private checkpoints | Descriptive only | [Coordinator receipt](records/manual-coordinator-20261011.json) | Small synthetic recovery; no retention or distributed-lock guarantee |
-| Scientific cloud execution | Not established | [Manual pilot](docs/MANUAL_PILOT.md) | Contract, numerical stack and per-job integration remain unqualified |
+| Manual scientific cloud execution | Descriptive only | [Metadata](records/choi-metadata-20261011.json) and [Figure1 execution](records/choi-figure1-execution-20261012.json) | Metadata verified; Figure1 executed, evidence export and independent review held |
 | Autonomous paper-to-question workflow | Not established | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Scientific workers, unattended agents and Ravel export remain planned |
 
 Weft is being built to bring new literature into an existing research programme:
@@ -31,9 +31,10 @@ private configuration, even though this repository is public.
 ## Intended workflow
 
 The selected deployment uses a dot for coordination and Codex Cloud for execution.
-The initial cloud environment is published; numerical work remains unqualified. Solid arrows show
-implemented manual stages. Dotted arrows show the remaining
-scientific workflow. An RQ supplies search context; the review buffer keeps proposed
+The cloud environment is published. Metadata is verified; the first descriptive
+Figure1 run awaits evidence export and independent review. Solid arrows show
+implemented discovery/reading stages; dotted arrows show scientific links still
+being qualified end to end. An RQ supplies search context; the review buffer keeps proposed
 relationships separate from accepted evidence.
 
 ```mermaid

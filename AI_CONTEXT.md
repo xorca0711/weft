@@ -4,7 +4,8 @@ Weft is Ravel's public automation companion. Manual Europe PMC discovery, pinned
 RQ context, a paper-to-question review buffer and XML reading packets are implemented.
 Unattended scientific dispatch is not implemented. The checkpointed manual route
 has completed one Ravel metadata run with independently verified evidence; the
-separate descriptive Figure1 stage remains pending. PROGRESS owns current status.
+separate Figure1 run has executed, but its evidence export and independent review
+remain held. PROGRESS owns current status; never rerun the completed attempt.
 The [synthetic job controls](docs/JOB_CONTROLS.md) include a ledger and built-in
 Docker fixture executor with verified local terminal receipts. One manual dot/cloud dispatch-return check passed; scientific qualification remains open.
 
@@ -24,8 +25,14 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
   The first manual metadata job has verified before/after checkpoints and Ravel
   receipt readback. A bounded 4 MiB multipart roundtrip passed; each actual archive still needs
   readback. The owner-selected 8 GiB amendment passes the memory gate. Owner-approved scoped container retirement recovered disk, and offline preflight
-  passed once. Figure1 awaits final packet/container checks and a verified
-  before-checkpoint; read PROGRESS before dispatch. Retention is not guaranteed.
+  passed once. Figure1 subsequently executed once; its new evidence export requires
+  owner approval, now recorded directly in the worker. The export turn then
+  failed at the cloud usage limit; reconcile its cursor/remote metadata before
+  resuming when access returns.
+  The after-run held checkpoint is independently verified. An explicit continuity
+  recovery established a new active coordinator database; use the ignored private
+  locator, not the preserved stale database. Read PROGRESS before any action.
+  Retention is not guaranteed.
   No paid API or unattended launcher is configured. Never fabricate human review.
 - No extra local PC is required. Cloud tasks pin the reviewed Weft PR revision
   and Ravel blobs; never assume main has current implementation, or X: paths and

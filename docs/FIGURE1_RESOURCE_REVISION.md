@@ -1,6 +1,10 @@
 # Figure1 resource revision proposal — 11 October 2026
 
-**Owner selected the bounded 8 GiB option.** The current Figure1 job has not started.
+**Owner selected the bounded 8 GiB option.** Figure1 subsequently executed once
+on 12 October; the worker reports no OOM and approximately 2.33 GiB peak process
+RSS. Evidence export and independent result review remain held. See the
+[current execution record](../records/choi-figure1-execution-20261012.json).
+The proposal below preserves the choices and unknowns at decision time.
 [Selected operational amendment](../records/figure1-resource-amendment-v2.json)
 is binding only through a newly reviewed immutable packet; no frozen v1 file changes.
 [Preparation evidence](../records/choi-figure1-preparation-20261011.json) records
