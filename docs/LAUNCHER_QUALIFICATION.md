@@ -65,9 +65,11 @@ original container exited with code 0/no OOM/PID 0, and captured processes absen
 within the observed namespace. These are point-in-time observations, not release authority.
 
 Do not activate a downloaded SQLite copy or declare its reservation released.
-The private `runs/backend-handoff-20261012/MIR_PREPARE_ADMIN_CHECKPOINT.txt`
-instructs the original coordinator to recheck state, append one administrative
-event and prepare a local ledger-only descendant checkpoint. Direct Mir delivery
-still needs the owner relay. A new private checkpoint must have its actual
-contents, hash and export authorization established before upload. Scientific
+The owner subsequently relayed Mir's checkpoint result: one administrative event
+appended, 31 events with the original prefix and both attempts unchanged, and a
+148,366-byte two-member ledger/manifest checkpoint with local checks passed.
+Root has not yet fetched those bytes. The exact inventory/hash and proposed
+approval text are private under `runs/backend-handoff-20261012`; direct Mir
+delivery still needs the owner relay. The expected Drive identity and owner-only
+folder were rechecked, but exact-payload export approval is pending. Scientific
 retention and publication are already complete; no analysis rerun is needed.
