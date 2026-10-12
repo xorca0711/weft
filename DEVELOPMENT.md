@@ -658,3 +658,29 @@ refreshing checks after its predecessor merges. Ravel #149 was read-only and
 confirmed open/draft. No branch/ref, cloud task, analysis or data state was changed
 by the audit. Offline documentation validation passed 141 links and 15 source-pin
 declarations; Git whitespace checks passed. Runtime code is unchanged.
+
+
+## 2026-10-12 — Sequential stack integration and M5 publication preparation
+
+| Date | Item | Proposed by | Decided by | Decision | Reason |
+|---|---|---|---|---|---|
+| 2026-10-12 | Merge Weft PRs #4–#8 sequentially | Prior stack audit; owner requested execution | Owner explicitly authorized these five merges | Retarget successors to main, preserve ancestry with merge commits, verify each main CI | Land the tested backend without changing B4's hold or Choi's scientific status |
+| 2026-10-12 | Prepare a complete Choi output package for M5 | Codex, within owner-requested M5 work | Local preparation authorized; public destination decision pending | Recommend a Ravel prerelease asset and hash-pinned CI restoration | Preserve all frozen outputs and the original receipt while excluding private recovery records |
+
+All five resulting main push CI runs passed; the [integration record](records/pr-stack-merged-20261012.json)
+binds exact heads, merge commits and runs. Authenticated GitHub identity was
+xorca0711. No branch deletion or admin bypass was used. Ravel #149 stays draft.
+
+M5 preparation verified all 15 output hashes, the original receipt, 17 ZIP members
+and CRC, inspected text/HDF5 string and PNG metadata, and passed the unchanged
+Ravel receipt validator in a fresh staging root. The first private-path detector
+overmatched public Matplotlib HTTPS metadata; inspecting those five values led
+to a corrected drive-path boundary, with the first report preserved privately.
+No frozen bytes or scientific methods changed. The [publication plan](docs/M5_PUBLICATION_PLAN.md)
+distinguishes this local qualification from remote publication/clean-clone CI.
+No upload, public release, numerical receipt registration, human scientific
+acceptance, coordinator transition, new worker or schedule was performed.
+
+| Date | Proposed output | Why rejected or changed | Rejected/changed by |
+|---|---|---|---|
+| 2026-10-12 | Interpret five PNG Software metadata matches as private drive paths | Exact values were public Matplotlib HTTPS URLs; the scanner matched an interior `s:/` | Codex corrected the Windows-drive boundary; original files and first scan evidence preserved |

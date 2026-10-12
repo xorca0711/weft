@@ -30,7 +30,7 @@ authorization are not established.
 | Discovery and screening | Bounded Europe PMC discovery, deduplication, pinned RQ context, decision buffer, manual agent handoff and recovery | B3 material/semantic qualification, blocked B4 review, B5 independent evaluation and unattended launcher |
 | Cloud controls | Published environment, scoped job controls, manual coordinator and verified private Drive recovery | General unattended dispatch, retention/ownership guarantees and product-route usage controls |
 | Choi pilot | Source review, one adapted descriptive run, archive verification and scientific QC/interpretation | M5 complete-output publication, reviewed Ravel receipt/integration and human acceptance |
-| Integration into main | Weft PRs #1-#3 merged | PRs #4-#8 are tested but open; Ravel #149 is open/draft |
+| Integration into main | Weft PRs #1-#8 merged; each #4-#8 integration commit passed CI | Ravel #149 remains separate and open/draft; M5 publication decision is pending |
 
 The [PR stack audit](PR_STACK_INTEGRATION.md) records merge order and verified
 conflict status. Implementation/testing, merge status and scientific acceptance
@@ -87,7 +87,7 @@ These labels do not promote any scientific claim or record human acceptance.
 | M3b job and artifact controls | **Partial — manual route qualified** | Ledger/leases, bounded executor, synthetic cancellation/recovery, manual coordinator and verified Drive checkpoints; [job controls](JOB_CONTROLS.md) | Supported unattended launcher, durable queue ownership, usage controls and failure qualification for that route |
 | M4a scientific readiness | **Qualified — frozen Choi attempt only** | Contract/runtime, metadata, bounded preflight and artifact recovery verified; [pilot records](MANUAL_PILOT.md) | Each new paper/use requires its own contract, inputs, resource checks and authorization |
 | M4b Choi pilot | **Complete — adapted descriptive attempt and QC** | Executed once; archive hashes and [scientific comparison](PILOT_CHOI_SCIENTIFIC_REVIEW.md) reviewed | Retain annotation/denominator limits; no exact reproduction, new RQ or human acceptance implied |
-| M5 reviewed integration | **Open** | Review documented in [Ravel #149](https://github.com/xorca0711/ravel/pull/149), still draft | Durable complete-output publication, unchanged receipt validation, human review and integration/merge |
+| M5 reviewed integration | **Open — publication candidate locally qualified** | [Complete-output package](M5_PUBLICATION_PLAN.md) preserves all 15 outputs and passes the unchanged receipt validator locally; Ravel #149 stays draft | Public destination decision, remote hash verification, clean-clone CI restoration, human review and integration/merge |
 | M6 prospective operation | **Planned — disabled** | Evaluation/recurrence requirements specified | B5 unseen-paper evaluation, supported unattended operation and explicit cadence/scope/usage decisions |
 
 <details>
@@ -124,7 +124,7 @@ flowchart TD
     end
     subgraph PILOT["Separate track: Choi closeout"]
         R["M4a QUALIFIED: frozen attempt readiness"] --> C["M4b COMPLETE: run, recovery and scientific review"]
-        C --> I["M5 OPEN: complete-output publication and human integration"]
+        C --> I["M5 OPEN: local package passed; publication decision and integration pending"]
     end
     J --> Q
     J --> R

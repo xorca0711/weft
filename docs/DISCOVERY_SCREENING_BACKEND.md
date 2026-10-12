@@ -24,8 +24,10 @@ reservation and original evidence; do not rerun it.
 Evidence: [manual cloud qualification](SCREENING_CLOUD_QUALIFICATION.md),
 [B3/B4 receipts and interruption](B3_CLOUD_B4_REVIEW.md). These are operational
 statuses, not scientific acceptance. [Overall roadmap](IMPLEMENTATION_PLAN.md#established-state)
-separates this priority track from Choi M5 publication. Features on open PRs
-#4-#8 are not yet merged into main; see [integration status](PR_STACK_INTEGRATION.md).
+separates this priority track from Choi M5 publication. PRs #4-#8 are merged into
+main with passing post-merge CI at every step; see [integration status](PR_STACK_INTEGRATION.md).
+The separate [M5 output package](M5_PUBLICATION_PLAN.md) is locally qualified;
+public publication and clean-clone restoration are not yet approved/qualified.
 
 ## What exists and what does not
 

@@ -137,6 +137,7 @@ implemented safeguards from remaining qualification work.
 | Connect Weft to Ravel without competing sources of truth | [Integration contract](docs/RAVEL_CONNECTION.md) |
 | Run the first complete paper pilot after implementation | [Choi 2020 pilot](docs/PILOT_CHOI_2020.md) |
 | Inspect completed figures, supplements and dataset qualification | [Choi review](docs/PILOT_CHOI_REVIEW.md) |
+| Review Choi's complete-output publication candidate and remaining M5 steps | [M5 publication plan](docs/M5_PUBLICATION_PLAN.md) |
 | Configure the selected cloud environment and access | [Cloud setup runbook](docs/CLOUD_SETUP.md) |
 | Qualify the scientific runtime | [Execution environment](docs/EXECUTION_ENVIRONMENT.md) |
 | Evaluate missed papers, extraction and analysis fidelity | [Evaluation plan](docs/EVALUATION.md) |

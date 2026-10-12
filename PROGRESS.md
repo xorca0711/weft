@@ -1,18 +1,38 @@
 # Current project state
 
-## B3 recovery passed / B4 platform hold — 12 October 2026
-
 Update this before stopping work, every session.
 
-Roadmap marking is current: [M0-M6 status and diagram](docs/IMPLEMENTATION_PLAN.md#established-state)
-and [B1-B5 status](docs/DISCOVERY_SCREENING_BACKEND.md#current-b1-b5-status).
-Manual capabilities are qualified within scope; M1/M2/M3b and B3 remain partial,
-B4 is blocked, Choi M4b is complete for the recorded attempt, M5 is open and
-B5/M6 are planned. PRs #1-#3 are merged; #4-#8 remain open. The
-[stack audit](docs/PR_STACK_INTEGRATION.md) found no textual conflicts in cumulative
-#4 -> #5 -> #6 -> #7 -> #8 integration against main b59ed911. All audited heads
-had passing CI. Retarget/recheck each successor after its predecessor merges;
-no merge or retarget was performed. Ravel #149 remains open/draft.
+## PR stack merged; M5 publication candidate prepared — 12 October 2026
+
+Weft PRs **#4 -> #5 -> #6 -> #7 -> #8** are merged using merge commits. Each
+successor was retargeted to main and every resulting main push CI passed before
+the next merge. Integrated main is `719666e231852bc304f6fd6abd9b2dd71b9145e4`.
+[Exact integration record](records/pr-stack-merged-20261012.json) ·
+[merge audit and CI links](docs/PR_STACK_INTEGRATION.md).
+
+Choi remains separate: **M5 is open, with its local publication package qualified**.
+The [reviewable publication plan](docs/M5_PUBLICATION_PLAN.md) proposes a public
+Ravel GitHub Release containing all 15 unchanged outputs, original receipt and
+manifest. The 105,582,086-byte ZIP passed original-output hashes, CRC/inventory,
+metadata review and the unchanged receipt validator in a fresh local staging
+root. It has not been uploaded, registered or qualified by remote clean-clone CI.
+Ravel #149 remains draft; no analysis reran and no claim grade or human decision
+changed. Local preparation/evidence is in ignored
+`runs/m5-publication-preparation-20261012`.
+
+**Next required decision:** approve this exact public release destination/payload
+or keep M5 private. After approval, verify remote recovery, propose the narrow
+Ravel CI restoration mechanism, validate against current main, then present human
+review/integration separately. The private Choi coordinator reservation and
+checkpoint remain unchanged; reconcile them before any future dispatch.
+
+B4 remains held. No worker was contacted, no cloud/network policy changed and no
+alternate route was attempted. M1/M2/M3b and B3 remain partial; M4b is complete
+for its recorded attempt; B5/M6 remain planned. Later work requires independent
+evaluation and supported launcher qualification before any cadence decision.
+See [the marked roadmap](docs/IMPLEMENTATION_PLAN.md#established-state).
+
+## Preserved B3 recovery / B4 platform hold — 12 October 2026
 
 **Network enforcement and checkpoint restoration passed in the new worker.
 B4 remains incomplete after a platform safety rejection.**

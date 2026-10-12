@@ -58,6 +58,12 @@ the original numerical receipt remains unregistered until every declared output
 has a reviewed, durable publication route. The 385,675,968-byte H5AD is included
 in private verified recovery but has no qualified clean-clone CI publication route.
 Do not omit it, edit the receipt, weaken the validator or activate paid storage.
+The subsequent [M5 publication candidate](M5_PUBLICATION_PLAN.md) now packages
+all 15 unchanged outputs and the original receipt, passes ZIP/hash checks and
+the original validator in a fresh local staging root. The recommended public
+GitHub Release route still requires an owner destination decision, independent
+remote recovery and clean-clone CI qualification; private recovery alone is not
+publication.
 
 The coordinator's last independently verified backup remains the 30-event
 `c8ac521d…` checkpoint. This local review did not change its ledger or release

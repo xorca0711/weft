@@ -15,8 +15,12 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
 
 - [Current state](PROGRESS.md) owns completed work and exact next steps.
   The [marked roadmap](docs/IMPLEMENTATION_PLAN.md#established-state) separates
-  operational qualification, remaining scientific evaluation and open PR integration.
-  [PRs #4-#8](docs/PR_STACK_INTEGRATION.md) form a clean linear stack; they are not merged.
+  operational qualification, remaining scientific evaluation and integration.
+  [PRs #4-#8](docs/PR_STACK_INTEGRATION.md) are merged in order, with CI passing
+  on every resulting main commit. The [M5 candidate](docs/M5_PUBLICATION_PLAN.md)
+  passes local original-receipt validation; public destination approval, remote
+  restoration, CI integration and human review remain open. Do not upload before
+  that destination decision or treat local staging as clean-clone qualification.
 - Next implementation priority is the [discovery/screening backend](docs/DISCOVERY_SCREENING_BACKEND.md):
   B1 and B2 mechanics passed fixtures, a local batch and a bounded manual cloud
   handoff/restore. B3 now implements source coverage, bounded local attachments
