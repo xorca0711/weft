@@ -99,7 +99,7 @@
       "host": "europepmc.org",
       "owner_approved": true,
       "published": false,
-      "blocker": "Browser permission layer denied chatgpt.com access; retry after renewed owner authorization confirmed a saved site-permission block. Permission enablement requested."
+      "blocker": "Browser API reports a saved block despite UI and saved origin configuration both allowing chatgpt.com. Cause unconfirmed; desktop-app restart and access recheck pending. No configuration workaround attempted."
     }
   },
   "preservation": {

@@ -85,6 +85,13 @@ can make the approved edit. Do not describe the grant as
 published or effective until read back. The worker exposes status inspection,
 but no supported in-place policy-refresh tool was found.
 
+Follow-up inspection confirmed the owner's UI and saved origin configuration both
+allow chatgpt.com. The same browser API nevertheless reports a saved block.
+The cause is unconfirmed; desktop-app restart is the next troubleshooting step.
+No permission configuration was edited, and no alternate browser route was used.
+Verify browser access after restart before attempting the approved amendment;
+the cloud worker must remain preserved.
+
 1. Verify the approved single-host amendment has been published with all other
    settings and source pins unchanged.
 2. Recheck the **same worker's effective policy**. If it cannot adopt the update,

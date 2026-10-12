@@ -20,10 +20,16 @@ Two allowed EBI documentation requests returned 404 (248 response bytes total).
 No figure, supplement or dataset was acquired. The owner approved adding only
 `europepmc.org` to the existing environment, but **publication has not occurred**:
 browser control of `chatgpt.com` was denied, including after the owner's renewed
-request, because of a saved site permission. Permission enablement is pending.
+request, with the tool reporting a saved site-permission block.
+Follow-up: the owner's screenshot shows Always allow, and a read-only check of
+saved configuration confirms `access: allow` for chatgpt.com. The same browser API
+still rejects access. This is an observed permission-state mismatch; a stale
+runtime is only a possible cause. No permission file was changed or alternate
+control route attempted. Desktop-app restart is the next troubleshooting step;
+it does not authorize restarting the cloud worker.
 The existing worker exposes no supported in-place policy-refresh control.
 
-Next: after browser permission is enabled, verify the intended environment,
+Next: after desktop restart and successful browser access, verify the intended environment,
 publish only the approved host amendment, and read back the same worker's
 effective policy. If it cannot adopt the change, stop for a separate deployment
 decision. Then verify official acquisition documentation and resume the same
