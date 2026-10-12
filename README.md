@@ -73,8 +73,8 @@ flowchart TD
     M <-->|checkpoints and explicit restore| G["Private Google Drive<br/>Backups and result archives"]
     C -->|receipts and artifacts| G
     G --> V["Independent verification<br/>QC and scientific review"]
-    V --> H["Owner decision"]
-    H -.->|authorized integration| E["Reviewable Ravel evidence PR"]
+    V --> E["Reviewable Ravel evidence PR"]
+    E -.-> H["Owner decision<br/>Integrate, amend, hold or reject"]
 ```
 
 The arrows describe the selected route, including steps that remain under
