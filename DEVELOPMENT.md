@@ -634,3 +634,27 @@ and 15 pin declarations; whitespace checks passed. Refetched main b59ed911 and
 stacked integration base d95d558 are unchanged. Prior HEAD 8a882e1 passed both CI
 checks. Runtime code and source pins are unchanged, so no biological or duplicate
 full-suite run was performed. GitHub identity is xorca0711; no merge was made.
+
+## 2026-10-12 — Marked roadmap and PR stack audit
+
+The owner requested the overall established roadmap state and a conflict check
+for Weft PRs #4-#8. Codex marked M0-M6 and B1-B5 status, replaced the obsolete
+future-only diagram, and separated manual qualification, scientific acceptance
+and unmerged implementation. B3's outdated cloud-qualification summary is
+corrected; B4 remains blocked, Choi M4b complete for its adapted attempt, M5 open
+and B5/M6 planned. No gate or scientific claim status was promoted.
+
+| Date | Item | Proposed by | Decided by | Decision | Reason |
+|---|---|---|---|---|---|
+| 2026-10-12 | Mark roadmap status and inspect PR #4-#8 integration | Owner requested scope; Codex prepared updates and audit | Owner authorized documentation/audit; merge and scientific acceptance remain unissued | Update existing documentation and PR #8; no merge/retarget | Distinguish tested manual capabilities from incomplete evaluation and deployment |
+
+Fetched main b59ed911 and all five PR heads form a linear ancestor chain.
+Cumulative merge-tree simulation exited zero at every step and matched each
+incoming tree. GitHub reported all five non-draft, MERGEABLE/CLEAN with passing
+push/PR checks at the recorded snapshot. This is textual integration and CI
+evidence, not an independent semantic review. Recommended integration order is
+#4 -> #5 -> #6 -> #7 -> #8, verifying/retargeting each successor to main and
+refreshing checks after its predecessor merges. Ravel #149 was read-only and
+confirmed open/draft. No branch/ref, cloud task, analysis or data state was changed
+by the audit. Offline documentation validation passed 141 links and 15 source-pin
+declarations; Git whitespace checks passed. Runtime code is unchanged.

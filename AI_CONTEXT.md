@@ -14,6 +14,9 @@ The [synthetic job controls](docs/JOB_CONTROLS.md) include a ledger and built-in
 Docker fixture executor with verified local terminal receipts. One manual dot/cloud dispatch-return check passed; scientific qualification remains open.
 
 - [Current state](PROGRESS.md) owns completed work and exact next steps.
+  The [marked roadmap](docs/IMPLEMENTATION_PLAN.md#established-state) separates
+  operational qualification, remaining scientific evaluation and open PR integration.
+  [PRs #4-#8](docs/PR_STACK_INTEGRATION.md) form a clean linear stack; they are not merged.
 - Next implementation priority is the [discovery/screening backend](docs/DISCOVERY_SCREENING_BACKEND.md):
   B1 and B2 mechanics passed fixtures, a local batch and a bounded manual cloud
   handoff/restore. B3 now implements source coverage, bounded local attachments
@@ -37,8 +40,9 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
   [cloud qualification](docs/SCREENING_CLOUD_QUALIFICATION.md): the approved host
   amendment and separate screening-only task are live.
   Cloud source/discovery, five screening responses, both owner-approved Drive
-  checkpoints and independent Linux-to-Windows cached recovery passed. All stores
-  are quiesced; private locators/receipts are in ignored
+  checkpoints and independent Linux-to-Windows cached recovery passed. Those earlier
+  screening stores were quiesced; the new B4 interruption has an unverified final
+  state. Earlier private locators/receipts are in ignored
   `runs/screening-cloud-qualification-20261012`. No schedule is configured. Preserve
   the original Choi worker. Choi M5 publication is a separate open track, not a coding
   prerequisite. Do not enable schedules, release the held reservation or dispatch

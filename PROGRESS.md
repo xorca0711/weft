@@ -4,6 +4,16 @@
 
 Update this before stopping work, every session.
 
+Roadmap marking is current: [M0-M6 status and diagram](docs/IMPLEMENTATION_PLAN.md#established-state)
+and [B1-B5 status](docs/DISCOVERY_SCREENING_BACKEND.md#current-b1-b5-status).
+Manual capabilities are qualified within scope; M1/M2/M3b and B3 remain partial,
+B4 is blocked, Choi M4b is complete for the recorded attempt, M5 is open and
+B5/M6 are planned. PRs #1-#3 are merged; #4-#8 remain open. The
+[stack audit](docs/PR_STACK_INTEGRATION.md) found no textual conflicts in cumulative
+#4 -> #5 -> #6 -> #7 -> #8 integration against main b59ed911. All audited heads
+had passing CI. Retarget/recheck each successor after its predecessor merges;
+no merge or retarget was performed. Ravel #149 remains open/draft.
+
 **Network enforcement and checkpoint restoration passed in the new worker.
 B4 remains incomplete after a platform safety rejection.**
 [Evidence and interruption record](docs/B3_CLOUD_B4_REVIEW.md) ·

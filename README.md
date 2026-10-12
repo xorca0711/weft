@@ -15,7 +15,7 @@
 | Synthetic executor and restart recovery | Descriptive only | [Recovery receipt](records/synthetic-recovery-integration-20261011.json) | Bounded Docker restart; synthetic recovery does not prove arbitrary job recovery |
 | Manual dot handoff and private checkpoints | Descriptive only | [Coordinator receipt](records/manual-coordinator-20261011.json) | Small synthetic recovery; no retention or distributed-lock guarantee |
 | Manual scientific cloud execution | Descriptive only | [Metadata](records/choi-metadata-20261011.json) and [Figure1 execution](records/choi-figure1-execution-20261012.json) | Metadata and Figure1 archive verified; [scientific review](docs/PILOT_CHOI_SCIENTIFIC_REVIEW.md) complete with limits; publication pending |
-| Autonomous paper-to-question workflow | Not established | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Autonomous screening/orchestration and complete Ravel artifact publication remain unqualified |
+| Autonomous paper-to-question workflow | Not established | [Marked implementation plan](docs/IMPLEMENTATION_PLAN.md#established-state) | Autonomous screening/orchestration and complete Ravel artifact publication remain unqualified |
 
 Weft is being built to bring new literature into an existing research programme:
 find papers against established questions and broader reading interests, explain
@@ -42,6 +42,9 @@ is incomplete. The new screening worker confirmed enforced policy, restored the
 verified checkpoint and passed 55 targeted tests. Its source-review turn then
 failed with a platform safety rejection; final download state is unverified.
 [Current state](PROGRESS.md) owns the resume point.
+The [marked roadmap and diagram](docs/IMPLEMENTATION_PLAN.md#established-state)
+show completed, qualified, partial, blocked and planned stages;
+[PR integration status](docs/PR_STACK_INTEGRATION.md) separates tested work from main.
 The earlier [manual cloud handoff and recovery](docs/SCREENING_CLOUD_QUALIFICATION.md)
 is qualified; independent screening evaluation remains open.
 An unattended launcher and recurrence remain future work. Choi publication remains
