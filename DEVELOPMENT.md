@@ -319,3 +319,10 @@ already merged to main. A scoped branch preserves the PR #2 merge and integrates
 current main without conflicts. No frozen source, scientific contract, output,
 runtime gate or acceptance decision changed. Private service-account identifiers
 remain outside public documentation.
+
+The owner-requested continuation was admitted after coordinator-ledger reconciliation.
+The worker uploaded two parts before another runtime disconnect, reported complete
+readback for part 0000 and incomplete materialization for part 0001. Root independently
+verified both remote sizes, parent and owner-only permissions, not the bytes. No
+renewed quota refusal was observed. The same attempt remains held with 24 parts and
+the transfer manifest still unuploaded. No repeated retry or biological rerun occurred.

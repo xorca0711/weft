@@ -65,25 +65,16 @@ archives. There is no separate Google Cloud Platform project, VM or storage buck
 
 ```mermaid
 flowchart TD
-    W["Weft on GitHub<br/>Discovery, review buffer and job controls"]
-    R["Ravel on GitHub<br/>Questions, scientific contracts and analysis code"]
-    M["Mir: one dot coordinator<br/>Authoritative job ledger and manual dispatch"]
-    C["Codex Cloud: weft-pilot<br/>Pinned source and bounded offline analysis container"]
-    P["Public literature and datasets<br/>Reviewed sources and approved downloads"]
-    G["Private Google Drive<br/>Ledger checkpoints and evidence archives"]
-    V["Independent review<br/>Hashes, receipts, QC, figures and interpretation"]
-    H["Owner decision<br/>Accept, amend, hold or reject"]
-    W -->|versioned workflow controls| M
-    R -->|pinned question context| M
-    M -->|manually approved job| C
-    R -->|frozen contract and code| C
-    P -->|acquire and verify before offline execution| C
-    M <-->|verified checkpoint and explicit restore| G
-    C -->|approved artifact export| G
-    C -->|terminal receipt and run status| M
-    G -->|download and verify exact bytes| V
-    V --> H
-    H -.->|authorized evidence PR and integration| R
+    W["Weft · GitHub<br/>Workflow controls"] --> M["Mir · dot<br/>Coordinator and job ledger"]
+    R["Ravel · GitHub<br/>RQs, contracts and analysis"] -->|pinned context| M
+    M -->|manual dispatch| C["Codex Cloud<br/>weft-pilot worker"]
+    R -->|pinned code| C
+    P["Public papers and datasets"] -->|reviewed download| C
+    M <-->|checkpoints and explicit restore| G["Private Google Drive<br/>Backups and result archives"]
+    C -->|receipts and artifacts| G
+    G --> V["Independent verification<br/>QC and scientific review"]
+    V --> H["Owner decision"]
+    H -.->|authorized integration| E["Reviewable Ravel evidence PR"]
 ```
 
 The arrows describe the selected route, including steps that remain under

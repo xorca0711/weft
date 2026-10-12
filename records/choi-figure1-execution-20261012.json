@@ -96,11 +96,11 @@
     "independent_readback_verified": false,
     "manifest_entries": 99,
     "zip_members_including_manifest": 100,
-    "transfer_status": "Direct owner approval received; archive/26-part recheck passed; cloud turn then failed at usage limit. No complete transfer verified.",
-    "successful_uploads_confirmed_in_root_review": 0,
+    "transfer_status": "Owner-requested continuation admitted after ledger reconciliation; two parts uploaded before runtime disconnect. Worker readback verified part 0000; part 0001 materialization/hash verification incomplete. No reconstruction yet.",
+    "successful_uploads_confirmed_in_root_review": 2,
     "remote_reconciliation_required_before_resume": true,
     "successful_uploads_at_initial_rejection": 0,
-    "current_remote_outcome": "uncertain; reconcile before resume"
+    "current_remote_outcome": "Root metadata confirms parts 0000 and 0001, each 4194304 bytes in the original owner-only folder. Root has not independently hashed either part."
   },
   "after_run_checkpoint": {
     "ok": true,
@@ -121,7 +121,7 @@
   "scientific_acceptance": false,
   "stage_complete": false,
   "next_steps": [
-    "Existing exact direct owner approval is recorded. Wait for cloud execution access, then reconcile original worker and upload/readback cursor before resuming the same export.",
+    "Reconcile original worker, existing two remote parts, receipt and partial download after runtime disconnect; continue only missing authorized transfer/readback without duplicate upload or analysis rerun.",
     "Upload and independently reconstruct/hash all parts and verify ZIP member hashes",
     "Review original Ravel receipt, QC/denominators and figure files without rerunning analysis",
     "Resolve publication of exact outputs under existing governance; then write bounded discrepancy and candidate/no-candidate review",
@@ -167,6 +167,56 @@
     "event_types": [
       "figure1_exact_owner_export_approval",
       "figure1_export_worker_usage_limit"
+    ],
+    "scientific_archive_independent_readback": false
+  },
+  "export_resumption_20261012": {
+    "authority": "Owner requested continuation after allowance replenishment",
+    "same_attempt": true,
+    "analysis_rerun": false,
+    "ledger_reconciliation": "Coordinator reports passed against verified 26-event checkpoint",
+    "execution_admitted": true,
+    "blocker": "runtime_disconnect",
+    "renewed_usage_limit_refusal_observed": false,
+    "parts_uploaded": 2,
+    "parts_remaining": 24,
+    "transfer_manifest_uploaded": false,
+    "worker_readback_verified_parts": [
+      0
+    ],
+    "worker_readback_incomplete_parts": [
+      1
+    ],
+    "root_metadata_verified_parts": [
+      0,
+      1
+    ],
+    "root_part_bytes_verified": false,
+    "root_metadata_checks": [
+      "4194304 bytes each",
+      "original destination folder",
+      "owner-only permissions"
+    ],
+    "full_reconstruction_verified": false,
+    "manifest_entries_verified": false,
+    "reservation": "held",
+    "retry": "No further dispatch; preserve cursor and checkpoint outcome before reconciliation",
+    "checkpoint": "partial_export_checkpoint"
+  },
+  "partial_export_checkpoint": {
+    "ok": true,
+    "bytes": 140174,
+    "sha256": "6d8ec83996c86c3afb9eb0bbafc7b2b7d7ae8a9a2fff56c775bc5982709c37c2",
+    "parent_sha256": "9222d923d0d16e2e2eefe9b775af8bd25ea160713c80482a0165c2849a7a527f",
+    "database_sha256": "219034c128d981bdfe9dfa9f1823016daeeef2900f85850ac06c91a81ddf72f8",
+    "events": 27,
+    "unchanged_parent_prefix": 26,
+    "scientific_rows": 2,
+    "scientific_rows_unchanged": true,
+    "read_only_restore": true,
+    "activated": false,
+    "event_types": [
+      "figure1_partial_export_disconnected"
     ],
     "scientific_archive_independent_readback": false
   }

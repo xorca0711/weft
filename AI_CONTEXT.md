@@ -27,8 +27,10 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
   readback. The owner-selected 8 GiB amendment passes the memory gate. Owner-approved scoped container retirement recovered disk, and offline preflight
   passed once. Figure1 subsequently executed once; its new evidence export requires
   owner approval, now recorded directly in the worker. The export turn then
-  failed at the cloud usage limit; reconcile its cursor/remote metadata before
-  resuming when access returns.
+  failed at the cloud usage limit. A later owner-requested continuation executed:
+  two parts reached Drive before another runtime disconnect; one worker readback
+  passed, the second is incomplete. Reconcile the existing receipt, remote IDs and
+  partial download before continuing the same export. See PROGRESS.
   The after-run held checkpoint is independently verified. An explicit continuity
   recovery established a new active coordinator database; use the ignored private
   locator, not the preserved stale database. Read PROGRESS before any action.

@@ -5,9 +5,18 @@
 The root README now maps Weft, Ravel, the dot coordinator, Codex Cloud, private
 Google Drive, independent review and owner decisions. It separates code hosting,
 compute, backup and scientific acceptance; no Google Cloud Platform deployment or
-unattended pipeline is implied. The owner requested resumption of the held export;
-the existing coordinator must reconcile its ledger and original worker before
-continuation. Successful export is not yet established.
+unattended pipeline is implied. The owner-requested export resumption was admitted after ledger reconciliation.
+Two of 26 parts reached Drive before another runtime disconnect: the worker
+verified part 0000 by download/hash; part 0001 readback is incomplete. Root verified
+both files' sizes, destination and owner-only permissions, not their bytes.
+The remaining 24 parts and transfer manifest have not been uploaded. Preserve
+the existing receipt, remote IDs and partial download; reconcile before resuming
+the same export. No analysis rerun or complete export is established. The current
+blocker is a runtime disconnect after execution, not a renewed usage-limit refusal.
+Root independently verified the descendant held checkpoint: 140,174 bytes,
+SHA-256 6d8ec839… , 27 events with the exact 26-event parent prefix and the same
+two scientific rows. Hashes, SQLite integrity/schema and a fresh read-only restore
+passed. This verifies recovery state, not the complete scientific archive.
 
 PR #2 was merged into PR #1's old branch after PR #1 entered main, leaving its
 controls and pilot records outside main. The scoped backend-connections branch
@@ -28,7 +37,7 @@ animal-level inference. [Execution record](records/choi-figure1-execution-202610
 
 The 105,848,914-byte evidence archive is preserved in 26 bounded parts. Automatic
 approval review rejected its first upload because earlier approvals covered
-different archives. There were no successful uploads or retries. The same attempt
+different archives. At that initial rejection, no upload had succeeded. The same attempt
 and slot remain EXPORT_HELD; the analysis must not be rerun. The owner subsequently approved this exact payload directly in the worker.
 It rechecked the archive and 26 parts, then the cloud turn failed at its usage
 limit. Complete transfer/readback remains unverified. Resume only after cloud
