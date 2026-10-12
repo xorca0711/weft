@@ -56,6 +56,59 @@ flowchart TD
     X -.->|authorized integration| R
 ```
 
+## Backend connections
+
+The current deployment is a **checkpointed manual workflow**. Weft and Ravel are
+GitHub repositories; Mir is the dot coordinator; Codex Cloud supplies temporary
+execution workspaces; private Google Drive stores recovery checkpoints and result
+archives. There is no separate Google Cloud Platform project, VM or storage bucket.
+
+```mermaid
+flowchart TD
+    W["Weft on GitHub<br/>Discovery, review buffer and job controls"]
+    R["Ravel on GitHub<br/>Questions, scientific contracts and analysis code"]
+    M["Mir: one dot coordinator<br/>Authoritative job ledger and manual dispatch"]
+    C["Codex Cloud: weft-pilot<br/>Pinned source and bounded offline analysis container"]
+    P["Public literature and datasets<br/>Reviewed sources and approved downloads"]
+    G["Private Google Drive<br/>Ledger checkpoints and evidence archives"]
+    V["Independent review<br/>Hashes, receipts, QC, figures and interpretation"]
+    H["Owner decision<br/>Accept, amend, hold or reject"]
+    W -->|versioned workflow controls| M
+    R -->|pinned question context| M
+    M -->|manually approved job| C
+    R -->|frozen contract and code| C
+    P -->|acquire and verify before offline execution| C
+    M <-->|verified checkpoint and explicit restore| G
+    C -->|approved artifact export| G
+    C -->|terminal receipt and run status| M
+    G -->|download and verify exact bytes| V
+    V --> H
+    H -.->|authorized evidence PR and integration| R
+```
+
+The arrows describe the selected route, including steps that remain under
+qualification; they do not represent an unattended pipeline. Metadata recovery
+has passed independent readback. The first Figure1 analysis has executed once,
+but complete artifact export and independent review remain unverified. See
+[current state](PROGRESS.md) for the latest hold and its evidence.
+
+| Component | Responsibility | What it does not provide |
+|---|---|---|
+| Weft | Discovery, proposed paper-to-RQ links, job controls and run records | Canonical RQ ownership or automatic scientific acceptance |
+| Ravel | Scientific questions, frozen methods, results and acceptance history | A cloud compute service |
+| Mir | One coordinator and one authoritative ledger | Guaranteed workspace retention or distributed locking |
+| Codex Cloud | Execute a bounded, pinned job and preserve its receipt | Durable archival storage or permission to rerun an uncertain attempt |
+| Google Drive | Private, hash-verified backups and evidence transfer | Compute, automatic synchronization or immutable storage |
+| GitHub Actions | Deterministic software and repository checks | The scientific compute backend |
+| Local Codex | Operator review, documentation and recovery assistance | A required always-on execution machine |
+
+AI-host sign-in, GitHub identity and Google Drive identity are separate. Verify
+the authorized identity for each service before writes. A cloud usage interruption
+holds the existing attempt for reconciliation; it is not an analysis failure or
+permission for a new run. The [manual pilot protocol](docs/MANUAL_PILOT.md) defines
+checkpoint and recovery steps; [job controls](docs/JOB_CONTROLS.md) distinguish
+implemented safeguards from remaining qualification work.
+
 ## Read what you need
 
 | If you want to… | Read |

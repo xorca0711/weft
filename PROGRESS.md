@@ -1,5 +1,20 @@
 # Current project state
 
+## Documentation and integration update — 12 October 2026
+
+The root README now maps Weft, Ravel, the dot coordinator, Codex Cloud, private
+Google Drive, independent review and owner decisions. It separates code hosting,
+compute, backup and scientific acceptance; no Google Cloud Platform deployment or
+unattended pipeline is implied. The owner requested resumption of the held export;
+the existing coordinator must reconcile its ledger and original worker before
+continuation. Successful export is not yet established.
+
+PR #2 was merged into PR #1's old branch after PR #1 entered main, leaving its
+controls and pilot records outside main. The scoped backend-connections branch
+preserves that merged history and integrates main without conflicts. A new PR
+must bring these existing changes and the README diagram to main; no automatic
+merge or scientific acceptance is authorized. Frozen job revisions remain pinned.
+
 ## Current stage — Figure1 executed; evidence export held — 12 October 2026
 
 The single Choi Figure1 attempt ran under the owner-selected 8 GiB cap with

@@ -305,3 +305,17 @@ before a complete verified transfer. Approval is retained; resumption requires
 original-worker and per-file/remote-outcome reconciliation, not an analysis rerun.
 The local Codex usage endpoint reporting availability does not clear the observed
 cloud-specific failure. No account switch, purchase or quota workaround was made.
+
+## 2026-10-12 — Backend map and main-branch integration
+
+Codex added the requested root README deployment diagram and responsibility table.
+It distinguishes GitHub repositories, dot coordination, bounded Codex Cloud compute,
+private Drive checkpoints, operator review and human scientific authority. The
+diagram labels the selected manual route without claiming unattended execution,
+completed Figure1 export or a Google Cloud Platform deployment.
+
+GitHub inspection found PR #2 merged into the former PR #1 base after PR #1 had
+already merged to main. A scoped branch preserves the PR #2 merge and integrates
+current main without conflicts. No frozen source, scientific contract, output,
+runtime gate or acceptance decision changed. Private service-account identifiers
+remain outside public documentation.
