@@ -11,9 +11,11 @@ from .identity import digest
 
 
 @contextmanager
-def exclusive(store):
+def exclusive(store, *, name='.batch.lock'):
     """OS-released advisory lock; never break a lock based on elapsed time."""
-    path = store.root / '.batch.lock'
+    if name not in {'.batch.lock', '.handoff.lock'}:
+        raise ValueError('Unknown store lock')
+    path = store.root / name
     with path.open('a+b') as lock:
         if path.stat().st_size == 0:
             lock.write(b'0'); lock.flush()

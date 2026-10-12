@@ -2,6 +2,31 @@
 
 Update this before stopping work, every session.
 
+## Backend continuation — 12 October 2026
+
+Implemented the [cooperative screening handoff and private intake staging](docs/BACKEND_HANDOFF.md)
+on a scoped branch from main `5ca2a58857b22968571c4389651862e17ee8dc35`.
+Eighteen new synthetic tests pass; the full suite passes 188 tests (25 skips on
+Windows ARM64), offline validation checks 160 links and all 15 pinned Ravel blobs
+verify. Tests include interrupted-return recovery, no duplicate
+claim, expiry holds, restored-copy refusal, current-source checks and intake
+tampering/supersession. This is one-catalog software qualification, not a durable
+distributed queue, authenticated worker or unattended deployment.
+
+The [supported-launcher probe](docs/LAUNCHER_QUALIFICATION.md) found the documented
+experimental cloud CLI. Its authenticated listing returned no tasks; the intended
+environment/account route remains unverified. No cloud task was launched.
+The original Choi coordinator's metadata is readable, but its continuity message
+failed with `thread not found`. No ledger was activated or reservation released.
+The private continuity prompt is prepared under `runs/backend-handoff-20261012`.
+
+Exact next steps: review this control change; reconnect the original coordinator
+for read-only continuity and a concrete administrative closeout; verify the
+intended CLI environment before requesting one synthetic-only launch. Then qualify
+PC-off operation and prepare [independent B5 evaluation](docs/B5_EVALUATION_PREPARATION.md).
+B4 stays held, Choi never reruns, no new private export is authorized by this
+change, and M6 recurrence remains disabled. [Evidence](records/backend-handoff-20261012.json).
+
 ## Backend stack integrated; bounded Choi M5 complete — 12 October 2026
 
 Weft PRs **#4 -> #5 -> #6 -> #7 -> #8** merged in order, successors retargeted
@@ -42,8 +67,8 @@ is separate from fresh-paper eligibility and does not change Ravel's mission. Ra
 [#150](https://github.com/xorca0711/ravel/pull/150) merged the intake at
 `7840089dc78a42c25679e2083541c5df1507cfc6`, after all four CI checks passed.
 
-This Weft #9 update records the owner-authorized closeout and is to merge after
-its current CI passes. Private preparation remains under
+Weft #9 merged at `5ca2a58857b22968571c4389651862e17ee8dc35` with main CI passing.
+Private preparation remains under
 `runs/m5-publication-preparation-20261012`.
 
 ## Preserved B3 recovery / B4 platform hold — 12 October 2026

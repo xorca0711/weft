@@ -1,5 +1,12 @@
 # Agent entry point
 
+- Latest backend addition: [single-catalog handoff and private intake staging](docs/BACKEND_HANDOFF.md).
+  Synthetic tests pass; there is no cloud launcher deployment or distributed fencing.
+  Expired/uncertain claims never reassign. Recovery ingests saved bytes only.
+  [CLI probe and coordinator blocker](docs/LAUNCHER_QUALIFICATION.md): intended
+  environment unverified; original dot message failed. Keep Choi reservation held,
+  B4 stopped and M6 disabled. Consult PROGRESS before any live operation.
+
 Weft is Ravel's public automation companion. Manual Europe PMC discovery, pinned
 RQ context, a paper-to-question review buffer and XML reading packets are implemented.
 The bounded batch coordinator and source-bound screening pull interface are also

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-12",
+  "kind": "synthetic-backend-qualification",
+  "base_commit": "5ca2a58857b22968571c4389651862e17ee8dc35",
+  "targeted_tests": {"command": "python -m unittest test_handoff test_intake -q", "tests": 18, "passed": true, "pythonpath": "tests"},
+  "full_suite": {"command": "python -m unittest discover -s tests -q", "tests": 188, "passed": true, "skipped": 25, "host": "Windows ARM64", "python": "3.12"},
+  "offline_validation": {"passed": true, "local_links": 160, "pinned_files": 15},
+  "ravel_pin_verification": {"passed": true, "files": 15, "commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d", "working_tree_read": false},
+  "cloud_probe": {"cli_version": "0.162.0-alpha.17.2", "command": "codex cloud list --json --limit 1", "exit_code": 0, "tasks": 0, "cursor_present": false, "intended_environment_verified": false},
+  "coordinator_continuity": {"metadata_readable": true, "message_delivered": false, "message_error": "thread not found", "reservation_released": false},
+  "scientific_analysis_rerun": false,
+  "cloud_task_created": false,
+  "external_artifact_exported": false,
+  "b4_resumed": false,
+  "unattended_operation_qualified": false,
+  "schedule_enabled": false
+}

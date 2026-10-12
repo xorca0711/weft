@@ -44,6 +44,13 @@ The owner retained the descriptive benchmark; Ravel #149 is merged with passing 
 | Job controls | `jobs.py`, `executor.py`, `checkpoints.py`, `recovery.py`, `transfer_parts.py`; tested synthetic execution and manual cloud recovery | Connect discovery/reading jobs to one authoritative durable queue and supported agent handoff |
 | Live operation | Manually launched agent/cloud tasks | No unattended launcher, paid model API or recurring schedule configured |
 
+The [single-catalog handoff wrapper](BACKEND_HANDOFF.md) now adds synthetic-tested
+claim/return/recovery controls and private B3 intake staging. It does not join the
+Choi ledger or provide distributed fencing. [Launcher qualification](LAUNCHER_QUALIFICATION.md)
+has reached a successful read-only CLI listing, with intended environment and
+PC-off invocation still unverified. [Independent evaluation](B5_EVALUATION_PREPARATION.md)
+is prepared as a plan, not completed evidence.
+
 Existing tests establish bounded software behavior, not that the system finds
 all relevant papers or correctly judges scientific support. `validate-reading`
 checks source identities and locator existence; it does not establish entailment.

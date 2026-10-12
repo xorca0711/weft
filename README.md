@@ -47,6 +47,9 @@ show completed, qualified, partial, blocked and planned stages;
 [PR integration status](docs/PR_STACK_INTEGRATION.md) separates tested work from main.
 The earlier [manual cloud handoff and recovery](docs/SCREENING_CLOUD_QUALIFICATION.md)
 is qualified; independent screening evaluation remains open.
+The [cooperative handoff and private intake staging](docs/BACKEND_HANDOFF.md)
+now have synthetic recovery tests. The [documented cloud CLI probe](docs/LAUNCHER_QUALIFICATION.md)
+has not yet verified the intended environment or an unattended deployment.
 An unattended launcher and recurrence remain future work. Choi's bounded
 descriptive pilot is complete; it does not qualify the fresh-paper pipeline.
 

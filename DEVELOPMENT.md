@@ -12,6 +12,8 @@ autonomous workflow completion and scientific acceptance are not claimed.
 
 | Date | Item | Proposed by | Decided by | Decision | Reason |
 |---|---|---|---|---|---|
+| 2026-10-12 | Continue backend sequence using synthetic handoff/recovery and private intake tests | Codex | Owner authorized continuation; control implementation awaits PR review | Implemented locally; no cloud dispatch | Preserve completed Choi evidence and B4 hold while improving operational reliability |
+| 2026-10-12 | Cloud launcher qualification and coordinator continuity | Codex | No new deployment decision made | Read-only probes only; stop at missing route/authority | CLI lists no tasks; original coordinator messaging returns thread not found; no restored ledger activated |
 | 2026-10-11 | Separate repository with implementation plan and README diagram | Owner | Owner | Requested | Develop the literature-to-reanalysis workflow alongside Ravel |
 | 2026-10-11 | Public visibility | Codex offered options | Owner | Public from the start | Explicit response in the creation task |
 | 2026-10-11 | Weft name, architecture and Choi benchmark | Codex | Pending owner review of details | Implemented as initial proposal | Natural relationship to Ravel; known successes and limitations make an auditable pilot |

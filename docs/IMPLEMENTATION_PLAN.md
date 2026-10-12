@@ -20,7 +20,7 @@ candidate/no-candidate disposition. A positive phenotype or new RQ is not requir
 
 Status as of **12 October 2026**.
 
-**Current position: a tested manual workflow, with B4 blocked and unattended
+**Current position: a tested manual workflow plus synthetic handoff/intake controls, with B4 blocked and unattended
 operation still planned.** Cloud execution and checkpoint recovery work within
 the recorded scopes; independent screening quality and general scientific
 authorization are not established.
@@ -28,9 +28,14 @@ authorization are not established.
 | Track | Established | Remaining |
 |---|---|---|
 | Discovery and screening | Bounded Europe PMC discovery, deduplication, pinned RQ context, decision buffer, manual agent handoff and recovery | B3 material/semantic qualification, blocked B4 review, B5 independent evaluation and unattended launcher |
-| Cloud controls | Published environment, scoped job controls, manual coordinator and verified private Drive recovery | General unattended dispatch, retention/ownership guarantees and product-route usage controls |
+| Cloud controls | Published environment, scoped job controls, manual coordinator and verified private Drive recovery; local single-catalog handoff/recovery fixtures pass | Original coordinator continuity blocked; intended CLI environment unverified; general unattended dispatch, retention/ownership guarantees and usage controls |
 | Choi pilot | M4/M5 complete for the bounded benchmark: public outputs, verified recovery, owner descriptive retention and Ravel #149 merged | Reconcile the held coordinator before any future job; no general scientific eligibility inferred |
-| Integration into main | Weft PRs #1-#8 merged; each #4-#8 integration commit passed CI | Ravel #149 separately merged with passing main CI; this update records its bounded human disposition |
+| Integration into main | Weft PRs #1-#9 and Ravel #149/#150 merged with passing CI | New handoff/intake control change needs its scoped review; no fresh-paper scientific acceptance |
+
+The [backend handoff note](BACKEND_HANDOFF.md) describes the tested controls;
+[launcher qualification](LAUNCHER_QUALIFICATION.md) owns the deployment boundary.
+[B5 preparation](B5_EVALUATION_PREPARATION.md) records decisions to freeze, without
+inventing labels or claiming an independent evaluation has run.
 
 The [PR stack audit](PR_STACK_INTEGRATION.md) records merge order and verified
 conflict status. Implementation/testing, merge status and scientific acceptance

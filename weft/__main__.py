@@ -8,7 +8,7 @@ from .context import build_context
 from .discovery import Store, discover, stream_key, verify_run, write_json
 from .validation import ValidationError, read_json, validate_project, verify_ravel
 from .reading import prepare_reading, validate_reading
-from . import batches, screening, qualification
+from . import batches, screening, qualification, handoff, intake
 from .identity import digest
 from .reading_locations import relocate_readings
 
@@ -78,6 +78,24 @@ def main(argv=None):
         if name == "batch-reconcile":
             command.add_argument("--window", required=True, type=int)
             command.add_argument("--reason", required=True)
+    for name in ['handoff-init', 'handoff-claim', 'handoff-status', 'handoff-packet', 'handoff-submit', 'handoff-recover', 'intake-prepare', 'intake-verify']:
+        command = sub.add_parser(name, help='Private cooperative screening/intake control: ' + name)
+        command.add_argument('--store', type=Path, required=True)
+        if name == 'handoff-claim' or name.startswith('intake-'):
+            command.add_argument('--batch', required=True)
+        if name == 'handoff-claim':
+            command.add_argument('--actor', required=True)
+            command.add_argument('--lease-seconds', type=int, default=1800)
+        if name in {'handoff-packet', 'handoff-submit', 'handoff-recover'}:
+            command.add_argument('--claim', required=True)
+        if name == 'handoff-submit':
+            command.add_argument('--assessment', type=Path, required=True)
+        if name.startswith('intake-'):
+            command.add_argument('--candidate', required=True)
+            command.add_argument('--scope', choices=['data_review', 'rq_review'], required=True)
+        if name == 'intake-verify':
+            command.add_argument('--directory', type=Path, required=True)
+            command.add_argument('--manifest-sha256', required=True)
     args = parser.parse_args(argv)
     root = Path(__file__).resolve().parents[1]
     try:
@@ -133,6 +151,24 @@ def main(argv=None):
                     result = batches.export_digest(store, args.batch)
                 else:
                     result = batches.status_report(store, args.batch)
+        elif args.command.startswith(('handoff-', 'intake-')):
+            with Store(args.store) as store:
+                if args.command == 'handoff-init':
+                    result = handoff.initialize(store)
+                elif args.command == 'handoff-status':
+                    result = handoff.status(store)
+                elif args.command == 'handoff-claim':
+                    result = handoff.claim(store, args.batch, args.actor, lease_seconds=args.lease_seconds)
+                elif args.command == 'handoff-packet':
+                    result = handoff.packet(store, args.claim)
+                elif args.command == 'handoff-submit':
+                    result = handoff.submit(store, args.claim, read_json(args.assessment))
+                elif args.command == 'handoff-recover':
+                    result = handoff.recover(store, args.claim)
+                elif args.command == 'intake-prepare':
+                    result = intake.prepare(store, args.batch, args.candidate, args.scope)
+                else:
+                    result = intake.verify(store, args.batch, args.candidate, args.scope, args.directory, args.manifest_sha256)
         elif args.command == "discover":
             validate_project(root)
             policy = read_json(root / "configs/policy.json")
