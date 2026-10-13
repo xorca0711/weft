@@ -1,3 +1,4 @@
+import copy
 import json
 from pathlib import Path
 import unittest
@@ -73,3 +74,25 @@ class ReadingTests(unittest.TestCase):
         assessment["next_action"] = "claim_validated"
         with self.assertRaises(ValueError):
             validate_reading(receipt["directory"], assessment)
+
+    def test_invalid_types_and_nested_authority_are_rejected(self):
+        receipt = self.prepare()
+        baseline = self.assessment(receipt)
+        invalid = [None, {**baseline, "actor":42}, {**baseline, "scope":{}},
+                   {**baseline, "actor":"   "}]
+        for field, value in [("text",True),("locator",[]),("segment_sha256",42),
+                             ("scientific_execution_allowed",True)]:
+            assessment = copy.deepcopy(baseline)
+            assessment["statements"][0][field] = value
+            invalid.append(assessment)
+        invalid.append({**baseline,"statements":["unsupported"]})
+        for assessment in invalid:
+            with self.subTest(assessment=assessment),self.assertRaises(ValueError):
+                validate_reading(receipt["directory"],assessment)
+
+    def test_valid_hold_is_preserved(self):
+        receipt = self.prepare()
+        assessment = {**self.assessment(receipt),"next_action":"hold"}
+        result = validate_reading(receipt["directory"],assessment)
+        self.assertEqual(result["next_action"],"hold")
+        self.assertFalse(result["scientific_execution_allowed"])

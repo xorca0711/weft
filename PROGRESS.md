@@ -2,6 +2,47 @@
 
 Update this before stopping work, every session.
 
+## Partial-stage implementation review and hold retries — 13 October 2026
+
+Three owner-authorized review agents completed bounded discovery,
+screening/evaluation and launch-control work. Root integrated the CLI and
+reviewed discovery; the controls agent independently reviewed reading gate and
+evaluation changes. The [completion review](docs/ROADMAP_COMPLETION_REVIEW_20261013.md)
+records the phased remaining jobs and limits.
+
+- Correction/retraction links now hold affected current candidates across
+  retrieval order while preserving decisions and receipts. MED/PMC self-ID
+  conflicts and inconsistent paging fail conservatively; version links remain
+  nominations rather than merged identities.
+- Strict reading schemas preserve explicit holds. New offline `profile-coverage`,
+  `evaluation-plan` and `evaluation-score` commands report configuration gaps and
+  frozen-item accounting without model calls or scientific permission.
+- Launch journals reject reused task IDs and inconsistent state/receipt/history;
+  snapshot reads tolerate valid concurrent transitions. These are local controls,
+  not distributed fencing or cloud persistence guarantees.
+- The actual pinned context audit found 2/32 RQs configured (A0/A1), with A2–A31
+  requiring reviewed profiles. No search recall or real B5 evaluation was measured.
+- One newly authorized status-only follow-up per existing held worker: native
+  child still reports no runtime-status capability and ran no tests; B4 was again
+  rejected by the platform's biology-content restriction, with no completed status
+  result. No alternate route or replacement worker was used. Private transcripts
+  remain ignored under `runs/roadmap-completion-20261013/`.
+
+Validation: local full suite **250 tests, 225 passed, 25 platform skips**;
+offline configuration/documentation validation passed with 15 pinned files.
+Integration base was freshly fetched and remains `5cd4178af7cd706a51b8fb814f94c223c2fa32ab`.
+Delivery targets [PR #11](https://github.com/xorca0711/weft/pull/11); its current
+head checks record Linux CI separately from this local verification. It remains
+subject to integration review. No Choi rerun, B4 review, cloud test, deployment,
+support message, new export or schedule was performed.
+
+Next: review corrected code/CI; obtain platform integration review for L1 and
+resolution of B4's restriction before a permitted continuation; review remaining
+query profiles and independent B5 sample/reviewer/criteria. Remote coordinator
+ownership, interruption/cancellation recovery and PC-off operation need their
+own qualification. M6 remains disabled pending those results and an explicit
+cadence/scope/usage/export decision. Choi M4/M5 remain complete and preserved.
+
 ## Same-child diagnosis complete; platform review pending — 13 October 2026
 
 Root directly read the completed diagnostic turn. The child reports inspection

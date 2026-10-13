@@ -46,6 +46,14 @@ which status tool this particular child receives.
 
 ## Diagnosis complete; platform review next
 
+Subsequent owner-authorized status-only recheck on 13 October completed on this
+same child: it again reports 341 operations, 55 cloud skills and no executor
+skills, without a runtime-status tool or runtime skill. No status call, source
+retrieval or test was run. This confirms the continuing exposure blocker within
+the reported catalogs; it does not identify the underlying platform cause.
+Private evidence is retained with the [completion review](../ROADMAP_COMPLETION_REVIEW_20261013.md).
+No further probe is planned without new evidence.
+
 The owner sent exactly one capability-only follow-up to the existing child. Do
 not resend `MIR_SAME_CHILD_DIAGNOSTIC.txt` or the original launch prompt. No test,
 source fetch, installation, policy change, export or replacement task followed.

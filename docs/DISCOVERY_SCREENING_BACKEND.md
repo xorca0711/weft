@@ -1,9 +1,11 @@
 # Discovery and screening backend: next implementation sequence
 
-**12 October 2026: B1/B2 mechanics and manual cloud recovery are qualified.
+**13 October 2026: B1/B2 mechanics and manual cloud recovery are qualified.
 B3 software controls passed cloud qualification; actual material/semantic review
 remains partial. B4 is blocked by platform safety filtering. B5 independent
-evaluation and unattended operation are planned.**
+evaluation and unattended operation are pending; offline B5 accounting is implemented.**
+The [completion review](ROADMAP_COMPLETION_REVIEW_20261013.md) records new local
+fixes, the profile-coverage gap and same-worker retries that did not resolve holds.
 See the [command guide](BATCH_SCREENING.md) and [fresh-candidate development test](BATCH_PILOT_20261012.md).
 Prioritize discovery-to-screening orchestration. The existing Choi attempt is a
 completed, exposed test of manual compute, recovery and interpretation. Its public
@@ -20,7 +22,7 @@ benchmark as unseen screening evaluation.
 | B2 screening interface | **Qualified — manual handoff** | Five source-bound link proposals, one held XML assessment, before/after Drive verification and cross-host recovery | 143 links deferred; no independent decision-accuracy claim or unattended launcher |
 | B3 evidence and dataset qualification | **Partial — software qualified** | Source coverage/attachments, separate versioned data-use and RQ proposals; 55 targeted cloud tests and new-worker checkpoint restore passed | Actual figure/supplement coverage and proposed-use dataset/design review incomplete; holds remain |
 | B4 bounded screening batch | **Blocked — incomplete** | Manual search-to-screening path and checkpoint recovery demonstrated; source acquisition began | Platform safety rejection; preservation-only follow-up also rejected. Final transfer/store state unverified; no completed source-review digest or new after-review recovery |
-| B5 evaluation and recurrence | **Planned** | Evaluation requirements specified | Freeze independent unseen/contrary/low-ranked paper set; measure errors and missed papers; qualify launcher/recovery/usage controls before any cadence decision |
+| B5 evaluation and recurrence | **Partial — offline tooling only** | Frozen-plan/source validation and separate reading/data/RQ accounting tested on synthetic inputs | Freeze independent unseen/contrary/low-ranked sample, reviewers and criteria; measure errors and omissions; qualify launcher/recovery/usage controls before a cadence decision |
 
 Evidence: [manual cloud qualification](SCREENING_CLOUD_QUALIFICATION.md),
 [B3/B4 receipts and interruption](B3_CLOUD_B4_REVIEW.md). These are operational
@@ -37,7 +39,7 @@ The owner retained the descriptive benchmark; Ravel #149 is merged with passing 
 |---|---|---|
 | Ravel context | `weft/context.py`; all 32 pinned question identities | Query profiles initially cover A0/A1, not every RQ; dossier contents need source-specific reading |
 | Discovery | `weft/europe_pmc.py`, `weft/discovery.py`; explicit bounded searches, cursors, overlap windows and receipts | Batch coordination and bounded date splitting now implemented; broader recall evaluation and recurrence remain open |
-| Identity and deduplication | `weft/identity.py`; strong IDs, conflicts, changed-snapshot invalidation | Complete edition/correction-family reconciliation; dataset lineage is a separate relation |
+| Identity and deduplication | `weft/identity.py`; strong IDs/conflicts, changed-snapshot invalidation, exact correction/retraction holds and attributed version nominations | Broader notice retrieval and scientific edition/dataset-lineage adjudication remain separate work |
 | Candidate buffer | Persistent proposed links; `pending_review -> read_next / held / rejected` | Pull-based structured agent proposals now implemented; independent decision-quality evaluation remains open |
 | Reading | `weft/reading.py`; open-access XML packets and assessment hash/locator checks | Manual cloud screening handoff qualified; figure/supplement coverage and independent screening evaluation remain open |
 | Scientific eligibility | G3-G8 specification and Ravel's existing runner/governance | Weft does not implement the semantic scientific gate engine or its full transitions |
@@ -148,9 +150,10 @@ the launcher and its failure/recovery controls before unattended operation.
 The [remote architecture sequence](REMOTE_AUTOMATION_ARCHITECTURE.md) starts with
 read-only inspection of Mir's native environment-selecting delegation. The owner
 relayed its schema and target catalog; root checked historical version continuity.
-[Identity and publication observations](qualification/NATIVE_LAUNCH_INTERFACE.md)
-remain missing; configured network settings are shown in owner screenshots, and
-actual admission has not been exercised.
+[Owner settings and same-workspace availability](qualification/NATIVE_LAUNCH_INTERFACE.md)
+are recorded, and one native task was admitted. Its HOLD receipt/log were recovered;
+runtime-status access remains missing on the latest same-child recheck. Independent
+AI-host identity, current runtime enforcement and durable ownership remain unqualified.
 The local CLI is an optional adapter, not the required coordinator or a prerequisite
 for native qualification. No live provider adapter is implemented by this plan.
 A missing API must result in a documented deployment decision, not

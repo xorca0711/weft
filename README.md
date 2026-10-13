@@ -53,12 +53,20 @@ now have synthetic recovery tests. One owner-operated
 isolated tests once; exact receipt/log recovery and same-task readback passed.
 The task is idle. The automated browser route remains blocked and the
 [documented CLI probe](docs/LAUNCHER_QUALIFICATION.md) has not verified its environment route.
-An unattended launcher and recurrence remain future work. Choi's bounded
+Mir's native route admitted one task and recovered its HOLD result; execution
+remains blocked by missing runtime-status access. An unattended operational
+workflow and recurrence remain unqualified. Choi's bounded
 descriptive pilot is complete; it does not qualify the fresh-paper pipeline.
 PR #10's handoff/intake controls are now merged with passing main CI. The next
 [launch-intent recovery guard](docs/LAUNCH_INTENT_RECOVERY.md) is tested offline;
 the [readiness note](docs/AUTOMATED_LAUNCH_READINESS.md) separates that software work
 from the unresolved automated-launcher access and deployment requirements.
+
+The [13 October completion review](docs/ROADMAP_COMPLETION_REVIEW_20261013.md)
+adds correction-notice reconciliation, query-profile coverage auditing, stricter
+reading holds, offline evaluation accounting and stronger launch-journal checks.
+Queries currently cover A0/A1 out of 32 RQs. Same-worker retries leave native
+runtime qualification and B4 held; independent evaluation and scheduling remain open.
 
 ## Intended workflow
 
@@ -99,7 +107,8 @@ archives. There is no separate Google Cloud Platform project, VM or storage buck
 The [PC-off automation plan](docs/REMOTE_AUTOMATION_ARCHITECTURE.md) targets
 **Mir's native delegation → existing `weft-pilot` → verified Drive recovery →
 reviewable Ravel intake**. Mir reports the native selector and repository mapping;
-[current identity and publication checks remain open](docs/qualification/NATIVE_LAUNCH_INTERFACE.md).
+[owner settings and native admission are recorded](docs/qualification/NATIVE_LAUNCH_INTERFACE.md);
+the [runtime-status integration remains unavailable](docs/qualification/NATIVE_RUNTIME_HOLD.md).
 CLI integration is optional; automatic scheduling remains disabled.
 The plan includes the architecture diagram, staged qualification and an API
 contingency requiring a separate access and budget decision.

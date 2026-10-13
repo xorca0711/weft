@@ -47,6 +47,10 @@ acknowledgement replay are idempotent; beginning an occurrence twice is refused.
 Changed source, prompt, account, environment or policy cannot reuse an occurrence.
 Acknowledgement binds the saved specification hash to one observed task ID and
 an externally retained observation hash; conflicting receipts stay rejected.
+The same task ID cannot acknowledge a second operation in this journal, even
+after the first acknowledgement. An inconsistent saved state, receipt or event
+history is rejected. Reading state and history uses one SQLite snapshot so a
+concurrent valid transition does not cause a false corruption report.
 
 The strict version-1 specification contains `schema_version: 1`,
 `kind: synthetic-qualification`, a stable `operation_key`, `repository`, the
@@ -81,5 +85,8 @@ An acknowledgement neither means task completion nor frees a scientific-job slot
 Offline fixtures cover concurrent begins, lost output/reopen, strict synthetic
 scope, changed bindings, exact/conflicting acknowledgements, transaction rollback,
 tampering, existing-file preservation and inactive restored copies. They do not
+establish cross-journal uniqueness. The new duplicate-task and concurrent-read
+regressions are described in the [completion review](ROADMAP_COMPLETION_REVIEW_20261013.md).
+These fixtures do not
 qualify provider submission or cloud restart retention. The
 [launcher readiness decision](AUTOMATED_LAUNCH_READINESS.md) remains external.

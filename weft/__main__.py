@@ -8,7 +8,7 @@ from .context import build_context
 from .discovery import Store, discover, stream_key, verify_run, write_json
 from .validation import ValidationError, read_json, validate_project, verify_ravel
 from .reading import prepare_reading, validate_reading
-from . import batches, screening, qualification, handoff, intake, launches
+from . import batches, screening, qualification, handoff, intake, launches, coverage, evaluation
 from .identity import digest
 from .reading_locations import relocate_readings
 
@@ -23,6 +23,15 @@ def main(argv=None):
     context.add_argument("--repo", required=True, type=Path)
     context.add_argument("--rq", nargs="+")
     context.add_argument("--output", required=True, type=Path)
+    coverage_parser = sub.add_parser("profile-coverage", help="Audit configured queries against all pinned RQs; no retrieval or recall estimate")
+    coverage_parser.add_argument("--repo", required=True, type=Path)
+    evaluation_plan = sub.add_parser("evaluation-plan", help="Validate an externally reviewed evaluation plan and print its canonical JSON hash")
+    evaluation_plan.add_argument("--plan", required=True, type=Path)
+    evaluation_score = sub.add_parser("evaluation-score", help="Offline judgment accounting; no scientific pass or dispatch")
+    evaluation_score.add_argument("--plan", required=True, type=Path)
+    evaluation_score.add_argument("--plan-sha256", required=True)
+    evaluation_score.add_argument("--predictions", required=True, type=Path)
+    evaluation_score.add_argument("--references", required=True, type=Path)
     search = sub.add_parser("discover", help="Explicit, bounded Europe PMC metadata retrieval")
     search.add_argument("--repo", required=True, type=Path)
     search.add_argument("--profile", required=True)
@@ -113,6 +122,16 @@ def main(argv=None):
             result = validate_project(root)
         elif args.command == "verify-ravel":
             result = verify_ravel(args.repo, read_json(root / "integration/ravel.lock.json"))
+        elif args.command == "profile-coverage":
+            packet = build_context(args.repo, read_json(root / "integration/ravel.lock.json"))
+            result = coverage.audit_profiles(read_json(root / "configs/search_profiles.json"), packet)
+        elif args.command == "evaluation-plan":
+            result = evaluation.validate_plan(read_json(args.plan))
+        elif args.command == "evaluation-score":
+            plan = read_json(args.plan)
+            if evaluation.fingerprint(plan) != args.plan_sha256:
+                raise ValidationError("Evaluation plan differs from the frozen canonical JSON hash")
+            result = evaluation.evaluate(plan, read_json(args.predictions), read_json(args.references))
         elif args.command == "context":
             packet = build_context(args.repo, read_json(root / "integration/ravel.lock.json"), args.rq)
             args.output.parent.mkdir(parents=True, exist_ok=True)

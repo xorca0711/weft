@@ -51,7 +51,7 @@ class LaunchTests(unittest.TestCase):
                         {'schema_version': True}, {'extra': 'unreviewed'}, {'policy_sha256': 'unknown'}]:
             with self.subTest(changes=changes), self.assertRaises(ValueError):
                 self.journal.prepare({**self.spec, **changes}, self.prompt)
-        for prompt in [b'', self.prompt + b'changed', b'x' * 100001]:
+        for prompt in [b'', self.prompt + b'changed', self.prompt[:-1], b'x' * 100001]:
             with self.assertRaises(ValueError):
                 self.journal.prepare(self.spec, prompt)
 
@@ -117,6 +117,23 @@ class LaunchTests(unittest.TestCase):
                 self.journal.acknowledge(self.spec['operation_key'], {**self.receipt(), **changes})
         self.assertEqual(self.journal.status(self.spec['operation_key'])['state'], 'awaiting_ack')
 
+    def test_task_cannot_acknowledge_a_different_operation(self):
+        self.prepare()
+        self.journal.begin(self.spec, self.prompt)
+        first = self.journal.acknowledge(self.spec['operation_key'], self.receipt())
+        other = {**self.spec, 'operation_key': 'fixture-occurrence-2'}
+        self.journal.prepare(other, self.prompt)
+        pending = self.journal.begin(other, self.prompt)
+        receipt = {**self.receipt(), 'operation_key': other['operation_key'],
+                   'spec_sha256': pending['spec_sha256']}
+        with self.assertRaisesRegex(ValueError, 'already bound to another operation'):
+            self.journal.acknowledge(other['operation_key'], receipt)
+        self.assertEqual(self.journal.status(self.spec['operation_key']), first)
+        self.assertEqual(self.journal.status(other['operation_key']), pending)
+        self.assertEqual(self.journal.db.execute(
+            "SELECT COUNT(*) FROM launch_events WHERE action='acknowledgement-recorded'"
+        ).fetchone()[0], 1)
+
     def test_restore_is_observable_but_inactive(self):
         self.prepare()
         self.journal.begin(self.spec, self.prompt)
@@ -159,6 +176,57 @@ class LaunchTests(unittest.TestCase):
         self.journal.db.execute("UPDATE launch_intents SET spec_json='{}'")
         with self.assertRaisesRegex(ValueError, 'specification changed'):
             self.journal.status(self.spec['operation_key'])
+
+    def test_state_cannot_regress_past_committed_begin(self):
+        self.prepare()
+        self.journal.begin(self.spec, self.prompt)
+        self.journal.db.execute("UPDATE launch_intents SET state='prepared'")
+        with self.assertRaisesRegex(ValueError, 'state/history mismatch'):
+            self.journal.begin(self.spec, self.prompt)
+        self.assertEqual(self.journal.db.execute(
+            "SELECT COUNT(*) FROM launch_events WHERE action='submission-intent-committed'"
+        ).fetchone()[0], 1)
+
+    def test_saved_acknowledgement_requires_scope_and_state_consistency(self):
+        self.prepare()
+        self.journal.begin(self.spec, self.prompt)
+        receipt = self.receipt()
+        self.journal.acknowledge(self.spec['operation_key'], receipt)
+        changed = json.dumps({**receipt, 'operation_key': 'other'})
+        self.journal.db.execute('UPDATE launch_intents SET receipt_json=?,receipt_sha256=?',
+                                (changed, hashlib.sha256(changed.encode()).hexdigest()))
+        with self.assertRaisesRegex(ValueError, 'scope changed'):
+            self.journal.status(self.spec['operation_key'])
+        self.journal.db.execute('UPDATE launch_intents SET receipt_json=NULL,receipt_sha256=NULL')
+        with self.assertRaisesRegex(ValueError, 'state mismatch'):
+            self.journal.status(self.spec['operation_key'])
+
+    def test_saved_history_evidence_drift_is_held(self):
+        self.prepare()
+        self.journal.db.execute("UPDATE launch_events SET evidence_sha256=?", ('f' * 64,))
+        with self.assertRaisesRegex(ValueError, 'state/history mismatch'):
+            self.journal.begin(self.spec, self.prompt)
+        self.assertEqual(self.journal.db.execute('SELECT state FROM launch_intents').fetchone()[0], 'prepared')
+
+    def test_status_reads_state_and_history_from_one_snapshot(self):
+        self.prepare()
+        self.journal.db.execute('PRAGMA journal_mode=WAL')
+        progressed = []
+
+        def interleave(statement):
+            if statement.startswith('SELECT action,evidence_sha256') and not progressed:
+                progressed.append(True)
+                with launches.LaunchJournal(self.path) as other:
+                    other.begin(self.spec, self.prompt)
+
+        self.journal.db.set_trace_callback(interleave)
+        try:
+            snapshot = self.journal.status(self.spec['operation_key'])
+        finally:
+            self.journal.db.set_trace_callback(None)
+        self.assertEqual(progressed, [True])
+        self.assertEqual(snapshot['state'], 'prepared')
+        self.assertEqual(self.journal.status(self.spec['operation_key'])['state'], 'awaiting_ack')
 
     def test_interrupted_transaction_does_not_emit_a_begin_result(self):
         self.prepare()

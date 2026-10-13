@@ -1,5 +1,15 @@
 # Agent entry point
 
+- Latest: [backend completion review](docs/ROADMAP_COMPLETION_REVIEW_20261013.md).
+  Three authorized agents completed bounded discovery, reading/evaluation and
+  launch-journal fixes; root integrated offline CLI commands. B5 tooling is
+  implemented, but independent B5 qualification remains pending. Queries cover
+  A0/A1 only; the full pinned catalog has 32 RQs. Latest same-worker status-only
+  retries leave native runtime capability absent and B4 platform-rejected.
+  Do not repeat those probes without new evidence or reroute B4. No cloud tests,
+  scientific rerun, deployment or schedule resulted. See PROGRESS for validation
+  and integration status; older dated observations below retain their scope.
+
 - Remote automation: [architecture and L0–L4 sequence](docs/REMOTE_AUTOMATION_ARCHITECTURE.md).
   Qualify native Mir → existing `weft-pilot` first; CLI compatibility is optional.
   The owner relayed Mir's native-selector/catalog report. Root verified exact

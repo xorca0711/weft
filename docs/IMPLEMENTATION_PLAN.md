@@ -25,12 +25,17 @@ operation still planned.** Cloud execution and checkpoint recovery work within
 the recorded scopes; independent screening quality and general scientific
 authorization are not established.
 
+The [13 October completion review](ROADMAP_COMPLETION_REVIEW_20261013.md) closes
+specific discovery, reading and local launch-control defects and adds offline B5
+accounting. It records the same-worker retries and the exact remaining sequence.
+These software completions do not remove the B4/L1 holds or qualify recurrence.
+
 | Track | Established | Remaining |
 |---|---|---|
 | Discovery and screening | Bounded Europe PMC discovery, deduplication, pinned RQ context, decision buffer, manual agent handoff and recovery | B3 material/semantic qualification, blocked B4 review, B5 independent evaluation and unattended launcher |
 | Cloud controls | Published environment, manual coordinator and verified Drive recovery; owner-operated task passed 18 pinned fixtures once; Mir's selector/catalog version reconciled; owner screenshots confirm the network preset and full custom-host list | One native task admitted; HOLD receipt/log recovered, zero tests invoked. Same-child diagnosis complete: runtime tool/skill absent from reported catalogs, platform review pending; independent AI-host identity, enforcement, ownership and usage controls unqualified. Browser blocked; CLI optional and unmapped |
 | Choi pilot | M4/M5 complete for the bounded benchmark: public outputs, verified recovery, owner descriptive retention and Ravel #149 merged; final 32-event administrative release independently recovered | Preserve bounded interpretation and checkpoint ancestry; no new-job authority or general scientific eligibility inferred |
-| Integration into main | Weft PRs #1-#10 and Ravel #149/#150 merged with passing CI; #10 control review completed within its cooperative scope | Offline launch-intent journal implemented/tested in open PR #11; diagnosis and remote architecture revisions remain local; no fresh-paper scientific acceptance |
+| Integration into main | Weft PRs #1-#10 and Ravel #149/#150 merged with passing CI; #10 control review completed within its cooperative scope | Launch-journal corrections, discovery/evaluation additions and updated diagnosis await integration; PROGRESS records exact PR/CI status; no fresh-paper scientific acceptance |
 
 The [backend handoff note](BACKEND_HANDOFF.md) describes the tested controls;
 [launcher qualification](LAUNCHER_QUALIFICATION.md) owns the deployment boundary.
@@ -104,8 +109,8 @@ These labels do not promote any scientific claim or record human acceptance.
 | Milestone | Status | Established evidence | Remaining exit requirement |
 |---|---|---|---|
 | M0 foundation | **Complete — baseline** | Repository, source pins, Ravel context and decision-buffer ownership are implemented; [integration contract](RAVEL_CONNECTION.md) | Preserve version/authority boundaries as features extend |
-| M1 discovery and identity | **Partial** | Bounded search, deduplication, batch coordination and receipts; [development batch](BATCH_PILOT_20261012.md) | Broader recall, correction/edition-family reconciliation and query coverage beyond A0/A1 |
-| M2 reading and coordinator | **Partial** | Source-bound XML packets, five manual cloud screening responses, dot dispatch/return and checkpoint recovery; [cloud qualification](SCREENING_CLOUD_QUALIFICATION.md) | Complete figure/supplement/design review and independent screening evaluation; general automated eligibility remains unimplemented |
+| M1 discovery and identity | **Partial — mechanics extended** | Bounded search/deduplication/receipts, exact provider correction reconciliation, version nominations and all-RQ configuration audit; [completion review](ROADMAP_COMPLETION_REVIEW_20261013.md) | Reviewed profiles for A2–A31, independent recall evaluation, broader correction-feed monitoring and scientific edition/lineage adjudication |
+| M2 reading and coordinator | **Partial — software gates strengthened** | Source-bound XML, manual cloud handoff/recovery, strict reading hold preservation and offline B5 accounting; [cloud qualification](SCREENING_CLOUD_QUALIFICATION.md) | Complete permitted figure/supplement/design review and independent B5 evaluation; general automated scientific eligibility remains unimplemented |
 | M3a cloud setup | **Qualified — selected environment** | Setup d031cef; new task confirmed enforced policy, exact source pins and 42-member restore; [latest receipt](../records/b3-cloud-b4-boundary-20261012.json) | Recheck live readiness per job; current B4 interruption is a separate platform hold |
 | M3b job and artifact controls | **Partial — manual route qualified** | Ledger/leases, bounded executor, synthetic cancellation/recovery, manual coordinator and verified Drive checkpoints; [job controls](JOB_CONTROLS.md) | Supported unattended launcher, durable queue ownership, usage controls and failure qualification for that route |
 | M4a scientific readiness | **Qualified — frozen Choi attempt only** | Contract/runtime, metadata, bounded preflight and artifact recovery verified; [pilot records](MANUAL_PILOT.md) | Each new paper/use requires its own contract, inputs, resource checks and authorization |

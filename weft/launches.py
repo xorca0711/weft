@@ -89,6 +89,29 @@ class LaunchJournal:
             raise ValueError('Saved launch specification changed')
         if row['receipt_json'] is not None and _hash(row['receipt_json'].encode()) != row['receipt_sha256']:
             raise ValueError('Saved acknowledgement changed')
+        acknowledged = row['state'] == 'acknowledged'
+        if (row['receipt_json'] is not None) != acknowledged or (row['receipt_sha256'] is not None) != acknowledged:
+            raise ValueError('Saved acknowledgement/state mismatch')
+        if acknowledged:
+            receipt = json.loads(row['receipt_json'])
+            fields = {'operation_key', 'spec_sha256', 'task_id', 'observation_sha256'}
+            if (not isinstance(receipt, dict) or set(receipt) != fields
+                    or receipt['operation_key'] != key or receipt['spec_sha256'] != row['spec_sha256']
+                    or not _text(receipt['task_id']) or not isinstance(receipt['observation_sha256'], str)
+                    or not re.fullmatch('[0-9a-f]{64}', receipt['observation_sha256'])):
+                raise ValueError('Saved acknowledgement scope changed')
+        # Validate the short persisted transition prefix before trusting its state.
+        # This detects accidental drift, not an administrator rewriting all evidence.
+        expected = [('prepared', row['spec_sha256'])]
+        if row['state'] in {'awaiting_ack', 'acknowledged'}:
+            expected.append(('submission-intent-committed', row['spec_sha256']))
+        if acknowledged:
+            expected.append(('acknowledgement-recorded', row['receipt_sha256']))
+        history = self.db.execute(
+            'SELECT action,evidence_sha256 FROM launch_events WHERE operation_key=? ORDER BY sequence',
+            (key,)).fetchall()
+        if [tuple(item) for item in history] != expected:
+            raise ValueError('Saved launch state/history mismatch')
         return row
 
     def _event(self, key, action, sha):
@@ -142,17 +165,35 @@ class LaunchJournal:
                 if row['receipt_json'] != encoded:
                     raise ValueError('Conflicting task acknowledgement; preserve prior evidence')
             else:
+                # One observed provider task cannot settle two distinct intents.
+                # BEGIN IMMEDIATE also serializes this check with acknowledgement writes.
+                prior = self.db.execute(
+                    'SELECT operation_key FROM launch_intents WHERE receipt_json IS NOT NULL'
+                ).fetchall()
+                for existing in prior:
+                    saved = self._row(existing['operation_key'])
+                    if json.loads(saved['receipt_json'])['task_id'] == receipt['task_id']:
+                        raise ValueError('Task ID already bound to another operation; preserve uncertainty')
                 sha = _hash(encoded.encode())
                 self.db.execute("UPDATE launch_intents SET state='acknowledged',receipt_json=?,receipt_sha256=? WHERE operation_key=?", (encoded, sha, key))
                 self._event(key, 'acknowledgement-recorded', sha)
         return self.status(key)
 
     def status(self, key):
-        row = self._row(key)
-        return {'operation_key': key, 'state': row['state'], 'active_binding': self._active(),
-                'spec_sha256': row['spec_sha256'], 'receipt_sha256': row['receipt_sha256'],
-                'acknowledgement': json.loads(row['receipt_json']) if row['receipt_json'] else None,
-                'resubmission_allowed': False, **FLAGS}
+        # Read the materialized state and history in one snapshot. Another caller
+        # may legitimately advance the journal between the two SELECT statements.
+        own_snapshot = not self.db.in_transaction
+        if own_snapshot:
+            self.db.execute('BEGIN')
+        try:
+            row = self._row(key)
+            return {'operation_key': key, 'state': row['state'], 'active_binding': self._active(),
+                    'spec_sha256': row['spec_sha256'], 'receipt_sha256': row['receipt_sha256'],
+                    'acknowledgement': json.loads(row['receipt_json']) if row['receipt_json'] else None,
+                    'resubmission_allowed': False, **FLAGS}
+        finally:
+            if own_snapshot:
+                self.db.rollback()
 
 
 def initialize(path):

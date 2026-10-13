@@ -12,6 +12,7 @@ autonomous workflow completion and scientific acceptance are not claimed.
 
 | Date | Item | Proposed by | Decided by | Decision | Reason |
 |---|---|---|---|---|---|
+| 2026-10-13 | Complete feasible partial backend stages and retry existing holds | Owner requested parallel review and continuation | Owner authorized scope; code remains subject to PR review | Three bounded agents implemented discovery reconciliation, reading fixes, offline B5 accounting and local launch-journal integrity; root integrated/reviewed | Preserve historical evidence, expose concrete gaps and stop at unresolved platform/scientific/deployment boundaries |
 | 2026-10-12 | Continue backend sequence using synthetic handoff/recovery and private intake tests | Codex | Owner authorized continuation; control implementation awaits PR review | Implemented locally; no cloud dispatch | Preserve completed Choi evidence and B4 hold while improving operational reliability |
 | 2026-10-12 | Cloud launcher qualification and coordinator continuity | Codex | No new deployment decision made | Read-only probes only; stop at missing route/authority | CLI lists no tasks; original coordinator messaging returns thread not found; no restored ledger activated |
 | 2026-10-11 | Separate repository with implementation plan and README diagram | Owner | Owner | Requested | Develop the literature-to-reanalysis workflow alongside Ravel |
@@ -38,6 +39,22 @@ autonomous workflow completion and scientific acceptance are not claimed.
 | 2026-10-12 | Treat the first lexical candidates as a priority shortlist or completed scientific screening | Dental alveolar matches, duplicate per-RQ review cost and incomplete source coverage require separate evaluation; retain frozen results | Codex implementation review; proposed query/ranking revisions remain unadopted |
 
 Future reviews append decisions and rejections rather than overwriting them.
+
+### Backend review disposition — 13 October 2026
+
+The remote-controls reviewer independently reviewed stricter reading types,
+held-assessment behavior and evaluation authority boundaries; no blocking defect
+was found. Root reviewed exact-ID correction reconciliation and its preservation
+and stale-packet regressions. The evaluator's denominator is a frozen item/packet,
+not an independent paper; documentation records unblinded-reference and exposure
+limits. These reviews cover software semantics, not human scientific acceptance.
+
+The full local suite ran 250 tests (225 passed, 25 platform skips). The
+[completion review](docs/ROADMAP_COMPLETION_REVIEW_20261013.md) separates software
+completion from B4's repeated platform rejection and L1's missing runtime-status
+capability. Neither hold was weakened; no replacement worker was created. Exact
+cloud source/prompt freezes and completed Choi outputs remain unchanged.
+
 Repository creation does not mean every scientific or operational proposal has
 been accepted. No software license has yet been selected by the owner; public
 visibility alone does not grant an open-source license.

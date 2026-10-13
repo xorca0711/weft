@@ -165,6 +165,12 @@ actual saved configuration when separately authorized. [Dot tasks and memory](ht
 
 ## Immediate handoff and stop condition
 
+The [completion review](ROADMAP_COMPLETION_REVIEW_20261013.md) records additional
+local journal controls and offline evaluation tooling. A newly authorized
+same-child status-only recheck still reports no runtime-status tool/skill; the
+B4 status-only retry was again platform-rejected. No further retry or alternate
+route is justified by these results. Preserve both existing occurrences.
+
 The [Mir capability check](qualification/MIR_LAUNCH_CAPABILITY_CHECK.md) returned
 a schema/catalog report; see the [interface mapping](qualification/NATIVE_LAUNCH_INTERFACE.md).
 The owner confirms same-workspace availability; the network-setting screenshots
