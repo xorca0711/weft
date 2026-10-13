@@ -1,5 +1,11 @@
 # Agent entry point
 
+- Latest access check: [read-only launcher diagnosis](docs/LAUNCHER_ACCESS_DIAGNOSIS.md).
+  CLI AI-host identity and loaded browser allow rule are verified. Active browser
+  policy provenance remains unknown; CLI exposes no named environments and rejects
+  the known durable worker ID, although the app reader still finds that worker idle.
+  Stop at product troubleshooting; no new launch, settings or account change.
+
 - Latest continuation: [launcher readiness and PR #10 review](docs/AUTOMATED_LAUNCH_READINESS.md).
   PR #10 merged at `5cd4178af7cd706a51b8fb814f94c223c2fa32ab`; main CI passed.
   The [offline launch-intent journal](docs/LAUNCH_INTENT_RECOVERY.md) is the next

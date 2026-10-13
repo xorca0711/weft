@@ -2,6 +2,30 @@
 
 Update this before stopping work, every session.
 
+## Read-only launcher access diagnosis — 13 October 2026
+
+[Diagnostic findings](docs/LAUNCHER_ACCESS_DIAGNOSIS.md): the supported CLI account
+read confirms the designated AI-host identity. Its loaded configuration also
+confirms the browser origin is allowed; the requirements read returns null.
+However, active thread overrides are not inspected, and bounded desktop logs
+did not expose the effective browser decision. The mismatch remains unresolved.
+
+The CLI environment picker loads only its global option, with no named
+environments. Its empty task list has no next cursor. It rejects the existing
+synthetic worker ID with HTTP 404 / `Invalid task ID`, while the supported app
+reader still finds that exact worker idle with its last turn completed. CLI
+account identity is established; mapping to published `weft-pilot` is not.
+
+Stopped at product troubleshooting for active-policy provenance and supported
+CLI/durable-environment mapping. No task, inference, token inspection, login,
+account switch, settings change, upgrade, support submission or new deployment
+occurred. Private diagnostics remain ignored locally. Choi/B4/M6 are unchanged;
+no PR was merged or cloud analysis rerun. See the diagnostic for exact next steps.
+Offline validation passed **181 local links and 15 source pins**; Git whitespace
+checks passed. Runtime and biological tests were not repeated for this
+documentation-only diagnosis. The update is saved locally on the scoped
+`codex/launcher-access-diagnosis-20261013` branch; no remote publication occurred.
+
 ## PR #10 integrated; offline launch-intent recovery — 13 October 2026
 
 The owner requested proceeding through the recommended steps. Root reviewed

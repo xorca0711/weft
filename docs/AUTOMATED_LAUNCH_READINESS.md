@@ -17,6 +17,12 @@ or schedules. PR #10 merged at `5cd4178af7cd706a51b8fb814f94c223c2fa32ab`.
 
 ## Route evidence and next access dependency
 
+The later [read-only diagnosis](LAUNCHER_ACCESS_DIAGNOSIS.md) confirms the CLI's
+designated AI-host identity and loaded browser allow rule. The CLI environment
+picker has no named environments and rejects the known durable worker ID;
+the app reader still finds that same worker idle. Account identity is now known,
+but the environment mapping and effective browser-policy source remain unresolved.
+
 | Route | Evidence | Remaining requirement |
 |---|---|---|
 | Owner selects Cloud / weft-pilot | One task ran pinned isolated fixtures and returned independently verified bytes | A manual task/run/return route only; no automated submission proof |
