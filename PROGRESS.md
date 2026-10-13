@@ -2,6 +2,112 @@
 
 Update this before stopping work, every session.
 
+## Synthetic launcher qualification — 13 October 2026
+
+The owner authorized verifying the intended cloud route and one synthetic-only
+task in existing `weft-pilot`. The [frozen qualification scope](docs/SYNTHETIC_LAUNCH_QUALIFICATION.md)
+pins PR #10 revision `2c12090444e52108254f1c57831ecf80f239770f` and its 18 existing
+handoff/intake fixtures, with one submission/attempt, a 180-second test-process
+deadline and exact result readback. This is not approval to adopt the controls
+on live screening catalogs, merge the PR or enable recurrence.
+
+**One owner-operated cloud task is now observed.** The owner supplied the link to
+`Run weft synthetic qualification`; supported task inspection and continuation work.
+Root made no submission. Its configuration/version IDs match the recorded
+`weft-pilot` publication, and a bounded readiness recheck changed the observed
+enforcement state from unknown to current/enforced. Root did not verify that
+environment or persist an intent before the owner's launch; the formal
+pre-submission procedure is not claimed to have passed.
+
+**Passed and idle:** the same task subsequently fetched and verified the exact
+pin through the unchanged Git route, then ran all **18 tests once, with zero
+failures/errors/skips, exit 0 and no timeout**. Existing unprivileged Bubblewrap
+provided read-only source, private scratch and separate namespaces with no network
+route. The 180-second subprocess deadline was armed; cancellation was not exercised.
+The process exited and its launcher process group was absent. Root independently
+reconstructed and hash-verified the 3,334-byte receipt and 98-byte log, then
+confirmed identical same-task readback and idle task state. No synthetic job remains.
+[Sanitized evidence](records/synthetic-cloud-task-20261013.json).
+
+The first source fetch's authentication error remains unexplained. A read-only
+Git discovery diagnostic returned HTTP 200 before the successful continuation;
+no credentials, settings or access were changed. All earlier stop/diagnostic
+receipts remain preserved and independently hash-verified. Private submission
+state and exact receipts are under `runs/launcher-qualification-20261013`.
+
+Browser automation remains blocked after the owner-confirmed allow setting and
+restart/retry. Do not ask for that setting again, bypass the denial or create a
+duplicate task. A manually launched task does not establish unattended launching,
+PC-off invocation by Mir, cloud submission idempotency or retention. Choi closeout
+is complete; B4 stays held and M6 disabled. No runtime code or scientific outputs
+changed. This task's status does not establish quiescence of the interrupted B4 worker.
+
+Next: explicit PR #10 control review before operational adoption; product
+troubleshooting for the browser policy mismatch; supported automated-launcher,
+ownership/retention and usage qualification before any recurrence. B5 still needs
+an agreed independent sample, reviewer and frozen criteria. These are unresolved
+roadmap gates, not jobs silently dispatched by this successful manual test.
+
+Documentation/configuration validation passed: 168 local links and 15 source pins;
+Git whitespace checks passed. No local fixture rerun was needed for this
+documentation/evidence update; current PR CI is checked after publication.
+
+## Backend continuation — 12 October 2026
+
+Implemented the [cooperative screening handoff and private intake staging](docs/BACKEND_HANDOFF.md)
+on a scoped branch from main `5ca2a58857b22968571c4389651862e17ee8dc35`.
+Eighteen new synthetic tests pass; the full suite passes 188 tests (25 skips on
+Windows ARM64), offline validation checks 161 links and all 15 pinned Ravel blobs
+verify. Tests include interrupted-return recovery, no duplicate
+claim, expiry holds, restored-copy refusal, current-source checks and intake
+tampering/supersession. This is one-catalog software qualification, not a durable
+distributed queue, authenticated worker or unattended deployment.
+
+The [supported-launcher probe](docs/LAUNCHER_QUALIFICATION.md) found the documented
+experimental cloud CLI. Its authenticated listing returned no tasks; the intended
+environment/account route remains unverified. No cloud task was launched.
+Direct messaging to the original Choi coordinator failed with `thread not found`.
+The owner subsequently relayed Mir's successful continuity report: 30 events,
+two scientific attempts and the held reservation, with the live database and
+backup logically identical despite different SQLite byte hashes. A fresh
+read-only check in the original worker at **23:01:33 KST on 12 October** verified
+matching runtime identity, the original container exited with code 0/no OOM,
+PID 0 and captured process identities absent in the visible namespace.
+The owner approved the exact administrative checkpoint export, and Mir reported
+one upload. Root independently verified the expected Drive identity, owner-only
+file/parent, downloaded all 148,366 bytes and checked the archive/member hashes,
+ZIP CRC, source/schema/parent anchors and a fresh inactive read-only restore.
+Exactly one `administrative_closeout_reviewed` event is present: 31 total events,
+the exact original 30-event prefix and both scientific rows preserved. That
+checkpoint retains the historical HELD state. The owner then separately approved
+release and the exact final-checkpoint export. Root independently downloaded the
+156,558-byte final archive from the verified owner-only Drive destination and
+passed hashes/CRC, identity/source/schema/parent and fresh read-only restoration.
+All 32 events preserve the exact 31-event parent prefix and both scientific rows.
+Exactly one `figure1_completed_reservation_released` event releases only the
+completed Figure1 attempt. **Choi administrative closeout is complete, with its
+final release remotely preserved and independently verified.** Scientific acceptance,
+new-job authorization and automatic dispatch remain false; no restored copy was
+activated. The frozen release event's pre-upload preservation status remains
+historical; separate verification receipts establish current remote preservation
+without another ledger mutation. Private evidence is under
+`runs/backend-handoff-20261012`.
+
+At this checkpoint, next steps were control review and environment verification
+before requesting one synthetic-only launch. The owner subsequently authorized
+that task on 13 October; see the current section above. No new job followed release.
+Then qualify
+PC-off operation and prepare [independent B5 evaluation](docs/B5_EVALUATION_PREPARATION.md).
+B4 stays held, Choi never reruns, no further private export is authorized by this
+change, and M6 recurrence remains disabled. [Evidence](records/backend-handoff-20261012.json).
+
+[PR #10](https://github.com/xorca0711/weft/pull/10) is open for explicit control
+review, not a draft. Both implementation CI runs passed at `2fc69a8`.
+The browser's saved `chatgpt.com` permission blocked the read-only environment
+check; no workaround was attempted. The coordinator is **Mir** (its durable
+record has no separate chat title). The cloud worker `Verify Weft network access`
+is separate; it performed the fresh process check without touching Choi/B4 state.
+
 ## Backend stack integrated; bounded Choi M5 complete — 12 October 2026
 
 Weft PRs **#4 -> #5 -> #6 -> #7 -> #8** merged in order, successors retargeted
@@ -18,8 +124,9 @@ and [authority/publication/merge record](records/choi-publication-20261012.json)
 
 The initial frozen-ignore-file CI failure and exact-byte correction remain in
 history. Local tests passed 158 cases (two skips); repository checks reached
-11,169 after the human disposition document. The private Choi coordinator and
-held reservation remain unchanged: reconcile them before any future job.
+11,169 after the human disposition document. That publication step left the
+private reservation held. The subsequent owner-authorized administrative release
+and independently verified final checkpoint are recorded above.
 
 B4 stays held. Fresh-paper progress is 74 unique papers, 148 proposed RQ links,
 five cloud link decisions, one held selected-text assessment, no completed fresh
@@ -42,8 +149,8 @@ is separate from fresh-paper eligibility and does not change Ravel's mission. Ra
 [#150](https://github.com/xorca0711/ravel/pull/150) merged the intake at
 `7840089dc78a42c25679e2083541c5df1507cfc6`, after all four CI checks passed.
 
-This Weft #9 update records the owner-authorized closeout and is to merge after
-its current CI passes. Private preparation remains under
+Weft #9 merged at `5ca2a58857b22968571c4389651862e17ee8dc35` with main CI passing.
+Private preparation remains under
 `runs/m5-publication-preparation-20261012`.
 
 ## Preserved B3 recovery / B4 platform hold — 12 October 2026

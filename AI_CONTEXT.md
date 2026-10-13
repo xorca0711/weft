@@ -1,5 +1,26 @@
 # Agent entry point
 
+- Current launcher task: [13 October frozen synthetic scope](docs/SYNTHETIC_LAUNCH_QUALIFICATION.md).
+  The owner manually launched the single task; supported task messaging/readback
+  works. Its configuration IDs match the recorded `weft-pilot` configuration,
+  and the same worker subsequently reported current enforced network policy.
+  The initial pinned-source fetch failed before tests; the unchanged route later
+  succeeded. Exactly 18 isolated cloud fixtures passed once, and root recovered
+  and hash-verified the receipt/log with identical same-task readback. The task is
+  idle; no synthetic job remains. Do not create a duplicate or rerun tests.
+  Browser automation remains blocked despite the saved allow setting and restart.
+  Root did not verify the environment or persist a submission intent before the
+  owner's launch; do not retroactively claim that procedure passed. Choi and B4
+  stay separate; manual task access does not qualify an automated launcher.
+- Latest backend addition: [single-catalog handoff and private intake staging](docs/BACKEND_HANDOFF.md).
+  Synthetic tests pass; there is no cloud launcher deployment or distributed fencing.
+  Expired/uncertain claims never reassign. Recovery ingests saved bytes only.
+  [CLI probe and coordinator closeout](docs/LAUNCHER_QUALIFICATION.md): intended
+  CLI environment unverified; direct dot messaging unavailable. Choi administrative
+  closeout is complete: the owner-authorized release is preserved in an independently
+  verified 32-event private checkpoint. Keep B4 stopped and M6 disabled.
+  Consult PROGRESS before any live operation.
+
 Weft is Ravel's public automation companion. Manual Europe PMC discovery, pinned
 RQ context, a paper-to-question review buffer and XML reading packets are implemented.
 The bounded batch coordinator and source-bound screening pull interface are also
@@ -23,8 +44,9 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
   is owner-approved, public, independently recovered and qualified by four
   clean-checkout Ravel CI runs. The owner retained the bounded descriptive result;
   PR #149 is merged and main CI passes. M5 is complete for this benchmark.
-  Do not replace the published asset,
-  rerun analysis or release the coordinator reservation as an implied next step.
+  Do not replace the published asset or rerun analysis. The completed Figure1
+  reservation is already released with owner authority and verified preservation;
+  that release authorizes no new job.
 - Next implementation priority is the [discovery/screening backend](docs/DISCOVERY_SCREENING_BACKEND.md):
   B1 and B2 mechanics passed fixtures, a local batch and a bounded manual cloud
   handoff/restore. B3 now implements source coverage, bounded local attachments
@@ -53,8 +75,8 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
   state. Earlier private locators/receipts are in ignored
   `runs/screening-cloud-qualification-20261012`. No schedule is configured. Preserve
   the original Choi worker. Choi M5 is complete within its descriptive scope, not a coding
-  prerequisite. Do not enable schedules, release the held reservation or dispatch
-  another live job as a side effect of this plan.
+  prerequisite. Do not enable schedules or dispatch another live job as a side
+  effect of this plan.
 - [Discovery](docs/DISCOVERY.md), [decision buffer](docs/DECISION_BUFFER.md) and
   [manual reader](docs/LOCAL_READER.md) explain implemented operations and limits.
 - [Implementation plan](docs/IMPLEMENTATION_PLAN.md) owns milestones;
@@ -73,13 +95,17 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
   passed once. Figure1 subsequently executed once. After explicit owner export
   approval and preserved interruptions, the same worker completed all 26 parts
   and the manifest. Worker and independent root reconstruction verified the exact
-  105,848,914-byte archive, ZIP CRC and all 99 manifest entries. The final 30-event
-  checkpoint and its three-step ancestry passed independent read-only restoration.
-  No rerun, source change, network expansion or scientific acceptance occurred.
-  The same reservation remains held for review. See PROGRESS.
-  The after-run held checkpoint is independently verified. An explicit continuity
-  recovery established a new active coordinator database; use the ignored private
-  locator, not the preserved stale database. Read PROGRESS before any action.
+  105,848,914-byte archive, ZIP CRC and all 99 manifest entries. The historical
+  30-event checkpoint and its three-step ancestry passed independent restoration.
+  The subsequent 31-event administrative review and 32-event owner-authorized
+  release checkpoints also passed independent Drive download and read-only
+  restoration. Only the completed Figure1 reservation is released; both scientific
+  attempts are unchanged. No rerun, source change, network expansion, scientific
+  acceptance or new-job authorization followed. Separate receipts verify the final
+  release's remote preservation; no further ledger event is needed for closeout.
+  Continuity recovery established a new active coordinator database; preserve the
+  stale database and keep all verification copies inactive. Read PROGRESS before
+  any action; exact private locators remain outside version control.
   Retention is not guaranteed.
   No paid API or unattended launcher is configured. Never fabricate human review.
 - No extra local PC is required. Cloud tasks pin the reviewed Weft PR revision
