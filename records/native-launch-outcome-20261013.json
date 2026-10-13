@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-13",
+  "occurrence": "weft-native-launch-20261013-v1",
+  "status": "L1 partial; runtime preflight HOLD",
+  "root_observations": {
+    "child_status": "idle",
+    "turn_status": "completed",
+    "receipt_bytes": 3165,
+    "receipt_sha256": "d44b803f11f680e2b21bebf077977a5769ee9f44b1b78cf00b49e8d6add643a9",
+    "log_bytes": 0,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_byte_verification": true,
+    "policy_snapshot_equals_prior_manual_snapshot": true,
+    "current_runtime_enforcement_verified": false,
+    "source_retrieval_started": false,
+    "test_invocations": 0,
+    "prompt_text_difference": "only one terminal LF absent in exposed child delegation input",
+    "prompt_normalization_layer": "unknown",
+    "exact_prompt_binding_qualified": false
+  },
+  "owner_relay": {
+    "native_create_call_count": 1,
+    "catalog_match": true,
+    "journal_progression": [
+      "prepared",
+      "awaiting_ack",
+      "acknowledged"
+    ],
+    "journal_reopen_passed": true,
+    "identical_same_task_artifact_readback": true
+  },
+  "root_independently_read_coordinator_journal": false,
+  "followup_diagnostic_sent": false,
+  "replacement_task_created": false,
+  "runtime_code_changed": false,
+  "settings_changed": false,
+  "uploads": 0,
+  "schedules": 0,
+  "scientific_execution": false,
+  "choi": "closed and unchanged",
+  "b4": "held and unchanged"
+}

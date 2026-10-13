@@ -8,11 +8,14 @@
   approved custom hosts and Only me access. The owner now confirms same-workspace
   Cloud-picker availability and repeated manual use; do not ask again. Account
   scope is owner-attested, not independently authenticated by root. The
-  [new native synthetic trial](docs/qualification/NATIVE_SYNTHETIC_TRIAL.md) is
-  prepared privately for the existing Mir chat: one native submission and 12
-  launch-journal fixtures at PR #11's exact head. It has not been dispatched.
-  Root has no native launcher tool. No task, deployment, schedule or runtime code
-  change occurred. PR #11 remains unmerged. Choi is closed; do not reroute B4.
+  [native synthetic trial](docs/qualification/NATIVE_SYNTHETIC_TRIAL.md) was
+  admitted once by Mir; its child completed with a preflight HOLD and zero tests.
+  [Root verification and diagnosis](docs/qualification/NATIVE_RUNTIME_HOLD.md)
+  confirm exact receipt/log recovery and a policy-file hash matching the old
+  manual worker, without current enforcement evidence. A final-LF difference in
+  the exposed prompt also needs provenance reconciliation. Preserve the same
+  child; a capability-only diagnostic prompt is prepared, not sent. PR #11 stays
+  unmerged, Choi closed, B4 held and M6 disabled.
 
 - Update check and support draft: [prepared request](docs/support/LAUNCHER_SUPPORT_REQUEST_20261013.md).
   The app reports up to date on its configured production channel. Installed CLI

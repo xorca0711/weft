@@ -1,6 +1,8 @@
 # Native launcher observations and remaining checks
 
-Status: **13 October 2026 — L0 partial; no native submission**.
+Status: **13 October 2026 — native admission/recovery observed; runtime preflight held**.
+The [current diagnosis](NATIVE_RUNTIME_HOLD.md) supersedes pre-submission status
+below; interface and configured-target evidence remain applicable.
 This follows the [read-only Mir probe](MIR_LAUNCH_CAPABILITY_CHECK.md) and refines
 the [remote architecture](../REMOTE_AUTOMATION_ARCHITECTURE.md). It maps the
 reported interface for review; it is not an installed adapter or launch authority.
@@ -111,7 +113,9 @@ republish, account switch or permission change is requested.
 
 A not-yet-created worker cannot report enforcement. This ordering does not waive
 configured-policy verification or permit launching to discover an unknown target.
-No startup packet has been dispatched. Remote ownership, restart retention, usage,
+One startup packet was subsequently admitted; its child held before source
+retrieval/tests because current runtime status was unavailable. Do not resubmit.
+Remote ownership, restart retention, usage,
 cancellation and checkpoint recovery remain L2 qualification work. Drive tool
 schemas alone do not establish current account/access. Choi is closed, B4 remains
 held, and no native route may continue the blocked review.

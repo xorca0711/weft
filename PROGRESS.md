@@ -2,6 +2,34 @@
 
 Update this before stopping work, every session.
 
+## Native admission verified; same-child runtime HOLD — 13 October 2026
+
+Mir reports one native create, acknowledged journal reopen and identical result
+readback. Root directly read the resulting idle child/completed turn and verified
+the original 3,165-byte HOLD receipt and empty log by SHA-256. The child fetched
+no source and invoked no tests. Coordinator journal/catalog claims remain
+owner-relayed, not independently read by root.
+
+The [diagnosis](docs/qualification/NATIVE_RUNTIME_HOLD.md) identifies a missing or
+undiscovered runtime-status integration, not a demonstrated allowlist failure.
+The child's policy-file hash equals the earlier successful manual worker's
+snapshot, but does not prove current enforcement or configuration version. Root
+also found the exposed child input lacks the frozen prompt's final LF; all other
+text matches. The responsible normalization layer is unknown. Preserve original
+bytes and reconcile retained call evidence before calling exact binding passed.
+
+Roadmap: **L1 partial** (admission and result recovery observed; runtime execution
+held). A private `MIR_SAME_CHILD_DIAGNOSTIC.txt` is prepared for capability-only
+inspection and original-call byte comparison. It has not been sent. No new task,
+follow-up turn, settings change, test invocation, upload or schedule occurred in
+root's verification. Do not paste the original launch prompt again. Choi remains
+closed; B4 held; M6 disabled. PR #11 remains unmerged.
+
+Validation passed: 203 scaffold links, 15 source pins, 144 changed-document links,
+JSON/private-identifier checks and Git whitespace checks. Private records remain
+ignored. Main was fetched and remains unchanged; no runtime code/test changes.
+Changes and the support request remain local; no support message was sent.
+
 ## Native synthetic packet prepared — 13 October 2026
 
 The owner confirms that `weft-pilot` is selectable in the same workspace and

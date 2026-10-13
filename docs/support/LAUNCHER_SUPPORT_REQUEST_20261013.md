@@ -16,10 +16,12 @@ and the supported app task reader can still read it. Agent-controlled task
 creation remains blocked because browser access is denied despite an allowed
 origin, while the installed CLI exposes no named environments and rejects the
 existing durable worker's ID. A later owner-relayed dot catalog exposes native
-saved-environment delegation and the expected repository/version; creation has
-not been invoked. Please identify the effective browser permission source and
-the CLI's compatibility with this environment type. Native qualification is a
-separate route, not evidence those two issues are fixed.
+saved-environment delegation and the expected repository/version. A subsequent
+single native creation succeeded; its child returned a preflight HOLD because
+runtime instructions/current policy-status capability could not be located.
+Please identify the effective browser permission source, CLI compatibility and
+the supported runtime-status integration for native delegated tasks. Native
+admission does not establish that the browser/CLI issues are fixed.
 
 ## Additional environment-list discrepancy
 
@@ -126,6 +128,38 @@ Please confirm:
 3. Is standalone CLI `0.162.1`, another release, or an app-managed component update
    the appropriate compatibility fix? How should it be qualified alongside this
    installation without replacing the active app runtime or disrupting histories?
+
+## Issue C: native delegated child lacks current runtime-status capability
+
+A single native dot delegation using the exact saved `environmentConfigId` was
+admitted. The coordinator reports matching catalog/version and a persisted intent
+before submission, followed by an acknowledged journal reopen. Root directly
+reads the resulting idle child and completed preflight-HOLD turn, and independently
+verifies the original receipt/log bytes. No child source fetch or tests occurred.
+
+The child could not locate managed-cloud instructions or a supported current
+configuration/network-enforcement status interface. It performed local discovery
+and MCP resource/template listing; the exposed transcript has no runtime-status
+call. Its restricted `/etc/codex/network-policy.json` contains all three custom
+hosts and is byte-hash-identical to the earlier successful manual worker's saved
+snapshot. That does not prove current enforcement or the new worker's version.
+
+The root's installed `cloud-environment-runtime` skill 0.1.2 describes
+`cloud_environment.environment_status`, but the root catalog does not expose it.
+The child may lack the integration or may not have discovered it; the available
+trace does not establish which. No plugin was installed or policy changed.
+
+Please clarify the supported way to expose/inspect current managed-environment
+status on an existing native-delegated child, including any difference from a
+manually created task's runtime tool/skill injection. Can this be repaired on the
+same task without recreating it? A catalog match or copied local skill must not
+be represented as current enforcement. The existing task and original HOLD
+evidence are preserved for diagnosis.
+
+Separately, the task reader's `codexDelegation.input` omits one terminal LF from
+the frozen worker prompt; all other text matches. The retained original create
+arguments are not yet inspected. Please document any prompt normalization by
+submission/storage/readback; the responsible layer is not established.
 
 ## Scope and available evidence
 

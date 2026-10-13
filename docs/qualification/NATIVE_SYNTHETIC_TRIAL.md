@@ -1,6 +1,8 @@
 # One native synthetic launch through Mir
 
-Prepared **13 October 2026**; **not submitted**.
+**13 October 2026 — submitted once; child preflight HOLD, zero tests.**
+See the [verified outcome and next diagnosis](NATIVE_RUNTIME_HOLD.md).
+The frozen specification below is preserved as the original trial scope.
 
 The owner confirms that `weft-pilot` is selectable in the same-workspace Cloud
 picker and has already been used repeatedly. Do not repeat that availability
@@ -12,9 +14,11 @@ configured-target evidence; the new runtime must verify its own enforcement.
 The exact, self-contained handoff is saved privately under ignored
 `runs/native-launch-qualification-20261013/dispatch-v1/`. The owner pastes
 `MIR_NATIVE_SYNTHETIC_PROMPT.txt` into the **existing Mir chat**. It contains the
-worker prompt, saved-environment identifiers, source pin and verification rules;
-Mir does not need access to the owner's local path. Root has not sent the prompt,
-initialized the remote journal or launched a task.
+worker prompt, saved-environment identifiers, source pin and verification rules.
+The owner relayed it to Mir, which reports one journaled native submission.
+Root directly recovered the resulting child's HOLD artifacts. Do not paste the
+launch prompt again; retain the original occurrence and use only the separately
+prepared capability diagnostic for further review.
 
 | Binding | Frozen scope |
 |---|---|

@@ -1,6 +1,6 @@
 # Remote automation architecture and qualification sequence
 
-Status: **13 October 2026 — owner confirms picker availability; one native synthetic packet prepared, not submitted**.
+Status: **13 October 2026 — one native task admitted/recovered; L1 partial, runtime preflight held**.
 This refines M3b and M6 in the [roadmap](IMPLEMENTATION_PLAN.md). It creates no
 new scientific gate, deployment, schedule or authority to rerun an attempt.
 
@@ -58,7 +58,7 @@ actions or route around the B4 hold.
 
 | Route | PC-off potential | Current evidence and decision |
 |---|---|---|
-| Native Mir → existing Codex Cloud | Documented product capability | Mir reports the selector/target; root checked version continuity and owner settings screenshots. Owner attests same-workspace availability; independent AI-host identity, actual native admission and durable ownership remain unqualified |
+| Native Mir → existing Codex Cloud | Documented product capability | Mir reports the selector/target; root checked version continuity and owner settings screenshots. One native child admitted and HOLD artifacts recovered; runtime-status access, exact prompt-byte reconciliation, independent AI-host identity and durable ownership remain unqualified |
 | Local `codex cloud` adapter | Requires its invocation host to be online | Optional compatibility track. Running it locally does not meet the PC-off requirement; a remote installation/authentication would need separate qualification |
 | Hosted controller → Agents API → hosted sandbox | Documented programmatic components; account access untested | Contingency requiring a new deployment/billing decision, API credentials, controller hosting and durable state. Not connected or selected |
 
@@ -83,7 +83,7 @@ L0–L4 are implementation slices, not replacements for M0–M6 or B1–B5.
 | Slice | Current status | Work and exit evidence |
 |---|---|---|
 | L0 — native route and identity | **Owner observations complete; runtime qualification pending** | Selector/repository, version continuity and configured settings observed; owner confirms same-workspace availability. Preserve owner attribution; recheck the live target before submission and actual enforcement after admission |
-| L1 — one native synthetic launch | **Packet prepared; not submitted** | [Frozen native trial](qualification/NATIVE_SYNTHETIC_TRIAL.md): Mir persists intent before one submission, binds acknowledgement and recovers 12-fixture results. Existing 18-fixture manual qualification is retained, not relabelled or rerun |
+| L1 — one native synthetic launch | **Partial; runtime preflight HOLD** | [Outcome](qualification/NATIVE_RUNTIME_HOLD.md): one admission and recovered HOLD receipt/log; zero of 12 fixtures invoked. Diagnose the same child's runtime-status capability and prompt terminal-LF provenance. Preserve the completed manual 18-fixture result separately |
 | L2 — remote continuity and recovery | **Partial controls; integration unqualified** | Qualify one authoritative writer, job admission, lost acknowledgement, cancellation, usage interruption, checkpoint readback, inactive restore and resumption of the same task. Demonstrate no required PC callback |
 | L3 — bounded search-to-screening operation | **Manual baseline exists; automation unqualified** | Use frozen search/profile/RQ pins, material permissions, source-grounded responses and a reviewable digest. Evaluate B5 on an independently defined sample before claiming quality. B4 remains held; no substitute attempt of its blocked review |
 | L4 — prospective recurring operation | **Disabled; owner decision required** | After technical and quality qualification, choose cadence/time zone, scope, finite usage ceilings, notification and stop rules, and permitted artifact destinations. Verify the saved schedule and first bounded cycle |
@@ -169,10 +169,11 @@ The [Mir capability check](qualification/MIR_LAUNCH_CAPABILITY_CHECK.md) returne
 a schema/catalog report; see the [interface mapping](qualification/NATIVE_LAUNCH_INTERFACE.md).
 The owner confirms same-workspace availability; the network-setting screenshots
 are complete. The [frozen native trial](qualification/NATIVE_SYNTHETIC_TRIAL.md)
-is prepared for the existing Mir chat, which must verify the live saved target,
-persist its own intent and submit once. Account scope is owner-attested; report
-contradictions without inventing an authenticated account observation. Verify
-worker-enforced policy before tests. No native submission has occurred.
+was submitted once by Mir; the child held before source retrieval or tests.
+The [current diagnosis](qualification/NATIVE_RUNTIME_HOLD.md) records recovered
+artifacts, missing runtime-status capability and one prompt terminal-LF discrepancy.
+A same-child capability-only follow-up is prepared, not sent. Account scope remains
+owner-attested. Preserve the existing occurrence; no replacement or test restart.
 
 Choi remains complete and preserved. No old ledger, worker, analysis output or
 source snapshot is changed. M6 stays disabled. These documentation changes add
