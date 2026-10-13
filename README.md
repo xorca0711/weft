@@ -98,8 +98,9 @@ archives. There is no separate Google Cloud Platform project, VM or storage buck
 
 The [PC-off automation plan](docs/REMOTE_AUTOMATION_ARCHITECTURE.md) targets
 **Mir's native delegation → existing `weft-pilot` → verified Drive recovery →
-reviewable Ravel intake**. Native delegation is documented but not yet verified
-in Mir's session. CLI integration is optional; automatic scheduling remains disabled.
+reviewable Ravel intake**. Mir reports the native selector and repository mapping;
+[current identity and publication checks remain open](docs/qualification/NATIVE_LAUNCH_INTERFACE.md).
+CLI integration is optional; automatic scheduling remains disabled.
 The plan includes the architecture diagram, staged qualification and an API
 contingency requiring a separate access and budget decision.
 

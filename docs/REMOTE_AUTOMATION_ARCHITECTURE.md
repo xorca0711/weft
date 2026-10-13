@@ -1,6 +1,6 @@
 # Remote automation architecture and qualification sequence
 
-Status: **13 October 2026 — architecture specified; native launcher access unverified**.
+Status: **13 October 2026 — native interface/catalog and network settings observed; L0 identity/publication checks incomplete**.
 This refines M3b and M6 in the [roadmap](IMPLEMENTATION_PLAN.md). It creates no
 new scientific gate, deployment, schedule or authority to rerun an attempt.
 
@@ -17,11 +17,13 @@ environments and cannot read the known durable task. Its mapping problem need no
 become a prerequisite for native delegation. Neither an empty listing nor a
 successful existing-task read qualifies a new-task launcher.
 
-Root can read Mir's thread metadata, but the current read returns no turns or
-capability evidence. The root tool set does not expose an environment-selecting
-native dot launcher; earlier direct delivery to Mir failed. The next step is the
-[read-only capability check in Mir](qualification/MIR_LAUNCH_CAPABILITY_CHECK.md).
-Do not infer that Mir has the same tools as this local task.
+The owner has now relayed the [Mir capability report and root
+reconciliation](qualification/NATIVE_LAUNCH_INTERFACE.md). Mir reports a native
+saved-environment selector and the intended repository; the full reported version
+matches the preserved manual worker receipt. Owner screenshots show the configured
+network preset and three approved hosts; current identity/publication are missing.
+The root tool set does not expose that
+launcher; Mir's capabilities do not transfer to this local task.
 
 ### Proposed operation with the PC off
 
@@ -55,7 +57,7 @@ actions or route around the B4 hold.
 
 | Route | PC-off potential | Current evidence and decision |
 |---|---|---|
-| Native Mir → existing Codex Cloud | Documented product capability | First qualification target; no new provider selected. Exact launcher, environment selector, permissions and durable ownership remain unverified |
+| Native Mir → existing Codex Cloud | Documented product capability | Mir reports the selector/target; root checked version continuity and owner settings screenshots. Current identity/publication, actual admission and durable ownership remain unqualified |
 | Local `codex cloud` adapter | Requires its invocation host to be online | Optional compatibility track. Running it locally does not meet the PC-off requirement; a remote installation/authentication would need separate qualification |
 | Hosted controller → Agents API → hosted sandbox | Documented programmatic components; account access untested | Contingency requiring a new deployment/billing decision, API credentials, controller hosting and durable state. Not connected or selected |
 
@@ -79,7 +81,7 @@ L0–L4 are implementation slices, not replacements for M0–M6 or B1–B5.
 
 | Slice | Current status | Work and exit evidence |
 |---|---|---|
-| L0 — native route and identity | **Prepared; awaiting Mir observation** | Observe actual launcher schema and read-only mapping of the intended account/workspace, repository, published environment and policy. Record the source/time of each observation; unknowns remain holds |
+| L0 — native route and identity | **Partial; Mir report and settings reconciled** | Selector/repository, historical version continuity and configured network settings observed. Still require current account/workspace and publication status |
 | L1 — one native synthetic launch | **Not started** | After L0 and a reviewed exact packet, persist intent before a single permitted submission, bind the acknowledgement to its task, retrieve terminal state and hash-verified synthetic outputs. Existing manual qualification is retained, not relabelled or rerun |
 | L2 — remote continuity and recovery | **Partial controls; integration unqualified** | Qualify one authoritative writer, job admission, lost acknowledgement, cancellation, usage interruption, checkpoint readback, inactive restore and resumption of the same task. Demonstrate no required PC callback |
 | L3 — bounded search-to-screening operation | **Manual baseline exists; automation unqualified** | Use frozen search/profile/RQ pins, material permissions, source-grounded responses and a reviewable digest. Evaluate B5 on an independently defined sample before claiming quality. B4 remains held; no substitute attempt of its blocked review |
@@ -160,11 +162,13 @@ actual saved configuration when separately authorized. [Dot tasks and memory](ht
 
 ## Immediate handoff and stop condition
 
-The prepared [Mir capability check](qualification/MIR_LAUNCH_CAPABILITY_CHECK.md)
-is read-only and self-contained. Return its observations to this task. That is the
-remaining L0 access dependency, not a request for another computer or API key.
-If native access is unavailable, present the precise blocker and the API
-contingency for a deployment decision; do not build a speculative live adapter.
+The [Mir capability check](qualification/MIR_LAUNCH_CAPABILITY_CHECK.md) returned
+a schema/catalog report; see the [interface mapping](qualification/NATIVE_LAUNCH_INTERFACE.md).
+The remaining L0 dependency is current AI-host account/workspace and publication
+status; the network-setting screenshots are complete. No new computer,
+login or API key is needed for that observation. Before a later launch, review
+the exact packet against those settings; after admission, verify worker-enforced
+policy before tests. Do not build a speculative adapter around missing access.
 
 Choi remains complete and preserved. No old ledger, worker, analysis output or
 source snapshot is changed. M6 stays disabled. These documentation changes add

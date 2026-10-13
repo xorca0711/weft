@@ -25,7 +25,7 @@ but the environment mapping and effective browser-policy source remain unresolve
 
 | Route | Evidence | Remaining requirement |
 |---|---|---|
-| Native dot delegation | Official documentation describes cloud coding threads in an existing environment; Mir's actual launcher is not observed | First route to qualify: read-only capability/account/environment report from Mir, followed by a reviewed synthetic occurrence; no denied browser action or B4 continuation |
+| Native dot delegation | Mir's relay exposes selector/repository; version matches the preserved manual-worker receipt; owner screenshots show configured network settings | Current account/workspace and publication status missing; admission and new-worker enforcement need later qualification. No denied browser action or B4 continuation |
 | Owner selects Cloud / weft-pilot | One task ran pinned isolated fixtures and returned independently verified bytes | A manual task/run/return route only; no automated submission proof |
 | Supported task read/continue tools | Same-task inspection and bounded continuation worked | These calls do not select a new worker's environment or prove PC-off invocation by Mir |
 | Agent browser | Saved allow setting conflicts with effective denial, including after restart | Product-level permission diagnosis; do not repeat the setting request or bypass the denial |
@@ -63,9 +63,10 @@ launcher access or distributed ownership. No live adapter is implemented.
 
 [Dot computers and apps](https://learn.chatgpt.com/docs/dots/computers-and-apps)
 documents PC-off cloud work and delegation to an existing Codex cloud environment.
-This is product-level evidence, not a successful call from Mir. The prepared
-[read-only capability check](qualification/MIR_LAUNCH_CAPABILITY_CHECK.md) requests
-the actual session interface without dispatch or new access.
+This is product-level evidence. The owner subsequently relayed Mir's read-only
+catalog report; the [interface reconciliation](qualification/NATIVE_LAUNCH_INTERFACE.md)
+records the observed scope and remaining identity/policy gaps. No creation call
+or new access occurred.
 
 The [CLI reference](https://learn.chatgpt.com/docs/cli/reference) documents
 `cloud exec --env` and cloud task listing. That establishes an interface, not

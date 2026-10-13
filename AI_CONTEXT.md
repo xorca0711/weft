@@ -2,11 +2,13 @@
 
 - Remote automation: [architecture and L0–L4 sequence](docs/REMOTE_AUTOMATION_ARCHITECTURE.md).
   Qualify native Mir → existing `weft-pilot` first; CLI compatibility is optional.
-  Official docs support cloud delegation, but Mir's live selector/account/environment
-  mapping is not observed. The [read-only Mir check](docs/qualification/MIR_LAUNCH_CAPABILITY_CHECK.md)
-  is prepared for owner relay; root metadata reads expose no capabilities and direct
-  delivery has no working route. No new task, deployment, schedule or runtime
-  code change occurred. PR #11 remains unmerged. Choi is closed; do not reroute B4.
+  The owner relayed Mir's native-selector/catalog report. Root verified exact
+  historical version/setup continuity; [interface reconciliation](docs/qualification/NATIVE_LAUNCH_INTERFACE.md)
+  records L0 as partial. Owner screenshots confirm the network preset, all three
+  approved custom hosts and Only me access. Await current AI-host account/workspace
+  and publication status. Root has no native launcher tool.
+  No task, deployment, schedule or runtime code change occurred. PR #11 remains
+  unmerged. Choi is closed; do not reroute B4.
 
 - Update check and support draft: [prepared request](docs/support/LAUNCHER_SUPPORT_REQUEST_20261013.md).
   The app reports up to date on its configured production channel. Installed CLI

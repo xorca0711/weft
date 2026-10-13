@@ -2,6 +2,42 @@
 
 Update this before stopping work, every session.
 
+## Mir native capability reconciliation — 13 October 2026
+
+**L0 is partial.** The owner relayed Mir's 05:07:22–05:07:52 UTC report: native
+`environmentConfigId` selection and one catalog response for `weft-pilot` /
+`xorca0711/weft`, with no creation call. Root independently compared the full
+reported version and setup ref against preserved evidence: both match exactly.
+The saved-ID prefix also matches the earlier CLI routing ID, but undocumented
+prefix semantics do not prove Mir's current account/workspace. Raw identifiers
+and the structured relay/comparison remain in ignored private run records.
+
+The [interface mapping](docs/qualification/NATIVE_LAUNCH_INTERFACE.md) records
+acknowledgement/continuation/status schemas, absent atomic version pin, and
+unqualified cancellation/ownership. Root did not retrieve Mir's raw tool response
+or gain its launcher capability. The next dependency is a read-only owner check
+of the active AI-host account/workspace and current published environment/network
+settings. The exact Settings → Codex Cloud → Environments → weft-pilot → Edit
+path was supplied from official documentation; no save or republish is requested.
+
+Check configured policy before a future authorized launch and actual worker
+enforcement after admission, before tests. No launch, adapter deployment, schedule,
+scientific gate change, Choi action or B4 continuation occurred. Current summaries
+are synchronized; [sanitized receipt](records/native-launch-capability-20261013.json).
+
+Owner screenshots subsequently confirmed the environment/repository, enabled
+internet, Package managers preset, three additional hosts with `europepmc.org`
+visible, Only me access and no listed secrets/variables. Copies and hashes are
+preserved privately. A later expanded-domain screenshot confirms the full list:
+`europepmc.org`, `ftp.ncbi.nlm.nih.gov`, `www.ebi.ac.uk`. Configured-network
+inspection is complete. Await current account/workspace and publication status;
+do not infer either from the other observations.
+
+Validation passed: **196 scaffold links, 15 source pins and 199 links across
+changed documents**; the new receipt parses, public additions pass the targeted
+private-identifier scan, and whitespace checks pass. No runtime code changed or
+test/analysis run was repeated. These changes remain local.
+
 ## Remote automation architecture — 13 October 2026
 
 The owner requested continuing the recommended stages and finding a fully remote
@@ -12,12 +48,11 @@ coding threads in existing cloud environments. That is product capability,
 not proof of Mir's current tool access or unattended ownership/recovery.
 
 L0's [read-only Mir capability check](docs/qualification/MIR_LAUNCH_CAPABILITY_CHECK.md)
-is prepared for owner relay. Root's current supported Mir read returns idle
-metadata and no turns; it supplies no launcher schema or mapping. The current
-root tools lack an environment-selecting native dot launcher. Earlier direct
-delivery failed, so no message or new worker was sent. **Await Mir's report**,
-then map the observed interface before implementing a live adapter. Do not
-guess IDs, reuse the completed synthetic task or retry denied browser actions.
+was prepared for owner relay. At preparation, root's Mir read returned idle
+metadata and no turns. The later owner-relayed report is reconciled above.
+Root still lacks the environment-selecting launcher. No direct message or worker
+was sent. Do not guess IDs, reuse the completed synthetic task or retry denied
+browser actions.
 
 L1–L4 specify exact synthetic submission, remote ownership/recovery, bounded
 search/screening with independent B5 evaluation, and finally separately authorized

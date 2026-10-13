@@ -28,7 +28,7 @@ authorization are not established.
 | Track | Established | Remaining |
 |---|---|---|
 | Discovery and screening | Bounded Europe PMC discovery, deduplication, pinned RQ context, decision buffer, manual agent handoff and recovery | B3 material/semantic qualification, blocked B4 review, B5 independent evaluation and unattended launcher |
-| Cloud controls | Published environment, scoped controls, manual coordinator and verified private Drive recovery; one owner-operated cloud task passed 18 pinned, isolated handoff/intake fixtures once; exact result recovery verified and task idle | Native dot launcher needs session-specific verification; browser route blocked, CLI mapping unverified and optional; formal pre-submission, remote ownership and usage controls unqualified |
+| Cloud controls | Published environment, manual coordinator and verified Drive recovery; owner-operated task passed 18 pinned fixtures once; Mir's selector/catalog version reconciled; owner screenshots confirm the network preset and full custom-host list | Current AI-host identity and publication status needed; native admission, runtime enforcement for a new task, remote ownership and usage controls unqualified. Browser blocked; CLI optional and unmapped |
 | Choi pilot | M4/M5 complete for the bounded benchmark: public outputs, verified recovery, owner descriptive retention and Ravel #149 merged; final 32-event administrative release independently recovered | Preserve bounded interpretation and checkpoint ancestry; no new-job authority or general scientific eligibility inferred |
 | Integration into main | Weft PRs #1-#10 and Ravel #149/#150 merged with passing CI; #10 control review completed within its cooperative scope | Offline launch-intent journal implemented/tested in open PR #11; diagnosis and remote architecture revisions remain local; no fresh-paper scientific acceptance |
 
@@ -41,8 +41,10 @@ remaining access dependency and the [offline intent/recovery guard](LAUNCH_INTEN
 Its local journal does not establish remote dispatch or distributed ownership.
 
 The [remote architecture](REMOTE_AUTOMATION_ARCHITECTURE.md) now prioritizes native
-Mir delegation to the existing environment. Official documentation supports the
-product route; L0 awaits Mir's actual capability/account/environment observations.
+Mir delegation to the existing environment. L0 now has Mir's owner-relayed schema
+and target catalog, with historical version continuity independently checked;
+[current account and publication observations](qualification/NATIVE_LAUNCH_INTERFACE.md)
+remain missing. Owner screenshots confirm configured network settings. L0 is partial.
 CLI compatibility is an optional track. L1 qualifies one new synthetic submission,
 L2 ownership/recovery without PC dependencies, L3 bounded search/screening and B5
 quality, and L4 separately authorized recurrence. These slices preserve existing
