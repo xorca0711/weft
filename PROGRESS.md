@@ -20,15 +20,17 @@ records the phased remaining jobs and limits.
 - Launch journals reject reused task IDs and inconsistent state/receipt/history;
   snapshot reads tolerate valid concurrent transitions. These are local controls,
   not distributed fencing or cloud persistence guarantees.
-- The actual pinned context audit found 2/32 RQs configured (A0/A1), with A2–A31
-  requiring reviewed profiles. No search recall or real B5 evaluation was measured.
+- The first audit found 2/32 RQs configured (A0/A1). The discovery reviewer then
+  prepared 30 source-bound opt-in drafts for A2–A31, retaining the original two
+  profiles. All 32 pinned RQs now have configuration coverage; the new profiles
+  remain unqueried. No search recall or real B5 evaluation was measured.
 - One newly authorized status-only follow-up per existing held worker: native
   child still reports no runtime-status capability and ran no tests; B4 was again
   rejected by the platform's biology-content restriction, with no completed status
   result. No alternate route or replacement worker was used. Private transcripts
   remain ignored under `runs/roadmap-completion-20261013/`.
 
-Validation: local full suite **250 tests, 225 passed, 25 platform skips**;
+Validation: final local full suite **256 tests, 231 passed, 25 platform skips**;
 offline configuration/documentation validation passed with 15 pinned files.
 Integration base was freshly fetched and remains `5cd4178af7cd706a51b8fb814f94c223c2fa32ab`.
 Delivery targets [PR #11](https://github.com/xorca0711/weft/pull/11); its current
@@ -37,8 +39,8 @@ subject to integration review. No Choi rerun, B4 review, cloud test, deployment,
 support message, new export or schedule was performed.
 
 Next: review corrected code/CI; obtain platform integration review for L1 and
-resolution of B4's restriction before a permitted continuation; review remaining
-query profiles and independent B5 sample/reviewer/criteria. Remote coordinator
+resolution of B4's restriction before a permitted continuation; qualify the new
+query drafts and freeze an independent B5 sample/reviewer/criteria. Remote coordinator
 ownership, interruption/cancellation recovery and PC-off operation need their
 own qualification. M6 remains disabled pending those results and an explicit
 cadence/scope/usage/export decision. Choi M4/M5 remain complete and preserved.

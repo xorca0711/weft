@@ -37,7 +37,7 @@ The owner retained the descriptive benchmark; Ravel #149 is merged with passing 
 
 | Component | Current implementation | Missing qualification or implementation |
 |---|---|---|
-| Ravel context | `weft/context.py`; all 32 pinned question identities | Query profiles initially cover A0/A1, not every RQ; dossier contents need source-specific reading |
+| Ravel context | `weft/context.py`; all 32 pinned identities; 30 additional source-bound opt-in query drafts | Prior bounded retrieval covers A0/A1; A2–A31 drafts are unqueried. Dossier contents and retrieval quality need source-specific review |
 | Discovery | `weft/europe_pmc.py`, `weft/discovery.py`; explicit bounded searches, cursors, overlap windows and receipts | Batch coordination and bounded date splitting now implemented; broader recall evaluation and recurrence remain open |
 | Identity and deduplication | `weft/identity.py`; strong IDs/conflicts, changed-snapshot invalidation, exact correction/retraction holds and attributed version nominations | Broader notice retrieval and scientific edition/dataset-lineage adjudication remain separate work |
 | Candidate buffer | Persistent proposed links; `pending_review -> read_next / held / rejected` | Pull-based structured agent proposals now implemented; independent decision-quality evaluation remains open |

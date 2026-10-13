@@ -6,6 +6,35 @@ import re
 from .identity import digest
 
 
+def validate_profile_binding(profile: dict, context: dict) -> None:
+    """Reject stale source-bound drafts without imposing a new approval system.
+
+    Historical profiles without qualification/source-binding fields retain their
+    original behaviour. A draft is executable only by explicit profile selection
+    and binds one exact question packet; passing this check does not qualify its
+    search performance, scientific interpretation or live dispatch.
+    """
+    fields = {"qualification_status", "source_commit", "source_context_sha256"}
+    if not isinstance(profile, dict):
+        raise ValueError("Profile must be an object")
+    if not fields.intersection(profile):
+        return
+    if (profile.get("qualification_status") != "draft-unqueried"
+            or not isinstance(context, dict) or not isinstance(context.get("questions"), list)
+            or digest(context["questions"]) != context.get("catalog_sha256")
+            or not isinstance(profile.get("rq_ids"), list) or len(profile["rq_ids"]) != 1
+            or not isinstance(profile["rq_ids"][0], str)
+            or not re.fullmatch(r"[0-9a-f]{40}", str(profile.get("source_commit", "")))
+            or profile["source_commit"] != context.get("ravel_commit")):
+        raise ValueError("Draft profile must bind one exact current Ravel context and source revision")
+    matches = [q for q in context["questions"]
+               if isinstance(q, dict) and q.get("rq_id") == profile["rq_ids"][0]]
+    if (len(matches) != 1
+            or not re.fullmatch(r"[0-9a-f]{64}", str(profile.get("source_context_sha256", "")))
+            or profile["source_context_sha256"] != matches[0].get("context_sha256")):
+        raise ValueError("Draft query source context is stale or absent; review and rebind explicitly")
+
+
 def audit_profiles(configuration: dict, context: dict) -> dict:
     """Validate profile references against a caller-supplied pinned RQ catalog.
 
@@ -43,6 +72,7 @@ def audit_profiles(configuration: dict, context: dict) -> dict:
                 or not isinstance(profile.get("rationale"), str) or not profile["rationale"].strip()
                 or not isinstance(profile.get("streams"), dict) or "broad" not in profile["streams"]):
             raise ValueError("Profile requires registered RQs, rationale, date field and broad stream")
+        validate_profile_binding(profile, context)
         for stream, query in profile["streams"].items():
             if (not isinstance(stream, str) or not stream.strip() or not isinstance(query, str)
                     or not query.strip() or len(query) > 6000):
@@ -51,6 +81,7 @@ def audit_profiles(configuration: dict, context: dict) -> dict:
         for qid in profile["rq_ids"]:
             assignments[qid].append(name)
         profiles.append({"profile": name, "rq_ids": profile["rq_ids"],
+                         "qualification_status": profile.get("qualification_status", "legacy-unspecified"),
                          "date_field": profile["date_field"], "streams": sorted(profile["streams"]),
                          "missing_complementary_streams": sorted({"rq_contrary", "adjacent_context"} - profile["streams"].keys()),
                          "configuration_sha256": digest(profile),
@@ -64,6 +95,7 @@ def audit_profiles(configuration: dict, context: dict) -> dict:
             "ravel_commit": context["ravel_commit"], "context_sha256": context["catalog_sha256"],
             "configuration_sha256": digest(configuration), "questions": rows, "profiles": profiles,
             "question_count": len(rows), "configured_question_count": sum(bool(row["profiles"]) for row in rows),
+            "draft_profile_count": sum(p["qualification_status"] == "draft-unqueried" for p in profiles),
             "unconfigured_question_ids": [row["rq_id"] for row in rows if not row["profiles"]],
             "identical_query_reuse": [sorted(uses, key=lambda x: (x["profile"], x["stream"]))
                                       for _, uses in sorted(query_uses.items()) if len(uses) > 1],

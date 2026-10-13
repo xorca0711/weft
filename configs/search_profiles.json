@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scope": "Initial manually authored queries for A0/A1 and the historical pilot; all other RQs can be resolved but have no qualified search profile yet",
+  "scope": "Original A0/A1 and Choi profiles retained unchanged; A2-A31 have explicit opt-in, source-bound draft-unqueried discovery profiles. Query configuration is not retrieval qualification, recall evidence, scientific eligibility or scheduling authorization.",
   "profiles": {
     "alveolar-transitions": {
       "rq_ids": [
@@ -25,6 +25,606 @@
       "rationale": "Exposed historical retrieval benchmark, not a measure of prospective recall or independent replication",
       "streams": {
         "broad": "(AT2 OR \"alveolar type 2\") AND (\"transient progenitors\" OR DATP)"
+      }
+    },
+    "a2-areg-delivery": {
+      "rq_ids": [
+        "A2"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "1bece6d3966021a8b5065abba78d4984b2dd5ed5ace30fa37378c0718b2626e8",
+      "source_section_sha256": "c4e99959628fd66b20bc85eac99bb2cbdd6b59d026ce13985f8e27213e87a5ca",
+      "source_card": "RESEARCH_QUESTIONS.md#a2",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** Epithelial AREG delivery can change the effective ligand reaching fibroblasts and thereby their response, even when epithelial AREG RNA or source-cell abundance is similar. The biological contrast is delivery through effective availability versus a recipient-context effect. The source/presentation comparison and downstream fibroblast function remain unnominated, so this is a developing hypothesis, not a specified wet experiment. [A2 evidence dossier](docs/research_dossiers/A2.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a2). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A2 context; broad retrieval does not require the predicted direction. Distinguish source delivery and effective availability from ligand abundance or recipient context; no delivery contrast or fibroblast functional endpoint is fixed.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Distinguish source delivery and effective availability from ligand abundance or recipient context; no delivery contrast or fibroblast functional endpoint is fixed.",
+      "streams": {
+        "broad": "TITLE_ABS:(amphiregulin OR AREG) AND TITLE_ABS:(fibroblast OR pericyte OR mesenchymal) AND TITLE_ABS:(epithelial OR paracrine OR secretion OR delivery)",
+        "rq_contrary": "TITLE_ABS:(fibroblast OR pericyte) AND TITLE_ABS:(EGFR OR amphiregulin OR AREG) AND TITLE_ABS:(autocrine OR ligand OR abundance OR TGF-beta)",
+        "adjacent_context": "TITLE_ABS:(epithelial OR mesenchymal) AND TITLE_ABS:(ligand OR paracrine) AND TITLE_ABS:(proximity OR presentation OR availability OR dose)"
+      }
+    },
+    "a3-macrophage-injury-history": {
+      "rq_ids": [
+        "A3"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "d76a9b4dcdb93079746b6aa237623f36fbe6c97eed60dafb01f7ce7821f144b5",
+      "source_section_sha256": "4ed639212f9ac7d957d4695d9047669ccf15a1a0155b523b359f102b1dc8663a",
+      "source_card": "RESEARCH_QUESTIONS.md#a3",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** Prior lung injury may leave a persistent macrophage programme within comparable macrophage origins and states after the current environment has resolved. The additional question concerns history beyond age, origin and continuing tissue stimulation. A programme and independent functional consequence still need nomination; late sampling alone cannot demonstrate biological memory. [A3 evidence dossier](docs/research_dossiers/A3.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a3). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A3 context; broad retrieval does not require the predicted direction. Nominate age, origin and continuing-environment comparisons; a late RNA programme alone does not establish cell-intrinsic memory or a functional consequence.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Nominate age, origin and continuing-environment comparisons; a late RNA programme alone does not establish cell-intrinsic memory or a functional consequence.",
+      "streams": {
+        "broad": "TITLE_ABS:(lung OR pulmonary) AND TITLE_ABS:(macrophage) AND TITLE_ABS:(injury OR infection) AND TITLE_ABS:(persistent OR recovery OR aging OR ageing)",
+        "rq_contrary": "TITLE_ABS:(lung OR pulmonary) AND TITLE_ABS:(macrophage) AND TITLE_ABS:(aging OR ageing OR recruitment OR replacement OR ontogeny)",
+        "adjacent_context": "TITLE_ABS:(macrophage) AND TITLE_ABS:(injury OR infection) AND TITLE_ABS:(memory OR persistence OR lineage OR metabolic)"
+      }
+    },
+    "a4-at2-wnt-il1-lineage": {
+      "rq_ids": [
+        "A4"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "02386fe9b517dae0a732112862994471ba2ab01e288258a375ef71e8cafd99d7",
+      "source_section_sha256": "505ab4d924c04edd50a2c1ec4f7bf000d36bf216086a11643ed11d6e3cea6a19",
+      "source_card": "RESEARCH_QUESTIONS.md#a4",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** Adult AT2 starting lineages with documented Wnt-responsive history can later acquire an IL-1-beta-responsive transitional epithelial state, rather than the apparent sequence arising only from expansion or survival of different pre-existing subsets. Wnt history, current Wnt activity and current IL-1 response must be measured separately. This restores the existing sequence question; it does not adopt the proposed Fzd5-dependent gate on transition entry. [A4 evidence dossier](docs/research_dossiers/A4.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a4). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A4 context; broad retrieval does not require the predicted direction. Keep Wnt history, current Wnt activity and IL-1 response distinct; do not presume sequential states or adopt an Fzd5-specific entry gate.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Keep Wnt history, current Wnt activity and IL-1 response distinct; do not presume sequential states or adopt an Fzd5-specific entry gate.",
+      "streams": {
+        "broad": "TITLE_ABS:(alveolar OR pneumocyte OR (AT2 AND lung)) AND TITLE_ABS:(Wnt OR beta-catenin OR IL1B OR \"interleukin-1\") AND TITLE_ABS:(lineage OR transition OR maintenance)",
+        "rq_contrary": "TITLE_ABS:(alveolar OR pneumocyte OR (AT2 AND lung)) AND TITLE_ABS:(Wnt OR IL1B OR \"interleukin-1\") AND TITLE_ABS:(subset OR selection OR survival OR concurrent)",
+        "adjacent_context": "TITLE_ABS:(epithelial) AND TITLE_ABS:(Wnt) AND TITLE_ABS:(lineage OR \"pulse chase\" OR reporter OR history)"
+      }
+    },
+    "a5-developmental-repair-component": {
+      "rq_ids": [
+        "A5"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "fe4d0466a6327f355d0b4212e505c9159ea0272160a79a7d9381659d76926b94",
+      "source_section_sha256": "f156e1432f299bb7d9c39b5972deb8f68c40fb93f9d30f689273c8ac3ed03b82",
+      "source_card": "RESEARCH_QUESTIONS.md#a5",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** Adult alveolar repair recruits the exact independently sourced developmental epithelial component beyond the identity, stress and labeling genes excluded by the frozen shared-component contract. Its association in 24 mice motivates independent replication of that same component. Whether it performs a developmental function during repair is a separate, untested biological question. [A5 evidence dossier](docs/research_dossiers/A5.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a5). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A5 context; broad retrieval does not require the predicted direction. Search developmental reuse and alternative sources of overlap; a shared RNA component does not establish a shared route or developmental function.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Search developmental reuse and alternative sources of overlap; a shared RNA component does not establish a shared route or developmental function.",
+      "streams": {
+        "broad": "TITLE_ABS:(alveolar OR lung) AND TITLE_ABS:(epithelial OR pneumocyte) AND TITLE_ABS:(development OR developmental OR neonatal) AND TITLE_ABS:(repair OR regeneration OR injury)",
+        "rq_contrary": "TITLE_ABS:(alveolar OR lung) AND TITLE_ABS:(repair OR regeneration) AND TITLE_ABS:(stress OR proliferation OR identity OR reprogramming)",
+        "adjacent_context": "TITLE_ABS:(epithelial) AND TITLE_ABS:(development OR developmental) AND TITLE_ABS:(repair OR regeneration OR remodeling OR remodelling)"
+      }
+    },
+    "a6-ipf-macrophage-state": {
+      "rq_ids": [
+        "A6"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "c998b019e2f148c70c68d04f09123f1072813595b8d2a606f62c67b1fa7f690b",
+      "source_section_sha256": "95399f35ca35bfcc84d893787f09f0d918c6dda89f27a25ee673bc3c4ab45a80",
+      "source_card": "RESEARCH_QUESTIONS.md#a6",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** IPF may change macrophage activity within a shared macrophage state as well as change the abundance of that state. The current task is a donor-level within-state comparison; a specific effector and tissue consequence are not yet nominated. The available three-IPF/one-control comparison cannot establish a population-wide disease mechanism. [A6 evidence dossier](docs/research_dossiers/A6.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a6). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A6 context; broad retrieval does not require the predicted direction. Retrieve within-state and mixture alternatives at donor-level relevance; no specific macrophage effector or tissue consequence is nominated.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Retrieve within-state and mixture alternatives at donor-level relevance; no specific macrophage effector or tissue consequence is nominated.",
+      "streams": {
+        "broad": "TITLE_ABS:(\"idiopathic pulmonary fibrosis\" OR IPF) AND TITLE_ABS:(macrophage) AND TITLE_ABS:(state OR heterogeneity OR single-cell OR transcriptomic)",
+        "rq_contrary": "TITLE_ABS:(\"pulmonary fibrosis\" OR IPF) AND TITLE_ABS:(macrophage) AND TITLE_ABS:(composition OR recruitment OR resident OR proliferating OR annotation)",
+        "adjacent_context": "TITLE_ABS:(macrophage) AND TITLE_ABS:(disease OR fibrosis) AND TITLE_ABS:(pseudobulk OR donor OR composition OR \"within-state\")"
+      }
+    },
+    "a7-cebpa-state-interaction": {
+      "rq_ids": [
+        "A7"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "a1ca339417a8476dc85442bfecbf16b8387b7fa9bbedaf9842901633eb88afa8",
+      "source_section_sha256": "442224ffdd291b253c663eb8f113f2bf4cbf31d83b0b615cb99b5361af475d03",
+      "source_card": "RESEARCH_QUESTIONS.md#a7",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** CEBPA loss attenuates alveolar identity across AT2 states; the additional candidate is that its effect differs between independently established starting states beyond this broad identity loss. Broad attenuation is the published premise, not the novel claim. The state interaction must be specified before genotype changes the state labels; CEBPA and AP-1 studies remain separate sources. [A7 evidence dossier](docs/research_dossiers/A7.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a7). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A7 context; broad retrieval does not require the predicted direction. Broad identity loss is a published premise; retrieve starting-state interaction and selection evidence without treating CEBPA and AP-1 studies as one perturbation.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Broad identity loss is a published premise; retrieve starting-state interaction and selection evidence without treating CEBPA and AP-1 studies as one perturbation.",
+      "streams": {
+        "broad": "TITLE_ABS:(CEBPA OR \"C/EBPalpha\" OR \"C/EBP alpha\") AND TITLE_ABS:(alveolar OR pneumocyte OR lung) AND TITLE_ABS:(identity OR differentiation OR transition)",
+        "rq_contrary": "TITLE_ABS:(CEBPA OR \"C/EBPalpha\" OR \"C/EBP alpha\") AND TITLE_ABS:(alveolar OR lung) AND TITLE_ABS:(state OR selection OR genotype OR proliferation)",
+        "adjacent_context": "TITLE_ABS:(alveolar OR pneumocyte) AND TITLE_ABS:(transcription OR regulatory) AND TITLE_ABS:(identity OR transitional) AND TITLE_ABS:(perturbation OR knockout)"
+      }
+    },
+    "a8-at1-maturation-prediction": {
+      "rq_ids": [
+        "A8"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "b9626f6c34d0e6621a13a69eb12678f7cc8cf82be0f904dd45f86a1c9742dfd9",
+      "source_section_sha256": "6bfb5953a87be237a748b6ab967d7e8ee7cd6ee911b3213e060687f7e428ad5a",
+      "source_card": "RESEARCH_QUESTIONS.md#a8",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** An early, frozen maturation-associated RNA component may identify AT2 descendants that later contribute mature AT1 cells beyond information in the shared transition component. The additional claim is prospective information about independent later mature output, not that the score is fate or that one marker causes maturation. The component remains unchanged and the early-to-later biological-unit link is still missing. [A8 evidence dossier](docs/research_dossiers/A8.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a8). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A8 context; broad retrieval does not require the predicted direction. Seek independent later mature output beyond shared transition; the predictor-to-later-outcome biological-unit link is currently missing.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Seek independent later mature output beyond shared transition; the predictor-to-later-outcome biological-unit link is currently missing.",
+      "streams": {
+        "broad": "TITLE_ABS:(alveolar OR pneumocyte) AND TITLE_ABS:(maturation OR differentiation) AND TITLE_ABS:(AT1 OR \"type 1\" OR \"type I\") AND TITLE_ABS:(lineage OR programme OR program OR prediction)",
+        "rq_contrary": "TITLE_ABS:(alveolar OR pneumocyte) AND TITLE_ABS:(maturation OR transition) AND TITLE_ABS:(timing OR composition OR protein OR morphology OR measurement)",
+        "adjacent_context": "TITLE_ABS:(epithelial) AND TITLE_ABS:(lineage OR descendant) AND TITLE_ABS:(prediction OR maturation OR \"functional outcome\")"
+      }
+    },
+    "a9-areg-recipient-context": {
+      "rq_ids": [
+        "A9"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "43b7e563de595913c7afc620e0b3fbbf848af5c5b5460954f161f3daecf480f3",
+      "source_section_sha256": "e67ddd102203c38c487c393c2fa7bfbf9b8d3db758c13a014cf8203c069f9943",
+      "source_card": "RESEARCH_QUESTIONS.md#a9",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** Fibroblast competence to receive AREG may change its downstream response even at comparable effective AREG exposure. This asks about the recipient side of the AREG-EGFR axis, separately from A2 delivery. The relevant receptor/co-receptor or inhibitory contrast and functional response remain to be nominated; receptor RNA and database complex membership do not specify either. [A9 evidence dossier](docs/research_dossiers/A9.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a9). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A9 context; broad retrieval does not require the predicted direction. Retrieve recipient competence under defined exposure; receptor/co-receptor contrast and functional response remain unchosen, and receptor RNA is not engagement.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Retrieve recipient competence under defined exposure; receptor/co-receptor contrast and functional response remain unchosen, and receptor RNA is not engagement.",
+      "streams": {
+        "broad": "TITLE_ABS:(amphiregulin OR AREG) AND TITLE_ABS:(fibroblast OR mesenchymal) AND TITLE_ABS:(EGFR OR receptor OR response)",
+        "rq_contrary": "TITLE_ABS:(fibroblast) AND TITLE_ABS:(EGFR OR amphiregulin) AND TITLE_ABS:(ligand OR receptor OR inhibition OR heterogeneity)",
+        "adjacent_context": "TITLE_ABS:(fibroblast OR mesenchymal) AND TITLE_ABS:(receptor OR coreceptor OR co-receptor) AND TITLE_ABS:(ligand OR activation OR competence)"
+      }
+    },
+    "a10-organoid-growth-information": {
+      "rq_ids": [
+        "A10"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "87efb334060f20ee4eebfb11b67948e84d8392d5a2a7e34578dd95d66af0a4f7",
+      "source_section_sha256": "c3c7ea39d73e9b359add67965a1d51368cc50bafcd2f82c6fbbe7fc0d8a3a729",
+      "source_card": "RESEARCH_QUESTIONS.md#a10",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** The existing epithelial programme measurements may forecast subsequent organoid area beyond initial area and cell-cycle information across independent preparations. This is a growth-prediction question supporting the broader epithelial-growth hypothesis. The current day-14 RNA/area association is concurrent; it neither establishes early forecasting nor identifies a causal programme or mature repair function. [A10 evidence dossier](docs/research_dossiers/A10.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a10). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A10 context; broad retrieval does not require the predicted direction. Separate prospective growth prediction from concurrent RNA/area association; do not equate organoid growth with mature repair function.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Separate prospective growth prediction from concurrent RNA/area association; do not equate organoid growth with mature repair function.",
+      "streams": {
+        "broad": "TITLE_ABS:(organoid) AND TITLE_ABS:(epithelial) AND TITLE_ABS:(growth OR area OR size) AND TITLE_ABS:(transcriptomic OR programme OR program OR perturbation)",
+        "rq_contrary": "TITLE_ABS:(organoid) AND TITLE_ABS:(growth OR area OR size) AND TITLE_ABS:(baseline OR proliferation OR \"cell cycle\" OR plate OR preparation)",
+        "adjacent_context": "TITLE_ABS:(organoid) AND TITLE_ABS:(imaging OR longitudinal OR \"time lapse\") AND TITLE_ABS:(prediction OR growth OR perturbation)"
+      }
+    },
+    "a11-lesion-plasticity-component": {
+      "rq_ids": [
+        "A11"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "5fabad953c30947ff1f0a336c1f35cff4cf49536eaa65a2fac8a1cef7a3e8ec1",
+      "source_section_sha256": "4311d6e7e0686d2a51be4d7fe0eeaa91c3a320ae022825fce7d27c6c41d0c8a1",
+      "source_card": "RESEARCH_QUESTIONS.md#a11",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** The frozen lesion-associated residual component may contain reproducible lesion-context information beyond the specified shared developmental/injury and stress explanations. It is a set-defined measurement, not an identified cancer-specific state or mechanism. The paired-patient beyond-shared criterion remains unresolved, and no lesion-relevant functional mediator is nominated. [A11 evidence dossier](docs/research_dossiers/A11.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a11). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A11 context; broad retrieval does not require the predicted direction. Nominate lesion-context additions and non-neoplastic alternatives; histology classes do not prove progression, malignancy or a cancer-specific mechanism.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Nominate lesion-context additions and non-neoplastic alternatives; histology classes do not prove progression, malignancy or a cancer-specific mechanism.",
+      "streams": {
+        "broad": "TITLE_ABS:(lung OR pulmonary) AND TITLE_ABS:(epithelial) AND TITLE_ABS:(neoplasia OR adenocarcinoma OR lesion) AND TITLE_ABS:(plasticity OR transition OR remodeling OR remodelling)",
+        "rq_contrary": "TITLE_ABS:(lung OR alveolar) AND TITLE_ABS:(epithelial) AND TITLE_ABS:(repair OR fibrosis OR injury OR stress) AND TITLE_ABS:(plasticity OR transitional)",
+        "adjacent_context": "TITLE_ABS:(epithelial) AND TITLE_ABS:(development OR injury OR neoplasia) AND TITLE_ABS:(shared OR specificity OR programme OR program)"
+      }
+    },
+    "a12-il1-recipient-inhibition": {
+      "rq_ids": [
+        "A12"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "5fe67ffbe4bb29c0331d922b7b0909ef12292d37aff0011d3b486af463b41a25",
+      "source_section_sha256": "5e02e7f5085df12cb12c49d6d8c6ef3a5b8b5781e27a459490b74bc67ee9830d",
+      "source_card": "RESEARCH_QUESTIONS.md#a12",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** IL-1 receptor and inhibitory context in recipient epithelial cells or fibroblasts may explain an IL-1-dependent response beyond ligand RNA abundance. Those are separate recipient questions; the current portfolio has not fixed one compartment, receptor/inhibitory contrast and biological consequence for a mechanistic experiment. General NF-kB or inflammation scores cannot establish IL-1 specificity. [A12 evidence dossier](docs/research_dossiers/A12.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a12). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A12 context; broad retrieval does not require the predicted direction. Keep epithelial and fibroblast recipient questions separate; no single compartment, inhibitory contrast or specific consequence is fixed.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Keep epithelial and fibroblast recipient questions separate; no single compartment, inhibitory contrast or specific consequence is fixed.",
+      "streams": {
+        "broad": "TITLE_ABS:(IL1A OR IL1B OR \"interleukin-1\") AND TITLE_ABS:(epithelial OR fibroblast) AND TITLE_ABS:(IL1R1 OR IL1RAP OR receptor OR inhibitor)",
+        "rq_contrary": "TITLE_ABS:(epithelial OR fibroblast) AND TITLE_ABS:(\"interleukin-1\" OR IL1B) AND TITLE_ABS:(ligand OR inflammation OR composition OR antagonist)",
+        "adjacent_context": "TITLE_ABS:(epithelial OR fibroblast) AND TITLE_ABS:(cytokine) AND TITLE_ABS:(receptor OR inhibition OR \"NF-kB\" OR specificity)"
+      }
+    },
+    "a13-fibroblast-epithelial-input": {
+      "rq_ids": [
+        "A13"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "b05748dc33689c092b7facd99b3974c107ed6ad6a99efc133750668ed991f738",
+      "source_section_sha256": "d155db350190bc5159a3ea56966d968857256a978b86564b78c2a3db8b9fea51",
+      "source_card": "RESEARCH_QUESTIONS.md#a13",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** Fibroblast output may alter epithelial recovery beyond the effect of macrophage IL-1-beta input. The existing TGF-beta-hallmark/HPCS-proxy pilot found no aggregate held-out gain and nominates no mediator. The biological idea remains incomplete until a particular fibroblast product, epithelial response and source-directed contrast are supported; output nomination is preparatory work, not the hypothesis itself. [A13 evidence dossier](docs/research_dossiers/A13.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a13). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A13 context; broad retrieval does not require the predicted direction. Find candidate fibroblast products and source-directed comparisons without choosing a mediator from a prior failed aggregate model.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Find candidate fibroblast products and source-directed comparisons without choosing a mediator from a prior failed aggregate model.",
+      "streams": {
+        "broad": "TITLE_ABS:(lung OR alveolar) AND TITLE_ABS:(fibroblast) AND TITLE_ABS:(epithelial) AND TITLE_ABS:(repair OR recovery OR plasticity OR IL1B)",
+        "rq_contrary": "TITLE_ABS:(lung OR alveolar) AND TITLE_ABS:(epithelial) AND TITLE_ABS:(macrophage OR IL1B OR \"interleukin-1\") AND TITLE_ABS:(inflammation OR composition OR histology OR repair)",
+        "adjacent_context": "TITLE_ABS:(fibroblast) AND TITLE_ABS:(epithelial) AND TITLE_ABS:(matrix OR trophic OR inflammatory OR recruitment) AND TITLE_ABS:(repair OR regeneration)"
+      }
+    },
+    "a14-il1-withdrawal-recovery": {
+      "rq_ids": [
+        "A14"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "ea4dbad4934078702cdf39420e319b1efd5065b51275348a007c94de184c4a0a",
+      "source_section_sha256": "6177daba7a17f9f10e7cc9a2909a0fa8cd46d60960f1bd82619bfca0e1618507",
+      "source_card": "RESEARCH_QUESTIONS.md#a14",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** H1: longer IL-1-beta exposure reduces subsequent lineage-derived mature AT1 recovery after input cessation, with comparable recovery intervals and culture age. H2, assessed separately: fibroblast IL-1 reception modifies that mature-output recovery beyond direct epithelial reception. H2 has no justified direction yet. The proposed increment concerns post-cessation maturation, not the already published effects of withdrawal or fibroblast pre-exposure on organoid formation. [A14 evidence dossier](docs/research_dossiers/A14.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a14). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A14 context; broad retrieval does not require the predicted direction. Duration and fibroblast IL-1 reception are separate questions; search post-cessation mature output without assuming a direction for fibroblast dependence.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Duration and fibroblast IL-1 reception are separate questions; search post-cessation mature output without assuming a direction for fibroblast dependence.",
+      "streams": {
+        "broad": "TITLE_ABS:(alveolar OR lung OR organoid) AND TITLE_ABS:(IL1B OR \"interleukin-1\") AND TITLE_ABS:(duration OR sustained OR transient OR withdrawal OR recovery)",
+        "rq_contrary": "TITLE_ABS:(alveolar OR organoid) AND TITLE_ABS:(IL1B OR \"interleukin-1\") AND TITLE_ABS:(survival OR toxicity OR epithelial OR fibroblast OR residual)",
+        "adjacent_context": "TITLE_ABS:(epithelial) AND TITLE_ABS:(cytokine) AND TITLE_ABS:(withdrawal OR cessation OR exposure) AND TITLE_ABS:(maturation OR lineage OR recovery)"
+      }
+    },
+    "a15-itgb6-tgfb-activation": {
+      "rq_ids": [
+        "A15"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "79deaecabeaf82afde413156db1031bf88e12988a482cadeeb3d492ad65f66d6",
+      "source_section_sha256": "1a78fc609ec95bc889b573212b111b06cdf68b2fb03557cdf8035a39e476310c",
+      "source_card": "RESEARCH_QUESTIONS.md#a15",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** Epithelial ITGB6-containing integrin activity may change fibroblast response by activating latent TGF-beta, rather than by changing total ligand supply. That pathway is already established. The repository-specific idea is whether the epithelial Itgb6-associated fibroblast response in the A2 context is explained by this activation route; neither active TGF-beta nor a decisive fibroblast functional endpoint was measured there. [A15 evidence dossier](docs/research_dossiers/A15.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a15). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A15 context; broad retrieval does not require the predicted direction. The activation pathway is established; nominate active-ligand/receptor-proximal measurements and competing source/recipient routes, not novelty from RNA.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "The activation pathway is established; nominate active-ligand/receptor-proximal measurements and competing source/recipient routes, not novelty from RNA.",
+      "streams": {
+        "broad": "TITLE_ABS:(ITGB6 OR \"integrin beta6\" OR alphaVbeta6) AND TITLE_ABS:(epithelial OR fibroblast OR lung) AND TITLE_ABS:(TGF-beta OR TGFB OR latent OR activation)",
+        "rq_contrary": "TITLE_ABS:(fibroblast OR epithelial) AND TITLE_ABS:(integrin OR ITGB6) AND TITLE_ABS:(TGF-beta OR TGFB) AND TITLE_ABS:(ligand OR amplification OR matrix OR identity)",
+        "adjacent_context": "TITLE_ABS:(epithelial) AND TITLE_ABS:(fibroblast) AND TITLE_ABS:(EGFR OR amphiregulin OR \"latent TGF-beta\")"
+      }
+    },
+    "a16-cd177-epithelial-priming": {
+      "rq_ids": [
+        "A16"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "b3b1863f4151ca4650210a0e4dd19288dc30aac977f4ec10d0aec8a296377d81",
+      "source_section_sha256": "9d1dd25c78320f7afdf8c19490ef8a21deec27c62fce9182296d21608e8ed769",
+      "source_card": "RESEARCH_QUESTIONS.md#a16",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** Epithelial CD177 protein may identify a priming phenotype within comparable mutant transitional cells that differs in a later response. It is a candidate marker, not a proposed causal fate regulator. Source/protein attribution and one specific later response still need qualification; the corrected RNA comparison attenuated after improved starting-state matching. [A16 evidence dossier](docs/research_dossiers/A16.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a16). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A16 context; broad retrieval does not require the predicted direction. CD177 is a candidate marker, not an established causal regulator or mutant-exclusive protein; source attribution and later response still need qualification.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "CD177 is a candidate marker, not an established causal regulator or mutant-exclusive protein; source attribution and later response still need qualification.",
+      "streams": {
+        "broad": "TITLE_ABS:(CD177) AND TITLE_ABS:(epithelial OR alveolar OR lung OR organoid)",
+        "rq_contrary": "TITLE_ABS:(CD177) AND TITLE_ABS:(epithelial OR organoid) AND TITLE_ABS:(inflammation OR mutant OR \"wild type\" OR state OR mixture)",
+        "adjacent_context": "TITLE_ABS:(alveolar OR lung) AND TITLE_ABS:(epithelial OR organoid) AND TITLE_ABS:(priming OR plasticity OR neighbourhood OR neighborhood)"
+      }
+    },
+    "a17-mutant-clone-growth": {
+      "rq_ids": [
+        "A17"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "b684ab058a89b46ab95c28408f87055e1815ab5fd17b262a2aee10ad3f950864",
+      "source_section_sha256": "21fe4630056c41263c7cd0619777086d4902e1fe42070f3addb085a917e56c19",
+      "source_card": "RESEARCH_QUESTIONS.md#a17",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** Persistent differences inherited from founder lineages may contribute to unequal mutant clone growth beyond reversible state switching and observation effects. A fitted founder class is a latent model term, not a discovered cell type. The current comparison concerns detected clone-size distributions until ascertainment and longitudinal linkage are qualified; numerical solver and identifiability work remain unfinished. [A17 evidence dossier](docs/research_dossiers/A17.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a17). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A17 context; broad retrieval does not require the predicted direction. Search persistent founder effects and alternative clone-size processes; a fitted mixture is not a cell type and detected clone sizes are not longitudinal growth.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Search persistent founder effects and alternative clone-size processes; a fitted mixture is not a cell type and detected clone sizes are not longitudinal growth.",
+      "streams": {
+        "broad": "TITLE_ABS:(alveolar OR lung OR AT2) AND TITLE_ABS:(mutant OR mutation) AND TITLE_ABS:(clone OR clonal OR lineage) AND TITLE_ABS:(growth OR expansion OR founder)",
+        "rq_contrary": "TITLE_ABS:(clone OR clonal) AND TITLE_ABS:(epithelial OR alveolar) AND TITLE_ABS:(switching OR survival OR merger OR ascertainment OR continuous)",
+        "adjacent_context": "TITLE_ABS:(clonal OR lineage) AND TITLE_ABS:(growth OR expansion) AND TITLE_ABS:(heterogeneity OR stochastic OR mixture OR identifiability)"
+      }
+    },
+    "a18-mutant-wt-neighbourhood": {
+      "rq_ids": [
+        "A18"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "e346794f85d126e750ec8a326cb460857b77e964350fa5a0baaa7f4a4b263e64",
+      "source_section_sha256": "7883b03e891fb055a28c6d0d20f0fccc116adf0f26b439af02b53da7795dd64f",
+      "source_card": "RESEARCH_QUESTIONS.md#a18",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** The local mutant epithelial context may alter absolute expansion of neighboring WT AT2 lineages separately from loss of WT alveolar identity. The immediate biological question is whether those outcomes dissociate after survival and starting state are measured. SPP1 and DLK1 remain possible source candidates; no two molecular signaling channels have been established. [A18 evidence dossier](docs/research_dossiers/A18.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a18). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A18 context; broad retrieval does not require the predicted direction. Keep absolute WT expansion and identity loss separate; SPP1/DLK1 are candidates, and neither RNA nor spatial patterns establish two signals or ranges.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Keep absolute WT expansion and identity loss separate; SPP1/DLK1 are candidates, and neither RNA nor spatial patterns establish two signals or ranges.",
+      "streams": {
+        "broad": "TITLE_ABS:(alveolar OR lung OR AT2) AND TITLE_ABS:(mutant OR mutation) AND TITLE_ABS:(\"wild type\" OR neighbour OR neighbor) AND TITLE_ABS:(expansion OR identity OR growth)",
+        "rq_contrary": "TITLE_ABS:(epithelial OR alveolar) AND TITLE_ABS:(mutant OR clone) AND TITLE_ABS:(survival OR mechanical OR relay OR selection OR distance)",
+        "adjacent_context": "TITLE_ABS:(alveolar OR lung) AND TITLE_ABS:(SPP1 OR DLK1 OR amphiregulin) AND TITLE_ABS:(epithelial OR organoid OR paracrine)"
+      }
+    },
+    "a19-fzd-expansion-maturation": {
+      "rq_ids": [
+        "A19"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "51bc735a674a8004cdadb12868f53d838e5e858a50b7206290700dcc8952d4bc",
+      "source_section_sha256": "c149b3ef43ae80b4cdf8891cb9909776dac0d10c2c889ac9db099e8e4f15a3ac",
+      "source_card": "RESEARCH_QUESTIONS.md#a19",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** In primary AT2-derived cultures retaining alveolar identity before the schedule comparison, ending Fzd-supported expansion may increase later absolute lineage-derived mature AT1 output while preserving AT2 descendants capable of renewed expansion. Continued receptor input is the comparator. Fzd5-selective stimulation is a source-supported candidate input, not a frozen reagent choice; schedule, starting-state competence and input identity retain separate decisions. [A19 evidence dossier](docs/research_dossiers/A19.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a19). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A19 context; broad retrieval does not require the predicted direction. Input identity, schedule and starting state remain separate decisions; Fzd5 and YAP/TAZ are candidates rather than frozen reagents or proven mediators.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Input identity, schedule and starting state remain separate decisions; Fzd5 and YAP/TAZ are candidates rather than frozen reagents or proven mediators.",
+      "streams": {
+        "broad": "TITLE_ABS:(alveolar OR pneumocyte OR AT2) AND TITLE_ABS:(Frizzled OR FZD OR FZD5 OR Wnt) AND TITLE_ABS:(expansion OR maturation OR differentiation OR withdrawal)",
+        "rq_contrary": "TITLE_ABS:(alveolar OR AT2 OR organoid) AND TITLE_ABS:(Wnt OR Frizzled) AND TITLE_ABS:(state OR duration OR survival OR reserve OR continued)",
+        "adjacent_context": "TITLE_ABS:(epithelial) AND TITLE_ABS:(Wnt OR Frizzled OR YAP OR TAZ) AND TITLE_ABS:(reversible OR maturation OR expansion OR competence)"
+      }
+    },
+    "a20-fibroblast-fzd1-fzd2": {
+      "rq_ids": [
+        "A20"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "6a38a51cd655347d95c14240bab355e262dec1b14e6a063c4a729ad8ebe5822b",
+      "source_section_sha256": "1e02a46c902582631d7aa8a62c15a2e7645f3b73dbbbf6d3adff79941a88e406",
+      "source_card": "RESEARCH_QUESTIONS.md#a20",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** In adult AF1-like fibroblasts, comparable Fzd2 loss reduces support of a maturation-competent AT2 pool and subsequent absolute mature epithelial output more than comparable Fzd1 loss. Pool maintenance is the proposed explanation, distinct from a later maturation-specific defect, general fibroblast loss or matrix effects. This restores the existing narrowed hypothesis and does not claim discovery of Fzd2-dependent repair. [A20 evidence dossier](docs/research_dossiers/A20.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a20). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A20 context; broad retrieval does not require the predicted direction. Retrieve comparable receptor loss and mature-output support evidence; pool maintenance is distinct from fibroblast loss, matrix effects or maturation-specific defects.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Retrieve comparable receptor loss and mature-output support evidence; pool maintenance is distinct from fibroblast loss, matrix effects or maturation-specific defects.",
+      "streams": {
+        "broad": "TITLE_ABS:(fibroblast OR mesenchymal) AND TITLE_ABS:(FZD1 OR FZD2 OR Frizzled) AND TITLE_ABS:(lung OR alveolar OR AT2)",
+        "rq_contrary": "TITLE_ABS:(fibroblast) AND TITLE_ABS:(lung OR alveolar) AND TITLE_ABS:(Wnt OR Frizzled) AND TITLE_ABS:(matrix OR survival OR maintenance OR maturation)",
+        "adjacent_context": "TITLE_ABS:(alveolar OR AT2) AND TITLE_ABS:(fibroblast OR niche) AND TITLE_ABS:(pool OR reserve OR support OR regeneration)"
+      }
+    },
+    "a21-fzd4-capillary-repair": {
+      "rq_ids": [
+        "A21"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "aa51a120059a7612f4e8c743c49a5378f64a0fed065008729b921017ba0764f5",
+      "source_section_sha256": "1c9c91271e8cdd4294153f87c2282c494d976d877aacabeda797c57cc30e22c3",
+      "source_card": "RESEARCH_QUESTIONS.md#a21",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** Fzd4-dependent capillary integrity may permit gCap self-renewal and subsequent aerocyte production during normal adult alveolar repair. The proposed route links vascular function to lineage output; it must be distinguished from direct regenerative entry, endothelial survival and parallel injury responses. Tumor-vessel rescue is a precedent, not evidence that this complete adult repair route has been demonstrated. [A21 evidence dossier](docs/research_dossiers/A21.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a21). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A21 context; broad retrieval does not require the predicted direction. Vascular integrity, direct regenerative entry and survival remain alternatives; tumor-vessel precedents do not establish the adult alveolar lineage route.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Vascular integrity, direct regenerative entry and survival remain alternatives; tumor-vessel precedents do not establish the adult alveolar lineage route.",
+      "streams": {
+        "broad": "TITLE_ABS:(lung OR alveolar OR pulmonary) AND TITLE_ABS:(endothelial OR capillary OR aerocyte OR gCap) AND TITLE_ABS:(FZD4 OR Frizzled OR Wnt)",
+        "rq_contrary": "TITLE_ABS:(alveolar OR pulmonary) AND TITLE_ABS:(endothelial OR capillary) AND TITLE_ABS:(survival OR barrier OR permeability OR integrity) AND TITLE_ABS:(repair OR regeneration)",
+        "adjacent_context": "TITLE_ABS:(aerocyte OR gCap OR \"general capillary\") AND TITLE_ABS:(lineage OR renewal OR injury OR regeneration)"
+      }
+    },
+    "a22-epithelial-identity-chemokines": {
+      "rq_ids": [
+        "A22"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "6ce02556813f2e3324f15d016124f5992ed42d021f1d12516abeae354b2b7639",
+      "source_section_sha256": "bbc231a5263e9e0b6fa961b9a0f2ed7c064ab631b0cf5fd29b6c07657ab38efe",
+      "source_card": "RESEARCH_QUESTIONS.md#a22",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** Loss of NKX2-1-dependent AT2 identity may lower actual fibroblast chemokine output within comparable fibroblast states beyond a change in viable epithelial source amount. The RNA direction is already published. The proposed extension asks whether it reaches extracellular protein output; the primary chemokine protein and collection/recovery definition have not been nominated, and broad AT2-score generalization failed. [A22 evidence dossier](docs/research_dossiers/A22.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a22). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A22 context; broad retrieval does not require the predicted direction. Search extracellular chemokine competence beyond source amount; the primary protein and collection definition remain unchosen, and RNA is not secretion.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Search extracellular chemokine competence beyond source amount; the primary protein and collection definition remain unchosen, and RNA is not secretion.",
+      "streams": {
+        "broad": "TITLE_ABS:(NKX2-1 OR NKX21 OR \"alveolar identity\") AND TITLE_ABS:(epithelial OR AT2) AND TITLE_ABS:(fibroblast OR chemokine OR stromal)",
+        "rq_contrary": "TITLE_ABS:(alveolar OR lung) AND TITLE_ABS:(epithelial) AND TITLE_ABS:(fibroblast OR chemokine) AND TITLE_ABS:(viability OR abundance OR composition OR wound)",
+        "adjacent_context": "TITLE_ABS:(epithelial OR stromal OR fibroblast) AND TITLE_ABS:(chemokine) AND TITLE_ABS:(secretion OR protein OR extracellular OR recruitment)"
+      }
+    },
+    "a23-slc34a2-transition": {
+      "rq_ids": [
+        "A23"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "4c390508929b6c0b7cf6c6492dd1346577f21bf723ef766a0a7fae149530f1f6",
+      "source_section_sha256": "e92ef4846b9afa1554bb2d63c5e89ab7d20019958db23cead2e0d724a0fd8c05",
+      "source_card": "RESEARCH_QUESTIONS.md#a23",
+      "source_excerpt": "**Current development scope, 3 October 2026 (proposed).** SLC34A2 transport impairment may increase acquisition of a transition-associated epithelial stress state before broad AT2 identity loss, rather than merely prolong an existing intermediate state by impairing exit to AT1 maturation. This entry-versus-residence distinction narrows the original proposal. Phosphate-dependent repair failure and the Slc34a2-loss transitional RNA module already have published precedents; the mechanism cannot be claimed new from their combination. [A23 evidence dossier](docs/research_dossiers/A23.md) · [Novelty boundary](docs/research_dossiers/NOVELTY_SPECIFICITY_APPLICATION_2026-10-03.md#a23). Historical tests below retain their original scope; scientific acceptance is not inferred.",
+      "rationale": "Draft discovery nomination grounded in the pinned A23 context; broad retrieval does not require the predicted direction. Distinguish transition entry from prolonged residence and secondary injury; phosphate mediation, timing and reversibility are not established by existing RNA.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Distinguish transition entry from prolonged residence and secondary injury; phosphate mediation, timing and reversibility are not established by existing RNA.",
+      "streams": {
+        "broad": "TITLE_ABS:(SLC34A2 OR NPT2B OR \"pulmonary alveolar microlithiasis\") AND TITLE_ABS:(alveolar OR epithelial OR phosphate)",
+        "rq_contrary": "TITLE_ABS:(SLC34A2 OR NPT2B OR microlithiasis) AND TITLE_ABS:(stress OR inflammation OR mineral OR compensation OR transport)",
+        "adjacent_context": "TITLE_ABS:(alveolar OR AT2) AND TITLE_ABS:(phosphate OR homeostasis) AND TITLE_ABS:(transition OR identity OR repair OR maturation)"
+      }
+    },
+    "a24-bladder-stromal-ageing": {
+      "rq_ids": [
+        "A24"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "74426ae8d8c11a3c9af05956feb2b3ee24eab34bca740f105daff08b5850a61f",
+      "source_section_sha256": "38f358be609f9413c9948f8dc0184d4c350174c7141dcb635edff4ec907089c8",
+      "source_card": "RESEARCH_QUESTIONS.md#a24",
+      "source_excerpt": "**Hypothesis and biology.** An age-associated change in a specified bladder stromal population reduces urothelial barrier maintenance beyond epithelial age and terminal differentiation alone. This is a proposed intercompartmental contribution, not a conclusion from the atlas. The particular stromal population and mechanism remain open.",
+      "rationale": "Draft discovery nomination grounded in the pinned A24 context; broad retrieval does not require the predicted direction. No particular bladder stromal population or mechanism is fixed; retrieve alternatives without treating co-varying RNA as a barrier effect.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "No particular bladder stromal population or mechanism is fixed; retrieve alternatives without treating co-varying RNA as a barrier effect.",
+      "streams": {
+        "broad": "TITLE_ABS:(bladder OR urothelial OR urothelium) AND TITLE_ABS:(aging OR ageing) AND TITLE_ABS:(stromal OR stroma OR fibroblast OR barrier)",
+        "rq_contrary": "TITLE_ABS:(bladder OR urothelial) AND TITLE_ABS:(aging OR ageing) AND TITLE_ABS:(epithelial OR differentiation OR umbrella OR vascular OR immune)",
+        "adjacent_context": "TITLE_ABS:(urothelial OR urothelium) AND TITLE_ABS:(stromal OR fibroblast OR niche) AND TITLE_ABS:(barrier OR permeability OR maintenance)"
+      }
+    },
+    "a25-microglia-regional-ageing": {
+      "rq_ids": [
+        "A25"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "da2d30221eda256edb09615330b5df0b716ff8df51fa4d853cb3086eb00928d8",
+      "source_section_sha256": "970dafe31f52e86060cbb98ee62f2536a4a69c68db5da74fcc7d319d8cf81115",
+      "source_card": "RESEARCH_QUESTIONS.md#a25",
+      "source_excerpt": "**Hypothesis and biology.** A region- and sex-qualified middle-age microglial distribution contains coherent structure that generalizes across animals and is inadequately represented by endpoint mixtures or a smooth age-response baseline. This is an RNA-organization hypothesis; a discrete cell state or functional role requires additional evidence.",
+      "rationale": "Draft discovery nomination grounded in the pinned A25 context; broad retrieval does not require the predicted direction. Nominate age/region/sex-qualified organization and alternative mixture models; embedding separation is not evidence for a discrete functional state.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Nominate age/region/sex-qualified organization and alternative mixture models; embedding separation is not evidence for a discrete functional state.",
+      "streams": {
+        "broad": "TITLE_ABS:(microglia OR microglial) AND TITLE_ABS:(aging OR ageing OR \"middle age\") AND TITLE_ABS:(region OR regional OR heterogeneity OR organization)",
+        "rq_contrary": "TITLE_ABS:(microglia OR microglial) AND TITLE_ABS:(aging OR ageing) AND TITLE_ABS:(continuous OR mixture OR composition OR sex OR processing)",
+        "adjacent_context": "TITLE_ABS:(microglia OR microglial) AND TITLE_ABS:(single-cell OR transcriptomic) AND TITLE_ABS:(state OR regional OR prediction OR coherence)"
+      }
+    },
+    "a26-cd8-spleen-marrow-ageing": {
+      "rq_ids": [
+        "A26"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "15b6959af6f041ddc07469a57bbd0a19d6f91f8a6179847849ab53ef2d6b7a91",
+      "source_section_sha256": "bfef5e4c33ce2ae9251f5a566188b05d48be065934a25cfee7146e4d833f5b31",
+      "source_card": "RESEARCH_QUESTIONS.md#a26",
+      "source_excerpt": "**Hypothesis and biology.** At a fixed, independently defined CD8 state and comparable sampling scale, the older-versus-younger change in local clone concentration differs between spleen and marrow. This is a tissue-context association hypothesis, not evidence that a particular local niche causes expansion.",
+      "rationale": "Draft discovery nomination grounded in the pinned A26 context; broad retrieval does not require the predicted direction. The tissue contrast requires comparable states and within-animal evidence; receptor sharing does not establish movement or local proliferation.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "The tissue contrast requires comparable states and within-animal evidence; receptor sharing does not establish movement or local proliferation.",
+      "streams": {
+        "broad": "TITLE_ABS:(CD8 OR \"cytotoxic T\") AND TITLE_ABS:(aging OR ageing) AND TITLE_ABS:(spleen OR splenic OR marrow) AND TITLE_ABS:(repertoire OR TCR OR clonality OR clonal)",
+        "rq_contrary": "TITLE_ABS:(CD8) AND TITLE_ABS:(aging OR ageing) AND TITLE_ABS:(differentiation OR recirculation OR sampling OR repertoire)",
+        "adjacent_context": "TITLE_ABS:(CD8 OR \"T cell\") AND TITLE_ABS:(spleen OR marrow) AND TITLE_ABS:(receptor OR clonal OR repertoire) AND TITLE_ABS:(paired OR tissue OR sharing)"
+      }
+    },
+    "a27-cd8-state-repertoire-ageing": {
+      "rq_ids": [
+        "A27"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "aa7b9d05bfd715782e2b066bef9f630ebd1a584903f2de28f5ac1f167ade004d",
+      "source_section_sha256": "2a6a0c1d20fb7fe698007ac779aab314294fa58db5f9f6cd0d27fd6ba2cb9d8a",
+      "source_card": "RESEARCH_QUESTIONS.md#a27",
+      "source_excerpt": "**Hypothesis and biology.** For specified CD8 states, a measurable component of the spleen age contrast remains within states after composition and receptor ascertainment are accounted for; an alternative is that redistribution accounts for most of the observed difference. Both may contribute. No causal percentage of ageing explained is implied.",
+      "rationale": "Draft discovery nomination grounded in the pinned A27 context; broad retrieval does not require the predicted direction. Separate spleen state redistribution from within-state concentration on a common sampling scale; do not assign a causal percentage of ageing.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Separate spleen state redistribution from within-state concentration on a common sampling scale; do not assign a causal percentage of ageing.",
+      "streams": {
+        "broad": "TITLE_ABS:(CD8 OR \"cytotoxic T\") AND TITLE_ABS:(spleen OR splenic) AND TITLE_ABS:(aging OR ageing) AND TITLE_ABS:(repertoire OR clonal OR clonality)",
+        "rq_contrary": "TITLE_ABS:(CD8) AND TITLE_ABS:(aging OR ageing) AND TITLE_ABS:(composition OR differentiation OR sampling OR reconstruction OR redistribution)",
+        "adjacent_context": "TITLE_ABS:(CD8 OR \"T cell\") AND TITLE_ABS:(repertoire OR clonality) AND TITLE_ABS:(state OR standardization OR concentration OR heterogeneity)"
+      }
+    },
+    "a28-th17-regulatory-effector-arms": {
+      "rq_ids": [
+        "A28"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "2dc49bd7a9dc8997978b7eb25c97291a803929f33a0a8392704f2871267c5d54",
+      "source_section_sha256": "d8b528b80bcd2743aaa1fa8a5333e40c9b3b9677b818a4c14465e533046d7434",
+      "source_card": "RESEARCH_QUESTIONS.md#a28",
+      "source_excerpt": "**Hypothesis and biology.** Regulatory and effector competence are separately regulated within the same Th17 cell rather than two ends of one axis, so a perturbation can remove one without adding the other. Nutrient restriction is predicted to lower per-cell Foxp3 and CTLA4 protein with IL-17 unchanged, and a pathogenic cytokine condition to raise IL-17 with Foxp3 and CTLA4 unchanged. A single latent axis predicts that both perturbations move both proteins reciprocally. No causal claim about which competence is upstream is implied.",
+      "rationale": "Draft discovery nomination grounded in the pinned A28 context; broad retrieval does not require the predicted direction. Joint regulatory and effector proteins are the proposed discriminator; one-sided module shifts do not establish independent competence or exclude composition.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Joint regulatory and effector proteins are the proposed discriminator; one-sided module shifts do not establish independent competence or exclude composition.",
+      "streams": {
+        "broad": "TITLE_ABS:(Th17 OR \"T helper 17\") AND TITLE_ABS:(pathogenic OR regulatory OR effector)",
+        "rq_contrary": "TITLE_ABS:(Th17) AND TITLE_ABS:(polarization OR polarisation OR proliferation OR composition OR activation OR division)",
+        "adjacent_context": "TITLE_ABS:(Th17 OR \"CD4 T\") AND TITLE_ABS:(Foxp3 OR CTLA4) AND TITLE_ABS:(\"IL-17\" OR IL17) AND TITLE_ABS:(protein OR joint OR plasticity)"
+      }
+    },
+    "a29-pgam-th17-effector": {
+      "rq_ids": [
+        "A29"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "f82296818b6085a11c65e2d9077fe36d20f7c3d827efd3acf51ea0ea756e4a2b",
+      "source_section_sha256": "292d24e17043b5ed4f9be93ddd1f003533822328d36ccc8c47cf9f6eb3b00b13",
+      "source_card": "RESEARCH_QUESTIONS.md#a29",
+      "source_excerpt": "**Hypothesis and biology.** PGAM restriction raises Th17 effector output by lowering the phosphoenolpyruvate pool and relieving PEP-mediated inhibition of the JunB/BATF/IRF4 complex, rather than by inducing a stress response; relief of biosynthetic and proliferative demand is a third, separable possibility. The PEP route predicts that the PEP pool falls under PGAM inhibition and that PEP supplementation abolishes the effector gain; the demand route predicts that matched growth slowing without PGAM inhibition reproduces it. No mechanism here is proposed as new, and a transcript-level observation cannot establish any of them.",
+      "rationale": "Draft discovery nomination grounded in the pinned A29 context; broad retrieval does not require the predicted direction. Preserve PEP-pool, stress and growth-demand alternatives; genetic loss, drug effects, label ratios and absolute metabolite pools are distinct evidence.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Preserve PEP-pool, stress and growth-demand alternatives; genetic loss, drug effects, label ratios and absolute metabolite pools are distinct evidence.",
+      "streams": {
+        "broad": "TITLE_ABS:(Th17 OR \"T helper 17\" OR \"CD4 T\") AND TITLE_ABS:(PGAM OR PGAM1 OR phosphoglycerate OR phosphoenolpyruvate)",
+        "rq_contrary": "TITLE_ABS:(Th17 OR \"CD4 T\") AND TITLE_ABS:(glycolysis OR PGAM OR phosphoenolpyruvate OR EGCG) AND TITLE_ABS:(stress OR proliferation OR calcium OR demand OR off-target)",
+        "adjacent_context": "TITLE_ABS:(Th17) AND TITLE_ABS:(JunB OR BATF OR IRF4 OR ATF4 OR eIF2alpha) AND TITLE_ABS:(metabolite OR metabolic OR glucose OR stress)"
+      }
+    },
+    "a30-csf-cd4-state-contrast": {
+      "rq_ids": [
+        "A30"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "76ae934520b0c3888a2b88577b9e6d2c0e043535b50584e793bf06d8719a9ae8",
+      "source_section_sha256": "cfe112c8cdc41d780e7583aaffd9cb7c18dc7b554f43dc38874f381286868acd",
+      "source_card": "RESEARCH_QUESTIONS.md#a30",
+      "source_excerpt": "**Hypothesis and biology.** In paired CSF and blood, the inflammatory RNA programme remains higher in CSF within comparable CD4 T-cell states after accounting for measured activation and composition. Regulatory-associated RNA is evaluated separately, without presuming unchanged regulatory function.",
+      "rationale": "Draft discovery nomination grounded in the pinned A30 context; broad retrieval does not require the predicted direction. Search comparable-state compartment associations and measured alternatives; neither local induction nor residency follows from RNA or shared clones.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Search comparable-state compartment associations and measured alternatives; neither local induction nor residency follows from RNA or shared clones.",
+      "streams": {
+        "broad": "TITLE_ABS:(\"cerebrospinal fluid\" OR CSF) AND TITLE_ABS:(CD4 OR \"T helper\") AND TITLE_ABS:(blood OR paired) AND TITLE_ABS:(inflammatory OR transcriptomic OR state)",
+        "rq_contrary": "TITLE_ABS:(\"cerebrospinal fluid\" OR CSF) AND TITLE_ABS:(CD4 OR \"T cell\") AND TITLE_ABS:(activation OR trafficking OR composition OR clonal OR gating)",
+        "adjacent_context": "TITLE_ABS:(\"cerebrospinal fluid\" OR CSF) AND TITLE_ABS:(CD4 OR \"T cell\") AND TITLE_ABS:(protein OR TCR OR regulatory OR phenotype)"
+      }
+    },
+    "a31-gria1-fibroblast-response": {
+      "rq_ids": [
+        "A31"
+      ],
+      "date_field": "FIRST_IDATE",
+      "qualification_status": "draft-unqueried",
+      "source_commit": "bfe26b876221cf6c6fa6f9b16a90cfb516b5998d",
+      "source_context_sha256": "9d76d6c043c0c5c56fe071f916c6b77c3f3fb6b7d49696cc89a074e671ecf14e",
+      "source_section_sha256": "3f6c010613d33ebae8e0af51c1177e502476cff55dd2006fba09538d313045a0",
+      "source_card": "RESEARCH_QUESTIONS.md#a31",
+      "source_excerpt": "**Hypothesis and biology.** Independently identified adult human alveolar fibroblasts exhibit an acute glutamate-evoked response with a GRIA1-dependent component: qualified GRIA1 perturbation reduces the challenge-minus-vehicle response relative to matched control preparations under the same exposure.",
+      "rationale": "Draft discovery nomination grounded in the pinned A31 context; broad retrieval does not require the predicted direction. Retrieve acute challenge and receptor-perturbation evidence; RNA is not a functional receptor, and no SCN7A gate, rescue or repair mechanism is assumed.",
+      "activation_scope": "explicit-profile-selection-only; no schedule or live retrieval performed",
+      "interpretation_limits": "Retrieve acute challenge and receptor-perturbation evidence; RNA is not a functional receptor, and no SCN7A gate, rescue or repair mechanism is assumed.",
+      "streams": {
+        "broad": "TITLE_ABS:(GRIA1 OR GluA1 OR glutamate) AND TITLE_ABS:(fibroblast) AND TITLE_ABS:(lung OR alveolar OR pulmonary)",
+        "rq_contrary": "TITLE_ABS:(fibroblast) AND TITLE_ABS:(glutamate OR GRIA1 OR receptor) AND TITLE_ABS:(viability OR neural OR identity OR response)",
+        "adjacent_context": "TITLE_ABS:(fibroblast OR mesenchymal) AND TITLE_ABS:(AMPA OR GRIA1 OR glutamate) AND TITLE_ABS:(acute OR receptor OR perturbation OR signaling OR signalling)"
       }
     }
   }

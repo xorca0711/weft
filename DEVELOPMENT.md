@@ -49,7 +49,13 @@ and stale-packet regressions. The evaluator's denominator is a frozen item/packe
 not an independent paper; documentation records unblinded-reference and exposure
 limits. These reviews cover software semantics, not human scientific acceptance.
 
-The full local suite ran 250 tests (225 passed, 25 platform skips). The
+The discovery reviewer also drafted 30 opt-in profiles against the exact pinned
+question cards. Root checked all broad/alternative pairs and removed an overly
+restrictive marker/input clause from A28's broad query. Original profiles remain
+unchanged, unspecified mediators/endpoints remain unspecified, and none of the
+new queries was run. Configuration coverage is not measured search recall.
+
+The final local suite ran 256 tests (231 passed, 25 platform skips). The
 [completion review](docs/ROADMAP_COMPLETION_REVIEW_20261013.md) separates software
 completion from B4's repeated platform rejection and L1's missing runtime-status
 capability. Neither hold was weakened; no replacement worker was created. Exact

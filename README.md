@@ -65,8 +65,9 @@ from the unresolved automated-launcher access and deployment requirements.
 The [13 October completion review](docs/ROADMAP_COMPLETION_REVIEW_20261013.md)
 adds correction-notice reconciliation, query-profile coverage auditing, stricter
 reading holds, offline evaluation accounting and stronger launch-journal checks.
-Queries currently cover A0/A1 out of 32 RQs. Same-worker retries leave native
-runtime qualification and B4 held; independent evaluation and scheduling remain open.
+Thirty additional opt-in draft profiles cover the remaining pinned RQs; those
+queries have not been run. Same-worker retries leave native runtime qualification
+and B4 held; independent evaluation and scheduling remain open.
 
 ## Intended workflow
 

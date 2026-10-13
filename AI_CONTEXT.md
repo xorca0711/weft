@@ -3,8 +3,9 @@
 - Latest: [backend completion review](docs/ROADMAP_COMPLETION_REVIEW_20261013.md).
   Three authorized agents completed bounded discovery, reading/evaluation and
   launch-journal fixes; root integrated offline CLI commands. B5 tooling is
-  implemented, but independent B5 qualification remains pending. Queries cover
-  A0/A1 only; the full pinned catalog has 32 RQs. Latest same-worker status-only
+  implemented, but independent B5 qualification remains pending. Beyond the
+  A0/A1 retrieval baseline, 30 source-bound opt-in query drafts cover the remaining
+  pinned RQs; they remain unqueried and retrieval quality is unqualified. Latest same-worker status-only
   retries leave native runtime capability absent and B4 platform-rejected.
   Do not repeat those probes without new evidence or reroute B4. No cloud tests,
   scientific rerun, deployment or schedule resulted. See PROGRESS for validation
@@ -132,7 +133,8 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
 - [Implementation plan](docs/IMPLEMENTATION_PLAN.md) owns milestones;
   [gates](docs/GATES.md) distinguish runtime checks from future scientific decisions.
 - `integration/ravel.lock.json` pins source identity. Context supports all 32 RQs;
-  initial search profiles cover A0/A1 only. No automatic evidence join or canonical ID.
+  the original A0/A1 profiles have a retrieval baseline; A2–A31 have unqueried
+  source-bound drafts. No automatic evidence join or canonical ID.
 - The owner selected dot coordination + Codex Cloud execution after the local
   manual-reader baseline. Start with [cloud setup](docs/CLOUD_SETUP.md), then M3
   controls and the [checkpointed manual route](docs/MANUAL_PILOT.md). Private weft-pilot is published at d031cef with 58 cloud tests and a small

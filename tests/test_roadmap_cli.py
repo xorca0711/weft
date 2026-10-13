@@ -73,3 +73,16 @@ class RoadmapCliTests(unittest.TestCase):
             status, result = self.call(['evaluation-plan', '--plan', path])
         self.assertEqual(status, 1)
         self.assertIn('fields', result['error'])
+
+    @patch('weft.__main__.Store')
+    @patch('weft.__main__.coverage.validate_profile_binding', side_effect=ValueError('Draft query source binding changed'))
+    @patch('weft.__main__.build_context', return_value={'fixture': 'changed-context'})
+    def test_selected_profile_binding_is_checked_before_store_or_retrieval(self, context, binding, store):
+        for command in ('discover', 'batch-discover'):
+            with self.subTest(command=command):
+                status, result = self.call([command, '--repo', 'fixture', '--profile', 'alveolar-transitions',
+                                           '--since', '2026-10-01', '--until', '2026-10-13'])
+                self.assertEqual(status, 1)
+                self.assertIn('source binding changed', result['error'])
+        self.assertEqual(binding.call_count, 2)
+        store.assert_not_called()

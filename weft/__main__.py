@@ -145,6 +145,7 @@ def main(argv=None):
                 raise ValidationError("Batch retrieval/read bound exceeds policy")
             profile = read_json(root / "configs/search_profiles.json")["profiles"][args.profile]
             packet = build_context(args.repo, read_json(root / "integration/ravel.lock.json"), profile["rq_ids"])
+            coverage.validate_profile_binding(profile, packet)
             with Store(args.store) as store:
                 bid = batches.create(store, packet, args.profile, profile, args.streams, args.since, args.until,
                                      max_searches=args.max_searches, max_records=args.max_records,
@@ -222,6 +223,7 @@ def main(argv=None):
                 raise ValidationError("Unknown profile or stream; use a reviewed query in search_profiles.json")
             profile = profiles[args.profile]
             packet = build_context(args.repo, read_json(root / "integration/ravel.lock.json"), profile["rq_ids"])
+            coverage.validate_profile_binding(profile, packet)
             with Store(args.store) as store:
                 if args.stream == "priority_journals":
                     broad_key = stream_key(profile["streams"]["broad"], profile["date_field"], packet)
