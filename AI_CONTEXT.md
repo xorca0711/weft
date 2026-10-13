@@ -1,5 +1,10 @@
 # Agent entry point
 
+- Update check and support draft: [prepared request](docs/support/LAUNCHER_SUPPORT_REQUEST_20261013.md).
+  The app reports up to date on its configured production channel. Installed CLI
+  remains `0.162.0-alpha.17.2`; no applicable replacement/fix is confirmed. No
+  installation, access change, support submission or task launch occurred.
+
 - Latest access check: [read-only launcher diagnosis](docs/LAUNCHER_ACCESS_DIAGNOSIS.md).
   CLI AI-host identity and loaded browser allow rule are verified. Active browser
   policy provenance remains unknown; CLI exposes no named environments and rejects

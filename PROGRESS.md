@@ -2,6 +2,32 @@
 
 Update this before stopping work, every session.
 
+## Update check and support preparation — 13 October 2026
+
+Prepared a [sanitized support request](docs/support/LAUNCHER_SUPPORT_REQUEST_20261013.md)
+covering browser permission provenance and CLI/durable-environment compatibility.
+The app's configured production updater reports **up to date**: version
+`26.1007.21434`, build `13901`. Windows package inventory separately reports
+`26.1007.2314.0`; both identifiers are attributed to their reporting interfaces.
+PATH CLI and plugin app-server both report `0.162.0-alpha.17.2`.
+
+The official changelog search index lists standalone CLI `0.162.1`, but the
+fetched page did not expose that release for direct verification. No applicable
+fix or compatibility with the app-directory CLI is established. Installed
+`codex update --help` has no check-only mode; its documented update command can
+apply changes, so no updater or installer was run. Ask support which component
+and release support the existing durable environment before changing runtimes.
+
+The request is prepared, not submitted. Account emails/IDs, task/environment
+identifiers, local usernames, credential material and raw histories are omitted.
+No support message, session export, browser retry, login, configuration change,
+cloud job or scientific rerun occurred. Choi/B4/M6 are unchanged. The prepared
+request and version evidence are saved locally on the existing diagnostic branch.
+[Update-check record](records/launcher-update-check-20261013.json).
+Validation passed: **184 local links and 15 source pins**, valid JSON record,
+targeted draft privacy scan and Git whitespace checks. No runtime test rerun was
+needed because this change contains documentation and diagnostic records only.
+
 ## Read-only launcher access diagnosis — 13 October 2026
 
 [Diagnostic findings](docs/LAUNCHER_ACCESS_DIAGNOSIS.md): the supported CLI account

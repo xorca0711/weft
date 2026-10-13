@@ -4,6 +4,17 @@ Status: **read-only diagnosis complete; automatic launch remains unqualified**.
 The owner authorized permission diagnosis and CLI account/environment mapping,
 with a stop before new access or deployment decisions. No task was launched.
 
+**Update check:** the app's configured production updater reports `up_to_date`
+for version `26.1007.21434`, build `13901`. Windows package inventory separately
+reports `OpenAI.Codex 26.1007.2314.0`. Both the PATH CLI and plugin app-server
+report `0.162.0-alpha.17.2`. A standalone `0.162.1` release is listed by the
+official changelog search index but was not directly verified in the fetched
+page; no applicable CLI compatibility fix is confirmed. The installed updater
+has no check-only option, so no CLI update was attempted. The
+[prepared support request](support/LAUNCHER_SUPPORT_REQUEST_20261013.md) preserves
+these distinctions and asks for effective-policy provenance and a supported
+durable-environment launcher. It has not been submitted.
+
 ## Confirmed observations
 
 | Check | Result | Scope |
