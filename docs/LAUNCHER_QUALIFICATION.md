@@ -1,17 +1,23 @@
 # Cloud launcher qualification — 12 October 2026
 
-Status: **read-only CLI probe passed; Weft cloud dispatch is not qualified**.
-No task, schedule, network change or API spending was created by this probe.
+Status: **manual cloud fixture execution/readback passed; automated dispatch is not qualified**.
+The 12 October CLI probe created no task, schedule, network change or API spending.
 
-**13 October update:** the owner authorized one synthetic-only task after access
-verification. Its [frozen scope and submission procedure](SYNTHETIC_LAUNCH_QUALIFICATION.md)
-are prepared. The browser still rejects `chatgpt.com`, but read-only inspection
-confirmed the saved origin config explicitly allows access. The owner also confirmed
-the setting. A full app restart/recheck is the next diagnostic; active-thread policy
-is not inspected by `codex doctor`. The subsequent owner-requested restart/retry
-also returned the denial; do not repeat it without a relevant change. No task has
-been submitted. Task approval is satisfied; the prepared prompt supports a manual
-owner launch followed by task-link verification through permitted task tools.
+**13 October update:** the owner manually launched the one authorized
+[synthetic-only task](SYNTHETIC_LAUNCH_QUALIFICATION.md). Supported task messaging
+and result readback work; its configuration IDs match the recorded `weft-pilot`
+publication, and the same worker subsequently reported enforced policy. The first
+pinned-source fetch stopped before tests with a Git authentication error. A
+bounded read-only diagnostic and subsequent fetch succeeded through the unchanged
+route; the original failure remains unexplained. All 18 isolated fixtures then
+passed once, with independently verified receipt/log hashes and identical same-task
+readback. The task is idle. [PROGRESS](../PROGRESS.md) owns the current boundary.
+
+Browser access remains denied despite the saved allow setting and restart/retry;
+do not retry without a relevant change or bypass that denial. Root did not verify
+the environment or persist an intent before the owner's manual launch. That
+handoff establishes neither the formal pre-submission procedure nor an automated
+launcher. No duplicate task is authorized.
 
 ## Observed evidence
 
@@ -52,7 +58,7 @@ subscription or a fallback permission.
    environment, API service, credential, paid runtime or recurring schedule needs
    its own concrete deployment decision.
 
-**Current stop:** the CLI listing establishes no route to the intended environment.
+**Automated-launcher stop:** the CLI listing establishes no route to the intended environment.
 A read-only check through the existing ChatGPT browser tab was then rejected by
 the browser's saved user permission for `chatgpt.com`. No alternate browser,
 endpoint or indirect route was attempted. That permission must be resolved

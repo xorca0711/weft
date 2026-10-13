@@ -11,34 +11,46 @@ handoff/intake fixtures, with one submission/attempt, a 180-second test-process
 deadline and exact result readback. This is not approval to adopt the controls
 on live screening catalogs, merge the PR or enable recurrence.
 
-**Blocked before submission:** after the owner confirmed access was enabled and
-showed all permission columns, the browser still rejected `https://chatgpt.com` as
-blocked by a saved preference. Read-only inspection confirmed the user config
-explicitly contains `browser_use.origins."https://chatgpt.com".access = "allow"`.
-`codex doctor` loaded that config and initialized the desktop app-server successfully,
-but does not inspect active-thread overrides. The app processes predate the latest
-config change. Stale session policy is plausible, not established; another effective
-policy or an application defect remains possible. Do not ask the owner to enable
-the already-enabled setting again. No workaround, new worker or submission was
-attempted. Prepared prompt, submission state and redacted diagnostics are private
-under `runs/launcher-qualification-20261013`.
+**One owner-operated cloud task is now observed.** The owner supplied the link to
+`Run weft synthetic qualification`; supported task inspection and continuation work.
+Root made no submission. Its configuration/version IDs match the recorded
+`weft-pilot` publication, and a bounded readiness recheck changed the observed
+enforcement state from unknown to current/enforced. Root did not verify that
+environment or persist an intent before the owner's launch; the formal
+pre-submission procedure is not claimed to have passed.
 
-The owner's subsequent restart/retry request produced a fresh browser inventory,
-but the same in-app browser access check still returned the saved-preference denial.
-Restart/retry did not resolve access. Do not ask for the same setting change again
-or use another browser, private endpoint or automated route around this denial.
+**Passed and idle:** the same task subsequently fetched and verified the exact
+pin through the unchanged Git route, then ran all **18 tests once, with zero
+failures/errors/skips, exit 0 and no timeout**. Existing unprivileged Bubblewrap
+provided read-only source, private scratch and separate namespaces with no network
+route. The 180-second subprocess deadline was armed; cancellation was not exercised.
+The process exited and its launcher process group was absent. Root independently
+reconstructed and hash-verified the 3,334-byte receipt and 98-byte log, then
+confirmed identical same-task readback and idle task state. No synthetic job remains.
+[Sanitized evidence](records/synthetic-cloud-task-20261013.json).
 
-Next: product troubleshooting is needed for agent browser access. The prepared prompt
-is available for the owner to manually create the already-authorized single task via
-Work in > Cloud > weft-pilot and return its task link. This is a user-operated handoff,
-not a second submission route for the agent. No agent submission has been attempted.
-After a task link is supplied, inspect its identity/policy and terminal result through
-supported task tools; stop if those tools also deny access. Verify the result without
-rerunning. Hold on an ambiguous acknowledgement. Choi administrative closeout remains
-complete; B4 stays held and M6 disabled. Zero tasks have been created for this
-qualification; this does not establish quiescence of the previously interrupted B4 worker.
-Offline documentation/configuration validation passed: 164 links and 15 source pins;
-Git whitespace checks passed. No runtime code changed or scientific tests reran.
+The first source fetch's authentication error remains unexplained. A read-only
+Git discovery diagnostic returned HTTP 200 before the successful continuation;
+no credentials, settings or access were changed. All earlier stop/diagnostic
+receipts remain preserved and independently hash-verified. Private submission
+state and exact receipts are under `runs/launcher-qualification-20261013`.
+
+Browser automation remains blocked after the owner-confirmed allow setting and
+restart/retry. Do not ask for that setting again, bypass the denial or create a
+duplicate task. A manually launched task does not establish unattended launching,
+PC-off invocation by Mir, cloud submission idempotency or retention. Choi closeout
+is complete; B4 stays held and M6 disabled. No runtime code or scientific outputs
+changed. This task's status does not establish quiescence of the interrupted B4 worker.
+
+Next: explicit PR #10 control review before operational adoption; product
+troubleshooting for the browser policy mismatch; supported automated-launcher,
+ownership/retention and usage qualification before any recurrence. B5 still needs
+an agreed independent sample, reviewer and frozen criteria. These are unresolved
+roadmap gates, not jobs silently dispatched by this successful manual test.
+
+Documentation/configuration validation passed: 168 local links and 15 source pins;
+Git whitespace checks passed. No local fixture rerun was needed for this
+documentation/evidence update; current PR CI is checked after publication.
 
 ## Backend continuation — 12 October 2026
 

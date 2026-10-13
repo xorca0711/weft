@@ -774,3 +774,31 @@ changed, enforcement bypassed or task submitted.
 | Date | Proposed output | Why rejected or changed | Rejected/changed by |
 |---|---|---|---|
 | 2026-10-13 | Look for an additional browser-control permission column and enable access again | The remaining columns were Upload and Site tools; saved origin access already equals allow | Owner screenshots and Codex read-only inspection corrected the diagnosis to a saved/effective-policy mismatch |
+
+## 2026-10-13 — Owner-operated cloud task and source diagnostics
+
+The owner supplied the link to the single manually launched synthetic task.
+Supported task inspection and continuation work; root created no duplicate.
+Runtime configuration IDs match the historical `weft-pilot` publication. The
+initial enforcement observation was unknown; a bounded same-task recheck later
+reported enforced policy. The owner-operated route did not include root's planned
+pre-submission environment verification or persisted intent, so those controls
+are not reported as qualified retrospectively.
+
+The first exact-source fetch failed before tests. One diagnostic request through
+the existing proxy/CA route later returned HTTP 200 for Git discovery without
+credential use, redirects, retries or a policy denial. The original failure's
+cause remains unknown. Initial/v2/v3 receipts were independently recovered and
+hash-verified; subsequent results belong in the
+[qualification record](docs/SYNTHETIC_LAUNCH_QUALIFICATION.md). No environment,
+network, account, runtime code or scientific governance change was made. Browser
+automation remains denied despite the saved allow setting and restart/retry.
+
+The unchanged Git route then fetched the exact source. One isolated invocation
+passed all 18 fixtures, with no failure/error/skip or timeout. Root independently
+verified the returned receipt/log bytes and repeated same-task readback; the task
+is idle. The timeout was armed but cancellation was not exercised. The
+[sanitized result](records/synthetic-cloud-task-20261013.json) qualifies this manual
+task/run/return observation only. No automated launcher, formal pre-submission
+procedure, cloud retention, PC-off coordination or scientific acceptance is claimed.
+No code, dependency, environment, Choi/B4 state or operational adoption changed.

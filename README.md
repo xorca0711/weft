@@ -48,8 +48,11 @@ show completed, qualified, partial, blocked and planned stages;
 The earlier [manual cloud handoff and recovery](docs/SCREENING_CLOUD_QUALIFICATION.md)
 is qualified; independent screening evaluation remains open.
 The [cooperative handoff and private intake staging](docs/BACKEND_HANDOFF.md)
-now have synthetic recovery tests. The [documented cloud CLI probe](docs/LAUNCHER_QUALIFICATION.md)
-has not yet verified the intended environment or an unattended deployment.
+now have synthetic recovery tests. One owner-operated
+[cloud fixture task](docs/SYNTHETIC_LAUNCH_QUALIFICATION.md) passed all 18 pinned,
+isolated tests once; exact receipt/log recovery and same-task readback passed.
+The task is idle. The automated browser route remains blocked and the
+[documented CLI probe](docs/LAUNCHER_QUALIFICATION.md) has not verified its environment route.
 An unattended launcher and recurrence remain future work. Choi's bounded
 descriptive pilot is complete; it does not qualify the fresh-paper pipeline.
 

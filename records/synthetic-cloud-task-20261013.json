@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-13",
+  "kind": "manual-cloud-synthetic-task-qualification",
+  "qualification_id": "weft-synthetic-launch-20261013-v1",
+  "status": "passed_with_scope_limits",
+  "source_repository": "xorca0711/weft",
+  "source_revision": "2c12090444e52108254f1c57831ecf80f239770f",
+  "submission": {
+    "route": "owner-operated UI",
+    "observed_owner_tasks": 1,
+    "agent_submissions": 0,
+    "duplicate_tasks_created": false,
+    "root_environment_check_before_submission": false,
+    "persisted_intent_before_submission": false,
+    "formal_pre_submission_procedure_qualified": false
+  },
+  "environment": {
+    "label": "weft-pilot",
+    "label_provenance": "owner-selected",
+    "runtime_configuration_matched_recorded_publication": true,
+    "verification_timing": "after owner launch",
+    "worker_reported_current_policy": "enforced",
+    "policy_mode": "restricted",
+    "policy_changed_by_qualification": false,
+    "root_evidence_scope": "task transcript, command outputs and exact returned receipt/log bytes"
+  },
+  "source_acquisition": {
+    "initial_fetch": "failed before tests with Git authentication prompt",
+    "diagnosis": "one same-route discovery request returned HTTP 200; no credential use or policy-denial signal",
+    "continuation_fetch": "succeeded through unchanged Git route; exact source verified",
+    "initial_failure_cause": "unknown",
+    "new_credentials_or_access_added": false,
+    "checkout_clean_before_and_after": true
+  },
+  "tests": {
+    "command": "PYTHONPATH=tests python -m unittest test_handoff test_intake -q",
+    "invocations": 1,
+    "run": 18,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "exit_code": 0,
+    "python": "3.12.14",
+    "os": "Linux",
+    "architecture": "x86_64",
+    "wall_seconds": 0.364587,
+    "test_process_terminal": true,
+    "launcher_process_group_absent": true
+  },
+  "isolation": {
+    "method": "existing unprivileged Bubblewrap 0.12.0",
+    "source_read_only": true,
+    "temporary_scratch": "private tmpfs",
+    "separate_namespaces": [
+      "net",
+      "pid",
+      "mnt",
+      "user",
+      "uts",
+      "ipc"
+    ],
+    "network_route_rows": 0,
+    "no_new_privileges": true,
+    "effective_capabilities": 0,
+    "preflight_passed": true
+  },
+  "timeout": {
+    "limit_seconds": 180,
+    "mechanism": "subprocess wait deadline with process-group kill and Bubblewrap parent-death/PID isolation",
+    "armed": true,
+    "occurred": false,
+    "cancellation_behavior_exercised": false
+  },
+  "recovery": {
+    "receipt_bytes": 3334,
+    "test_log_bytes": 98,
+    "test_log_sha256": "649d00efa1e92cf48664526f50b89f859fdbec95dd46ffe586505155821546d8",
+    "root_receipt_and_log_hashes_verified": true,
+    "root_same_task_readback_identical": true,
+    "prior_stop_and_diagnostic_receipts_preserved": true,
+    "task_terminal_and_idle": true,
+    "durable_cloud_retention_qualified": false
+  },
+  "boundaries": {
+    "manual_task_run_return_path_observed": true,
+    "automated_launcher_qualified": false,
+    "pc_off_invocation_qualified": false,
+    "cloud_submission_idempotency_qualified": false,
+    "independent_screening_quality_evaluated": false,
+    "scientific_eligibility_established": false,
+    "choi_touched": false,
+    "b4_resumed": false,
+    "followup_job_dispatched": false,
+    "schedule_enabled": false
+  },
+  "remaining": [
+    "PR #10 explicit control review before operational adoption",
+    "Resolve saved-config/effective-browser-policy mismatch without bypass",
+    "Qualify a supported automated launcher, coordinator ownership, usage limits and durable recovery before recurrence",
+    "Freeze independent B5 sample/reviewer/criteria; B4 remains under its separate platform hold"
+  ]
+}

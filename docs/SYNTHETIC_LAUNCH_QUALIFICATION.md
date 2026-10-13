@@ -1,6 +1,7 @@
 # One-task cloud launcher qualification — 13 October 2026
 
-Status: **authorized; not submitted; access verification blocked**.
+Status: **manual cloud task, isolated fixtures and result readback passed; task idle**.
+The automated launcher and formal pre-submission procedure remain unqualified.
 The owner authorized verification of the intended cloud route and one synthetic-only
 task in the existing `weft-pilot` environment. This supersedes the earlier pending
 approval for that one task, not decisions about recurrence, paid services or new
@@ -91,6 +92,57 @@ browser attempts are held pending product troubleshooting. The owner can manuall
 start the already-authorized task through Work in > Cloud > weft-pilot using the
 prepared prompt, then supply its link for supported task-status/result inspection.
 Do not submit a duplicate: the recorded agent submission count remains zero.
+
+## Owner-operated launch and observed readiness
+
+The owner subsequently supplied the link to **Run weft synthetic qualification**.
+Supported task inspection and continuation work for that same task. One owner
+submission is observed; root made zero submissions and will not create a duplicate.
+Root did not complete pre-submission environment verification or persist a
+submission-intent record before the owner's launch. The procedure above therefore
+has not passed end to end; the manual handoff is recorded as actually observed.
+
+The task's configuration and configuration-version IDs match the private record
+of the published `weft-pilot` environment. Its display name is owner-selected
+provenance, not a runtime-reported label. Initial policy enforcement was unknown;
+a bounded same-task readiness recheck subsequently reported current **enforced**
+restricted policy with matching identity. No environment settings were changed.
+
+The first pinned-source Git fetch failed with an authentication prompt before any
+test invocation. A subsequent read-only diagnosis made one Git discovery request
+through the existing proxy/CA route: HTTP 200, no redirect/retry or policy denial.
+The earlier failure's cause remains unknown. No GitHub credential was inspected
+or supplied. Root independently recovered and hash-verified the initial and v2 stop
+receipts and the v3 diagnostic receipt. Private task IDs, runtime/config IDs and
+exact receipts remain in ignored `runs/launcher-qualification-20261013`.
+
+## Completed bounded result
+
+The unchanged Git route subsequently fetched the exact frozen revision into the
+fresh checkout. All **18 tests passed in one invocation**, with zero failures,
+errors or skips and exit 0. No earlier phase invoked tests. The checkout was clean
+before and after execution. Python was 3.12.14 on Linux x86-64.
+
+Existing unprivileged Bubblewrap 0.12.0 supplied read-only source, private temporary
+storage, separate network/PID/mount/user/UTS/IPC namespaces, no network route,
+no-new-privileges and zero effective capabilities. A preflight checked those
+observations before the fixture invocation. The 180-second subprocess deadline
+was armed; no timeout occurred, so cancellation behavior was not exercised.
+The observed invocation completed in about 0.365 seconds, with the process exited
+and its launcher process group absent. This is a fixture-specific isolation check,
+not qualification of arbitrary author code or the Docker scientific executor.
+
+Root independently reconstructed the exact 98-byte log and 3,334-byte receipt
+and verified their SHA-256 hashes. A second read of the same completed task returned
+the identical result without dispatch. The task is idle; no further synthetic job
+was launched. Prior receipts remain preserved. See the
+[sanitized qualification record](../records/synthetic-cloud-task-20261013.json).
+
+No test was rerun, source changed, dependency installed or privilege added. No
+Choi/B4, Drive, live literature/data/model request, scientific analysis or schedule
+was involved. Browser automation remains blocked. Explicit PR #10 control review,
+a qualified automated launcher/coordinator recovery route and independent B5
+evaluation remain necessary before operational adoption or recurrence.
 
 Official references checked on 13 October:
 [CLI cloud commands](https://learn.chatgpt.com/docs/cli/reference) and

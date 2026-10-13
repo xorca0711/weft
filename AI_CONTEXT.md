@@ -1,17 +1,22 @@
 # Agent entry point
 
 - Current launcher task: [13 October frozen synthetic scope](docs/SYNTHETIC_LAUNCH_QUALIFICATION.md).
-  One task is owner-authorized but unsubmitted. The browser denies `chatgpt.com`
-  even though the inspected saved config explicitly allows it. Permission and task
-  approval are settled; the owner-requested restart/retry still failed. Product
-  troubleshooting or a user-operated launch with the prepared prompt is needed.
-  Do not circumvent the denial or submit a duplicate. Verify access before submission, preserve one
-  submission intent and hold on unknown acknowledgement. Choi and B4 stay separate.
+  The owner manually launched the single task; supported task messaging/readback
+  works. Its configuration IDs match the recorded `weft-pilot` configuration,
+  and the same worker subsequently reported current enforced network policy.
+  The initial pinned-source fetch failed before tests; the unchanged route later
+  succeeded. Exactly 18 isolated cloud fixtures passed once, and root recovered
+  and hash-verified the receipt/log with identical same-task readback. The task is
+  idle; no synthetic job remains. Do not create a duplicate or rerun tests.
+  Browser automation remains blocked despite the saved allow setting and restart.
+  Root did not verify the environment or persist a submission intent before the
+  owner's launch; do not retroactively claim that procedure passed. Choi and B4
+  stay separate; manual task access does not qualify an automated launcher.
 - Latest backend addition: [single-catalog handoff and private intake staging](docs/BACKEND_HANDOFF.md).
   Synthetic tests pass; there is no cloud launcher deployment or distributed fencing.
   Expired/uncertain claims never reassign. Recovery ingests saved bytes only.
   [CLI probe and coordinator closeout](docs/LAUNCHER_QUALIFICATION.md): intended
-  environment unverified; direct dot messaging unavailable. Choi administrative
+  CLI environment unverified; direct dot messaging unavailable. Choi administrative
   closeout is complete: the owner-authorized release is preserved in an independently
   verified 32-event private checkpoint. Keep B4 stopped and M6 disabled.
   Consult PROGRESS before any live operation.

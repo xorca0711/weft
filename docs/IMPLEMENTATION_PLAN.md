@@ -18,7 +18,7 @@ candidate/no-candidate disposition. A positive phenotype or new RQ is not requir
 
 ## Established state
 
-Status as of **12 October 2026**.
+Status as of **13 October 2026**.
 
 **Current position: a tested manual workflow plus synthetic handoff/intake controls, with B4 blocked and unattended
 operation still planned.** Cloud execution and checkpoint recovery work within
@@ -28,7 +28,7 @@ authorization are not established.
 | Track | Established | Remaining |
 |---|---|---|
 | Discovery and screening | Bounded Europe PMC discovery, deduplication, pinned RQ context, decision buffer, manual agent handoff and recovery | B3 material/semantic qualification, blocked B4 review, B5 independent evaluation and unattended launcher |
-| Cloud controls | Published environment, scoped job controls, manual coordinator and verified private Drive recovery; local single-catalog handoff/recovery fixtures pass; Choi coordinator continuity/closeout verified through owner relay | Intended CLI environment unverified; direct Mir messaging unavailable; general unattended dispatch, retention/ownership guarantees and usage controls |
+| Cloud controls | Published environment, scoped controls, manual coordinator and verified private Drive recovery; one owner-operated cloud task passed 18 pinned, isolated handoff/intake fixtures once; exact result recovery verified and task idle | Automated browser launch blocked and CLI route unverified; formal pre-submission procedure unqualified; direct Mir messaging unavailable; unattended dispatch, retention/ownership and usage controls |
 | Choi pilot | M4/M5 complete for the bounded benchmark: public outputs, verified recovery, owner descriptive retention and Ravel #149 merged; final 32-event administrative release independently recovered | Preserve bounded interpretation and checkpoint ancestry; no new-job authority or general scientific eligibility inferred |
 | Integration into main | Weft PRs #1-#9 and Ravel #149/#150 merged with passing CI | New handoff/intake control change needs its scoped review; no fresh-paper scientific acceptance |
 
