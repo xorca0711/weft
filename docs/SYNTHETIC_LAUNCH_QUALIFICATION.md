@@ -24,8 +24,9 @@ privileges. [Launcher evidence and boundary](LAUNCHER_QUALIFICATION.md).
 | Recovery output | Exact test log plus small JSON receipt and SHA-256 manifest; return through the task transcript |
 | Excluded work | Choi, B4, live literature search, paper screening, datasets, Drive access, GitHub writes and schedules |
 
-PR #10 controls remain under review for operational adoption. This isolated fixture
-task does not merge them or authorize their use on a live screening catalog.
+At qualification time PR #10 controls were under review. The later owner-requested
+[review and merge](AUTOMATED_LAUNCH_READINESS.md) are recorded separately. This
+isolated fixture task itself did not merge them or authorize live screening use.
 
 ## Submission and recovery procedure
 
@@ -140,9 +141,10 @@ was launched. Prior receipts remain preserved. See the
 
 No test was rerun, source changed, dependency installed or privilege added. No
 Choi/B4, Drive, live literature/data/model request, scientific analysis or schedule
-was involved. Browser automation remains blocked. Explicit PR #10 control review,
-a qualified automated launcher/coordinator recovery route and independent B5
-evaluation remain necessary before operational adoption or recurrence.
+was involved. Browser automation remains blocked. A qualified automated launcher,
+coordinator recovery route and independent B5 evaluation remain necessary before
+unattended operational adoption or recurrence; PR #10's later review/merge alone
+does not meet those requirements.
 
 Official references checked on 13 October:
 [CLI cloud commands](https://learn.chatgpt.com/docs/cli/reference) and

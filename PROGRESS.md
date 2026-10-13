@@ -2,6 +2,38 @@
 
 Update this before stopping work, every session.
 
+## PR #10 integrated; offline launch-intent recovery — 13 October 2026
+
+The owner requested proceeding through the recommended steps. Root reviewed
+PR #10's persistence, recovery, locking, stale-source and intake authority
+boundaries at `d106463`, against unchanged main `5ca2a58`. No blocking defect was
+found within its documented cooperative scope; this was not an independent human
+or scientific review. The owner-authorized merge is
+`5cd4178af7cd706a51b8fb814f94c223c2fa32ab`; main CI run **38335403318** passed.
+
+The next scoped implementation adds an [offline launch-intent journal](docs/LAUNCH_INTENT_RECOVERY.md).
+It binds occurrence/source/prompt/account/environment/policy, commits uncertainty
+before a proposed provider call, rejects duplicate begins, preserves exact task
+acknowledgements and holds conflicting/missing responses. Restored copies remain
+inspectable but cannot mutate through this API. It calls no provider, supplies no
+authenticated identity and does not replace distributed ownership or active-job
+admission. The initial 12 targeted fixtures pass; two Windows test cleanup errors
+were fixed by explicitly closing fixture-only SQLite connections.
+
+The [readiness decision](docs/AUTOMATED_LAUNCH_READINESS.md) records the actual
+external dependency: a permitted launcher exposing the intended environment and
+account mapping. Browser denial remains unresolved; no alternate route was used
+around it and no new worker was launched. Official documentation describes a
+limited saved-VM recovery window, which is not durable archive storage or proof of
+dot scratch retention. Choi, B4, existing ledgers and all activation flags remain
+unchanged. B5 sample/reviewer/thresholds and M6 deployment decisions remain open.
+The full suite passes **200 tests**, with the same 25 Windows ARM64 skips.
+Offline documentation/configuration validation passes **179 links and 15 pins**;
+Git whitespace checks pass. Automatic approval review blocked optional cleanup
+of the two failed-fixture temporary directories; cleanup was not retried and
+repository/source data were unaffected.
+[Review and validation record](records/launcher-readiness-20261013.json).
+
 ## Synthetic launcher qualification — 13 October 2026
 
 The owner authorized verifying the intended cloud route and one synthetic-only
@@ -42,8 +74,9 @@ PC-off invocation by Mir, cloud submission idempotency or retention. Choi closeo
 is complete; B4 stays held and M6 disabled. No runtime code or scientific outputs
 changed. This task's status does not establish quiescence of the interrupted B4 worker.
 
-Next: explicit PR #10 control review before operational adoption; product
-troubleshooting for the browser policy mismatch; supported automated-launcher,
+At this checkpoint, PR #10 control review was next; the later owner-requested
+review/merge is recorded above. Remaining work: product troubleshooting for the
+browser policy mismatch; supported automated-launcher,
 ownership/retention and usage qualification before any recurrence. B5 still needs
 an agreed independent sample, reviewer and frozen criteria. These are unresolved
 roadmap gates, not jobs silently dispatched by this successful manual test.
@@ -101,8 +134,9 @@ PC-off operation and prepare [independent B5 evaluation](docs/B5_EVALUATION_PREP
 B4 stays held, Choi never reruns, no further private export is authorized by this
 change, and M6 recurrence remains disabled. [Evidence](records/backend-handoff-20261012.json).
 
-[PR #10](https://github.com/xorca0711/weft/pull/10) is open for explicit control
-review, not a draft. Both implementation CI runs passed at `2fc69a8`.
+At this historical checkpoint, [PR #10](https://github.com/xorca0711/weft/pull/10)
+was open for explicit control review, not a draft. Both implementation CI runs
+passed at `2fc69a8`; its later owner-authorized merge is recorded above.
 The browser's saved `chatgpt.com` permission blocked the read-only environment
 check; no workaround was attempted. The coordinator is **Mir** (its durable
 record has no separate chat title). The cloud worker `Verify Weft network access`

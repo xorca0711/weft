@@ -8,7 +8,7 @@ from .context import build_context
 from .discovery import Store, discover, stream_key, verify_run, write_json
 from .validation import ValidationError, read_json, validate_project, verify_ravel
 from .reading import prepare_reading, validate_reading
-from . import batches, screening, qualification, handoff, intake
+from . import batches, screening, qualification, handoff, intake, launches
 from .identity import digest
 from .reading_locations import relocate_readings
 
@@ -96,6 +96,16 @@ def main(argv=None):
         if name == 'intake-verify':
             command.add_argument('--directory', type=Path, required=True)
             command.add_argument('--manifest-sha256', required=True)
+    for name in ['launch-init', 'launch-prepare', 'launch-begin', 'launch-ack', 'launch-status']:
+        command = sub.add_parser(name, help='Offline launch journal; no provider call: ' + name)
+        command.add_argument('--journal', type=Path, required=True)
+        if name in {'launch-prepare', 'launch-begin'}:
+            command.add_argument('--spec', type=Path, required=True)
+            command.add_argument('--prompt', type=Path, required=True)
+        if name in {'launch-ack', 'launch-status'}:
+            command.add_argument('--operation', required=True)
+        if name == 'launch-ack':
+            command.add_argument('--receipt', type=Path, required=True)
     args = parser.parse_args(argv)
     root = Path(__file__).resolve().parents[1]
     try:
@@ -151,6 +161,20 @@ def main(argv=None):
                     result = batches.export_digest(store, args.batch)
                 else:
                     result = batches.status_report(store, args.batch)
+        elif args.command.startswith('launch-'):
+            if args.command == 'launch-init':
+                result = launches.initialize(args.journal)
+            else:
+                with launches.LaunchJournal(args.journal) as journal:
+                    if args.command in {'launch-prepare', 'launch-begin'}:
+                        with args.prompt.open('rb') as prompt_file:
+                            prompt = prompt_file.read(100_001)
+                        method = journal.prepare if args.command == 'launch-prepare' else journal.begin
+                        result = method(read_json(args.spec), prompt)
+                    elif args.command == 'launch-ack':
+                        result = journal.acknowledge(args.operation, read_json(args.receipt))
+                    else:
+                        result = journal.status(args.operation)
         elif args.command.startswith(('handoff-', 'intake-')):
             with Store(args.store) as store:
                 if args.command == 'handoff-init':

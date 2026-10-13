@@ -55,6 +55,10 @@ The task is idle. The automated browser route remains blocked and the
 [documented CLI probe](docs/LAUNCHER_QUALIFICATION.md) has not verified its environment route.
 An unattended launcher and recurrence remain future work. Choi's bounded
 descriptive pilot is complete; it does not qualify the fresh-paper pipeline.
+PR #10's handoff/intake controls are now merged with passing main CI. The next
+[launch-intent recovery guard](docs/LAUNCH_INTENT_RECOVERY.md) is tested offline;
+the [readiness note](docs/AUTOMATED_LAUNCH_READINESS.md) separates that software work
+from the unresolved automated-launcher access and deployment requirements.
 
 ## Intended workflow
 

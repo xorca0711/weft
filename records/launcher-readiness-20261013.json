@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-13",
+  "kind": "control-review-and-offline-launch-intent-recovery",
+  "review": {
+    "pull_request": "https://github.com/xorca0711/weft/pull/10",
+    "reviewed_head": "d10646378e8700b1aca1ac51985b5093649b65b1",
+    "reviewed_base": "5ca2a58857b22968571c4389651862e17ee8dc35",
+    "reviewer": "root Codex agent",
+    "independent_human_review": false,
+    "scope": [
+      "handoff persistence and exact saved-response recovery",
+      "lock ordering and stale-source checks",
+      "inactive restored copies",
+      "private intake membership and authority boundaries"
+    ],
+    "blocking_findings": [],
+    "user_authorized_merge": true,
+    "merge_commit": "5cd4178af7cd706a51b8fb814f94c223c2fa32ab",
+    "main_ci_run": 38335403318,
+    "main_ci_conclusion": "success"
+  },
+  "implementation": {
+    "module": "weft/launches.py",
+    "runtime": "offline Python/SQLite",
+    "provider_adapter_implemented": false,
+    "synthetic_scope_only": true,
+    "unchanged_policy_activation_flags": true,
+    "automatic_retries": false,
+    "provider_evidence_authenticated": false,
+    "distributed_ownership_implemented": false
+  },
+  "validation": {
+    "targeted_tests": 12,
+    "targeted_passed": true,
+    "full_suite_tests": 200,
+    "full_suite_passed": true,
+    "full_suite_skipped": 25,
+    "host": "Windows ARM64",
+    "initial_test_failure": "Two fixture SQLite connections remained open during Windows temporary-directory cleanup; explicit closing fixed them",
+    "scientific_analysis_run": false,
+    "cloud_task_launched": false,
+    "local_links": 179,
+    "pinned_files": 15,
+    "offline_validation_passed": true,
+    "optional_failed_fixture_cleanup": "Rejected by tool policy; not retried"
+  },
+  "external_dependencies": [
+    "Permitted identity-verifiable launcher route for the published environment",
+    "Actual coordinator ownership, persistence, usage and provider-failure qualification",
+    "Independent B5 sample, reviewer and acceptance criteria",
+    "B4 platform hold remains separate",
+    "M6 cadence, scope and usage decisions"
+  ],
+  "private_artifacts_exported": false,
+  "choi_touched": false,
+  "b4_resumed": false
+}

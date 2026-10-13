@@ -1,5 +1,12 @@
 # Agent entry point
 
+- Latest continuation: [launcher readiness and PR #10 review](docs/AUTOMATED_LAUNCH_READINESS.md).
+  PR #10 merged at `5cd4178af7cd706a51b8fb814f94c223c2fa32ab`; main CI passed.
+  The [offline launch-intent journal](docs/LAUNCH_INTENT_RECOVERY.md) is the next
+  scoped control change. It records uncertainty and acknowledgements but calls no
+  provider and grants no dispatch authority. Tests use synthetic local data only.
+  Automated environment selection remains an external access dependency; no new
+  cloud task, credential, schedule or B4 continuation was introduced.
 - Current launcher task: [13 October frozen synthetic scope](docs/SYNTHETIC_LAUNCH_QUALIFICATION.md).
   The owner manually launched the single task; supported task messaging/readback
   works. Its configuration IDs match the recorded `weft-pilot` configuration,

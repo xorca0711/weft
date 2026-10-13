@@ -30,12 +30,15 @@ authorization are not established.
 | Discovery and screening | Bounded Europe PMC discovery, deduplication, pinned RQ context, decision buffer, manual agent handoff and recovery | B3 material/semantic qualification, blocked B4 review, B5 independent evaluation and unattended launcher |
 | Cloud controls | Published environment, scoped controls, manual coordinator and verified private Drive recovery; one owner-operated cloud task passed 18 pinned, isolated handoff/intake fixtures once; exact result recovery verified and task idle | Automated browser launch blocked and CLI route unverified; formal pre-submission procedure unqualified; direct Mir messaging unavailable; unattended dispatch, retention/ownership and usage controls |
 | Choi pilot | M4/M5 complete for the bounded benchmark: public outputs, verified recovery, owner descriptive retention and Ravel #149 merged; final 32-event administrative release independently recovered | Preserve bounded interpretation and checkpoint ancestry; no new-job authority or general scientific eligibility inferred |
-| Integration into main | Weft PRs #1-#9 and Ravel #149/#150 merged with passing CI | New handoff/intake control change needs its scoped review; no fresh-paper scientific acceptance |
+| Integration into main | Weft PRs #1-#10 and Ravel #149/#150 merged with passing CI; #10 control review completed within its cooperative scope | Offline launch-intent journal is the next scoped change; no fresh-paper scientific acceptance |
 
 The [backend handoff note](BACKEND_HANDOFF.md) describes the tested controls;
 [launcher qualification](LAUNCHER_QUALIFICATION.md) owns the deployment boundary.
 [B5 preparation](B5_EVALUATION_PREPARATION.md) records decisions to freeze, without
 inventing labels or claiming an independent evaluation has run.
+The [launcher readiness decision](AUTOMATED_LAUNCH_READINESS.md) records the
+remaining access dependency and the [offline intent/recovery guard](LAUNCH_INTENT_RECOVERY.md).
+Its local journal does not establish remote dispatch or distributed ownership.
 
 The [PR stack audit](PR_STACK_INTEGRATION.md) records merge order and verified
 conflict status. Implementation/testing, merge status and scientific acceptance

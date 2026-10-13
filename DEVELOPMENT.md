@@ -802,3 +802,30 @@ is idle. The timeout was armed but cancellation was not exercised. The
 task/run/return observation only. No automated launcher, formal pre-submission
 procedure, cloud retention, PC-off coordination or scientific acceptance is claimed.
 No code, dependency, environment, Choi/B4 state or operational adoption changed.
+
+## 2026-10-13 — Control integration and offline launch recovery
+
+The owner requested proceeding through the recommended review/merge sequence.
+Root reviewed PR #10 at d106463 against main 5ca2a58, reused current passing CI
+and unchanged-code cloud fixture evidence, and found no blocker within the stated
+cooperative scope. This was a root-agent code review, not independent human
+scientific acceptance. The merge at 5cd4178 passed main CI 38335403318.
+
+The next scoped change adds an offline, single-journal launch-intent guard.
+It persists uncertainty before a proposed provider call and reconciles only an
+operator-supplied acknowledgement bound to the original specification. Changed
+bindings, duplicate begins, conflicting receipts and inactive restored copies
+stay rejected. It does not call a provider, authenticate receipts, impose global
+task capacity, solve distributed ownership or grant scientific authority.
+
+Twelve targeted fixtures passed after fixing SQLite connection cleanup in two
+Windows fixtures. No production catalog or cloud task was used. Browser access
+remains an unresolved product dependency; no new service, secret, privilege,
+network change or schedule was introduced. The
+[readiness note](docs/AUTOMATED_LAUNCH_READINESS.md) preserves that boundary and
+records the official documentation's limited VM recovery window separately from
+durable archive storage and unqualified dot scratch retention.
+
+Full-suite validation passed 200 tests with the existing 25 Windows ARM64 skips.
+The [review record](records/launcher-readiness-20261013.json) distinguishes the
+merged PR #10 controls from the new offline journal and unresolved deployment.
