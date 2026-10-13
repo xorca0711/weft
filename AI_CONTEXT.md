@@ -6,7 +6,11 @@
   historical version/setup continuity; [interface reconciliation](docs/qualification/NATIVE_LAUNCH_INTERFACE.md)
   records L0 as partial. Owner screenshots confirm the network preset, all three
   approved custom hosts and Only me access. Await current AI-host account/workspace
-  and publication status. Root has no native launcher tool.
+  and publication availability. The environment-list screenshot says Private, not
+  Unpublished, and has an Unknown repository subtitle; GitHub CLI and app currently
+  resolve the correct repository. Check the same-workspace Cloud picker without
+  sending a task; do not delete/reconnect/republish on the label alone.
+  Root has no native launcher tool.
   No task, deployment, schedule or runtime code change occurred. PR #11 remains
   unmerged. Choi is closed; do not reroute B4.
 

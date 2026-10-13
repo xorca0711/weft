@@ -33,6 +33,39 @@ account/workspace and current publication status. The network-setting inspection
 is complete; no network amendment is needed. The owner has been asked to inspect
 the remaining fields without changing them.
 
+## Environment-list discrepancy and shortest resolution
+
+The later environment-list screenshot labels sharing **비공개 (Private)** and
+the repository **알 수 없는 리포지터리 (Unknown repository)**. Private is not an
+Unpublished badge; that image does not establish failed publication. The unknown
+repository label conflicts with the Edit screen and Mir catalog's correct mapping.
+
+Supported read-only checks on 13 October found that GitHub CLI is authenticated
+as `xorca0711`; the repository exists, is public, is not archived and has default
+branch `main`. The connected GitHub app also lists an installation under `xorca0711`
+and resolves `weft`. Neither connection was modified. This narrows the discrepancy
+but does not prove a future cloud checkout or establish the label's cause.
+
+No official cause or specific fix for this exact label was established by the
+documentation search. A UI/mapping issue is a possibility, not a diagnosis.
+Do not delete the repository/environment or reconnect an account just to clear it.
+
+The next read-only check is **New chat → Work in → Cloud → Select environment**
+in the same AI-host account/workspace as Mir. Check whether `weft-pilot` is
+available for selection, without sending a prompt. The official guide describes
+this as selecting a published environment. Record that observation alongside
+Mir's exact target/version; availability is not proof of runtime readiness.
+
+| Observation | Next step |
+|---|---|
+| Correct account/workspace and `weft-pilot` available for selection | Keep the existing environment. Review the exact native synthetic packet and intent; verify actual version/policy after admission before tests |
+| Explicit Unpublished status or unavailable target with unfinished setup | Inspect the existing setup report. Fix only a demonstrated failure, run relevant setup checks, then publish/republish the same environment after scope review |
+| Mapping/selection error despite correct account and connected repository | Preserve the environment and use the prepared support request. Capture the exact error; do not invent a CLI environment ID or create replacements |
+
+Publishing fixes a demonstrated publication problem. It is not an established
+fix for the separate browser-permission or CLI/durable-task mismatch. Native
+delegation does not require those two optional routes to be repaired first.
+
 ## Interface mapping for a future adapter
 
 Reported tool names below have prefix `mcp__codex_apps__` in Mir's catalog.

@@ -2,6 +2,33 @@
 
 Update this before stopping work, every session.
 
+## Environment-resolution triage — 13 October 2026
+
+The environment-list screenshot shows **Private** in Sharing, not an Unpublished
+badge. It also shows **Unknown repository**, contradicting the correct Edit/catalog
+mapping. Supported read-only checks now confirm `xorca0711` for GitHub CLI login
+and the connected GitHub app installation; both resolve the public, non-archived
+`xorca0711/weft` repository on `main`. This does not prove the cloud connection or
+identify the UI discrepancy's cause. No reset, reconnect or republish was attempted.
+
+The [resolution sequence](docs/qualification/NATIVE_LAUNCH_INTERFACE.md) now uses
+the same-account/workspace **New chat → Work in → Cloud** picker as the next
+publication-availability observation, without submitting a task. If available,
+retain the current environment and qualify the native synthetic route. If actually
+unpublished, inspect and fix a demonstrated setup failure before republishing the
+same environment. Persistent contradictory mapping belongs in the updated,
+still-unsent [support draft](docs/support/LAUNCHER_SUPPORT_REQUEST_20261013.md).
+
+CLI mapping and browser permission remain unresolved but are optional tracks for
+native Mir delegation. Native admission, new-worker enforcement and remote
+ownership/recovery remain unqualified; B4 stays held, Choi closed, M6 disabled.
+No cloud job or account/configuration change occurred. Documentation checks apply;
+runtime tests are not repeated for this explanatory update.
+
+Validation passed: 198 scaffold links, 15 source pins, 88 links in changed
+documents, targeted private-identifier checks and Git whitespace checks. Changes
+are local; the support draft remains unsent.
+
 ## Mir native capability reconciliation — 13 October 2026
 
 **L0 is partial.** The owner relayed Mir's 05:07:22–05:07:52 UTC report: native

@@ -15,8 +15,27 @@ and launch a cloud task. One synthetic task completed 18 tests successfully,
 and the supported app task reader can still read it. Agent-controlled task
 creation remains blocked because browser access is denied despite an allowed
 origin, while the installed CLI exposes no named environments and rejects the
-existing durable worker's ID. Please identify the effective permission source
-and the supported launcher for this environment type.
+existing durable worker's ID. A later owner-relayed dot catalog exposes native
+saved-environment delegation and the expected repository/version; creation has
+not been invoked. Please identify the effective browser permission source and
+the CLI's compatibility with this environment type. Native qualification is a
+separate route, not evidence those two issues are fixed.
+
+## Additional environment-list discrepancy
+
+The environment list shows `weft-pilot`, an **Unknown repository** subtitle and
+**Private** in the Sharing column. Private was initially mistaken for unpublished;
+it is a sharing label, and that screenshot supplies no publication-status proof.
+The Edit screen and the dot's environment catalog both identify `xorca0711/weft`.
+The dot-reported version exactly matches an earlier manual worker's preserved receipt.
+
+Current read-only checks resolve the public, non-archived repository through
+both GitHub CLI and the connected GitHub app. CLI login and the app installation
+are under `xorca0711`. These checks do not prove a cloud runtime checkout or the
+cause of the contradictory environment-list label. Please clarify whether this
+is stale/display metadata or a saved configuration mapping issue, and provide a
+supported inspection/repair that preserves the environment and existing tasks.
+No deletion, reconnection, republish or new worker was attempted to clear it.
 
 ## Installed versions and update check
 
