@@ -1,5 +1,56 @@
 # Agent entry point
 
+- Latest: [backend completion review](docs/ROADMAP_COMPLETION_REVIEW_20261013.md).
+  Three authorized agents completed bounded discovery, reading/evaluation and
+  launch-journal fixes; root integrated offline CLI commands. B5 tooling is
+  implemented, but independent B5 qualification remains pending. Beyond the
+  A0/A1 retrieval baseline, 30 source-bound opt-in query drafts cover the remaining
+  pinned RQs; they remain unqueried and retrieval quality is unqualified. Latest same-worker status-only
+  retries leave native runtime capability absent and B4 platform-rejected.
+  Do not repeat those probes without new evidence or reroute B4. No cloud tests,
+  scientific rerun, deployment or schedule resulted. See PROGRESS for validation
+  and integration status; older dated observations below retain their scope.
+
+- Remote automation: [architecture and L0–L4 sequence](docs/REMOTE_AUTOMATION_ARCHITECTURE.md).
+  Qualify native Mir → existing `weft-pilot` first; CLI compatibility is optional.
+  The owner relayed Mir's native-selector/catalog report. Root verified exact
+  historical version/setup continuity; [interface reconciliation](docs/qualification/NATIVE_LAUNCH_INTERFACE.md)
+  records L0 as partial. Owner screenshots confirm the network preset, all three
+  approved custom hosts and Only me access. The owner now confirms same-workspace
+  Cloud-picker availability and repeated manual use; do not ask again. Account
+  scope is owner-attested, not independently authenticated by root. The
+  [native synthetic trial](docs/qualification/NATIVE_SYNTHETIC_TRIAL.md) was
+  admitted once by Mir; its child completed with a preflight HOLD and zero tests.
+  [Root verification and diagnosis](docs/qualification/NATIVE_RUNTIME_HOLD.md)
+  confirm exact receipt/log recovery and a policy-file hash matching the old
+  manual worker, without current enforcement evidence. The single same-child
+  diagnostic completed: its reported catalogs expose neither runtime-status tool
+  nor runtime skill. Deployment/routing/permission cause remains unknown. Mir's
+  retained create argument matches the frozen bytes; child representation lacks
+  one final LF, with no raw wire capture to locate the transformation. Keep L1
+  held for platform support; do not repeat either prompt or create a replacement.
+  The support packet is prepared, unsent. PR #11 stays unmerged, Choi closed,
+  B4 held and M6 disabled.
+
+- Update check and support draft: [prepared request](docs/support/LAUNCHER_SUPPORT_REQUEST_20261013.md).
+  The app reports up to date on its configured production channel. Installed CLI
+  remains `0.162.0-alpha.17.2`; no applicable replacement/fix is confirmed. No
+  installation, access change, support submission or task launch occurred.
+
+- Latest access check: [read-only launcher diagnosis](docs/LAUNCHER_ACCESS_DIAGNOSIS.md).
+  CLI AI-host identity and loaded browser allow rule are verified. Active browser
+  policy provenance remains unknown; CLI exposes no named environments and rejects
+  the known durable worker ID, although the app reader still finds that worker idle.
+  Continue product troubleshooting separately from the read-only native-dot
+  capability check; no new launch, settings or account change is authorized by that check.
+
+- Latest continuation: [launcher readiness and PR #10 review](docs/AUTOMATED_LAUNCH_READINESS.md).
+  PR #10 merged at `5cd4178af7cd706a51b8fb814f94c223c2fa32ab`; main CI passed.
+  The [offline launch-intent journal](docs/LAUNCH_INTENT_RECOVERY.md) is implemented
+  and tested in open PR #11. It records uncertainty and acknowledgements but calls no
+  provider and grants no dispatch authority. Tests use synthetic local data only.
+  Automated environment selection remains an external access dependency; no new
+  cloud task, credential, schedule or B4 continuation was introduced.
 - Current launcher task: [13 October frozen synthetic scope](docs/SYNTHETIC_LAUNCH_QUALIFICATION.md).
   The owner manually launched the single task; supported task messaging/readback
   works. Its configuration IDs match the recorded `weft-pilot` configuration,
@@ -82,7 +133,8 @@ Docker fixture executor with verified local terminal receipts. One manual dot/cl
 - [Implementation plan](docs/IMPLEMENTATION_PLAN.md) owns milestones;
   [gates](docs/GATES.md) distinguish runtime checks from future scientific decisions.
 - `integration/ravel.lock.json` pins source identity. Context supports all 32 RQs;
-  initial search profiles cover A0/A1 only. No automatic evidence join or canonical ID.
+  the original A0/A1 profiles have a retrieval baseline; A2–A31 have unqueried
+  source-bound drafts. No automatic evidence join or canonical ID.
 - The owner selected dot coordination + Codex Cloud execution after the local
   manual-reader baseline. Start with [cloud setup](docs/CLOUD_SETUP.md), then M3
   controls and the [checkpointed manual route](docs/MANUAL_PILOT.md). Private weft-pilot is published at d031cef with 58 cloud tests and a small

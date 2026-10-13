@@ -2,6 +2,309 @@
 
 Update this before stopping work, every session.
 
+## Partial-stage implementation review and hold retries — 13 October 2026
+
+Three owner-authorized review agents completed bounded discovery,
+screening/evaluation and launch-control work. Root integrated the CLI and
+reviewed discovery; the controls agent independently reviewed reading gate and
+evaluation changes. The [completion review](docs/ROADMAP_COMPLETION_REVIEW_20261013.md)
+records the phased remaining jobs and limits.
+
+- Correction/retraction links now hold affected current candidates across
+  retrieval order while preserving decisions and receipts. MED/PMC self-ID
+  conflicts and inconsistent paging fail conservatively; version links remain
+  nominations rather than merged identities.
+- Strict reading schemas preserve explicit holds. New offline `profile-coverage`,
+  `evaluation-plan` and `evaluation-score` commands report configuration gaps and
+  frozen-item accounting without model calls or scientific permission.
+- Launch journals reject reused task IDs and inconsistent state/receipt/history;
+  snapshot reads tolerate valid concurrent transitions. These are local controls,
+  not distributed fencing or cloud persistence guarantees.
+- The first audit found 2/32 RQs configured (A0/A1). The discovery reviewer then
+  prepared 30 source-bound opt-in drafts for A2–A31, retaining the original two
+  profiles. All 32 pinned RQs now have configuration coverage; the new profiles
+  remain unqueried. No search recall or real B5 evaluation was measured.
+- One newly authorized status-only follow-up per existing held worker: native
+  child still reports no runtime-status capability and ran no tests; B4 was again
+  rejected by the platform's biology-content restriction, with no completed status
+  result. No alternate route or replacement worker was used. Private transcripts
+  remain ignored under `runs/roadmap-completion-20261013/`.
+
+Validation: final local full suite **256 tests, 231 passed, 25 platform skips**;
+offline configuration/documentation validation passed with 15 pinned files.
+Integration base was freshly fetched and remains `5cd4178af7cd706a51b8fb814f94c223c2fa32ab`.
+Delivery targets [PR #11](https://github.com/xorca0711/weft/pull/11); its current
+head checks record Linux CI separately from this local verification. It remains
+subject to integration review. No Choi rerun, B4 review, cloud test, deployment,
+support message, new export or schedule was performed.
+
+Next: review corrected code/CI; obtain platform integration review for L1 and
+resolution of B4's restriction before a permitted continuation; qualify the new
+query drafts and freeze an independent B5 sample/reviewer/criteria. Remote coordinator
+ownership, interruption/cancellation recovery and PC-off operation need their
+own qualification. M6 remains disabled pending those results and an explicit
+cadence/scope/usage/export decision. Choi M4/M5 remain complete and preserved.
+
+## Same-child diagnosis complete; platform review pending — 13 October 2026
+
+Root directly read the completed diagnostic turn. The child reports inspection
+of 341 operations, 55 cloud skills across all pages and 0 executor skills: no
+runtime-status tool, runtime skill or lazy tool-discovery route is exposed.
+No explicit denial occurred; deployment/routing/permission cause remains unknown.
+Root holds the completed report, not the raw catalogs. Tests remain unstarted.
+
+Mir's owner-relayed comparison confirms the saved prompt and retained create
+argument both match the frozen 4,673-byte value. The decoded child input is one
+terminal LF shorter. No raw wire request exists to locate the transformation;
+original bytes, spec, journal and receipt remain preserved. This formatting issue
+is separate from the missing runtime capability and does not authorize retry.
+
+The [diagnosis](docs/qualification/NATIVE_RUNTIME_HOLD.md), roadmap and unsent
+[support request](docs/support/LAUNCHER_SUPPORT_REQUEST_20261013.md) are updated.
+A private task/turn-ID addendum is prepared. **L1 remains partial/held for platform
+integration review.** Do not resend either prompt, create a replacement, run tests
+or weaken the gate. No worker message, settings change, upload or support message
+was sent by root. Choi is closed, B4 held and M6 disabled.
+
+Validation passed: 205 scaffold links, 15 source pins, 140 changed-document links,
+JSON/privacy checks and Git whitespace checks. Private evidence/addendum remain
+Git-ignored. Main was fetched and is unchanged. No runtime tests were rerun;
+changes remain local.
+
+## Native admission verified; same-child runtime HOLD — 13 October 2026
+
+Mir reports one native create, acknowledged journal reopen and identical result
+readback. Root directly read the resulting idle child/completed turn and verified
+the original 3,165-byte HOLD receipt and empty log by SHA-256. The child fetched
+no source and invoked no tests. Coordinator journal/catalog claims remain
+owner-relayed, not independently read by root.
+
+The [diagnosis](docs/qualification/NATIVE_RUNTIME_HOLD.md) identifies a missing or
+undiscovered runtime-status integration, not a demonstrated allowlist failure.
+The child's policy-file hash equals the earlier successful manual worker's
+snapshot, but does not prove current enforcement or configuration version. Root
+also found the exposed child input lacks the frozen prompt's final LF; all other
+text matches. The responsible normalization layer is unknown. Preserve original
+bytes and reconcile retained call evidence before calling exact binding passed.
+
+Roadmap: **L1 partial** (admission and result recovery observed; runtime execution
+held). A private `MIR_SAME_CHILD_DIAGNOSTIC.txt` is prepared for capability-only
+inspection and original-call byte comparison. It has not been sent. No new task,
+follow-up turn, settings change, test invocation, upload or schedule occurred in
+root's verification. Do not paste the original launch prompt again. Choi remains
+closed; B4 held; M6 disabled. PR #11 remains unmerged.
+
+Validation passed: 203 scaffold links, 15 source pins, 144 changed-document links,
+JSON/private-identifier checks and Git whitespace checks. Private records remain
+ignored. Main was fetched and remains unchanged; no runtime code/test changes.
+Changes and the support request remain local; no support message was sent.
+
+## Native synthetic packet prepared — 13 October 2026
+
+The owner confirms that `weft-pilot` is selectable in the same workspace and
+manual launches have already been tried repeatedly. The picker check is settled;
+do not request it again. Account scope remains owner-attested rather than a
+new authenticated account inspection. Earlier missing-observation notes below
+are historical and superseded by this update.
+
+The [new trial](docs/qualification/NATIVE_SYNTHETIC_TRIAL.md) has a self-contained
+private prompt for the existing **Mir** chat, including the exact saved target,
+worker text/hash, PR #11 source pin and single-submission journal sequence. It
+qualifies one native creation/acknowledgement/result path with 12 launch-journal
+fixtures, not the completed manual 18-fixture trial. Root reviewed the scoped
+source and passing CI at `824c562d5d0140aecadd35023fbaecca303ef126`; runtime/test
+code is unchanged. PR #11 remains open. Main is still
+`5cd4178af7cd706a51b8fb814f94c223c2fa32ab` after fetch.
+
+Next: owner pastes the prepared prompt into Mir; Mir verifies the live exact
+target, persists intent in its own coordinator workspace and submits at most once.
+The child must verify actual policy/version before tests. Return the real task
+acknowledgement and verified outputs, or the precise hold. Root has launched no
+task, created no journal and sent no worker message. Choi stays closed, B4 stays
+held, and M6 stays disabled. This is no claim of restart retention or deployment.
+
+Validation passed: 201 scaffold links, 15 source pins, 137 links across changed
+documents, packet/embedded-prompt hashes, static 12-fixture count, private-identifier
+scan and whitespace checks. Private dispatch files are Git-ignored. Runtime/test
+code matches the reviewed pin; no runtime tests were rerun. Changes are local.
+
+## Environment-resolution triage — 13 October 2026
+
+The environment-list screenshot shows **Private** in Sharing, not an Unpublished
+badge. It also shows **Unknown repository**, contradicting the correct Edit/catalog
+mapping. Supported read-only checks now confirm `xorca0711` for GitHub CLI login
+and the connected GitHub app installation; both resolve the public, non-archived
+`xorca0711/weft` repository on `main`. This does not prove the cloud connection or
+identify the UI discrepancy's cause. No reset, reconnect or republish was attempted.
+
+The [resolution sequence](docs/qualification/NATIVE_LAUNCH_INTERFACE.md) now uses
+the same-account/workspace **New chat → Work in → Cloud** picker as the next
+publication-availability observation, without submitting a task. If available,
+retain the current environment and qualify the native synthetic route. If actually
+unpublished, inspect and fix a demonstrated setup failure before republishing the
+same environment. Persistent contradictory mapping belongs in the updated,
+still-unsent [support draft](docs/support/LAUNCHER_SUPPORT_REQUEST_20261013.md).
+
+CLI mapping and browser permission remain unresolved but are optional tracks for
+native Mir delegation. Native admission, new-worker enforcement and remote
+ownership/recovery remain unqualified; B4 stays held, Choi closed, M6 disabled.
+No cloud job or account/configuration change occurred. Documentation checks apply;
+runtime tests are not repeated for this explanatory update.
+
+Validation passed: 198 scaffold links, 15 source pins, 88 links in changed
+documents, targeted private-identifier checks and Git whitespace checks. Changes
+are local; the support draft remains unsent.
+
+## Mir native capability reconciliation — 13 October 2026
+
+**L0 is partial.** The owner relayed Mir's 05:07:22–05:07:52 UTC report: native
+`environmentConfigId` selection and one catalog response for `weft-pilot` /
+`xorca0711/weft`, with no creation call. Root independently compared the full
+reported version and setup ref against preserved evidence: both match exactly.
+The saved-ID prefix also matches the earlier CLI routing ID, but undocumented
+prefix semantics do not prove Mir's current account/workspace. Raw identifiers
+and the structured relay/comparison remain in ignored private run records.
+
+The [interface mapping](docs/qualification/NATIVE_LAUNCH_INTERFACE.md) records
+acknowledgement/continuation/status schemas, absent atomic version pin, and
+unqualified cancellation/ownership. Root did not retrieve Mir's raw tool response
+or gain its launcher capability. The next dependency is a read-only owner check
+of the active AI-host account/workspace and current published environment/network
+settings. The exact Settings → Codex Cloud → Environments → weft-pilot → Edit
+path was supplied from official documentation; no save or republish is requested.
+
+Check configured policy before a future authorized launch and actual worker
+enforcement after admission, before tests. No launch, adapter deployment, schedule,
+scientific gate change, Choi action or B4 continuation occurred. Current summaries
+are synchronized; [sanitized receipt](records/native-launch-capability-20261013.json).
+
+Owner screenshots subsequently confirmed the environment/repository, enabled
+internet, Package managers preset, three additional hosts with `europepmc.org`
+visible, Only me access and no listed secrets/variables. Copies and hashes are
+preserved privately. A later expanded-domain screenshot confirms the full list:
+`europepmc.org`, `ftp.ncbi.nlm.nih.gov`, `www.ebi.ac.uk`. Configured-network
+inspection is complete. Await current account/workspace and publication status;
+do not infer either from the other observations.
+
+Validation passed: **196 scaffold links, 15 source pins and 199 links across
+changed documents**; the new receipt parses, public additions pass the targeted
+private-identifier scan, and whitespace checks pass. No runtime code changed or
+test/analysis run was repeated. These changes remain local.
+
+## Remote automation architecture — 13 October 2026
+
+The owner requested continuing the recommended stages and finding a fully remote
+architecture. The [implementation sequence](docs/REMOTE_AUTOMATION_ARCHITECTURE.md)
+now qualifies **native Mir delegation to existing `weft-pilot` first**, with CLI
+compatibility optional. Official documentation describes PC-off dot work and
+coding threads in existing cloud environments. That is product capability,
+not proof of Mir's current tool access or unattended ownership/recovery.
+
+L0's [read-only Mir capability check](docs/qualification/MIR_LAUNCH_CAPABILITY_CHECK.md)
+was prepared for owner relay. At preparation, root's Mir read returned idle
+metadata and no turns. The later owner-relayed report is reconciled above.
+Root still lacks the environment-selecting launcher. No direct message or worker
+was sent. Do not guess IDs, reuse the completed synthetic task or retry denied
+browser actions.
+
+L1–L4 specify exact synthetic submission, remote ownership/recovery, bounded
+search/screening with independent B5 evaluation, and finally separately authorized
+recurrence. Existing 200-test offline evidence is reused; no runtime change or
+analysis rerun is needed for these documentation updates. The API/controller
+contingency requires new access, hosting, storage and billing decisions; none
+was made. Native delegation must respect the same permissions and scientific holds.
+
+The roadmap, readiness note, backend plan, README and entry point are synchronized.
+PR #11 is still open; diagnosis/support/architecture revisions are local. Choi,
+B4 and M6 remain unchanged. See the [architecture record](records/remote-architecture-20261013.json).
+Validation passed: **192 scaffold links and 15 source pins**; an additional check
+covered all **203 local links in the changed documents**, including the new
+architecture and relay prompt. The record parses as JSON, targeted privacy checks
+found no private-identifier patterns in new public artifacts, and Git whitespace
+checks passed. These are document checks, not native launcher qualification.
+
+## Update check and support preparation — 13 October 2026
+
+Prepared a [sanitized support request](docs/support/LAUNCHER_SUPPORT_REQUEST_20261013.md)
+covering browser permission provenance and CLI/durable-environment compatibility.
+The app's configured production updater reports **up to date**: version
+`26.1007.21434`, build `13901`. Windows package inventory separately reports
+`26.1007.2314.0`; both identifiers are attributed to their reporting interfaces.
+PATH CLI and plugin app-server both report `0.162.0-alpha.17.2`.
+
+The official changelog search index lists standalone CLI `0.162.1`, but the
+fetched page did not expose that release for direct verification. No applicable
+fix or compatibility with the app-directory CLI is established. Installed
+`codex update --help` has no check-only mode; its documented update command can
+apply changes, so no updater or installer was run. Ask support which component
+and release support the existing durable environment before changing runtimes.
+
+The request is prepared, not submitted. Account emails/IDs, task/environment
+identifiers, local usernames, credential material and raw histories are omitted.
+No support message, session export, browser retry, login, configuration change,
+cloud job or scientific rerun occurred. Choi/B4/M6 are unchanged. The prepared
+request and version evidence are saved locally on the existing diagnostic branch.
+[Update-check record](records/launcher-update-check-20261013.json).
+Validation passed: **184 local links and 15 source pins**, valid JSON record,
+targeted draft privacy scan and Git whitespace checks. No runtime test rerun was
+needed because this change contains documentation and diagnostic records only.
+
+## Read-only launcher access diagnosis — 13 October 2026
+
+[Diagnostic findings](docs/LAUNCHER_ACCESS_DIAGNOSIS.md): the supported CLI account
+read confirms the designated AI-host identity. Its loaded configuration also
+confirms the browser origin is allowed; the requirements read returns null.
+However, active thread overrides are not inspected, and bounded desktop logs
+did not expose the effective browser decision. The mismatch remains unresolved.
+
+The CLI environment picker loads only its global option, with no named
+environments. Its empty task list has no next cursor. It rejects the existing
+synthetic worker ID with HTTP 404 / `Invalid task ID`, while the supported app
+reader still finds that exact worker idle with its last turn completed. CLI
+account identity is established; mapping to published `weft-pilot` is not.
+
+Stopped at product troubleshooting for active-policy provenance and supported
+CLI/durable-environment mapping. No task, inference, token inspection, login,
+account switch, settings change, upgrade, support submission or new deployment
+occurred. Private diagnostics remain ignored locally. Choi/B4/M6 are unchanged;
+no PR was merged or cloud analysis rerun. See the diagnostic for exact next steps.
+Offline validation passed **181 local links and 15 source pins**; Git whitespace
+checks passed. Runtime and biological tests were not repeated for this
+documentation-only diagnosis. The update is saved locally on the scoped
+`codex/launcher-access-diagnosis-20261013` branch; no remote publication occurred.
+
+## PR #10 integrated; offline launch-intent recovery — 13 October 2026
+
+The owner requested proceeding through the recommended steps. Root reviewed
+PR #10's persistence, recovery, locking, stale-source and intake authority
+boundaries at `d106463`, against unchanged main `5ca2a58`. No blocking defect was
+found within its documented cooperative scope; this was not an independent human
+or scientific review. The owner-authorized merge is
+`5cd4178af7cd706a51b8fb814f94c223c2fa32ab`; main CI run **38335403318** passed.
+
+The next scoped implementation adds an [offline launch-intent journal](docs/LAUNCH_INTENT_RECOVERY.md).
+It binds occurrence/source/prompt/account/environment/policy, commits uncertainty
+before a proposed provider call, rejects duplicate begins, preserves exact task
+acknowledgements and holds conflicting/missing responses. Restored copies remain
+inspectable but cannot mutate through this API. It calls no provider, supplies no
+authenticated identity and does not replace distributed ownership or active-job
+admission. The initial 12 targeted fixtures pass; two Windows test cleanup errors
+were fixed by explicitly closing fixture-only SQLite connections.
+
+The [readiness decision](docs/AUTOMATED_LAUNCH_READINESS.md) records the actual
+external dependency: a permitted launcher exposing the intended environment and
+account mapping. Browser denial remains unresolved; no alternate route was used
+around it and no new worker was launched. Official documentation describes a
+limited saved-VM recovery window, which is not durable archive storage or proof of
+dot scratch retention. Choi, B4, existing ledgers and all activation flags remain
+unchanged. B5 sample/reviewer/thresholds and M6 deployment decisions remain open.
+The full suite passes **200 tests**, with the same 25 Windows ARM64 skips.
+Offline documentation/configuration validation passes **179 links and 15 pins**;
+Git whitespace checks pass. Automatic approval review blocked optional cleanup
+of the two failed-fixture temporary directories; cleanup was not retried and
+repository/source data were unaffected.
+[Review and validation record](records/launcher-readiness-20261013.json).
+
 ## Synthetic launcher qualification — 13 October 2026
 
 The owner authorized verifying the intended cloud route and one synthetic-only
@@ -42,8 +345,9 @@ PC-off invocation by Mir, cloud submission idempotency or retention. Choi closeo
 is complete; B4 stays held and M6 disabled. No runtime code or scientific outputs
 changed. This task's status does not establish quiescence of the interrupted B4 worker.
 
-Next: explicit PR #10 control review before operational adoption; product
-troubleshooting for the browser policy mismatch; supported automated-launcher,
+At this checkpoint, PR #10 control review was next; the later owner-requested
+review/merge is recorded above. Remaining work: product troubleshooting for the
+browser policy mismatch; supported automated-launcher,
 ownership/retention and usage qualification before any recurrence. B5 still needs
 an agreed independent sample, reviewer and frozen criteria. These are unresolved
 roadmap gates, not jobs silently dispatched by this successful manual test.
@@ -101,8 +405,9 @@ PC-off operation and prepare [independent B5 evaluation](docs/B5_EVALUATION_PREP
 B4 stays held, Choi never reruns, no further private export is authorized by this
 change, and M6 recurrence remains disabled. [Evidence](records/backend-handoff-20261012.json).
 
-[PR #10](https://github.com/xorca0711/weft/pull/10) is open for explicit control
-review, not a draft. Both implementation CI runs passed at `2fc69a8`.
+At this historical checkpoint, [PR #10](https://github.com/xorca0711/weft/pull/10)
+was open for explicit control review, not a draft. Both implementation CI runs
+passed at `2fc69a8`; its later owner-authorized merge is recorded above.
 The browser's saved `chatgpt.com` permission blocked the read-only environment
 check; no workaround was attempted. The coordinator is **Mir** (its durable
 record has no separate chat title). The cloud worker `Verify Weft network access`

@@ -1,6 +1,7 @@
 # B5 evaluation preparation
 
-Status: preparation only. No fresh-paper evaluation or quality claim has run.
+Status: offline evaluation tooling implemented and tested with synthetic inputs;
+independent fresh-paper evaluation has not run. No quality claim is established.
 The exposed Choi pilot, current development candidates and B4 interrupted material
 cannot be relabelled as unseen. B4 remains held; this plan does not reroute it.
 
@@ -22,6 +23,24 @@ The author of the screening response should not create their own supposedly
 independent reference labels. Human review can be blinded to the agent decision
 where feasible; record departures. Material-access restrictions require explicit
 missingness/holds, not automatic negative relevance labels.
+
+## Offline accounting interface
+
+`weft/evaluation.py` validates a frozen, externally reviewed plan and computes
+separate reading-priority, data-use and RQ-compatibility metrics from supplied
+agent and independent human judgments. The [completion review](ROADMAP_COMPLETION_REVIEW_20261013.md)
+documents `evaluation-plan` and `evaluation-score`; synthetic schema examples
+are in `tests/test_evaluation.py`. The caller must retain the canonical JSON plan
+hash before outcomes, and the CLI rejects a different hash before reading judgments.
+
+Missing records/labels and disputed references remain unresolved. Metrics include
+their denominators, confusion matrices, unsupported positives relative to the
+supplied reference, exposure strata and unblinded-reference counts. The unit is
+a frozen item/packet, not an independent paper or study. Repeated papers/lineages
+are not de-duplicated into an independence claim. Citation hashes establish source
+identity, not semantic support. Actor identity, owner review, blinding, independence
+and timestamps are attestations. No model is called and no threshold, scientific
+admission, release qualification or dispatch permission is inferred.
 
 Next: agree the independent sample and reviewer only when the supported launcher
 and review access are qualified. M6 cadence, scope and usage ceilings remain a

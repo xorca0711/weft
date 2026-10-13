@@ -9,7 +9,7 @@ import sqlite3
 import uuid
 
 from .europe_pmc import EuropePMC, SourceError, date_window
-from .identity import deduplicate, digest
+from .identity import deduplicate, digest, provider_relations
 
 
 def now():
@@ -131,7 +131,17 @@ class Store:
                                 "source_scope": "metadata-retrieval-only", "hold_reasons": reasons,
                                 "claim_proposals": [], "supports_rq": None,
                                 "study_independence": "not-assessed", "scientific_execution_allowed": False}
-                    existing = self.db.execute("SELECT current FROM candidates WHERE id=?", (candidate_id,)).fetchone()
+                    existing = self.db.execute("SELECT current,proposal_json FROM candidates WHERE id=?", (candidate_id,)).fetchone()
+                    if existing:
+                        # Preserve attributable cross-record observations on exact
+                        # replay, even when this record carries its own hold flag.
+                        retained = json.loads(existing["proposal_json"])
+                        if "provider_relations" in retained:
+                            proposal["provider_relations"] = retained["provider_relations"]
+                        if "provider-related-integrity-flag" in retained["hold_reasons"]:
+                            reasons = sorted(set(reasons + ["provider-related-integrity-flag"]))
+                            proposal["hold_reasons"] = reasons
+                            status = "held"
                     self.db.execute("INSERT OR IGNORE INTO candidates VALUES(?,?,?,?,?,?,?,?)",
                                     (candidate_id, group["paper_key"], qid, question["context_sha256"],
                                      group["evidence_sha256"], status, 1, json.dumps(proposal)))
@@ -144,7 +154,58 @@ class Store:
                                         (json.dumps(proposal), candidate_id))
                     self.db.execute("INSERT OR IGNORE INTO candidate_runs VALUES(?,?)", (candidate_id, run_id))
                     ids.append(candidate_id)
+            self._reconcile_relations(run_id)
         return ids
+
+    def _reconcile_relations(self, run_id):
+        """Join explicit metadata links, not publication identities or scientific claims.
+
+        Retained observations make a notice effective whether it precedes or follows
+        the original's discovery. An absent notice on a later response is not an
+        authenticated withdrawal, so it cannot silently clear the integrity hold.
+        The caller owns the transaction; no separate schema or historical rewrite.
+        """
+        candidates = self.db.execute("SELECT * FROM candidates WHERE current=1").fetchall()
+        by_identifier = {}
+        for row in candidates:
+            for identifier in json.loads(row["proposal_json"])["identifiers"]:
+                by_identifier.setdefault(identifier, set()).add(row["id"])
+        related = {row["id"]: {} for row in candidates}
+        seen = set()
+        for observation in self.db.execute("SELECT rowid,* FROM observations ORDER BY rowid"):
+            for relation in provider_relations(json.loads(observation["raw_json"])):
+                key = digest([observation["raw_sha"], relation["relation_sha256"]])
+                if key in seen:
+                    continue
+                seen.add(key)
+                evidence = {"evidence_sha256": key, "source_run": observation["run_id"],
+                            "raw_sha256": observation["raw_sha"], "relation": relation}
+                identifiers = relation["source_identifiers"] + relation["target_identifiers"]
+                affected = set().union(*(by_identifier.get(i, set()) for i in identifiers))
+                for candidate_id in affected:
+                    related[candidate_id][key] = evidence
+        for row in candidates:
+            evidence = sorted(related[row["id"]].values(), key=lambda r: r["evidence_sha256"])
+            if not evidence:
+                continue
+            proposal = json.loads(row["proposal_json"])
+            concerns = any(e["relation"]["integrity_review_required"] for e in evidence)
+            reasons = set(proposal["hold_reasons"])
+            if concerns:
+                reasons.add("provider-related-integrity-flag")
+            status = "held" if concerns else row["status"]
+            if (proposal.get("provider_relations") == evidence and
+                    proposal["hold_reasons"] == sorted(reasons) and row["status"] == status):
+                continue
+            proposal["provider_relations"] = evidence
+            proposal["hold_reasons"] = sorted(reasons)
+            self.db.execute("UPDATE candidates SET status=?,proposal_json=? WHERE id=?",
+                            (status, json.dumps(proposal), row["id"]))
+            self.db.execute("INSERT INTO events(candidate_id,created,action,record_json) VALUES(?,?,?,?)",
+                (row["id"], now(), "provider-relation-held" if concerns else "provider-relation-observed",
+                 json.dumps({"run_id": run_id, "previous_status": row["status"],
+                             "relation_evidence": [e["evidence_sha256"] for e in evidence],
+                             "scope": "metadata integrity review; prior decisions retained; no scientific determination"})))
 
     def review(self, candidate_id, record):
         if record.get("decision") not in {"read_next", "hold", "reject"}:

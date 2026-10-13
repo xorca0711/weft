@@ -191,6 +191,22 @@ class BatchTests(unittest.TestCase):
         self.assertEqual(screening.read_packet(self.store,bid,cid,fetch=lambda _:self.fail('must not retry')),result)
         with self.assertRaisesRegex(ValueError,'cap'):screening.read_packet(self.store,bid,second['packet']['candidate_id'])
 
+    def test_reading_hold_and_replay_keep_original_disposition(self):
+        bid=self.create();self.run_batch(bid);issued,_=self.screen(bid)
+        cid=issued['packet']['candidate_id']
+        receipt=screening.read_packet(self.store,bid,cid,fetch=lambda _:XML)
+        assessment=test_reading.ReadingTests.assessment(self,{**receipt,'directory':receipt['resolved_directory']})
+        assessment['next_action']='hold'
+        first=screening.submit_reading(self.store,bid,assessment)
+        replay=screening.submit_reading(self.store,bid,assessment)
+        self.assertEqual(first['status'],'hold')
+        self.assertEqual(replay['status'],'already_recorded')
+        self.assertEqual(replay['next_action'],'hold')
+        saved=self.store.db.execute('SELECT reading_result_json FROM batch_items WHERE batch_id=? AND candidate_id=?',(bid,cid)).fetchone()[0]
+        self.assertEqual(json.loads(saved),assessment)
+        with self.assertRaisesRegex(ValueError,'no overwrite'):
+            screening.submit_reading(self.store,bid,{**assessment,'next_action':'review_required'})
+
     def test_read_interruption_preserves_unknown_hold(self):
         bid=self.create();self.run_batch(bid);issued,_=self.screen(bid);cid=issued['packet']['candidate_id']
         with patch('weft.screening.prepare_reading',side_effect=KeyboardInterrupt):

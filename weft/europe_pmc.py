@@ -96,8 +96,11 @@ class EuropePMC:
                 batch = response["resultList"]["result"]
                 if type(hits) is not int or hits < 0 or not isinstance(batch, list):
                     raise ValueError("Unexpected hitCount or result array")
-                if len(batch) > size:
-                    raise ValueError("Server exceeded requested page size")
+                if len(batch) > size or len(batch) > hits:
+                    raise ValueError("Server exceeded requested page size or reported hit count")
+                next_cursor = response.get("nextCursorMark")
+                if next_cursor is not None and (not isinstance(next_cursor, str) or len(next_cursor) > 10000):
+                    raise ValueError("Malformed pagination cursor")
                 for record in batch:
                     if not isinstance(record, dict) or not record.get("source") or not record.get("id"):
                         raise ValueError("Record lacks provider identity")
@@ -107,7 +110,6 @@ class EuropePMC:
                          "next_cursor": None, "attempts": attempts, "malformed": True}, body)
                 raise SourceError("Malformed Europe PMC search response") from exc
             page_no += 1
-            next_cursor = response.get("nextCursorMark")
             on_page({"page": page_no, "url": url, "cursor": cursor,
                      "next_cursor": next_cursor, "hit_count": hits,
                      "records": len(batch), "api_version": response.get("version"),
@@ -123,6 +125,8 @@ class EuropePMC:
                     warnings.append("duplicate-provider-record-in-pages")
                 seen_ids.add(identity)
             records.extend(batch)
+            if len(records) > hits and "retrieved-record-count-exceeds-hit-count" not in warnings:
+                warnings.append("retrieved-record-count-exceeds-hit-count")
             if len(records) >= hits and (not next_cursor or len(batch) < size or len(records) == hits):
                 break
             if len(records) >= max_records:

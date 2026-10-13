@@ -2,6 +2,8 @@
 
 Status: **manual cloud fixture execution/readback passed; automated dispatch is not qualified**.
 The 12 October CLI probe created no task, schedule, network change or API spending.
+The later [review and readiness decision](AUTOMATED_LAUNCH_READINESS.md) records
+PR #10's completed merge and the separate offline submission-intent recovery work.
 
 **13 October update:** the owner manually launched the one authorized
 [synthetic-only task](SYNTHETIC_LAUNCH_QUALIFICATION.md). Supported task messaging

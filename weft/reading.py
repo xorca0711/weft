@@ -125,20 +125,29 @@ def validate_reading(directory, assessment):
     if hashlib.sha256((directory/"source.xml").read_bytes()).hexdigest() != packet["source_sha256"]:
         raise ValueError("Source XML changed")
     allowed = {"candidate_id","context_sha256","evidence_sha256","source_sha256","actor","actor_kind","scope","statements","next_action"}
-    if set(assessment) != allowed or assessment.get("next_action") not in {"review_required","hold"}:
+    if (not isinstance(assessment,dict) or set(assessment) != allowed
+            or not isinstance(assessment.get("next_action"),str)
+            or assessment["next_action"] not in {"review_required","hold"}):
         raise ValueError("Reading assessments can only request review or hold")
     for key in ("candidate_id","context_sha256","evidence_sha256","source_sha256"):
         if assessment[key] != packet[key]:
             raise ValueError("Assessment differs from its source/context")
-    if not assessment["actor"] or assessment["actor_kind"] not in {"agent","human"} or not assessment["scope"]:
+    if (not all(isinstance(assessment[k],str) and assessment[k].strip() for k in ("actor","scope"))
+            or not isinstance(assessment["actor_kind"],str)
+            or assessment["actor_kind"] not in {"agent","human"}):
         raise ValueError("Actor and inspected scope are required")
     segments = {s["locator"]:s for s in packet["segments"]}
     if not isinstance(assessment["statements"],list) or not assessment["statements"]:
         raise ValueError("Source-bound statements required")
     for statement in assessment["statements"]:
+        if (not isinstance(statement,dict) or set(statement) != {"text","locator","segment_sha256"}
+                or not all(isinstance(statement[k],str) and statement[k].strip()
+                           for k in ("text","locator","segment_sha256"))):
+            raise ValueError("Each statement requires only nonempty text, locator and segment_sha256")
         segment = segments.get(statement.get("locator"))
         if not segment or statement.get("segment_sha256") != segment["sha256"] or not statement.get("text"):
             raise ValueError("Unresolved or changed source locator")
     return {"ok":True, "candidate_id":packet["candidate_id"], "source_bound_statements":len(assessment["statements"]),
+            "next_action":assessment["next_action"],
             "scope":"artifact identities and locator existence only; semantic support and current queue state require review",
             "claim_validated":False, "scientific_execution_allowed":False, "actor_identity_verified":False}

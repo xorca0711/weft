@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-13",
+  "kind": "native launcher capability reconciliation",
+  "provenance": "owner-relayed Mir report; root compared saved local evidence, not the live tool response",
+  "reported_observation_window_utc": ["2026-10-13T05:07:22Z", "2026-10-13T05:07:52Z"],
+  "reported_environment_list_time_utc": "2026-10-13T05:07:35Z",
+  "reported_target": {
+    "name": "weft-pilot",
+    "repository": "xorca0711/weft",
+    "setup_ref": "d031cef02ab4a417760bca46e90a63917d215d31",
+    "mount": "weft"
+  },
+  "comparisons": {
+    "full_version_matches_preserved_manual_worker_receipt": true,
+    "setup_ref_matches_original_setup_record": true,
+    "repository_matches_intended_target": true,
+    "opaque_prefix_establishes_mir_account_identity": false
+  },
+  "reported_saved_environment_selector": "mcp__codex_apps__cloud_threads_create.environmentConfigId",
+  "root_has_this_launcher": false,
+  "owner_settings_screenshots": {
+    "environment_and_repository_match": true,
+    "internet_enabled": true,
+    "domain_preset": "Package managers",
+    "additional_domain_count": 3,
+    "visible_additional_domains": ["europepmc.org", "ftp.ncbi.nlm.nih.gov", "www.ebi.ac.uk"],
+    "complete_custom_host_list_observed": true,
+    "matches_three_previously_approved_hosts": true,
+    "privacy": "Only me",
+    "network_secrets_listed": false,
+    "environment_variables_listed": false,
+    "live_runtime_enforcement_evidence": false
+  },
+  "l0_status": "partial; current identity and publication status missing; configured network settings observed",
+  "remaining_prelaunch_observations": [
+    "independent current AI-host account/workspace mapping",
+    "current publication status/version if exposed"
+  ],
+  "postlaunch_runtime_verification_required_before_work": true,
+  "native_submission": false,
+  "new_tasks_created": 0,
+  "runtime_code_changed": false,
+  "scientific_gates_changed": false,
+  "access_settings_changed": false,
+  "schedules_created": false,
+  "scientific_execution": false,
+  "choi": "unchanged",
+  "b4": "hold unchanged; no reroute",
+  "validation": {
+    "scaffold_local_links": 196,
+    "source_pins": 15,
+    "changed_document_local_links": 199,
+    "json": "passed",
+    "public_additions_privacy_patterns": "no hits",
+    "whitespace": "passed",
+    "runtime_tests_rerun": false
+  }
+}

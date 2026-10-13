@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-13",
+  "scope": "read-only update check and support-request preparation",
+  "app_update_check": {
+    "source": "Codex app configured updater",
+    "installed_version": "26.1007.21434",
+    "installed_build_version": "13901",
+    "installed_release_channel": "prod",
+    "status": "up_to_date"
+  },
+  "windows_package_inventory": {
+    "name": "OpenAI.Codex",
+    "version": "26.1007.2314.0",
+    "architecture": "arm64"
+  },
+  "cli": {
+    "path_cli_version": "0.162.0-alpha.17.2",
+    "plugin_app_server_version": "0.162.0-alpha.17.2",
+    "installed_update_help_exposes_check_only": false,
+    "candidate_in_official_changelog_search_index": "0.162.1",
+    "candidate_direct_release_entry_verified": false,
+    "applicable_compatibility_fix_confirmed": false
+  },
+  "support_draft": "docs/support/LAUNCHER_SUPPORT_REQUEST_20261013.md",
+  "credentials_read": false,
+  "updates_installed": false,
+  "settings_changed": false,
+  "browser_retried": false,
+  "cloud_jobs_launched": 0,
+  "support_submitted": false,
+  "session_history_exported": false,
+  "remote_repository_publication": false,
+  "sources": [
+    "https://learn.chatgpt.com/docs/cli/reference",
+    "https://learn.chatgpt.com/docs/reference/troubleshooting",
+    "https://learn.chatgpt.com/docs/changelog"
+  ]
+}

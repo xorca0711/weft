@@ -12,6 +12,7 @@ autonomous workflow completion and scientific acceptance are not claimed.
 
 | Date | Item | Proposed by | Decided by | Decision | Reason |
 |---|---|---|---|---|---|
+| 2026-10-13 | Complete feasible partial backend stages and retry existing holds | Owner requested parallel review and continuation | Owner authorized scope; code remains subject to PR review | Three bounded agents implemented discovery reconciliation, reading fixes, offline B5 accounting and local launch-journal integrity; root integrated/reviewed | Preserve historical evidence, expose concrete gaps and stop at unresolved platform/scientific/deployment boundaries |
 | 2026-10-12 | Continue backend sequence using synthetic handoff/recovery and private intake tests | Codex | Owner authorized continuation; control implementation awaits PR review | Implemented locally; no cloud dispatch | Preserve completed Choi evidence and B4 hold while improving operational reliability |
 | 2026-10-12 | Cloud launcher qualification and coordinator continuity | Codex | No new deployment decision made | Read-only probes only; stop at missing route/authority | CLI lists no tasks; original coordinator messaging returns thread not found; no restored ledger activated |
 | 2026-10-11 | Separate repository with implementation plan and README diagram | Owner | Owner | Requested | Develop the literature-to-reanalysis workflow alongside Ravel |
@@ -38,6 +39,28 @@ autonomous workflow completion and scientific acceptance are not claimed.
 | 2026-10-12 | Treat the first lexical candidates as a priority shortlist or completed scientific screening | Dental alveolar matches, duplicate per-RQ review cost and incomplete source coverage require separate evaluation; retain frozen results | Codex implementation review; proposed query/ranking revisions remain unadopted |
 
 Future reviews append decisions and rejections rather than overwriting them.
+
+### Backend review disposition — 13 October 2026
+
+The remote-controls reviewer independently reviewed stricter reading types,
+held-assessment behavior and evaluation authority boundaries; no blocking defect
+was found. Root reviewed exact-ID correction reconciliation and its preservation
+and stale-packet regressions. The evaluator's denominator is a frozen item/packet,
+not an independent paper; documentation records unblinded-reference and exposure
+limits. These reviews cover software semantics, not human scientific acceptance.
+
+The discovery reviewer also drafted 30 opt-in profiles against the exact pinned
+question cards. Root checked all broad/alternative pairs and removed an overly
+restrictive marker/input clause from A28's broad query. Original profiles remain
+unchanged, unspecified mediators/endpoints remain unspecified, and none of the
+new queries was run. Configuration coverage is not measured search recall.
+
+The final local suite ran 256 tests (231 passed, 25 platform skips). The
+[completion review](docs/ROADMAP_COMPLETION_REVIEW_20261013.md) separates software
+completion from B4's repeated platform rejection and L1's missing runtime-status
+capability. Neither hold was weakened; no replacement worker was created. Exact
+cloud source/prompt freezes and completed Choi outputs remain unchanged.
+
 Repository creation does not mean every scientific or operational proposal has
 been accepted. No software license has yet been selected by the owner; public
 visibility alone does not grant an open-source license.
@@ -802,3 +825,46 @@ is idle. The timeout was armed but cancellation was not exercised. The
 task/run/return observation only. No automated launcher, formal pre-submission
 procedure, cloud retention, PC-off coordination or scientific acceptance is claimed.
 No code, dependency, environment, Choi/B4 state or operational adoption changed.
+
+## 2026-10-13 — Control integration and offline launch recovery
+
+The owner requested proceeding through the recommended review/merge sequence.
+Root reviewed PR #10 at d106463 against main 5ca2a58, reused current passing CI
+and unchanged-code cloud fixture evidence, and found no blocker within the stated
+cooperative scope. This was a root-agent code review, not independent human
+scientific acceptance. The merge at 5cd4178 passed main CI 38335403318.
+
+The next scoped change adds an offline, single-journal launch-intent guard.
+It persists uncertainty before a proposed provider call and reconciles only an
+operator-supplied acknowledgement bound to the original specification. Changed
+bindings, duplicate begins, conflicting receipts and inactive restored copies
+stay rejected. It does not call a provider, authenticate receipts, impose global
+task capacity, solve distributed ownership or grant scientific authority.
+
+Twelve targeted fixtures passed after fixing SQLite connection cleanup in two
+Windows fixtures. No production catalog or cloud task was used. Browser access
+remains an unresolved product dependency; no new service, secret, privilege,
+network change or schedule was introduced. The
+[readiness note](docs/AUTOMATED_LAUNCH_READINESS.md) preserves that boundary and
+records the official documentation's limited VM recovery window separately from
+durable archive storage and unqualified dot scratch retention.
+
+Full-suite validation passed 200 tests with the existing 25 Windows ARM64 skips.
+The [review record](records/launcher-readiness-20261013.json) distinguishes the
+merged PR #10 controls from the new offline journal and unresolved deployment.
+
+## 2026-10-13 — Remote architecture qualification sequence
+
+The owner requested progress toward fully remote automation. Codex checked
+official dot/cloud/CLI/API documentation and retained the already selected
+dot/Codex Cloud architecture. Native environment-selecting delegation is the
+first route to inspect; an unmapped local CLI is no longer treated as a necessary
+dependency. This is an implementation recommendation within the existing route,
+not owner approval of a paid API service or a new deployment.
+
+The [architecture](docs/REMOTE_AUTOMATION_ARCHITECTURE.md) defines L0–L4 within
+the existing roadmap and prepares a read-only capability check for Mir. A root
+metadata read provides no actual launcher capabilities. No speculative adapter,
+new task, credential transfer, permission change, schedule or scientific execution
+was introduced. Existing code tests remain valid; documentation validation is
+recorded in PROGRESS. All scientific gates and the independent B4 hold remain.

@@ -232,4 +232,4 @@ def submit_reading(store,batch_id,assessment):
             return {**result,'status':'already_recorded'}
         store.db.execute('UPDATE batch_items SET reading_result_json=? WHERE batch_id=? AND candidate_id=?',(json.dumps(assessment),batch_id,cid))
         event(store,batch_id,'reading-assessment-recorded',{'candidate_id':cid,'assessment_sha256':digest(assessment)})
-        return {**result,'status':'review_required'}
+        return {**result,'status':assessment['next_action']}

@@ -8,7 +8,7 @@ from .context import build_context
 from .discovery import Store, discover, stream_key, verify_run, write_json
 from .validation import ValidationError, read_json, validate_project, verify_ravel
 from .reading import prepare_reading, validate_reading
-from . import batches, screening, qualification, handoff, intake
+from . import batches, screening, qualification, handoff, intake, launches, coverage, evaluation
 from .identity import digest
 from .reading_locations import relocate_readings
 
@@ -23,6 +23,15 @@ def main(argv=None):
     context.add_argument("--repo", required=True, type=Path)
     context.add_argument("--rq", nargs="+")
     context.add_argument("--output", required=True, type=Path)
+    coverage_parser = sub.add_parser("profile-coverage", help="Audit configured queries against all pinned RQs; no retrieval or recall estimate")
+    coverage_parser.add_argument("--repo", required=True, type=Path)
+    evaluation_plan = sub.add_parser("evaluation-plan", help="Validate an externally reviewed evaluation plan and print its canonical JSON hash")
+    evaluation_plan.add_argument("--plan", required=True, type=Path)
+    evaluation_score = sub.add_parser("evaluation-score", help="Offline judgment accounting; no scientific pass or dispatch")
+    evaluation_score.add_argument("--plan", required=True, type=Path)
+    evaluation_score.add_argument("--plan-sha256", required=True)
+    evaluation_score.add_argument("--predictions", required=True, type=Path)
+    evaluation_score.add_argument("--references", required=True, type=Path)
     search = sub.add_parser("discover", help="Explicit, bounded Europe PMC metadata retrieval")
     search.add_argument("--repo", required=True, type=Path)
     search.add_argument("--profile", required=True)
@@ -96,6 +105,16 @@ def main(argv=None):
         if name == 'intake-verify':
             command.add_argument('--directory', type=Path, required=True)
             command.add_argument('--manifest-sha256', required=True)
+    for name in ['launch-init', 'launch-prepare', 'launch-begin', 'launch-ack', 'launch-status']:
+        command = sub.add_parser(name, help='Offline launch journal; no provider call: ' + name)
+        command.add_argument('--journal', type=Path, required=True)
+        if name in {'launch-prepare', 'launch-begin'}:
+            command.add_argument('--spec', type=Path, required=True)
+            command.add_argument('--prompt', type=Path, required=True)
+        if name in {'launch-ack', 'launch-status'}:
+            command.add_argument('--operation', required=True)
+        if name == 'launch-ack':
+            command.add_argument('--receipt', type=Path, required=True)
     args = parser.parse_args(argv)
     root = Path(__file__).resolve().parents[1]
     try:
@@ -103,6 +122,16 @@ def main(argv=None):
             result = validate_project(root)
         elif args.command == "verify-ravel":
             result = verify_ravel(args.repo, read_json(root / "integration/ravel.lock.json"))
+        elif args.command == "profile-coverage":
+            packet = build_context(args.repo, read_json(root / "integration/ravel.lock.json"))
+            result = coverage.audit_profiles(read_json(root / "configs/search_profiles.json"), packet)
+        elif args.command == "evaluation-plan":
+            result = evaluation.validate_plan(read_json(args.plan))
+        elif args.command == "evaluation-score":
+            plan = read_json(args.plan)
+            if evaluation.fingerprint(plan) != args.plan_sha256:
+                raise ValidationError("Evaluation plan differs from the frozen canonical JSON hash")
+            result = evaluation.evaluate(plan, read_json(args.predictions), read_json(args.references))
         elif args.command == "context":
             packet = build_context(args.repo, read_json(root / "integration/ravel.lock.json"), args.rq)
             args.output.parent.mkdir(parents=True, exist_ok=True)
@@ -116,6 +145,7 @@ def main(argv=None):
                 raise ValidationError("Batch retrieval/read bound exceeds policy")
             profile = read_json(root / "configs/search_profiles.json")["profiles"][args.profile]
             packet = build_context(args.repo, read_json(root / "integration/ravel.lock.json"), profile["rq_ids"])
+            coverage.validate_profile_binding(profile, packet)
             with Store(args.store) as store:
                 bid = batches.create(store, packet, args.profile, profile, args.streams, args.since, args.until,
                                      max_searches=args.max_searches, max_records=args.max_records,
@@ -151,6 +181,20 @@ def main(argv=None):
                     result = batches.export_digest(store, args.batch)
                 else:
                     result = batches.status_report(store, args.batch)
+        elif args.command.startswith('launch-'):
+            if args.command == 'launch-init':
+                result = launches.initialize(args.journal)
+            else:
+                with launches.LaunchJournal(args.journal) as journal:
+                    if args.command in {'launch-prepare', 'launch-begin'}:
+                        with args.prompt.open('rb') as prompt_file:
+                            prompt = prompt_file.read(100_001)
+                        method = journal.prepare if args.command == 'launch-prepare' else journal.begin
+                        result = method(read_json(args.spec), prompt)
+                    elif args.command == 'launch-ack':
+                        result = journal.acknowledge(args.operation, read_json(args.receipt))
+                    else:
+                        result = journal.status(args.operation)
         elif args.command.startswith(('handoff-', 'intake-')):
             with Store(args.store) as store:
                 if args.command == 'handoff-init':
@@ -179,6 +223,7 @@ def main(argv=None):
                 raise ValidationError("Unknown profile or stream; use a reviewed query in search_profiles.json")
             profile = profiles[args.profile]
             packet = build_context(args.repo, read_json(root / "integration/ravel.lock.json"), profile["rq_ids"])
+            coverage.validate_profile_binding(profile, packet)
             with Store(args.store) as store:
                 if args.stream == "priority_journals":
                     broad_key = stream_key(profile["streams"]["broad"], profile["date_field"], packet)
