@@ -28,7 +28,7 @@ authorization are not established.
 | Track | Established | Remaining |
 |---|---|---|
 | Discovery and screening | Bounded Europe PMC discovery, deduplication, pinned RQ context, decision buffer, manual agent handoff and recovery | B3 material/semantic qualification, blocked B4 review, B5 independent evaluation and unattended launcher |
-| Cloud controls | Published environment, manual coordinator and verified Drive recovery; owner-operated task passed 18 pinned fixtures once; Mir's selector/catalog version reconciled; owner screenshots confirm the network preset and full custom-host list | One native task admitted; HOLD receipt/log recovered, zero tests invoked. Same-child runtime-status access and prompt-byte reconciliation pending; independent AI-host identity, enforcement, ownership and usage controls unqualified. Browser blocked; CLI optional and unmapped |
+| Cloud controls | Published environment, manual coordinator and verified Drive recovery; owner-operated task passed 18 pinned fixtures once; Mir's selector/catalog version reconciled; owner screenshots confirm the network preset and full custom-host list | One native task admitted; HOLD receipt/log recovered, zero tests invoked. Same-child diagnosis complete: runtime tool/skill absent from reported catalogs, platform review pending; independent AI-host identity, enforcement, ownership and usage controls unqualified. Browser blocked; CLI optional and unmapped |
 | Choi pilot | M4/M5 complete for the bounded benchmark: public outputs, verified recovery, owner descriptive retention and Ravel #149 merged; final 32-event administrative release independently recovered | Preserve bounded interpretation and checkpoint ancestry; no new-job authority or general scientific eligibility inferred |
 | Integration into main | Weft PRs #1-#10 and Ravel #149/#150 merged with passing CI; #10 control review completed within its cooperative scope | Offline launch-intent journal implemented/tested in open PR #11; diagnosis and remote architecture revisions remain local; no fresh-paper scientific acceptance |
 
@@ -48,7 +48,8 @@ same-workspace picker availability and configured network settings. Retain owner
 attribution rather than claim independent AI-host identity verification. The
 [native trial](qualification/NATIVE_RUNTIME_HOLD.md) was admitted once and its
 HOLD result recovered; tests remain unstarted. L1 is partial while the same-child
-runtime capability and prompt-byte provenance are diagnosed. CLI is optional.
+platform review addresses missing runtime tool/skill exposure and undocumented
+prompt normalization. The single diagnostic is complete; CLI is optional.
 L1 requires the bounded execution result after admission,
 L2 ownership/recovery without PC dependencies, L3 bounded search/screening and B5
 quality, and L4 separately authorized recurrence. These slices preserve existing

@@ -146,8 +146,13 @@ snapshot. That does not prove current enforcement or the new worker's version.
 
 The root's installed `cloud-environment-runtime` skill 0.1.2 describes
 `cloud_environment.environment_status`, but the root catalog does not expose it.
-The child may lack the integration or may not have discovered it; the available
-trace does not establish which. No plugin was installed or policy changed.
+The one authorized same-child diagnostic has now completed. The child reports
+inspection of all 341 operations, all three cloud skill pages (55 skills), and
+0 executor skills: no status operation, matching runtime skill or lazy tool
+discovery is exposed. Status calls/retries: 0/0; no explicit access denial.
+Root retrieved the completed report rather than the raw catalogs. The cause
+(deployment, routing or permissions) remains unknown. No plugin was installed
+or policy changed. No further diagnostic turn or replacement is being requested.
 
 Please clarify the supported way to expose/inspect current managed-environment
 status on an existing native-delegated child, including any difference from a
@@ -157,9 +162,19 @@ be represented as current enforcement. The existing task and original HOLD
 evidence are preserved for diagnosis.
 
 Separately, the task reader's `codexDelegation.input` omits one terminal LF from
-the frozen worker prompt; all other text matches. The retained original create
-arguments are not yet inspected. Please document any prompt normalization by
-submission/storage/readback; the responsible layer is not established.
+the frozen worker prompt; all other text matches. Mir's relayed comparison reports
+both the saved prompt and retained create argument at 4,673 UTF-8 bytes with the
+original hash, versus 4,672 bytes in the XML-decoded child input without trimming.
+The missing byte is the final LF at offset 4672. No raw serialized request was
+retained; the earliest observable difference is argument versus child-input
+representation. Please document supported prompt normalization; the responsible
+layer is unknown. The original journal/spec/artifacts have not been rewritten.
+
+Private task/turn IDs and exact hashes are prepared in a separate addendum for
+this existing session. They are intentionally excluded from this public draft.
+No support message has been sent. Repair of the existing integration, or an
+explicitly documented equivalent runtime-status route, is the requested next
+step; no policy weakening or new deployment is authorized by this report.
 
 ## Scope and available evidence
 

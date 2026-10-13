@@ -28,10 +28,18 @@
       "acknowledged"
     ],
     "journal_reopen_passed": true,
-    "identical_same_task_artifact_readback": true
+    "identical_same_task_artifact_readback": true,
+    "prompt_comparison": {
+      "saved_prompt_bytes": 4673,
+      "retained_create_argument_bytes": 4673,
+      "child_input_bytes": 4672,
+      "saved_and_retained_argument_match_frozen_hash": true,
+      "difference": "one final LF at offset 4672 absent from child input",
+      "raw_wire_request_retained": false
+    }
   },
   "root_independently_read_coordinator_journal": false,
-  "followup_diagnostic_sent": false,
+  "followup_diagnostic_sent": true,
   "replacement_task_created": false,
   "runtime_code_changed": false,
   "settings_changed": false,
@@ -39,5 +47,22 @@
   "schedules": 0,
   "scientific_execution": false,
   "choi": "closed and unchanged",
-  "b4": "held and unchanged"
+  "b4": "held and unchanged",
+  "followup_diagnostic_completed": true,
+  "followup_diagnostic_sender": "owner-authorized Mir; no root message",
+  "diagnostic_report": {
+    "provenance": "root read completed child report; raw catalogs not retrieved",
+    "operations_inspected": 341,
+    "cloud_skill_pages": 3,
+    "cloud_skills": 55,
+    "executor_skills": 0,
+    "runtime_status_tool_exposed": false,
+    "runtime_skill_exposed": false,
+    "lazy_tool_discovery_exposed": false,
+    "status_calls": 0,
+    "status_retries": 0,
+    "explicit_access_denial": false,
+    "underlying_cause": "deployment, routing and permissions not distinguished"
+  },
+  "next_action": "platform integration review; support draft and private ID addendum prepared, unsent"
 }

@@ -83,7 +83,7 @@ L0–L4 are implementation slices, not replacements for M0–M6 or B1–B5.
 | Slice | Current status | Work and exit evidence |
 |---|---|---|
 | L0 — native route and identity | **Owner observations complete; runtime qualification pending** | Selector/repository, version continuity and configured settings observed; owner confirms same-workspace availability. Preserve owner attribution; recheck the live target before submission and actual enforcement after admission |
-| L1 — one native synthetic launch | **Partial; runtime preflight HOLD** | [Outcome](qualification/NATIVE_RUNTIME_HOLD.md): one admission and recovered HOLD receipt/log; zero of 12 fixtures invoked. Diagnose the same child's runtime-status capability and prompt terminal-LF provenance. Preserve the completed manual 18-fixture result separately |
+| L1 — one native synthetic launch | **Partial; runtime preflight HOLD** | [Outcome](qualification/NATIVE_RUNTIME_HOLD.md): one admission and recovered HOLD receipt/log; zero of 12 fixtures invoked. Same-child diagnosis completed: no status tool/skill exposed; platform review pending. Retained create bytes match the freeze; child representation lacks final LF. Preserve the completed manual 18-fixture result separately |
 | L2 — remote continuity and recovery | **Partial controls; integration unqualified** | Qualify one authoritative writer, job admission, lost acknowledgement, cancellation, usage interruption, checkpoint readback, inactive restore and resumption of the same task. Demonstrate no required PC callback |
 | L3 — bounded search-to-screening operation | **Manual baseline exists; automation unqualified** | Use frozen search/profile/RQ pins, material permissions, source-grounded responses and a reviewable digest. Evaluate B5 on an independently defined sample before claiming quality. B4 remains held; no substitute attempt of its blocked review |
 | L4 — prospective recurring operation | **Disabled; owner decision required** | After technical and quality qualification, choose cadence/time zone, scope, finite usage ceilings, notification and stop rules, and permitted artifact destinations. Verify the saved schedule and first bounded cycle |
@@ -172,8 +172,10 @@ are complete. The [frozen native trial](qualification/NATIVE_SYNTHETIC_TRIAL.md)
 was submitted once by Mir; the child held before source retrieval or tests.
 The [current diagnosis](qualification/NATIVE_RUNTIME_HOLD.md) records recovered
 artifacts, missing runtime-status capability and one prompt terminal-LF discrepancy.
-A same-child capability-only follow-up is prepared, not sent. Account scope remains
-owner-attested. Preserve the existing occurrence; no replacement or test restart.
+The single same-child diagnostic completed and reported no runtime tool/skill
+exposure. The support packet is updated, unsent; no further turn is needed without
+new evidence. Account scope remains owner-attested. Preserve the existing
+occurrence; no replacement or test restart.
 
 Choi remains complete and preserved. No old ledger, worker, analysis output or
 source snapshot is changed. M6 stays disabled. These documentation changes add

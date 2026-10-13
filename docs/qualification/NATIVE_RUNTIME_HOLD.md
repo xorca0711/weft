@@ -7,17 +7,25 @@
 |---|---|
 | Native admission | Owner-relayed Mir report records one create call and real task/turn acknowledgement. Root directly reads the resulting child, whose delegation identifies the original coordinator |
 | Intent journal | Mir reports prepared → awaiting acknowledgement → acknowledged, with matching reopen checks. Root has not independently read that coordinator database |
-| Exact prompt binding | Root's child transcript matches the frozen text except for one absent terminal LF. The original call arguments have not been inspected; the normalization layer is unknown |
+| Exact prompt binding | Root observes one missing terminal LF in child text. Mir's owner-relayed comparison finds the saved prompt and retained create argument both match the frozen 4,673 bytes; child text is 4,672 bytes. No raw wire capture; normalization layer unknown |
 | Child outcome | Root directly observes an idle task, completed turn and preflight HOLD; no source retrieval or test invocation |
 | Artifact recovery | Root decodes and verifies the original 3,165-byte receipt and empty test log against the reported SHA-256 hashes. Mir separately reports identical completed-task readback |
 | Policy snapshot | Child reports a restricted policy file with the three custom hosts. Its SHA-256 exactly matches the earlier manual worker's saved snapshot; that does not establish current enforcement or version |
 | Execution/isolation | Zero test invocations. Timeout, isolation and the 12-fixture result remain untested in this child |
 
-The worker could not locate managed-cloud instructions or a supported current
-configuration/policy-status interface. Its trace contains filesystem discovery
-and MCP resource/template listing, but no runtime-status call. That does not
-establish whether a tool was absent, undiscovered or omitted from this session's
-runtime integration. Do not diagnose an installation defect from that trace alone.
+The original preflight could not locate managed-cloud instructions or a supported
+current configuration/policy-status interface. A single same-child diagnostic
+then completed. Root directly read its final report: the child inspected 341
+operations, all three cloud skill pages (55 skills) and the empty executor skill
+catalog. It reports no runtime-status operation, runtime skill or supported lazy
+tool discovery. Status calls/retries were 0/0, with no explicit access denial.
+
+This establishes reported absence within the inspected catalogs; root retrieved
+the completed diagnostic report, not the raw catalogs. Deployment, routing and
+permission causes remain indistinguishable. Current enforcement and configuration
+version remain unknown. The task metadata still showed active at root's read,
+while the specific diagnostic turn was completed; no new work was inferred from
+that metadata discrepancy.
 
 The root's installed `cloud-environment-runtime` skill, version 0.1.2, specifies
 `cloud_environment.environment_status` and requires current observations with
@@ -27,40 +35,38 @@ returned no matching runtime plugin; unrelated hosting plugins were not selected
 The directory result is not proof that this built-in capability is unavailable
 on every surface.
 
-The likely failure class is **runtime capability exposure/discovery**, not a
-demonstrated unpublished environment or incorrect allowlist. This is an inference.
+The established blocker is **missing runtime capability exposure in the child's
+reported catalogs**. Its cause is unknown; an unpublished environment or incorrect
+allowlist has not been demonstrated.
 The successful native admission and identical policy-file hash narrow the problem;
 they do not satisfy the frozen enforcement gate. The
 [official environment guide](https://learn.chatgpt.com/docs/environments/cloud-environments)
 documents configured network settings and task creation, but does not establish
 which status tool this particular child receives.
 
-## Next bounded diagnosis
+## Diagnosis complete; platform review next
 
-A private, unsent Mir handoff is prepared beside the original dispatch packet:
-`MIR_SAME_CHILD_DIAGNOSTIC.txt`. It requests one capability-only follow-up to the
-**existing child**, plus read-only inspection of Mir's retained submission bytes.
-It grants no test execution, source retrieval, replacement task, installation,
-policy change, Drive export, ledger mutation or scientific work.
+The owner sent exactly one capability-only follow-up to the existing child. Do
+not resend `MIR_SAME_CHILD_DIAGNOSTIC.txt` or the original launch prompt. No test,
+source fetch, installation, policy change, export or replacement task followed.
 
-1. Inspect the actual child skill/tool catalog and any supported lazy tool
-   discovery. Filesystem searches and MCP resource lists alone are not a complete
-   tool catalog. Identify the runtime skill/status tool if actually exposed.
-2. If that supported tool exists and permits this task, read its current status
-   once. Otherwise report the exact missing capability; do not invent endpoints,
-   import another session's tools, or copy a skill to manufacture access.
-3. Compare retained coordinator prompt/call bytes with the frozen prompt and
-   the child transcript's text. Preserve all original bytes/hashes. Do not silently
-   canonicalize or change the original journal. Formatting equivalence is not an
-   exact-byte pass; a normalization contract would be a reviewed amendment.
-4. Keep tests held even if the diagnosis succeeds. Review any supported repair or
-   same-task continuation before executing the original unstarted fixture run.
+Mir's owner-relayed byte comparison places the earliest observed discrepancy
+between the retained create argument and the decoded child-input representation:
+only the final LF at offset 4672 is absent. Both saved prompt and retained argument
+hash to the original frozen hash. A raw serialized request was not retained;
+which submission/storage/readback layer transformed the representation is unknown.
+Original spec, journal, prompt and HOLD artifacts remain preserved. The retained
+receipt hash was rechecked by Mir; exact delivered-byte binding remains unqualified.
 
-If the runtime integration is unavailable, the prepared
-[support request](../support/LAUNCHER_SUPPORT_REQUEST_20261013.md) asks how to expose
-it on the existing task. A repair requiring access changes, republishing or a new
-worker is a separate decision. No such action has been taken.
+The [support request](../support/LAUNCHER_SUPPORT_REQUEST_20261013.md) now asks the
+platform operator to inspect runtime integration exposure on this existing task
+and document prompt normalization. A private task/turn-ID addendum is ready under
+ignored run records. Neither the request nor the addendum has been sent by root.
+No further diagnostic turn or new occurrence is justified without new evidence.
+A repair requiring access changes, republishing or a replacement worker needs
+separate review. Keep the original execution gate unchanged.
 
-Raw child reads, decoded artifacts, root verification and the attributed Mir
-relay are stored under ignored private run records. Choi remains closed, B4 held,
-and M6 disabled. Native admission/recovery is progress; L1 is not complete.
+Raw child reads, decoded artifacts, root verification and attributed Mir reports
+remain private. Roadmap: **L1 partial; execution held for platform integration
+review**. Choi stays closed, B4 held, and M6 disabled. No runtime or scientific
+qualification follows from native admission and recovered HOLD evidence.

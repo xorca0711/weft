@@ -2,6 +2,32 @@
 
 Update this before stopping work, every session.
 
+## Same-child diagnosis complete; platform review pending — 13 October 2026
+
+Root directly read the completed diagnostic turn. The child reports inspection
+of 341 operations, 55 cloud skills across all pages and 0 executor skills: no
+runtime-status tool, runtime skill or lazy tool-discovery route is exposed.
+No explicit denial occurred; deployment/routing/permission cause remains unknown.
+Root holds the completed report, not the raw catalogs. Tests remain unstarted.
+
+Mir's owner-relayed comparison confirms the saved prompt and retained create
+argument both match the frozen 4,673-byte value. The decoded child input is one
+terminal LF shorter. No raw wire request exists to locate the transformation;
+original bytes, spec, journal and receipt remain preserved. This formatting issue
+is separate from the missing runtime capability and does not authorize retry.
+
+The [diagnosis](docs/qualification/NATIVE_RUNTIME_HOLD.md), roadmap and unsent
+[support request](docs/support/LAUNCHER_SUPPORT_REQUEST_20261013.md) are updated.
+A private task/turn-ID addendum is prepared. **L1 remains partial/held for platform
+integration review.** Do not resend either prompt, create a replacement, run tests
+or weaken the gate. No worker message, settings change, upload or support message
+was sent by root. Choi is closed, B4 held and M6 disabled.
+
+Validation passed: 205 scaffold links, 15 source pins, 140 changed-document links,
+JSON/privacy checks and Git whitespace checks. Private evidence/addendum remain
+Git-ignored. Main was fetched and is unchanged. No runtime tests were rerun;
+changes remain local.
+
 ## Native admission verified; same-child runtime HOLD — 13 October 2026
 
 Mir reports one native create, acknowledged journal reopen and identical result
