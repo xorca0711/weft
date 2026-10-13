@@ -1,6 +1,6 @@
 # Remote automation architecture and qualification sequence
 
-Status: **13 October 2026 — native interface/catalog and network settings observed; L0 identity/publication checks incomplete**.
+Status: **13 October 2026 — owner confirms picker availability; one native synthetic packet prepared, not submitted**.
 This refines M3b and M6 in the [roadmap](IMPLEMENTATION_PLAN.md). It creates no
 new scientific gate, deployment, schedule or authority to rerun an attempt.
 
@@ -21,8 +21,9 @@ The owner has now relayed the [Mir capability report and root
 reconciliation](qualification/NATIVE_LAUNCH_INTERFACE.md). Mir reports a native
 saved-environment selector and the intended repository; the full reported version
 matches the preserved manual worker receipt. Owner screenshots show the configured
-network preset and three approved hosts; current identity/publication are missing.
-The root tool set does not expose that
+network preset and three approved hosts. The owner now confirms same-workspace
+picker availability and repeated manual use; account scope remains owner-attested,
+not independently authenticated by root. The root tool set does not expose that
 launcher; Mir's capabilities do not transfer to this local task.
 
 ### Proposed operation with the PC off
@@ -57,7 +58,7 @@ actions or route around the B4 hold.
 
 | Route | PC-off potential | Current evidence and decision |
 |---|---|---|
-| Native Mir → existing Codex Cloud | Documented product capability | Mir reports the selector/target; root checked version continuity and owner settings screenshots. Current identity/publication, actual admission and durable ownership remain unqualified |
+| Native Mir → existing Codex Cloud | Documented product capability | Mir reports the selector/target; root checked version continuity and owner settings screenshots. Owner attests same-workspace availability; independent AI-host identity, actual native admission and durable ownership remain unqualified |
 | Local `codex cloud` adapter | Requires its invocation host to be online | Optional compatibility track. Running it locally does not meet the PC-off requirement; a remote installation/authentication would need separate qualification |
 | Hosted controller → Agents API → hosted sandbox | Documented programmatic components; account access untested | Contingency requiring a new deployment/billing decision, API credentials, controller hosting and durable state. Not connected or selected |
 
@@ -81,8 +82,8 @@ L0–L4 are implementation slices, not replacements for M0–M6 or B1–B5.
 
 | Slice | Current status | Work and exit evidence |
 |---|---|---|
-| L0 — native route and identity | **Partial; Mir report and settings reconciled** | Selector/repository, historical version continuity and configured network settings observed. Still require current account/workspace and publication status |
-| L1 — one native synthetic launch | **Not started** | After L0 and a reviewed exact packet, persist intent before a single permitted submission, bind the acknowledgement to its task, retrieve terminal state and hash-verified synthetic outputs. Existing manual qualification is retained, not relabelled or rerun |
+| L0 — native route and identity | **Owner observations complete; runtime qualification pending** | Selector/repository, version continuity and configured settings observed; owner confirms same-workspace availability. Preserve owner attribution; recheck the live target before submission and actual enforcement after admission |
+| L1 — one native synthetic launch | **Packet prepared; not submitted** | [Frozen native trial](qualification/NATIVE_SYNTHETIC_TRIAL.md): Mir persists intent before one submission, binds acknowledgement and recovers 12-fixture results. Existing 18-fixture manual qualification is retained, not relabelled or rerun |
 | L2 — remote continuity and recovery | **Partial controls; integration unqualified** | Qualify one authoritative writer, job admission, lost acknowledgement, cancellation, usage interruption, checkpoint readback, inactive restore and resumption of the same task. Demonstrate no required PC callback |
 | L3 — bounded search-to-screening operation | **Manual baseline exists; automation unqualified** | Use frozen search/profile/RQ pins, material permissions, source-grounded responses and a reviewable digest. Evaluate B5 on an independently defined sample before claiming quality. B4 remains held; no substitute attempt of its blocked review |
 | L4 — prospective recurring operation | **Disabled; owner decision required** | After technical and quality qualification, choose cadence/time zone, scope, finite usage ceilings, notification and stop rules, and permitted artifact destinations. Verify the saved schedule and first bounded cycle |
@@ -106,8 +107,10 @@ upgrade fixes durable-environment compatibility.
 
 Reuse the [offline launch journal](LAUNCH_INTENT_RECOVERY.md), currently in
 [PR #11](https://github.com/xorca0711/weft/pull/11), and the existing synthetic
-fixtures. Review/integrate that dependency before deploying its use. The journal
-does not itself submit, authenticate a receipt, or enforce remote exclusivity.
+fixtures. Root reviewed the exact PR head for the isolated synthetic trial;
+merge/integration remains separate from this qualification. Review/integrate the
+dependency before production deployment. The journal does not itself submit,
+authenticate a receipt, or enforce remote exclusivity.
 
 A future adapter must expose four observable operations: inspect the intended
 target, submit the exact packet once, read the acknowledged task, and retrieve
@@ -164,11 +167,12 @@ actual saved configuration when separately authorized. [Dot tasks and memory](ht
 
 The [Mir capability check](qualification/MIR_LAUNCH_CAPABILITY_CHECK.md) returned
 a schema/catalog report; see the [interface mapping](qualification/NATIVE_LAUNCH_INTERFACE.md).
-The remaining L0 dependency is current AI-host account/workspace and publication
-status; the network-setting screenshots are complete. No new computer,
-login or API key is needed for that observation. Before a later launch, review
-the exact packet against those settings; after admission, verify worker-enforced
-policy before tests. Do not build a speculative adapter around missing access.
+The owner confirms same-workspace availability; the network-setting screenshots
+are complete. The [frozen native trial](qualification/NATIVE_SYNTHETIC_TRIAL.md)
+is prepared for the existing Mir chat, which must verify the live saved target,
+persist its own intent and submit once. Account scope is owner-attested; report
+contradictions without inventing an authenticated account observation. Verify
+worker-enforced policy before tests. No native submission has occurred.
 
 Choi remains complete and preserved. No old ledger, worker, analysis output or
 source snapshot is changed. M6 stays disabled. These documentation changes add

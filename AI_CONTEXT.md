@@ -5,14 +5,14 @@
   The owner relayed Mir's native-selector/catalog report. Root verified exact
   historical version/setup continuity; [interface reconciliation](docs/qualification/NATIVE_LAUNCH_INTERFACE.md)
   records L0 as partial. Owner screenshots confirm the network preset, all three
-  approved custom hosts and Only me access. Await current AI-host account/workspace
-  and publication availability. The environment-list screenshot says Private, not
-  Unpublished, and has an Unknown repository subtitle; GitHub CLI and app currently
-  resolve the correct repository. Check the same-workspace Cloud picker without
-  sending a task; do not delete/reconnect/republish on the label alone.
-  Root has no native launcher tool.
-  No task, deployment, schedule or runtime code change occurred. PR #11 remains
-  unmerged. Choi is closed; do not reroute B4.
+  approved custom hosts and Only me access. The owner now confirms same-workspace
+  Cloud-picker availability and repeated manual use; do not ask again. Account
+  scope is owner-attested, not independently authenticated by root. The
+  [new native synthetic trial](docs/qualification/NATIVE_SYNTHETIC_TRIAL.md) is
+  prepared privately for the existing Mir chat: one native submission and 12
+  launch-journal fixtures at PR #11's exact head. It has not been dispatched.
+  Root has no native launcher tool. No task, deployment, schedule or runtime code
+  change occurred. PR #11 remains unmerged. Choi is closed; do not reroute B4.
 
 - Update check and support draft: [prepared request](docs/support/LAUNCHER_SUPPORT_REQUEST_20261013.md).
   The app reports up to date on its configured production channel. Installed CLI

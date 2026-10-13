@@ -28,10 +28,13 @@ expanded-domain screenshot shows the full list: `europepmc.org`,
 `ftp.ncbi.nlm.nih.gov`, and `www.ebi.ac.uk`. It matches the three approved hosts.
 These are configured-setting observations, not worker enforcement evidence.
 
-**L0 remains unqualified.** Missing pre-launch evidence: current AI-host
-account/workspace and current publication status. The network-setting inspection
-is complete; no network amendment is needed. The owner has been asked to inspect
-the remaining fields without changing them.
+**Owner observations are now sufficient to prepare the bounded native trial.**
+The owner confirms same-workspace picker availability and repeated manual use;
+network-setting inspection is complete. Keep that identity scope explicitly
+owner-attested: no independent AI-host account inspection was obtained. The
+[new synthetic packet](NATIVE_SYNTHETIC_TRIAL.md) requires a live exact-target
+comparison before one submission and current worker enforcement before tests.
+L0/L1 runtime qualification is still pending; no network amendment is needed.
 
 ## Environment-list discrepancy and shortest resolution
 
@@ -50,11 +53,11 @@ No official cause or specific fix for this exact label was established by the
 documentation search. A UI/mapping issue is a possibility, not a diagnosis.
 Do not delete the repository/environment or reconnect an account just to clear it.
 
-The next read-only check is **New chat → Work in → Cloud → Select environment**
-in the same AI-host account/workspace as Mir. Check whether `weft-pilot` is
-available for selection, without sending a prompt. The official guide describes
-this as selecting a published environment. Record that observation alongside
-Mir's exact target/version; availability is not proof of runtime readiness.
+The **New chat → Work in → Cloud → Select environment** check is settled by
+owner confirmation: `weft-pilot` is available and manual launches have already
+been tried repeatedly. Do not repeat the picker check or manual creation. Keep
+the same saved environment and use the prepared Mir-native trial to test the
+missing submission path. Availability is not proof of new-worker readiness.
 
 | Observation | Next step |
 |---|---|

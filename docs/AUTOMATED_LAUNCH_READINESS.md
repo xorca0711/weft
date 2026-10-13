@@ -25,7 +25,7 @@ but the environment mapping and effective browser-policy source remain unresolve
 
 | Route | Evidence | Remaining requirement |
 |---|---|---|
-| Native dot delegation | Mir's relay exposes selector/repository; version matches the preserved manual-worker receipt; owner screenshots show configured network settings | Current account/workspace and publication status missing; admission and new-worker enforcement need later qualification. No denied browser action or B4 continuation |
+| Native dot delegation | Mir's relay exposes selector/repository; version matches the preserved manual-worker receipt; owner screenshots show configured network settings | Owner confirms same-workspace picker availability; [native packet](qualification/NATIVE_SYNTHETIC_TRIAL.md) prepared, not submitted. Independent AI-host identity, admission and new-worker enforcement remain unqualified. No denied browser action or B4 continuation |
 | Owner selects Cloud / weft-pilot | One task ran pinned isolated fixtures and returned independently verified bytes | A manual task/run/return route only; no automated submission proof |
 | Supported task read/continue tools | Same-task inspection and bounded continuation worked | These calls do not select a new worker's environment or prove PC-off invocation by Mir |
 | Agent browser | Saved allow setting conflicts with effective denial, including after restart | Product-level permission diagnosis; do not repeat the setting request or bypass the denial |

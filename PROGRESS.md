@@ -2,6 +2,35 @@
 
 Update this before stopping work, every session.
 
+## Native synthetic packet prepared — 13 October 2026
+
+The owner confirms that `weft-pilot` is selectable in the same workspace and
+manual launches have already been tried repeatedly. The picker check is settled;
+do not request it again. Account scope remains owner-attested rather than a
+new authenticated account inspection. Earlier missing-observation notes below
+are historical and superseded by this update.
+
+The [new trial](docs/qualification/NATIVE_SYNTHETIC_TRIAL.md) has a self-contained
+private prompt for the existing **Mir** chat, including the exact saved target,
+worker text/hash, PR #11 source pin and single-submission journal sequence. It
+qualifies one native creation/acknowledgement/result path with 12 launch-journal
+fixtures, not the completed manual 18-fixture trial. Root reviewed the scoped
+source and passing CI at `824c562d5d0140aecadd35023fbaecca303ef126`; runtime/test
+code is unchanged. PR #11 remains open. Main is still
+`5cd4178af7cd706a51b8fb814f94c223c2fa32ab` after fetch.
+
+Next: owner pastes the prepared prompt into Mir; Mir verifies the live exact
+target, persists intent in its own coordinator workspace and submits at most once.
+The child must verify actual policy/version before tests. Return the real task
+acknowledgement and verified outputs, or the precise hold. Root has launched no
+task, created no journal and sent no worker message. Choi stays closed, B4 stays
+held, and M6 stays disabled. This is no claim of restart retention or deployment.
+
+Validation passed: 201 scaffold links, 15 source pins, 137 links across changed
+documents, packet/embedded-prompt hashes, static 12-fixture count, private-identifier
+scan and whitespace checks. Private dispatch files are Git-ignored. Runtime/test
+code matches the reviewed pin; no runtime tests were rerun. Changes are local.
+
 ## Environment-resolution triage — 13 October 2026
 
 The environment-list screenshot shows **Private** in Sharing, not an Unpublished
