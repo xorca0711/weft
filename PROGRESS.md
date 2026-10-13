@@ -2,6 +2,39 @@
 
 Update this before stopping work, every session.
 
+## Remote automation architecture — 13 October 2026
+
+The owner requested continuing the recommended stages and finding a fully remote
+architecture. The [implementation sequence](docs/REMOTE_AUTOMATION_ARCHITECTURE.md)
+now qualifies **native Mir delegation to existing `weft-pilot` first**, with CLI
+compatibility optional. Official documentation describes PC-off dot work and
+coding threads in existing cloud environments. That is product capability,
+not proof of Mir's current tool access or unattended ownership/recovery.
+
+L0's [read-only Mir capability check](docs/qualification/MIR_LAUNCH_CAPABILITY_CHECK.md)
+is prepared for owner relay. Root's current supported Mir read returns idle
+metadata and no turns; it supplies no launcher schema or mapping. The current
+root tools lack an environment-selecting native dot launcher. Earlier direct
+delivery failed, so no message or new worker was sent. **Await Mir's report**,
+then map the observed interface before implementing a live adapter. Do not
+guess IDs, reuse the completed synthetic task or retry denied browser actions.
+
+L1–L4 specify exact synthetic submission, remote ownership/recovery, bounded
+search/screening with independent B5 evaluation, and finally separately authorized
+recurrence. Existing 200-test offline evidence is reused; no runtime change or
+analysis rerun is needed for these documentation updates. The API/controller
+contingency requires new access, hosting, storage and billing decisions; none
+was made. Native delegation must respect the same permissions and scientific holds.
+
+The roadmap, readiness note, backend plan, README and entry point are synchronized.
+PR #11 is still open; diagnosis/support/architecture revisions are local. Choi,
+B4 and M6 remain unchanged. See the [architecture record](records/remote-architecture-20261013.json).
+Validation passed: **192 scaffold links and 15 source pins**; an additional check
+covered all **203 local links in the changed documents**, including the new
+architecture and relay prompt. The record parses as JSON, targeted privacy checks
+found no private-identifier patterns in new public artifacts, and Git whitespace
+checks passed. These are document checks, not native launcher qualification.
+
 ## Update check and support preparation — 13 October 2026
 
 Prepared a [sanitized support request](docs/support/LAUNCHER_SUPPORT_REQUEST_20261013.md)

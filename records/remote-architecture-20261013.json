@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-13",
+  "scope": "remote architecture research and qualification preparation",
+  "primary_route": "native dot delegation to existing published Codex Cloud environment",
+  "route_status": "documented product capability; current coordinator mapping unverified",
+  "cli_required_for_native_route": false,
+  "mir_read": {
+    "interface": "supported app read_thread",
+    "status": "idle",
+    "turns_returned": 0,
+    "capability_evidence_obtained": false
+  },
+  "next_dependency": "owner-relayed read-only capability report from Mir",
+  "stages": {
+    "L0": "prepared; waiting for native capability and target observations",
+    "L1": "native synthetic submission not started",
+    "L2": "manual and offline evidence only; unattended continuity unqualified",
+    "L3": "manual baseline; automated flow and independent B5 evaluation unqualified",
+    "L4": "disabled; scope, cadence and usage decisions pending"
+  },
+  "contingency": {
+    "route": "hosted controller, durable database and Agents API hosted execution",
+    "selected": false,
+    "account_access_verified": false,
+    "new_deployment_and_billing_decision_required": true
+  },
+  "runtime_code_changed": false,
+  "scientific_gates_changed": false,
+  "new_tasks_created": 0,
+  "messages_sent_to_other_tasks": 0,
+  "uploads": 0,
+  "access_settings_changed": false,
+  "schedules_created": false,
+  "scientific_execution": false,
+  "choi": "complete and unchanged",
+  "b4": "platform hold unchanged; no reroute",
+  "validation": {
+    "scaffold_local_links": 192,
+    "source_pins": 15,
+    "changed_document_local_links": 203,
+    "new_record_json": "passed",
+    "new_public_artifact_privacy_patterns": "no hits",
+    "git_whitespace": "passed",
+    "runtime_tests_rerun": false,
+    "native_launcher_qualified": false
+  },
+  "sources": [
+    "https://learn.chatgpt.com/docs/dots/computers-and-apps",
+    "https://learn.chatgpt.com/docs/dots/tasks-and-memory",
+    "https://learn.chatgpt.com/docs/environments/cloud-environments",
+    "https://learn.chatgpt.com/docs/cli/reference",
+    "https://developers.openai.com/api/docs/guides/agents-api/overview",
+    "https://developers.openai.com/api/docs/guides/agents-api/environments/openai-hosted",
+    "https://developers.openai.com/api/docs/guides/agents-api/sessions/webhooks"
+  ]
+}

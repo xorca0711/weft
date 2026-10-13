@@ -25,10 +25,11 @@ but the environment mapping and effective browser-policy source remain unresolve
 
 | Route | Evidence | Remaining requirement |
 |---|---|---|
+| Native dot delegation | Official documentation describes cloud coding threads in an existing environment; Mir's actual launcher is not observed | First route to qualify: read-only capability/account/environment report from Mir, followed by a reviewed synthetic occurrence; no denied browser action or B4 continuation |
 | Owner selects Cloud / weft-pilot | One task ran pinned isolated fixtures and returned independently verified bytes | A manual task/run/return route only; no automated submission proof |
 | Supported task read/continue tools | Same-task inspection and bounded continuation worked | These calls do not select a new worker's environment or prove PC-off invocation by Mir |
 | Agent browser | Saved allow setting conflicts with effective denial, including after restart | Product-level permission diagnosis; do not repeat the setting request or bypass the denial |
-| Documented cloud CLI | Earlier listing succeeded but did not expose the intended environment/account match | Verify that exact mapping through an allowed supported surface before any launch; do not guess an ID or use it around browser enforcement |
+| Documented cloud CLI | Designated AI-host account verified; no named environment exposed and known durable task ID rejected | Optional adapter after supported compatibility/mapping verification; not a prerequisite for native delegation or a route around enforcement |
 | Different hosted API/service | Not selected, connected or qualified | Separate deployment, authentication, storage and spending decision before implementation against that service |
 
 The current tools do not expose a verified new-task selector for the intended
@@ -36,11 +37,14 @@ published environment. No new worker was created to discover whether a guessed
 route would work. The known browser denial was not retried without a relevant
 change. No new credentials, privileges, network settings or paid service were added.
 
-The recommendation remains the selected dot/Codex Cloud architecture. The next
-external requirement is a permitted, identity-verifiable launch route for that
-environment. A successfully continued existing worker is insufficient evidence.
-The reviewable [offline intent/recovery guard](LAUNCH_INTENT_RECOVERY.md) can be
-developed while this access issue remains unresolved; it does not solve it.
+The recommendation remains the selected dot/Codex Cloud architecture, with native
+delegation as the first route to inspect. The [remote architecture and L0–L4
+sequence](REMOTE_AUTOMATION_ARCHITECTURE.md) separate that work from optional CLI
+compatibility. The next external requirement is a permitted, identity-verifiable
+launcher for the exact environment. A successfully continued existing worker is
+insufficient evidence. The [offline intent/recovery guard](LAUNCH_INTENT_RECOVERY.md)
+is implemented and tested in PR #11, still awaiting integration; it does not solve
+launcher access or distributed ownership. No live adapter is implemented.
 
 ## What must pass before unattended deployment
 
@@ -56,6 +60,12 @@ developed while this access issue remains unresolved; it does not solve it.
    numbers are not an approved paid-API budget or measured subscription-cost limit.
 
 ## Official documentation checked on 13 October
+
+[Dot computers and apps](https://learn.chatgpt.com/docs/dots/computers-and-apps)
+documents PC-off cloud work and delegation to an existing Codex cloud environment.
+This is product-level evidence, not a successful call from Mir. The prepared
+[read-only capability check](qualification/MIR_LAUNCH_CAPABILITY_CHECK.md) requests
+the actual session interface without dispatch or new access.
 
 The [CLI reference](https://learn.chatgpt.com/docs/cli/reference) documents
 `cloud exec --env` and cloud task listing. That establishes an interface, not

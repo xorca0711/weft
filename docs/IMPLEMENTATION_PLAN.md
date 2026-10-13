@@ -28,9 +28,9 @@ authorization are not established.
 | Track | Established | Remaining |
 |---|---|---|
 | Discovery and screening | Bounded Europe PMC discovery, deduplication, pinned RQ context, decision buffer, manual agent handoff and recovery | B3 material/semantic qualification, blocked B4 review, B5 independent evaluation and unattended launcher |
-| Cloud controls | Published environment, scoped controls, manual coordinator and verified private Drive recovery; one owner-operated cloud task passed 18 pinned, isolated handoff/intake fixtures once; exact result recovery verified and task idle | Automated browser launch blocked and CLI route unverified; formal pre-submission procedure unqualified; direct Mir messaging unavailable; unattended dispatch, retention/ownership and usage controls |
+| Cloud controls | Published environment, scoped controls, manual coordinator and verified private Drive recovery; one owner-operated cloud task passed 18 pinned, isolated handoff/intake fixtures once; exact result recovery verified and task idle | Native dot launcher needs session-specific verification; browser route blocked, CLI mapping unverified and optional; formal pre-submission, remote ownership and usage controls unqualified |
 | Choi pilot | M4/M5 complete for the bounded benchmark: public outputs, verified recovery, owner descriptive retention and Ravel #149 merged; final 32-event administrative release independently recovered | Preserve bounded interpretation and checkpoint ancestry; no new-job authority or general scientific eligibility inferred |
-| Integration into main | Weft PRs #1-#10 and Ravel #149/#150 merged with passing CI; #10 control review completed within its cooperative scope | Offline launch-intent journal is the next scoped change; no fresh-paper scientific acceptance |
+| Integration into main | Weft PRs #1-#10 and Ravel #149/#150 merged with passing CI; #10 control review completed within its cooperative scope | Offline launch-intent journal implemented/tested in open PR #11; diagnosis and remote architecture revisions remain local; no fresh-paper scientific acceptance |
 
 The [backend handoff note](BACKEND_HANDOFF.md) describes the tested controls;
 [launcher qualification](LAUNCHER_QUALIFICATION.md) owns the deployment boundary.
@@ -40,6 +40,14 @@ The [launcher readiness decision](AUTOMATED_LAUNCH_READINESS.md) records the
 remaining access dependency and the [offline intent/recovery guard](LAUNCH_INTENT_RECOVERY.md).
 Its local journal does not establish remote dispatch or distributed ownership.
 
+The [remote architecture](REMOTE_AUTOMATION_ARCHITECTURE.md) now prioritizes native
+Mir delegation to the existing environment. Official documentation supports the
+product route; L0 awaits Mir's actual capability/account/environment observations.
+CLI compatibility is an optional track. L1 qualifies one new synthetic submission,
+L2 ownership/recovery without PC dependencies, L3 bounded search/screening and B5
+quality, and L4 separately authorized recurrence. These slices preserve existing
+milestone IDs and all scientific holds; no new service or live adapter is selected.
+
 The [PR stack audit](PR_STACK_INTEGRATION.md) records merge order and verified
 conflict status. Implementation/testing, merge status and scientific acceptance
 are separate. No overall completion percentage is assigned to unequal milestones.
@@ -48,7 +56,7 @@ are separate. No overall completion percentage is assigned to unequal milestones
 
 | Component | Assigned responsibility | Evidence / implementation boundary |
 |---|---|---|
-| Dot | Coordinate bounded tasks, source reading, holds and reports through supported product delegation | Structured dispatch/return records; no assumed dot SDK or unattended integration |
+| Dot | Coordinate bounded tasks, source reading, holds and reports through supported product delegation | Native cloud-thread capability is documented; actual launcher/mapping, ownership and unattended integration await qualification; no assumed dot SDK |
 | Weft | Discovery, pinned RQ context, proposal buffer, gates, job ledger and export preparation | Discovery/buffer/manual reader and synthetic executor/recovery implemented; scientific orchestration incomplete |
 | Codex Cloud | Execute tested repository commands in a qualified published environment | Exact source/dependency versions, input/output manifests, QC and resource receipts |
 | Ravel | Canonical RQs, contracts, analysis code, results and acceptance history | Read-only pinned context initially; later scoped, reviewed PR |

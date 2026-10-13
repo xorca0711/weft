@@ -145,6 +145,11 @@ Retain the selected dot/Codex Cloud route. Manual handoff, saved model responses
 and checkpoint restoration have passed the bounded qualification. A supported
 unattended dispatch API and persistence guarantee remain unestablished. Qualify
 the launcher and its failure/recovery controls before unattended operation.
+The [remote architecture sequence](REMOTE_AUTOMATION_ARCHITECTURE.md) starts with
+read-only inspection of Mir's native environment-selecting delegation. Product
+documentation supports that route; current session access is still unknown.
+The local CLI is an optional adapter, not the required coordinator or a prerequisite
+for native qualification. No live provider adapter is implemented by this plan.
 A missing API must result in a documented deployment decision, not
 browser automation masquerading as a durable backend or an invented dot SDK.
 

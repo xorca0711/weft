@@ -1,5 +1,13 @@
 # Agent entry point
 
+- Remote automation: [architecture and L0–L4 sequence](docs/REMOTE_AUTOMATION_ARCHITECTURE.md).
+  Qualify native Mir → existing `weft-pilot` first; CLI compatibility is optional.
+  Official docs support cloud delegation, but Mir's live selector/account/environment
+  mapping is not observed. The [read-only Mir check](docs/qualification/MIR_LAUNCH_CAPABILITY_CHECK.md)
+  is prepared for owner relay; root metadata reads expose no capabilities and direct
+  delivery has no working route. No new task, deployment, schedule or runtime
+  code change occurred. PR #11 remains unmerged. Choi is closed; do not reroute B4.
+
 - Update check and support draft: [prepared request](docs/support/LAUNCHER_SUPPORT_REQUEST_20261013.md).
   The app reports up to date on its configured production channel. Installed CLI
   remains `0.162.0-alpha.17.2`; no applicable replacement/fix is confirmed. No
@@ -9,12 +17,13 @@
   CLI AI-host identity and loaded browser allow rule are verified. Active browser
   policy provenance remains unknown; CLI exposes no named environments and rejects
   the known durable worker ID, although the app reader still finds that worker idle.
-  Stop at product troubleshooting; no new launch, settings or account change.
+  Continue product troubleshooting separately from the read-only native-dot
+  capability check; no new launch, settings or account change is authorized by that check.
 
 - Latest continuation: [launcher readiness and PR #10 review](docs/AUTOMATED_LAUNCH_READINESS.md).
   PR #10 merged at `5cd4178af7cd706a51b8fb814f94c223c2fa32ab`; main CI passed.
-  The [offline launch-intent journal](docs/LAUNCH_INTENT_RECOVERY.md) is the next
-  scoped control change. It records uncertainty and acknowledgements but calls no
+  The [offline launch-intent journal](docs/LAUNCH_INTENT_RECOVERY.md) is implemented
+  and tested in open PR #11. It records uncertainty and acknowledgements but calls no
   provider and grants no dispatch authority. Tests use synthetic local data only.
   Automated environment selection remains an external access dependency; no new
   cloud task, credential, schedule or B4 continuation was introduced.

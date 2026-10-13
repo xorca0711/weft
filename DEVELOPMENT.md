@@ -829,3 +829,19 @@ durable archive storage and unqualified dot scratch retention.
 Full-suite validation passed 200 tests with the existing 25 Windows ARM64 skips.
 The [review record](records/launcher-readiness-20261013.json) distinguishes the
 merged PR #10 controls from the new offline journal and unresolved deployment.
+
+## 2026-10-13 — Remote architecture qualification sequence
+
+The owner requested progress toward fully remote automation. Codex checked
+official dot/cloud/CLI/API documentation and retained the already selected
+dot/Codex Cloud architecture. Native environment-selecting delegation is the
+first route to inspect; an unmapped local CLI is no longer treated as a necessary
+dependency. This is an implementation recommendation within the existing route,
+not owner approval of a paid API service or a new deployment.
+
+The [architecture](docs/REMOTE_AUTOMATION_ARCHITECTURE.md) defines L0–L4 within
+the existing roadmap and prepares a read-only capability check for Mir. A root
+metadata read provides no actual launcher capabilities. No speculative adapter,
+new task, credential transfer, permission change, schedule or scientific execution
+was introduced. Existing code tests remain valid; documentation validation is
+recorded in PROGRESS. All scientific gates and the independent B4 hold remain.

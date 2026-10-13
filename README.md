@@ -96,6 +96,13 @@ GitHub repositories; Mir is the dot coordinator; Codex Cloud supplies temporary
 execution workspaces; private Google Drive stores recovery checkpoints and result
 archives. There is no separate Google Cloud Platform project, VM or storage bucket.
 
+The [PC-off automation plan](docs/REMOTE_AUTOMATION_ARCHITECTURE.md) targets
+**Mir's native delegation → existing `weft-pilot` → verified Drive recovery →
+reviewable Ravel intake**. Native delegation is documented but not yet verified
+in Mir's session. CLI integration is optional; automatic scheduling remains disabled.
+The plan includes the architecture diagram, staged qualification and an API
+contingency requiring a separate access and budget decision.
+
 ```mermaid
 flowchart TD
     subgraph FRONT["Interfaces used by the owner"]
@@ -203,8 +210,8 @@ export before the numerical pilot. GitHub CI remains for deterministic tests.
 Cloud selection does not establish available RAM, runtime limits or scientific readiness.
 
 The first paper is a deliberately exposed historical benchmark, **Choi et al.,
-Cell Stem Cell (2020)**. Completing it would test workflow fidelity and correct
-holds, not establish new biology or performance on unseen papers. Fresh-paper
+Cell Stem Cell (2020)**. Its bounded completion tested workflow fidelity and correct
+holds; it did not establish new biology or performance on unseen papers. Fresh-paper
 evaluation follows separately. A candidate question is not scientific acceptance.
 
 No scheduled searches, paid API calls, scientific runs, automatic merges or
