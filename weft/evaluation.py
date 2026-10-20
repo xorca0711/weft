@@ -218,6 +218,8 @@ def evaluate(plan, predictions, references):
         agent = agents.get(item['item_id'])
         reviews = [humans.get((item['item_id'], reviewer)) for reviewer in plan['reference_reviewers']]
         exposures = list(item['prior_exposure'].values()) + [r['prior_exposure'] for r in [agent, *reviews] if r]
+        if any(r and not r['blind_to_agent'] for r in reviews):
+            exposures.append('exposed')
         # "Unseen" is an attestation and excludes synthetic/development runs entirely.
         stratum = ('exposed' if 'exposed' in exposures else 'unknown' if 'unknown' in exposures
                    or agent is None or any(r is None for r in reviews) else 'declared_unseen')

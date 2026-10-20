@@ -5,6 +5,11 @@ independent fresh-paper evaluation has not run. No quality claim is established.
 The exposed Choi pilot, current development candidates and B4 interrupted material
 cannot be relabelled as unseen. B4 remains held; this plan does not reroute it.
 
+The owner-requested [phase-4 critic-first handoff](PHASE4_SCIENTIFIC_QUALITY_REVIEW.md)
+is a separate exposed development mode. Its AI-assisted human adjudications are
+not independent B5 reference labels. The independent contract below is unchanged;
+unblinded references are now excluded from the `declared_unseen` stratum.
+
 Before an independent batch, retain a versioned evaluation plan covering:
 
 | Decision to freeze | Required record |

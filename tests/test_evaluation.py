@@ -118,6 +118,13 @@ class EvaluationTests(unittest.TestCase):
         self.assertEqual(result['unblinded_reference_records'],1)
         self.assertFalse(result['actor_identity_verified'])
 
+    def test_unblinded_reference_never_enters_unseen_stratum(self):
+        plan=plan_fixture(); plan['kind']='prospective'
+        reference=judgment_fixture(plan,True); reference['blind_to_agent']=False
+        result=e.evaluate(plan,[judgment_fixture(plan)],[reference])
+        self.assertNotIn('declared_unseen',result['exposure_strata'])
+        self.assertEqual(result['exposure_strata']['exposed']['reading']['paired_items'],1)
+
     def test_sample_and_probabilities_are_explicit_without_invented_denominators(self):
         for probability in (float('nan'),float('inf'),0,1.1,True,'unknown'):
             plan=plan_fixture();plan['sample'][0]['selection_probability']=probability

@@ -2,6 +2,61 @@
 
 Update this before stopping work, every session.
 
+## Phase 4 critic-assisted review — 20 October 2026
+
+The owner requested phase 4 and chose to be the primary human reviewer after a
+substantial critic-AI review. A separate critic audited the evaluation contract
+and two exposed, non-B4 cases, then reviewed the new handoff implementation.
+**Human adjudication is pending; independent scientific-quality evaluation has
+not been completed.** See the [review guide](docs/PHASE4_SCIENTIFIC_QUALITY_REVIEW.md)
+and [bounded checkpoint](records/phase4-development-review-20261020.json).
+
+Freshly fetched main is `d14961f5e57c2ff61d0c3d5233be14706ac024be` (PR #13);
+its main CI passed. Work uses `codex/weft-independent-evaluation-20261020` in the
+existing scoped worktree. Ravel and live pilot catalogs/workers remain unchanged.
+
+- Added a private `quality-review-export` route for explicitly AI-assisted,
+  exposed development adjudication. It validates source hashes, exact DOI and
+  JSON locators, retains original critic findings and separate human answers,
+  preserves partial/disputed answers and emits no independent quality score.
+  Blank templates contain no inferred human answers. Copies remain portable;
+  previous outputs are not overwritten. No model or live-store call is added.
+- Corrected the critic-confirmed evaluator defect where an unblinded reference
+  could enter `declared_unseen` if exposure attestations said `none`. Such records
+  now remain exposed. Independent-reference requirements were not weakened.
+- Critic review found and the implementation fixed lost nested source paths,
+  human corrections hidden from the rendered view, and Windows reserved-name
+  aliases that could overwrite a source snapshot. Focused regression cases cover
+  each, including uncertainty and absent human labels.
+- Prepared private `runs/phase4-review-20261020/human-handoff-v2/`: two retained
+  metadata snapshots, readable cards, an empty human response template, report
+  and manifest. Eight critic findings and six dimension labels await the owner.
+  Two exact DOI metadata requests were made; no figures, supplements, dataset
+  files or numerical analysis were requested. Primary web checks were limited
+  to the two non-B4 article pages. This is a purposive retrospective check,
+  not an unseen sample or a source-complete B3 assessment.
+
+Local validation: the full suite passed **317 tests: 292 passed, 25 existing
+platform skips**. The final JSON-type guards and added case then passed all
+**13 handoff tests**; the unchanged evaluator suite had passed 11 tests. Offline
+configuration/documentation validation and whitespace checks passed. Linux CI
+provides the final full-suite result on the integrated code. No scientific pass
+or sample-size/threshold authority is inferred from these software checks.
+The optional browser preview rejected the local-file protocol; no workaround
+was attempted. Static rendering/source checks passed; interactive visual QA is
+not claimed. The Markdown review cards provide a directly readable handoff.
+
+Next required input is the owner's case judgments and reasons; unknown is valid.
+Their critic-assisted answers will remain exposed adjudications, not independent
+reference labels. A later independent benchmark still needs a reviewed sample,
+source-complete evidence, genuinely independent references/bibliography and
+prospectively chosen criteria. Do not redate old outcomes or reuse assisted labels
+as blinded evidence. Current Ravel dossiers were not read.
+
+B4 `10.1002/advs.77773` / `PMC13634473` was excluded entirely; no retry or reroute.
+Choi remains closed, M6 disabled and cloud-launch mapping/runtime capability
+unqualified. No access changes, external messages, schedules or live dispatch.
+
 ## Phases 1–3 implementation and integration — 20 October 2026
 
 The owner authorized these phases without a work timeline. Coordinator PR #12

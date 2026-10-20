@@ -1,5 +1,13 @@
 # Agent entry point
 
+- Latest: [phase-4 scientific-quality review](docs/PHASE4_SCIENTIFIC_QUALITY_REVIEW.md).
+  A separate critic audited the evaluator and two exposed non-B4 abstract cases.
+  A private, hash-bound critic-to-human handoff is prepared with no human labels.
+  Assisted adjudication is separate from independent B5 scoring; qualification
+  remains pending. Unblinded references now remain outside the unseen stratum.
+  No live catalog or Ravel change, B4 continuation, Choi reopening or M6 activation.
+  Phases 1–3 are integrated through PR #13 at `d14961f`; its main CI passed.
+
 - Latest implementation: [selection and material review](docs/SELECTION_AND_MATERIAL_REVIEW.md).
   New workflows freeze paper-first/query-stream nominations; existing batches
   retain their policy. Bibliography audits separate nominal order from actual

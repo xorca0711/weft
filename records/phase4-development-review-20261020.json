@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-20T01:20:59.020987+00:00",
+  "base_commit": "d14961f5e57c2ff61d0c3d5233be14706ac024be",
+  "scope": "Exposed critic-assisted development review; not independent B5 qualification",
+  "review_id": "weft-phase4-assisted-development-20261020-v1",
+  "mode": "ai_assisted_adjudication",
+  "packet_sha256": "dd691c5e0c7a8fe9098226c46c27f17a8c8f095855f49985efc5db217d95203d",
+  "sampling": {
+    "universe_locator": "records/backend-candidates-20261012.csv",
+    "universe_sha256": "cbf3a823b119daffabe2311f2b98dcd71af5e089150f3f87fa4d2e594645f74a",
+    "selection_method": "Two previously screened non-B4 papers selected for contrasting lung-adjacent versus dental-alveolar mismatch. Not independently sampled.",
+    "coverage_limits": "2 paper/context cases; 4 historical RQ links. Excludes held B4 entirely and does not examine 71 deferred non-B4 papers, positives, contrary evidence, or source-complete B3 cases. No recall denominator."
+  },
+  "historical_inventory": {
+    "papers": 74,
+    "b4_papers_excluded": 1,
+    "non_b4_screened_papers": 2,
+    "non_b4_screened_links": 4,
+    "non_b4_deferred_papers": 71,
+    "non_b4_deferred_links": 142
+  },
+  "current_review": {
+    "status": "awaiting_human_adjudication",
+    "case_count": 2,
+    "unique_papers": 2,
+    "independent_study_count": null,
+    "independent_reference_records": 0,
+    "recorded_labels": 0,
+    "missing_labels": 6,
+    "unresolved_findings": 8,
+    "quality_metrics": null
+  },
+  "source_snapshots": [
+    {
+      "doi": "10.1002/adhm.71751",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1002%2Fadhm.71751&format=json&resultType=core&pageSize=2",
+      "sha256": "4b9ef725551d4e8c12f87435569d5d46b8e5584bf12780dacd9dc0e0d53375f3",
+      "bytes": 6767,
+      "accessed_at": "2026-10-20T01:14:00.156068+00:00",
+      "scope": "Europe PMC metadata and abstract only; no figures, supplements or datasets inspected"
+    },
+    {
+      "doi": "10.1002/adma.75042",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1002%2Fadma.75042&format=json&resultType=core&pageSize=2",
+      "sha256": "ef2bd15dd64eb9ecd50118d2968191f0fb851f09941e6010df97a14b18ccc58b",
+      "bytes": 6624,
+      "accessed_at": "2026-10-20T01:14:01.368724+00:00",
+      "scope": "Europe PMC metadata and abstract only; no figures, supplements or datasets inspected"
+    }
+  ],
+  "retrieval": {
+    "exact_doi_metadata_requests": 2,
+    "supplement_or_dataset_requests": 0,
+    "live_store_writes": 0
+  },
+  "critic": {
+    "actor_kind": "agent",
+    "separate_context": true,
+    "blind_to_historical_outcomes": false,
+    "human_reference": false,
+    "model_identity_independently_verified": false,
+    "scope": "Evaluation contract/code and two purposively selected abstract cases; root checked retained-source support"
+  },
+  "software_corrections": [
+    "Unblinded references excluded from unseen stratum",
+    "Assisted records remain separate from independent scoring",
+    "Portable source snapshots, including Windows filename collision protection",
+    "Human corrections visible alongside original critic findings"
+  ],
+  "remaining": [
+    "Human adjudication",
+    "Independently sampled source-complete evaluation cases",
+    "Independent reference judgments and comparison bibliography",
+    "Prospectively reviewed acceptance criteria",
+    "Current RQ context and data-unit/lineage evidence for any proposed specific use"
+  ],
+  "holds": {
+    "b4": "excluded; unchanged",
+    "choi": "closed; unchanged",
+    "m6": "disabled",
+    "cloud_launch": "unqualified"
+  },
+  "ravel_changed": false,
+  "scientific_execution_allowed": false,
+  "claim_validated": false,
+  "release_qualified": false
+}
