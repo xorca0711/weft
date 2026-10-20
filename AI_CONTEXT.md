@@ -1,5 +1,10 @@
 # Agent entry point
 
+- Current implementation: [phase-4 full-text follow-through](docs/PHASE4_FOLLOW_THROUGH.md).
+  Multi-source assisted review and inactive transfer verification are implemented.
+  Independent B5 qualification and L1–L4 runtime/continuity/recurrence remain pending.
+  Preserve all holds; use PROGRESS for validation and integration state.
+
 - Latest: [primary paper-list scope](docs/PRIMARY_PAPER_LIST.md). New CLI scans
   use named CNS journals and biological field/mechanism constraints. Source-cited
   primary-research/system/endpoint/mechanism judgments gate reading admission.

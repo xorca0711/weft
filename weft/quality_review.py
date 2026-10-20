@@ -7,20 +7,19 @@ from html import escape
 import hashlib
 import json
 from pathlib import Path
-import re
+import os
 from urllib.parse import quote, urlsplit
 
 from . import evaluation as e
 from .discovery import now, write_json
 from .materials import _local_file
+from . import review_materials
 
 MODE = 'ai_assisted_adjudication'
 CATEGORIES = {'citation_support', 'biological_unit', 'controls', 'endpoint', 'data_access',
               'lineage', 'rq_fit', 'missing_material'}
 FLAGS = {**e.FLAGS, 'independent_reference': False, 'blind_to_agent': False,
          'semantic_support_verified': False}
-RESERVED = {'packet.json', 'human-response-template.json', 'report.json', 'human-response.json',
-            'review.md', 'index.html', 'manifest.json'}
 
 
 def pointer(document, locator):
@@ -53,7 +52,7 @@ def load(packet_path):
     packet = json.loads(path.read_text(encoding='utf-8'))
     e._keys(packet, {'schema_version', 'review_id', 'created_at', 'kind', 'mode', 'scope',
                      'sampling', 'critic', 'cases'}, 'quality packet')
-    if (type(packet['schema_version']) is not int or packet['schema_version'] != 1
+    if (type(packet['schema_version']) is not int or packet['schema_version'] not in {1, 2}
             or not isinstance(packet['kind'], str) or packet['kind'] not in {'synthetic', 'development'} or packet['mode'] != MODE):
         raise ValueError('Only explicit synthetic/development assisted review is supported')
     e._text(packet['review_id'], 'review ID'); e._text(packet['scope'], 'scope')
@@ -68,8 +67,11 @@ def load(packet_path):
     if not isinstance(packet['cases'], list) or not 1 <= len(packet['cases']) <= 25:
         raise ValueError('One to 25 explicit review cases required')
     sources, seen, paths = {}, set(), {}
+    multi = packet['schema_version'] == 2
+    budget = {'bytes': 0, 'count': 0}
     for case in packet['cases']:
-        e._keys(case, {'case_id', 'paper_key', 'rq_context', 'historical_decisions', 'source', 'findings', 'human_questions'}, 'case')
+        fields = {'case_id', 'paper_key', 'rq_context', 'historical_decisions', 'source', 'findings', 'human_questions'}
+        e._keys(case, fields | ({'materials', 'access_attempts'} if multi else set()), 'case')
         for key in ('case_id', 'paper_key', 'rq_context', 'historical_decisions'):
             e._text(case[key], key)
         if case['case_id'] in seen:
@@ -83,19 +85,7 @@ def load(packet_path):
         url = urlsplit(source['url'])
         if url.scheme != 'https' or not url.hostname or url.username or url.password:
             raise ValueError('Explicit public HTTPS source URL required')
-        if not isinstance(source['path'], str):
-            raise ValueError('Portable relative source path required')
-        parts = source['path'].split('/')
-        devices = {'con', 'prn', 'aux', 'nul'} | {p + str(n) for p in ('com', 'lpt') for n in range(1, 10)}
-        if any(not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9 ._#-]*', p) or p != p.rstrip(' .')
-               or p.split('.')[0].casefold() in devices for p in parts):
-            raise ValueError('Canonical portable source path components required')
-        if parts[0].casefold() in RESERVED:
-            raise ValueError('Source path collides with a reserved export filename')
-        alias = source['path'].casefold()
-        if alias in paths and paths[alias] != source['path']:
-            raise ValueError('Source path aliases another case on case-insensitive filesystems')
-        paths[alias] = source['path']
+        review_materials.portable(source['path'], paths)
         local = _local_file(path.resolve().parent, source['path'])
         with local.open('rb') as handle:
             body = handle.read(1_000_001)
@@ -106,7 +96,13 @@ def load(packet_path):
         if (not isinstance(records, list) or len(records) != 1 or not isinstance(records[0], dict)
                 or not isinstance(records[0].get('doi'), str) or 'doi:' + records[0]['doi'].lower() != case['paper_key']):
             raise ValueError('One exact DOI metadata record required per case')
-        sources[case['case_id']] = (body, document)
+        if multi:
+            budget['bytes'] += len(body)
+            material_view, retained = review_materials.load(case, path.resolve().parent, paths, budget, pointer)
+            document = {'metadata': document, 'materials': material_view}
+            sources[case['case_id']] = (body, document, retained)
+        else:
+            sources[case['case_id']] = (body, document)
         if not isinstance(case['findings'], list) or not 1 <= len(case['findings']) <= 20:
             raise ValueError('Bounded explicit critic findings required')
         findings = set()
@@ -131,7 +127,7 @@ def load(packet_path):
 
 
 def template(packet):
-    return {'schema_version': 1, 'review_id': packet['review_id'], 'packet_sha256': e.fingerprint(packet),
+    return {'schema_version': packet['schema_version'], 'review_id': packet['review_id'], 'packet_sha256': e.fingerprint(packet),
             'mode': MODE, 'actor': None, 'actor_kind': 'human', 'created_at': None,
             'independent_reference': False, 'blind_to_agent': False, 'prior_exposure': 'exposed',
             'cases': [{'case_id': c['case_id'], 'judgments': {d: {'label': None,
@@ -141,7 +137,7 @@ def template(packet):
 
 
 def adjudicate(packet, sources, response=None):
-    result = {'schema_version': 1, 'review_id': packet['review_id'], 'packet_sha256': e.fingerprint(packet),
+    result = {'schema_version': packet['schema_version'], 'review_id': packet['review_id'], 'packet_sha256': e.fingerprint(packet),
               'mode': MODE, 'kind': packet['kind'], 'case_count': len(packet['cases']),
               'unique_papers': len({c['paper_key'] for c in packet['cases']}), 'independent_study_count': None,
               'independent_reference_records': 0, 'quality_metrics': None,
@@ -149,6 +145,11 @@ def adjudicate(packet, sources, response=None):
               'limits': ['Critic statements are proposals; locator integrity does not establish semantic support.',
                          'AI-assisted human decisions are not independent reference labels.',
                          'No live candidate, hold, threshold, or scientific authority changes.'], **FLAGS}
+    if packet['schema_version'] == 2:
+        result['material_review'] = {c['case_id']: review_materials.summary(c) for c in packet['cases']}
+        result['limits'] += ['Material identity, coverage, derivation and inspection are supplied attestations.',
+                             'Binary source locators refer to declared inspection records, not parsed PDF pages or image semantics.',
+                             'A source-access receipt does not qualify cloud runtime access or imply permission failure.']
     if response is None:
         return {**result, 'status': 'awaiting_human_adjudication', 'recorded_labels': 0,
                 'missing_labels': 3 * len(packet['cases']), 'unresolved_findings': sum(len(c['findings']) for c in packet['cases'])}
@@ -209,6 +210,11 @@ def adjudicate(packet, sources, response=None):
 def export(packet_path, output, response=None):
     packet, sources = load(packet_path)
     report = adjudicate(packet, sources, response)
+    # A completed export must remain inside the verifier's generated-JSON
+    # limits, including whitespace added by write_json. Reject before mkdir.
+    for value in (packet, template(packet), report, response):
+        if value is not None and len((json.dumps(value, indent=2, ensure_ascii=False) + '\n').encode('utf-8')) > 1_000_000:
+            raise ValueError('Generated review JSON exceeds 1 MB')
     root = Path(output).resolve(); root.mkdir(parents=True, exist_ok=False)
     write_json(root / 'packet.json', packet)
     write_json(root / 'human-response-template.json', template(packet))
@@ -241,6 +247,26 @@ def export(packet_path, output, response=None):
                  '<p>' + escape(case['rq_context']) + '</p><p>Historical decisions: ' + escape(case['historical_decisions']) + '</p>',
                  '<p><a href="' + escape(case['source']['url'], quote=True) + '">Primary source</a> · <a href="' + quote(name, safe='/') + '">Retained metadata</a></p>',
                  '<p>Reviewed scope: ' + escape(case['source']['scope']) + '</p>']
+        if packet['schema_version'] == 2:
+            text += ['### Bound materials and access', '']
+            html += ['<h3>Bound materials and access</h3><ul>']
+            for material, material_body in sources[case['case_id']][2]:
+                material_name = material['path']
+                target = root / material_name; target.parent.mkdir(parents=True, exist_ok=True)
+                if not target.exists():
+                    with target.open('xb') as handle: handle.write(material_body)
+                files[material_name] = hashlib.sha256(target.read_bytes()).hexdigest()
+                if files[material_name] != material['sha256']:
+                    raise ValueError('Exported material differs on readback')
+                description = (material['material_id'] + ' · ' + material['role'] + ' · ' + material['version']
+                               + ' · ' + material['coverage'] + ' · inspection: ' + material['inspection']['status']
+                               + ' / ' + material['inspection']['scope'])
+                text += ['- ' + description + ' (' + material_name + ')']
+                html += ['<li><a href="' + quote(material_name, safe='/') + '">' + escape(description) + '</a></li>']
+            html += ['</ul><p>Inspection is an attributed record, not something performed by this exporter.</p>']
+            for attempt in case['access_attempts']:
+                line = attempt['route'] + ': ' + attempt['outcome'] + ' — ' + attempt['notes']
+                text += [line]; html += ['<p>' + escape(line) + '</p>']
         answer = answers.get(case['case_id'])
         human_findings = {f['finding_id']: f for f in answer['findings']} if answer else {}
         for finding in case['findings']:
@@ -266,6 +292,78 @@ def export(packet_path, output, response=None):
     (root / 'index.html').write_text('\n'.join(html), encoding='utf-8')
     for path in root.iterdir():
         if path.is_file(): files[path.name] = hashlib.sha256(path.read_bytes()).hexdigest()
-    write_json(root / 'manifest.json', {'schema_version': 1, 'private': True, 'exported_at': now(), 'files': files,
-                                      'packet_sha256': e.fingerprint(packet)})
-    return {**report, 'directory': str(root), 'private': True}
+    manifest = {'schema_version': 1, 'private': True, 'exported_at': now(), 'files': files,
+                'packet_sha256': e.fingerprint(packet)}
+    sizes = [(root / name).stat().st_size for name in files]
+    manifest_size = len((json.dumps(manifest, indent=2, ensure_ascii=False) + '\n').encode('utf-8'))
+    if (max(sizes) > review_materials.MAX_ARTIFACT or
+            sum(sizes) + manifest_size > review_materials.MAX_TOTAL + 8_000_000):
+        raise ValueError('Rendered review exceeds transfer bounds; no completion manifest written')
+    write_json(root / 'manifest.json', manifest)
+    return {**report, 'directory': str(root), 'private': True,
+            'manifest_sha256': hashlib.sha256((root / 'manifest.json').read_bytes()).hexdigest()}
+
+
+def verify(directory, expected_manifest_sha256=None):
+    """Read back an immutable private bundle after transfer; never resume work."""
+    supplied = Path(directory)
+    if supplied.is_symlink() or supplied.is_junction():
+        raise ValueError('Review directory cannot be a link')
+    root = supplied.resolve()
+    manifest_path = _local_file(root, 'manifest.json')
+    if manifest_path.stat().st_size > 1_000_000:
+        raise ValueError('Review manifest exceeds 1 MB')
+    manifest_sha = hashlib.sha256(manifest_path.read_bytes()).hexdigest()
+    if expected_manifest_sha256 is not None:
+        e._sha(expected_manifest_sha256, 'expected manifest hash')
+        if manifest_sha != expected_manifest_sha256:
+            raise ValueError('Review manifest differs from the separately retained hash')
+    manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+    e._keys(manifest, {'schema_version', 'private', 'exported_at', 'files', 'packet_sha256'}, 'review manifest')
+    if type(manifest['schema_version']) is not int or manifest['schema_version'] != 1 or manifest['private'] is not True:
+        raise ValueError('Private review manifest required')
+    e._time(manifest['exported_at'], 'export timestamp'); e._sha(manifest['packet_sha256'], 'packet hash')
+    if not isinstance(manifest['files'], dict) or not 5 <= len(manifest['files']) <= 512:
+        raise ValueError('Bounded complete file manifest required')
+    required = {'packet.json', 'human-response-template.json', 'report.json', 'review.md', 'index.html'}
+    if not required <= set(manifest['files']) or 'manifest.json' in manifest['files']:
+        raise ValueError('Required generated review files missing or manifest lists itself')
+    actual, total = set(), 0
+    for parent, dirs, names in os.walk(root, followlinks=False):
+        for name in dirs:
+            child = Path(parent) / name
+            if child.is_symlink() or child.is_junction():
+                raise ValueError('Review export contains a linked directory')
+        for name in names:
+            relative = (Path(parent) / name).relative_to(root).as_posix()
+            file = _local_file(root, relative)
+            size = file.stat().st_size
+            total += size
+            actual.add(relative)
+            if size > review_materials.MAX_ARTIFACT or total > review_materials.MAX_TOTAL + 8_000_000 or len(actual) > 513:
+                raise ValueError('Review export exceeds transfer bounds')
+    if actual != set(manifest['files']) | {'manifest.json'}:
+        raise ValueError('Review export contains unlisted or missing files')
+    for name, sha in manifest['files'].items():
+        e._sha(sha, 'exported file hash')
+        file = _local_file(root, name)
+        # Stream large PDFs instead of reading an unbounded tampered file.
+        with file.open('rb') as handle:
+            digest = hashlib.file_digest(handle, 'sha256').hexdigest()
+        if digest != sha:
+            raise ValueError('Exported file changed: ' + name)
+    for name in ('report.json', 'human-response-template.json', 'human-response.json'):
+        if name in manifest['files'] and (root / name).stat().st_size > 1_000_000:
+            raise ValueError('Generated review JSON exceeds 1 MB')
+    packet, sources = load(root / 'packet.json')
+    if e.fingerprint(packet) != manifest['packet_sha256']:
+        raise ValueError('Export packet differs from its manifest')
+    response = json.loads((root / 'human-response.json').read_text(encoding='utf-8')) if 'human-response.json' in manifest['files'] else None
+    report = adjudicate(packet, sources, response)
+    if report != json.loads((root / 'report.json').read_text(encoding='utf-8')):
+        raise ValueError('Export report differs from its evidence and judgments')
+    if template(packet) != json.loads((root / 'human-response-template.json').read_text(encoding='utf-8')):
+        raise ValueError('Blank human template changed')
+    return {**report, 'integrity_verified': True, 'verified_files': len(manifest['files']),
+            'manifest_sha256': manifest_sha, 'manifest_matches_expected': expected_manifest_sha256 is not None,
+            'resume_performed': False, 'automatic_cloud_launch': False, 'directory': str(root)}

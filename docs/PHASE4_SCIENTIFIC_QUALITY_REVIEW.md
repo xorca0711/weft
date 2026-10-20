@@ -1,7 +1,7 @@
 # Phase 4: scientific-quality review
 
-**Status: critic-assisted development review implemented; human adjudication and
-independent scientific-quality qualification remain pending.** The owner will be
+**Status: critic-assisted development review and multi-source adjudication imports
+implemented; independent scientific-quality qualification remains pending.** The owner will be
 the primary human reviewer and requested a separate critic AI before that review.
 The critic is not a human reference. Its agreement with Weft is not an accuracy
 estimate. The assisted route is separate from the existing independent B5 scorer.
@@ -69,10 +69,13 @@ attestation. A hash and a valid locator establish retained source identity, not
 that a claim is scientifically supported. The module invokes no model; the
 externally supplied critique is explicitly AI-authored.
 
-The current adapter accepts one exact Europe PMC metadata record per case. It
-is **not a multi-document full-paper review system**. Do not cite a supplement,
-figure, dataset or current RQ dossier using the abstract's hash. A source-complete
-evaluation needs an explicit evidence manifest spanning those distinct materials.
+Schema v1 retains its exact single-record Europe PMC metadata contract. Schema v2
+adds separately hashed full texts, derived text, figures, supplements, original
+review records, human authority and acquisition receipts. It retains source
+versions, declared inspection scope and derivation parents. The exporter performs
+no source retrieval or scientific inspection. Do not cite a supplement, figure,
+dataset or current RQ dossier using the abstract's hash. See the
+[full-text/transfer guide and remaining qualification stages](PHASE4_FOLLOW_THROUGH.md).
 
 ## Scientific rubric and unresolved requirements
 

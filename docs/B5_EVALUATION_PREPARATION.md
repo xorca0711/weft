@@ -10,6 +10,10 @@ is a separate exposed development mode. Its AI-assisted human adjudications are
 not independent B5 reference labels. The independent contract below is unchanged;
 unblinded references are now excluded from the `declared_unseen` stratum.
 
+The [full-text follow-through](PHASE4_FOLLOW_THROUGH.md) adds multi-source assisted
+review and transfer checks, plus an explicitly unfrozen independent-evaluation
+design. It supplies no independent labels, sample size or acceptance threshold.
+
 Before an independent batch, retain a versioned evaluation plan covering:
 
 | Decision to freeze | Required record |

@@ -2,6 +2,31 @@
 
 Update this before stopping work, every session.
 
+## Phase-4 full-text follow-through — 20 October 2026
+
+Implemented schema-v2 multi-source critic/human review with separately hashed
+full texts, derived text, figures, supplements, authority and acquisition records.
+The existing exporter retains separate reading/data/RQ decisions and explicit
+inspection scope. A new read-only verifier checks transferred bundles against an
+optional separately retained manifest hash and recomputes report/template state.
+It never resumes work. Historical schema-v1 packets remain supported.
+
+Independent critic review identified one serialized-response size mismatch;
+preflight bounds and a regression test corrected it. The full suite passed
+347 tests (322 passed, 25 existing Windows ARM64 skips); repository validation
+passed. [Validation evidence](records/fulltext-review-validation-20261020.json)
+distinguishes software behavior from scientific qualification. Base and freshly
+fetched `origin/main` are `aa05ea74e964a83db26ed1ef7cb88d2bd38d7d19`.
+
+The [follow-through guide](docs/PHASE4_FOLLOW_THROUGH.md) records the implemented
+handoff, an unfrozen independent B5 design and remaining L1–L4 completion evidence.
+Independent human references, approved sample/criteria and comparison bibliography
+are still missing; no accuracy or pass claim is made. Cloud qualification needs
+new runtime evidence, followed by authoritative remote ownership and PC-independent
+recovery. Recurrence requires later qualification and separate configuration.
+B4 remains excluded/held, Choi closed, M6 disabled and Ravel unchanged. No new
+network retrieval, cloud dispatch, support message, scientific execution or schedule.
+
 ## Owner-scoped biological primary list — 20 October 2026
 
 Base: freshly fetched `origin/main` at `872ca412d2842133b514edf147d5cdc3829274de`
