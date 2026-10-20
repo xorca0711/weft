@@ -1,5 +1,14 @@
 # Agent entry point
 
+- Latest implementation: [manual workflow coordinator](docs/WORKFLOW_COORDINATOR.md).
+  Discovery through B3 now has a single pull interface, saved-return recovery,
+  read-only status and private JSON/HTML export. Only fresh unstarted dedicated
+  catalogs opt in; existing pilots are not adopted. No model or cloud launcher
+  is invoked. Choi stays closed, B4 held and M6 disabled. Ravel remains unchanged.
+  PR #11 was merged at main `4b9215ceaa72d75bfc62a323ed9f0c22dbf4bbbf`;
+  the older dated launch observations below retain their historical scope.
+  See PROGRESS for current tests and integration status.
+
 - Latest: [backend completion review](docs/ROADMAP_COMPLETION_REVIEW_20261013.md).
   Three authorized agents completed bounded discovery, reading/evaluation and
   launch-journal fixes; root integrated offline CLI commands. B5 tooling is
@@ -29,7 +38,7 @@
   retained create argument matches the frozen bytes; child representation lacks
   one final LF, with no raw wire capture to locate the transformation. Keep L1
   held for platform support; do not repeat either prompt or create a replacement.
-  The support packet is prepared, unsent. PR #11 stays unmerged, Choi closed,
+  The support packet is prepared, unsent. At that checkpoint PR #11 was unmerged, Choi closed,
   B4 held and M6 disabled.
 
 - Update check and support draft: [prepared request](docs/support/LAUNCHER_SUPPORT_REQUEST_20261013.md).

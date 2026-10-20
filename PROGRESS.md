@@ -2,6 +2,139 @@
 
 Update this before stopping work, every session.
 
+## Workflow coordinator implementation — 20 October 2026
+
+Implemented the owner's requested coordinator, integration/recovery tests and
+status/export view on `codex/weft-coordinator-20261020`, using the existing Weft
+worktree. Ravel and the live pilot stores/workers were not changed. Fetched main
+before implementation and again before delivery; HEAD and origin/main both remain
+`4b9215ceaa72d75bfc62a323ed9f0c22dbf4bbbf` (PR #11 is merged).
+
+- New manual-pull workflow composes the existing batch, handoff, reading and B3
+  validators. It saves responses before ingestion, supports exact saved-return
+  recovery, requires explicit bounded retrieval, and never releases holds or
+  invokes a model/cloud launcher. Only fresh unstarted dedicated catalogs opt in.
+- Read-only status and private immutable JSON/HTML exports distinguish discovery,
+  reading and evidence-review completion, cap deferrals, data/RQ proposals,
+  coverage gaps and source/actor context. Restored catalogs remain inactive for
+  mutation; existing pilots can be viewed without adoption or continuation.
+- Dated platform constraints remain separate: CLI environment mapping is
+  unverified; the admitted native child lacked runtime-status capability; the
+  loaded browser allow rule conflicted with its denial. A platform integration
+  mismatch is an inference, not an established cause. The owner reports granting
+  requested access; no repeated access request, new probe, retry, fallback,
+  privilege change or support message was performed. Choi closed, B4 held, M6 off.
+
+Validation: **281 tests: 256 passed, 25 existing platform skips**, including all
+25 new workflow tests; offline validation passed (15 pinned files). Initial
+read-only export tests exposed a missing SQLite URI-mode flag; it was corrected
+before these passing checks. `git diff --check` passed. The synthetic status demo
+is in ignored `runs/workflow-demo-20261020/`; it is not a live pilot result.
+No biological analysis or live cloud test was run.
+
+See the [coordinator guide](docs/WORKFLOW_COORDINATOR.md) and
+[integration tests](tests/test_workflow.py). Implementation is local and ready for
+code review; no deployment or scientific qualification is claimed. Next: review
+the coordinator change; obtain supported environment mapping/runtime-capability
+evidence before any separately authorized launcher qualification. B4 continuation
+and independent semantic evaluation retain their existing holds/dependencies.
+The earlier planning entries below remain historical.
+
+Same-session roadmap clarification: grouped the remaining work into baseline
+integration, discovery/selection quality, material/evidence review, independent
+evaluation, cloud-adapter qualification, remote ownership/recovery, general
+scientific-job/evidence handoff, and separately authorized recurrence. These are
+dependency phases without a timeline; existing M/B/L identifiers remain intact.
+Offline selection/material tooling and evaluation preparation can proceed while
+platform qualification is held. Live B4 is not resumed or replaced, B5 execution
+retains its access/launcher prerequisites, and Ravel integration waits for the
+owner's reinitiation. This clarification changes only this progress note; prior
+software checks remain valid and were not repeated.
+
+## Technical development assessment — 20 October 2026
+
+The owner requested an engineering backlog without personal timelines. Current
+main remains `4b9215ceaa72d75bfc62a323ed9f0c22dbf4bbbf` after fetch.
+Code inspection confirms separate batch/screening/evidence/handoff interfaces,
+identifier-ordered candidate selection under screening caps, a compact digest,
+and an existing offline evaluator. Component recovery fixtures already exist.
+
+Proposed implementation priorities: compose the existing interfaces into a
+resumable bounded workflow; extend integration failure tests across stage
+boundaries; add an explicit versioned candidate-selection policy; improve material
+preparation and evidence navigation; expose the existing evaluation and event
+records in useful review/error reports. Reuse the existing store and validators.
+New selection or workflow semantics require their normal explicit review; no
+scientific admission authority is added. These are proposed changes, not completed
+features or a directive to reprocess held material.
+
+Offline orchestration, fixture adapters and review exports can be developed
+without claiming live launcher qualification. Live dispatch, B4 continuation,
+unattended hosting and recurrence retain their existing access/review dependencies.
+No code, runtime setting, scientific result or schedule changed. Only this local
+progress note was edited; whitespace validation applies and runtime tests were
+not repeated. Ravel research remains awaiting owner reinitiation.
+
+## Development priority clarification — 19 October 2026
+
+The owner requested focus on substantive project development. The immediate
+gap is a bounded fresh-paper workflow whose scientific judgments and operational
+recovery have both been evaluated. The earlier evaluation-design proposal is
+preparation for that milestone, not the milestone itself.
+
+Existing batch, screening, B3 proposal, handoff and evaluation interfaces should
+be reused. The next implementation review should identify the missing connections
+from one explicit trigger through permitted material review, separate reading /
+data-use / RQ-link decisions, a complete digest and independently verified restore.
+Qualification must preserve failed, rejected and held items; source hashes alone
+cannot establish citation support or biological-unit correctness. Evaluate against
+independent reference judgments and an explicit comparison bibliography, recording
+prior exposure and operator interventions. Sample size, criteria and reviewer
+authority remain to be settled before an actual evaluation; no pass is invented.
+
+Native L1 access and B4 remain external blockers. Do not retry or reroute either
+hold. Their resolution and interrupted-state reconciliation precede any dependent
+live continuation. Offline integration work may proceed within its own scope;
+it cannot qualify live enforcement, distributed ownership or scientific quality.
+Recurrence follows this bounded operational/quality milestone. No new deployment,
+scientific gate, schedule or analysis was implemented by this assessment.
+
+Main remains `4b9215ceaa72d75bfc62a323ed9f0c22dbf4bbbf` after fetch. Inspected
+the current roadmap and batch/screening/handoff/evaluation interfaces; no runtime
+tests repeated for the progress-only clarification.
+
+## Read-only portfolio reconciliation — 19 October 2026
+
+Freshly fetched main is `4b9215ceaa72d75bfc62a323ed9f0c22dbf4bbbf`,
+the merge of PR #11. Earlier statements below that PR #11 remains unmerged
+are historical. Review used a separate scoped worktree; the original checkout
+and its ignored operational records remain preserved. The intentional Ravel
+pin remains `bfe26b876221cf6c6fa6f9b16a90cfb516b5998d`; it is not a claim to
+track current Ravel main.
+
+The [completion review](docs/ROADMAP_COMPLETION_REVIEW_20261013.md) still
+distinguishes implemented offline controls from scientific and operational
+qualification. All 32 RQs have configured profiles, but the 30 newer drafts
+remain unqueried. Choi remains a completed descriptive discrepancy benchmark;
+independent screening evaluation remains open. L1 runtime access and B4 remain
+held, interruption state unresolved, and M6 disabled. No hold was retried.
+
+Proposed next package: prepare a small, review-ready reading-evaluation design
+that serves Ravel's actual reading backlog. Specify source/version coverage,
+exposure, separate reading/data/RQ judgments, independent reference review and
+denominators using the existing [B5 requirements](docs/B5_EVALUATION_PREPARATION.md).
+Do not call an exposed development set independent evaluation. A real sample,
+reviewer and acceptance criteria remain to be agreed after the documented
+launcher/review-access dependencies are qualified. No replacement B4 review,
+new cloud job, model call, deployment, support message or schedule is implied.
+
+Verification is limited to current-base/state inspection and the progress-only
+diff; existing runtime tests are not repeated. Next: reconcile the merged-state
+wording in current navigation and prepare the bounded design for review. Platform
+integration review, B4 resolution, independent scientific labels and remote
+ownership/recovery qualification remain external dependencies. Personal planning
+is retained outside the public repository.
+
 ## Partial-stage implementation review and hold retries — 13 October 2026
 
 Three owner-authorized review agents completed bounded discovery,

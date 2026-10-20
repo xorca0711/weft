@@ -8,7 +8,7 @@ from .context import build_context
 from .discovery import Store, discover, stream_key, verify_run, write_json
 from .validation import ValidationError, read_json, validate_project, verify_ravel
 from .reading import prepare_reading, validate_reading
-from . import batches, screening, qualification, handoff, intake, launches, coverage, evaluation
+from . import batches, screening, qualification, handoff, intake, launches, coverage, evaluation, workflow
 from .identity import digest
 from .reading_locations import relocate_readings
 
@@ -57,7 +57,8 @@ def main(argv=None):
     assessed = sub.add_parser("validate-reading", help="Check source hashes and locators, not semantic support")
     assessed.add_argument("--directory", required=True, type=Path)
     assessed.add_argument("--assessment", required=True, type=Path)
-    batch = sub.add_parser("batch-discover", help="Freeze and run a bounded discovery batch; no model launch")
+    batch_options = argparse.ArgumentParser(add_help=False)
+    batch = batch_options
     batch.add_argument("--repo", required=True, type=Path)
     batch.add_argument("--profile", required=True)
     batch.add_argument("--streams", nargs="+", default=["broad", "rq_contrary", "adjacent_context"])
@@ -68,6 +69,26 @@ def main(argv=None):
     batch.add_argument("--max-screenings", type=int, default=5)
     batch.add_argument("--max-full-reads", type=int, default=3)
     batch.add_argument("--store", type=Path, default=Path("runs/discovery"))
+    sub.add_parser("batch-discover", parents=[batch_options], help="Freeze and run a bounded discovery batch; no model launch")
+    create_workflow = sub.add_parser('workflow-create', parents=[batch_options], help='Create an unstarted manual-pull workflow in a fresh store; no network')
+    create_workflow.add_argument('--actor', required=True)
+    for name in ['workflow-init', 'workflow-advance', 'workflow-status', 'workflow-submit', 'workflow-recover', 'workflow-hold', 'workflow-export']:
+        command = sub.add_parser(name, help='Manual workflow: ' + name.removeprefix('workflow-'))
+        command.add_argument('--store', required=True, type=Path)
+        command.add_argument('--batch', required=True)
+        if name == 'workflow-init':
+            command.add_argument('--actor', required=True, help='Initialize only a fresh unstarted batch after interrupted creation')
+        if name == 'workflow-advance':
+            command.add_argument('--allow-network', action='store_true', help='Allow the next bounded metadata/material retrieval; never launches a model')
+        if name == 'workflow-submit':
+            command.add_argument('--stage', required=True, choices=['screening', 'reading', 'evidence'])
+            command.add_argument('--assessment', required=True, type=Path)
+        if name == 'workflow-recover':
+            command.add_argument('--return-id', required=True)
+        if name == 'workflow-hold':
+            command.add_argument('--reason', required=True)
+        if name == 'workflow-export':
+            command.add_argument('--output', required=True, type=Path, help='New private snapshot directory; never overwrites')
     for name in ["batch-resume", "batch-relocate-reading", "batch-reconcile", "batch-next", "batch-submit", "batch-read", "batch-submit-reading", "batch-status", "batch-digest", "batch-evidence", "batch-attach-evidence", "batch-submit-evidence", "batch-evidence-status"]:
         command = sub.add_parser(name, help="Discovery batch: " + name.removeprefix("batch-"))
         command.add_argument("--store", type=Path, default=Path("runs/discovery"))
@@ -138,7 +159,7 @@ def main(argv=None):
             write_json(args.output, packet)
             result = {"ok": True, "questions": len(packet["questions"]),
                       "catalog_sha256": packet["catalog_sha256"], "output": str(args.output)}
-        elif args.command == "batch-discover":
+        elif args.command in {"batch-discover", 'workflow-create'}:
             validate_project(root)
             policy = read_json(root / "configs/policy.json")
             if not 1 <= args.max_records <= policy["limits"]["records_per_search"] or not 1 <= args.max_full_reads <= policy["limits"]["full_reads_per_batch"]:
@@ -147,11 +168,39 @@ def main(argv=None):
             packet = build_context(args.repo, read_json(root / "integration/ravel.lock.json"), profile["rq_ids"])
             coverage.validate_profile_binding(profile, packet)
             with Store(args.store) as store:
-                bid = batches.create(store, packet, args.profile, profile, args.streams, args.since, args.until,
-                                     max_searches=args.max_searches, max_records=args.max_records,
-                                     max_screenings=args.max_screenings, max_full_reads=args.max_full_reads,
-                                     policy_sha=digest(policy))
-                result = batches.run(store, bid)
+                if args.command == 'workflow-create':
+                    result = workflow.create(store, packet, args.profile, profile, args.streams, args.since, args.until,
+                                             actor=args.actor, max_searches=args.max_searches, max_records=args.max_records,
+                                             max_screenings=args.max_screenings, max_full_reads=args.max_full_reads,
+                                             policy_sha=digest(policy))
+                else:
+                    bid = batches.create(store, packet, args.profile, profile, args.streams, args.since, args.until,
+                                         max_searches=args.max_searches, max_records=args.max_records,
+                                         max_screenings=args.max_screenings, max_full_reads=args.max_full_reads,
+                                         policy_sha=digest(policy))
+                    result = batches.run(store, bid)
+        elif args.command.startswith('workflow-'):
+            if args.command in {'workflow-status', 'workflow-export'}:
+                with workflow.readonly(args.store) as store:
+                    result = workflow.status(store, args.batch) if args.command == 'workflow-status' else workflow.export(store, args.batch, args.output)
+            else:
+                # Fail on missing/invalid stores before Store can initialize one.
+                with workflow.readonly(args.store) as check:
+                    if args.command == 'workflow-init':
+                        batches.specification(check, args.batch)
+                    else:
+                        workflow._binding(check, args.batch)
+                with Store(args.store) as store:
+                    if args.command == 'workflow-init':
+                        result = workflow.initialize(store, args.batch, args.actor)
+                    elif args.command == 'workflow-advance':
+                        result = workflow.advance(store, args.batch, allow_network=args.allow_network)
+                    elif args.command == 'workflow-submit':
+                        result = workflow.submit(store, args.batch, args.stage, read_json(args.assessment))
+                    elif args.command == 'workflow-recover':
+                        result = workflow.recover(store, args.batch, args.return_id)
+                    else:
+                        result = workflow.hold(store, args.batch, args.reason)
         elif args.command.startswith("batch-"):
             with Store(args.store) as store:
                 batches.schema(store)
@@ -266,7 +315,7 @@ def main(argv=None):
         if "batch" in result:
             result["batch"] = concise(result["batch"])
     print(json.dumps(result, indent=2))
-    return 2 if result.get("status") in {"error", "truncated", "unstable", "hold"} else 0
+    return 2 if result.get("status") in {"error", "truncated", "unstable", "hold", "complete_with_holds"} else 0
 
 
 if __name__ == "__main__":
