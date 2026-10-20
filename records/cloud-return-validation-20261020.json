@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-20",
+  "scope": "Offline synthetic return verification against acknowledged launch intent",
+  "base_commit": "26890de6dd8e57075c84d3cda960102beeb00da4",
+  "pr16_merge_review": {"head": "8515f31c0c741187f418ac3a0b4968a448fe1dca", "base": "aa05ea74e964a83db26ed1ef7cb88d2bd38d7d19", "reviewer": "Codex root", "blocking_findings": 0, "owner_authorized_merge": true, "main_ci": "https://github.com/xorca0711/weft/actions/runs/39373911222", "main_ci_result": "success"},
+  "targeted_tests": {"command": "python -m unittest tests.test_launches tests.test_cloud_return -q", "run": 33, "failures": 0, "errors": 0, "skips": 0},
+  "full_suite": {"command": "python -m unittest discover -s tests -q", "status": "passed", "run": 363, "passed": 338, "skips": 25, "failures": 0, "errors": 0, "skip_scope": "Existing platform-specific skips on Windows ARM64"},
+  "repository_validation": {"command": "python -m weft validate", "status": "passed", "pinned_files": 15, "scientific_execution_enabled": false},
+  "independent_implementation_review": {"actor_kind": "agent", "finding": "Observation/test JSON could be replaced between inventory hashing and parsing", "resolution": "Bound exact parsed bytes to manifest hashes, cap reads, add replacement regressions", "other_material_findings": 0},
+  "provider_called": false,
+  "historical_journals_modified": false,
+  "runtime_qualified": false,
+  "remote_continuity_qualified": false,
+  "scientific_quality_qualified": false,
+  "schedule_enabled": false,
+  "ravel_modified": false,
+  "limits": ["Synthetic tests only", "Normalized receipt fields and timestamps remain operator attestations", "Uncertain submission is not resolved from a returned bundle", "A consistent return does not release holds, activate restore or authorize retry"]
+}

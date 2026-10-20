@@ -85,6 +85,11 @@ numbering, schedule or deployment authorization.
 | L3: bounded integrated operation | Local coordinator, listing gates, material intake, status/review export | Qualified launcher plus independently evaluated search/screening and source-access routes; operational denominators including failures and holds |
 | L4 / M6: recurrence | Existing configuration remains disabled | Technical and quality qualification, then separate owner configuration of cadence, time zone, scope, finite limits, destinations and stop/notification rules |
 
+The next local component is implemented in the
+[cloud-return intake](CLOUD_RETURN_INTAKE.md): read-only task/spec/contract binding,
+artifact verification and explicit incomplete/held result accounting. It adds no
+new live-cloud qualification evidence.
+
 Institutional-browser full-text access and automated cloud-runtime availability
 are different dependencies. Improving file handoff resolves a local integration
 gap; it does not establish the cause of the app/CLI launch failure or repair a

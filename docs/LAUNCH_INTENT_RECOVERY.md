@@ -64,6 +64,12 @@ The acknowledgement contains only `operation_key`, `spec_sha256`, `task_id` and
 Task termination, result validation and artifact recovery are separate checks.
 An acknowledgement neither means task completion nor frees a scientific-job slot.
 
+The [offline return-intake verifier](CLOUD_RETURN_INTAKE.md) now checks supplied
+synthetic results against the acknowledged task and frozen fixture contract.
+It opens the journal read-only, leaves its state unchanged and never qualifies
+runtime access or releases a hold. Historical raw receipts are not silently
+converted into this new normalization contract.
+
 ## Recovery and limits
 
 - Transactional `BEGIN IMMEDIATE` serializes cooperating callers. An interrupted
