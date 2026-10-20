@@ -8,7 +8,7 @@ from .context import build_context
 from .discovery import Store, discover, stream_key, verify_run, write_json
 from .validation import ValidationError, read_json, validate_project, verify_ravel
 from .reading import prepare_reading, validate_reading
-from . import batches, screening, qualification, handoff, intake, launches, coverage, evaluation, workflow, selection, materials, review_view
+from . import batches, screening, qualification, handoff, intake, launches, coverage, evaluation, workflow, selection, materials, review_view, quality_review
 from .identity import digest
 from .reading_locations import relocate_readings
 
@@ -32,6 +32,10 @@ def main(argv=None):
     evaluation_score.add_argument("--plan-sha256", required=True)
     evaluation_score.add_argument("--predictions", required=True, type=Path)
     evaluation_score.add_argument("--references", required=True, type=Path)
+    quality = sub.add_parser('quality-review-export', help='Private critic-to-human development review; never independent reference scoring')
+    quality.add_argument('--packet', required=True, type=Path)
+    quality.add_argument('--output', required=True, type=Path)
+    quality.add_argument('--adjudication', type=Path, help='Explicit human response; no labels inferred')
     search = sub.add_parser("discover", help="Explicit, bounded Europe PMC metadata retrieval")
     search.add_argument("--repo", required=True, type=Path)
     search.add_argument("--profile", required=True)
@@ -162,6 +166,8 @@ def main(argv=None):
             result = coverage.audit_profiles(read_json(root / "configs/search_profiles.json"), packet)
         elif args.command == "evaluation-plan":
             result = evaluation.validate_plan(read_json(args.plan))
+        elif args.command == 'quality-review-export':
+            result = quality_review.export(args.packet, args.output, read_json(args.adjudication) if args.adjudication else None)
         elif args.command == "evaluation-score":
             plan = read_json(args.plan)
             if evaluation.fingerprint(plan) != args.plan_sha256:
