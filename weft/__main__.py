@@ -33,6 +33,9 @@ def main(argv=None):
     evaluation_score.add_argument("--predictions", required=True, type=Path)
     evaluation_score.add_argument("--references", required=True, type=Path)
     quality = sub.add_parser('quality-review-export', help='Private critic-to-human development review; never independent reference scoring')
+    quality_verify = sub.add_parser('quality-review-verify', help='Read-only integrity check of a transferred review bundle; never resumes work')
+    quality_verify.add_argument('--directory', required=True, type=Path)
+    quality_verify.add_argument('--expected-manifest-sha256', help='Hash retained separately before transfer')
     quality.add_argument('--packet', required=True, type=Path)
     quality.add_argument('--output', required=True, type=Path)
     quality.add_argument('--adjudication', type=Path, help='Explicit human response; no labels inferred')
@@ -171,6 +174,8 @@ def main(argv=None):
             result = evaluation.validate_plan(read_json(args.plan))
         elif args.command == 'quality-review-export':
             result = quality_review.export(args.packet, args.output, read_json(args.adjudication) if args.adjudication else None)
+        elif args.command == 'quality-review-verify':
+            result = quality_review.verify(args.directory, args.expected_manifest_sha256)
         elif args.command == "evaluation-score":
             plan = read_json(args.plan)
             if evaluation.fingerprint(plan) != args.plan_sha256:

@@ -12,6 +12,7 @@ autonomous workflow completion and scientific acceptance are not claimed.
 
 | Date | Item | Proposed by | Decided by | Decision | Reason |
 |---|---|---|---|---|---|
+| 2026-10-20 | Phase-4 full-text follow-through and later-stage preparation | Owner requested continuation; Codex implemented | Owner authorized scope; code subject to review, no scientific acceptance issued | Extend assisted review with multi-source bindings, decision import and inactive transfer verification; prepare unfrozen B5 design | Preserve separate judgments, historical authority and all holds while making the local handoff testable |
 | 2026-10-20 | Implement phases 1–3: integrate coordinator, version nomination, improve material review | Owner requested implementation; Codex implemented | Owner authorized phase scope; integration requires passing review/checks | Paper-first/query-stream order with legacy audit, verified XML reuse, hash-bound local intake and private source-linked view | Improve bounded coverage and avoid duplicate retrieval without copying RQ judgments or changing scientific authority; preserve holds and Ravel |
 | 2026-10-20 | Compose discovery through B3 with recovery and status/export | Owner requested implementation; Codex implemented | Owner authorized scope; code remains subject to review | Dedicated manual-pull workflow with saved returns and read-only private snapshots | Reuse existing validators while preserving pilot holds and unqualified app/CLI cloud launch; Ravel unchanged |
 | 2026-10-13 | Complete feasible partial backend stages and retry existing holds | Owner requested parallel review and continuation | Owner authorized scope; code remains subject to PR review | Three bounded agents implemented discovery reconciliation, reading fixes, offline B5 accounting and local launch-journal integrity; root integrated/reviewed | Preserve historical evidence, expose concrete gaps and stop at unresolved platform/scientific/deployment boundaries |
@@ -38,6 +39,7 @@ Additional responsibility record:
 
 | Date | Proposal | Why changed | Changed/rejected by |
 |---|---|---|---|
+| 2026-10-20 | Full-text export without matching serialized-response limits | Independent critic reproduced a completed export larger than the verifier accepts; add preflight JSON bounds, final rendered-size checks and regression coverage | Independent critic identified; Codex corrected; no scientific gate weakened |
 | 2026-10-11 | Private initial repository | Owner explicitly chose public; personal configuration remains excluded | Owner |
 | 2026-10-11 | Blanket 16 GiB local worker allowance | Audited Windows host has about 15.6 GiB total memory; recommend separate 32 GiB Linux host or a qualified 6 GiB Windows fallback | Codex revision; host selection pending owner decision |
 | 2026-10-11 | Treat the Choi pilot as exact reproduction before qualifying methods | Published Louvain/manual exclusions and Ravel Leiden/MAD/annotation rules differ; exact author-cell set is unresolved | Codex revised proposal to explicitly adapted descriptive reanalysis |

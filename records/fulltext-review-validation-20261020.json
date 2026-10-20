@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-20",
+  "scope": "Multi-source assisted review and inactive transfer verification",
+  "base_commit": "aa05ea74e964a83db26ed1ef7cb88d2bd38d7d19",
+  "evidence_kind": "synthetic_software_checks",
+  "targeted_tests": {"command": "python -m unittest tests.test_quality_review tests.test_review_materials -q", "run": 28, "failures": 0, "errors": 0, "skips": 0},
+  "full_suite": {"command": "python -m unittest discover -s tests -q", "status": "passed", "run": 347, "passed": 322, "skips": 25, "failures": 0, "errors": 0, "skip_scope": "Existing platform-specific skips on Windows ARM64"},
+  "repository_validation": {"command": "python -m weft validate", "status": "passed", "scope": "offline-configuration-and-documentation", "pinned_files": 15, "scientific_execution_enabled": false},
+  "critic_review": {"actor_kind": "agent", "scope": "Source binding, transfer integrity and scientific authority boundaries", "finding": "Export could exceed verifier JSON bounds", "resolution": "Preflight serialized JSON sizes and final rendered-size checks; regression test added"},
+  "independent_human_reference_records": 0,
+  "scientific_quality_qualified": false,
+  "cloud_runtime_qualified": false,
+  "remote_continuity_qualified": false,
+  "recurrence_enabled": false,
+  "live_store_modified": false,
+  "ravel_modified": false,
+  "limits": ["Synthetic software behavior does not establish scientific accuracy", "Source identity, coverage, derivation and inspection remain attestations", "No fresh access attempt, cloud dispatch, scientific execution or schedule", "Private review material and human rationale excluded from public evidence"]
+}
