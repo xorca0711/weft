@@ -279,7 +279,10 @@ def status(store, bid):
             i['evidence_qualification'].get(k) == 'hold' for k in ('data_proposal', 'rq_proposal')) for i in report['items'])
         state = 'complete_with_holds' if stages['hold'] or stages['deferred'] or proposal_holds else 'complete'
         action = 'Review/export the recorded outcomes; no scientific execution is authorized'
+    from .listing import report as listing_report
+    primary = listing_report(store, bid)
     return {**report, 'status': state, 'mode': 'manual-pull', 'binding': binding, 'selection': selection_report,
+            'paper_listing': primary,
             'blockers': blockers, 'next_action': action, 'item_stages': dict(stages),
             'claims': claims, 'returns': [dict(r) for r in store.db.execute(
                 'SELECT id,stage,candidate_id,state,response_sha FROM workflow_returns ORDER BY rowid')] if _has(store, 'workflow_returns') else [],
@@ -455,7 +458,12 @@ th{background:#dfebf0}.scroll{overflow-x:auto}pre{white-space:pre-wrap;overflow-
 </style><main><h1>Weft workflow status</h1><p>Private local snapshot. Proposals only; no scientific acceptance or execution.</p>'''
     html += '<p><strong>' + escape(report['status']) + '</strong> · ' + escape(snapshot['exported']) + '</p>'
     html += '<p>Discovery complete: ' + str(report['discovery_complete']) + ' · All evidence reviews recorded: ' + str(report['all_evidence_reviews_recorded']) + '</p>'
-    html += '<p>' + escape(report['next_action']) + '</p><div class="scroll"><table><thead><tr>'
+    primary = report['paper_listing']
+    admitted = {i['candidate_id'] for i in primary['primary_list']}
+    html += '<h2>Primary reading list</h2><p>Source-screened reading interest; no scientific acceptance.</p>'
+    html += '<ul>' + ''.join('<li>' + escape(i['title']) + ' · ' + escape(i['paper_key']) + '</li>' for i in report['items'] if i['candidate_id'] in admitted) + '</ul>' if admitted else '<p>No papers currently pass the primary-list gate.</p>'
+    html += '<details><summary>Listing decisions and exclusion reasons</summary><pre>' + escape(json.dumps(primary, indent=2)) + '</pre></details>'
+    html += '<h2>Complete audit queue</h2><p>' + escape(report['next_action']) + '</p><div class="scroll"><table><thead><tr>'
     html += ''.join('<th>' + h + '</th>' for h in headers) + '</tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>'
     html += '<h2>Holds and launch constraints</h2><pre>' + escape(json.dumps({'blockers': report['blockers'], 'constraints': report['constraints']}, indent=2)) + '</pre>'
     html += '<details><summary>Complete status and recovery identifiers</summary><pre>' + escape(json.dumps(report, indent=2)) + '</pre></details></main></html>'

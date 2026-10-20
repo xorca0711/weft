@@ -1,0 +1,22 @@
+{
+  "id": "core-biology-cns-v1",
+  "authority": "Owner direction, 2026-10-20; named CNS research journals supersede percentile-only admission",
+  "journals": [
+    "Cell", "Cell Stem Cell", "Immunity", "Cancer Cell", "Cell Metabolism", "Molecular Cell", "Developmental Cell",
+    "Nature", "Nature Communications", "Nature Immunology", "Nature Cell Biology", "Nature Medicine", "Nature Cancer",
+    "Nature Metabolism", "Nature Aging", "Nature Genetics", "Nature Microbiology",
+    "Science", "Science Immunology", "Science Translational Medicine", "Science Advances"
+  ],
+  "clinical_exceptions": [],
+  "journal_aliases": {"Science (New York, N.Y.)": "Science"},
+  "alias_provenance": {"Science (New York, N.Y.)": "NLM Catalog 0404511, https://www.ncbi.nlm.nih.gov/nlmcatalog/0404511 ; verified 2026-10-20"},
+  "fields": ["stem_cell_biology", "cancer_biology", "immunology", "chronic_disease_biology", "lung_biology", "ipf", "bronchiectasis"],
+  "excluded_papers": {
+    "doi:10.1002/adma.75042": "Owner strictly rejected the periodontal/tooth paper for this reading list",
+    "doi:10.1002/adhm.71751": "Materials-led lung hydrogel study excluded from the owner's mechanism-focused primary list"
+  },
+  "field_query": "TITLE_ABS:(\"stem cell\" OR progenitor OR cancer OR tumor OR tumour OR immune OR immunology OR lung OR pulmonary OR bronchiectasis OR \"chronic disease\")",
+  "mechanism_query": "TITLE_ABS:(mechanism OR mechanistic OR crosstalk OR niche OR metabolism OR metabolic OR fate OR differentiation OR plasticity OR transition OR regulation OR regulatory OR signaling OR signalling OR epigenetic OR chromatin)",
+  "journal_metric_role": "No JIF or percentile inferred; rank alone cannot admit a paper",
+  "scope": "Primary reading list only; not scientific acceptance, data eligibility or independent evaluation"
+}

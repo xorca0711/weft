@@ -75,7 +75,7 @@ def specification(store, batch_id):
 
 def create(store, context, profile_name, profile, streams, since, until, *,
            max_searches=12, max_records=100, max_screenings=5, max_full_reads=3,
-           policy_sha=None, selection_policy=None):
+           policy_sha=None, selection_policy=None, listing_policy=None):
     schema(store)
     if digest(context['questions']) != context['catalog_sha256']:
         raise ValueError('Context hash mismatch')
@@ -90,6 +90,11 @@ def create(store, context, profile_name, profile, streams, since, until, *,
         raise ValueError('Batch v1 supports broad/contrary/adjacent streams; no journal-only gate')
     if max_searches < len(streams):
         raise ValueError('Search cap cannot cover even one attempt per stream')
+    if listing_policy is not None:
+        from .listing import policy, scoped_profile
+        if listing_policy != policy():
+            raise ValueError('New batches require the current reviewed listing policy')
+        profile = scoped_profile(profile, listing_policy)
     for stream in streams:
         date_window(profile['streams'][stream], profile['date_field'], since, until)
     spec = dict(schema_version=1, context=context, profile_name=profile_name, profile=profile,
@@ -97,6 +102,8 @@ def create(store, context, profile_name, profile, streams, since, until, *,
                 max_records=max_records, max_screenings=max_screenings, max_full_reads=max_full_reads,
                 policy_sha256=policy_sha, selection='paper_key then rq_id; bounded engineering sample, not relevance ranking',
                 scientific_execution_allowed=False)
+    if listing_policy is not None:
+        spec['listing_policy'] = listing_policy
     if selection_policy is not None:
         from .selection import policy
         spec['selection_policy'] = policy(selection_policy)

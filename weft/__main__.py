@@ -48,6 +48,9 @@ def main(argv=None):
     search.add_argument("--store", type=Path, default=Path("runs/discovery"))
     listing = sub.add_parser("buffer-list", help="List unvalidated paper-to-RQ candidates")
     listing.add_argument("--store", type=Path, default=Path("runs/discovery"))
+    primary = sub.add_parser('paper-list', help='Source-screened primary list plus retained exclusion audit')
+    primary.add_argument('--store', required=True, type=Path)
+    primary.add_argument('--batch', required=True)
     review = sub.add_parser("review-link", help="Record reading priority only, never scientific acceptance")
     review.add_argument("--store", type=Path, default=Path("runs/discovery"))
     review.add_argument("--candidate", required=True)
@@ -180,6 +183,7 @@ def main(argv=None):
             result = {"ok": True, "questions": len(packet["questions"]),
                       "catalog_sha256": packet["catalog_sha256"], "output": str(args.output)}
         elif args.command in {"batch-discover", 'workflow-create'}:
+            from .listing import policy as listing_policy
             if args.selection_policy is None:
                 args.selection_policy = 'paper-stream-v1' if args.command == 'workflow-create' else 'legacy'
             validate_project(root)
@@ -195,13 +199,13 @@ def main(argv=None):
                                              actor=args.actor, max_searches=args.max_searches, max_records=args.max_records,
                                              max_screenings=args.max_screenings, max_full_reads=args.max_full_reads,
                                              selection_policy=None if args.selection_policy == 'legacy' else args.selection_policy,
-                                             policy_sha=digest(policy))
+                                             policy_sha=digest(policy), listing_policy=listing_policy())
                 else:
                     bid = batches.create(store, packet, args.profile, profile, args.streams, args.since, args.until,
                                          max_searches=args.max_searches, max_records=args.max_records,
                                          max_screenings=args.max_screenings, max_full_reads=args.max_full_reads,
                                          selection_policy=None if args.selection_policy == 'legacy' else args.selection_policy,
-                                         policy_sha=digest(policy))
+                                         policy_sha=digest(policy), listing_policy=listing_policy())
                     result = batches.run(store, bid)
         elif args.command == 'selection-report':
             with workflow.readonly(args.store) as store:
@@ -313,6 +317,8 @@ def main(argv=None):
             profile = profiles[args.profile]
             packet = build_context(args.repo, read_json(root / "integration/ravel.lock.json"), profile["rq_ids"])
             coverage.validate_profile_binding(profile, packet)
+            from .listing import policy as listing_policy, scoped_profile
+            profile = scoped_profile(profile, listing_policy())
             with Store(args.store) as store:
                 if args.stream == "priority_journals":
                     broad_key = stream_key(profile["streams"]["broad"], profile["date_field"], packet)
@@ -324,7 +330,7 @@ def main(argv=None):
                 receipt = discover(store, packet, profile["streams"][args.stream], since=args.since,
                                    until=args.until, date_field=profile["date_field"],
                                    page_size=args.page_size, max_records=args.max_records,
-                                   overlap_days=args.overlap_days)
+                                   overlap_days=args.overlap_days, listing_policy=listing_policy())
             result = {k: v for k, v in receipt.items() if k not in {"pages", "candidate_ids"}}
             result.update({"pages": len(receipt["pages"]), "candidates": len(receipt.get("candidate_ids", [])),
                            "receipt": str(args.store / receipt["run_id"] / "receipt.json")})
@@ -332,8 +338,12 @@ def main(argv=None):
             result = validate_reading(args.directory, read_json(args.assessment))
         else:
             with Store(args.store) as store:
-                if args.command == "buffer-list":
-                    result = {"candidates": store.candidates(), "claim_validation": False}
+                if args.command == 'paper-list':
+                    from .listing import report as listing_report
+                    result = listing_report(store, args.batch)
+                elif args.command == "buffer-list":
+                    result = {"candidates": store.candidates(), "claim_validation": False,
+                              "scope": "Raw audit buffer, including exclusions; use paper-list for recommendations"}
                 elif args.command == "review-link":
                     result = store.review(args.candidate, read_json(args.record))
                 elif args.command == "prepare-reading":
