@@ -103,11 +103,19 @@ def next_packet(store,batch_id):
         if not status_report(store,batch_id)['discovery_complete']:
             raise ValueError('Incomplete discovery coverage; reconcile windows first')
         items=store.db.execute('SELECT bi.* FROM batch_items bi JOIN candidates c ON c.id=bi.candidate_id WHERE bi.batch_id=? ORDER BY c.paper_key,c.rq_id',(batch_id,)).fetchall()
+        selection = None
+        if spec.get('selection_policy'):
+            from .selection import freeze
+            selection = freeze(store, batch_id)
+            ranks = {i['candidate_id']: i for i in selection['items']}
+            items = sorted(items, key=lambda i: ranks[i['candidate_id']]['rank'])
         used=sum(bool(x['packet_json']) for x in items)
         for item in items:
             if item['status'] not in {'queued','awaiting_agent'}:continue
             cid=item['candidate_id']
             try:
+                if selection and ranks[cid]['hold_reasons']:
+                    raise ValueError('Identity/integrity hold: ' + ', '.join(ranks[cid]['hold_reasons']))
                 if item['packet_json']:
                     packet=json.loads(item['packet_json'])
                     if digest(packet)!=item['packet_sha']:raise ValueError('Packet hash mismatch')
@@ -182,7 +190,7 @@ def submit(store,batch_id,response):
             'verification_scope':'snapshot, citation and transition integrity only; semantic support and actor identity not certified'}
 
 
-def read_packet(store,batch_id,cid,fetch=None):
+def read_packet(store,batch_id,cid,fetch=None,*,reuse_candidate=None):
     with exclusive(store):
         spec=specification(store,batch_id)
         item=store.db.execute('SELECT * FROM batch_items WHERE batch_id=? AND candidate_id=?',(batch_id,cid)).fetchone()
@@ -203,7 +211,10 @@ def read_packet(store,batch_id,cid,fetch=None):
                              (json.dumps({'status':'hold','reason':'reading-started-outcome-unknown'}),batch_id,cid))
             event(store,batch_id,'reading-started',{'candidate_id':cid})
         try:
-            result=prepare_reading(store,cid,**({'fetch':fetch} if fetch else {}))
+            options = {'fetch': fetch} if fetch else {}
+            if reuse_candidate is not None:
+                options['reuse'] = (batch_id, reuse_candidate)
+            result=prepare_reading(store,cid,**options)
         except (ValueError,OSError) as exc:
             result={'status':'hold','reason':str(exc),'candidate_id':cid}
         result=portable_result(store,result)

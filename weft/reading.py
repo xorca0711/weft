@@ -58,7 +58,7 @@ def extract_xml(body, expected_pmcid):
             "coverage":"available XML paragraphs, table text and figure captions; figure pixels and separate supplements not inspected"}
 
 
-def prepare_reading(store, candidate_id, fetch=fetch_xml):
+def prepare_reading(store, candidate_id, fetch=fetch_xml, *, reuse=None):
     row = store.db.execute("SELECT * FROM candidates WHERE id=?", (candidate_id,)).fetchone()
     if not row or not row["current"] or row["status"] != "read_next":
         raise ValueError("A current read_next decision is required")
@@ -81,7 +81,16 @@ def prepare_reading(store, candidate_id, fetch=fetch_xml):
                "discovery_run":run["id"], "backend":"local-codex-manual", "model_invoked":False,
                "claim_validated":False, "scientific_execution_allowed":False}
     try:
-        body, attempts = EuropePMC(fetch=fetch).request(url)
+        if reuse is None:
+            body, attempts = EuropePMC(fetch=fetch).request(url)
+            receipt['source_acquisition'] = {'kind': 'fetched', 'assessment_reused': False}
+        else:
+            from .materials import cached_xml
+            body, acquisition = cached_xml(store, candidate_id, *reuse)
+            if len(body) > MAX_BYTES:
+                raise ValueError('Cached source exceeds XML byte cap')
+            attempts = []
+            receipt['source_acquisition'] = acquisition
         (path / "source.xml").write_bytes(body)
         receipt.update({"source_sha256":hashlib.sha256(body).hexdigest(), "transport_attempts":attempts})
         extraction = extract_xml(body, pmcids[0])

@@ -75,7 +75,7 @@ def specification(store, batch_id):
 
 def create(store, context, profile_name, profile, streams, since, until, *,
            max_searches=12, max_records=100, max_screenings=5, max_full_reads=3,
-           policy_sha=None):
+           policy_sha=None, selection_policy=None):
     schema(store)
     if digest(context['questions']) != context['catalog_sha256']:
         raise ValueError('Context hash mismatch')
@@ -97,6 +97,10 @@ def create(store, context, profile_name, profile, streams, since, until, *,
                 max_records=max_records, max_screenings=max_screenings, max_full_reads=max_full_reads,
                 policy_sha256=policy_sha, selection='paper_key then rq_id; bounded engineering sample, not relevance ranking',
                 scientific_execution_allowed=False)
+    if selection_policy is not None:
+        from .selection import policy
+        spec['selection_policy'] = policy(selection_policy)
+        spec['selection'] = 'Frozen versioned nomination policy; no relevance or scientific admission claim'
     batch_id = 'batch-' + digest(spec)
     with exclusive(store), store.db:
         old = store.db.execute('SELECT id FROM batches WHERE id=?',(batch_id,)).fetchone()
@@ -150,6 +154,9 @@ def run(store, batch_id, client=None):
             with store.db:
                 for candidate in ids:
                     store.db.execute("INSERT OR IGNORE INTO batch_items(batch_id,candidate_id,status) VALUES(?,?,'queued')",(batch_id,candidate['id']))
+            if spec.get('selection_policy'):
+                from .selection import freeze
+                freeze(store, batch_id)
     return status_report(store,batch_id)
 
 

@@ -8,7 +8,7 @@ from .context import build_context
 from .discovery import Store, discover, stream_key, verify_run, write_json
 from .validation import ValidationError, read_json, validate_project, verify_ravel
 from .reading import prepare_reading, validate_reading
-from . import batches, screening, qualification, handoff, intake, launches, coverage, evaluation, workflow
+from . import batches, screening, qualification, handoff, intake, launches, coverage, evaluation, workflow, selection, materials, review_view
 from .identity import digest
 from .reading_locations import relocate_readings
 
@@ -69,10 +69,18 @@ def main(argv=None):
     batch.add_argument("--max-screenings", type=int, default=5)
     batch.add_argument("--max-full-reads", type=int, default=3)
     batch.add_argument("--store", type=Path, default=Path("runs/discovery"))
+    batch.add_argument('--selection-policy', choices=['legacy', 'paper-stream-v1'], help='Default: legacy for batch-discover; paper-stream-v1 for workflow-create')
     sub.add_parser("batch-discover", parents=[batch_options], help="Freeze and run a bounded discovery batch; no model launch")
     create_workflow = sub.add_parser('workflow-create', parents=[batch_options], help='Create an unstarted manual-pull workflow in a fresh store; no network')
     create_workflow.add_argument('--actor', required=True)
-    for name in ['workflow-init', 'workflow-advance', 'workflow-status', 'workflow-submit', 'workflow-recover', 'workflow-hold', 'workflow-export']:
+    selection_parser = sub.add_parser('selection-report', help='Read-only nomination/bibliography audit; no relevance or recall claim')
+    selection_parser.add_argument('--store', required=True, type=Path)
+    selection_parser.add_argument('--batch', required=True)
+    selection_parser.add_argument('--reference', type=Path)
+    selection_parser.add_argument('--include-plan', action='store_true')
+    demo_parser = sub.add_parser('workflow-demo', help='Run synthetic injected transports only; write a new private demonstration directory')
+    demo_parser.add_argument('--output', type=Path, required=True)
+    for name in ['workflow-init', 'workflow-advance', 'workflow-status', 'workflow-submit', 'workflow-recover', 'workflow-hold', 'workflow-export', 'workflow-materials', 'workflow-import-materials', 'workflow-review-export']:
         command = sub.add_parser(name, help='Manual workflow: ' + name.removeprefix('workflow-'))
         command.add_argument('--store', required=True, type=Path)
         command.add_argument('--batch', required=True)
@@ -87,7 +95,13 @@ def main(argv=None):
             command.add_argument('--return-id', required=True)
         if name == 'workflow-hold':
             command.add_argument('--reason', required=True)
-        if name == 'workflow-export':
+        if name in {'workflow-materials', 'workflow-import-materials', 'workflow-review-export'}:
+            command.add_argument('--candidate', required=True)
+        if name == 'workflow-import-materials':
+            command.add_argument('--manifest', required=True, type=Path)
+        if name == 'workflow-review-export':
+            command.add_argument('--include-materials', action='store_true', help='Explicitly copy verified supplied attachments into the private bundle')
+        if name in {'workflow-export', 'workflow-review-export'}:
             command.add_argument('--output', required=True, type=Path, help='New private snapshot directory; never overwrites')
     for name in ["batch-resume", "batch-relocate-reading", "batch-reconcile", "batch-next", "batch-submit", "batch-read", "batch-submit-reading", "batch-status", "batch-digest", "batch-evidence", "batch-attach-evidence", "batch-submit-evidence", "batch-evidence-status"]:
         command = sub.add_parser(name, help="Discovery batch: " + name.removeprefix("batch-"))
@@ -160,6 +174,8 @@ def main(argv=None):
             result = {"ok": True, "questions": len(packet["questions"]),
                       "catalog_sha256": packet["catalog_sha256"], "output": str(args.output)}
         elif args.command in {"batch-discover", 'workflow-create'}:
+            if args.selection_policy is None:
+                args.selection_policy = 'paper-stream-v1' if args.command == 'workflow-create' else 'legacy'
             validate_project(root)
             policy = read_json(root / "configs/policy.json")
             if not 1 <= args.max_records <= policy["limits"]["records_per_search"] or not 1 <= args.max_full_reads <= policy["limits"]["full_reads_per_batch"]:
@@ -172,17 +188,33 @@ def main(argv=None):
                     result = workflow.create(store, packet, args.profile, profile, args.streams, args.since, args.until,
                                              actor=args.actor, max_searches=args.max_searches, max_records=args.max_records,
                                              max_screenings=args.max_screenings, max_full_reads=args.max_full_reads,
+                                             selection_policy=None if args.selection_policy == 'legacy' else args.selection_policy,
                                              policy_sha=digest(policy))
                 else:
                     bid = batches.create(store, packet, args.profile, profile, args.streams, args.since, args.until,
                                          max_searches=args.max_searches, max_records=args.max_records,
                                          max_screenings=args.max_screenings, max_full_reads=args.max_full_reads,
+                                         selection_policy=None if args.selection_policy == 'legacy' else args.selection_policy,
                                          policy_sha=digest(policy))
                     result = batches.run(store, bid)
+        elif args.command == 'selection-report':
+            with workflow.readonly(args.store) as store:
+                result = selection.report(store, args.batch, reference=read_json(args.reference) if args.reference else None,
+                                          include_plan=args.include_plan)
+        elif args.command == 'workflow-demo':
+            from .demo import run
+            result = run(args.output)
         elif args.command.startswith('workflow-'):
-            if args.command in {'workflow-status', 'workflow-export'}:
+            if args.command in {'workflow-status', 'workflow-export', 'workflow-materials', 'workflow-review-export'}:
                 with workflow.readonly(args.store) as store:
-                    result = workflow.status(store, args.batch) if args.command == 'workflow-status' else workflow.export(store, args.batch, args.output)
+                    if args.command == 'workflow-status':
+                        result = workflow.status(store, args.batch)
+                    elif args.command == 'workflow-export':
+                        result = workflow.export(store, args.batch, args.output)
+                    elif args.command == 'workflow-materials':
+                        result = materials.inventory(store, args.batch, args.candidate)
+                    else:
+                        result = review_view.export(store, args.batch, args.candidate, args.output, include_materials=args.include_materials)
             else:
                 # Fail on missing/invalid stores before Store can initialize one.
                 with workflow.readonly(args.store) as check:
@@ -199,6 +231,8 @@ def main(argv=None):
                         result = workflow.submit(store, args.batch, args.stage, read_json(args.assessment))
                     elif args.command == 'workflow-recover':
                         result = workflow.recover(store, args.batch, args.return_id)
+                    elif args.command == 'workflow-import-materials':
+                        result = workflow.import_materials(store, args.batch, args.candidate, args.manifest)
                     else:
                         result = workflow.hold(store, args.batch, args.reason)
         elif args.command.startswith("batch-"):

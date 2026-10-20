@@ -14,7 +14,7 @@ import socket
 import sqlite3
 from types import SimpleNamespace
 
-from . import batches, handoff, qualification, screening
+from . import batches, handoff, qualification, screening, selection, materials
 from .discovery import now, write_json
 from .identity import digest
 from .reading import validate_reading
@@ -153,6 +153,7 @@ def create(store, context, profile_name, profile, streams, since, until, *, acto
     if store.db.execute('SELECT 1 FROM runs LIMIT 1').fetchone() or (
             _has(store, 'batches') and store.db.execute('SELECT 1 FROM batches LIMIT 1').fetchone()):
         raise ValueError('workflow-create requires a fresh store; use advance/status for an existing workflow')
+    limits.setdefault('selection_policy', 'paper-stream-v1')
     bid = batches.create(store, context, profile_name, profile, streams, since, until, **limits)
     return initialize(store, bid, actor)
 
@@ -193,6 +194,7 @@ def _item_state(store, bid, item, used_reads, cap):
     if not row['reading_json']:
         return ('deferred', 'Full-read attempt cap reached') if used_reads >= cap else ('material', None)
     read = json.loads(row['reading_json'])
+    item['source_acquisition'] = read.get('source_acquisition', {'kind': 'historical_receipt'})
     if read['status'] != 'prepared':
         return 'hold', read.get('reason', 'Material preparation held')
     try:
@@ -245,6 +247,17 @@ def status(store, bid):
     for claim in claims:
         if claim['state'] != 'complete' and any(i['candidate_id'] == claim['candidate_id'] and i['workflow_stage'] == 'hold' for i in report['items']):
             blockers.append('Active handoff source/disposition is held: ' + claim['id'])
+    try:
+        selection_report = selection.report(store, bid, include_plan=True)
+        selected_plan = selection_report.pop('plan', None)
+        if selected_plan:
+            ranks = {i['candidate_id']: i for i in selected_plan['items']}
+            for item in report['items']:
+                item['selection'] = {k: ranks[item['candidate_id']][k] for k in ('rank', 'reason', 'streams')}
+            report['items'].sort(key=lambda i: i['selection']['rank'])
+    except ValueError as exc:
+        selection_report = {'status': 'hold', 'reason': str(exc), 'relevance_validated': False}
+        blockers.append(str(exc))
     stages = Counter(i['workflow_stage'] for i in report['items'])
     # A crash can leave all windows complete before batch_items are populated.
     missing = store.db.execute('''SELECT 1 FROM candidate_runs cr JOIN batch_windows w ON w.run_id=cr.run_id
@@ -266,7 +279,7 @@ def status(store, bid):
             i['evidence_qualification'].get(k) == 'hold' for k in ('data_proposal', 'rq_proposal')) for i in report['items'])
         state = 'complete_with_holds' if stages['hold'] or stages['deferred'] or proposal_holds else 'complete'
         action = 'Review/export the recorded outcomes; no scientific execution is authorized'
-    return {**report, 'status': state, 'mode': 'manual-pull', 'binding': binding,
+    return {**report, 'status': state, 'mode': 'manual-pull', 'binding': binding, 'selection': selection_report,
             'blockers': blockers, 'next_action': action, 'item_stages': dict(stages),
             'claims': claims, 'returns': [dict(r) for r in store.db.execute(
                 'SELECT id,stage,candidate_id,state,response_sha FROM workflow_returns ORDER BY rowid')] if _has(store, 'workflow_returns') else [],
@@ -322,9 +335,10 @@ def advance(store, bid, *, allow_network=False, client=None, fetch=None):
         for item in report['items']:
             cid, stage = item['candidate_id'], item['workflow_stage']
             if stage == 'material':
-                if not allow_network:
+                donor = materials.reusable(store, bid, cid)
+                if not allow_network and donor is None:
                     return {'status': 'needs_network', 'stage': stage, 'candidate_id': cid, **FLAGS}
-                result = screening.read_packet(store, bid, cid, fetch=fetch)
+                result = screening.read_packet(store, bid, cid, fetch=fetch, reuse_candidate=donor)
                 return {'stage': stage, 'candidate_id': cid, 'material': result, 'status': result['status'], **FLAGS}
             if stage == 'reading':
                 row = store.db.execute('SELECT reading_json FROM batch_items WHERE batch_id=? AND candidate_id=?', (bid, cid)).fetchone()
@@ -395,6 +409,16 @@ def recover(store, bid, return_id):
         return _ingest(store, bid, return_id)
 
 
+def import_materials(store, bid, cid, manifest_path):
+    with _exclusive(store):
+        _writable(store, bid)
+        report = status(store, bid)
+        item = next((i for i in report['items'] if i['candidate_id'] == cid), None)
+        if report['status'] == 'hold' or not item or item['workflow_stage'] != 'evidence':
+            raise ValueError('Current unheld evidence-review stage required for material intake')
+        return materials.import_manifest(store, bid, cid, manifest_path)
+
+
 def export(store, bid, output):
     """Private, immutable snapshot; status is derived without source retrieval."""
     report = status(store, bid)
@@ -413,10 +437,13 @@ def export(store, bid, output):
         for key in ('coverage_holds', 'data_holds', 'rq_holds'):
             if q.get(key):
                 details.append(key + ': ' + ', '.join(q[key]))
-        cells = [i['title'], i['paper_key'], i['rq_id'], i['workflow_stage'], i['decision'],
-                 i['reading_status'], q.get('data_proposal'), q.get('rq_proposal'), '; '.join(details)]
+        nomination = i.get('selection')
+        selection_text = (str(nomination['rank']) + ': ' + nomination['reason']) if nomination else 'Legacy identifier order'
+        material = str(i['reading_status'] or 'Not prepared') + ' / ' + i.get('source_acquisition', {}).get('kind', 'Not assessed')
+        cells = [i['title'], i['paper_key'], i['rq_id'], selection_text, i['workflow_stage'], i['decision'],
+                 material, q.get('data_proposal'), q.get('rq_proposal'), '; '.join(details)]
         rows.append('<tr>' + ''.join('<td>' + escape(str(c if c is not None else 'Not assessed')) + '</td>' for c in cells) + '</tr>')
-    headers = ['Paper', 'Source identity', 'RQ', 'Stage', 'Reading priority', 'Material', 'Data proposal', 'RQ proposal', 'Reason / limit']
+    headers = ['Paper', 'Source identity', 'RQ', 'Nomination', 'Stage', 'Reading priority', 'Material', 'Data proposal', 'RQ proposal', 'Reason / limit']
     html = '''<!doctype html><html lang="en"><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">

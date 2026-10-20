@@ -8,6 +8,8 @@
 | Manual literature discovery and RQ review buffer | Descriptive only | [Live validation](records/discovery-validation.json) | Metadata matches and reading priority, not accepted claims |
 | Bounded discovery batches and screening-agent interface | Descriptive only | [Fresh-candidate test](docs/BATCH_PILOT_20261012.md) | 74 candidates; five local link proposals; independent semantic quality evaluation remains open |
 | Manual workflow coordinator and status/export view | Synthetic software tests | [Coordinator guide](docs/WORKFLOW_COORDINATOR.md) and [integration tests](tests/test_workflow.py) | Composes discovery through B3; saved-return recovery; no automatic cloud launch, hold release or scientific acceptance |
+| Versioned paper-first nomination and bibliography audit | Synthetic software tests | [Selection policy and audit](docs/SELECTION_AND_MATERIAL_REVIEW.md) and [tests](tests/test_selection.py) | Transparent query-stream rotation under link caps; no demonstrated real-world relevance or population recall |
+| Cached XML reuse, manifest intake and source-linked review view | Synthetic software tests | [Material/review guide](docs/SELECTION_AND_MATERIAL_REVIEW.md) and [tests](tests/test_materials.py) | Separate RQ assessments; opt-in private file copies; attached bytes do not establish inspection or semantic support |
 | Portable screening paths and manual cloud recovery | Descriptive only | [Qualification record](records/screening-portability-20261012.json) | Five cloud link proposals; both Drive checkpoints verified; Linux-to-Windows cached recovery passed; no unattended launcher |
 | B3 coverage, data-use and RQ proposals | Descriptive only | [Cloud qualification](records/b3-cloud-b4-boundary-20261012.json) | 55 targeted tests and checkpoint recovery passed; B4 source review interrupted by platform safety filtering |
 | Manual source-bound reading packets | Descriptive only | [Local reader](docs/LOCAL_READER.md) | XML text/captions; semantic and figure review remain separate |
@@ -30,6 +32,11 @@ development test; it does not launch models or provide unattended cloud operatio
 The [manual workflow coordinator](docs/WORKFLOW_COORDINATOR.md) now connects those
 components through B3, preserves interrupted work, and exports a private JSON/HTML
 status view. Existing pilot catalogs remain viewable without being resumed.
+New workflows use a frozen paper-first/query-stream policy, reuse verified XML
+across separate RQ reviews, and accept hash-bound local material manifests. A
+private review view links citations to source text and exposes material coverage.
+Run `python -m weft workflow-demo --output runs/new-demo` for a reproducible
+synthetic demonstration with injected transports and held scientific proposals.
 
 The name comes from the crosswise threads of woven fabric. **Weft** is the
 project name; `weft` is the repository and Python module name. It is not an acronym.
