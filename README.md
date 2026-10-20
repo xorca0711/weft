@@ -4,6 +4,7 @@
 
 | Capability | Status | Evidence | Boundary |
 |---|---|---|---|
+| Synthetic cloud-return intake against acknowledged intent | Descriptive only | [Guide](docs/CLOUD_RETURN_INTAKE.md), [tests](tests/test_cloud_return.py) and [validation](records/cloud-return-validation-20261020.json) | Read-only consistency checks; operator observations are not authenticated runtime evidence; no launch, resume or hold release |
 | Multi-source critic/human review and inactive transfer verification | Descriptive only | [Validation](records/fulltext-review-validation-20261020.json), [guide](docs/PHASE4_FOLLOW_THROUGH.md) and [tests](tests/test_review_materials.py) | Local bytes and accounting; identity/inspection remain attested; no independent B5 qualification, cloud launch or scientific acceptance |
 | Local scaffold and pinned Ravel connection checks | Descriptive only | [Validation record](records/bootstrap-validation.json) | Software checks; no scientific validation |
 | Manual literature discovery and RQ review buffer | Descriptive only | [Live validation](records/discovery-validation.json) | Metadata matches and reading priority, not accepted claims |

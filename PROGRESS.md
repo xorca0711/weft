@@ -2,6 +2,33 @@
 
 Update this before stopping work, every session.
 
+## PR #16 merged; offline cloud-result intake — 20 October 2026
+
+Owner explicitly requested review and merge. Root reviewed PR #16 at unchanged
+head `8515f31` against base `aa05ea7`, with no remaining blocking finding and
+passing push/PR checks. Squash merge is `26890de6dd8e57075c84d3cda960102beeb00da4`;
+[main CI passed](https://github.com/xorca0711/weft/actions/runs/39373911222).
+
+After handing over the independent-evaluation decision package, implemented
+`launch-result-verify` on a scoped branch. It binds a frozen fixture contract and
+returned files to the acknowledged task and saved source/prompt/environment/
+policy/account fingerprints. Missing runtime observations, zero/incomplete tests,
+failed/skipped fixtures and non-completed states stay held. Journal access is
+read-only; inactive restores remain inactive. No new cloud task or historical
+receipt/journal modification occurred.
+
+An independent implementation critic found a check/parse replacement gap. The
+parser now checks the exact consumed JSON bytes against manifest hashes, with
+bounded reads and replacement regression tests. All 363 tests ran successfully
+(338 passed, 25 existing Windows ARM64 skips), plus repository validation and
+diff checks. [Validation evidence](records/cloud-return-validation-20261020.json)
+and the [intake guide](docs/CLOUD_RETURN_INTAKE.md) record the limits.
+
+Independent evaluation preparation is separate from this technical component.
+No human reference labels or scientific acceptance were invented. Live runtime
+qualification still needs new platform evidence, then supported remote ownership
+and recovery tests. B4 excluded/held, Choi closed, M6 disabled and Ravel unchanged.
+
 ## Phase-4 full-text follow-through — 20 October 2026
 
 Implemented schema-v2 multi-source critic/human review with separately hashed

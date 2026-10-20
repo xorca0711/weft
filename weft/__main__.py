@@ -8,7 +8,7 @@ from .context import build_context
 from .discovery import Store, discover, stream_key, verify_run, write_json
 from .validation import ValidationError, read_json, validate_project, verify_ravel
 from .reading import prepare_reading, validate_reading
-from . import batches, screening, qualification, handoff, intake, launches, coverage, evaluation, workflow, selection, materials, review_view, quality_review
+from . import batches, screening, qualification, handoff, intake, launches, coverage, evaluation, workflow, selection, materials, review_view, quality_review, cloud_return
 from .identity import digest
 from .reading_locations import relocate_readings
 
@@ -36,6 +36,13 @@ def main(argv=None):
     quality_verify = sub.add_parser('quality-review-verify', help='Read-only integrity check of a transferred review bundle; never resumes work')
     quality_verify.add_argument('--directory', required=True, type=Path)
     quality_verify.add_argument('--expected-manifest-sha256', help='Hash retained separately before transfer')
+    returned = sub.add_parser('launch-result-verify', help='Offline synthetic return consistency; no launch, hold release or journal mutation')
+    returned.add_argument('--journal', required=True, type=Path)
+    returned.add_argument('--operation', required=True)
+    returned.add_argument('--contract', required=True, type=Path)
+    returned.add_argument('--contract-sha256', required=True)
+    returned.add_argument('--directory', required=True, type=Path)
+    returned.add_argument('--manifest-sha256', required=True)
     quality.add_argument('--packet', required=True, type=Path)
     quality.add_argument('--output', required=True, type=Path)
     quality.add_argument('--adjudication', type=Path, help='Explicit human response; no labels inferred')
@@ -176,6 +183,9 @@ def main(argv=None):
             result = quality_review.export(args.packet, args.output, read_json(args.adjudication) if args.adjudication else None)
         elif args.command == 'quality-review-verify':
             result = quality_review.verify(args.directory, args.expected_manifest_sha256)
+        elif args.command == 'launch-result-verify':
+            result = cloud_return.verify(args.journal, args.operation, args.contract, args.contract_sha256,
+                                         args.directory, args.manifest_sha256)
         elif args.command == "evaluation-score":
             plan = read_json(args.plan)
             if evaluation.fingerprint(plan) != args.plan_sha256:

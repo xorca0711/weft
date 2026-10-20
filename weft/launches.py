@@ -50,12 +50,13 @@ def _spec(spec, prompt):
 
 
 class LaunchJournal:
-    def __init__(self, path):
+    def __init__(self, path, *, read_only=False):
         self.path = Path(path).absolute()
         if any(p.is_symlink() or p.is_junction() for p in [self.path, *self.path.parents]):
             raise ValueError('Launch journal must not traverse links/junctions')
         self.path = self.path.resolve(strict=True)
-        self.db = sqlite3.connect(self.path.as_uri() + '?mode=rw', uri=True, timeout=15,
+        self.read_only = read_only
+        self.db = sqlite3.connect(self.path.as_uri() + ('?mode=ro' if read_only else '?mode=rw'), uri=True, timeout=15,
                                   isolation_level=None)
         self.db.row_factory = sqlite3.Row
         try:
@@ -77,6 +78,8 @@ class LaunchJournal:
         return self.binding['host'] == socket.gethostname() and self.binding['path'] == str(self.path)
 
     def _begin(self):
+        if self.read_only:
+            raise ValueError('Read-only launch journal cannot be mutated')
         if not self._active():
             raise ValueError('Restored or moved journal is inactive; reconciliation required')
         self.db.execute('BEGIN IMMEDIATE')
@@ -191,6 +194,18 @@ class LaunchJournal:
                     'spec_sha256': row['spec_sha256'], 'receipt_sha256': row['receipt_sha256'],
                     'acknowledgement': json.loads(row['receipt_json']) if row['receipt_json'] else None,
                     'resubmission_allowed': False, **FLAGS}
+        finally:
+            if own_snapshot:
+                self.db.rollback()
+
+    def evidence(self, key):
+        """Read the specification and acknowledgement in one validated snapshot."""
+        own_snapshot = not self.db.in_transaction
+        if own_snapshot:
+            self.db.execute('BEGIN')
+        try:
+            row = self._row(key)
+            return {**self.status(key), 'specification': json.loads(row['spec_json'])}
         finally:
             if own_snapshot:
                 self.db.rollback()

@@ -1,5 +1,11 @@
 # Agent entry point
 
+- Latest technical component: [offline cloud-result intake](docs/CLOUD_RETURN_INTAKE.md).
+  PR #16 is merged at `26890de` with passing main CI. The new verifier binds
+  returned synthetic evidence to an acknowledged task and frozen fixture contract,
+  with read-only journal access. It does not resolve live runtime access, release
+  holds, activate restores or authorize dispatch. PROGRESS owns validation/status.
+
 - Current implementation: [phase-4 full-text follow-through](docs/PHASE4_FOLLOW_THROUGH.md).
   Multi-source assisted review and inactive transfer verification are implemented.
   Independent B5 qualification and L1–L4 runtime/continuity/recurrence remain pending.
