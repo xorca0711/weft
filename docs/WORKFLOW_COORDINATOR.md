@@ -5,6 +5,10 @@ XML reading and B3 proposal components. It provides one next action at a time,
 saved-return recovery, and a private JSON/HTML status export. It invokes no model
 and has no app, browser, CLI cloud, scheduler or alternate-provider launch path.
 
+The [selection and material-review extension](SELECTION_AND_MATERIAL_REVIEW.md)
+adds versioned paper-first nomination, verified XML reuse, local manifest intake
+and a source-linked review bundle. Existing frozen batches retain their policy.
+
 This implementation is local software qualification. It does not qualify an
 unattended deployment, fresh-paper review quality, scientific acceptance or a
 new biological run. Ravel is read only when building the pinned search context.
@@ -32,7 +36,7 @@ Each command is bounded; there is no daemon or background loop.
 |---|---|---|
 | Discovery pending | Explicit `advance --allow-network` | `batches.run` and its frozen budgets |
 | `screening` | Review `issued.packet`; fill its exact response template | `handoff.claim` / `screening.submit` |
-| `material` | Explicit XML retrieval; inspect any access/integrity hold | `screening.read_packet` |
+| `material` | Verified same-batch XML reuse or explicit retrieval; inspect any access/integrity hold | `screening.read_packet` |
 | `reading` | Read the returned material directory's `packet.json` and `prompt.txt`; prepare its reading assessment | `screening.submit_reading` |
 | `evidence` | Review resource coverage and separate data/RQ proposals; fill the exact template | `qualification.issue` / `qualification.submit` |
 
@@ -45,7 +49,8 @@ python -m weft workflow-submit --store runs/new-review --batch BATCH_ID --stage 
 ```
 
 Use the existing `batch-attach-evidence` command for explicitly supplied figure
-or supplement files. The coordinator does not download source-proposed URLs,
+or supplement files, or use `workflow-import-materials` with a hash-bound local
+manifest. The coordinator does not download source-proposed URLs,
 render attachments, attest inspection or execute author code. The existing
 source, citation, coverage, unit, lineage and proposal validators are unchanged.
 
@@ -100,6 +105,9 @@ It contains no scripts, remote assets or active source links; source text is HTM
 escaped. The snapshot is private: titles, reasoning, exposure statements, source
 identities and local binding information can be sensitive. It copies no source
 XML, full-text directory or attachment and never uploads anything.
+
+For source text, citation navigation and optional supplied attachment copies,
+use the separate private `workflow-review-export` described in the extension.
 
 Status/export use a read-only SQLite connection and a consistent database read
 transaction. They neither initialize schemas nor resume a run. Source files must
@@ -165,6 +173,7 @@ python -m unittest discover -s tests -q
 ```
 
 These tests establish bounded software behavior, not semantic review accuracy or
-live platform integration. Existing candidate ordering and evaluation policy are
-unchanged. Further launch work requires new platform evidence; independent
+live platform integration. New workflows use the versioned nomination extension;
+historical ordering and scientific evaluation policy remain unchanged. Further
+launch work requires new platform evidence; independent
 review-quality evaluation remains separate.

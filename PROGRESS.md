@@ -2,6 +2,57 @@
 
 Update this before stopping work, every session.
 
+## Phases 1–3 implementation and integration — 20 October 2026
+
+The owner authorized these phases without a work timeline. Coordinator PR #12
+is merged at `4f8fa5978822da12b707abc9b79b616d4fe3b671`; both PR checks and
+[main CI](https://github.com/xorca0711/weft/actions/runs/39348519577) passed.
+The older entry below describes its pre-integration checkpoint. The extension
+uses scoped branch `codex/weft-selection-materials-20261020`. Freshly fetched
+main has the same tree as its phase-1 parent; no intervening source change.
+
+- Phase 2: new workflows freeze `paper-stream-v1` nominations, rotating query
+  streams and admitting one RQ link per paper per round. Existing batch policy
+  and integrity holds remain unchanged. Read-only audits compare the nominal
+  legacy order, new order and actual issuance; an optional exact-key bibliography
+  records its denominator, missing papers, provenance and prior exposure.
+- Phase 3: verified same-batch XML reuse avoids another retrieval while creating
+  separate RQ packets and assessments within the existing attempt cap. Local
+  manifests bind resource IDs, bytes, hashes and origin, with preflight validation
+  and exact retry after partial intake. Intake never records inspection.
+- Private immutable review bundles link citations to source text and show source
+  coverage, attachment verification/holds, data-use proposals and RQ compatibility
+  separately. File copies are explicit opt-in. No source upload or URL retrieval
+  is added. The existing scientific validators and authority flags are retained.
+
+The synthetic demo in ignored `runs/phases-1-3-demo-20261020-v2/` completes four
+reading packets for three papers using three XML fixture calls and one verified
+reuse. Both B3 proposals remain held and the supplied fixture remains uninspected.
+The fixture's nominal legacy cap reaches two papers. This is exposed synthetic
+mechanics evidence, not a real-world ranking, recall or scientific-quality result.
+The local rendered view and exact citation navigation were inspected; prior demo
+exports are retained as immutable checkpoints. Reproduce using `workflow-demo`
+with a new directory; see the [guide](docs/SELECTION_AND_MATERIAL_REVIEW.md).
+
+Review found and fixed the shared argparse default affecting legacy discovery,
+and a cached-file change window between checking and copying. Regression tests
+cover both. Source reuse, manifest interruption, caps, held/tampered material,
+frozen-plan integrity, escaping and review manifests have targeted coverage.
+Local delivery checks: **304 tests: 279 passed, 25 existing platform skips**;
+offline validation passed (225 local links, 15 pinned files). Whitespace checks
+passed. Integration will use the fetched main base and exact reviewed head;
+the PR/main checks provide the Linux result separately from these local checks.
+
+No live source query, scientific analysis, cloud task, hold retry, permission
+change or support submission occurred. Ravel and live pilot catalogs/workers are
+unchanged. Choi closed, B4 held, M6 disabled. CLI environment mapping, native
+runtime capability and exact delivered-prompt binding remain unqualified; the
+browser allow/denial discrepancy remains unresolved. No platform repair claimed.
+After engineering integration, the next separate phase is independent quality
+evaluation with an explicit reference bibliography and exposure record. Live
+launcher qualification still needs new supported platform evidence; do not retry
+or reroute existing held work.
+
 ## Workflow coordinator implementation — 20 October 2026
 
 Implemented the owner's requested coordinator, integration/recovery tests and

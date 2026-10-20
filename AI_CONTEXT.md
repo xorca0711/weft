@@ -1,5 +1,17 @@
 # Agent entry point
 
+- Latest implementation: [selection and material review](docs/SELECTION_AND_MATERIAL_REVIEW.md).
+  New workflows freeze paper-first/query-stream nominations; existing batches
+  retain their policy. Bibliography audits separate nominal order from actual
+  issuance. Verified same-batch XML reuse keeps separate RQ assessments and
+  existing caps. Hash-bound local intake and private source-linked review exports
+  retain coverage holds and separate data-use/RQ proposals. The synthetic demo
+  invokes no live transport. This is engineering qualification, not scientific
+  quality evaluation. Coordinator PR #12 merged at
+  `4f8fa5978822da12b707abc9b79b616d4fe3b671`; its main CI passed.
+  PROGRESS owns current extension validation/integration status. Ravel unchanged;
+  Choi closed, B4 held, M6 disabled and platform launcher access unqualified.
+
 - Latest implementation: [manual workflow coordinator](docs/WORKFLOW_COORDINATOR.md).
   Discovery through B3 now has a single pull interface, saved-return recovery,
   read-only status and private JSON/HTML export. Only fresh unstarted dedicated

@@ -189,7 +189,7 @@ def _format(body, suffix):
     raise ValueError('Supported local evidence: PNG, JPEG, PDF, UTF-8 TXT/CSV/TSV; no execution or automatic rendering')
 
 
-def attach(store,bid,cid,resource_id,path,origin):
+def attach(store,bid,cid,resource_id,path,origin,*,expected_sha256=None):
     """Copy bounded explicitly supplied evidence; do not follow source URLs."""
     schema(store);_text(origin,'origin')
     path=Path(path)
@@ -197,6 +197,8 @@ def attach(store,bid,cid,resource_id,path,origin):
     with path.open('rb') as handle:body=handle.read(MAX_ARTIFACT+1)
     if not body or len(body)>MAX_ARTIFACT:raise ValueError('Artifact exceeds 32 MiB or is empty')
     fmt=_format(body,path.suffix);sha=hashlib.sha256(body).hexdigest()
+    if expected_sha256 is not None and sha != expected_sha256:
+        raise ValueError('Artifact changed after manifest validation')
     with exclusive(store),store.db:
         packet=_packet(store,bid,cid)
         if resource_id not in {r['resource_id'] for r in packet['resources']}:
