@@ -1,5 +1,11 @@
 # Literature discovery
 
+New CLI scans now apply the [mechanism-focused primary-list scope](PRIMARY_PAPER_LIST.md).
+Named CNS journal membership and biological query constraints narrow retrieval;
+source-bound screening still determines reading admission. Standalone receipts
+bind the policy and cannot bypass the scoped review route through manual reading.
+Historical receipts and the source profiles below remain unchanged.
+
 The standard-library Europe PMC adapter is implemented for explicit manual runs.
 No API key or model is required. Run commands from the Weft checkout; local raw
 metadata, abstracts, XML and SQLite state remain in ignored `runs/` on that drive.

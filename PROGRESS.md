@@ -2,6 +2,46 @@
 
 Update this before stopping work, every session.
 
+## Owner-scoped biological primary list — 20 October 2026
+
+Base: freshly fetched `origin/main` at `872ca412d2842133b514edf147d5cdc3829274de`
+(merged phase-4 PR #14). Work is on `codex/weft-biological-listing-20261020`.
+The owner strictly rejected the tooth paper, excluded materials-led candidates,
+and narrowed the list to relevant biological research with a central mechanism.
+Their latest journal direction supersedes percentile-only admission with a named
+CNS allowlist. No clinical exceptions are active. See the
+[implemented policy and boundaries](docs/PRIMARY_PAPER_LIST.md).
+
+- New CLI scans constrain journal/domain/mechanism queries. New batch hashes
+  freeze that policy; source-cited screening gates `read_next`. Primary-list
+  reports and exports separate recommendations from the complete audit queue.
+  Unknowns hold; primary materials performance, non-primary publication types,
+  irrelevant fields, incidental mechanisms and owner exclusions do not pass.
+- The critic reviewed the semantics and found three implementation defects:
+  standalone scan-to-reader bypass, lost exclusion reasons and the Science
+  provider-title alias. Fixes and regression tests now cover all three. The
+  exact Science alias is supported by NLM Catalog 0404511, checked 20 October.
+  Citation integrity does not establish semantic or causal validity.
+- Private `runs/phase4-review-20261020/human-adjudication-v1/` preserves the owner's
+  tooth reading rejection and broad pulmonary-context mismatch. Two supplied
+  labels are recorded; four labels and eight finding judgments remain unknown.
+  Source snapshots/old exports are unchanged. Independent reference count is zero.
+Final local validation: **332 tests: 307 passed, 25 existing platform skips**;
+offline validation passed 234 links and 15 pins. Whitespace checks passed.
+The independent critic confirmed all three
+fixes, with no remaining material defect in the reviewed deltas. See the
+[validation record](records/primary-list-validation-20261020.json). No new live
+biological scan or semantic-accuracy measurement is claimed. PR integration is
+pending at this checkpoint; the fetched main base remains unchanged.
+
+No new paper scan, dataset retrieval, analysis or live catalog/worker mutation was
+performed. Current Ravel dossiers were not read; Ravel remains unchanged. B4 is
+excluded, Choi closed, M6 disabled and automated cloud launch still unqualified.
+Remaining work: named clinical exceptions if the owner wants them; prospective
+retrieval-quality evaluation and independent scientific references. The narrowed
+list is an owner reading preference, not broad literature coverage or scientific
+acceptance. Historical checkpoints below retain their original scope and counts.
+
 ## Phase 4 critic-assisted review — 20 October 2026
 
 The owner requested phase 4 and chose to be the primary human reviewer after a

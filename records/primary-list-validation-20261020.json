@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-20",
+  "base_commit": "872ca412d2842133b514edf147d5cdc3829274de",
+  "branch": "codex/weft-biological-listing-20261020",
+  "policy_id": "core-biology-cns-v1",
+  "scope": "Synthetic software enforcement tests, not prospective retrieval or scientific-quality evaluation",
+  "command": "python -m unittest discover -s tests -q",
+  "tests_run": 332,
+  "passed": 307,
+  "existing_platform_skips": 25,
+  "failures": 0,
+  "listing_regression_tests": 14,
+  "critic_review": "Separate critic reviewed semantics/implementation; three identified defects corrected and final deltas accepted with no remaining material defect",
+  "fixed_defects": ["standalone discovery admission bypass", "lost deterministic exclusion reason", "missing exact Science provider-title alias"],
+  "journal_alias_source": "https://www.ncbi.nlm.nih.gov/nlmcatalog/0404511",
+  "new_live_paper_scans": 0,
+  "independent_quality_reference_records": 0,
+  "scientific_execution_allowed": false,
+  "clinical_exceptions_enabled": false,
+  "ravel_modified": false,
+  "existing_holds_preserved": true
+}

@@ -236,7 +236,7 @@ def stream_key(query, field, context):
 
 
 def discover(store, context, query, *, since, until, date_field="FIRST_IDATE",
-             max_records=200, page_size=100, overlap_days=7, client=None):
+             max_records=200, page_size=100, overlap_days=7, client=None, listing_policy=None):
     key = stream_key(query, date_field, context)
     previous = store.watermark(key)
     if type(overlap_days) is not int or not 0 <= overlap_days <= 90:
@@ -275,6 +275,9 @@ def discover(store, context, query, *, since, until, date_field="FIRST_IDATE",
                "ravel_commit": context["ravel_commit"], "previous_watermark": previous,
                "max_records": max_records, "page_size": page_size, "pages": pages,
                "scientific_execution": False, "watermark_advanced": False}
+    if listing_policy is not None:
+        receipt['listing_policy'] = listing_policy
+        receipt['listing_policy_sha256'] = digest(listing_policy)
     try:
         result = (client or EuropePMC()).search(full_query, on_page, page_size=page_size, max_records=max_records)
         grouped = deduplicate(result["records"])

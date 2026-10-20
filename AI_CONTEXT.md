@@ -1,5 +1,13 @@
 # Agent entry point
 
+- Latest: [primary paper-list scope](docs/PRIMARY_PAPER_LIST.md). New CLI scans
+  use named CNS journals and biological field/mechanism constraints. Source-cited
+  primary-research/system/endpoint/mechanism judgments gate reading admission.
+  No percentile-only admission or clinical exception. The tooth candidate is
+  strictly excluded; materials-led hydrogel studies are outside this primary
+  list. Historical evidence, holds and Ravel remain unchanged. This is reading
+  prioritization, not completed independent scientific-quality evaluation.
+
 - Latest: [phase-4 scientific-quality review](docs/PHASE4_SCIENTIFIC_QUALITY_REVIEW.md).
   A separate critic audited the evaluator and two exposed non-B4 abstract cases.
   A private, hash-bound critic-to-human handoff is prepared with no human labels.

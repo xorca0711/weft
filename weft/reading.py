@@ -59,6 +59,8 @@ def extract_xml(body, expected_pmcid):
 
 
 def prepare_reading(store, candidate_id, fetch=fetch_xml, *, reuse=None):
+    from .listing import require_admission
+    require_admission(store, candidate_id)
     row = store.db.execute("SELECT * FROM candidates WHERE id=?", (candidate_id,)).fetchone()
     if not row or not row["current"] or row["status"] != "read_next":
         raise ValueError("A current read_next decision is required")

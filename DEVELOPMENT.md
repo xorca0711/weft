@@ -28,6 +28,12 @@ autonomous workflow completion and scientific acceptance are not claimed.
 
 | 2026-10-12 | Portable reading references and existing-cloud screening qualification | Owner requested scope; Codex implemented path fix | Owner authorized work; new network grant pending | Local recovery passed; cloud work stopped at missing host permission | Preserve evidence and Choi while requiring explicit access decisions |
 
+Additional responsibility record:
+
+| Date | Item | Proposed by | Decided by | Decision | Reason |
+|---|---|---|---|---|---|
+| 2026-10-20 | Confine primary reading lists to relevant core biology and named CNS journals | Owner specified scope; Codex implemented and critic reviewed | Owner for reading preference; no scientific acceptance | Versioned query and source-cited admission gates; named clinical exceptions remain empty | Exclude keyword-only, periodontal and materials-led candidates; preserve history, holds and Ravel |
+
 ## Rejected or substantially revised AI proposals
 
 | Date | Proposal | Why changed | Changed/rejected by |
@@ -41,6 +47,11 @@ autonomous workflow completion and scientific acceptance are not claimed.
 | 2026-10-12 | Treat the first lexical candidates as a priority shortlist or completed scientific screening | Dental alveolar matches, duplicate per-RQ review cost and incomplete source coverage require separate evaluation; retain frozen results | Codex implementation review; proposed query/ranking revisions remain unadopted |
 
 Future reviews append decisions and rejections rather than overwriting them.
+
+| Date | Proposal | Why changed | Changed/rejected by |
+|---|---|---|---|
+| 2026-10-20 | Retain hydrogel reading interest and use top-decile journals as the primary breadth limit | Owner requested core biological mechanisms and a narrower named CNS journal list; tooth and materials-led candidates excluded | Owner |
+| 2026-10-20 | Initial primary-list gate implementation | Critic found a standalone-reader bypass, lost exclusion reasons and a missing exact Science alias; each fixed with regression coverage | Independent critic; Codex implemented corrections |
 
 ### Backend review disposition — 13 October 2026
 

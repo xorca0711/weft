@@ -21,8 +21,10 @@ belong to the later eligibility stage, not the discovery index itself.
 
 Index presence does not establish peer review or merit. The candidate list retains
 publication types, dates and source identities; preprints and reviews can occur.
-Cell/Nature/Science can be prioritized in a later reviewed ranking, but the batch
-requires a broad stream and does not use journal prestige as an eligibility gate.
+Historical batches retain this broad nomination behavior. New CLI batches use
+the owner's [primary-list policy](PRIMARY_PAPER_LIST.md), including named CNS
+journals for reading priority. Journal prestige never grants scientific
+eligibility. The broad stream now operates within the named reading scope.
 The current FIRST_IDATE window selects newly indexed records, which need not be
 newly published articles. A0/A1 query coverage does not cover all 32 Ravel RQs.
 
