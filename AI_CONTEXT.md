@@ -1,5 +1,22 @@
 # Agent entry point
 
+- Current architecture implementation is prepared for PR under the owner's
+  explicit commit/push request. See [roadmap](docs/EVIDENCE_GENERATION_ROADMAP.md),
+  [status](docs/IMPLEMENTATION_STATUS_20261025.md) and
+  [validation](records/technical-preparation-validation-20261025.json).
+  Offline records/packages, shared-ledger preparation, bounded inert transfer,
+  fixture numerical review/view/dry export and R01 calculation mechanics exist.
+  Live start, authenticated runtime controls and trusted terminal reconciliation
+  remain unavailable. Preserve B4 hold, closed Choi, M6 off and unchanged Ravel.
+- Original reading evaluation remains unpassed. AI performs routine source
+  audits; consequential scientific choices require recorded review. A real R01
+  pilot still needs actual matrix inspection, resolved labels/recipe/targets,
+  environment freeze and qualified runtime enforcement. Source records, reading
+  decisions, support identifiers and recovery credentials remain private.
+- Changed implementation hashes require new package/preparation versions.
+  Preserve original packages, demo and run records. PROGRESS owns current delivery
+  state; historical entries below describe their original checkpoints.
+
 - Latest technical component: [offline cloud-result intake](docs/CLOUD_RETURN_INTAKE.md).
   PR #16 is merged at `26890de` with passing main CI. The new verifier binds
   returned synthetic evidence to an acknowledged task and frozen fixture contract,

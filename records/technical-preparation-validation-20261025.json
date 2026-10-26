@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "kind": "technical-preparation-validation",
+  "review_date": "2026-10-25",
+  "status": "local-components-tested-live-runtime-and-pilot-held",
+  "checks": [
+    {
+      "command": "python -m unittest discover -s tests -q",
+      "tests": 455,
+      "passed": 430,
+      "skipped": 25,
+      "failed": 0,
+      "seconds": 248.195,
+      "scope": "Full suite before final combined staging/scratch/output disk-budget guard"
+    },
+    {
+      "command": "python -m unittest discover -s tests -p test_author_*.py -q",
+      "tests": 44,
+      "passed": 44,
+      "skipped": 0,
+      "failed": 0,
+      "seconds": 71.084,
+      "scope": "After final guard and added regression; unaffected full-suite checks reused"
+    },
+    {
+      "command": "python -m weft validate",
+      "passed": true,
+      "local_links": 266,
+      "pinned_files": 15,
+      "scientific_execution_enabled": false
+    },
+    {
+      "command": "git diff --check plus untracked text whitespace scan",
+      "passed": true
+    }
+  ],
+  "initial_failures_resolved": [
+    "Wrong digest import corrected to weft.identity",
+    "Windows Python 3.12 path and descriptor ctime differ. Exact bytes, device/inode, size, mtime and link count remain checked; Linux additionally checks ctime."
+  ],
+  "source_data_inspection": {
+    "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-026-72331-w/MediaObjects/41467_2026_72331_MOESM11_ESM.xlsx",
+    "bytes": 9965527,
+    "sha256": "e74d84dea486e151c31c55ecdab34533d34e597d366289cace5e79c533601adc",
+    "download_cap_bytes": 16777216,
+    "zip_expansion_cap_bytes": 67108864,
+    "declared_uncompressed_bytes": 10060750,
+    "sheets": 6,
+    "populated_cells": 1192,
+    "fig1_targets_or_cell_labels_recovered": false,
+    "formulas_executed": false,
+    "embedded_images_inspected": false,
+    "original_and_cell_report_private": true
+  },
+  "repository": {
+    "branch": "codex/weft-evidence-architecture",
+    "head": "157f0332a8e8974534d5c6bc696787a943c7fb6d",
+    "origin_main": "1f258a27408b1e52deba2acdaf02b87a65d51988",
+    "committed_trees_equal": true,
+    "tracked_modified_files": 13,
+    "untracked_files": 40,
+    "staged_files": 0,
+    "open_pull_requests": 0,
+    "main_ci": "https://github.com/xorca0711/weft/actions/runs/39377509730",
+    "main_ci_conclusion": "success",
+    "primary_checkout_clean": true,
+    "commit_push_merge_performed": false
+  },
+  "support_status": {
+    "prior_escalation_preserved": true,
+    "current_runtime_status_tool_present": false,
+    "narrow_connected_gmail_search_matches": 0,
+    "support_account_coverage_verified": false,
+    "help_center_conversation_rechecked": false,
+    "repair_established": false,
+    "repeat_occurrence_started": false
+  },
+  "limitations": [
+    "Windows platform skips retain Linux CI dependency; no live kernel qualification",
+    "No provider admission, quota, independent watchdog, termination reconciliation or remote qualification",
+    "Transfer requires trusted quiescent directories; hashes do not authenticate a worker",
+    "Full suite not repeated after final narrow guard; affected author suite passed",
+    "Real R01 matrices, labels/recipe/targets, environment lock and scope review remain pending",
+    "Historical packages/preparations preserved; changed implementation pins require new versions",
+    "Original frozen reading benchmark remains unpassed"
+  ],
+  "files": {
+    "weft/evidence.py": "69a5c0bfeddba96eb6472b4cdd7d83ee714e937aef59ed3ed4273c0fa943fd02",
+    "weft/scientific.py": "366ba74f11297b070ba4525a1f7665f79df02852dd4770c9139528bb4fee5b1b",
+    "weft/science_adapter.py": "462e5e1284636d2244bc8500fcfe1be49a7198f3b12bcc8558f0908ca5f89a53",
+    "weft/science_review.py": "1c427b28255ef9fd88f656734813857b180598597e0cb7facf4490ac4dce445f",
+    "weft/jobs.py": "de6ca1352f03f3eb29110eeba7b410f804ee1219593786ebd366b510bb435c57",
+    "weft/author_isolation.py": "d4d3368fc64626824f3fcf2a32ea123d15bce6df0cb4141139c50c3012d54a50",
+    "weft/author_worker.py": "4f3a872885d32e93f056111ce8e9fd3259b2b9d8fd8418a39cb15fcc57d486ef",
+    "weft/author_attempts.py": "ff9ac3c12f9fc319e4e569abfb593b7b6129ad550add4344fadcd6a261563fed",
+    "weft/author_transfer.py": "195d9e4db8b80744874fd1390d6510c6716d0efed92849e5d8dce9892af425e6",
+    "weft/author_canary.py": "d82bf259d2220fffafc5429e74be8ad91ff6d2044aba0c9ceb7557f7fc983c9e",
+    "weft/r01_analysis.py": "b6ea3a0d5399a3c8cda3e502f0b75332c50497c48ad3faf7d430ae36e8828bf8",
+    "tests/test_evidence.py": "fdf8ce64f8962541fabc19444744728ef5ff53ae76fbd77fc867081475b86c26",
+    "tests/test_science_pipeline.py": "e4f3a3c73f5d60a8de581ca75499e97d30f194052a91ac06132878cb74db5387",
+    "tests/test_author_isolation.py": "fb38a47151b9c5335371af6ef7786f77e64d93ec6337fe0bcf6d97b09c7470cf",
+    "tests/test_author_worker.py": "b3f1e486b5d7123250656d79c80d86566ec04f2a1d91c1bce255c0af6f1fe1e6",
+    "tests/test_author_attempts.py": "24bfbfe89ba67c67d102d717fd1a6bdea7dd233d42b2c135eac100101b132ff6",
+    "tests/test_author_transfer.py": "a02b39b209d25a15b64b2a850f0cb16f7258d2361aceed4d3a6807233cee8dce",
+    "tests/test_author_canary.py": "9443b5adbd8343e605cf147daae6a3bdb7040de391b3e1fc77f511f479746ddd",
+    "tests/test_r01_analysis.py": "55da4fcdc2c26436eb590d1ff33eb1a93a4a91e464171793d48486e58aaf3268",
+    "docs/qualification/AUTHOR_WORKER_INTEGRATION.md": "5ca5153b4c7cf15f3db8baf6cb72056b5e370f9c9d6a6de2a1ccd2fe44492b21",
+    "docs/qualification/AUTHOR_QUALIFICATION_CAMPAIGN.md": "894b88df2a2d5f43a67d0c5fff87e0942b98dbdbec40c3cd54cd96dfc0d3b76e",
+    "docs/proposals/R01_IMPLEMENTATION_PREPARATION.md": "9ee4e91f72b0aaca71b187df87cd0ee753a3cb85d521b563c67cf75d8d0f2ad2",
+    "docs/IMPLEMENTATION_STATUS_20261025.md": "5e09c32c604f3f7795d8918def3e051744bbe683b0a48844a069ef2f5d7db258"
+  },
+  "dispatch_authorized": false,
+  "runtime_qualified": false,
+  "scientific_acceptance": false,
+  "author_code_executed": false,
+  "schedules_activated": false,
+  "ravel_changed": false
+}

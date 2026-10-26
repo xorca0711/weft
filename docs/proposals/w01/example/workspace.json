@@ -1,0 +1,21 @@
+{
+  "schema_version": "w01-0.1-draft",
+  "kind": "workspace",
+  "record_scope": "proposal-only",
+  "created_at": "2026-10-21T00:00:00Z",
+  "actor": {
+    "id": "synthetic-example-author",
+    "kind": "fixture",
+    "identity_basis": "self-reported"
+  },
+  "dispatch_authorized": false,
+  "canonical_acceptance": false,
+  "revision": 1,
+  "previous": null,
+  "amendment_reason": null,
+  "workspace_id": "ww-11111111111111111111111111111111",
+  "storage_class": "private",
+  "execution_ledger_id": null,
+  "ownership_review": null,
+  "ravel_context": null
+}

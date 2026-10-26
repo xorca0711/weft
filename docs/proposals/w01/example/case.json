@@ -1,0 +1,65 @@
+{
+  "schema_version": "w01-0.1-draft",
+  "kind": "case-revision",
+  "record_scope": "proposal-only",
+  "created_at": "2026-10-21T00:00:00Z",
+  "actor": {
+    "id": "synthetic-example-author",
+    "kind": "fixture",
+    "identity_basis": "self-reported"
+  },
+  "dispatch_authorized": false,
+  "canonical_acceptance": false,
+  "revision": 1,
+  "previous": null,
+  "amendment_reason": null,
+  "workspace_id": "ww-11111111111111111111111111111111",
+  "article_id": "wa-22222222222222222222222222222222",
+  "case_id": "wc-33333333333333333333333333333333",
+  "workspace": {
+    "root": "workspace",
+    "path": "workspace.json",
+    "sha256": "26c8747c87fde33d38837a516f1edc8fc627eb723bddf239fa197b55c33e4cd0",
+    "bytes": 556
+  },
+  "source_manifest": {
+    "root": "workspace",
+    "path": "source-manifest.json",
+    "sha256": "f2de4820320ebb65913c992e1b7ef68937895cc2713bf60483724c009568992e",
+    "bytes": 1158
+  },
+  "purpose": "description",
+  "analysis_mode": "exploration",
+  "question": "Synthetic example of a proposed case with unresolved scientific dependencies.",
+  "comparison": null,
+  "endpoint": null,
+  "inference_scope": "unresolved",
+  "exposure": {
+    "mode": "synthetic-fixture",
+    "note": "Fictional IDs and timestamp for schema review; no real scientific or owner record.",
+    "evidence": []
+  },
+  "dependencies": {
+    "inputs": null,
+    "units": null,
+    "feasibility": null,
+    "contract": null,
+    "code": null,
+    "environment": null
+  },
+  "holds": [
+    {
+      "code": "proposal-only",
+      "reason": "Ownership review, scientific payloads and runtime qualification are absent.",
+      "blocks": [
+        "data-qualification",
+        "contract-freeze",
+        "execution",
+        "scientific-review",
+        "export",
+        "integration"
+      ],
+      "reopening_condition": "This example is not activated; a future real case requires reviewed schema and applicable approvals/evidence."
+    }
+  ]
+}

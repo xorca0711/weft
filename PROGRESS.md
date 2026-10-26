@@ -2,6 +2,35 @@
 
 Update this before stopping work, every session.
 
+## Architecture implementation prepared for PR — 26 October 2026
+
+The owner requested commit, push and a pull request for the architecture work.
+The unpublished branch was aligned with the identical committed tree on main;
+working files and historical evidence were preserved. Public handoff summaries
+are staged separately from private local reading notes and run artifacts.
+
+W01–W03 supply immutable provisional workspaces, source/unit/lineage checks and
+bounded plans. W04–W05 supply pinned packages, fixture recovery, shared-ledger
+author preparation, inert staging and quarantined streaming output verification.
+W06–W07 supply numerical checks, critique and private evidence views. W09 supplies
+a dry handoff. R01 calculation mechanics and the bounded qualification canary are
+prepared; no real author-code start or trusted terminal release is implemented.
+
+Validation reused unchanged source hashes: full suite 455 tests, 430 passed and
+25 platform skips, followed by 44 passing author tests after the final disk-budget
+guard and its regression. The public staged snapshot receives fresh documentation,
+pin and whitespace checks. Linux CI remains the cross-platform verification step.
+See [validation](records/technical-preparation-validation-20261025.json) and
+[publication preparation](records/pr-preparation-20261026.json).
+
+Remaining dependencies are supported provider admission, quota/watchdog/termination
+integration and live qualification; R01 input/recipe/environment freeze and review;
+the actual pilot and optional canonical handoff; durable remote qualification.
+The frozen reading evaluation remains unpassed. B4 remains held, Choi closed,
+M6 off and Ravel unchanged. No new privileges, paid execution or schedules follow
+from this PR. The [roadmap](docs/EVIDENCE_GENERATION_ROADMAP.md) and
+[implementation status](docs/IMPLEMENTATION_STATUS_20261025.md) retain phase exits.
+
 ## PR #16 merged; offline cloud-result intake — 20 October 2026
 
 Owner explicitly requested review and merge. Root reviewed PR #16 at unchanged

@@ -1,43 +1,31 @@
 # Weft interfaces, backend and evidence storage
 
-Status: 12 October 2026. Weft has an agent/CLI interface and repository-based
-review surfaces. It does not yet have a dedicated web dashboard or unattended
-paper-to-analysis service. A manual cloud route has been qualified.
+## Current architecture and historical storage
 
-## Frontend and backend
+The [README workflow and backend diagrams](../README.md#intended-workflow) are
+now the single diagram source. They distinguish implemented discovery/B3/manual
+review from the proposed paper-to-analysis loop. Existing status and source-review
+exports and a private fixture-backed scientific evidence view are available;
+real scientific results remain pending.
 
-```mermaid
-flowchart TD
-    subgraph FRONT["Interfaces used by the owner"]
-        CHAT["Codex / dot chat: request, review and authorize"]
-        REPORT["Candidate lists, source packets and Markdown reports"]
-        PR["GitHub PRs: scientific disposition and integration"]
-    end
-    subgraph BACK["Weft backend: commands and state"]
-        SEARCH["Europe PMC adapter: bounded search and deduplication"]
-        BUFFER["SQLite decision buffer: proposed paper-to-RQ links"]
-        SCREEN["Agent screening: read next / hold / reject link"]
-        REVIEW["Figures, supplements and dataset-use review: partial; B4 held"]
-        RUN["Separately authorized Ravel contract and cloud execution"]
-        QC["Output hashes, QC, paper comparison and limitations"]
-    end
-    CHAT --> SEARCH --> BUFFER --> SCREEN --> REPORT
-    SCREEN --> REVIEW
-    REVIEW -. "Reviewed handoff" .-> INTAKE["Ravel / weft_intake: trial intake"]
-    INTAKE -. "Eligibility, readiness and authorization required" .-> RUN --> QC --> PR
-    RQ["Ravel RQs: pinned read-only context"] --> BUFFER
-    RUN --> DRIVE["Private Drive: verified recovery checkpoints"]
-    PR --> RAVEL["Ravel / weft_intake: reviewed trial dossier and evidence locators"]
-    QC --> RELEASE["Reviewed public outputs: GitHub Release"]
-    RELEASE --> RAVEL
-```
+The [evidence-generation roadmap](EVIDENCE_GENERATION_ROADMAP.md) owns W01–W12:
+provisional workspaces, data/analysis contracts, bounded execution, numerical
+critique, recovery, scientific decisions and optional Ravel handoff. The owner
+delegated implementation of W01's provisional ownership separation. The
+[offline workspace](EVIDENCE_WORKSPACE.md) now stores versioned source/case,
+feasibility and contract records in a new explicitly configured private root.
+Scientific execution remains held, and no historical storage is migrated.
 
-Chat is the control/review interface; the Python commands, SQLite records,
-source snapshots and explicit cloud jobs do the backend work. Google Drive is
-recovery storage. It is not Google Cloud compute or a running database service.
-GitHub Actions checks software/provenance and restores approved outputs; it does
-not run the biological analysis. No supported unattended launcher, durable shared
-queue or recurring schedule has been qualified.
+Chat is the request/review interface. Existing Python commands, local catalogs,
+source snapshots and saved returns provide the implemented backend. Google Drive
+is recovery storage, not compute or a running shared database. GitHub Actions
+checks software and provenance. Supported unattended dispatch, authoritative
+remote coordination and recurrence remain unqualified.
+
+The paper-flow and Choi storage details below describe the recorded 12 October
+baseline. They are historical evidence, not instructions to reopen a closed pilot.
+PROGRESS owns current status; EVIDENCE_WORKSPACE defines the separate private
+provisional workspace paths and their implemented boundaries.
 
 ## Actual paper flow and gate coverage
 
@@ -124,9 +112,9 @@ become canonical `RQ_Specified/A*` questions. No new canonical RQ was created he
 
 ## Further development
 
-The next backend stage is B5 independent evaluation preparation and supported
-launcher/recovery qualification. Freeze sampling, independent labels and decision
-criteria before claiming unseen-paper accuracy. Complete B4 only after its platform
-hold is resolved. M6 scheduling remains disabled until evaluation, launcher and
-explicit cadence/scope/usage decisions are settled. No additional cloud worker or
-scientific dispatch is created by this guide.
+Follow [W01–W12](EVIDENCE_GENERATION_ROADMAP.md#implementation-jobs-and-completion-evidence)
+for the proposed evidence-generation work and cloud dependencies. Preserve the
+frozen B5 evaluation and retain outcome exposure in any prospective amendment.
+B4 remains held/excluded, Choi closed and M6 disabled. A fresh scientific case
+requires reviewed ownership, a bounded contract and a qualified permitted runtime;
+no new worker, dispatch or Ravel write follows from this guide.
