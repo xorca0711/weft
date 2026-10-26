@@ -7,6 +7,12 @@ use-specific proposal consistency checks. Semantic claim review and G3–G8
 runtime transitions are not. Ravel's existing
 gate remains the execution authority for Ravel analysis.
 
+The [offline evidence workspace](EVIDENCE_WORKSPACE.md) adds immutable record,
+file/unit consistency and frozen-plan checks. These are preparation for G3/G4,
+not implemented scientific acceptance transitions. Every scientific preflight
+currently holds; source truth, review authority and runtime enforcement are not
+established by those record checks.
+
 The [batch interface](BATCH_SCREENING.md) enforces bounded discovery, current-source
 response ingestion and attempted XML-read limits. It does not implement the full
 gate engine below. Agent reasons and actor identities are not semantically or

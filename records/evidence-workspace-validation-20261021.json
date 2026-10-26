@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "offline-evidence-workspace-validation",
+  "date": "2026-10-21",
+  "scope": "Synthetic software checks only; no scientific execution or authenticated design approval",
+  "source_sha256": {
+    "weft/evidence.py": "5e109033ea90d6e2371594971b1bc33d3a04272802247aea1b7419766ae8f94a",
+    "weft/scientific.py": "db2e3af7b320bd15b74f24e2629bf3882dda46ead4d082635acbc37904a17b1f",
+    "weft/__main__.py": "bee55904b665f678b68f9fe6372e4c0a735519970829e540b8aa9998930cf603",
+    "tests/test_evidence.py": "fdf8ce64f8962541fabc19444744728ef5ff53ae76fbd77fc867081475b86c26"
+  },
+  "targeted": {
+    "command": "python -m unittest discover -s tests -p test_evidence.py -q",
+    "tests": 21,
+    "passed": 21,
+    "skipped": 0
+  },
+  "full_suite": {
+    "command": "python -m unittest discover -s tests -q",
+    "tests": 384,
+    "passed": 359,
+    "skipped": 25,
+    "failed": 0,
+    "seconds": 34.557
+  },
+  "scientific_execution_enabled": false,
+  "canonical_acceptance": false,
+  "remaining": [
+    "W04 scientific adapter and W05 attempt/recovery integration",
+    "W06 numerical QC and W07 scientific evidence view",
+    "W08 real pilot and independent evaluation",
+    "W09 scientific handoff",
+    "W10 supported runtime capability and same-occurrence binding",
+    "W11 durable remote operation and W12 optional recurrence"
+  ],
+  "repository_validation": {
+    "ok": true,
+    "scope": "offline-configuration-and-documentation",
+    "local_links": 248,
+    "pinned_files": 15,
+    "scientific_execution_enabled": false
+  },
+  "additional_document_check": {
+    "documents": 9,
+    "local_links_and_anchors": 142
+  }
+}

@@ -1,10 +1,35 @@
 # Full-text review and remaining qualification
 
+The [evidence-generation revision](EVIDENCE_GENERATION_ROADMAP.md#phase-4-and-the-scientists-role)
+adds the proposed scientific-development work: a bounded analysis pilot with
+actual results, critique and consequential owner decisions. It does not replace
+or pass the frozen reading evaluation. Any new evaluation plan needs its own
+prospective amendment and appropriate independent references. W01–W09 describe
+the implementation gap; L1–L4 below retain their technical meaning and holds.
+
 Phase 4 now carries retained full texts, critic findings and separate human
 decisions through the existing private exporter. Transfer verification checks
 the source bundle and recomputes its accounting without resuming a job. These
 are software capabilities. Independent scientific-quality evaluation remains
 pending, and the existing L0–L4 deployment sequence is unchanged.
+
+Current evaluation status, checked 25 October: the 20 October 12-item development
+package and criteria were frozen after owner approval (10/12 reading agreement,
+12 completed claim audits, zero critical errors as a pilot continuation rule).
+The 21 October owner amendment delegated routine source auditing to AI and changed
+the active workflow to assisted reading review. Twelve bounded AI source audits
+exist; they are not independent human reference judgments. Individual reading
+decisions remain private; unresolved field/source interpretation issues remain
+in the retained evaluation records. The original evaluation remains unpassed; any
+assisted agreement is descriptive, not a retroactive blind score. No routine claim
+audit form is required from the owner under the amended workflow.
+
+The immediate Phase 4 gap is adjudicated scientific/evaluation evidence with an
+appropriate reference and exposure record. It does not require the missing cloud
+runtime-status interface to continue offline source review or software development.
+The R01 scientific pilot and its separate runtime/isolation prerequisites belong
+to W08/W10. A new evidence-generation evaluation needs prospective criteria rather
+than silently repurposing the original reading-preference benchmark.
 
 ## Multi-source review contract
 
@@ -79,7 +104,7 @@ numbering, schedule or deployment authorization.
 
 | Stage | Work completed locally | Evidence still required |
 |---|---|---|
-| Phase 4 / B5 | Critic-first development review, separate decision import, source-bound export and inactive transfer verification | A prospective owner-reviewed evaluation plan, independent human references and comparison bibliography; real scored outcomes under that plan |
+| Phase 4 / B5 | Review/export/transfer software; frozen 12-item development package; later AI-assisted source audits and R01 owner reading keep | Qualified reference judgments, resolution of retained issues and scored outcomes consistent with recorded exposure. Broader recall claims also need an independent bibliography; new evidence-generation endpoints need prospective criteria |
 | L1: native runtime qualification | Existing exact-occurrence launch journal and preserved runtime-HOLD evidence | New platform evidence resolving missing runtime-status capability; then the permitted same-occurrence bounded test and verified result. No replacement launch/retry is justified now |
 | L2: durable remote recovery | Existing local duplicate/lost-acknowledgement/restore controls; new review-bundle transfer checks | Supported authoritative remote writer or enforced fencing, remote cancellation/recovery and operation without a PC callback |
 | L3: bounded integrated operation | Local coordinator, listing gates, material intake, status/review export | Qualified launcher plus independently evaluated search/screening and source-access routes; operational denominators including failures and holds |
@@ -94,12 +119,17 @@ Institutional-browser full-text access and automated cloud-runtime availability
 are different dependencies. Improving file handoff resolves a local integration
 gap; it does not establish the cause of the app/CLI launch failure or repair a
 missing runtime capability. Keep the existing
-[native runtime diagnosis](qualification/NATIVE_RUNTIME_HOLD.md) and unsent
-support request; no repeated probe, alternate environment or new service follows
+[native runtime diagnosis](qualification/NATIVE_RUNTIME_HOLD.md) and support
+request (submitted and escalated on 21 October); no repeated probe, alternate environment or new service follows
 from this implementation. The [remote architecture](REMOTE_AUTOMATION_ARCHITECTURE.md)
 owns the eventual qualification sequence.
 
-## Draft independent evaluation design — not frozen or run
+## Historical draft independent evaluation design
+
+The draft below predates the accepted 20 October design/frozen development package
+and the 21 October assisted-review amendment summarized above. Its statements that
+sample size and numerical criteria are unset describe that earlier checkpoint,
+not the current state. The original frozen private artifacts remain unchanged.
 
 Purpose: assess Weft's reading-selection errors, unsupported statements, false
 data/RQ readiness and appropriate uncertainty on a bounded future paper sample.

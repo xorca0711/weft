@@ -1,0 +1,210 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "W01 core record proposal, not an execution contract",
+  "$comment": "Review artifact only. No production importer or gate consumes this draft. File identity, authority, state and filesystem checks require separate implementation.",
+  "oneOf": [
+    {"$ref": "#/$defs/workspace"},
+    {"$ref": "#/$defs/sourceManifest"},
+    {"$ref": "#/$defs/caseRevision"}
+  ],
+  "$defs": {
+    "text": {"type": "string", "minLength": 1, "maxLength": 8192},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "workspaceId": {"type": "string", "pattern": "^ww-[0-9a-f]{32}$"},
+    "articleId": {"type": "string", "pattern": "^wa-[0-9a-f]{32}$"},
+    "caseId": {"type": "string", "pattern": "^wc-[0-9a-f]{32}$"},
+    "path": {
+      "type": "string", "minLength": 1, "maxLength": 1024,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*//)(?!.*[\\\\:\\x00-\\x1f])[A-Za-z0-9._/-]+(?<!/)$",
+      "$comment": "Conservative portable syntax only; real filesystem containment and platform alias checks are still required."
+    },
+    "fileRef": {
+      "type": "object", "additionalProperties": false,
+      "required": ["root", "path", "sha256", "bytes"],
+      "properties": {
+        "root": {"enum": ["workspace", "inputs", "sources"]},
+        "path": {"$ref": "#/$defs/path"},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "bytes": {"type": "integer", "minimum": 0}
+      }
+    },
+    "optionalRef": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/fileRef"}]},
+    "optionalText": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/text"}]},
+    "actor": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "kind", "identity_basis"],
+      "properties": {
+        "id": {"$ref": "#/$defs/text"},
+        "kind": {"enum": ["human", "agent", "fixture"]},
+        "identity_basis": {"const": "self-reported"}
+      }
+    },
+    "base": {
+      "type": "object",
+      "required": ["schema_version", "kind", "record_scope", "created_at", "actor", "dispatch_authorized", "canonical_acceptance"],
+      "properties": {
+        "schema_version": {"const": "w01-0.1-draft"},
+        "kind": {"enum": ["workspace", "source-manifest", "case-revision"]},
+        "record_scope": {"const": "proposal-only"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "actor": {"$ref": "#/$defs/actor"},
+        "dispatch_authorized": {"const": false},
+        "canonical_acceptance": {"const": false}
+      }
+    },
+    "versioned": {
+      "type": "object",
+      "required": ["revision", "previous", "amendment_reason"],
+      "properties": {
+        "revision": {"type": "integer", "minimum": 1},
+        "previous": {"$ref": "#/$defs/optionalRef"},
+        "amendment_reason": {"$ref": "#/$defs/optionalText"}
+      },
+      "if": {"properties": {"revision": {"const": 1}}},
+      "then": {"properties": {"previous": {"type": "null"}, "amendment_reason": {"type": "null"}}},
+      "else": {"properties": {"previous": {"$ref": "#/$defs/fileRef"}, "amendment_reason": {"$ref": "#/$defs/text"}}}
+    },
+    "ravelContext": {
+      "type": "object", "additionalProperties": false,
+      "required": ["repository", "commit", "lock_sha256", "rq_ids"],
+      "properties": {
+        "repository": {"const": "https://github.com/xorca0711/ravel.git"},
+        "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "lock_sha256": {"$ref": "#/$defs/sha256"},
+        "rq_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^A[0-9]+$"}}
+      }
+    },
+    "workspace": {
+      "allOf": [{"$ref": "#/$defs/base"}, {"$ref": "#/$defs/versioned"}],
+      "type": "object", "unevaluatedProperties": false,
+      "required": ["workspace_id", "storage_class", "execution_ledger_id", "ownership_review", "ravel_context"],
+      "properties": {
+        "kind": {"const": "workspace"},
+        "workspace_id": {"$ref": "#/$defs/workspaceId"},
+        "storage_class": {"const": "private"},
+        "execution_ledger_id": {"$ref": "#/$defs/optionalText"},
+        "ownership_review": {"$ref": "#/$defs/optionalRef"},
+        "ravel_context": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/ravelContext"}]}
+      }
+    },
+    "origin": {
+      "type": "object", "additionalProperties": false,
+      "required": ["catalog_id", "batch_id", "candidate_id", "packet_sha256"],
+      "properties": {
+        "catalog_id": {"$ref": "#/$defs/text"},
+        "batch_id": {"$ref": "#/$defs/text"},
+        "candidate_id": {"$ref": "#/$defs/text"},
+        "packet_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "resource": {
+      "type": "object", "additionalProperties": false,
+      "required": ["resource_id", "version", "locator", "access", "inspection", "file", "limits"],
+      "properties": {
+        "resource_id": {"$ref": "#/$defs/text"},
+        "version": {"$ref": "#/$defs/text"},
+        "locator": {"$ref": "#/$defs/text"},
+        "access": {"enum": ["retained", "listed-only", "unavailable"]},
+        "inspection": {"enum": ["not-inspected", "metadata-only", "caption-only", "inspected"]},
+        "file": {"$ref": "#/$defs/optionalRef"},
+        "limits": {"$ref": "#/$defs/text"}
+      },
+      "if": {"properties": {"access": {"const": "retained"}}},
+      "then": {"properties": {"file": {"$ref": "#/$defs/fileRef"}}},
+      "else": {"properties": {"file": {"type": "null"}}}
+    },
+    "sourceManifest": {
+      "allOf": [{"$ref": "#/$defs/base"}, {"$ref": "#/$defs/versioned"}],
+      "type": "object", "unevaluatedProperties": false,
+      "required": ["workspace_id", "article_id", "bibliography", "origin", "resources"],
+      "properties": {
+        "kind": {"const": "source-manifest"},
+        "workspace_id": {"$ref": "#/$defs/workspaceId"},
+        "article_id": {"$ref": "#/$defs/articleId"},
+        "bibliography": {
+          "type": "object", "additionalProperties": false,
+          "required": ["identifiers", "title", "integrity_status"],
+          "properties": {
+            "identifiers": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/text"}},
+            "title": {"$ref": "#/$defs/text"},
+            "integrity_status": {"enum": ["unknown", "concern-recorded", "review-recorded", "synthetic-fixture"]}
+          }
+        },
+        "origin": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/origin"}]},
+        "resources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/resource"}}
+      }
+    },
+    "exposure": {
+      "type": "object", "additionalProperties": false,
+      "required": ["mode", "note", "evidence"],
+      "properties": {
+        "mode": {"enum": ["synthetic-fixture", "historical-replay", "exposed-exploration", "prospective-test"]},
+        "note": {"$ref": "#/$defs/text"},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/fileRef"}}
+      }
+    },
+    "hold": {
+      "type": "object", "additionalProperties": false,
+      "required": ["code", "reason", "blocks", "reopening_condition"],
+      "properties": {
+        "code": {"$ref": "#/$defs/text"},
+        "reason": {"$ref": "#/$defs/text"},
+        "blocks": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"enum": ["data-qualification", "contract-freeze", "execution", "scientific-review", "export", "integration"]}
+        },
+        "reopening_condition": {"$ref": "#/$defs/text"}
+      }
+    },
+    "dependencies": {
+      "type": "object", "additionalProperties": false,
+      "required": ["inputs", "units", "feasibility", "contract", "code", "environment"],
+      "properties": {
+        "inputs": {"$ref": "#/$defs/optionalRef"},
+        "units": {"$ref": "#/$defs/optionalRef"},
+        "feasibility": {"$ref": "#/$defs/optionalRef"},
+        "contract": {"$ref": "#/$defs/optionalRef"},
+        "code": {"$ref": "#/$defs/optionalRef"},
+        "environment": {"$ref": "#/$defs/optionalRef"}
+      }
+    },
+    "caseRevision": {
+      "allOf": [{"$ref": "#/$defs/base"}, {"$ref": "#/$defs/versioned"}],
+      "type": "object", "unevaluatedProperties": false,
+      "required": ["workspace_id", "article_id", "case_id", "workspace", "source_manifest", "purpose", "analysis_mode", "question", "comparison", "endpoint", "inference_scope", "exposure", "dependencies", "holds"],
+      "properties": {
+        "kind": {"const": "case-revision"},
+        "workspace_id": {"$ref": "#/$defs/workspaceId"},
+        "article_id": {"$ref": "#/$defs/articleId"},
+        "case_id": {"$ref": "#/$defs/caseId"},
+        "workspace": {"$ref": "#/$defs/fileRef"},
+        "source_manifest": {"$ref": "#/$defs/fileRef"},
+        "purpose": {"enum": ["description", "replication", "prediction", "perturbation-effect", "exploration"]},
+        "analysis_mode": {"enum": ["reproduction", "adapted-analysis", "exploration"]},
+        "question": {"$ref": "#/$defs/text"},
+        "comparison": {"$ref": "#/$defs/optionalText"},
+        "endpoint": {"$ref": "#/$defs/optionalText"},
+        "inference_scope": {"enum": ["unresolved", "descriptive", "within-sample", "replicated-population"]},
+        "exposure": {"$ref": "#/$defs/exposure"},
+        "dependencies": {"$ref": "#/$defs/dependencies"},
+        "holds": {"type": "array", "items": {"$ref": "#/$defs/hold"}}
+      },
+      "if": {
+        "anyOf": [
+          {"properties": {"comparison": {"type": "null"}}},
+          {"properties": {"endpoint": {"type": "null"}}},
+          {"properties": {"inference_scope": {"const": "unresolved"}}},
+          {"properties": {"dependencies": {"anyOf": [
+            {"properties": {"inputs": {"type": "null"}}},
+            {"properties": {"units": {"type": "null"}}},
+            {"properties": {"feasibility": {"type": "null"}}},
+            {"properties": {"contract": {"type": "null"}}},
+            {"properties": {"code": {"type": "null"}}},
+            {"properties": {"environment": {"type": "null"}}}
+          ]}}}
+        ]
+      },
+      "then": {"properties": {"holds": {"minItems": 1}}}
+    }
+  }
+}

@@ -1,10 +1,22 @@
 # Connection to Ravel
 
+## Provisional storage adopted; scientific execution remains gated
+
+Following the owner's delegated implementation request, the
+[offline workspace](EVIDENCE_WORKSPACE.md) retains provisional article-local
+source/case records, feasibility assessments and frozen plans in Weft. W01's
+ownership separation is adopted for this non-executing scope. The scientific
+adapter, runner compatibility and runtime qualification remain unresolved; the
+Ravel-first execution procedure below has not been redirected or bypassed.
+Existing pilot records are not migrated, and Ravel remains unchanged.
+
 ## Single ownership
 
-Ravel owns questions, paper namespaces, literature context, source contracts,
+Ravel owns canonical questions and paper namespaces, accepted source contracts,
 scientific scripts, run receipts, results and acceptance decisions. Weft owns
-source discovery, agent orchestration, operational policy and job records.
+source discovery, agent orchestration, operational policy, job records and
+explicitly provisional article-local plans/evidence in a separate namespace.
+Provisional records carry no canonical status or scientific execution permission.
 No copy of the canonical RQ register is maintained as a second authority.
 
 The initial connection is read-only and pinned by

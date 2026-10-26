@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "kind": "worker-integration-preparation-validation",
+  "observed_at": "2026-10-21T05:45:25.658055+00:00",
+  "status": "local-preparation-tested-live-execution-held",
+  "support": {
+    "channel": "https://help.openai.com/en/articles/6614161-how-can-i-contact-support",
+    "user_authorized_submission": true,
+    "private_addendum_submitted": true,
+    "existing_ai_host_account_selected": true,
+    "human_escalation_visibly_confirmed": true,
+    "ticket_reference_displayed": false,
+    "response_pending": true,
+    "whole_session_shared": false,
+    "preserved_private_receipt": true,
+    "task_or_environment_changed": false
+  },
+  "checks": [
+    {
+      "command": "python -m unittest discover -s tests -p test_author_worker.py -q",
+      "initial_result": "32 passed in 62.267s; included 23 imported pipeline tests; test import then corrected",
+      "final_result": "9 passed in 10.844s"
+    },
+    {
+      "command": "python -m unittest discover -s tests -p test_author_isolation.py -q",
+      "result": "11 passed in 0.043s"
+    },
+    {
+      "command": "python -m weft validate",
+      "initial_result": "failed: validation-record link did not yet exist",
+      "final_result": "passed: 260 local links, 15 pinned files, scientific_execution_enabled=false"
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed before final documentation closeout"
+    },
+    {
+      "check": "new-file whitespace and changed-guide local links",
+      "result": "passed: 5 files, 12 links"
+    }
+  ],
+  "source_sha256": {
+    "weft/author_worker.py": "0e6025ebc29b3a2c1326e4b3262ea0a79ae5d0d35dd4c75b3eb310030ed9feb1",
+    "weft/author_isolation.py": "d4d3368fc64626824f3fcf2a32ea123d15bce6df0cb4141139c50c3012d54a50",
+    "tests/test_author_worker.py": "b3f1e486b5d7123250656d79c80d86566ec04f2a1d91c1bce255c0af6f1fe1e6",
+    "tests/test_author_isolation.py": "fb38a47151b9c5335371af6ef7786f77e64d93ec6337fe0bcf6d97b09c7470cf",
+    "docs/qualification/AUTHOR_WORKER_INTEGRATION.md": "2dc3e04676f63308d4472863aaee04ed9ab18d1cd6d83a010b6f9a8b98357e31",
+    "docs/proposals/R01_PILOT_CONTRACT_20261021.md": "26d354e6200c0245f98d35b80bde78c14d40f6f6615340f184caa87dcdfa6161"
+  },
+  "r01_source": {
+    "retained_xml_bytes": 212661,
+    "retained_xml_sha256": "f3b297a6f9ee2f932daae83286c897a98b7a7d175ca96d9ea139052bd22cfe0e",
+    "locators": [
+      "Methods/Tissue collection and single-cell preparation",
+      "Methods/Single-cell RNA-seq data analysis",
+      "Results/Regenerated LSC-like cells are transcriptionally nearly equivalent to native LSCs",
+      "fig[@id=Fig1]"
+    ],
+    "geo_metadata": [
+      {
+        "path": "series.txt",
+        "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE303805&targ=self&form=text&view=brief",
+        "bytes": 4156,
+        "sha256": "2031c4b085515b4c34a2234ff70040279e7c1c0b88173904c860a1a8b93d697f"
+      },
+      {
+        "path": "filelist.txt",
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE303nnn/GSE303805/suppl/filelist.txt",
+        "bytes": 1157,
+        "sha256": "247ba3c8659e4f36c88a1d13ad5b547ac487f9cae7e432a59335ada8fd8fb106"
+      },
+      {
+        "path": "GSM9136218.txt",
+        "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM9136218&targ=self&form=text&view=brief",
+        "bytes": 3527,
+        "sha256": "ffffb576fa47eb80bbf72fdaccf191a32520a2c4029a8bb0adebc524874bc12a"
+      },
+      {
+        "path": "GSM9136219.txt",
+        "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM9136219&targ=self&form=text&view=brief",
+        "bytes": 3529,
+        "sha256": "7a1cc6700665de73117951253c21a848bfa64ed246a319d925c0da06aea48410"
+      },
+      {
+        "path": "GSM9136220.txt",
+        "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM9136220&targ=self&form=text&view=brief",
+        "bytes": 3529,
+        "sha256": "6bbf2a5fa141a412667b6acc68ef2bbdd8a206ba6e8013aaae06fd7d23870cd2"
+      },
+      {
+        "path": "GSM9136221.txt",
+        "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM9136221&targ=self&form=text&view=brief",
+        "bytes": 3530,
+        "sha256": "772b97da05fcd4ad4a89727eacd348b3b700c840ba907fd4df9e7ffbfbe5ae9e"
+      },
+      {
+        "path": "GSM9136222.txt",
+        "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM9136222&targ=self&form=text&view=brief",
+        "bytes": 3530,
+        "sha256": "a34ef97be2c3efd961eb6b439051ead277775f97261806d6d32b5c43f7ecd93d"
+      }
+    ],
+    "supplement_index": [
+      {
+        "path": "41467_2026_72331_MOESM3_ESM.xlsx",
+        "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-026-72331-w/MediaObjects/41467_2026_72331_MOESM3_ESM.xlsx",
+        "bytes": 13886,
+        "sha256": "d1aa6caca24b15ad05c44e0d70fc60b3411756ad822eeb8c41f456c967eba35d",
+        "sheet_names": [
+          "Sheet1"
+        ],
+        "matching_labels": [
+          "qLSC",
+          "aLSC",
+          "Gene (Top 50)"
+        ],
+        "inspection": "Workbook metadata/shared strings only; no recalculation, macros or author code."
+      }
+    ],
+    "marker_ranges": {
+      "qLSC": {
+        "range": "A2:A51",
+        "label_range": "B2:B51",
+        "count": 50,
+        "unique_genes": 50,
+        "all_labels_match": true
+      },
+      "aLSC": {
+        "range": "D2:D51",
+        "label_range": "E2:E51",
+        "count": 50,
+        "unique_genes": 50,
+        "all_labels_match": true
+      },
+      "CE": {
+        "range": "G2:G51",
+        "label_range": "H2:H51",
+        "count": 50,
+        "unique_genes": 50,
+        "all_labels_match": true
+      }
+    },
+    "source_data_workbook_attempt": "stopped after reading 8388609 bytes against 8 MiB bound; no partial file retained",
+    "matrices_inspected": false,
+    "author_code_executed": false
+  },
+  "dispatch_authorized": false,
+  "runtime_qualified": false,
+  "canonical_acceptance": false,
+  "remaining": [
+    "Platform-supported current status and original prompt binding",
+    "Separate authenticated live author adapter and shared-ledger admission",
+    "Quota-backed output storage, independent watchdog and trusted preauthor observations",
+    "Bounded actual-input/annotation/target inspection and final contract review",
+    "New explicitly scoped live isolation/termination/recovery qualification"
+  ]
+}

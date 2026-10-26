@@ -4,6 +4,15 @@ The implemented manual sequence is discovery → proposal buffer → reading pri
 → source packet → source-bound assessment. The remaining roles below are targets.
 See [the buffer](DECISION_BUFFER.md) and [local reader](LOCAL_READER.md).
 
+The [evidence-generation revision](EVIDENCE_GENERATION_ROADMAP.md) turns the
+remaining scientific roles into explicit W01–W09 implementation jobs. The
+[offline workspace](EVIDENCE_WORKSPACE.md) now stores provisional article-local
+source/case, feasibility and plan records under delegated implementation scope.
+Execution, scientific review and optional integration remain gated. Human review should resolve consequential
+scientific choices using actual results, while AI handles routine source checks,
+analysis preparation and reproducible computation within a reviewed contract.
+The role/state descriptions below are targets, not dispatch authorization.
+
 ## Selected execution surfaces
 
 The owner selected dot coordination and Codex Cloud execution on 11 October 2026.

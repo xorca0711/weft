@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "kind": "offline-science-adapter-validation",
+  "date": "2026-10-21",
+  "status": "checks-complete",
+  "scope": "Controlled fixture replay and supplied numerical evidence consistency; no author-code execution or scientific finding",
+  "source_sha256": {
+    "weft/evidence.py": "10ec0269701fec2137444b58ada4acf42dd5539b3f309ff8be72be24ef1c76e5",
+    "weft/scientific.py": "366ba74f11297b070ba4525a1f7665f79df02852dd4770c9139528bb4fee5b1b",
+    "weft/science_adapter.py": "462e5e1284636d2244bc8500fcfe1be49a7198f3b12bcc8558f0908ca5f89a53",
+    "weft/science_review.py": "1c427b28255ef9fd88f656734813857b180598597e0cb7facf4490ac4dce445f",
+    "weft/jobs.py": "de6ca1352f03f3eb29110eeba7b410f804ee1219593786ebd366b510bb435c57",
+    "weft/__main__.py": "5410f36b35c0bd6800ce39dae79f973a5bc4d71436d5c7e55597e679ca7dc5ae",
+    "tests/test_evidence.py": "fdf8ce64f8962541fabc19444744728ef5ff53ae76fbd77fc867081475b86c26",
+    "tests/test_science_pipeline.py": "e4f3a3c73f5d60a8de581ca75499e97d30f194052a91ac06132878cb74db5387",
+    "tests/evidence_demo.py": "566bdf7e5d83982f71ef7db7f06f4eef0879cfaf5b0e7c7f8b761f568775ab50"
+  },
+  "full_suite_observed": {
+    "command": "python -m unittest discover -s tests -q",
+    "tests": 407,
+    "passed": 380,
+    "skipped": 25,
+    "failed": 2,
+    "seconds": 92.445,
+    "failure_cause": "README linked this validation record before it existed; two existing CLI tests validate repository links"
+  },
+  "remediation": {
+    "change": "Created the referenced validation record; no production code changed after the full suite",
+    "tests": [
+      "test_selection.SelectionTests.test_legacy_spec_and_cli_default_are_preserved",
+      "test_workflow.WorkflowTests.test_cli_create_freezes_without_network_and_refuses_second_catalog_batch"
+    ],
+    "passed": 2,
+    "failed": 0,
+    "seconds": 0.486
+  },
+  "final_coverage": {
+    "tests": 407,
+    "passed": 382,
+    "existing_platform_skips": 25,
+    "unresolved_failures": 0,
+    "qualification": "Full-suite evidence plus focused rerun of the two documentation-dependent failures; not a second full-suite run"
+  },
+  "new_pipeline_tests": {
+    "tests": 23,
+    "passed": 23,
+    "skipped": 0,
+    "scope": "Included in the final full-suite observed run"
+  },
+  "development_corrections": [
+    "Source-hash pin correctly rejected an early run edited while in flight; final production code held stable during full suite",
+    "Closed read-only SQLite connection explicitly after a Windows handle-cleanup failure"
+  ],
+  "repository_validation": {
+    "ok": true,
+    "scope": "offline-configuration-and-documentation",
+    "local_links": 253,
+    "pinned_files": 15,
+    "scientific_execution_enabled": false
+  },
+  "additional_document_check": {
+    "documents": 11,
+    "local_links_and_anchors": 160
+  },
+  "whitespace_check": "git diff --check passed",
+  "retained_fixture": {
+    "demo_result_sha256": "e149b7f804f3d34c9ad7f04222278e776f3c5190ef7ef5e1d64a320688f9bb04",
+    "qc_status": "qc-issues",
+    "discrepancy": "Observed 10.5 versus supplied illustrative target 11",
+    "dry_export_sha256": "a2d067f9ce37fc391ac11412bac6b29453b247684099a4d0eb115d2ac337d116",
+    "dry_export_verification": "dry-export-verified",
+    "owner_disposition_recorded": false
+  },
+  "scientific_execution_enabled": false,
+  "canonical_acceptance": false,
+  "ravel_modified": false,
+  "external_dispatch_performed": false,
+  "schedule_activated": false,
+  "remaining": [
+    "W04 live author-code isolation and permitted worker qualification",
+    "W05 actual worker/coordinator/return binding",
+    "W08 fresh real pilot, owner scientific disposition and independent evaluation",
+    "W09 actual reviewed handoff if later authorized",
+    "W10 supported same-occurrence runtime evidence and exact prompt binding",
+    "W11 remote writer fencing/cancellation/usage and PC-independent operation",
+    "W12 separate optional recurrence scope and activation after W11"
+  ]
+}

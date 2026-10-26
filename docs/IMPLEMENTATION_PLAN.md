@@ -1,5 +1,19 @@
 # Implementation plan
 
+## Current development priority
+
+The [evidence-generation revision](EVIDENCE_GENERATION_ROADMAP.md) defines the
+remaining W01–W12 jobs: provisional article-local analysis, data qualification,
+bounded execution, numerical critique, scientific decisions and later integration.
+The [offline W01–W03 baseline](EVIDENCE_WORKSPACE.md) now stores provisional
+scientific records and checks feasibility/contracts without execution. W04 adapter
+compatibility and W10 runtime capability block qualification of the later phases;
+scientific/runtime gates remain effective. The README diagrams show this target separately from implemented
+manual paths. The milestone tables below retain their historical identifiers and
+receipts; PROGRESS owns current merge/hold status. The older discovery-first
+priority below is historical, not a requirement to finish paper-worth voting
+before developing the analysis path. B5 remains unpassed and M6 disabled.
+
 ## Objective and selected execution route
 
 Build an agent-operated system that discovers papers, reviews relevance, qualifies

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "kind": "public-pr-preparation",
+  "review_date": "2026-10-26",
+  "base": "1f258a27408b1e52deba2acdaf02b87a65d51988",
+  "source_validation": "records/technical-preparation-validation-20261025.json",
+  "matching_prior_file_hashes": 23,
+  "code_or_test_changes_since_validation": false,
+  "private_handoffs_preserved": true,
+  "private_run_artifacts_included": false,
+  "individual_reading_decisions_published": false,
+  "public_documentation_changes": [
+    "Concise technical handoffs",
+    "Remove individual reading decisions",
+    "Clarify implemented offline view and workspace layout"
+  ],
+  "staged_snapshot_checks": "passed",
+  "dispatch_authorized": false,
+  "scientific_acceptance": false,
+  "documentation": {
+    "local_links": 264,
+    "pinned_files": 15,
+    "scientific_execution_enabled": false
+  },
+  "normalized_line_endings": [
+    "tests/test_science_pipeline.py"
+  ],
+  "normalization_changed_python_semantics": false,
+  "example_hash_portability_fix": "Pin docs/proposals/w01/example/source.txt to LF; preserve original 94-byte source hash",
+  "private_data_candidate_paths": 0,
+  "portable_example": {
+    "bytes": 94,
+    "sha256": "cab081c87aa223627d879ca342e8bc6c7f2a230af26425133ba2ececb9182120",
+    "verified": true
+  }
+}

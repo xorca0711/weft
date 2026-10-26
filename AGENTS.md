@@ -7,8 +7,11 @@ effect of a documentation or validation change.
 
 ## Identity and authority
 
-- Weft owns automation. Ravel owns its canonical questions, scientific contracts,
-  analysis code, results and acceptance history. Read the pinned current result
+- Weft owns automation and explicitly provisional article-local evidence records.
+  Ravel owns canonical questions, accepted scientific contracts, analysis code,
+  results and acceptance history. Provisional storage grants no execution or
+  integration authority; use docs/EVIDENCE_WORKSPACE.md for its implemented limits.
+  Read the pinned current result
   and correction before an old plan. Follow Ravel's instructions when working there.
 - Keep article candidates separate from canonical RQs. Do not allocate an A ID,
   promote a claim or invent a human decision without recorded authority.

@@ -1,0 +1,42 @@
+{
+  "schema_version": "w01-0.1-draft",
+  "kind": "source-manifest",
+  "record_scope": "proposal-only",
+  "created_at": "2026-10-21T00:00:00Z",
+  "actor": {
+    "id": "synthetic-example-author",
+    "kind": "fixture",
+    "identity_basis": "self-reported"
+  },
+  "dispatch_authorized": false,
+  "canonical_acceptance": false,
+  "revision": 1,
+  "previous": null,
+  "amendment_reason": null,
+  "workspace_id": "ww-11111111111111111111111111111111",
+  "article_id": "wa-22222222222222222222222222222222",
+  "bibliography": {
+    "identifiers": [
+      "fixture:w01-example"
+    ],
+    "title": "Synthetic W01 structure example",
+    "integrity_status": "synthetic-fixture"
+  },
+  "origin": null,
+  "resources": [
+    {
+      "resource_id": "fixture-source",
+      "version": "v1",
+      "locator": "source.txt:1",
+      "access": "retained",
+      "inspection": "inspected",
+      "file": {
+        "root": "workspace",
+        "path": "source.txt",
+        "sha256": "cab081c87aa223627d879ca342e8bc6c7f2a230af26425133ba2ececb9182120",
+        "bytes": 94
+      },
+      "limits": "Illustrates retained bytes only; not a paper or scientific input."
+    }
+  ]
+}

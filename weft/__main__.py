@@ -167,10 +167,87 @@ def main(argv=None):
             command.add_argument('--operation', required=True)
         if name == 'launch-ack':
             command.add_argument('--receipt', type=Path, required=True)
+    for name in ['evidence-init', 'evidence-import', 'evidence-status', 'evidence-preflight',
+                 'evidence-package', 'evidence-fixture-begin', 'evidence-fixture-return',
+                 'evidence-fixture-recover', 'evidence-fixture-cancel', 'evidence-fixture-expire',
+                 'evidence-qc', 'evidence-view', 'evidence-dry-export', 'evidence-export-verify',
+                 'evidence-readiness']:
+        command = sub.add_parser(name, help='Private offline scientific records; no execution: ' + name)
+        command.add_argument('--root', required=True, type=Path)
+        if name == 'evidence-init':
+            command.add_argument('--inputs', required=True, type=Path)
+            command.add_argument('--sources', required=True, type=Path)
+            command.add_argument('--protected-root', required=True, action='append', type=Path)
+        elif name == 'evidence-import':
+            command.add_argument('--record', required=True, type=Path)
+        elif name in {'evidence-preflight', 'evidence-package', 'evidence-readiness'}:
+            command.add_argument('--contract-reference', required=True, type=Path)
+            if name == 'evidence-package': command.add_argument('--plan-reference', required=True, type=Path)
+        elif name == 'evidence-fixture-begin':
+            command.add_argument('--package-reference', required=True, type=Path)
+        elif name in {'evidence-fixture-return', 'evidence-fixture-recover'}:
+            command.add_argument('--checkpoint', required=True, type=Path)
+            if name == 'evidence-fixture-return':
+                command.add_argument('--directory', required=True, type=Path)
+                command.add_argument('--expected-manifest-sha256', required=True)
+            else: command.add_argument('--receipt-reference', required=True, type=Path)
+        elif name == 'evidence-fixture-cancel':
+            command.add_argument('--job', required=True)
+        elif name in {'evidence-qc', 'evidence-view', 'evidence-dry-export'}:
+            command.add_argument('--receipt-reference', required=True, type=Path)
+            if name in {'evidence-view', 'evidence-dry-export'}:
+                command.add_argument('--review-reference', required=name == 'evidence-dry-export', type=Path)
+            if name == 'evidence-view': command.add_argument('--disposition-reference', type=Path)
+            if name == 'evidence-dry-export': command.add_argument('--proposed-use', required=True)
+        elif name == 'evidence-export-verify':
+            command.add_argument('--export', required=True, type=Path)
+            command.add_argument('--expected-sha256', required=True)
     args = parser.parse_args(argv)
     root = Path(__file__).resolve().parents[1]
     try:
-        if args.command == "validate":
+        if args.command.startswith('evidence-'):
+            from .evidence import Workspace, read_raw, decode
+            from .scientific import preflight
+            if args.command == 'evidence-init':
+                workspace = Workspace.create(args.root, inputs=args.inputs, sources=args.sources,
+                                             protected_roots=args.protected_root)
+                result = workspace.status()
+            else:
+                workspace = Workspace(args.root)
+                def ref(path): return decode(read_raw(path)) if path else None
+                if args.command == 'evidence-import':
+                    result = workspace.put(read_raw(args.record))
+                elif args.command == 'evidence-preflight':
+                    result = preflight(workspace, decode(read_raw(args.contract_reference)))
+                elif args.command == 'evidence-package':
+                    from .science_adapter import package
+                    result = package(workspace, ref(args.contract_reference), ref(args.plan_reference))
+                elif args.command.startswith('evidence-fixture-'):
+                    from .science_adapter import open_replay
+                    with open_replay(workspace) as replay:
+                        if args.command == 'evidence-fixture-begin': result = replay.begin(ref(args.package_reference))
+                        elif args.command == 'evidence-fixture-return':
+                            result = replay.receive(ref(args.checkpoint), args.directory, args.expected_manifest_sha256)
+                        elif args.command == 'evidence-fixture-recover': result = replay.recover(ref(args.checkpoint), ref(args.receipt_reference))
+                        elif args.command == 'evidence-fixture-cancel':
+                            replay.ledger.cancel(args.job)
+                            result = {'status': 'cancel-requested', 'termination_claimed': False,
+                                      'dispatch_authorized': False, 'canonical_acceptance': False}
+                        else: result = {'status': 'holds-retained', 'expired': replay.ledger.expire()}
+                elif args.command in {'evidence-qc', 'evidence-view', 'evidence-dry-export', 'evidence-export-verify'}:
+                    from . import science_review
+                    if args.command == 'evidence-qc': result = science_review.qc(workspace, ref(args.receipt_reference))
+                    elif args.command == 'evidence-view':
+                        result = science_review.view(workspace, ref(args.receipt_reference), ref(args.review_reference), ref(args.disposition_reference))
+                    elif args.command == 'evidence-dry-export':
+                        result = science_review.dry_export(workspace, ref(args.receipt_reference), ref(args.review_reference), args.proposed_use)
+                    else: result = science_review.verify_export(args.export, args.expected_sha256)
+                elif args.command == 'evidence-readiness':
+                    from .science_adapter import readiness
+                    result = readiness(workspace, ref(args.contract_reference))
+                else:
+                    result = workspace.status()
+        elif args.command == "validate":
             result = validate_project(root)
         elif args.command == "verify-ravel":
             result = verify_ravel(args.repo, read_json(root / "integration/ravel.lock.json"))
@@ -380,7 +457,7 @@ def main(argv=None):
         if "batch" in result:
             result["batch"] = concise(result["batch"])
     print(json.dumps(result, indent=2))
-    return 2 if result.get("status") in {"error", "truncated", "unstable", "hold", "complete_with_holds"} else 0
+    return 2 if result.get("status") in {"error", "truncated", "unstable", "hold", "held", "complete_with_holds", "qc-issues"} else 0
 
 
 if __name__ == "__main__":

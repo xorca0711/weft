@@ -174,6 +174,8 @@ class JobLedger:
             at = self._now()
             current = self.status(job)
             packet = current["packet"]
+            # Other adapters share this ledger, never this synthetic dispatch API.
+            validate_packet(packet)
             if current["state"] not in {"queued", "failed", "cancelled"}:
                 raise JobError("Job is not dispatchable")
             if (packet["context_sha256"] != current_context_sha256
@@ -228,6 +230,7 @@ class JobLedger:
             row = self.db.execute("SELECT * FROM attempts WHERE id=?", (attempt_id,)).fetchone()
             if row is None or not secrets.compare_digest(row["token_hash"], digest(token)):
                 raise JobError("Attempt identity/lease mismatch")
+            validate_packet(self.status(row["job_id"])["packet"])
             if self.db.execute("SELECT 1 FROM executor_bindings WHERE attempt_id=?", (attempt_id,)).fetchone():
                 raise JobError("Executor-bound attempts reject legacy self-reported reconciliation")
             if row["state"] not in {"running", "unknown", "cancel_requested"}:
@@ -253,6 +256,7 @@ class JobLedger:
         with self._transaction():
             at = self._now()
             row = self._attempt(claim)
+            validate_packet(self.status(row['job_id'])['packet'])
             if row["state"] != "running" or row["expires"] <= at:
                 raise JobError("Expired/nonrunning attempt cannot bind executor")
             if identity["job_id"] != row["job_id"] or identity["attempt_id"] != row["id"]:

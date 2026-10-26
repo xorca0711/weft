@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "kind": "author-isolation-preparation",
+  "date": "2026-10-21",
+  "scope": "Read-only saved-child review and offline supplied-control auditor; no current cloud probe or author-code execution",
+  "source_sha256": {
+    "weft/author_isolation.py": "7f950b3311f6e3a7860c59f54ccdc7bd876dbb0486bb61eced89aba317c8b62c",
+    "tests/test_author_isolation.py": "effdbbc255929a65962c78e9e0a5f3b1e9630f18e832e2c51f08ced22690fcfc"
+  },
+  "tests": {
+    "command": "python -m unittest discover -s tests -p test_author_isolation.py -q",
+    "tests": 10,
+    "passed": 10,
+    "skipped": 0,
+    "failed": 0,
+    "seconds": 0.034
+  },
+  "saved_child_review": {
+    "latest_saved_turn_status": "completed",
+    "latest_saved_conclusion": "HOLD: no supported runtime-status capability",
+    "new_status_probe": false,
+    "new_message_sent": false,
+    "scope": "Read two existing completed reports; not current runtime enforcement"
+  },
+  "original_hold_receipt_reverified": {
+    "bytes": 3165,
+    "sha256": "d44b803f11f680e2b21bebf077977a5769ee9f44b1b78cf00b49e8d6add643a9"
+  },
+  "desktop_inventory_matching_runtime_status_tools": 0,
+  "support_draft_sent": false,
+  "runtime_qualified": false,
+  "dispatch_authorized": false,
+  "canonical_acceptance": false,
+  "remaining": [
+    "Platform-supported current runtime identity/policy observation and original prompt-binding reconciliation",
+    "Live separate author-dispatcher integration",
+    "Output quota and controller-independent watchdog tests",
+    "Observed cancellation/termination and independently verified real return",
+    "Real input inspection and concrete W08 scientific contract"
+  ],
+  "validation_status": "checks-complete",
+  "repository_validation": {
+    "ok": true,
+    "local_links": 256,
+    "pinned_files": 15,
+    "scientific_execution_enabled": false
+  },
+  "additional_document_check": {
+    "documents": 5,
+    "local_links_and_anchors": 92
+  },
+  "whitespace": "Tracked diff and new files passed"
+}

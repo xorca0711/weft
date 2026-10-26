@@ -3,3 +3,4 @@
 *.md text eol=lf
 *.json text eol=lf
 *.yml text eol=lf
+docs/proposals/w01/example/source.txt text eol=lf
